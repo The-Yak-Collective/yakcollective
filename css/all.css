@@ -26,3 +26,13 @@ body {
   .footer{
     border-top:1px solid lightgrey;
   }
+
+  .report{
+      width:1000px;
+      height:700px;
+      border-radius:5px;
+      margin:auto;
+      box-shadow: 5px 5px 10px #888888;
+      border:1px solid lightgrey;
+
+  }
