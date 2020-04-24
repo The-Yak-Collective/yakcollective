@@ -1,0 +1,35 @@
+body {
+    font-family:"Noto Serif SC";
+   padding:0px;
+    margin:0px;
+  }
+  
+  .container{
+    width:95%;
+    max-width:700px;
+    padding-left:10px;
+    padding-right:10px;
+    margin:auto;
+    padding-top:100px;
+  }
+  
+  h1 {
+    font-family:"Playfair Display";
+    font-weight:400;
+  }
+  
+  .subhead{
+    line-height:1.5em;
+  }
+  
+  .feature{
+    color:#AA23AD;
+    font-weight:bold;
+    padding-top:42px;
+    padding-bottom:21px;
+    
+  }
+  
+  .footer{
+    border-top:1px solid lightgrey;
+  }
