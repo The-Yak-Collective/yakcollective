@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{% if page.metatitle %}{{page.metatitle}}{% elsif page.title%}{{page.title}}{% else %}The Yak Collective{% endif %}</title>
+    <meta name="description" content="The Yak Collective">
+
+    {% if page.redirect %}<meta http-equiv="refresh" content="0; url={{ page.redirect }}">{% endif %}
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200;400;700&family=Playfair+Display&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="/css/tachyons.min.css">
+<link rel="stylesheet" href="/css/hamburgers.css">
+
+
+<link href="/css/all.css" rel="stylesheet">
+<link href="/css/mobile.css" rel="stylesheet">
+
+<link rel="icon" href="/images/favicon.png" />
+
+<meta name="viewport" content="width=device-width">
+
+<script src="//code.jquery.com/jquery-1.10.2.min.js" type="text/javascript"></script>
+
+
+
+
+ <meta property="og:type"   content="article" />
+ <meta property="og:url"    content="http://yakcollective.org{{page.url}}" />
+ <meta property="og:title"  content="{% if page.title %}{{page.title}}{% else %}The Yak Collective{% endif %}" />
+ <meta property="og:image"  content="NBED" />
+ <meta property="og:image:width"  content="600" />
+ <meta property="og:image:height"  content="315" />
+
+{% if page.layout == 'blog' %}
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@artofgig">
+<meta name="twitter:creator" content="@artofgig">
+<meta name="twitter:title" content="{% if page.title %}{{page.title}}{% else %}The Yak Collective{% endif %}">
+<meta name="twitter:description" content="{% if page.subtitle %}{{page.subtitle}}{% else %}{{page.content | truncatewords:20 | strip_html}}{% endif %}">
+<meta name="twitter:image" content="NBED">
+
+{% endif %}
+ 
+
+
+</head>
+
+<body class="w-100 ph0-l center">
