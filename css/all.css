@@ -52,7 +52,6 @@ body {
   .bg-yak-wisdom{
       position:absolute;
       top:0px;
-      height:500px;
       width:100%;
       z-index:-1;
     background-color: #dfd0df;
