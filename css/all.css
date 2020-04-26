@@ -39,6 +39,11 @@ body {
 
   }
 
+.reportlinks img{
+    height:16px;
+    display:inline-block;
+}
+
   .bg-yak-wisdom{
       position:absolute;
       top:0px;
