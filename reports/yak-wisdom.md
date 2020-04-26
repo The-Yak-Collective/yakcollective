@@ -2,6 +2,9 @@
 layout: report
 image: /images/yak-wisdom-screenshot.png
 title: Yak Wisdom - A trend report on the next next
+subtitle: Sensemaking in uncertainty
+intro: Compiled by the Yak Collective, a group of independent consultants and gig workers taking the new normal approach to trends and insights - threading the needle on sensemaking in times of uncertainty.
+date: April 30th 2020, UTC \n Day 45 Pandemic Mean Time
 authors: Lead editors Paul Millard, Venkatesh Rao
 collaborators:
 ---
