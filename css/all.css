@@ -33,10 +33,10 @@ body {
   }
 
   .report{
-      width:1000px;
-      height:700px;
+      width:120%;
+      height:600px;
       border-radius:5px;
-      margin:auto;
+      margin-left:-10%;
       box-shadow: 5px 5px 10px #888888;
       border:1px solid lightgrey;
       display:block;
