@@ -45,7 +45,7 @@ contributors:
 </div>
 {% endfor %}
 
-<h2>Collaborators</h2>
+<h2 class="cf">Collaborators</h2>
 
 
 
