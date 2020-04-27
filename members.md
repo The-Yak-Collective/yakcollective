@@ -35,7 +35,7 @@ contributors:
 
 {% for member in page.partners %}
 
-<div class="fl w-50-l pa2">
+<div class="fl w-100 pa2">
 
   <div class="flex items-center lh-copy pa3 ba b--black-10">
       <img class="w2 h2 w3-ns h3-ns br-100" src="/images/members/{{member.image}}" />
@@ -44,6 +44,9 @@ contributors:
         <span class="f6 db black-70">{{member.title}}</span>
         <span class="f6 db black-70">{% if member.previous %}Previously: {{member.previous}}{% endif %}</span>
         <span class="f6 db black-70">{% for link in member.links %}{% if forloop.first == true %}{% else %} / {% endif %}<a href="{{link.url}}">{{link.title}}</a>{% endfor %}</span>
+      </div>
+            <div>
+        <a href="tel:" class="f6 link blue hover-dark-gray">+1 (999) 555-5555</a>
       </div>
   </div>
 
