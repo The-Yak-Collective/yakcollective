@@ -1,4 +1,5 @@
 ---
+layout: members
 title: Yak Collective Members
 members:
  - name: Venkatesh Rao
