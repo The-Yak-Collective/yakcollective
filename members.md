@@ -6,13 +6,22 @@ partners:
    image: venkatesh-rao.jpeg
    title: Yak Shaver
    indie_status: 9+ years
-   previously: Optional
    twitter: vgr
    links:
      - title: Ribbonfarm
        url: https://ribbonfarm.com
      - title: Art of Gig
        url: https://artofgig.substack.com
+ - name: Paul Millerd
+   image: venkatesh-rao.jpeg
+   previous: McKinsey, BCG, GE, Russell Reynolds 
+   indie_status: 3+ years
+   twitter: 
+   links:
+     - title: Boundless
+       url: https://think-boundless.com/
+     - title: Strategy U
+       url: https://strategyu.co/
 contributors:
  - name: Amanda Reeves
    status: Yak Shaver
@@ -33,6 +42,7 @@ contributors:
       <div class="pl3 flex-auto">
         <span class="f6 db black-70">{{member.name}}</span>
         <span class="f6 db black-70">{{member.title}}</span>
+        <span class="f6 db black-70">{{member.previous}}</span>
         <span class="f6 db black-70">{% for link in member.links %}{% if forloop.first == true %}{% else %} / {% endif %}<a href="{{link.url}}">{{link.title}}</a>{% endfor %}</span>
       </div>
   </div>
