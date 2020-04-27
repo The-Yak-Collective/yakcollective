@@ -18,16 +18,22 @@ contributors:
    status: Yak Shavers   
 ---
 
-Here are our members:
+<div class="container mw7 cf pv5 f4-l center w-90 lh-copy">
 
-<main class="mw6 center">
+<h1>Partners</h1>
+
 {% for member in page.partners %}
-
 
 {{member.name}}
 
 {% for link in member.links %}
 <a href="{{link.url}}">{{link.title}}</a>
 {% endfor %}
-    {% endfor %}
-  </main>
+
+{% endfor %}
+
+<h2>Collaborators</h2>
+
+
+
+  </div>
