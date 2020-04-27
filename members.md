@@ -37,9 +37,6 @@ contributors:
         <span class="f6 db black-70">{{member.title}}</span>
         <span class="f6 db black-70">{% for link in member.links %}<a href="{{link.url}}">{{link.title}}</a>{% endfor %}</span>
       </div>
-      <div>
-        <a href="tel:" class="f6 link blue hover-dark-gray">+1 (999) 555-5555</a>
-      </div>
   </div>
 
 </div>
