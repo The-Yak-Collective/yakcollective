@@ -13,7 +13,7 @@ partners:
      - title: Art of Gig
        url: https://artofgig.substack.com
  - name: Paul Millerd
-   image: venkatesh-rao.jpeg
+   image: paul-millerd.jpg
    previous: McKinsey, BCG, GE, Russell Reynolds 
    indie_status: 3+ years
    twitter: 
