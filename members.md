@@ -30,6 +30,17 @@ contributors:
 
 <div class="fl w-25-l ba b--black-10 pa2">
 
+  <li class="flex items-center lh-copy pa3 ph0-l bb b--black-10">
+      <img class="w2 h2 w3-ns h3-ns br-100" src="http://tachyons.io/img/avatar-mrmrs.jpg" />
+      <div class="pl3 flex-auto">
+        <span class="f6 db black-70">Mrmrs</span>
+        <span class="f6 db black-70">Medium Hexagon, LLC</span>
+      </div>
+      <div>
+        <a href="tel:" class="f6 link blue hover-dark-gray">+1 (999) 555-5555</a>
+      </div>
+  </li>
+
 
 {{member.name}}
 
