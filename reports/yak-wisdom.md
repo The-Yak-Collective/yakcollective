@@ -17,7 +17,7 @@ collaborators: David McDougall, Darren Kong, Vaughan Tan, Randy Lubin, Vlad Meha
 <iframe class="report" src="https://docs.google.com/presentation/d/e/2PACX-1vQVPxtYAPGiM8KIhygNiwV9yDhydkb5p0_2y_LHB4FRoiNSrnxEAjSZipYaxSeQp9hwxU4CTZEUHC24/embed?start=false&loop=false&delayms=60000" frameborder="0" width="1440" height="839" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 
 
-<div class="reportlinks pv2">
+<div class="reportlinks pv4">
 <img class="h1" src="https://ssl.gstatic.com/docs/presentations/images/favicon5.ico"> Open Google Doc / <img class="h1" src="/images/pdf.png"> Download PDF
 </div>
 
