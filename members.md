@@ -13,8 +13,6 @@ partners:
        url: https://ribbonfarm.com
      - title: Art of Gig
        url: https://artofgig.substack.com
- - name: Paul Millard
-   status: Yak Shavers
 contributors:
  - name: Amanda Reeves
    status: Yak Shaver
@@ -35,7 +33,7 @@ contributors:
       <div class="pl3 flex-auto">
         <span class="f6 db black-70">{{member.name}}</span>
         <span class="f6 db black-70">{{member.title}}</span>
-        <span class="f6 db black-70">{% for link in member.links %}<a href="{{link.url}}">{{link.title}}</a>{% endfor %}</span>
+        <span class="f6 db black-70">{% for link in member.links %}<a href="{{link.url}}">{{link.title}}</a>{% if forloop.first == true %}{% else %} / {% endif %}{% endfor %}</span>
       </div>
   </div>
 
