@@ -27,6 +27,9 @@ contributors:
 
 {% for member in page.partners %}
 
+<div class="w-25-l ba b--black-10 pa2">
+</div>
+
 {{member.name}}
 
 {% for link in member.links %}
