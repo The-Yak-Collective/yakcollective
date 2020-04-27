@@ -10,7 +10,7 @@ members:
 Here are our members:
 
 <main class="mw6 center">
-{% for member in members %}
+{% for member in page.members %}
 
     <article class="dt w-100 bb b--black-05 pb2 mt2" href="#0">
       <div class="dtc w2 w3-ns v-mid">
