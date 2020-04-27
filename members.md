@@ -4,6 +4,9 @@ title: Yak Collective Members
 partners:
  - name: Venkatesh Rao
    title: Yak Shaver
+   indie_status: 9+ years
+   previously: Optional
+   twitter: @vgr
    links:
      - title: Ribbonfarm
        url: https://ribbonfarm.com
