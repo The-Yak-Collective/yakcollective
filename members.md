@@ -21,6 +21,25 @@ partners:
        url: https://think-boundless.com/
      - title: Strategy U
        url: https://strategyu.co/
+ - name: Pamela Hobart
+   image: pamela-hobart.jpeg
+   indie_status: 3+ years
+   twitter: amelapay
+   links:
+     - title: pamelajhobart.com
+       url: https://www.pamelajhobart.com/
+     - title: Substack
+       url: https://pamelajhobart.substack.com/
+ - name: Tom Critchlow
+   image: tom-critchlow.jpeg
+   previous: Google
+   indie_status: 5+ years
+   twitter: tomcritchlow
+   links:
+     - title: tomcritchlow.com
+       url: https://tomcritchlow.com/
+     - title: Little Futures
+       url: https://littlefutures.club
 contributors:
  - name: Amanda Reeves
    status: Yak Shaver
