@@ -1,10 +1,10 @@
 ---
 title: Yak Collective Members
 members:
- - Name: Venkatesh Rao
-   Status: Yak Shaver
- - Name: Paul Millard
-   Status: Yak Shavers
+ - name: Venkatesh Rao
+   status: Yak Shaver
+ - name: Paul Millard
+   status: Yak Shavers
 ---
 
 Here are our members:
