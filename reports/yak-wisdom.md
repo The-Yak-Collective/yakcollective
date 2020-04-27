@@ -10,7 +10,7 @@ intro: |
 date: |
   April 30th 2020, UTC
   Day 45 Pandemic Mean Time
-authors: Paul Millard & Venkatesh Rao
+authors: Paul Millerd & Venkatesh Rao
 collaborators: David McDougall, Darren Kong, Vaughan Tan, Randy Lubin, Vlad Mehakovic, Thomas Verhagen, Alex Dobrenko, Sachin Benny, Amanda Reeves, Jordan Peacock, Anne-Laure Le Cunff, Vaughan Tan, Benjamin Taylor, Vinay Debrou, Tom Critchlow, Rodrigo Pinto, Ben Mosior, Harry Pottash, Jordan Allen
 ---
 
