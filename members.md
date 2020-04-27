@@ -7,6 +7,7 @@ partners:
    title: Yak Shaver
    indie_status: 9+ years
    previously: Optional
+   twitter: vgr
    links:
      - title: Ribbonfarm
        url: https://ribbonfarm.com
@@ -27,7 +28,7 @@ contributors:
 
 {% for member in page.partners %}
 
-<div class="w-25-l ba b--black-10 pa2">
+<div class="fl w-25-l ba b--black-10 pa2">
 
 
 {{member.name}}
