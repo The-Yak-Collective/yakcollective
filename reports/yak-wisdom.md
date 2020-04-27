@@ -1,8 +1,8 @@
 ---
 layout: report
 image: /images/yak-wisdom-screenshot.png
-title: Yak Wisdom - A trend report on the next next
-subtitle: Sensemaking in uncertainty
+title: Don't Waste the COVID-19 Reboot
+subtitle: Making the next normal better than the last one
 intro: |
   Compiled by the Yak Collective, a group of independent consultants and gig workers taking the new normal approach to trends and insights - threading the needle on sensemaking in times of uncertainty.
   
