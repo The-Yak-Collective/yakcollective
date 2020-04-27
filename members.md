@@ -42,7 +42,7 @@ contributors:
       <div class="pl3 flex-auto">
         <span class="f6 db black-70">{{member.name}}</span>
         <span class="f6 db black-70">{{member.title}}</span>
-        <span class="f6 db black-70">{{member.previous}}</span>
+        <span class="f6 db black-70">{% if member.previous %}Previously: {{member.previous}}{% endif %}</span>
         <span class="f6 db black-70">{% for link in member.links %}{% if forloop.first == true %}{% else %} / {% endif %}<a href="{{link.url}}">{{link.title}}</a>{% endfor %}</span>
       </div>
   </div>
