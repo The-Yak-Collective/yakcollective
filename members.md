@@ -65,7 +65,7 @@ contributors:
         <span class="f6 db black-70">{% for link in member.links %}{% if forloop.first == true %}{% else %} / {% endif %}<a href="{{link.url}}">{{link.title}}</a>{% endfor %}</span>
       </div>
             <div>
-        <a href="https://twitter.com/{{member.twitter}}" class="f6 link blue hover-dark-gray">@vgr</a>
+        <a href="https://twitter.com/{{member.twitter}}" class="f6 link blue hover-dark-gray">@{{member.twitter}}</a>
       </div>
   </div>
 
