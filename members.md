@@ -31,7 +31,7 @@ contributors:
 <div class="fl w-50-l ba b--black-10 pa2">
 
   <div class="flex items-center lh-copy pa3 ph0-l bb b--black-10">
-      <img class="w2 h2 w3-ns h3-ns br-100" src="/images/{{member.image}}" />
+      <img class="w2 h2 w3-ns h3-ns br-100" src="/images/members/{{member.image}}" />
       <div class="pl3 flex-auto">
         <span class="f6 db black-70">{{member.name}}</span>
         <span class="f6 db black-70">{{member.title}}</span>
