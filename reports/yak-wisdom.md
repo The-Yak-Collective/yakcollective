@@ -7,7 +7,9 @@ intro: |
   Compiled by the Yak Collective, a group of independent consultants and gig workers taking the new normal approach to trends and insights - threading the needle on sensemaking in times of uncertainty.
   
   The great weirding has undone things and here we navigate the twitter wisdom that independents have a keen sense for.
-date: April 30th 2020, UTC \n Day 45 Pandemic Mean Time
+date: |
+  April 30th 2020, UTC
+  Day 45 Pandemic Mean Time
 authors: Paul Millard & Venkatesh Rao
 collaborators: Tom Critchlow, Vaughn Tan, Vlad Mehakovic, etc
 ---

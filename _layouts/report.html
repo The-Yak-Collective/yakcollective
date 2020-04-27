@@ -11,8 +11,8 @@
           <div class="f5 lh-title fw9 mb3 mt0 pt3 bt bw2">
             REPORT
         </div>
-          <time class="f6 ttu tracked gray">{{page.date}}</time>
-          <p>Lead editors:<br>{{page.authors}}</p>
+          <time class="f6 ttu tracked gray">{{page.date | newline_to_br}}</time>
+          <p><span class="ttu f5 lh-title">Lead editors:</span><br>{{page.authors}}</p>
           <p>Collaborators:<br>{{page.collaborators}}</p>
         </header>
         <div class="fn fl-ns w-50-ns">
