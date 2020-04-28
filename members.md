@@ -147,7 +147,7 @@ collaborators:
  - name: Benjamin Taylor
    image: benjamin-taylor.jpg
    indie_status: 11 years
-   twitter: 
+   twitter: antlerboy
    previous: PwC, Capita, Adviser to Mayor in a London Borough
    links:
      - title: Red Quadrant
@@ -181,7 +181,7 @@ collaborators:
      - title: Hired Thought
        url: https://hiredthought.com/
  - name: Harry Pottash
-   image: Harry-Pottash.jpg
+   image: Harry-Pottash.png
    indie_status: 5+ years
    title: Philosopher & Investor
    twitter: benmosior
