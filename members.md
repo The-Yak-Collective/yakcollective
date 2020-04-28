@@ -5,6 +5,7 @@ partners:
  - name: Venkatesh Rao
    image: venkatesh-rao.PNG
    indie_status: 9+ years
+   previous: Xerox
    twitter: vgr
    links:
      - title: Ribbonfarm
