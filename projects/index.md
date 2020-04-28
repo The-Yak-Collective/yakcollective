@@ -5,8 +5,7 @@ title: Projects
 
 Latest projects & reports:
 
-<a href="/projects/yak-wisdom" class="projectbox">
-<div class="ba b--black-10 br2 mv4 relative">
+<a href="/projects/yak-wisdom" class="projectbox"><div class="ba b--black-10 br2 mv4 relative">
 <div class="w-50">
 <div class="f6 lh-title fw9 mv0 pt1 bt bw1 ph2 sans-serif">
 REPORT
@@ -18,5 +17,4 @@ REPORT
 </div>
 <div class="w-50 h-100 bg-yak-wisdom absolute top-0 right-0">
 </div>
-</div>
-</a>
+</div></a>
