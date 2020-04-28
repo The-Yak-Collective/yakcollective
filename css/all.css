@@ -25,7 +25,16 @@ body {
   .yak-purple{
     color:#AA23AD;
   }
+
+  .projectbox{
+
+  }
   
+.projectbox a{
+    text-decoration:none;
+    color:black;
+}
+
   .footer{
     border-top:1px solid lightgrey;
   }
