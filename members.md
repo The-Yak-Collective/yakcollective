@@ -53,7 +53,7 @@ collaborators:
  - name: David McDougall
    image: david-mcdougall.jpg
    indie_status: 3+ years
-   previously: Product Management in SMEs across US & UK
+   previous: Product Management in SMEs across US & UK
    twitter: dmcdougall
    links:
      - title: Innovation at Scale
@@ -61,7 +61,7 @@ collaborators:
  - name: Darren Kong
    image: darren-kong.jpg
    indie_status: 3+ years
-   previously: Other Internet
+   previous: Other Internet
    twitter: platformpapi
    links:
      - title: Varietal Internet
@@ -69,7 +69,7 @@ collaborators:
  - name: Vaughn TAN
    image: vaughn-tan.png
    indie_status: 5+ years
-   previously: Google, and currently University College London School of Management
+   previous: Google, and currently University College London School of Management
    twitter: vaughn_tan
    links:
      - title: bio
