@@ -173,7 +173,7 @@ collaborators:
  - name: Ben Mosior
    image: ben-mosior.jpg
    indie_status: 6+ years
-   twitter: benmosior
+   twitter: HiredThought
    previous: 
    links:
      - title: Methodology whisperer
@@ -184,7 +184,7 @@ collaborators:
    image: Harry-Pottash.png
    indie_status: 5+ years
    title: Philosopher & Investor
-   twitter: benmosior
+   twitter: 
    previous: Engineer, Founder 
    links:       
  - name: Martha Balaile
