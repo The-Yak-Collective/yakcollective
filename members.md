@@ -15,7 +15,7 @@ partners:
    image: paul-millerd.jpg
    previous: McKinsey, BCG, GE, Russell Reynolds 
    indie_status: 3+ years
-   twitter: 
+   twitter: p_millerd
    links:
      - title: Boundless
        url: https://think-boundless.com/
