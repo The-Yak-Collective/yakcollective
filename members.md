@@ -69,7 +69,7 @@ collaborators:
  - name: Vaughn TAN
    image: vaughn-tan.png
    indie_status: 5+ years
-   previously: "Google Inc. (And currently: University College London School of Management)"
+   previously: Google, and currently University College London School of Management
    twitter: vaughn_tan
    links:
      - title: bio
