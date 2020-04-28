@@ -119,12 +119,21 @@ collaborators:
  - name: Jordan Peacock
    image: jordan-peacock.png
    indie_status: 3+ years
-   twitter: Dobrenkz
+   twitter: 
    title: CEO, Becoming Machinic; Founder, Sortilege
    previous: U.S. Bank, HelpSystems
    links:
      - title: Marketing strategy & positioning
        url: https://www.notion.so/sachinbenny/I-m-Sachin-Benny-7391ec1aafa94af28599a2b089c4bf35             
+ - name: Anne-Laure Le Cunff
+   image: anne-laure-le-cunff.png
+   indie_status: 2+ years
+   twitter: anthilemoon
+   title: CEO, Becoming Machinic; Founder, Sortilege
+   previous: Google, Entrepreneur First
+   links:
+     - title: Founder, Ness Labs
+       url: https://nesslabs.com/
 
 
 
