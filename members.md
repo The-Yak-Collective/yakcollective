@@ -134,10 +134,74 @@ collaborators:
    links:
      - title: Founder, Ness Labs
        url: https://nesslabs.com/
-
-
-
-       
+ - name: Vinay Débrou
+   image: vinay-débrou.jpg
+   indie_status: 2+ years
+   twitter: vinaydebrou
+   previous: Data Analyst at a Fintech SaaS company 
+   links:
+     - title: Consultant, Data & Brand Strategy
+       url: https://www.notion.so/brewing/About-Me-2ff600ac504d4217a3ce643869677fd8
+     - title: Substack
+       url: https://daybrew.substack.com/about
+ - name: Benjamin Taylor
+   image: benjamin-taylor.jpg
+   indie_status: 11 years
+   twitter: 
+   previous: PwC, Capita, Adviser to Mayor in a London Borough
+   links:
+     - title: Red Quadrant
+       url: http://www.redquadrant.com/
+     - title: Systems Practice
+       url: https://systemspractice.org/
+ - name: Nita Baum
+   image: nita-baum.PNG
+   indie_status: 13 years
+   twitter: 
+   previous: 
+   links:
+     - title: b*free
+       url: https://www.bfree.live/
+ - name: Rodrigo Pinto
+   image: rodrigo-pinto.jpg
+   indie_status: 3+ years
+   twitter: 
+   previous: 
+   links:
+     - title: Project management and software development
+       url: https://www.linkedin.com/in/rodrigopedroso/
+ - name: Ben Mosior
+   image: ben-mosior.jpg
+   indie_status: 6+ years
+   twitter: benmosior
+   previous: 
+   links:
+     - title: Methodology whisperer
+       url: https://www.linkedin.com/in/benjaminmosior/
+     - title: Hired Thought
+       url: https://hiredthought.com/
+ - name: Harry Pottash
+   image: Harry-Pottash.jpg
+   indie_status: 5+ years
+   title: Philosopher & Investor
+   twitter: benmosior
+   previous: Engineer, Founder 
+   links:       
+ - name: Martha Balaile
+   image: martha-balaile.jpg
+   indie_status: 1+ years
+   twitter: MythologyStudio
+   previous: 
+   links:
+     - title: Illustrator
+       url: https://www.mythologystudio.com/
+ - name: Jordan Allen
+   image: jordan-allen.PNG
+   indie_status: 1+ years
+   twitter: 
+   title: Business Development & Revenue Generation
+   previous: 
+   links:       
 ---
 
 <div class="container mw7 cf pv5 f4-l center w-90 lh-copy">
