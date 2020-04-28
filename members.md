@@ -63,9 +63,9 @@ collaborators:
    image: darren-kong.jpg
    indie_status: 3+ years
    previous: Other Internet
-   twitter: platformpapi
+   twitter: varietalxyz
    links:
-     - title: Varietal Internet
+     - title: Varietal Digital 
        url: https://varietal.xyz/home/
  - name: Vaughn TAN
    image: vaughn-tan.png
