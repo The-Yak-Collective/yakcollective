@@ -84,7 +84,14 @@ collaborators:
    twitter: randylubin
    links:
      - title: Consulting Entrepreneur
-       url: https://randylubin.com/       
+       url: https://randylubin.com/ 
+ - name: Vlad Mehakovic
+   image: vlad-mehacovic.jpg
+   indie_status: Aug 2019
+   twitter: vladiim
+   links:
+     - title: mehakovic.com
+       url: http://mehakovic.com/            
        
 ---
 
