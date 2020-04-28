@@ -91,7 +91,43 @@ collaborators:
    twitter: vladiim
    links:
      - title: mehakovic.com
-       url: http://mehakovic.com/            
+       url: http://mehakovic.com/   
+ - name: Thomas Verhagen
+   image: Thomas-Verhagen.jpg
+   indie_status: 1+ year
+   twitter: 
+   links:
+     - title: Analyze, structure & boost
+       url: https://www.linkedin.com/in/thomasverhagen/
+ - name: Alex Dobrenko
+   image: alex-dobrenko.PNG
+   indie_status: 5+ years
+   title: Improviser / Writer / Filmmaker
+   twitter: Dobrenkz
+   previous: Distance / UCB / Funny or Die
+   links:
+     - title: alexdobrenko.com
+       url: https://alexdobrenko.com/
+ - name: Sachin Benny
+   image: sachin-benny.PNG
+   indie_status: 1+ years
+   twitter: sachinb91
+   previous: Led growth for an online DTC furniture brand
+   links:
+     - title: Marketing strategy & positioning
+       url: https://www.notion.so/sachinbenny/I-m-Sachin-Benny-7391ec1aafa94af28599a2b089c4bf35    
+ - name: Jordan Peacock
+   image: jordan-peacock.png
+   indie_status: 3+ years
+   twitter: Dobrenkz
+   title: CEO, Becoming Machinic; Founder, Sortilege
+   previous: U.S. Bank, HelpSystems
+   links:
+     - title: Marketing strategy & positioning
+       url: https://www.notion.so/sachinbenny/I-m-Sachin-Benny-7391ec1aafa94af28599a2b089c4bf35             
+
+
+
        
 ---
 
