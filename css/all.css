@@ -25,12 +25,8 @@ body {
   .yak-purple{
     color:#AA23AD;
   }
-
-  .projectbox{
-
-  }
   
-.projectbox a{
+.projectbox{
     text-decoration:none;
     color:black;
 }
