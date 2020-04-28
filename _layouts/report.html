@@ -29,6 +29,12 @@
 <script>
 $( ".expand" ).click(function() {
   $(".collablist").toggle();
+  if($(".expand").text() == "+ expand"){
+    $(".expand").text("- close"); 
+  }
+  if($(".expand").text() == "- close"){
+    $(".expand").text("+ expand"); 
+  }  
 });
 </script>      
 
