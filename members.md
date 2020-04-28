@@ -66,6 +66,26 @@ collaborators:
    links:
      - title: Varietal Internet
        url: https://varietal.xyz/home/
+ - name: Vaughn TAN
+   image: vaughn-tan.png
+   indie_status: 5+ years
+   previously: "Google Inc. (And currently: University College London School of Management)"
+   twitter: vaughn_tan
+   links:
+     - title: bio
+       url: https://vaughntan.org/bio
+     - title: book
+       url: https://vaughntan.org/uncertainty
+     - title: newsletter
+       url: https://uncertaintymindset.substack.com/
+ - name: Randy Lubin
+   image: randy-lubin.png
+   indie_status: 10+ years
+   twitter: randylubin
+   links:
+     - title: Consulting Entrepreneur
+       url: https://randylubin.com/       
+       
 ---
 
 <div class="container mw7 cf pv5 f4-l center w-90 lh-copy">
