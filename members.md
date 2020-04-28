@@ -3,7 +3,7 @@ layout: members
 title: Yak Collective Members
 partners:
  - name: Venkatesh Rao
-   image: venkatesh-rao.jpeg
+   image: venkatesh-rao.PNG
    indie_status: 9+ years
    twitter: vgr
    links:
@@ -50,6 +50,16 @@ collaborators:
        url: https://www.wabisabifutures.com/
      - title: Ahoyhoy
        url: https://www.ahoyhoy.com.au/
+ - name: David McDougall
+   image: david-mcdougall.jpg
+   indie_status: 3+ years
+   previously: Product Management in SMEs across US & UK
+   twitter: WabiSabiFutures
+   links:
+     - title: Wabi Sabi Futures
+       url: https://www.wabisabifutures.com/
+     - title: Ahoyhoy
+       url: https://www.ahoyhoy.com.au/       
 ---
 
 <div class="container mw7 cf pv5 f4-l center w-90 lh-copy">
