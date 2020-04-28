@@ -58,6 +58,7 @@ collaborators:
 
 Yak Collective partners have played key roles in projects, helped steer the collective and tweeted excessively.
 
+<div class="pv3">
 {% for member in page.partners %}
 
 <div class="fl w-100 pa2">
@@ -78,6 +79,7 @@ Yak Collective partners have played key roles in projects, helped steer the coll
 
 </div>
 {% endfor %}
+</div>
 
 <h2 class="cf pt3">Collaborators</h2>
 
