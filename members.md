@@ -42,7 +42,7 @@ partners:
        url: https://littlefutures.club
 collaborators:
  - name: Amanda Reeves
-   image: Amanda-Reeves.jpeg
+   image: Amanda-Reeves.jpg
    indie_status: 1+ years
    twitter: WabiSabiFutures
    links:
