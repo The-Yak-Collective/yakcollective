@@ -54,12 +54,18 @@ collaborators:
    image: david-mcdougall.jpg
    indie_status: 3+ years
    previously: Product Management in SMEs across US & UK
-   twitter: WabiSabiFutures
+   twitter: dmcdougall
    links:
-     - title: Wabi Sabi Futures
-       url: https://www.wabisabifutures.com/
-     - title: Ahoyhoy
-       url: https://www.ahoyhoy.com.au/       
+     - title: Innovation at Scale
+       url: https://innovationatscale.substack.com/
+ - name: Darren Kong
+   image: darren-kong.jpg
+   indie_status: 3+ years
+   previously: Other Internet
+   twitter: platformpapi
+   links:
+     - title: Varietal Internet
+       url: https://varietal.xyz/home/
 ---
 
 <div class="container mw7 cf pv5 f4-l center w-90 lh-copy">
