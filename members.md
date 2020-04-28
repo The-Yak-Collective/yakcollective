@@ -56,7 +56,7 @@ collaborators:
 
 <h1>Partners</h1>
 
-Yak Collective partners have played key roles in projects, helped organize and steer the collective and tweeted excessively.
+Yak Collective partners have played key roles in projects, helped steer the collective and tweeted excessively.
 
 {% for member in page.partners %}
 
