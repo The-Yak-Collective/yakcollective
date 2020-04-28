@@ -151,7 +151,7 @@ collaborators:
    twitter: antlerboy
    previous: PwC, Capita, Adviser to Mayor in a London Borough
    links:
-     - title: Red Quadrant
+     - title: RedQuadrant
        url: http://www.redquadrant.com/
      - title: Systems Practice
        url: https://systemspractice.org/
