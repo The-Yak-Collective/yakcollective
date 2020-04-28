@@ -6,7 +6,7 @@
 
 <div class="h-25 w-100 center pa3">
 
-    <article class="cf ph3 ph5-ns pv5">
+    <article class="cf ph3 ph5-ns pv5-l pv3">
         <header class="fn fl-ns w-25-ns pr4-ns pl4-ns">
           <div class="f5 lh-title fw9 mb3 mt0 pt3 bt bw2 sans-serif">
             REPORT
@@ -31,8 +31,7 @@ $( ".expand" ).click(function() {
   $(".collablist").toggle();
   if($(".expand").text() == "+ expand"){
     $(".expand").text("- close"); 
-  }
-  if($(".expand").text() == "- close"){
+  }else if($(".expand").text() == "- close"){
     $(".expand").text("+ expand"); 
   }  
 });
