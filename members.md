@@ -56,6 +56,8 @@ collaborators:
 
 <h1>Partners</h1>
 
+Yak Collective partners have played key roles in projects, helped organize and steer the collective and tweeted excessively.
+
 {% for member in page.partners %}
 
 <div class="fl w-100 pa2">
@@ -77,7 +79,9 @@ collaborators:
 </div>
 {% endfor %}
 
-<h2 class="cf">Collaborators</h2>
+<h2 class="cf pv3">Collaborators</h2>
+
+Yak Collective collaborators have contributed to one or more projects.
 
 {% for member in page.collaborators %}
 
