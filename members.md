@@ -40,7 +40,7 @@ partners:
        url: https://tomcritchlow.com/
      - title: Little Futures
        url: https://littlefutures.club
-contributors:
+collaborators:
  - name: Amanda Reeves
    image: Amanda-Reeves.jpeg
    indie_status: 1+ years
