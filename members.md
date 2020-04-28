@@ -42,9 +42,14 @@ partners:
        url: https://littlefutures.club
 contributors:
  - name: Amanda Reeves
-   status: Yak Shaver
- - name: Paul Millard
-   status: Yak Shavers   
+   image: Amanda-Reeves.jpeg
+   indie_status: 1+ years
+   twitter: WabiSabiFutures
+   links:
+     - title: Wabi Sabi Futures
+       url: https://www.wabisabifutures.com/
+     - title: Ahoyhoy
+       url: https://www.ahoyhoy.com.au/
 ---
 
 <div class="container mw7 cf pv5 f4-l center w-90 lh-copy">
@@ -74,6 +79,26 @@ contributors:
 
 <h2 class="cf">Collaborators</h2>
 
+{% for member in page.collaborators %}
+
+<div class="fl w-100 pa2">
+
+  <div class="flex items-center lh-copy pa3 ba b--black-10">
+      <img class="w2 h2 w3-ns h3-ns br-100" src="/images/members/{{member.image}}" />
+      <div class="pl3 flex-auto">
+        <span class="f6 db black-70">{{member.name}}</span>
+        <span class="f6 db black-70">{{member.title}}</span>
+        <span class="f6 db black-70">Indie status: {{member.indie_status}}</span>
+        <span class="f6 db black-70">{% if member.previous %}Previously: {{member.previous}}{% endif %}</span>
+        <span class="f6 db black-70">{% for link in member.links %}{% if forloop.first == true %}{% else %} / {% endif %}<a href="{{link.url}}">{{link.title}}</a>{% endfor %}</span>
+      </div>
+            <div>
+        <a href="https://twitter.com/{{member.twitter}}" class="f6 link blue hover-dark-gray">@{{member.twitter}}</a>
+      </div>
+  </div>
+
+</div>
+{% endfor %}
 
 
   </div>
