@@ -79,7 +79,7 @@ Yak Collective partners have played key roles in projects, helped organize and s
 </div>
 {% endfor %}
 
-<h2 class="cf pv3">Collaborators</h2>
+<h2 class="cf pt3">Collaborators</h2>
 
 Yak Collective collaborators have contributed to one or more projects.
 
