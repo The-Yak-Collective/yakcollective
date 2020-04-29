@@ -21,12 +21,16 @@ collaborators: David McDougall, Darren Kong, Vaughan Tan, Randy Lubin, Vlad Meha
 <img class="h1" src="https://ssl.gstatic.com/docs/presentations/images/favicon5.ico"> Open Google Doc / <img class="h1" src="/images/pdf.png"> Download PDF
 </div>
 
+## The Yak Wisdom Project
+
 This deck is just the first of what we hope will be a series of studies the Yak Collective will be undertaking over the coming months. We aim to generate a body of Covid-19 reboot intelligence that is fundamentally different from anything you might see anywhere else, not just in terms of content, but in terms of the process of getting to it. 
 
-Want to keep up with our efforts? Follow us on Twitter, LinkedIn or Facebook.
+## Let the Yak Collective help guide your reboot
 
-Like bits and pieces of what you saw in this deck? Feel free to contact one or more individual contributors directly! The Yak Collective is not an agency or intermediary. Our members collaborate because they want to, and each of us maintains their own independent consulting practice. We offer you a catalog of ideas and people to choose from, not a bundle.
+Want to keep up with our efforts? Follow us on Twitter & LinkedIn.
 
-Like a lot of what you see? Contact Paul Millerd to loop The Yak Collective into your reboot efforts. We will assemble the right small team and set of ideas to work with you, in whatever way is most effective. It might be a study or report. It might be facilitating a workshop or series of conversations for your executive team. Or it might just be an ongoing conversation with one or more of us.
+**Like bits and pieces of what you saw in this deck?** Feel free to contact one or more individual contributors directly! The Yak Collective is not an agency or intermediary. Our members collaborate because they want to, and each of us maintains their own independent consulting practice. We offer you a catalog of ideas and people to choose from, not a bundle.
 
-Want to hang out with us LIVE as we work these problems? Join our Discord server. Our working process is literally open. Any independent consultant from anywhere in the world who has ideas is welcome to join our efforts, contribute to and lead collaborative projects. Any prospective client is welcome to hang out as well.
+**Like a lot of what you see?** Contact [Paul Millerd](mailto:pmillerd@gmail.com) to loop The Yak Collective into your reboot efforts. We will assemble the right small team and set of ideas to work with you, in whatever way is most effective. It might be a study or report. It might be facilitating a workshop or series of conversations for your executive team. Or it might just be an ongoing conversation with one or more of us.
+
+**Want to hang out with us LIVE as we work these problems?** [Join our Discord server](https://discord.gg/Es8AkeC). Our working process is literally open. Any independent consultant from anywhere in the world who has ideas is welcome to join our efforts, contribute to and lead collaborative projects. Any prospective client is welcome to hang out as well.
