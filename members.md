@@ -122,6 +122,9 @@ collaborators:
    twitter: hewhocutsdown
    title: CEO, Becoming Machinic; Founder, Sortilege
    previous: U.S. Bank, HelpSystems
+   links:
+     - title: LinkedIn
+       url: https://www.linkedin.com/in/hewhocutsdown/
  - name: Anne-Laure Le Cunff
    image: anne-laure-le-cunff.png
    indie_status: 2+ years
