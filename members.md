@@ -8,10 +8,8 @@ partners:
    previous: Xerox
    twitter: vgr
    links:
-     - title: Ribbonfarm
-       url: https://ribbonfarm.com
-     - title: Art of Gig
-       url: https://artofgig.substack.com
+     - title: VenkateshRao.com
+       url: https://venkateshrao.com/
  - name: Paul Millerd
    image: paul-millerd.jpg
    previous: McKinsey, BCG, GE, Russell Reynolds 
