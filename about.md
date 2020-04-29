@@ -3,13 +3,17 @@ layout: page
 title: About the Yak Collective
 ---
 
+{% include toc.html html=content %}
+
 ## Our Origin Story
 
     - The Yak Collective is a loosely coordinated network of over 300 independent consultants, coaches, and freelancers with varied specialized technical or artistic skills. Nearly 30 of our members contributed to our inaugural report, released on April 30, 2020, [Don't Waste the Reboot](https://yakcollective.org/projects/yak-wisdom). These numbers will evolve as we take on more shared projects, both internally initiated, and on behalf of clients.
     - Though we launched formally in March, 2020, the network underlying the Yak Collective has been growing in the background since early 2019. What began as a conversation among a handful of indies swapping notes turned into a broader conversation among dozens, then hundreds of indies, around the world. 
     - When the Covid19 pandemic struck, some of us decided it was time to come up with an indie alternative to what has been called the literary-industrial complex -- the assemblage of worlds like traditional consulting, MBA programs, business book publishing, and TED talks -- that serves as a sort of Hollywood to organizations in need of support in the face of challenges they cannot handle internally. 
     - We wanted a way to generate alternatives to warmed-over output from the last crisis, hastily repackaged and presented as meaningful responses to this one. A new crisis that is like nothing in living memory. **Too much is at stake now to repeat old mistakes. At the very least, the Yak Collective can promise you an opportunity to make interesting new ones.**
-- **The Why**: 
+
+## The Why
+
     - We have nothing __against__ consulting firms, MBA programs, think tanks, design agencies, TED talk givers, and the ideas of famous professors __per se__. In fact we happily and liberally steal and use their ideas where they fit -- and you'll see evidence of such influence in our work. Many of us are in fact veterans of the assemblage of traditional worlds that constitute the literary-industrial complex. Some of us even have current, active affiliations in those worlds. And many more of us have productive collaborations and cordial friendships with people in those worlds. In fact, truth be told, we fully expect our friends in those worlds to help us bootstrap the Yak Collective.
     - But crucially, not all of us are from those worlds, or affiliated with them, or actively connected to them. Or truth be told, welcome in them. Each of us, individually, has chosen to grow our network in a much more open, promiscuous way than any traditional institution, connecting liberally beyond the boundaries of the literary-industrial complex. We've chosen to do so because we believe other worlds have as much value to offer as the literary-industrial complex, perhaps more. We believe, in fact, that the long tail of Other Worlds inhabited by indie consultants is rapidly creating and accruing value with greater volume, velocity, and variety than the literary industrial complex. 
     - Call us arrogant -- but we genuinely think we are the future because we already live there. We are getting smarter, faster, than the literary-industrial complex, even though we're growing from a much smaller, younger base.
