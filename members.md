@@ -45,6 +45,7 @@ collaborators:
  - name: Amanda Reeves
    image: Amanda-Reeves.jpg
    indie_status: 1+ years
+   previous: Strategic coaching & health service redesign
    twitter: WabiSabiFutures
    links:
      - title: Wabi Sabi Futures
