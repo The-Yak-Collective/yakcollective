@@ -159,7 +159,6 @@ collaborators:
  - name: Nita Baum
    image: nita-baum.PNG
    indie_status: 13 years
-   twitter: 
    previous: 
    links:
      - title: b*free
@@ -167,7 +166,6 @@ collaborators:
  - name: Rodrigo Pinto
    image: rodrigo-pinto.jpg
    indie_status: 3+ years
-   twitter: 
    previous: 
    links:
      - title: Project management and software development
