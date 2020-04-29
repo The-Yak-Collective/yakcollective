@@ -226,9 +226,11 @@ Yak Collective partners have played key roles in projects, helped steer the coll
         <span class="f6 db black-70">{% if member.previous %}Previously: {{member.previous}}{% endif %}</span>
         <span class="f6 db black-70">{% for link in member.links %}{% if forloop.first == true %}{% else %} / {% endif %}<a href="{{link.url}}">{{link.title}}</a>{% endfor %}</span>
       </div>
+        {% if member.twitter %}
         <div>
         <a href="https://twitter.com/{{member.twitter}}" class="f6 link blue hover-dark-gray">@{{member.twitter}}</a>
       </div>
+      {% endif %}
   </div>
 
 </div>
