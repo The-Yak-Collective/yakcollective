@@ -97,7 +97,7 @@ collaborators:
  - name: Thomas Verhagen
    image: Thomas-Verhagen.jpg
    indie_status: 1+ year
-   twitter: 
+   twitter: thomasverhagen
    links:
      - title: Analyze, structure & boost
        url: https://www.linkedin.com/in/thomasverhagen/
@@ -121,7 +121,7 @@ collaborators:
  - name: Jordan Peacock
    image: jordan-peacock.png
    indie_status: 3+ years
-   twitter: 
+   twitter: hewhocutsdown
    title: CEO, Becoming Machinic; Founder, Sortilege
    previous: U.S. Bank, HelpSystems
    links:
@@ -160,12 +160,14 @@ collaborators:
    image: nita-baum.PNG
    indie_status: 13 years
    previous: 
+   twitter: bfree_live
    links:
      - title: b*free
        url: https://www.bfree.live/
  - name: Rodrigo Pinto
    image: rodrigo-pinto.jpg
    indie_status: 3+ years
+   twitter: Rodrigo_plp
    previous: 
    links:
      - title: Project management and software development
@@ -198,7 +200,7 @@ collaborators:
  - name: Jordan Allen
    image: jordan-allen.PNG
    indie_status: 1+ years
-   twitter: 
+   twitter: quickdrawyall
    title: Business Development & Revenue Generation
    previous: 
    links:       
