@@ -186,7 +186,6 @@ collaborators:
    image: Harry-Pottash.png
    indie_status: 5+ years
    title: Philosopher & Investor
-   twitter: 
    previous: Engineer, Founder 
    links:       
  - name: Martha Balaile
