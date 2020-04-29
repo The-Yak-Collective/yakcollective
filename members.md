@@ -215,7 +215,7 @@ Yak Collective partners have played key roles in projects, helped steer the coll
 <div class="pv3">
 {% for member in page.partners %}
 
-<div class="fl w-100 pa2">
+<div class="w-100 pa2">
 
   <div class="flex items-center lh-copy pa3 ba b--black-10">
       <img class="w2 h2 w3-ns h3-ns br-100" src="/images/members/{{member.image}}" />
