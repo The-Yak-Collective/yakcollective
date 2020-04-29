@@ -122,9 +122,6 @@ collaborators:
    twitter: hewhocutsdown
    title: CEO, Becoming Machinic; Founder, Sortilege
    previous: U.S. Bank, HelpSystems
-   links:
-     - title: Marketing strategy & positioning
-       url: https://www.notion.so/sachinbenny/I-m-Sachin-Benny-7391ec1aafa94af28599a2b089c4bf35             
  - name: Anne-Laure Le Cunff
    image: anne-laure-le-cunff.png
    indie_status: 2+ years
