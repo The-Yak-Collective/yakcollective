@@ -80,3 +80,12 @@ If you're interested in assembling a larger team from among our membership, cont
 --
 
 ***So if you're ready for a fresh approach. If you're ready to inject some imagination and nerve into your challenges, check us out. Browse our [Projects](/projects) page, check out our [Members](/members) page, and if you're intrigued by what you see -- ping one of us. Maybe we are the answer.***
+
+--
+
+<details>
+<summary>Website colophon</summary>
+<p>Site version 1.0</p>
+<p>Built by Tom Critchlow</p>
+<p>SVG graphics from <a href="https://www.heropatterns.com/">heropatterns.com</a></p>
+</details>
