@@ -19,7 +19,7 @@
           <h1 class="ma0 pa0 fw8 f1">
             {{page.title}}
             </h1>
-            <h2>{{page.subtitle}}</h2>
+            <h2>{{page.subtitle | markdownify}}</h2>
           <p class="f5 lh-copy measure pb5">
             {{page.intro | newline_to_br}}
           </p>
