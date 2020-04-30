@@ -249,7 +249,7 @@ Yak Collective collaborators have contributed to one or more projects.
         <span class="f6 db black-70">{{member.title}}</span>
         <span class="f6 db black-70">Indie status: {{member.indie_status}}</span>
         <span class="f6 db black-70">{% if member.previous %}Previously: {{member.previous}}{% endif %}</span>
-        <span class="f6 db black-70">{% for link in member.links %}{% if forloop.first == true %}{% else %} / {% endif %}<a href="{{link.url}}">{{link.title}}</a>{% endfor %}</span>
+        <span class="f6 db black-70">{% for link in member.links %}{% if forloop.first == true %}{% else %} / {% endif %}<a class="link blue hover-dark-gray" href="{{link.url}}">{{link.title}}</a>{% endfor %}</span>
       </div>
         {% if member.twitter %}
         <div>
