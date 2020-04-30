@@ -59,7 +59,7 @@ ul a, ol a, p a, form a, .mobilemenu a, .next, .previous, h3 a, h4 a, .reportlin
       border-radius:5px;
       margin-left:-10%;
       box-shadow: 5px 5px 10px #888888;
-      border:1px solid lightgrey;
+      border:1px solid black;
       display:block;
   }
 
