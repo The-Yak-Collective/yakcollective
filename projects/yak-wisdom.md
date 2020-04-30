@@ -1,5 +1,6 @@
 ---
 layout: report
+redirect_from: "/reports/yak-wisdom"
 image: /images/yak-wisdom-screenshot.png
 title: Don't Waste the COVID-19 Reboot
 subtitle: Making the next normal better than the last one
