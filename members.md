@@ -129,7 +129,6 @@ collaborators:
    image: anne-laure-le-cunff.png
    indie_status: 2+ years
    twitter: anthilemoon
-   title: CEO, Becoming Machinic; Founder, Sortilege
    previous: Google, Entrepreneur First
    links:
      - title: Founder, Ness Labs
