@@ -4,7 +4,7 @@ image: /images/yak-wisdom-screenshot.png
 title: Don't Waste the COVID-19 Reboot
 subtitle: Making the next normal better than the last one
 intro: |
-  The inaugural report by the Yak Collective, Don't Waste the Reboot offers organizations a smorgasbord of 25 creative and unexpected provocations, ideas, and action frameworks to navigate the Covid-19 crisis.
+  The inaugural report by the Yak Collective, *Don't Waste the Reboot* offers organizations a smorgasbord of 25 creative and unexpected provocations, ideas, and action frameworks to navigate the Covid-19 crisis.
   
   Authored by 21 diverse contributors from around the world -- most of whom are working together for the first time -- we believe this report will get you thinking about your reboot efforts in a bolder, more imaginative way. Let us know what you think!
 date: |
