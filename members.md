@@ -161,6 +161,8 @@ collaborators:
    links:
      - title: b*free
        url: https://www.bfree.live/
+     - title: Solar Responders
+       url: http://solarresponders.org/
  - name: Rodrigo Pinto
    image: rodrigo-pinto.jpg
    indie_status: 3+ years
