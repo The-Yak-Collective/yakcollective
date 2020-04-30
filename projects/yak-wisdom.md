@@ -27,7 +27,7 @@ This deck is just the first of what we hope will be a series of studies the Yak 
 
 ## Let the Yak Collective help guide your reboot
 
-Want to keep up with our efforts? Follow us on Twitter & LinkedIn.
+Want to keep up with our efforts? Follow us on [Twitter](https://twitter.com/yak_collective) & [LinkedIn](https://www.linkedin.com/company/yak-collective/).
 
 **Like bits and pieces of what you saw in this deck?** Feel free to contact one or more individual contributors directly! The Yak Collective is not an agency or intermediary. Our members collaborate because they want to, and each of us maintains their own independent consulting practice. We offer you a catalog of ideas and people to choose from, not a bundle.
 
