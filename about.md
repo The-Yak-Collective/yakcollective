@@ -53,7 +53,7 @@ The inventory of methods, tools, and processes we bring to any problem range fro
 - We're not in it to produce cover-your-ass paper trails, but we __do__ know how the game is played and how to sneak real work past checkpoints designed to only allow bullshit through.
 - We're not in it to lend a halo and boost your brand by association, but we __do__ know how charisma, influence and and socialization of ideas work in real organizations.
 - We're not in it to manufacture __post-hoc__ justifications and flattering optics for bad-faith ideas and projects, but we __do__ understand the incentives and perceptions at work in real organizations, and what it takes to shape narratives and get real work done through them.
-- We're not in it because we armed with hammers and everything looks like a nail to us, but we __do__ have actual skills we bring with us, and track records of shipping meaningful output.
+- We're not in it because we are armed with hammers and everything looks like a nail to us, but we __do__ have actual skills we bring with us, and track records of shipping meaningful output.
 
 But though we are open and curious about all methods, tools and processes, we are __not__ about methods, tools, and processes for their own sake. Fundamentally, we are all pragmatists because we have to be to survive as indies. We focus on thinking about the actual problem first, the right processes and tools second, and on peddling bullshit, almost never (okay, we are human, so we do succumb to temptation on occasion). **Our work, individually and collectively, is driven by one overriding concern: the methods have to *work*, or be set aside for better ones. Otherwise we don't get that contract renewal.**
 
