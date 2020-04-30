@@ -21,7 +21,7 @@ But crucially, not all of us are from those worlds, or affiliated with them, or 
 
 Call us arrogant -- but we genuinely think we are the future because we already live there. We are getting smarter, faster, than the literary-industrial complex, even though we're growing from a much smaller, younger base.
 
-What makes us different -- and what makes the indie alternative a __real__ alternative -- is that we are organized very differently, allowing us to bring very different values to the party. **This we believe is the crucial difference. It is very easy to simply __profess__ alternative "networked production" values. It is __much__ harder to believably __embody__ alternative values in patterns of organization and operation.**
+What makes us different -- and what makes the indie alternative a __real__ alternative -- is that we are organized very differently, allowing us to bring very different values to the party. **This we believe is the crucial difference. It is very easy to simply *profess* alternative "networked production" values. It is *much* harder to believably *embody* alternative values in patterns of organization and operation.**
 
 ## Who We Are
 
@@ -42,7 +42,7 @@ All of us went indie because we wanted to work on real, hard problems, as best a
 
 This means sometimes we try weird new ideas and untested methods, and wander from our zones of expertise into our zones of amateurishness. We are open to __really__ trying new things and owning the inevitable failures that can sometimes result, as well as the successes, because if we aren't __open__ in that way, we can't land gigs or make money. 
 
-As independents, we do not have the luxury of hiding among dozens of interchangeable people just like us, or closing deals on the basis of ancient existing relationships among sclerotic institutions that have been enabling each other's dysfunctions for decades. We are nobodies from the internet, showing up in executive email inboxes or sliding into CEO DMs on Twitter, sometimes with nothing more than a tweet backing our play. And unbelievably, it works well enough that we can make a living out of it. Because as the saying goes, __real recognize real__.  **We make rent -- or not -- based purely on whether people find us credible enough to talk to. **
+As independents, we do not have the luxury of hiding among dozens of interchangeable people just like us, or closing deals on the basis of ancient existing relationships among sclerotic institutions that have been enabling each other's dysfunctions for decades. We are nobodies from the internet, showing up in executive email inboxes or sliding into CEO DMs on Twitter, sometimes with nothing more than a tweet backing our play. And unbelievably, it works well enough that we can make a living out of it. Because as the saying goes, __real recognize real__.  **We make rent -- or not -- based purely on whether people find us credible enough to talk to.**
 
 
 ## Our Methods
@@ -55,7 +55,7 @@ The inventory of methods, tools, and processes we bring to any problem range fro
 - We're not in it to manufacture __post-hoc__ justifications and flattering optics for bad-faith ideas and projects, but we __do__ understand the incentives and perceptions at work in real organizations, and what it takes to shape narratives and get real work done through them.
 - We're not in it because we armed with hammers and everything looks like a nail to us, but we __do__ have actual skills we bring with us, and track records of shipping meaningful output.
 
-But though we are open and curious about all methods, tools and processes, we are __not__ about methods, tools, and processes for their own sake. Fundamentally, we are all pragmatists because we have to be to survive as indies. We focus on thinking about the actual problem first, the right processes and tools second, and on peddling bullshit, almost never (okay, we are human, so we do succumb to temptation on occasion). **Our work, individually and collectively, is driven by one overriding concern: the methods have to __work__, or be set aside for better ones. Otherwise we don't get that contract renewal.**
+But though we are open and curious about all methods, tools and processes, we are __not__ about methods, tools, and processes for their own sake. Fundamentally, we are all pragmatists because we have to be to survive as indies. We focus on thinking about the actual problem first, the right processes and tools second, and on peddling bullshit, almost never (okay, we are human, so we do succumb to temptation on occasion). **Our work, individually and collectively, is driven by one overriding concern: the methods have to *work*, or be set aside for better ones. Otherwise we don't get that contract renewal.**
 
 
 ## The Philosophy
@@ -64,7 +64,7 @@ But just because we are pragmatists driven by the need to land that next gig, an
 
 One project at a time, one client at a time, each of us is trying to gradually evolve our own approach to creating and delivering value that we can genuinely enjoy creating. So it is no accident that many of us have been inspired by effective collaboration models that have emerged outside of the literary-industrial complex, around new technologies in particular: in the open-source software world, gaming communities, artistic communities, the blogosphere, and other open, network-based domains. 
 
-Many of us are veterans of one or more such domains. And yes, as you might expect, most of us keep an eye on blockchains and other emerging technologies that might be friendlier to our radically different ways of working. You never know which new technology might end up serving as an asymmetric advantage on our next adventure. Our methods and approaches don't stay static. All of us are curious technophiles, constantly exploring and playing with different new toys, picking up new skills by trial-and-error as they emerge from the technology world. ** Our philosophy  of work and life is radically tech-positive because it has to be. The indie life is only possible because an ever-growing and maturing stack of new digital technologies makes it possible, and increasingly accessible.**
+Many of us are veterans of one or more such domains. And yes, as you might expect, most of us keep an eye on blockchains and other emerging technologies that might be friendlier to our radically different ways of working. You never know which new technology might end up serving as an asymmetric advantage on our next adventure. Our methods and approaches don't stay static. All of us are curious technophiles, constantly exploring and playing with different new toys, picking up new skills by trial-and-error as they emerge from the technology world. **Our philosophy  of work and life is radically tech-positive because it has to be. The indie life is only possible because an ever-growing and maturing stack of new digital technologies makes it possible, and increasingly accessible.**
 
 
 ## The Logistics
@@ -79,4 +79,4 @@ If you're interested in assembling a larger team from among our membership, cont
 
 --
 
-**__So if you're ready for a fresh approach. If you're ready to inject some imagination and nerve into your challenges, check us out. Browse our Projects page, check out our Members page, and if you're intrigued by what you see -- ping one of us. Maybe we are the answer.__**
+***So if you're ready for a fresh approach. If you're ready to inject some imagination and nerve into your challenges, check us out. Browse our Projects page, check out our Members page, and if you're intrigued by what you see -- ping one of us. Maybe we are the answer.***
