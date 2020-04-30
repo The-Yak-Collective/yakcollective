@@ -79,4 +79,4 @@ If you're interested in assembling a larger team from among our membership, cont
 
 --
 
-***So if you're ready for a fresh approach. If you're ready to inject some imagination and nerve into your challenges, check us out. Browse our Projects page, check out our Members page, and if you're intrigued by what you see -- ping one of us. Maybe we are the answer.***
+***So if you're ready for a fresh approach. If you're ready to inject some imagination and nerve into your challenges, check us out. Browse our [Projects](/projects) page, check out our [Members](/members) page, and if you're intrigued by what you see -- ping one of us. Maybe we are the answer.***
