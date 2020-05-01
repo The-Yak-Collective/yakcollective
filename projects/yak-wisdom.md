@@ -12,7 +12,7 @@ date: |
   April 30th 2020, UTC
   Day 45 Pandemic Mean Time
 authors: Paul Millerd & Venkatesh Rao
-collaborators: David McDougall, Darren Kong, Vaughan Tan, Randy Lubin, Vlad Mehakovic, Thomas Verhagen, Alex Dobrenko, Sachin Benny, Amanda Reeves, Jordan Peacock, Anne-Laure Le Cunff, Vaughan Tan, Benjamin Taylor, Vinay Debrou, Tom Critchlow, Rodrigo Pinto, Ben Mosior, Harry Pottash, Jordan Allen
+collaborators: David McDougall, Darren Kong, Vaughan Tan, Randy Lubin, Vlad Mehakovic, Thomas Verhagen, Alex Dobrenko, Sachin Benny, Amanda Reeves, Jordan Peacock, Anne-Laure Le Cunff, Vaughan Tan, Benjamin Taylor, Nita Baum, Vinay Debrou, Tom Critchlow, Rodrigo Pinto, Ben Mosior, Harry Pottash, Jordan Allen
 ---
 
 <iframe class="report" src="https://docs.google.com/presentation/d/e/2PACX-1vTa8T4sQLAF2cbRFTqcxZGefI7A2HP54ZKBlyvpi03iTWrzt10W50MP-fQ13am5_svHeJL_-zjALkVT/embed?start=false&loop=false&delayms=60000" frameborder="0" width="1920" height="1109" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
