@@ -2,3 +2,4 @@
 
 - [X] Added CHANGELOG.md
 - [X] Added `.gitignore`
+- [X] Added `Gemfile`
