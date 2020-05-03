@@ -1,6 +1,4 @@
 # Permalinks
 permalink:        pretty
 plugins:
-  - jekyll-redirect-from
-
 collections:
