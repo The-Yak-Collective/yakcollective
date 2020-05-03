@@ -7,6 +7,13 @@
   links:
     - title: VenkateshRao.com
       url: https://venkateshrao.com/
+  feeds:
+    - title: ribbonfarm
+      url: https://www.ribbonfarm.com/author/admin/feed/
+    - title: Breaking Smart
+      url: https://breakingsmart.substack.com/feed/
+    - title: Art of Gig
+      url: https://artofgig.substack.com/feed/
 
 - name: Paul Millerd
   partner: true
@@ -19,6 +26,11 @@
       url: https://think-boundless.com/
     - title: Strategy U
       url: https://strategyu.co/
+  feeds:
+    - title: Boundless
+      url: https://think-boundless.com/feed/
+    - title: Strategy U
+      url: https://strategyu.co/feed/
 
 - name: Pamela Hobart
   partner: true
@@ -30,6 +42,9 @@
       url: https://www.pamelajhobart.com/
     - title: Substack
       url: https://pamelajhobart.substack.com/
+  feeds:
+    - title: Substack
+      url: https://pamelajhobart.substack.com/feed/
 
 - name: Tom Critchlow
   partner: true
@@ -42,6 +57,9 @@
       url: https://tomcritchlow.com/
     - title: Little Futures
       url: https://littlefutures.club
+  feeds:
+    - title: tomcritchlow.com
+      url: https://tomcritchlow.com/feed
 
 - name: Amanda Reeves
   image: Amanda-Reeves.jpg
@@ -62,6 +80,9 @@
   links:
     - title: Innovation at Scale
       url: https://innovationatscale.substack.com/
+  feeds:
+    - title: Innovation at Scale
+      url: https://innovationatscale.substack.com/feed/
 
 - name: Darren Kong
   image: darren-kong.jpg
@@ -84,6 +105,11 @@
       url: https://vaughntan.org/uncertainty
     - title: newsletter
       url: https://uncertaintymindset.substack.com/
+  feeds:
+    - title: bio
+      url: https://vaughntan.org/feed.rss
+    - title: newsletter
+      url: https://uncertaintymindset.substack.com/feed/
 
 - name: Randy Lubin
   image: randy-lubin.png
@@ -92,6 +118,9 @@
   links:
     - title: Consulting Entrepreneur
       url: https://randylubin.com/ 
+  feeds:
+    - title: Consulting Entrepreneur
+      url: https://blog.randylubin.com/feed.xml
 
 - name: Vlad Mehakovic
   image: vlad-mehacovic.jpg
@@ -146,6 +175,9 @@
   links:
     - title: Founder, Ness Labs
       url: https://nesslabs.com/
+  feeds:
+    - title: Ness Labs
+      url: https://nesslabs.com/author/annelaure/feed
 
 - name: Vinay Débrou
   image: vinay-débrou.jpg
@@ -157,6 +189,9 @@
       url: https://www.notion.so/brewing/About-Me-2ff600ac504d4217a3ce643869677fd8
     - title: Substack
       url: https://daybrew.substack.com/about
+  feeds:
+    - title: Substack
+      url: https://daybrew.substack.com/feed/
 
 - name: Benjamin Taylor
   image: benjamin-taylor.jpg
@@ -196,6 +231,9 @@
       url: https://www.linkedin.com/in/benjaminmosior/
     - title: Hired Thought
       url: https://hiredthought.com/
+  feeds:
+    - title: Hired Thought
+      url: https://hiredthought.com/feed/
 
 - name: Harry Pottash
   image: Harry-Pottash.png
