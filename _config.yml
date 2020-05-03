@@ -1,0 +1,7 @@
+permalink: pretty
+include: 
+    - _redirects
+exclude:
+    - README.md
+    - CHANGELOG.md
+    - yak-build.sh
