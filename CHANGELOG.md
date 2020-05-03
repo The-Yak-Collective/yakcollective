@@ -6,3 +6,4 @@
 - [X] Migrate to Netlify-style redirects
 - [X] Migrate to Netlify-style build infrastructure
 - [X] Separate member data from page
+- [X] Clean up unused files
