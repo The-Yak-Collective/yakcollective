@@ -1,0 +1,8 @@
+.bundle/*
+_site/*
+vendor/*
+
+.DS_Store
+._*
+*.db
+*~
