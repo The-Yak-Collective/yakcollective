@@ -7,4 +7,5 @@
 - [X] Migrate to Netlify-style build infrastructure
 - [X] Separate member data from page
 - [X] Clean up unused files
-- [X] Added as many (populateD) RSS feeds as I could find
+- [X] Added as many (populated) RSS feeds as I could find
+- [X] Added member RSS feeds to header
