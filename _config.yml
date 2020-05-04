@@ -1,4 +1,21 @@
+# General site settings
+#
 permalink: pretty
+
+# RSS/JSON feed settings. See:
+#
+#   https://github.com/snaptortoise/jekyll-rss-feeds
+#   https://github.com/snaptortoise/jekyll-json-feeds
+#
+name: The Yak Collective
+description: The Yak Collective is a network of over 300 independent consultants, coaches, and freelancers with varied technical and creative skills.
+url: https://yakcollective.org
+feed_items: 255
+feed_update_period: daily
+feed_update_frequency: 1
+
+# Includes and excludes
+#
 include: 
     - _redirects
 exclude:

@@ -37,6 +37,8 @@
 			<meta name="twitter:image" content="https://yakcollective.org/images/yak-og.png">
 		{% endif %}
 
+		<link rel="alternate" type="application/json" title="The Yak Collective's Latest Writings" href="/feed.writings.json">
+		<link rel="alternate" type="application/rss+xml" title="The Yak Collective's Latest Writings" href="/feed.writings.xml">
 		{% for member in site.data.members %}
 			{% if member.feeds %}
 				{% for feed in member.feeds %}
