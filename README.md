@@ -1,5 +1,3 @@
-# yakcollective
-
 # The Yak Collective
 
 Home page of the Yak Collective projects.
