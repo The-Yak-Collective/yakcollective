@@ -10,3 +10,4 @@
 - [X] Added as many (populated) RSS feeds as I could find
 - [X] Added member RSS feeds to header
 - [X] Created list of writings (from RSS feeds)
+- [X] Renamed `members.md` to `members.html` to match content
