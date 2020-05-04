@@ -12,3 +12,4 @@
 - [X] Created list of writings (from RSS feeds)
 - [X] Renamed `members.md` to `members.html` to match content
 - [X] Added RSS and JSON feeds for writings category
+- [X] Created reusable "member card" widget
