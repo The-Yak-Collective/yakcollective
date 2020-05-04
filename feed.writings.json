@@ -1,0 +1,32 @@
+---
+---
+
+{
+  "version": "https://jsonfeed.org/version/1",
+  "title": {{ site.title | append: " - Latest Writings" | jsonify }},
+  "description": "The Yak Collective's latest writings.",
+  "home_page_url": "{{ site.url }}",
+  "feed_url": "{{ site.url }}/feed.writings.json",
+  "favicon": "{{ site.url}}/images/yaklogo.png",
+  {% if site.author %}
+  "author": {
+    "name": {{ site.author | jsonify }}
+  },
+  {% endif %}
+  "items": [
+    {% assign feed_items = site.feed_items | default: 10 %}
+    {% for post in site.categories.writings limit:feed_items %}
+    {
+      "id": "{% if post.original_link %}{{ post.original_link | jsonify }}{% else %}{{ site.url }}{{ post.url }}{% endif %}",
+      "url": "{% if post.original_link %}{{ post.original_link | jsonify }}{% else %}{{ site.url }}{{ post.url }}{% endif %}",
+      "title": {{ post.title | jsonify }},
+      {% if post.excerpt %}
+      "content_html": {{ post.excerpt | jsonify  }},
+      {% else %}
+      "content_html": {{ post.content | jsonify  }},
+      {% endif %}
+      "date_published": "{{ post.date | date_to_rfc822 }}"
+      }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ]
+}
