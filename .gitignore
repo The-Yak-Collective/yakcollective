@@ -1,7 +1,11 @@
 .bundle/*
 .jekyll-cache/*
+_posts/*.html
 _site/*
 vendor/*
+
+yak-planet.ini
+yak-planet.db
 
 .DS_Store
 ._*
