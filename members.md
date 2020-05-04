@@ -9,7 +9,7 @@ title: Yak Collective Members
 
 	{% for member in site.data.members %}
 		{% if member.partner == true %}
-			<div class="w-100 pa2">
+			<div class="w-100 pa2" id="{{ member.name | slugify: "latin" }}">
 				<div class="flex items-center lh-copy pa3 ba b--black-10">
 					<img class="w2 h2 w3-ns h3-ns br-100" src="/images/members/{{member.image}}" />
 					<div class="pl3 flex-auto">
@@ -43,7 +43,7 @@ title: Yak Collective Members
 
 	{% for member in site.data.members %}
 		{% if member.partner != true %}
-			<div class="w-100 pa2">
+			<div class="w-100 pa2" id="{{ member.name | slugify: "latin" }}">
 				<div class="flex items-center lh-copy pa3 ba b--black-10">
 					<img class="w2 h2 w3-ns h3-ns br-100" src="/images/members/{{member.image}}" />
 					<div class="pl3 flex-auto">

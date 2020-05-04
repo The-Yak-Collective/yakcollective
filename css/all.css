@@ -13,13 +13,33 @@ body {
 
 }
 
-ul a:hover, ol a:hover, p a:hover, .reportlinks a:hover, .subhead a:hover {
-  box-shadow: inset 0 -24px 0 rgba(170,35,170,0.4);}
+a.yak-link-override, a.yak-link-override:hover { box-shadow: none; }
 
-ul a, ol a, p a, form a, .mobilemenu a, .next, .previous, h3 a, h4 a, .reportlinks a, .subhead a {
+.yak-post pre { white-space: pre-wrap; }
+
+.yak-post img { max-width: 100% !important; }
+
+.yak-post div.tweet, .yak-post div.youtube-wrap, .yak-post a.image-link {
+  margin-inline-start: 40px;
+  margin-block-end: 1em;
+  display: block;
+  max-width: calc(100% - 40px);
+}
+
+.yak-post li div.tweet, .yak-post li div.youtube-wrap, .yak-post li a.image-link {
+  margin-inline-start: 0;
+  margin-block-end: 1em;
+  display: block;
+  max-width: 100%;
+}
+
+ul a:hover, ol a:hover, p a:hover, form a:hover, .mobilemenu a:hover, .next, .previous, h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover, .reportlinks a:hover, .subhead a:hover, .yak-post a:hover {
+  box-shadow: inset 0 -1.25em 0 rgba(170,35,170,0.4);}
+
+ul a, ol a, p a, form a, .mobilemenu a, .next, .previous, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, .reportlinks a, .subhead a, .yak-post a {
   text-decoration: none;
   color: #212121;
-  box-shadow: inset 0 -6px 0 rgba(170,35,170,0.4);
+  box-shadow: inset 0 -0.25em 0 rgba(170,35,170,0.4);
   transition: ease-in .05s border-bottom;
 }
 
