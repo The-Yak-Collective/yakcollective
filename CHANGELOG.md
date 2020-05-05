@@ -15,3 +15,4 @@
 - [X] Created reusable "member card" widget
 - [X] Fixed missing footer on homepage
 - [X] Updated `README.md` to reflect changes
+- [X] Remove webhook reference (denial of service risk)
