@@ -7,6 +7,10 @@ Based upon to-do list from Nathan Acks' "v2" development work + discussion on Di
 	- [ ] Reach out to members and make sure that RSS feeds are correct
 	- [ ] Merge this repo into current site
 
+- [ ] Redesign projects page
+
+	- [ ] Greenlit projects with tentative launch dates, stub "comming soon" pages
+
 - [ ] Finish regularizing formatting, cleaning up unnecessary files/classes/divs, etc.
 
 - [ ] More fully document what different includes and data files do
