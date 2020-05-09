@@ -8,12 +8,8 @@
     - title: VenkateshRao.com
       url: https://venkateshrao.com/
   feeds:
-    - title: ribbonfarm
-      url: https://www.ribbonfarm.com/author/admin/feed/
     - title: Breaking Smart
       url: https://breakingsmart.substack.com/feed/
-    - title: Art of Gig
-      url: https://artofgig.substack.com/feed/
 
 - name: Paul Millerd
   partner: true
