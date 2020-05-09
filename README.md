@@ -8,6 +8,10 @@ Home page of the Yak Collective projects.
 
 Member data can be found in `_data/members.yml`. Set `partner` to `true` to include in the _Partners_ block. Add (or remove) elements from `feeds` to tweak fetched posts.
 
+## Development
+
+Significant website changes should be made using short-lived [topic branches](https://git-scm.com/book/en/v2/Git-Branching-Branching-Workflows) that are merged into `netlify-prod` when ready. The Yak Collective Netlify account can be used to create temporary websites when such changes need to be reviewed broadly.
+
 ## Make It Go
 
 To build things locally...
