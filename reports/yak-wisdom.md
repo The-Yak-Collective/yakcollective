@@ -1,3 +1,0 @@
----
-redirect: /projects/yak-wisdom
----

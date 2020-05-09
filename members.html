@@ -1,0 +1,25 @@
+---
+layout: members
+title: Yak Collective Members
+---
+
+<div class="container mw7 cf pv5 f4-l center w-90 lh-copy">
+	<h1>Partners</h1>
+	<p>Yak Collective partners have played key roles in projects, helped steer the collective and tweeted excessively.</p>
+
+	{% for member in site.data.members %}
+		{% if member.partner == true %}
+			{% include member-card.html %}
+		{% endif %}
+	{% endfor %}
+
+	<h2 class="cf pt3">Collaborators</h2>
+	<p>Yak Collective collaborators have contributed to one or more projects.</p>
+
+	{% for member in site.data.members %}
+		{% if member.partner != true %}
+			{% include member-card.html %}
+		{% endif %}
+	{% endfor %}
+
+</div>

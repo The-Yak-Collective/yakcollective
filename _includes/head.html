@@ -1,57 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>{% if page.metatitle %}{{page.metatitle}}{% elsif page.title%}{{page.title}}{% else %}The Yak Collective{% endif %}</title>
-    <meta name="description" content="The Yak Collective">
+	<head>
+		<meta charset="utf-8">
+		<meta name="description" content="The Yak Collective">
+		<meta name="viewport" content="width=device-width">
 
-<!-- 
-  Site build commissioned by Yak Collective member #12
-  YakCoin transaction ID: 0x18ehd76h
+		<title>{% if page.metatitle %}{{page.metatitle}}{% elsif page.title%}{{page.title}}{% else %}The Yak Collective{% endif %}</title>
 
--->
+		<!-- 
+			Site build commissioned by Yak Collective member #12
+			YakCoin transaction ID: 0x18ehd76h
+		-->
 
+		<link rel="icon" href="/images/yaklogo.png" />
 
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200;400;700&family=Playfair+Display&display=swap">
+		<link rel="stylesheet" href="/css/tachyons.min.css">
+		<link rel="stylesheet" href="/css/all.css">
+		<link rel="stylesheet" href="/css/mobile.css">
 
-    {% if page.redirect %}<meta http-equiv="refresh" content="0; url={{ page.redirect }}">{% endif %}
+		<script src="//code.jquery.com/jquery-1.10.2.min.js" type="text/javascript"></script>
 
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200;400;700&family=Playfair+Display&display=swap" rel="stylesheet">
+		<meta property="og:type" content="article" />
+		<meta property="og:url" content="https://yakcollective.org{{page.url}}" />
+		<meta property="og:title" content="{% if page.title %}{{page.title}}{% else %}The Yak Collective{% endif %}" />
+		<meta property="og:image" content="https://yakcollective.org/images/yak-og.png" />
+		<meta property="og:image:width" content="600" />
+		<meta property="og:image:height" content="315" />
 
-<link rel="stylesheet" href="/css/tachyons.min.css">
+		{% if page.layout == 'blog' %}
+			<meta name="twitter:card" content="summary_large_image">
+			<meta name="twitter:site" content="@yak_collective">
+			<meta name="twitter:creator" content="@yak_collective">
+			<meta name="twitter:title" content="{% if page.title %}{{page.title}}{% else %}The Yak Collective{% endif %}">
+			<meta name="twitter:description" content="{% if page.subtitle %}{{page.subtitle}}{% else %}{{page.content | truncatewords:20 | strip_html}}{% endif %}">
+			<meta name="twitter:image" content="https://yakcollective.org/images/yak-og.png">
+		{% endif %}
 
+		<link rel="alternate" type="application/json" title="The Yak Collective's Latest Writings" href="/feed.writings.json">
+		<link rel="alternate" type="application/rss+xml" title="The Yak Collective's Latest Writings" href="/feed.writings.xml">
+		{% for member in site.data.members %}
+			{% if member.feeds %}
+				{% for feed in member.feeds %}
+					<link rel="alternate" type="application/rss+xml" title="{{member.name}} ({{feed.title}})" href="{{feed.url}}">
+				{% endfor %}
+			{% endif %}
+		{% endfor %}
 
-<link href="/css/all.css" rel="stylesheet">
-<link href="/css/mobile.css" rel="stylesheet">
-
-<link rel="icon" href="/images/yaklogo.png" />
-
-<meta name="viewport" content="width=device-width">
-
-<script src="//code.jquery.com/jquery-1.10.2.min.js" type="text/javascript"></script>
-
-
-
-
- <meta property="og:type"   content="article" />
- <meta property="og:url"    content="https://yakcollective.org{{page.url}}" />
- <meta property="og:title"  content="{% if page.title %}{{page.title}}{% else %}The Yak Collective{% endif %}" />
- <meta property="og:image"  content="https://yakcollective.org/images/yak-og.png" />
- <meta property="og:image:width"  content="600" />
- <meta property="og:image:height"  content="315" />
-
-{% if page.layout == 'blog' %}
-
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:site" content="@yak_collective">
-<meta name="twitter:creator" content="@yak_collective">
-<meta name="twitter:title" content="{% if page.title %}{{page.title}}{% else %}The Yak Collective{% endif %}">
-<meta name="twitter:description" content="{% if page.subtitle %}{{page.subtitle}}{% else %}{{page.content | truncatewords:20 | strip_html}}{% endif %}">
-<meta name="twitter:image" content="https://yakcollective.org/images/yak-og.png">
-
-{% endif %}
- 
-{% include analytics.html %}
-
+		{% include analytics.html %}
 </head>
 
 <body class="w-100 ph0-l center relative h-100">
