@@ -199,6 +199,9 @@
       url: http://www.redquadrant.com/
     - title: Systems Practice
       url: https://systemspractice.org/
+  feeds:
+    - title: Medium
+    - url: https://medium.com/feed/@antlerboy
 
 - name: Nita Baum
   image: nita-baum.PNG
