@@ -201,7 +201,7 @@
       url: https://systemspractice.org/
   feeds:
     - title: Medium
-    - url: https://medium.com/feed/@antlerboy
+      url: https://medium.com/feed/@antlerboy
 
 - name: Nita Baum
   image: nita-baum.PNG
