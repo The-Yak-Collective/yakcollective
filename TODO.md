@@ -31,6 +31,7 @@ Based upon to-do list from Nathan Acks' "v2" development work + discussion on Di
 	- Can we figure out how to auto-tag incoming posts from feeds? Maybe some sort of light keyword-based classification? (This is another argument for moving to Gatsby, as this will probably be easier to implement there.)
 	- Create links between members and all of their posts/projects.
 	- Use member and home pages as hubs/entrances.
+	- Members should be "mini-hubs", linking to their posts and the projects they've participated in. Unclear if this should be done in stand-alone pages, or in "fly-outs" on the members page.
 
 - [ ] Figure out how to automate some sort of mailing list
 
