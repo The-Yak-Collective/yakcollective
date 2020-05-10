@@ -1,5 +1,5 @@
 ---
-layout: report
+layout: project
 title: Don't Waste the COVID-19 Reboot
 subtitle: Making the next normal better than the last one
 intro: |

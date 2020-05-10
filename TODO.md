@@ -14,7 +14,7 @@ Based upon to-do list from Nathan Acks' "v2" development work + discussion on Di
 
 - [X] Finish regularizing formatting, cleaning up unnecessary files/classes/divs, etc.
 
-- [ ] More fully document what different includes and data files do
+- [X] More fully document what different includes and data files do
 
 - [ ] Figure out how to make site friendly for non-technical updates (this almost certainly means migrating to another platform)
 
