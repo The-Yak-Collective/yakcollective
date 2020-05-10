@@ -18,7 +18,7 @@ a.yak-link-override:hover {
 }
 
 .yak-post img {
-max-width: 100% !important;
+	max-width: 100% !important;
 }
 
 .yak-post div.tweet,
@@ -53,7 +53,6 @@ h4 a:hover,
 h5 a:hover,
 h6 a:hover,
 .reportlinks a:hover,
-.subhead a:hover,
 .yak-post a:hover {
 	box-shadow: inset 0 -1.25em 0 rgba(170,35,170,0.4);
 }
@@ -72,7 +71,6 @@ h4 a,
 h5 a,
 h6 a,
 .reportlinks a,
-.subhead a,
 .yak-post a {
 	text-decoration: none;
 	color: #212121;
@@ -80,14 +78,13 @@ h6 a,
 	transition: ease-in .05s border-bottom;
 }
 
-
-
-h1 {
-	font-family: "Playfair Display";
-	font-weight: 400;
-}
-
-h2 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.subhead {
 	font-family: "Playfair Display";
 	font-weight: 400;
 }

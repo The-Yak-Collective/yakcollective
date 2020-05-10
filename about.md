@@ -35,7 +35,6 @@ Our approaches are diverse, and we mean __really__ diverse: our membership inclu
 
 Our functional experience spectrum ranges from industrial R&D and software development to marketing and anthropology.  **What allows this to work is that we've been building our network the old-fashioned way: by earning each other's trust in the slowest, most reliable way possible -- one small collaborative effort at a time.**
 
-
 ## Our Skin in the Game
 
 All of us went indie because we wanted to work on real, hard problems, as best as we could, and enjoy the genuine intellectual challenges and meaning-making that result. We have all been willing to give up significant comfort and security for that. We went indie because we valued a sense of accomplishment over easy money for bullshit work. We went indie because we wanted to bring the right capabilities to problems, not distort problems to match our capabilities. 
@@ -43,7 +42,6 @@ All of us went indie because we wanted to work on real, hard problems, as best a
 This means sometimes we try weird new ideas and untested methods, and wander from our zones of expertise into our zones of amateurishness. We are open to __really__ trying new things and owning the inevitable failures that can sometimes result, as well as the successes, because if we aren't __open__ in that way, we can't land gigs or make money. 
 
 As independents, we do not have the luxury of hiding among dozens of interchangeable people just like us, or closing deals on the basis of ancient existing relationships among sclerotic institutions that have been enabling each other's dysfunctions for decades. We are nobodies from the internet, showing up in executive email inboxes or sliding into CEO DMs on Twitter, sometimes with nothing more than a tweet backing our play. And unbelievably, it works well enough that we can make a living out of it. Because as the saying goes, __real recognize real__.  **We make rent -- or not -- based purely on whether people find us credible enough to talk to.**
-
 
 ## Our Methods
 
@@ -57,7 +55,6 @@ The inventory of methods, tools, and processes we bring to any problem range fro
 
 But though we are open and curious about all methods, tools and processes, we are __not__ about methods, tools, and processes for their own sake. Fundamentally, we are all pragmatists because we have to be to survive as indies. We focus on thinking about the actual problem first, the right processes and tools second, and on peddling bullshit, almost never (okay, we are human, so we do succumb to temptation on occasion). **Our work, individually and collectively, is driven by one overriding concern: the methods have to *work*, or be set aside for better ones. Otherwise we don't get that contract renewal.**
 
-
 ## The Philosophy
 
 But just because we are pragmatists driven by the need to land that next gig, and make rent next month, does not mean we are risk-averse cynics. In fact most indies are so ridiculously in love with stimulating ideas and the thrill of real insight, they're willing to take odd risks just for a chance to try new approaches. Most of us __voluntarily__ took on the unique risks, precarity, and uncertainty of the indie life so we could operate by a more satisfying philosophy of work and life, based on trial-and-error experimentation with novel ideas. 
@@ -65,7 +62,6 @@ But just because we are pragmatists driven by the need to land that next gig, an
 One project at a time, one client at a time, each of us is trying to gradually evolve our own approach to creating and delivering value that we can genuinely enjoy creating. So it is no accident that many of us have been inspired by effective collaboration models that have emerged outside of the literary-industrial complex, around new technologies in particular: in the open-source software world, gaming communities, artistic communities, the blogosphere, and other open, network-based domains. 
 
 Many of us are veterans of one or more such domains. And yes, as you might expect, most of us keep an eye on blockchains and other emerging technologies that might be friendlier to our radically different ways of working. You never know which new technology might end up serving as an asymmetric advantage on our next adventure. Our methods and approaches don't stay static. All of us are curious technophiles, constantly exploring and playing with different new toys, picking up new skills by trial-and-error as they emerge from the technology world. **Our philosophy  of work and life is radically tech-positive because it has to be. The indie life is only possible because an ever-growing and maturing stack of new digital technologies makes it possible, and increasingly accessible.**
-
 
 ## The Logistics
 
@@ -84,8 +80,8 @@ If you're interested in assembling a larger team from among our membership, cont
 --
 
 <details class="gray f6">
-<summary>Website colophon</summary>
-<p>Site version 1.0 - deployed using Jekyll/Github Pages</p>
-<p>Built by <a href="https://tomcritchlow.com">Tom Critchlow</a></p>
-<p>SVG graphics from <a href="https://www.heropatterns.com/">heropatterns.com</a></p>
+	<summary>Website colophon</summary>
+	<p>Site version 1.0 - deployed using Jekyll/Github Pages</p>
+	<p>Built by <a href="https://tomcritchlow.com">Tom Critchlow</a> &amp; Nathan Acks</p>
+	<p>SVG graphics from <a href="https://www.heropatterns.com/">heropatterns.com</a></p>
 </details>

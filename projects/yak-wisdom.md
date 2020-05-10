@@ -15,9 +15,9 @@ collaborators: David McDougall, Darren Kong, Vaughan Tan, Randy Lubin, Vlad Meha
 
 <iframe class="report" src="https://docs.google.com/presentation/d/e/2PACX-1vTa8T4sQLAF2cbRFTqcxZGefI7A2HP54ZKBlyvpi03iTWrzt10W50MP-fQ13am5_svHeJL_-zjALkVT/embed?start=false&loop=false&delayms=60000" frameborder="0" width="1920" height="1109" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 
-<div class="reportlinks pv4">
+<aside class="reportlinks pv4">
 	<img class="h1" src="https://ssl.gstatic.com/docs/presentations/images/favicon5.ico"> <a href="https://docs.google.com/presentation/d/1OfBuSq4SImE1Gq2EaAGCAlkwC8LZRCWx-7O_VOHJ5TI/edit#slide=id.p1">Open Google Doc</a> / <img class="h1" src="/images/pdf.png"> <a href="https://docs.google.com/presentation/d/1OfBuSq4SImE1Gq2EaAGCAlkwC8LZRCWx-7O_VOHJ5TI/export/pdf">Download PDF</a>
-</div>
+</aside>
 
 ## The Yak Wisdom Project
 

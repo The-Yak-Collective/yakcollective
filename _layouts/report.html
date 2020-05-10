@@ -1,34 +1,36 @@
 {% include head.html %}
 
-<div class="bg-yak-wisdom">
-	<div class="h-25 w-100 center pa3 mw9 center">
-		<article class="cf ph3 ph5-ns pv5-l pv3">
-			<header class="fn fl-ns w-25-ns pr4-ns pl4-ns">
-				<div class="f5 lh-title fw9 mb3 mt0 pt3 bt bw2 sans-serif">REPORT</div>
-				<time class="f6 ttu tracked-tight gray">{{page.date | newline_to_br}}</time>
-				<p><span class="ttu f6 lh-title">Lead editors:</span><br>{{page.authors}}</p>
-				<p class="gray"><span class="ttu f6 lh-title">Collaborators:</span><span class="dn-l expand">+ expand</span><br><span class="dn db-l collablist">{{page.collaborators}}</span></p>
-			</header>
-			<div class="fn fl-ns w-50-ns pl4-ns">
-				<h1 class="ma0 pa0 fw8 f1">{{page.title}}</h1>
-				<h2>{{page.subtitle}}</h2>
-				<div class="f5 lh-copy pb5">{{page.intro | newline_to_br | markdownify}}</div>
+<article>
+	<header class="bg-yak-wisdom">
+		<div class="h-25 w-100 center pa3 mw9 center">
+			<div class="cf ph3 ph5-ns pv5-l pv3">
+				<aside class="fn fl-ns w-25-ns pr4-ns pl4-ns">
+					<div class="f5 lh-title fw9 mb3 mt0 pt3 bt bw2 sans-serif">REPORT</div>
+					<time class="f6 ttu tracked-tight gray">{{page.date | newline_to_br}}</time>
+					<p><span class="ttu f6 lh-title">Lead editors:</span><br>{{page.authors}}</p>
+					<p class="gray"><span class="ttu f6 lh-title">Collaborators:</span><span class="dn-l expand">+ expand</span><br><span class="dn db-l collablist">{{page.collaborators}}</span></p>
+				</aside>
+				<div class="fn fl-ns w-50-ns pl4-ns">
+					<h1 class="ma0 pa0 fw8 f1">{{page.title}}</h1>
+					<div class="subhead pt3 pb1 fw6 f3">{{page.subtitle}}</div>
+					<div class="f5 lh-copy pb5">{{page.intro | newline_to_br | markdownify}}</div>
+				</div>
 			</div>
-		</article>
 
-		<script>
-			$( ".expand" ).click(function() {
-				$(".collablist").toggle();
-				if ($(".expand").text() == "+ expand") {
-					$(".expand").text("- close"); 
-				} else if ($(".expand").text() == "- close") {
-					$(".expand").text("+ expand"); 
-				}
-			});
-		</script>
-	</div>
-</div>
+			<script>
+				$( ".expand" ).click(function() {
+					$(".collablist").toggle();
+					if ($(".expand").text() == "+ expand") {
+						$(".expand").text("- close"); 
+					} else if ($(".expand").text() == "- close") {
+						$(".expand").text("+ expand"); 
+					}
+				});
+			</script>
+		</div>
+	</header>
 
-<div class="container mw7 cf pv5 f4-l center w-90 lh-copy">{{content}}</div>
+	<div class="container mw7 cf pv5 f4-l center w-90 lh-copy">{{content}}</div>
+</article>
 
 {% include footer.html %}

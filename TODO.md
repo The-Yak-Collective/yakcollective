@@ -12,7 +12,7 @@ Based upon to-do list from Nathan Acks' "v2" development work + discussion on Di
 	- [ ] Greenlit projects with tentative launch dates, stub "comming soon" pages
 	- [ ] Figure out how to lightly theme each project so that it has more of its own identity
 
-- [ ] Finish regularizing formatting, cleaning up unnecessary files/classes/divs, etc.
+- [X] Finish regularizing formatting, cleaning up unnecessary files/classes/divs, etc.
 
 - [ ] More fully document what different includes and data files do
 
