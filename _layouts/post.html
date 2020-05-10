@@ -2,8 +2,8 @@
 
 {% include nav.html %}
 
-<div class="container mw7 cf pv5 f4-l center w-90 lh-copy yak-post">
-	<h1>{% if page.original_link %}<a href="{{ page.original_link }}">{% endif %}{{ page.title }}{% if page.original_link %}</a>{% endif %}</h1>
+<div class="container mw7 cf pv5 f4-l center w-90 lh-copy">
+	<h1 class="yak-post">{% if page.original_link %}<a href="{{ page.original_link }}">{% endif %}{{ page.title }}{% if page.original_link %}</a>{% endif %}</h1>
 
 	{% for member in site.data.members %}
 		{% if member.name == page.author %}
@@ -11,7 +11,7 @@
 		{% endif %}
 	{% endfor %}
 
-	{{ content }}
+	<div class="yak-post">{{ content }}</div>
 </div>
 
 {% include footer.html %}
