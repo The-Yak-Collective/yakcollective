@@ -1,6 +1,6 @@
-- name: Venkatesh Rao
+venkatesh_rao:
+  name: Venkatesh Rao
   partner: true
-  image: venkatesh-rao.PNG
   indie_status: 9+ years
   previous: Xerox
   twitter: vgr
@@ -8,12 +8,11 @@
     - title: VenkateshRao.com
       url: https://venkateshrao.com/
   feeds:
-    - title: Breaking Smart
-      url: https://breakingsmart.substack.com/feed/
+    - https://breakingsmart.substack.com/feed/
 
-- name: Paul Millerd
+paul_millerd:
+  name: Paul Millerd
   partner: true
-  image: paul-millerd.jpg
   previous: McKinsey, BCG, GE, Russell Reynolds 
   indie_status: 3+ years
   twitter: p_millerd
@@ -23,14 +22,12 @@
     - title: Strategy U
       url: https://strategyu.co/
   feeds:
-    - title: Boundless
-      url: https://think-boundless.com/feed/
-    - title: Strategy U
-      url: https://strategyu.co/feed/
+    - https://think-boundless.com/feed/
+    - https://strategyu.co/feed/
 
-- name: Pamela Hobart
+pamela_hobart:
+  name: Pamela Hobart
   partner: true
-  image: pamela-hobart.jpeg
   indie_status: 3+ years
   twitter: amelapay
   links:
@@ -39,12 +36,11 @@
     - title: Substack
       url: https://pamelajhobart.substack.com/
   feeds:
-    - title: Substack
-      url: https://pamelajhobart.substack.com/feed/
+    - https://pamelajhobart.substack.com/feed/
 
-- name: Tom Critchlow
+tom_critchlow:
+  name: Tom Critchlow
   partner: true
-  image: tom-critchlow.jpeg
   previous: Google
   indie_status: 5+ years
   twitter: tomcritchlow
@@ -54,11 +50,10 @@
     - title: Little Futures
       url: https://littlefutures.club
   feeds:
-    - title: tomcritchlow.com
-      url: https://tomcritchlow.com/feed
+    - https://tomcritchlow.com/feed
 
-- name: Amanda Reeves
-  image: Amanda-Reeves.jpg
+amanda_reeves:
+  name: Amanda Reeves
   indie_status: 1+ years
   previous: Strategic coaching & health service redesign
   twitter: WabiSabiFutures
@@ -68,8 +63,8 @@
     - title: Ahoyhoy
       url: https://www.ahoyhoy.com.au/
 
-- name: David McDougall
-  image: david-mcdougall.jpg
+david_mcdougall:
+  name: David McDougall
   indie_status: 3+ years
   previous: Product Management in SMEs across US & UK
   twitter: dmcdougall
@@ -77,11 +72,10 @@
     - title: Innovation at Scale
       url: https://innovationatscale.substack.com/
   feeds:
-    - title: Innovation at Scale
-      url: https://innovationatscale.substack.com/feed/
+    - https://innovationatscale.substack.com/feed/
 
-- name: Darren Kong
-  image: darren-kong.jpg
+darren_kong:
+  name: Darren Kong
   indie_status: 3+ years
   previous: Other Internet
   twitter: varietalxyz
@@ -89,8 +83,8 @@
     - title: Varietal Digital 
       url: https://varietal.xyz/home/
 
-- name: Vaughn TAN
-  image: vaughn-tan.png
+vaughn_tan:
+  name: Vaughn TAN
   indie_status: 5+ years
   previous: Google, and currently University College London School of Management
   twitter: vaughn_tan
@@ -102,40 +96,37 @@
     - title: newsletter
       url: https://uncertaintymindset.substack.com/
   feeds:
-    - title: bio
-      url: https://vaughntan.org/feed.rss
-    - title: newsletter
-      url: https://uncertaintymindset.substack.com/feed/
+    - https://vaughntan.org/feed.rss
+    - https://uncertaintymindset.substack.com/feed/
 
-- name: Randy Lubin
-  image: randy-lubin.png
+randy_lubin:
+  name: Randy Lubin
   indie_status: 10+ years
   twitter: randylubin
   links:
     - title: Consulting Entrepreneur
       url: https://randylubin.com/ 
   feeds:
-    - title: Consulting Entrepreneur
-      url: https://blog.randylubin.com/feed.xml
+    - https://blog.randylubin.com/feed.xml
 
-- name: Vlad Mehakovic
-  image: vlad-mehacovic.jpg
+vlad_mehakovic:
+  name: Vlad Mehakovic
   indie_status: Aug 2019
   twitter: vladiim
   links:
     - title: mehakovic.com
       url: http://mehakovic.com/   
 
-- name: Thomas Verhagen
-  image: Thomas-Verhagen.jpg
+thomas_verhagen:
+  name: Thomas Verhagen
   indie_status: 1+ year
   twitter: thomasverhagen
   links:
     - title: Analyze, structure & boost
       url: https://www.linkedin.com/in/thomasverhagen/
 
-- name: Alex Dobrenko
-  image: alex-dobrenko.PNG
+alex_dobrenko:
+  name: Alex Dobrenko
   indie_status: 5+ years
   title: Improviser / Writer / Filmmaker
   twitter: Dobrenkz
@@ -144,8 +135,8 @@
     - title: alexdobrenko.com
       url: https://alexdobrenko.com/
 
-- name: Sachin Benny
-  image: sachin-benny.PNG
+sachin_benny:
+  name: Sachin Benny
   indie_status: 1+ years
   twitter: sachinb91
   previous: Led growth for an online DTC furniture brand
@@ -153,8 +144,8 @@
     - title: Marketing strategy & positioning
       url: https://www.notion.so/sachinbenny/I-m-Sachin-Benny-7391ec1aafa94af28599a2b089c4bf35    
 
-- name: Jordan Peacock
-  image: jordan-peacock.png
+jordan_peacock:
+  name: Jordan Peacock
   indie_status: 3+ years
   twitter: hewhocutsdown
   title: CEO, Becoming Machinic; Founder, Sortilege
@@ -163,8 +154,8 @@
     - title: LinkedIn
       url: https://www.linkedin.com/in/hewhocutsdown/
 
-- name: Anne-Laure Le Cunff
-  image: anne-laure-le-cunff.png
+anne-laure_le_cunff:
+  name: Anne-Laure Le Cunff
   indie_status: 2+ years
   twitter: anthilemoon
   previous: Google, Entrepreneur First
@@ -172,11 +163,10 @@
     - title: Founder, Ness Labs
       url: https://nesslabs.com/
   feeds:
-    - title: Ness Labs
-      url: https://nesslabs.com/author/annelaure/feed
+    - https://nesslabs.com/author/annelaure/feed
 
-- name: Vinay Débrou
-  image: vinay-débrou.jpg
+vinay_debrou:
+  name: Vinay Débrou
   indie_status: 2+ years
   twitter: vinaydebrou
   previous: Data Analyst at a Fintech SaaS company 
@@ -186,11 +176,10 @@
     - title: Substack
       url: https://daybrew.substack.com/about
   feeds:
-    - title: Substack
-      url: https://daybrew.substack.com/feed/
+    - https://daybrew.substack.com/feed/
 
-- name: Benjamin Taylor
-  image: benjamin-taylor.jpg
+benjamin_taylor:
+  name: Benjamin Taylor
   indie_status: 11 years
   twitter: antlerboy
   previous: PwC, Capita, Adviser to Mayor in a London Borough
@@ -200,11 +189,10 @@
     - title: Systems Practice
       url: https://systemspractice.org/
   feeds:
-    - title: Medium
-      url: https://medium.com/feed/@antlerboy
+    - https://medium.com/feed/@antlerboy
 
-- name: Nita Baum
-  image: nita-baum.PNG
+nita_baum:
+  name: Nita Baum
   indie_status: 13 years
   twitter: bfree_live
   links:
@@ -213,16 +201,16 @@
     - title: Solar Responders
       url: http://solarresponders.org/
 
-- name: Rodrigo Pinto
-  image: rodrigo-pinto.jpg
+rodrigo_pinto:
+  name: Rodrigo Pinto
   indie_status: 3+ years
   twitter: Rodrigo_plp
   links:
     - title: Project management and software development
       url: https://www.linkedin.com/in/rodrigopedroso/
 
-- name: Ben Mosior
-  image: ben-mosior.jpg
+ben_mosior:
+  name: Ben Mosior
   indie_status: 6+ years
   twitter: HiredThought
   links:
@@ -231,25 +219,24 @@
     - title: Hired Thought
       url: https://hiredthought.com/
   feeds:
-    - title: Hired Thought
-      url: https://hiredthought.com/feed/
+    - https://hiredthought.com/feed/
 
-- name: Harry Pottash
-  image: Harry-Pottash.png
+harry_pottash:
+  name: Harry Pottash
   indie_status: 5+ years
   title: Philosopher & Investor
   previous: Engineer, Founder 
 
-- name: Martha Balaile
-  image: martha-balaile.jpg
+martha_balaile:
+  name: Martha Balaile
   indie_status: 1+ years
   twitter: MythologyStudio
   links:
     - title: Illustrator
       url: https://www.mythologystudio.com/
 
-- name: Jordan Allen
-  image: jordan-allen.PNG
+jordan_allen:
+  name: Jordan Allen
   indie_status: 1+ years
   twitter: quickdrawyall
   title: Business Development & Revenue Generation

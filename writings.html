@@ -17,15 +17,17 @@ title: The Yak Collective's Latest Writings
 		<ul>
 	{% endif %}
 
+	{% assign author = site.data.members[post.author] %}
+
 	<li>
 		<a href="{% if post.original_link %}{{ post.original_link }}{% else %}{{ post.url }}{% endif %}">{{ post.title }}</a>
 		<!--
 		<a href="{{ post.url }}">{{ post.title }}</a>
 		-->
 		&middot;
-		<a href="/members/#{{ post.author | slugify: "latin" }}" class="link yak-link-override dim dark-gray">{{ post.author }}</a>
+		<a href="/members/#{{ post.author }}" class="link yak-link-override dim dark-gray">{{ author.name }}</a>
 		&middot;
-		<em class="fw1">{{ post.date | date: "%B %e, %Y" }}</em>
+		<time class="i fw1">{{ post.date | date: "%B %e, %Y" }}</time>
 	</li>
 
 	{% if forloop.last %}

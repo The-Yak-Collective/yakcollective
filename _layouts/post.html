@@ -4,11 +4,9 @@
 	<header>
 		<h1 class="yak-post">{% if page.original_link %}<a href="{{ page.original_link }}">{% endif %}{{ page.title }}{% if page.original_link %}</a>{% endif %}</h1>
 
-		{% for member in site.data.members %}
-			{% if member.name == page.author %}
-				{% include member-card.html %}
-			{% endif %}
-		{% endfor %}
+		{% assign member_uid = page.author %}
+		{% assign member = site.data.members[page.author] %}
+		{% include member-card.html %}
 	</header>
 
 	<div class="yak-post">{{ content }}</div>
