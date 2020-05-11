@@ -22,6 +22,8 @@ Based upon to-do list from Nathan Acks' "v2" development work + discussion on Di
 	- Spin up NetlifyCMS? Might not actually meat this need.
 	- Migrate to Gatsby and push user-editable files into Google Drive or Dropbox? Not clear how to do this within a dev/prod setup. (But maybe we don't care?)
 
+- [ ] Move this list into Roam to encourage collaboration/ideas/etc.
+
 - [ ] Figure out some kind of services / how to engage with us / contact us page. (How to do this while still being individual-member-centric?)
 
 - [ ] Move to a more warren-like structure?
