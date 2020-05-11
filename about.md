@@ -81,7 +81,7 @@ If you're interested in assembling a larger team from among our membership, cont
 
 <details class="gray f6">
 	<summary>Website colophon</summary>
-	<p>Site version 1.0 - deployed using Jekyll/Github Pages</p>
+	<p>Site version 1.1 - deployed using <a href="https://jekyllrb.com/">Jekyll</a>, <a href="https://feedreader.github.io/">Pluto</a>, and <a href="https://www.netlify.com/">Netlify</a></p>
 	<p>Built by <a href="https://tomcritchlow.com">Tom Critchlow</a> &amp; Nathan Acks</p>
-	<p>SVG graphics from <a href="https://www.heropatterns.com/">heropatterns.com</a></p>
+	<p>SVG graphics from <a href="https://www.heropatterns.com/">Hero Patterns</a></p>
 </details>
