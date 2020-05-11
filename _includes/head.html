@@ -39,10 +39,12 @@
 
 		<link rel="alternate" type="application/json" title="The Yak Collective's Latest Writings" href="/feed.writings.json">
 		<link rel="alternate" type="application/rss+xml" title="The Yak Collective's Latest Writings" href="/feed.writings.xml">
-		{% for member in site.data.members %}
+		{% for member_data in site.data.members %}
+			{% assign member_uid = member_data[0] %}
+			{% assign member = member_data[1] %}
 			{% if member.feeds %}
 				{% for feed in member.feeds %}
-					<link rel="alternate" type="application/rss+xml" title="{{member.name}} ({{feed.title}})" href="{{feed.url}}">
+					<link rel="alternate" type="application/rss+xml" title="{{member.name}}" href="{{feed}}">
 				{% endfor %}
 			{% endif %}
 		{% endfor %}
