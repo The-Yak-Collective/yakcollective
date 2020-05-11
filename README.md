@@ -61,7 +61,7 @@ Pages in the `_layouts` folder:
 
 - `minimal.html`
 
-	Minimal layout that assumes the page includes all needed elements. Currently used on the [Members](https://yakcollective.org/members) page, [Projects](https://yakcollective.org/projects/) index, and [homepage](https://yakcollective.org/).
+	Minimal layout that assumes the page includes all needed elements. Currently used on the [Members](https://yakcollective.org/members) page and [Projects](https://yakcollective.org/projects/) index. _Not_ used on the [homepage](https://yakcollective.org/), as there's a preference not to include the site footer there.
 
 - `page.html`
 
