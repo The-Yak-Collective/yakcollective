@@ -24,6 +24,8 @@ Based upon to-do list from Nathan Acks' "v2" development work + discussion on Di
 
 - [ ] Move this list into Roam to encourage collaboration/ideas/etc.
 
+- [ ] Migrate [onboarding document](https://docs.google.com/document/d/1I63ZKu8o0DpBG0tWhssIsCinlXeBKO-xGyvmIMXXAWE/) into website (per [Venkatesh Rao](https://discordapp.com/channels/692111190851059762/692826420191297556/709550901555363861)).
+
 - [ ] Figure out some kind of services / how to engage with us / contact us page. (How to do this while still being individual-member-centric?)
 
 - [ ] Move to a more warren-like structure?
