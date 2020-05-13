@@ -7,22 +7,42 @@ Based upon to-do list from Nathan Acks' "v2" development work + discussion on Di
 	- [X] Reach out to members and make sure that RSS feeds are correct
 	- [X] Merge this repo into current site
 
-- [ ] Redesign projects page
+- [X] Redesign projects page
 
-	- [ ] Greenlit projects with tentative launch dates, stub "comming soon" pages
-	- [ ] Figure out how to lightly theme each project so that it has more of its own identity
+	- [X] Greenlit projects with tentative launch dates, stub "comming soon" pages
+	- [X] Figure out how to lightly theme each project so that it has more of its own identity
 
 - [X] Finish regularizing formatting, cleaning up unnecessary files/classes/divs, etc.
 
 - [X] More fully document what different includes and data files do
 
+- [ ] Move `members.yml` data structure into member _pages_ listing projects they've participated in and recent posts
+
+	- Member lookup will need to be indirect, through `site.categories["members"] | where: "id", "/members/venkatesh-rao"`, etc.
+	- How to handle the creation of `yak-planet.ini`????
+	- All member names should be links pointing to this page.
+		- Should this apply to the member page itself?
+		- How should the member page be linked back to?
+
+- [ ] Use the [`jekyll-postfiles`](https://github.com/nhoizey/jekyll-postfiles) plugin to bundle per-project styles and member images with their respective pages.
+
+	- Images, CSS, etc. should all be named in a generic fashion. We should _only_ care about the directory!
+
 - [ ] Figure out how to make site friendly for non-technical updates (this almost certainly means migrating to another platform)
 
-	- Migrate to Hugo and use a data file directory stored in Dropbox or Google Drive? Probably simplest, but least flexible long-run.
-	- Spin up NetlifyCMS? Might not actually meat this need.
+	- ~~Migrate to Hugo and use a data file directory stored in Dropbox or Google Drive? Probably simplest, but least flexible long-run.~~
+	- Spin up NetlifyCMS? Might not actually meet this need.
+		- I increasingly like this idea, especially if `members.yml` can be broken into individual pages.
+		- Will require people to have a GitHub account... (Bug? Feature?)
+		- I think we'll want to use an "editorial approval" workflow, just to make sure that bad changes don't get pushed to the live site.
 	- Migrate to Gatsby and push user-editable files into Google Drive or Dropbox? Not clear how to do this within a dev/prod setup. (But maybe we don't care?)
+		- I'm starting to think that this isn't a good idea. Too much variable-structure data for a spreadhseet, etc.
 
 - [ ] Move this list into Roam to encourage collaboration/ideas/etc.
+
+	- This should also include a "how to" for editing files.
+
+- [ ] Formally add a GitHub issue tracker, link to Roam. See [this](https://discordapp.com/channels/@me/707243573061353472/709852606096212048) and [this](https://discordapp.com/channels/@me/707243573061353472/709881527642620046).
 
 - [ ] Migrate [onboarding document](https://docs.google.com/document/d/1I63ZKu8o0DpBG0tWhssIsCinlXeBKO-xGyvmIMXXAWE/) into website (per [Venkatesh Rao](https://discordapp.com/channels/692111190851059762/692826420191297556/709550901555363861)).
 
@@ -35,7 +55,6 @@ Based upon to-do list from Nathan Acks' "v2" development work + discussion on Di
 	- Can we figure out how to auto-tag incoming posts from feeds? Maybe some sort of light keyword-based classification? (This is another argument for moving to Gatsby, as this will probably be easier to implement there.)
 	- Create links between members and all of their posts/projects.
 	- Use member and home pages as hubs/entrances.
-	- Members should be "mini-hubs", linking to their posts and the projects they've participated in. Unclear if this should be done in stand-alone pages, or in "fly-outs" on the members page.
 
 - [ ] Figure out how to automate some sort of mailing list
 
@@ -50,5 +69,7 @@ Based upon to-do list from Nathan Acks' "v2" development work + discussion on Di
 - [ ] Figure out how to page projects and member posts. [Jekyll doesn't support this robustly](https://jekyllrb.com/docs/pagination/), but Hugo, Gatsby, and other generators do
 
 - [ ] Figure out a way to archive incoming news posts (right now, if a post disappears from a member's feed, it will disappear from the site during the next rebuild)
+
+	- Can we check `yak-planet.db`, `yak-planet.ini`, and `writings/_posts/*` into GitHub as part of the build, using a token for authentication?
 
 - [ ] Revisit use of Google Analytics on the site (some folks on Discord have expressed GDPR worries)

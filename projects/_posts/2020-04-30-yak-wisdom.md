@@ -1,21 +1,54 @@
 ---
 layout: project
+published: true
 title: Don't Waste the COVID-19 Reboot
-subtitle: Making the next normal better than the last one
-intro: |
-  The inaugural report by the Yak Collective, *Don't Waste the Reboot* offers organizations a smorgasbord of 25 creative and unexpected provocations, ideas, and action frameworks to navigate the Covid-19 crisis.
+tagline: Making the next normal better than the last one
+type: Report
+sequence: covid19
+summary: |
+  The inaugural report by the Yak Collective, _Don't Waste the Reboot_
+  offers organizations a smorgasbord of 25 creative and unexpected
+  provocations, ideas, and action frameworks to navigate the COVID-19
+  crisis.
   
-  Authored by 21 diverse contributors from around the world -- most of whom are working together for the first time -- we believe this report will get you thinking about your reboot efforts in a bolder, more imaginative way. Let us know what you think!
-date: |
-  April 30th 2020, UTC
-  Day 45 Pandemic Mean Time
-authors: Paul Millerd & Venkatesh Rao
-collaborators: David McDougall, Darren Kong, Vaughan Tan, Randy Lubin, Vlad Mehakovic, Thomas Verhagen, Alex Dobrenko, Sachin Benny, Amanda Reeves, Jordan Peacock, Anne-Laure Le Cunff, Vaughn Tan, Martha Balaile, Benjamin Taylor, Nita Baum, Vinay Debrou, Tom Critchlow, Rodrigo Pinto, Ben Mosior, Harry Pottash, Jordan Allen
+  Authored by 21 diverse contributors from around the world -- most of
+  whom are working together for the first time -- we believe this
+  report will get you thinking about your reboot efforts in a bolder,
+  more imaginative way. Let us know what you think!
+lead_editors:
+  - paul_millerd
+  - venkatesh_rao
+collaborators:
+  - david_mcdougall
+  - darren_kong
+  - vaughn_tan
+  - randy_lubin
+  - vlad_mehakovic
+  - thomas_verhagen
+  - alex_dobrenko
+  - sachin_benny
+  - amanda_reeves
+  - jordan_peacock
+  - anne-laure_le_cunff
+  - martha_balaile
+  - benjamin_taylor
+  - nita_baum
+  - vinay_debrou
+  - tom_critchlow
+  - rodrigo_pinto
+  - ben_mosior
+  - harry_pottash
+  - jordan_allen
 ---
 
-<iframe class="report" src="https://docs.google.com/presentation/d/e/2PACX-1vTa8T4sQLAF2cbRFTqcxZGefI7A2HP54ZKBlyvpi03iTWrzt10W50MP-fQ13am5_svHeJL_-zjALkVT/embed?start=false&loop=false&delayms=60000" frameborder="0" width="1920" height="1109" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+<!-- BEGIN: Required code to extract project_id variable -->
+{% assign page_path = page.id | split: "/" %}
+{% assign project_id = page_path.last %}
+<!-- END: Required code to extract project_id variable -->
 
-<aside class="reportlinks pv4">
+<iframe class="{{ project_id }}-report" src="https://docs.google.com/presentation/d/e/2PACX-1vTa8T4sQLAF2cbRFTqcxZGefI7A2HP54ZKBlyvpi03iTWrzt10W50MP-fQ13am5_svHeJL_-zjALkVT/embed?start=false&loop=false&delayms=60000" frameborder="0" width="1920" height="1109" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+
+<aside class="{{ project_id }}-report-links pv4">
 	<img class="h1" src="https://ssl.gstatic.com/docs/presentations/images/favicon5.ico"> <a href="https://docs.google.com/presentation/d/1OfBuSq4SImE1Gq2EaAGCAlkwC8LZRCWx-7O_VOHJ5TI/edit#slide=id.p1">Open Google Doc</a> / <img class="h1" src="/images/pdf.png"> <a href="https://docs.google.com/presentation/d/1OfBuSq4SImE1Gq2EaAGCAlkwC8LZRCWx-7O_VOHJ5TI/export/pdf">Download PDF</a>
 </aside>
 

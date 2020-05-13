@@ -43,7 +43,7 @@ class Planet
 private
   def generate_blog_post( item )
 
-    posts_root = "./_posts"
+    posts_root = "./writings/_posts"
 
     FileUtils.mkdir_p( posts_root )  ## make sure path exists
 
@@ -56,6 +56,7 @@ private
       'title'      => item.title,
       'created_at' => item.published,
       'author'     => item.feed.title,
+      'permalink'  => "/writings/#{item.published.strftime('%Y')}/#{item.published.strftime('%m')}/#{item.published.strftime('%d')}/#{title_to_key(item.title)}/",
       'categories' => 'writings',
       'layout'     => 'post'
     }

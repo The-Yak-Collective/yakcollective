@@ -4,11 +4,10 @@ venkatesh_rao:
   indie_status: 9+ years
   previous: Xerox
   twitter: vgr
+  feed: https://breakingsmart.substack.com/feed/
   links:
     - title: VenkateshRao.com
       url: https://venkateshrao.com/
-  feeds:
-    - https://breakingsmart.substack.com/feed/
 
 paul_millerd:
   name: Paul Millerd
@@ -16,27 +15,24 @@ paul_millerd:
   previous: McKinsey, BCG, GE, Russell Reynolds 
   indie_status: 3+ years
   twitter: p_millerd
+  feed: https://think-boundless.com/feed/
   links:
     - title: Boundless
       url: https://think-boundless.com/
     - title: Strategy U
       url: https://strategyu.co/
-  feeds:
-    - https://think-boundless.com/feed/
-    - https://strategyu.co/feed/
 
 pamela_hobart:
   name: Pamela Hobart
   partner: true
   indie_status: 3+ years
   twitter: amelapay
+  feed: https://pamelajhobart.substack.com/feed/
   links:
     - title: pamelajhobart.com
       url: https://www.pamelajhobart.com/
     - title: Substack
       url: https://pamelajhobart.substack.com/
-  feeds:
-    - https://pamelajhobart.substack.com/feed/
 
 tom_critchlow:
   name: Tom Critchlow
@@ -44,13 +40,12 @@ tom_critchlow:
   previous: Google
   indie_status: 5+ years
   twitter: tomcritchlow
+  feed: https://tomcritchlow.com/feed
   links:
     - title: tomcritchlow.com
       url: https://tomcritchlow.com/
     - title: Little Futures
       url: https://littlefutures.club
-  feeds:
-    - https://tomcritchlow.com/feed
 
 amanda_reeves:
   name: Amanda Reeves
@@ -68,11 +63,10 @@ david_mcdougall:
   indie_status: 3+ years
   previous: Product Management in SMEs across US & UK
   twitter: dmcdougall
+  feed: https://innovationatscale.substack.com/feed/
   links:
     - title: Innovation at Scale
       url: https://innovationatscale.substack.com/
-  feeds:
-    - https://innovationatscale.substack.com/feed/
 
 darren_kong:
   name: Darren Kong
@@ -84,10 +78,11 @@ darren_kong:
       url: https://varietal.xyz/home/
 
 vaughn_tan:
-  name: Vaughn TAN
+  name: Vaughn Tan
   indie_status: 5+ years
   previous: Google, and currently University College London School of Management
   twitter: vaughn_tan
+  feed: https://uncertaintymindset.substack.com/feed/
   links:
     - title: bio
       url: https://vaughntan.org/bio
@@ -95,19 +90,15 @@ vaughn_tan:
       url: https://vaughntan.org/uncertainty
     - title: newsletter
       url: https://uncertaintymindset.substack.com/
-  feeds:
-    - https://vaughntan.org/feed.rss
-    - https://uncertaintymindset.substack.com/feed/
 
 randy_lubin:
   name: Randy Lubin
   indie_status: 10+ years
   twitter: randylubin
+  feed: https://blog.randylubin.com/feed.xml
   links:
     - title: Consulting Entrepreneur
       url: https://randylubin.com/ 
-  feeds:
-    - https://blog.randylubin.com/feed.xml
 
 vlad_mehakovic:
   name: Vlad Mehakovic
@@ -159,37 +150,34 @@ anne-laure_le_cunff:
   indie_status: 2+ years
   twitter: anthilemoon
   previous: Google, Entrepreneur First
+  feed: https://nesslabs.com/author/annelaure/feed
   links:
     - title: Founder, Ness Labs
       url: https://nesslabs.com/
-  feeds:
-    - https://nesslabs.com/author/annelaure/feed
 
 vinay_debrou:
   name: Vinay Débrou
   indie_status: 2+ years
   twitter: vinaydebrou
   previous: Data Analyst at a Fintech SaaS company 
+  feed: https://daybrew.substack.com/feed/
   links:
     - title: Consultant, Data & Brand Strategy
       url: https://www.notion.so/brewing/About-Me-2ff600ac504d4217a3ce643869677fd8
     - title: Substack
       url: https://daybrew.substack.com/about
-  feeds:
-    - https://daybrew.substack.com/feed/
 
 benjamin_taylor:
   name: Benjamin Taylor
   indie_status: 11 years
   twitter: antlerboy
   previous: PwC, Capita, Adviser to Mayor in a London Borough
+  feed: https://medium.com/feed/@antlerboy
   links:
     - title: RedQuadrant
       url: http://www.redquadrant.com/
     - title: Systems Practice
       url: https://systemspractice.org/
-  feeds:
-    - https://medium.com/feed/@antlerboy
 
 nita_baum:
   name: Nita Baum
@@ -213,13 +201,12 @@ ben_mosior:
   name: Ben Mosior
   indie_status: 6+ years
   twitter: HiredThought
+  feed: https://hiredthought.com/feed/
   links:
     - title: Methodology whisperer
       url: https://www.linkedin.com/in/benjaminmosior/
     - title: Hired Thought
       url: https://hiredthought.com/
-  feeds:
-    - https://hiredthought.com/feed/
 
 harry_pottash:
   name: Harry Pottash

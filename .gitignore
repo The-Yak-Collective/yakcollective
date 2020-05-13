@@ -1,8 +1,10 @@
 .bundle/*
 .jekyll-cache/*
-_posts/*.html
 _site/*
 vendor/*
+writings/_posts/*
+
+!writings/_posts/.keep
 
 yak-planet.ini
 yak-planet.db

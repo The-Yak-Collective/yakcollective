@@ -1,0 +1,34 @@
+.yak-wisdom-report {
+	width: 140%;
+	margin-top: -150px;
+	height: 634px;
+	border-radius: 5px;
+	margin-left: -20%;
+	box-shadow: 5px 5px 10px #888888;
+	border: 1px solid black;
+	display: block;
+}
+
+.yak-wisdom-report-links img {
+	height: 16px;
+	display: inline-block;
+}
+
+.yak-wisdom-report-links a {
+	text-decoration: none;
+	color: #212121;
+	box-shadow: inset 0 -0.25em 0 rgba(170,35,170,0.4);
+	transition: ease-in .05s border-bottom;
+}
+
+.yak-wisdom-report-links a:hover {
+	box-shadow: inset 0 -1.25em 0 rgba(170,35,170,0.4);
+}
+
+@media (max-width: 1024px) {
+	.yak-wisdom-report{
+		width:100%;
+		margin-left:0px;
+		height:400px;
+	}
+}
