@@ -1,13 +1,11 @@
 <div class="w-100 pa2" id="{{ member_uid }}">
 	<div class="flex items-center lh-copy pa3 ba b--black-10">
-		<img class="w2 h2 w3-ns h3-ns br-100" src="/images/members/{{ member_uid }}.jpg" />
+		{% if page.url == "/members/" %}<a href="/members/{{ member_uid }}">{% endif %}<img class="w2 h2 w3-ns h3-ns br-100" src="/images/{{ member_uid }}.jpg" />{% if page.url == "/members/" %}</a>{% endif %}
 		<div class="pl3 flex-auto">
-			<span class="f6 db black-70">{{ member.name }}</span>
-			<span class="f6 db black-70">{{ member.title }}</span>
+			<span class="f6 db black-70">{% if page.url == "/members/" %}<a class="link dim black-70" href="/members/{{ member_uid }}">{% endif %}{{ member.title }}{% if page.url == "/members/" %}</a>{% endif %}</span>
+			{% if member.tagline %}<span class="f6 db black-70">{{ member.tagline }}</span>{% endif %}
 			<span class="f6 db black-70">Indie status: {{ member.indie_status }}</span>
-			{% if member.previous %}
-				<span class="f6 db black-70">Previously: {{ member.previous }}</span>
-			{% endif %}
+			{% if member.previously %}<span class="f6 db black-70">Previously: {{ member.previously }}</span>{% endif %}
 			{% if member.links %}
 				<span class="f6 db black-70">
 					{% for link in member.links %}

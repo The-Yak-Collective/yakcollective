@@ -5,7 +5,9 @@
 		<h1 class="yak-post">{% if page.original_link %}<a href="{{ page.original_link }}">{% endif %}{{ page.title }}{% if page.original_link %}</a>{% endif %}</h1>
 
 		{% assign member_uid = page.author %}
-		{% assign member = site.data.members[page.author] %}
+		{% capture member_id %}/members/{{ member_uid }}{% endcapture %}
+		{% assign member_data = site.categories["members"] | where: "id", member_id %}
+		{% assign member = member_data[0] %}
 		{% include member-card.html %}
 	</header>
 

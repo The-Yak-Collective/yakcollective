@@ -11,7 +11,7 @@ layout: minimal
 	{% assign upcoming_projects = site.categories["projects"] | where: "published", "false" %}
 	<section>
 		<header><h2>Latest Projects</h2></header>
-		{% for project in published_projects limit: 5 %}
+		{% for project in published_projects limit: 3 %}
 			{% include project-box.html %}
 		{% endfor %}
 	</section>
@@ -26,7 +26,7 @@ layout: minimal
 	{% if published_projects.size > 5 %}
 		<section>
 			<header><h2>Past Projects</h2></header>
-			{% for project in published_projects offset: 5 %}
+			{% for project in published_projects offset: 3 %}
 				{% include project-box.html %}
 			{% endfor %}
 		</section>

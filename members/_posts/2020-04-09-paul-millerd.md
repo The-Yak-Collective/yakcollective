@@ -1,0 +1,15 @@
+---
+layout: member
+title: Paul Millerd
+partner: true
+previously: McKinsey, BCG, GE, Russell Reynolds 
+indie_status: 3+ years
+twitter: p_millerd
+avatar: /images/paul-millerd.jpg
+feed: https://think-boundless.com/feed/
+links:
+  - title: Boundless
+    url: https://think-boundless.com/
+  - title: Strategy U
+    url: https://strategyu.co/
+---

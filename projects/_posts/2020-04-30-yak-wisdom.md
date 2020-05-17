@@ -5,6 +5,39 @@ title: Don't Waste the COVID-19 Reboot
 tagline: Making the next normal better than the last one
 type: Report
 sequence: covid19
+hero_image: /images/yak-wisdom-hero.svg
+accent_color: "#aa23aa"
+page_css: |
+  .yak-wisdom-report {
+    width: 140%;
+    margin-top: -150px;
+    height: 634px;
+    border-radius: 5px;
+    margin-left: -20%;
+    box-shadow: 5px 5px 10px #888888;
+    border: 1px solid black;
+    display: block;
+  }
+  .yak-wisdom-report-links img {
+    height: 16px;
+    display: inline-block;
+  }
+  .yak-wisdom-report-links a {
+    text-decoration: none;
+    color: #212121;
+    box-shadow: inset 0 -0.25em 0 rgba(170,35,170,0.4);
+    transition: ease-in .05s border-bottom;
+  }
+  .yak-wisdom-report-links a:hover {
+    box-shadow: inset 0 -1.25em 0 rgba(170,35,170,0.4);
+  }
+  @media (max-width: 1024px) {
+    .yak-wisdom-report{
+      width: 100%;
+      margin-left: 0px;
+      height: 400px;
+    }
+  }
 summary: |
   The inaugural report by the Yak Collective, _Don't Waste the Reboot_
   offers organizations a smorgasbord of 25 creative and unexpected
@@ -16,40 +49,35 @@ summary: |
   report will get you thinking about your reboot efforts in a bolder,
   more imaginative way. Let us know what you think!
 lead_editors:
-  - paul_millerd
-  - venkatesh_rao
+  - paul-millerd
+  - venkatesh-rao
 collaborators:
-  - david_mcdougall
-  - darren_kong
-  - vaughn_tan
-  - randy_lubin
-  - vlad_mehakovic
-  - thomas_verhagen
-  - alex_dobrenko
-  - sachin_benny
-  - amanda_reeves
-  - jordan_peacock
-  - anne-laure_le_cunff
-  - martha_balaile
-  - benjamin_taylor
-  - nita_baum
-  - vinay_debrou
-  - tom_critchlow
-  - rodrigo_pinto
-  - ben_mosior
-  - harry_pottash
-  - jordan_allen
+  - david-mcdougall
+  - darren-kong
+  - vaughn-tan
+  - randy-lubin
+  - vlad-mehakovic
+  - thomas-verhagen
+  - alex-dobrenko
+  - sachin-benny
+  - amanda-reeves
+  - jordan-peacock
+  - anne-laure-le-cunff
+  - martha-balaile
+  - benjamin-taylor
+  - nita-baum
+  - vinay-debrou
+  - tom-critchlow
+  - rodrigo-pinto
+  - ben-mosior
+  - harry-pottash
+  - jordan-allen
 ---
 
-<!-- BEGIN: Required code to extract project_id variable -->
-{% assign page_path = page.id | split: "/" %}
-{% assign project_id = page_path.last %}
-<!-- END: Required code to extract project_id variable -->
+<iframe class="yak-wisdom-report" src="https://docs.google.com/presentation/d/e/2PACX-1vTa8T4sQLAF2cbRFTqcxZGefI7A2HP54ZKBlyvpi03iTWrzt10W50MP-fQ13am5_svHeJL_-zjALkVT/embed?start=false&loop=false&delayms=60000" frameborder="0" width="1920" height="1109" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 
-<iframe class="{{ project_id }}-report" src="https://docs.google.com/presentation/d/e/2PACX-1vTa8T4sQLAF2cbRFTqcxZGefI7A2HP54ZKBlyvpi03iTWrzt10W50MP-fQ13am5_svHeJL_-zjALkVT/embed?start=false&loop=false&delayms=60000" frameborder="0" width="1920" height="1109" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-
-<aside class="{{ project_id }}-report-links pv4">
-	<img class="h1" src="https://ssl.gstatic.com/docs/presentations/images/favicon5.ico"> <a href="https://docs.google.com/presentation/d/1OfBuSq4SImE1Gq2EaAGCAlkwC8LZRCWx-7O_VOHJ5TI/edit#slide=id.p1">Open Google Doc</a> / <img class="h1" src="/images/pdf.png"> <a href="https://docs.google.com/presentation/d/1OfBuSq4SImE1Gq2EaAGCAlkwC8LZRCWx-7O_VOHJ5TI/export/pdf">Download PDF</a>
+<aside class="yak-wisdom-report-links pv4">
+  <img class="h1" src="https://ssl.gstatic.com/docs/presentations/images/favicon5.ico"> <a href="https://docs.google.com/presentation/d/1OfBuSq4SImE1Gq2EaAGCAlkwC8LZRCWx-7O_VOHJ5TI/edit#slide=id.p1">Open Google Doc</a> / <img class="h1" src="/images/pdf.png"> <a href="https://docs.google.com/presentation/d/1OfBuSq4SImE1Gq2EaAGCAlkwC8LZRCWx-7O_VOHJ5TI/export/pdf">Download PDF</a>
 </aside>
 
 ## The Yak Wisdom Project

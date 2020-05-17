@@ -3,11 +3,11 @@
 
 {
   "version": "https://jsonfeed.org/version/1",
-  "title": {{ site.title | append: " - Latest Writings" | jsonify }},
-  "description": "The Yak Collective's latest writings.",
+  "title": {{ site.name | append: " - Latest Writings" | jsonify }},
+  "description": "{{ site.description | jsonify }}",
   "home_page_url": "{{ site.url }}",
   "feed_url": "{{ site.url }}/feed.writings.json",
-  "favicon": "{{ site.url}}/images/yaklogo.png",
+  "favicon": "{{ site.url}}/images/yak-logo-square.png",
   {% if site.author %}
   "author": {
     "name": {{ site.author | jsonify }}

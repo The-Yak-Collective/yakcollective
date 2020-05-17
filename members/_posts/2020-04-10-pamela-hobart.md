@@ -1,0 +1,14 @@
+---
+layout: member
+title: Pamela Hobart
+partner: true
+indie_status: 3+ years
+twitter: amelapay
+avatar: /images/pamela-hobart.jpg
+feed: https://pamelajhobart.substack.com/feed/
+links:
+  - title: pamelajhobart.com
+    url: https://www.pamelajhobart.com/
+  - title: Substack
+    url: https://pamelajhobart.substack.com/
+---

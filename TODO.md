@@ -16,17 +16,13 @@ Based upon to-do list from Nathan Acks' "v2" development work + discussion on Di
 
 - [X] More fully document what different includes and data files do
 
-- [ ] Move `members.yml` data structure into member _pages_ listing projects they've participated in and recent posts
+- [X] Move `members.yml` data structure into member _pages_ listing projects they've participated in and recent posts
 
 	- Member lookup will need to be indirect, through `site.categories["members"] | where: "id", "/members/venkatesh-rao"`, etc.
 	- How to handle the creation of `yak-planet.ini`????
 	- All member names should be links pointing to this page.
 		- Should this apply to the member page itself?
 		- How should the member page be linked back to?
-
-- [ ] Use the [`jekyll-postfiles`](https://github.com/nhoizey/jekyll-postfiles) plugin to bundle per-project styles and member images with their respective pages.
-
-	- Images, CSS, etc. should all be named in a generic fashion. We should _only_ care about the directory!
 
 - [ ] Figure out how to make site friendly for non-technical updates (this almost certainly means migrating to another platform)
 

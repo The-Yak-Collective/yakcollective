@@ -1,7 +1,18 @@
+html {
+	height: 100%;
+}
+
 body {
 	font-family:"Noto Serif SC";
 	padding: 0px;
 	margin: 0px;
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.fill-space {
+	flex: 1;
 }
 
 .container h2{
@@ -90,8 +101,13 @@ h6 {
 	font-family: "Playfair Display";
 }
 
-.yak-project aside {
+.yak-project-header aside {
 	box-sizing: border-box;
+}
+
+.yak-project-header aside a,
+.yak-project-header aside a:hover {
+	box-shadow: none;
 }
 
 .projectbox {

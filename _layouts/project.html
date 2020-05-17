@@ -4,7 +4,7 @@
 {% assign project_id = page_path.last %}
 
 <article class="yak-project">
-	<header class="{{ project_id }}-hero">
+	<header class="yak-project-header {{ project_id }}-hero">
 		<div class="h-25 w-100 center pa3 mw9 center">
 			<div class="cf ph3 ph5-ns pv5-l pv3">
 				<aside class="fn fl-ns w-25-ns pr4-ns pl4-ns">
@@ -23,20 +23,25 @@
 						{% assign lead_editors = page.lead_editors %}
 						{% assign total_editors = lead_editors.size %}
 						{% if total_editors == 1 %}
-							{% assign editor_id = lead_editors[0] %}
-							{% assign editor = site.data.members[editor_id] %}
-							{{ editor.name }}
+							{% capture editor_id %}/members/{{ lead_editors[0] }}{% endcapture %}
+							{% assign editor_data = site.categories["members"] | where: "id", editor_id %}
+							{% assign editor = editor_data[0] %}
+							<a class="link dim" href="{{ editor_id }}">{{ editor.title }}</a>
 						{% elsif total_editors == 2 %}
-							{% assign first_editor_id = lead_editors[0] %}
-							{% assign first_editor = site.data.members[first_editor_id] %}
-							{% assign second_editor_id = lead_editors[1] %}
-							{% assign second_editor = site.data.members[second_editor_id] %}
-							{{ first_editor.name }} &amp; {{ second_editor.name }}
+							{% capture first_editor_id %}/members/{{ lead_editors[0] }}{% endcapture %}
+							{% assign first_editor_data = site.categories["members"] | where: "id", first_editor_id %}
+							{% assign first_editor = first_editor_data[0] %}
+							{% capture second_editor_id %}/members/{{ lead_editors[1] }}{% endcapture %}
+							{% assign second_editor_data = site.categories["members"] | where: "id", second_editor_id %}
+							{% assign second_editor = second_editor_data[0] %}
+							<a class="link dim" href="{{ first_editor_id }}">{{ first_editor.title }}</a> &amp; <a class="link dim" href="{{ second_editor_id }}">{{ second_editor.title }}</a>
 						{% else %}
 							{% assign last_editor = lead_editors.last %}
 							{% for lead_editor in lead_editors %}
-								{% assign editor = site.data.members[lead_editor] %}
-								{{ editor.name }}{% if lead_editor != last_editor %}, {% endif %}
+								{% capture lead_editor_id %}/members/{{ lead_editor }}{% endcapture %}
+								{% assign editor_data = site.categories["members"] | where: "id", lead_editor_id %}
+								{% assign editor = editor_data[0] %}
+								<a class="link dim" href="{{ lead_editor }}">{{ editor.title }}</a>{% if lead_editor != last_editor %}, {% endif %}
 							{% endfor %}
 						{% endif %}
 					</p>
@@ -47,20 +52,25 @@
 							{% assign collaborators = page.collaborators %}
 							{% assign total_collaborators = collaborators.size %}
 							{% if total_collaborators == 1 %}
-								{% assign collaborator_id = collaborators[0] %}
-								{% assign collaborator = site.data.members[collaborator_id] %}
-								{{ collaborator.name }}
+								{% capture collaborator_id %}/members/{{ collaborators[0] }}{% endcapture %}
+								{% assign collaborator_data = site.categories["members"] | where: "id", collaborator_id %}
+								{% assign collaborator = collaborator_data[0] %}
+								<a class="link dim gray" href="{{ collaborator_id }}">{{ collaborator.title }}</a>
 							{% elsif total_collaborators == 2 %}
-								{% assign first_collaborator_id = collaborators[0] %}
-								{% assign first_collaborator = site.data.members[first_collaborator_id] %}
-								{% assign second_collaborator_id = collaborators[1] %}
-								{% assign second_collaborator = site.data.members[second_collaborator_id] %}
-								{{ first_collaborator.name }} &amp; {{ second_collaborator.name }}
+								{% capture first_collaborator_id %}/members/{{ collaborator[0] }}{% endcapture %}
+								{% assign first_collaborator_data = site.categories["members"] | where: "id", first_collaborator_id %}
+								{% assign first_collaborator = first_collaborator_data[0] %}
+								{% capture second_collaborator_id %}/members/{{ collaborator[1] }}{% endcapture %}
+								{% assign second_collaborator_data = site.categories["members"] | where: "id", second_collaborator_id %}
+								{% assign second_collaborator = second_collaborator_data[0] %}
+								<a class="link dim gray" href="{{ first_collaborator_id }}">{{ first_collaborator.title }}</a> &amp; <a class="link dim gray" href="{{ second_collaborator_id }}">{{ second_collaborator.title }}</a>
 							{% else %}
-								{% assign last_collaborators = collaborators.last %}
-								{% for collaborator_id in collaborators %}
-									{% assign collaborator = site.data.members[collaborator_id] %}
-									{{ collaborator.name }}{% if collaborator_id != last_collaborator %}, {% endif %}
+								{% assign last_collaborator = collaborators.last %}
+								{% for collaborator_uid in collaborators %}
+									{% capture collaborator_id %}/members/{{ collaborator_uid }}{% endcapture %}
+									{% assign collaborator_data = site.categories["members"] | where: "id", collaborator_id %}
+									{% assign collaborator = collaborator_data[0] %}
+									<a class="link dim gray" href="{{ collaborator_id }}">{{ collaborator.title }}</a>{% if collaborator_uid != last_collaborator %}, {% endif %}
 								{% endfor %}
 							{% endif %}
 						</span>
@@ -68,7 +78,7 @@
 				</aside>
 				<div class="fn fl-ns w-50-ns pl4-ns">
 					<h1 class="ma0 pa0 fw8 f1">{{ page.title }}</h1>
-					<div class="subhead pt3 pb1 fw6 f3">{{ page.tagline }}</div>
+					<div class="subhead pt3 pb1 fw4 f3">{{ page.tagline }}</div>
 					<div class="f5 lh-copy pb5">{{ page.summary | markdownify }}</div>
 				</div>
 			</div>
