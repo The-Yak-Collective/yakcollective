@@ -1,4 +1,4 @@
-.yak-wisdom-report {
+.dont-waste-the-covid19-reboot-report {
 	width: 140%;
 	margin-top: -150px;
 	height: 634px;
@@ -9,24 +9,24 @@
 	display: block;
 }
 
-.yak-wisdom-report-links img {
+.dont-waste-the-covid19-reboot-report-links img {
 	height: 16px;
 	display: inline-block;
 }
 
-.yak-wisdom-report-links a {
+.dont-waste-the-covid19-reboot-report-links a {
 	text-decoration: none;
 	color: #212121;
 	box-shadow: inset 0 -0.25em 0 rgba(170,35,170,0.4);
 	transition: ease-in .05s border-bottom;
 }
 
-.yak-wisdom-report-links a:hover {
+.dont-waste-the-covid19-reboot-report-links a:hover {
 	box-shadow: inset 0 -1.25em 0 rgba(170,35,170,0.4);
 }
 
 @media (max-width: 1024px) {
-	.yak-wisdom-report{
+	.dont-waste-the-covid19-reboot-report{
 		width:100%;
 		margin-left:0px;
 		height:400px;
