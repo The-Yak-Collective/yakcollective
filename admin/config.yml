@@ -1,0 +1,64 @@
+backend:
+  name: git-gateway
+  branch: warren-structure
+publish_mode: editorial_workflow
+media_folder: images/
+site_url: https://yakcollective.org
+collections:
+  - name: members
+    label: Members
+    folder: members/_posts/
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    editor:
+      preview: false
+    fields:
+      - label: Layout
+        name: layout
+        widget: hidden
+        default: member
+      - label: Name
+        name: title
+        widget: string
+      - label: Avatar
+        name: avatar
+        widget: image
+      - label: Join Date
+        name: date
+        widget: date
+      - label: Partner
+        name: partner
+        widget: boolean
+      - label: Title
+        name: tagline
+        widget: string
+      - label: Indie Status
+        name: indie_status
+        widget: string
+      - label: Previously
+        name: previously
+        widget: string
+      - label: Twitter
+        name: twitter
+        widget: string
+      - label: RSS Feed
+        name: feed
+        widget: string
+      - label: Web Links
+        name: links
+        widget: list
+        field:
+          - label: Link
+            name: link
+            widget: object
+            fields:
+              - label: Title
+                name: title
+                widget: string
+              - label: URL
+                name: url
+                widget: string
+      - label: Body
+        name: body
+        widget: hidden
+        default: ""
