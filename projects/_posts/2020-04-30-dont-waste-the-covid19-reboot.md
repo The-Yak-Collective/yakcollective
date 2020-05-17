@@ -5,10 +5,10 @@ title: Don't Waste the COVID-19 Reboot
 tagline: Making the next normal better than the last one
 type: Report
 sequence: covid19
-hero_image: /images/yak-wisdom-hero.svg
+hero_image: /images/dont-waste-the-covid19-reboot-hero.svg
 accent_color: "#aa23aa"
 page_css: |
-  .yak-wisdom-report {
+  .dont-waste-the-covid19-reboot-report {
     width: 140%;
     margin-top: -150px;
     height: 634px;
@@ -18,21 +18,21 @@ page_css: |
     border: 1px solid black;
     display: block;
   }
-  .yak-wisdom-report-links img {
+  .dont-waste-the-covid19-reboot-report-links img {
     height: 16px;
     display: inline-block;
   }
-  .yak-wisdom-report-links a {
+  .dont-waste-the-covid19-reboot-report-links a {
     text-decoration: none;
     color: #212121;
     box-shadow: inset 0 -0.25em 0 rgba(170,35,170,0.4);
     transition: ease-in .05s border-bottom;
   }
-  .yak-wisdom-report-links a:hover {
+  .dont-waste-the-covid19-reboot-report-links a:hover {
     box-shadow: inset 0 -1.25em 0 rgba(170,35,170,0.4);
   }
   @media (max-width: 1024px) {
-    .yak-wisdom-report{
+    .dont-waste-the-covid19-reboot-report{
       width: 100%;
       margin-left: 0px;
       height: 400px;
@@ -74,9 +74,9 @@ collaborators:
   - jordan-allen
 ---
 
-<iframe class="yak-wisdom-report" src="https://docs.google.com/presentation/d/e/2PACX-1vTa8T4sQLAF2cbRFTqcxZGefI7A2HP54ZKBlyvpi03iTWrzt10W50MP-fQ13am5_svHeJL_-zjALkVT/embed?start=false&loop=false&delayms=60000" frameborder="0" width="1920" height="1109" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+<iframe class="dont-waste-the-covid19-reboot-report" src="https://docs.google.com/presentation/d/e/2PACX-1vTa8T4sQLAF2cbRFTqcxZGefI7A2HP54ZKBlyvpi03iTWrzt10W50MP-fQ13am5_svHeJL_-zjALkVT/embed?start=false&loop=false&delayms=60000" frameborder="0" width="1920" height="1109" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 
-<aside class="yak-wisdom-report-links pv4">
+<aside class="dont-waste-the-covid19-reboot-report-links pv4">
   <img class="h1" src="https://ssl.gstatic.com/docs/presentations/images/favicon5.ico"> <a href="https://docs.google.com/presentation/d/1OfBuSq4SImE1Gq2EaAGCAlkwC8LZRCWx-7O_VOHJ5TI/edit#slide=id.p1">Open Google Doc</a> / <img class="h1" src="/images/pdf.png"> <a href="https://docs.google.com/presentation/d/1OfBuSq4SImE1Gq2EaAGCAlkwC8LZRCWx-7O_VOHJ5TI/export/pdf">Download PDF</a>
 </aside>
 
