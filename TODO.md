@@ -1,7 +1,7 @@
-- [ ] Integrate this repo into the main site
+- [X] Integrate this repo into the main site
 
 	- [X] Get current site into Netlify
-	- [ ] Swap DNS over to Netlify
+	- [X] Swap DNS over to Netlify
 	- [X] Reach out to members and make sure that RSS feeds are correct
 	- [X] Merge this repo into current site
 
@@ -39,19 +39,22 @@
 		- I think we'll want to use an "editorial approval" workflow, just to make sure that bad changes don't get pushed to the live site.
 	- ~~Migrate to Gatsby and push user-editable files into Google Drive or Dropbox? Not clear how to do this within a dev/prod setup. (But maybe we don't care?)~~
 
-- [ ] Add facility for tagging member skills
-
-- [ ] Move this list into Roam to encourage collaboration/ideas/etc.
-
-	- This should also include a "how to" for editing files.
-
-- [ ] Formally add a GitHub issue tracker, link to Roam. See [this](https://discordapp.com/channels/@me/707243573061353472/709852606096212048) and [this](https://discordapp.com/channels/@me/707243573061353472/709881527642620046).
-
-- [ ] Migrate [onboarding document](https://docs.google.com/document/d/1I63ZKu8o0DpBG0tWhssIsCinlXeBKO-xGyvmIMXXAWE/) into website (per [Venkatesh Rao](https://discordapp.com/channels/692111190851059762/692826420191297556/709550901555363861)).
-
 - [ ] Figure out a way to archive incoming news posts (right now, if a post disappears from a member's feed, it will disappear from the site during the next rebuild)
 
 	- Can we check `yak-planet.db`, `yak-planet.ini`, and `writings/_posts/*` into GitHub as part of the build, using a token for authentication?
+
+- [ ] Infrastructure housekeeping
+
+	- [ ] Add facility for tagging member skills
+	- [ ] Update `README.md`
+	- [ ] Move this list into Roam to encourage collaboration/ideas/etc.
+
+		- This should also include a "how to" for editing files.
+
+	- [ ] Formally add a GitHub issue tracker, link to Roam. See [this](https://discordapp.com/channels/@me/707243573061353472/709852606096212048) and [this](https://discordapp.com/channels/@me/707243573061353472/709881527642620046).
+	- [ ] Schedule office hours, walk interested folks through the site changes.
+
+- [ ] Migrate [onboarding document](https://docs.google.com/document/d/1I63ZKu8o0DpBG0tWhssIsCinlXeBKO-xGyvmIMXXAWE/) into website (per [Venkatesh Rao](https://discordapp.com/channels/692111190851059762/692826420191297556/709550901555363861)).
 
 - [ ] Figure out some kind of services / how to engage with us / contact us page. (How to do this while still being individual-member-centric?)
 
