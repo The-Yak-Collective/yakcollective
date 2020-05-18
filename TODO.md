@@ -1,3 +1,22 @@
+- [X] Initial Netlify migration
+
+	- [X] Add `CHANGELOG.md`
+	- [X] Add `.gitignore`
+	- [X] Add `Gemfile`
+	- [X] Migrate to Netlify-style redirects
+	- [X] Migrate to Netlify-style build infrastructure
+	- [X] Separate member data from page
+	- [X] Clean up unused files
+	- [X] Add as many (populated) RSS feeds as I can find
+	- [X] Add member RSS feeds to header
+	- [X] Create list of writings (from RSS feeds)
+	- [X] Rename `members.md` to `members.html` to match content
+	- [X] Add RSS and JSON feeds for writings category
+	- [X] Create reusable "member card" widget
+	- [X] Fix missing footer on homepage
+	- [X] Update `README.md` to reflect changes
+	- [X] Remove webhook reference (denial of service risk)
+
 - [X] Integrate this repo into the main site
 
 	- [X] Get current site into Netlify
