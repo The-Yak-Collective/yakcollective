@@ -1,3 +1,7 @@
+# Site version. See: https://semver.org/
+#
+version: 2.0.0
+
 # General site settings
 #
 permalink: /:categories/:title/
@@ -6,6 +10,8 @@ permalink: /:categories/:title/
 #
 #   https://github.com/snaptortoise/jekyll-rss-feeds
 #   https://github.com/snaptortoise/jekyll-json-feeds
+#
+# Also used in some other places now, so check around before changing!
 #
 name: The Yak Collective
 description: The Yak Collective is a network of over 300 independent consultants, coaches, and freelancers with varied technical and creative skills.
