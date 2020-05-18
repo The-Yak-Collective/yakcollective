@@ -5,7 +5,7 @@ partner: true
 previously: McKinsey, BCG, GE, Russell Reynolds 
 indie_status: 3+ years
 twitter: p_millerd
-avatar: /images/paul-millerd.jpg
+avatar: /assets/paul-millerd.jpg
 feed: https://think-boundless.com/feed/
 links:
   - title: Boundless

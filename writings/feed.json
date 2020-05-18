@@ -7,7 +7,7 @@
   "description": "{{ site.description | jsonify }}",
   "home_page_url": "{{ site.url }}",
   "feed_url": "{{ site.url }}/feed.writings.json",
-  "favicon": "{{ site.url}}/images/yak-logo-square.png",
+  "favicon": "{{ site.url}}/assets/yak-logo-square.png",
   {% if site.author %}
   "author": {
     "name": {{ site.author | jsonify }}

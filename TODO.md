@@ -39,6 +39,8 @@
 		- I think we'll want to use an "editorial approval" workflow, just to make sure that bad changes don't get pushed to the live site.
 	- ~~Migrate to Gatsby and push user-editable files into Google Drive or Dropbox? Not clear how to do this within a dev/prod setup. (But maybe we don't care?)~~
 
+- [ ] Add facility for tagging member skills
+
 - [ ] Move this list into Roam to encourage collaboration/ideas/etc.
 
 	- This should also include a "how to" for editing files.
@@ -55,7 +57,7 @@
 
 - [ ] Figure out how to integrate the Yak Collective Twitter list? (Again, probably easiest in Gatsby.)
 
-- [ ] Add facility for project-related badges on member cards and profile pages
+- [ ] Add facility for [project-related badges](https://discordapp.com/channels/692111190851059762/708772535172333618/711625982473404436) on member cards and profile pages
 
 	- Need to figure out what this will look like.
 

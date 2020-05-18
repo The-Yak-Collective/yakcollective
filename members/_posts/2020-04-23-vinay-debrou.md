@@ -4,7 +4,7 @@ title: Vinay Débrou
 indie_status: 2+ years
 twitter: vinaydebrou
 previously: Data Analyst at a Fintech SaaS company
-avatar: /images/vinay-debrou.jpg
+avatar: /assets/vinay-debrou.jpg
 feed: https://daybrew.substack.com/feed/
 links:
   - title: Consultant, Data & Brand Strategy

@@ -4,7 +4,7 @@ title: Vaughn Tan
 indie_status: 5+ years
 previously: Google, and currently University College London School of Management
 twitter: vaughn_tan
-avatar: /images/vaughn-tan.jpg
+avatar: /assets/vaughn-tan.jpg
 feed: https://uncertaintymindset.substack.com/feed/
 links:
   - title: bio

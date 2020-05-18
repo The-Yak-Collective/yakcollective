@@ -5,7 +5,7 @@ partner: true
 previously: Google
 indie_status: 5+ years
 twitter: tomcritchlow
-avatar: /images/tom-critchlow.jpg
+avatar: /assets/tom-critchlow.jpg
 feed: https://tomcritchlow.com/feed
 links:
   - title: tomcritchlow.com

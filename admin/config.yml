@@ -2,7 +2,7 @@ backend:
   name: git-gateway
   branch: warren-structure
 publish_mode: editorial_workflow
-media_folder: images/
+media_folder: assets/
 site_url: https://yakcollective.org
 collections:
   - name: members

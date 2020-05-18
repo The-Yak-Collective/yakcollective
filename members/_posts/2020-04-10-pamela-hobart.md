@@ -4,7 +4,7 @@ title: Pamela Hobart
 partner: true
 indie_status: 3+ years
 twitter: amelapay
-avatar: /images/pamela-hobart.jpg
+avatar: /assets/pamela-hobart.jpg
 feed: https://pamelajhobart.substack.com/feed/
 links:
   - title: pamelajhobart.com
