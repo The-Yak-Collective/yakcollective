@@ -3,32 +3,30 @@ layout: minimal
 title: Yak Collective Members
 ---
 
-<article class="container mw7 cf pv5 f4-l center w-90 lh-copy">
-	<section>
-		<header>
-			<h1>Partners</h1>
-			<p>Yak Collective partners have played key roles in projects, helped steer the collective and tweeted excessively.</p>
-		</header>
+<section>
+	<header>
+		<h1>Partners</h1>
+		<p>Yak Collective partners have played key roles in projects, helped steer the collective and tweeted excessively.</p>
+	</header>
 
-		{% assign member_partners = site.categories["members"] | where: "partner", true | reverse %}
-		{% for member in member_partners %}
-			{% assign member_path = member.id | split: "/" %}
-			{% assign member_uid = member_path.last %}
-			{% include member-card.html %}
-		{% endfor %}
-	</section>
+	{% assign member_partners = site.categories["members"] | where: "partner", true | reverse %}
+	{% for member in member_partners %}
+		{% assign member_path = member.id | split: "/" %}
+		{% assign member_uid = member_path.last %}
+		{% include member-card.html %}
+	{% endfor %}
+</section>
 
-	<section>
-		<header>
-			<h2 class="cf pt3">Collaborators</h2>
-			<p>Yak Collective collaborators have contributed to one or more projects.</p>
-		</header>
+<section>
+	<header>
+		<h2 class="cf pt3">Collaborators</h2>
+		<p>Yak Collective collaborators have contributed to one or more projects.</p>
+	</header>
 
-		{% assign member_collaborators = site.categories["members"] | where_exp: "member", "member.partner != true" | reverse %}
-		{% for member in member_collaborators %}
-			{% assign member_path = member.id | split: "/" %}
-			{% assign member_uid = member_path.last %}
-			{% include member-card.html %}
-		{% endfor %}
-	</section>
-</article>
+	{% assign member_collaborators = site.categories["members"] | where_exp: "member", "member.partner != true" | reverse %}
+	{% for member in member_collaborators %}
+		{% assign member_path = member.id | split: "/" %}
+		{% assign member_uid = member_path.last %}
+		{% include member-card.html %}
+	{% endfor %}
+</section>

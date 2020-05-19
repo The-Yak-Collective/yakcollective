@@ -52,15 +52,11 @@
 - [ ] Figure out how to make site friendly for non-technical updates (this almost certainly means migrating to another platform)
 
 	- ~~Migrate to Hugo and use a data file directory stored in Dropbox or Google Drive? Probably simplest, but least flexible long-run.~~
-	- Spin up NetlifyCMS? Might not actually meet this need.
+	- Spin up NetlifyCMS.
 		- I increasingly like this idea, especially if `members.yml` can be broken into individual pages.
 		- Will require people to have a GitHub account... (Bug? Feature?)
 		- I think we'll want to use an "editorial approval" workflow, just to make sure that bad changes don't get pushed to the live site.
 	- ~~Migrate to Gatsby and push user-editable files into Google Drive or Dropbox? Not clear how to do this within a dev/prod setup. (But maybe we don't care?)~~
-
-- [ ] Figure out a way to archive incoming news posts (right now, if a post disappears from a member's feed, it will disappear from the site during the next rebuild)
-
-	- Can we check `yak-planet.db`, `yak-planet.ini`, and `writings/_posts/*` into GitHub as part of the build, using a token for authentication?
 
 - [ ] Infrastructure housekeeping
 
@@ -75,9 +71,19 @@
 
 - [ ] Migrate [onboarding document](https://docs.google.com/document/d/1I63ZKu8o0DpBG0tWhssIsCinlXeBKO-xGyvmIMXXAWE/) into website (per [Venkatesh Rao](https://discordapp.com/channels/692111190851059762/692826420191297556/709550901555363861)).
 
-- [ ] Figure out some kind of services / how to engage with us / contact us page. (How to do this while still being individual-member-centric?)
+- [ ] Use Glitch to create posts from member feeds
 
-- [ ] Figure out how to integrate the Yak Collective Twitter list? (Again, probably easiest in Gatsby.)
+	- See: https://webrender.net/2017/11/23/automate-github-pages-ifttt-glitch.html
+	- No need for daily rebuild anymore...
+	- Run Planet Pluto one last time to "seed" `writings/_posts/*`
+
+- [ ] Figure out how to integrate the Yak Collective Twitter list?
+
+	- Maybe (probably?) just use the Glitch automation for this.
+	- Also extend to Facebook, etc.
+	- Or, maybe reverse? YC.org to Twitter, LinkedIn, etc.
+
+- [ ] Figure out some kind of services / how to engage with us / contact us page. (How to do this while still being individual-member-centric?)
 
 - [ ] Add facility for [project-related badges](https://discordapp.com/channels/692111190851059762/708772535172333618/711625982473404436) on member cards and profile pages
 
