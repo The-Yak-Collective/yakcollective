@@ -4,6 +4,8 @@ Home page of the Yak Collective projects.
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/943ff646-41b6-4b4b-ab86-a891698c72c7/deploy-status)](https://app.netlify.com/sites/practical-lichterman-20c7e0/deploys)
 
+**WARNING!** This README is currently out-of-date w.r.t. changes in this branch!
+
 ## Updating Members
 
 Member data can be found in `_data/members.yml`. Set `partner` to `true` to include in the _Partners_ block. Add (or remove) elements from `feeds` to tweak fetched posts.
