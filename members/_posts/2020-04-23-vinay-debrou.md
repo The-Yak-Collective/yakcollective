@@ -8,7 +8,7 @@ avatar: /assets/vinay-debrou.jpg
 feed: https://daybrew.substack.com/feed/
 links:
   - title: Consultant, Data & Brand Strategy
-    url: https://www.notion.so/brewing/About-Me-2ff600ac504d4217a3ce643869677fd8
+    url: https://vinaydebrou.com/
   - title: Substack
     url: https://daybrew.substack.com/about
 ---
