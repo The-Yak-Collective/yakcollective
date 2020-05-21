@@ -85,9 +85,12 @@
 
 - [ ] Figure out some kind of services / how to engage with us / contact us page. (How to do this while still being individual-member-centric?)
 
-- [ ] Add facility for [project-related badges](https://discordapp.com/channels/692111190851059762/708772535172333618/711625982473404436) on member cards and profile pages
+- [ ] Additional member info ideas:
 
-	- Need to figure out what this will look like.
+	- [ ] Add facility for [project-related badges](https://discordapp.com/channels/692111190851059762/708772535172333618/711625982473404436) on member cards and profile pages
+		- Need to figure out what this will look like.
+	- [ ] Personal archetype?
+	- [ ] Skills list?
 
 - [ ] Figure out how to automate some sort of mailing list
 
