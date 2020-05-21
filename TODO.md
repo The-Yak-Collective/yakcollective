@@ -77,12 +77,6 @@
 	- No need for daily rebuild anymore...
 	- Run Planet Pluto one last time to "seed" `writings/_posts/*`
 
-- [ ] Figure out how to integrate the Yak Collective Twitter list?
-
-	- Maybe (probably?) just use the Glitch automation for this.
-	- Also extend to Facebook, etc.
-	- Or, maybe reverse? YC.org to Twitter, LinkedIn, etc.
-
 - [ ] Figure out some kind of services / how to engage with us / contact us page. (How to do this while still being individual-member-centric?)
 
 - [ ] Additional member info ideas:
@@ -99,6 +93,12 @@
 	- Push to Substack (how?) or Mailchimp (Mandrill API?)
 	- Minimal/no human curration
 	- [Reference idea](https://discordapp.com/channels/692111190851059762/692847835766325386/708707475117047910) (Nathan Acks/Darren Kong)
+
+- [ ] Figure out how to integrate the Yak Collective Twitter list?
+
+	- Maybe (probably?) just use the Glitch automation for this.
+	- Also extend to Facebook, etc.
+	- Or, maybe reverse? YC.org to Twitter, LinkedIn, etc.
 
 - [ ] Figure out how to page projects and member posts. [Jekyll doesn't support this robustly](https://jekyllrb.com/docs/pagination/), but Hugo, Gatsby, and other generators do
 
