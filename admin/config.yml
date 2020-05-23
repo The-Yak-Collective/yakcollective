@@ -1,185 +1,139 @@
 backend:
-  name: git-gateway
+  name:   git-gateway
   branch: warren-structure
 publish_mode: editorial_workflow
 media_folder: assets/
-site_url: https://yakcollective.org
+site_url:     https://yakcollective.org
 collections:
-  - name: members
-    label: Members
+  - name:   members
+    label:  Members
     folder: members/_posts/
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug:   {{year}}-{{month}}-{{day}}-{{slug}}
     editor:
       preview: false
     fields:
-      - label: Layout
-        name: layout
-        widget: hidden
-        default: member
-      - label: Name
-        name: title
-        widget: string
-      - label: Avatar
-        name: avatar
-        widget: image
-      - label: Join Date
-        name: date
-        widget: date
-      - label: Partner
-        name: partner
-        widget: boolean
-      - label: Title
-        name: tagline
-        widget: string
-      - label: Indie Status
-        name: indie_status
-        widget: string
-      - label: Previously
-        name: previously
-        widget: string
-      - label: Twitter
-        name: twitter
-        widget: string
-      - label: RSS Feed
-        name: feed
-        widget: string
-      - label: Web Links
-        name: links
+      - { label: Layout,       name: layout,       widget: hidden,  default: member }
+      - { label: Name,         name: title,        widget: string                   }
+      - { label: Avatar,       name: avatar,       widget: image                    }
+      - { label: Join Date,    name: date,         widget: date                     }
+      - { label: Partner,      name: partner,      widget: boolean                  }
+      - { label: Title,        name: tagline,      widget: string                   }
+      - { label: Indie Status, name: indie_status, widget: string                   }
+      - { label: Previously,   name: previously,   widget: string                   }
+      - { label: Twitter,      name: twitter,      widget: string                   }
+      - { label: RSS Feed,     name: feed,         widget: string                   }
+      - label:  Web Links
+        name:   links
         widget: list
         field:
-          - label: Link
-            name: link
+          - label:  Link
+            name:   link
             widget: object
             fields:
-              - label: Title
-                name: title
-                widget: string
-              - label: URL
-                name: url
-                widget: string
-      - label: About
-        name: body
-        widget: markdown
-  - name: projects
-    label: Projects
+              - { label: Title, name: title, widget: string }
+              - { label: URL,   name: url,   widget: string }
+      - { label: About, name: body, widget: markdown }
+  - name:   projects
+    label:  Projects
     folder: projects/_posts/
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug:   {{year}}-{{month}}-{{day}}-{{slug}}
     editor:
       preview: false
     fields:
-      - label: Layout
-        name: layout
-        widget: hidden
-        default: project
-      - label: Name
-        name: title
-        widget: string
-      - label: Tagline
-        name: tagline
-        widget: string
-      - label: Published
-        name: published
-        widget: boolean
-      - label: Type
-        name: type
-        widget: select
-        options: [ "Report" ]
-        default: [ "Report" ]
-      - label: Sequence
-        name: sequence
-        widget: select
-        options: [ "covid19" ]
-      - label: Hero Image
-        name: hero_image
-        widget: image
-      - label: Accent Color
-        name: accent_color
-        widget: string
-      - label: Additional CSS
-        name: page_css
-        widget: text
-      - label: Summary
-        name: summary
-        widget: markdown
-      - label: Project Leads
-        name: lead_editors
-        widget: select
+      - { label: Layout,    name: layout,    widget: hidden,  default: project }
+      - { label: Name,      name: title,     widget: string                    }
+      - { label: Tagline,   name: tagline,   widget: string                    }
+      - { label: Published, name: published, widget: boolean                   }
+      - label:   Type
+        name:    type
+        widget:  select
+        options: [ Report ]
+        default: [ Report ]
+      - label:   Sequence
+        name:    sequence
+        widget:  select
+        options: [ covid19 ]
+      - { label: Hero Image,     name: hero_image,   widget: image    }
+      - { label: Accent Color,   name: accent_color, widget: string   }
+      - { label: Additional CSS, name: page_css,     widget: text     }
+      - { label: Summary,        name: summary,      widget: markdown }
+      - label:    Project Leads
+        name:     lead_editors
+        widget:   select
         multiple: true
         options:
-          - { label: "Venkatesh Rao",       value: "venkatesh-rao" }
-          - { label: "Paul Millerd",        value: "paul-millerd" }
-          - { label: "Pamela Hobart",       value: "pamela-hobart" }
-          - { label: "Tom Critchlow",       value: "tom-critchlow" }
-          - { label: "Amanda Reeves",       value: "amanda-reeves" }
-          - { label: "David McDougall",     value: "david-mcdougall" }
-          - { label: "Darren Kong",         value: "darren-kong" }
-          - { label: "Vaughn Tan",          value: "vaughn-tan" }
-          - { label: "Randy Lubin",         value: "randy-lubin" }
-          - { label: "Vlad Mehakovic",      value: "vlad-mehakovic" }
-          - { label: "Thomas Verhagen",     value: "thomas-verhagen" }
-          - { label: "Alex Dobrenko",       value: "alex-dobrenko" }
-          - { label: "Sachin Benny",        value: "sachin-benny" }
-          - { label: "Jordan Peacock",      value: "jordan-peacock" }
-          - { label: "Anne-Laure Le Cunff", value: "anne-laure-le-cunff" }
-          - { label: "Vinay Débrou",        value: "vinay-debrou" }
-          - { label: "Benjamin Taylor",     value: "benjamin-taylor" }
-          - { label: "Nita Baum",           value: "nita-baum" }
-          - { label: "Rodrigo Pinto",       value: "rodrigo-pinto" }
-          - { label: "Ben Mosior",          value: "ben-mosior" }
-          - { label: "Harry Pottash",       value: "harry-pottash" }
-          - { label: "Martha Balaile",      value: "martha-balaile" }
-          - { label: "Jordan Allen",        value: "jordan-allen" }
-      - label: Collaborators
-        name: collaborators
-        widget: select
+          - { label: Venkatesh Rao,       value: venkatesh-rao       }
+          - { label: Paul Millerd,        value: paul-millerd        }
+          - { label: Pamela Hobart,       value: pamela-hobart       }
+          - { label: Tom Critchlow,       value: tom-critchlow       }
+          - { label: Amanda Reeves,       value: amanda-reeves       }
+          - { label: David McDougall,     value: david-mcdougall     }
+          - { label: Darren Kong,         value: darren-kong         }
+          - { label: Vaughn Tan,          value: vaughn-tan          }
+          - { label: Randy Lubin,         value: randy-lubin         }
+          - { label: Vlad Mehakovic,      value: vlad-mehakovic      }
+          - { label: Thomas Verhagen,     value: thomas-verhagen     }
+          - { label: Alex Dobrenko,       value: alex-dobrenko       }
+          - { label: Sachin Benny,        value: sachin-benny        }
+          - { label: Jordan Peacock,      value: jordan-peacock      }
+          - { label: Anne-Laure Le Cunff, value: anne-laure-le-cunff }
+          - { label: Vinay Débrou,        value: vinay-debrou        }
+          - { label: Benjamin Taylor,     value: benjamin-taylor     }
+          - { label: Nita Baum,           value: nita-baum           }
+          - { label: Rodrigo Pinto,       value: rodrigo-pinto       }
+          - { label: Ben Mosior,          value: ben-mosior          }
+          - { label: Harry Pottash,       value: harry-pottash       }
+          - { label: Martha Balaile,      value: martha-balaile      }
+          - { label: Jordan Allen,        value: jordan-allen        }
+      - label:    Collaborators
+        name:     collaborators
+        widget:   select
         multiple: true
         options:
-          - { label: "Venkatesh Rao",       value: "venkatesh-rao" }
-          - { label: "Paul Millerd",        value: "paul-millerd" }
-          - { label: "Pamela Hobart",       value: "pamela-hobart" }
-          - { label: "Tom Critchlow",       value: "tom-critchlow" }
-          - { label: "Amanda Reeves",       value: "amanda-reeves" }
-          - { label: "David McDougall",     value: "david-mcdougall" }
-          - { label: "Darren Kong",         value: "darren-kong" }
-          - { label: "Vaughn Tan",          value: "vaughn-tan" }
-          - { label: "Randy Lubin",         value: "randy-lubin" }
-          - { label: "Vlad Mehakovic",      value: "vlad-mehakovic" }
-          - { label: "Thomas Verhagen",     value: "thomas-verhagen" }
-          - { label: "Alex Dobrenko",       value: "alex-dobrenko" }
-          - { label: "Sachin Benny",        value: "sachin-benny" }
-          - { label: "Jordan Peacock",      value: "jordan-peacock" }
-          - { label: "Anne-Laure Le Cunff", value: "anne-laure-le-cunff" }
-          - { label: "Vinay Débrou",        value: "vinay-debrou" }
-          - { label: "Benjamin Taylor",     value: "benjamin-taylor" }
-          - { label: "Nita Baum",           value: "nita-baum" }
-          - { label: "Rodrigo Pinto",       value: "rodrigo-pinto" }
-          - { label: "Ben Mosior",          value: "ben-mosior" }
-          - { label: "Harry Pottash",       value: "harry-pottash" }
-          - { label: "Martha Balaile",      value: "martha-balaile" }
-          - { label: "Jordan Allen",        value: "jordan-allen" }
-      - label: Content
-        name: body
-        widget: markdown
+          - { label: Venkatesh Rao,       value: venkatesh-rao       }
+          - { label: Paul Millerd,        value: paul-millerd        }
+          - { label: Pamela Hobart,       value: pamela-hobart       }
+          - { label: Tom Critchlow,       value: tom-critchlow       }
+          - { label: Amanda Reeves,       value: amanda-reeves       }
+          - { label: David McDougall,     value: david-mcdougall     }
+          - { label: Darren Kong,         value: darren-kong         }
+          - { label: Vaughn Tan,          value: vaughn-tan          }
+          - { label: Randy Lubin,         value: randy-lubin         }
+          - { label: Vlad Mehakovic,      value: vlad-mehakovic      }
+          - { label: Thomas Verhagen,     value: thomas-verhagen     }
+          - { label: Alex Dobrenko,       value: alex-dobrenko       }
+          - { label: Sachin Benny,        value: sachin-benny        }
+          - { label: Jordan Peacock,      value: jordan-peacock      }
+          - { label: Anne-Laure Le Cunff, value: anne-laure-le-cunff }
+          - { label: Vinay Débrou,        value: vinay-debrou        }
+          - { label: Benjamin Taylor,     value: benjamin-taylor     }
+          - { label: Nita Baum,           value: nita-baum           }
+          - { label: Rodrigo Pinto,       value: rodrigo-pinto       }
+          - { label: Ben Mosior,          value: ben-mosior          }
+          - { label: Harry Pottash,       value: harry-pottash       }
+          - { label: Martha Balaile,      value: martha-balaile      }
+          - { label: Jordan Allen,        value: jordan-allen        }
+      - {label: Content, name: body, widget: markdown }
   - label: Pages
-    name: pages
+    name:  pages
     editor:
       preview: false
     files: 
       - label: Homepage
-        name: index
-        file: index.md
+        name:  index
+        file:  index.md
         fields:
-          - { label: "Layout", name: "layout", widget: "hidden", default: "minimal" }
-          - { label: "Content", name: "body", widget: "markdown" }
+          - { label: Layout,  name: layout, widget: hidden,   default: minimal }
+          - { label: Content, name: body,   widget: markdown                   }
       - label: About Page
-        name: about
-        file: about.md
+        name:  about
+        file:  about.md
         fields:
-          - { label: "Layout", name: "layout", widget: "hidden", default: "page" }
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Content", name: "body", widget: "markdown" }
+          - { label: Layout,  name: layout, widget: hidden,   default: page }
+          - { label: Title,   name: title,  widget: string                  }
+          - { label: Content, name: body,   widget: markdown                }
 
 # Add sequences
 # Clean up formatting
