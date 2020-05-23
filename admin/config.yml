@@ -1,113 +1,168 @@
 backend:
-  name:   git-gateway
+  name: git-gateway
   branch: warren-structure
 publish_mode: editorial_workflow
 media_folder: assets/
-site_url:     https://yakcollective.org
+site_url: https://yakcollective.org
 collections:
-  - name:   members
-    label:  Members
+  - name: members
+    label: Members
     folder: _members/
     create: true
     editor:
       preview: false
     fields:
-      - { label: Layout,       name: layout,       widget: hidden,  default: member }
-      - { label: Name,         name: title,        widget: string                   }
-      - { label: Avatar,       name: avatar,       widget: image                    }
-      - label:      Join Date
-        name:       date
-        widget:     datetime
-        format:     YYYY-MM-DD
+      - label: Layout
+        name: layout
+        widget: hidden
+        default: member
+      - label: Name
+        name: title
+        widget: string
+      - label: Avatar
+        name: avatar
+        widget: image
+      - label: Join Date
+        name: date
+        widget: datetime
+        format: YYYY-MM-DD
         dateFormat: true
         timeFormat: false
         pickerUtc:  true
-      - { label: Partner,      name: partner,      widget: boolean                  }
-      - { label: Title,        name: tagline,      widget: string                   }
-      - { label: Indie Status, name: indie_status, widget: string                   }
-      - { label: Previously,   name: previously,   widget: string                   }
-      - { label: Twitter,      name: twitter,      widget: string                   }
-      - { label: RSS Feed,     name: feed,         widget: string                   }
-      - label:  Web Links
-        name:   links
+      - label: Partner
+        name: partner
+        widget: boolean
+      - label: Title
+        name: tagline
+        widget: string
+      - label: Indie Status
+        name: indie_status
+        widget: string
+      - label: Previously
+        name: previously
+        widget: string
+      - label: Twitter
+        name: twitter
+        widget: string
+      - label: RSS Feed
+        name: feed
+        widget: string
+      - label: Web Links
+        name: links
         widget: list
         field:
-          - label:  Link
-            name:   link
+          - label: Link
+            name: link
             widget: object
             fields:
-              - { label: Title, name: title, widget: string }
-              - { label: URL,   name: url,   widget: string }
-      - { label: About, name: body, widget: markdown }
-  - name:   projects
-    label:  Projects
+              - label: Title
+                name: title
+                widget: string
+              - label: URL
+                name: url
+                widget: string
+      - label: About
+        name: body
+        widget: markdown
+  - name: projects
+    label: Projects
     folder: _projects/
     create: true
     editor:
       preview: false
     fields:
-      - { label: Layout,         name: layout,    widget: hidden,  default: project }
-      - { label: Name,           name: title,     widget: string                    }
-      - { label: Tagline,        name: tagline,   widget: string                    }
-      - { label: Is Published?,  name: published, widget: boolean                   }
-      - label:      Published Date
-        name:       date
-        widget:     datetime
-        format:     YYYY-MM-DD
+      - label: Layout
+        name: layout
+        widget: hidden
+        default: project
+      - label: Name
+        name: title
+        widget: string
+      - label: Tagline
+        name: tagline
+        widget: string
+      - label: Is Published?
+        name: published
+        widget: boolean
+      - label: Published Date
+        name: date
+        widget: datetime
+        format: YYYY-MM-DD
         dateFormat: true
         timeFormat: false
-        pickerUtc:  true
-      - label:   Type
-        name:    type
-        widget:  select
+        pickerUtc: true
+      - label: Type
+        name: type
+        widget: select
         options: [ Report ]
         default: [ Report ]
-      - label:   Sequence
-        name:    sequence
-        widget:  select
+      - label: Sequence
+        name: sequence
+        widget: select
         options: [ covid19 ]
-      - { label: Hero Image,     name: hero_image,   widget: image    }
-      - { label: Accent Color,   name: accent_color, widget: string   }
-      - { label: Additional CSS, name: page_css,     widget: text     }
-      - { label: Summary,        name: summary,      widget: markdown }
-      - label:    Project Leads
-        name:     lead_editors
-        widget:   relation
+      - label: Hero Image
+        name: hero_image
+        widget: image
+      - label: Accent Color
+        name: accent_color
+        widget: string
+      - label: Additional CSS
+        name: page_css
+        widget: text
+      - label: Summary
+        name: summary
+        widget: markdown
+      - label: Project Leads
+        name: lead_editors
+        widget: relation
         collections: members
         searchFields: [ name.title ]
         valueField: "{{slug}}"
         displayFields: [ name.title ]
         multiple: true
-      - label:    Collaborators
-        name:     collaborators
-        widget:   relation
+      - label: Collaborators
+        name: collaborators
+        widget: relation
         collections: members
         searchFields: [ name.title ]
         valueField: "{{slug}}"
         displayFields: [ name.title ]
         multiple: true
-      - {label: Page Content, name: body, widget: markdown }
+      - label: Page Content
+        name: body
+        widget: markdown
   - label: Pages
-    name:  pages
+    name: pages
     editor:
       preview: false
     files: 
       - label: Homepage
-        name:  index
-        file:  index.md
+        name: index
+        file: index.md
         fields:
-          - { label: Layout,  name: layout, widget: hidden,   default: minimal }
-          - { label: Content, name: body,   widget: markdown                   }
+          - label: Layout
+            name: layout
+            widget: hidden
+            default: minimal
+          - label: Content
+            name: body
+            widget: markdown
       - label: About Page
-        name:  about
-        file:  about.md
+        name: about
+        file: about.md
         fields:
-          - { label: Layout,  name: layout, widget: hidden,   default: page }
-          - { label: Title,   name: title,  widget: string                  }
-          - { label: Content, name: body,   widget: markdown                }
+          - label: Layout
+            name: layout
+            widget: hidden
+            default: page
+          - label: Title
+            name: title
+            widget: string
+          - label: Content
+            name: body
+            widget: markdown
 
 # Add sequences
-# How to link things using the relationship widget?
 # Finish configuration here
 # Add login widget
 # Figure out if I can check things into GitHub during the build
