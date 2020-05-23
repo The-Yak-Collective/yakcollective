@@ -1,6 +1,6 @@
 ---
-layout: member
 title: Paul Millerd
+date: 2020-04-27
 partner: true
 previously: McKinsey, BCG, GE, Russell Reynolds 
 indie_status: 3+ years

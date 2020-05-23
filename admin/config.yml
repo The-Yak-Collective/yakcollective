@@ -7,16 +7,21 @@ site_url:     https://yakcollective.org
 collections:
   - name:   members
     label:  Members
-    folder: members/_posts/
+    folder: _members/
     create: true
-    slug:   {{year}}-{{month}}-{{day}}-{{slug}}
     editor:
       preview: false
     fields:
       - { label: Layout,       name: layout,       widget: hidden,  default: member }
       - { label: Name,         name: title,        widget: string                   }
       - { label: Avatar,       name: avatar,       widget: image                    }
-      - { label: Join Date,    name: date,         widget: date                     }
+      - label:      Join Date
+        name:       date
+        widget:     datetime
+        format:     YYYY-MM-DD
+        dateFormat: true
+        timeFormat: false
+        pickerUtc:  true
       - { label: Partner,      name: partner,      widget: boolean                  }
       - { label: Title,        name: tagline,      widget: string                   }
       - { label: Indie Status, name: indie_status, widget: string                   }
@@ -67,60 +72,20 @@ collections:
       - { label: Summary,        name: summary,      widget: markdown }
       - label:    Project Leads
         name:     lead_editors
-        widget:   select
+        widget:   relation
+        collections: members
+        searchFields: [ name.title ]
+        valueField: "{{slug}}"
+        displayFields: [ name.title ]
         multiple: true
-        options:
-          - { label: Venkatesh Rao,       value: venkatesh-rao       }
-          - { label: Paul Millerd,        value: paul-millerd        }
-          - { label: Pamela Hobart,       value: pamela-hobart       }
-          - { label: Tom Critchlow,       value: tom-critchlow       }
-          - { label: Amanda Reeves,       value: amanda-reeves       }
-          - { label: David McDougall,     value: david-mcdougall     }
-          - { label: Darren Kong,         value: darren-kong         }
-          - { label: Vaughn Tan,          value: vaughn-tan          }
-          - { label: Randy Lubin,         value: randy-lubin         }
-          - { label: Vlad Mehakovic,      value: vlad-mehakovic      }
-          - { label: Thomas Verhagen,     value: thomas-verhagen     }
-          - { label: Alex Dobrenko,       value: alex-dobrenko       }
-          - { label: Sachin Benny,        value: sachin-benny        }
-          - { label: Jordan Peacock,      value: jordan-peacock      }
-          - { label: Anne-Laure Le Cunff, value: anne-laure-le-cunff }
-          - { label: Vinay Débrou,        value: vinay-debrou        }
-          - { label: Benjamin Taylor,     value: benjamin-taylor     }
-          - { label: Nita Baum,           value: nita-baum           }
-          - { label: Rodrigo Pinto,       value: rodrigo-pinto       }
-          - { label: Ben Mosior,          value: ben-mosior          }
-          - { label: Harry Pottash,       value: harry-pottash       }
-          - { label: Martha Balaile,      value: martha-balaile      }
-          - { label: Jordan Allen,        value: jordan-allen        }
       - label:    Collaborators
         name:     collaborators
-        widget:   select
+        widget:   relation
+        collections: members
+        searchFields: [ name.title ]
+        valueField: "{{slug}}"
+        displayFields: [ name.title ]
         multiple: true
-        options:
-          - { label: Venkatesh Rao,       value: venkatesh-rao       }
-          - { label: Paul Millerd,        value: paul-millerd        }
-          - { label: Pamela Hobart,       value: pamela-hobart       }
-          - { label: Tom Critchlow,       value: tom-critchlow       }
-          - { label: Amanda Reeves,       value: amanda-reeves       }
-          - { label: David McDougall,     value: david-mcdougall     }
-          - { label: Darren Kong,         value: darren-kong         }
-          - { label: Vaughn Tan,          value: vaughn-tan          }
-          - { label: Randy Lubin,         value: randy-lubin         }
-          - { label: Vlad Mehakovic,      value: vlad-mehakovic      }
-          - { label: Thomas Verhagen,     value: thomas-verhagen     }
-          - { label: Alex Dobrenko,       value: alex-dobrenko       }
-          - { label: Sachin Benny,        value: sachin-benny        }
-          - { label: Jordan Peacock,      value: jordan-peacock      }
-          - { label: Anne-Laure Le Cunff, value: anne-laure-le-cunff }
-          - { label: Vinay Débrou,        value: vinay-debrou        }
-          - { label: Benjamin Taylor,     value: benjamin-taylor     }
-          - { label: Nita Baum,           value: nita-baum           }
-          - { label: Rodrigo Pinto,       value: rodrigo-pinto       }
-          - { label: Ben Mosior,          value: ben-mosior          }
-          - { label: Harry Pottash,       value: harry-pottash       }
-          - { label: Martha Balaile,      value: martha-balaile      }
-          - { label: Jordan Allen,        value: jordan-allen        }
       - {label: Page Content, name: body, widget: markdown }
   - label: Pages
     name:  pages

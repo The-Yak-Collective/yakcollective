@@ -1,6 +1,6 @@
 ---
-layout: member
 title: Tom Critchlow
+date: 2020-04-27
 partner: true
 previously: Google
 indie_status: 5+ years

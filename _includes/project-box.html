@@ -9,24 +9,16 @@
 					{% assign lead_editors = project.lead_editors %}
 					{% assign total_editors = lead_editors.size %}
 					{% if total_editors == 1 %}
-						{% capture editor_id %}/members/{{ lead_editors[0] }}{% endcapture %}
-						{% assign editor_data = site.categories["members"] | where: "id", editor_id %}
-						{% assign editor = editor_data[0] %}
+						{% assign editor = site.members | where: "slug", lead_editors[0] | first %}
 						{{ editor.title }}
 					{% elsif total_editors == 2 %}
-						{% capture first_editor_id %}/members/{{ lead_editors[0] }}{% endcapture %}
-						{% assign first_editor_data = site.categories["members"] | where: "id", first_editor_id %}
-						{% assign first_editor = first_editor_data[0] %}
-						{% capture second_editor_id %}/members/{{ lead_editors[1] }}{% endcapture %}
-						{% assign second_editor_data = site.categories["members"] | where: "id", second_editor_id %}
-						{% assign second_editor = second_editor_data[0] %}
+						{% assign first_editor = site.members | where: "slug", lead_editors[0] | first %}
+						{% assign second_editor = site.members | where: "slug", lead_editors[1] | first %}
 						{{ first_editor.title }} &amp; {{ second_editor.title }}
 					{% else %}
 						{% assign last_editor = lead_editors.last %}
 						{% for lead_editor in lead_editors %}
-							{% capture lead_editor_id %}/members/{{ lead_editor }}{% endcapture %}
-							{% assign editor_data = site.categories["members"] | where: "id", lead_editor_id %}
-							{% assign editor = editor_data[0] %}
+							{% assign editor = site.members | where: "slug", lead_editors | first %}
 							{{ editor.title }}{% if lead_editor != last_editor %}, {% endif %}
 						{% endfor %}
 					{% endif %}

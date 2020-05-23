@@ -1,6 +1,6 @@
 ---
-layout: member
 title: Vlad Mehakovic
+date: 2020-04-28
 indie_status: Aug 2019
 twitter: vladiim
 avatar: /assets/vlad-mehakovic.jpg

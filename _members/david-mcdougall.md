@@ -1,6 +1,6 @@
 ---
-layout: member
 title: David McDougall
+date: 2020-04-28
 indie_status: 3+ years
 previously: Product Management in SMEs across US & UK
 twitter: dmcdougall

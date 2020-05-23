@@ -1,6 +1,6 @@
 ---
-layout: member
 title: Alex Dobrenko
+date: 2020-04-28
 indie_status: 5+ years
 tagline: Improviser / Writer / Filmmaker
 twitter: Dobrenkz

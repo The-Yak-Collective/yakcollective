@@ -23,12 +23,44 @@ feed_update_frequency: 1
 # Collections
 #
 collections:
+  members:
+    output: true
+    order:
+      - venkatesh-rao.md
+      - paul-millerd.md
+      - pamela-hobart.md
+      - tom-critchlow.md
+      - amanda-reeves.md
+      - david-mcdougall.md
+      - darren-kong.md
+      - vaughn-tan.md
+      - randy-lubin.md
+      - vlad-mehakovic.md
+      - thomas-verhagen.md
+      - alex-dobrenko.md
+      - sachin-benny.md
+      - jordan-peacock.md
+      - anne-laure-le-cunff.md
+      - vinay-debrou.md
+      - benjamin-taylor.md
+      - nita-baum.md
+      - rodrigo-pinto.md
+      - ben-mosior.md
+      - harry-pottash.md
+      - martha-balaile.md
+      - jordan-allen.md
   projects:
     output: true
 
 # Per-page defaults
 #
 defaults:
+  - scope:
+      path: ""
+      type: members
+    values:
+      layout: member
+      permalink: /:collection/:name
   - scope:
       path: ""
       type: projects

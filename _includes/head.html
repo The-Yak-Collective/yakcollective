@@ -53,9 +53,7 @@
 		{% if page.layout == "member" %}
 			{% assign og_image = page.avatar %}
 		{% elsif page.layout == "post" and page.author %}
-			{% capture author_path %}/members/{{ page.author }}{% endcapture %}
-			{% assign author_data = site.categories["members"] | where: "id", author_path %}
-			{% assign member = author_data[0] %}
+			{% assign member = site.members | where: "slug", page.author | first %}
 			{% if member.avatar %}
 				{% assign og_image = member.avatar %}
 			{% else %}
@@ -74,9 +72,7 @@
 			<meta name="twitter:card" content="summary_large_image">
 			<meta name="twitter:site" content="@yak_collective">
 			{% if page.author %}
-				{% capture author_path %}/members/{{ page.author }}{% endcapture %}
-				{% assign author_data = site.categories["members"] | where: "id", author_path %}
-				{% assign member = author_data[0] %}
+				{% assign member = site.members | where: "slug", page.author | first %}
 				{% if member.twitter %}
 					{% assign twitter_creator = member.twitter %}
 				{% else %}
@@ -99,7 +95,7 @@
 
 		<link rel="alternate" type="application/json" title="The Yak Collective's Latest Writings" href="/writings/feed.json">
 		<link rel="alternate" type="application/rss+xml" title="The Yak Collective's Latest Writings" href="/writings/feed.xml">
-		{% for member in site.categories["members"] %}
+		{% for member in site.members %}
 			{% if member.feed %}
 				<link rel="alternate" type="application/rss+xml" title="{{ member.title }}" href="{{ member.feed }}">
 			{% endif %}

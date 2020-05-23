@@ -1,6 +1,6 @@
 ---
-layout: member
 title: Venkatesh Rao
+date: 2020-04-27
 partner: true
 indie_status: 9+ years
 previously: Xerox

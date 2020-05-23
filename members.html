@@ -9,10 +9,9 @@ title: Yak Collective Members
 		<p>Yak Collective partners have played key roles in projects, helped steer the collective and tweeted excessively.</p>
 	</header>
 
-	{% assign member_partners = site.categories["members"] | where: "partner", true | reverse %}
+	{% assign member_partners = site.members | where: "partner", true %}
 	{% for member in member_partners %}
-		{% assign member_path = member.id | split: "/" %}
-		{% assign member_uid = member_path.last %}
+		{% assign member_uid = member.slug %}
 		{% include member-card.html %}
 	{% endfor %}
 </section>
@@ -23,10 +22,9 @@ title: Yak Collective Members
 		<p>Yak Collective collaborators have contributed to one or more projects.</p>
 	</header>
 
-	{% assign member_collaborators = site.categories["members"] | where_exp: "member", "member.partner != true" | reverse %}
+	{% assign member_collaborators = site.members | where_exp: "member", "member.partner != true" %}
 	{% for member in member_collaborators %}
-		{% assign member_path = member.id | split: "/" %}
-		{% assign member_uid = member_path.last %}
+		{% assign member_uid = member.slug %}
 		{% include member-card.html %}
 	{% endfor %}
 </section>

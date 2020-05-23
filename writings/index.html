@@ -17,9 +17,7 @@ title: The Yak Collective's Latest Writings
 		<ul>
 	{% endif %}
 
-	{% capture author_id %}/members/{{ post.author }}{% endcapture %}
-	{% assign author_data = site.categories["members"] | where: "id", author_id %}
-	{% assign author = author_data[0] %}
+    {% assign author = site.members | where: "slug", post.author | first %}
 
 	<li>
 		<a href="{% if post.original_link %}{{ post.original_link }}{% else %}{{ post.url }}{% endif %}">{{ post.title }}</a>

@@ -1,6 +1,6 @@
 ---
-layout: member
 title: Sachin Benny
+date: 2020-04-28
 indie_status: 1+ years
 twitter: sachinb91
 previously: Led growth for an online DTC furniture brand

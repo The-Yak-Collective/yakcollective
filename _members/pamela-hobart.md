@@ -1,6 +1,6 @@
 ---
-layout: member
 title: Pamela Hobart
+date: 2020-04-27
 partner: true
 indie_status: 3+ years
 twitter: amelapay

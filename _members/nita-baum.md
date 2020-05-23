@@ -1,6 +1,6 @@
 ---
-layout: member
 title: Nita Baum
+date: 2020-04-28
 indie_status: 13 years
 twitter: bfree_live
 avatar: /assets/nita-baum.jpg

@@ -1,6 +1,6 @@
 ---
-layout: member
 title: Vinay Débrou
+date: 2020-04-28
 indie_status: 2+ years
 twitter: vinaydebrou
 previously: Data Analyst at a Fintech SaaS company
