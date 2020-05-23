@@ -36,16 +36,22 @@ collections:
       - { label: About, name: body, widget: markdown }
   - name:   projects
     label:  Projects
-    folder: projects/_posts/
+    folder: _projects/
     create: true
-    slug:   {{year}}-{{month}}-{{day}}-{{slug}}
     editor:
       preview: false
     fields:
-      - { label: Layout,    name: layout,    widget: hidden,  default: project }
-      - { label: Name,      name: title,     widget: string                    }
-      - { label: Tagline,   name: tagline,   widget: string                    }
-      - { label: Published, name: published, widget: boolean                   }
+      - { label: Layout,         name: layout,    widget: hidden,  default: project }
+      - { label: Name,           name: title,     widget: string                    }
+      - { label: Tagline,        name: tagline,   widget: string                    }
+      - { label: Is Published?,  name: published, widget: boolean                   }
+      - label:      Published Date
+        name:       date
+        widget:     datetime
+        format:     YYYY-MM-DD
+        dateFormat: true
+        timeFormat: false
+        pickerUtc:  true
       - label:   Type
         name:    type
         widget:  select
@@ -115,7 +121,7 @@ collections:
           - { label: Harry Pottash,       value: harry-pottash       }
           - { label: Martha Balaile,      value: martha-balaile      }
           - { label: Jordan Allen,        value: jordan-allen        }
-      - {label: Content, name: body, widget: markdown }
+      - {label: Page Content, name: body, widget: markdown }
   - label: Pages
     name:  pages
     editor:
@@ -136,7 +142,6 @@ collections:
           - { label: Content, name: body,   widget: markdown                }
 
 # Add sequences
-# Clean up formatting
 # How to link things using the relationship widget?
 # Finish configuration here
 # Add login widget

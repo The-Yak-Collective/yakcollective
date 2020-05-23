@@ -1,12 +1,9 @@
-{% assign project_path = project.id | split: "/" %}
-{% assign project_id = project_path.last %}
-
-{% if project.published == true %}<a href="/projects/{{ project_id }}/" class="projectbox">{% else %}<div class="projectbox">{% endif %}
+{% if project.published == true %}<a href="/projects/{{ project.slug }}/" class="projectbox">{% else %}<div class="projectbox">{% endif %}
 	<div class="ba b--black-10 br2 mv4 relative">
 		<div class="w-50">
 			<div class="f6 lh-title fw9 mv0 pt1 bt bw1 ph2 sans-serif ttu">{{ project.type }}</div>
-				<h2 class="{{ project_id }}-color ph2 fw8 f3 lh-solid pv1 mb1 mt4">{{ project.title }}</h2>
-				<p class="{{ project_id }}-color ph2 f5 lh-solid pv1 mt0 mb4 fw6 subhead">{{ project.tagline }}</p>
+				<h2 class="{{ project.slug }}-color ph2 fw8 f3 lh-solid pv1 mb1 mt4">{{ project.title }}</h2>
+				<p class="{{ project.slug }}-color ph2 f5 lh-solid pv1 mt0 mb4 fw6 subhead">{{ project.tagline }}</p>
 				<p class="f6 ph2 mv2">
 					<span class="ttu">Lead editors:</span>
 					{% assign lead_editors = project.lead_editors %}
@@ -44,6 +41,6 @@
 					{% endif %}
 				</time>
 			</div>
-		<div class="w-50 h-100 {{ project_id }}-hero absolute top-0 right-0"></div>
+		<div class="w-50 h-100 {{ project.slug }}-hero absolute top-0 right-0"></div>
 	</div>
 {% if project.published == true %}</a>{% else %}</div>{% endif %}

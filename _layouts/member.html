@@ -15,7 +15,7 @@
 	<!-- Adapted from: https://stackoverflow.com/a/42727933 -->
 	{% assign projects_lead = "" | split: "" %}
 	{% assign projects_collaborated = "" | split: "" %}
-	{% for project in site.categories["projects"] %}
+	{% for project in site.projects %}
 		{% if project.lead_editors contains member_uid and project.published %}
 			{% assign projects_lead = projects_lead | push: project %}
 		{% elsif project.collaborators contains member_uid and project.published %}

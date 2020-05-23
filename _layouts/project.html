@@ -1,10 +1,7 @@
 {% include head.html %}
 
-{% assign page_path = page.id | split: "/" %}
-{% assign project_id = page_path.last %}
-
 <article class="yak-project">
-	<header class="yak-project-header {{ project_id }}-hero">
+	<header class="yak-project-header {{ page.slug }}-hero">
 		<div class="h-25 w-100 center pa3 mw9 center">
 			<div class="cf ph3 ph5-ns pv5-l pv3">
 				<aside class="fn fl-ns w-25-ns pr4-ns pl4-ns">

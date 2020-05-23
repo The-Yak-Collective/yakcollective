@@ -7,8 +7,8 @@ title: Yak Collective Projects
 	<h1>Projects</h1>
 	<p>Yak Collective projects are collaborations and explorations from the community.</p>
 </header>
-{% assign published_projects = site.categories["projects"] | where: "published", "true" %}
-{% assign upcoming_projects = site.categories["projects"] | where: "published", "false" %}
+{% assign published_projects = site.projects | where: "published", "true" %}
+{% assign upcoming_projects = site.projects | where: "published", "false" %}
 <section>
 	<header><h2>Latest Projects</h2></header>
 	{% for project in published_projects limit: 3 %}

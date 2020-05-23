@@ -20,6 +20,22 @@ feed_items: 255
 feed_update_period: daily
 feed_update_frequency: 1
 
+# Collections
+#
+collections:
+  projects:
+    output: true
+
+# Per-page defaults
+#
+defaults:
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: project
+      permalink: /:collection/:name
+
 # Includes and excludes
 #
 include: 

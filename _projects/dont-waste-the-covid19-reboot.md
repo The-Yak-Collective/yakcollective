@@ -1,7 +1,7 @@
 ---
-layout: project
 published: true
 title: Don't Waste the COVID-19 Reboot
+date: 2020-04-30
 tagline: Making the next normal better than the last one
 type: Report
 sequence: covid19

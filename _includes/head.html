@@ -19,28 +19,24 @@
 		<link rel="stylesheet" href="/css/all.css">
 		{% if page.url == "/projects/" or page.layout == "member" %}
 			<style type="text/css">
-				{% for project in site.categories["projects"] %}
-					{% assign project_path = project.id | split: "/" %}
-					{% assign project_id = project_path.last %}
+				{% for project in site.projects %}
 					{% if project.accent_color %}
-						.{{ project_id }}-color { color: {{ project.accent_color }}; }
+						.{{ project.slug }}-color { color: {{ project.accent_color }}; }
 					{% endif %}
 					{% if project.hero_image %}
-						.{{ project_id }}-hero { background-image: url("{{ project.hero_image }}"); }
+						.{{ project.slug }}-hero { background-image: url("{{ project.hero_image }}"); }
 					{% endif %}
 				{% endfor%}
 			</style>
 		{% endif %}
 		{% if page.layout == "project" %}
-			{% assign project_path = page.id | split: "/" %}
-			{% assign project_id = project_path.last %}
 			{% if page.accent_color or page.page_css or page.hero_image %}
 				<style type="text/css">
 					{% if page.accent_color %}
-						.{{ project_id }}-color { color: {{ page.accent_color }}; }
+						.{{ page.slug }}-color { color: {{ page.accent_color }}; }
 					{% endif %}
 					{% if page.hero_image %}
-						.{{ project_id }}-hero { background-image: url("{{ page.hero_image }}"); }
+						.{{ page.slug }}-hero { background-image: url("{{ page.hero_image }}"); }
 					{% endif %}
 					{% if page.page_css %}
 						{{ page.page_css }}
