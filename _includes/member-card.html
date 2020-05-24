@@ -1,11 +1,11 @@
 <div class="w-100 pa2" id="{{ member.name }}">
 	<div class="flex items-center lh-copy pa3 ba b--black-10">
-		{% if page.url == "/members/" %}<a href="/members/{{ member.slug }}">{% endif %}<img class="w2 h2 w3-ns h3-ns br-100" src="/assets/{{ member.name }}.jpg" />{% if page.url == "/members/" %}</a>{% endif %}
+		{% if page.url == "/members/" %}<a href="/members/{{ member.slug }}">{% endif %}<img class="w2 h2 w3-ns h3-ns br-100" src="{{ member.avatar }}" />{% if page.url == "/members/" %}</a>{% endif %}
 		<div class="pl3 flex-auto">
 			<span class="f6 db black-70">{% if page.url == "/members/" %}<a class="link dim black-70" href="/members/{{ member.slug }}">{% endif %}{{ member.title }}{% if page.url == "/members/" %}</a>{% endif %}</span>
-			{% if member.tagline %}<span class="f6 db black-70">{{ member.tagline }}</span>{% endif %}
+			{% if member.tagline and member.tagline.length > 0 %}<span class="f6 db black-70">{{ member.tagline }}</span>{% endif %}
 			<span class="f6 db black-70">Indie status: {{ member.indie_status }}</span>
-			{% if member.previously %}<span class="f6 db black-70">Previously: {{ member.previously }}</span>{% endif %}
+			{% if member.previously and member.previously.length > 0 %}<span class="f6 db black-70">Previously: {{ member.previously }}</span>{% endif %}
 			{% if member.links %}
 				<span class="f6 db black-70">
 					{% for link in member.links %}
@@ -15,7 +15,7 @@
 				</span>
 			{% endif %}
 		</div>
-		{% if member.twitter %}
+		{% if member.twitter and member.twitter.length > 0 %}
 			<div>
 				<a href="https://twitter.com/{{ member.twitter }}" class="f6 link blue hover-dark-gray">@{{ member.twitter }}</a>
 			</div>
