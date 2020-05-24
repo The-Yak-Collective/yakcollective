@@ -1,5 +1,6 @@
 ---
 layout: minimal
+title: The Yak Collective
 ---
 
 # The Yak Collective

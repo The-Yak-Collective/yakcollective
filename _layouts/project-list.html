@@ -1,11 +1,9 @@
 ---
 layout: minimal
-title: Yak Collective Projects
 ---
 
 <header>
-	<h1>Projects</h1>
-	<p>Yak Collective projects are collaborations and explorations from the community.</p>
+	{{ content }}
 </header>
 {% assign published_projects = site.projects | where: "published", "true" %}
 {% assign upcoming_projects = site.projects | where: "published", "false" %}
@@ -23,7 +21,7 @@ title: Yak Collective Projects
 		{% endfor %}
 	</section>
 {% endif %}
-{% if published_projects.size > 5 %}
+{% if published_projects.size > 3 %}
 	<section>
 		<header><h2>Past Projects</h2></header>
 		{% for project in published_projects offset: 3 %}

@@ -56,9 +56,6 @@ private
       'title'      => item.title,
       'created_at' => item.published,
       'author'     => item.feed.title,
-      'permalink'  => "/writings/#{item.published.strftime('%Y')}/#{item.published.strftime('%m')}/#{item.published.strftime('%d')}/#{title_to_key(item.title)}/",
-      'categories' => 'writings',
-      'layout'     => 'post'
     }
 
     frontmatter['original_link'] = item.url    unless item.url.empty?

@@ -136,8 +136,8 @@ collections:
     editor:
       preview: false
     files: 
-      - label: Homepage
-        name: index
+      - label: Home
+        name: home-page
         file: index.md
         fields:
           - label: Layout
@@ -147,8 +147,43 @@ collections:
           - label: Content
             name: body
             widget: markdown
-      - label: About Page
-        name: about
+      - label: Projects
+        name: projects-page
+        file: projects.md
+        fields:
+          - label: Layout
+            name: layout
+            widget: hidden
+            default: project-list
+          - label: Title
+            name: title
+            widget: string
+          - label: Content
+            name: body
+            widget: markdown
+      - label: Members
+        name: members-page
+        file: members.md
+        fields:
+          - label: Layout
+            name: layout
+            widget: hidden
+            default: member-list
+          - label: Title
+            name: title
+            widget: string
+          - label: Partners Blurb
+            name: partners_blurb
+            widget: markdown
+          - label: Collaborators Blurb
+            name: collaborators_blurb
+            widget: markdown
+          - label: Content
+            name: body
+            widget: hidden
+            default: ""
+      - label: About
+        name: about-page
         file: about.md
         fields:
           - label: Layout

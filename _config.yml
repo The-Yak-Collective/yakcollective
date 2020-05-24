@@ -4,7 +4,7 @@ version: 2.0.0
 
 # General site settings
 #
-permalink: /:categories/:title/
+permalink: pretty
 
 # RSS/JSON feed settings. See:
 #
@@ -61,6 +61,16 @@ defaults:
     values:
       layout: member
       permalink: /:collection/:name
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: page
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
   - scope:
       path: ""
       type: projects

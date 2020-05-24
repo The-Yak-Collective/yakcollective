@@ -1,15 +1,12 @@
-{% include head.html %}
+---
+layout: minimal
+---
+<header>
+	<h1 class="yak-post">{% if page.original_link %}<a href="{{ page.original_link }}">{% endif %}{{ page.title }}{% if page.original_link %}</a>{% endif %}</h1>
 
-<article class="container mw7 cf pv5 f4-l center w-90 lh-copy">
-	<header>
-		<h1 class="yak-post">{% if page.original_link %}<a href="{{ page.original_link }}">{% endif %}{{ page.title }}{% if page.original_link %}</a>{% endif %}</h1>
+	{% assign member_uid = page.author %}
+	{% assign member = site.members | where: "slug", member_uid | first %}
+	{% include member-card.html %}
+</header>
 
-		{% assign member_uid = page.author %}
-		{% assign member = site.members | where: "slug", member_uid | first %}
-		{% include member-card.html %}
-	</header>
-
-	<div class="yak-post">{{ content }}</div>
-</article>
-
-{% include footer.html %}
+<div class="yak-post">{{ content }}</div>
