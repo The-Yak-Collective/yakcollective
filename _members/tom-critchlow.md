@@ -7,7 +7,6 @@ previously: Google
 indie_status: 5+ years
 twitter: tomcritchlow
 avatar: /assets/tom-critchlow.jpg
-feed: https://tomcritchlow.com/feed
 links:
   - title: tomcritchlow.com
     url: https://tomcritchlow.com/

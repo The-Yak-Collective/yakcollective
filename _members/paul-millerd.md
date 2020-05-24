@@ -7,7 +7,6 @@ previously: McKinsey, BCG, GE, Russell Reynolds
 indie_status: 3+ years
 twitter: p_millerd
 avatar: /assets/paul-millerd.jpg
-feed: https://think-boundless.com/feed/
 links:
   - title: Boundless
     url: https://think-boundless.com/

@@ -17,18 +17,21 @@ collections:
         name: layout
         widget: hidden
         default: member
-      - label: UID
-        name: name
-        widget: string
-        required: true
       - label: Name
         name: title
         widget: string
         required: true
+      - label: UID
+        name: name
+        widget: string
+        required: true
+        hint: Internal identifier. Must be composed only of lower-case ASCII letters and dashes. Normally you will use your full (romanized) name here, with spaces replaced by dashes.
+        pattern: [ "[a-z-]+", "Must be composed only of lower-case ASCII letters and dashes" ]
       - label: Avatar
         name: avatar
         widget: image
         required: true
+        hint: Must be a square image in JPEG format. To prevent blurry-ness, you should use an image at least 64 pixels on a side.
       - label: Join Date
         name: date
         widget: datetime
@@ -45,22 +48,23 @@ collections:
         name: tagline
         widget: string
         required: false
+        hint: An additional "tagline" that will appear below your name in some places. Typically used for titles or professional descriptions.
       - label: Indie Status
         name: indie_status
         widget: string
         required: true
+        hint: How long have you been an indie? Most people use a format like "3+ years".
       - label: Previously
         name: previously
         widget: string
         required: false
+        hint: If desired, you can list of organizations you previously worked for/with.
       - label: Twitter
         name: twitter
         widget: string
         required: false
-      - label: RSS Feed
-        name: feed
-        widget: string
-        required: false
+        hint: Your Twitter handle, without the "@" symbol.
+        pattern: [ "[A-Za-z0-9-_]+", "Must only contain ASCII letters, numbers, dashes, and underscores" ]
       - label: Web Links
         name: links
         widget: list
@@ -69,9 +73,11 @@ collections:
           - label: Title
             name: title
             widget: string
+            hint: What should your link be displayed as? Typically, this is the name of the website you are linking to.
           - label: URL
             name: url
             widget: string
+            pattern: [ "https?:\/\/[a-z0-9-_]+\.[a-z]{2,}.*", "Should be a website URL" ]
       - label: About
         name: body
         widget: markdown
@@ -87,22 +93,26 @@ collections:
         name: layout
         widget: hidden
         default: project
-      - label: UID
-        name: name
-        widget: string
-        required: true
       - label: Name
         name: title
         widget: string
         required: true
+      - label: UID
+        name: name
+        widget: string
+        required: true
+        hint: Internal identifier. Must be composed only of lower-case ASCII letters, numbers, and dashes. Normally you will use the project title as a base, with spaces replaced by dashes.
+        pattern: [ "[a-z0-9-]+", "Must be composed only of lower-case ASCII letters, numbers, and dashes" ]
       - label: Tagline
         name: tagline
         widget: string
         required: true
+        hint: A "tagline" or "subtitle" the briefly describes your project.
       - label: Is Published?
         name: published
         widget: boolean
         required: false
+        hint: Change to TRUE when the project page is ready to go live on the website.
       - label: Published Date
         name: date
         widget: datetime
@@ -110,7 +120,8 @@ collections:
         dateFormat: true
         timeFormat: false
         pickerUtc: true
-        required: false
+        required: true
+        hint: The date your project will go live.
       - label: Type
         name: type
         widget: select
@@ -129,18 +140,23 @@ collections:
         name: hero_image
         widget: image
         required: true
+        hint: An image file that will be used as the "banner" for your report. Should be either an SVG file, or a JPEG or PNG image at least 1280x800 pixels in size. Text will be displayed over this, so don't use something with a lot of detail (very dark images will also need to use additional CSS to improve page readability).
       - label: Accent Color
         name: accent_color
         widget: string
         required: true
+        hint: The hex-color to use as the accent on your report for the projects list page. Should be chosen to go well with your hero image.
+        pattern: [ "#[0-9abcdef]{6}", "Should be a hex color string, beginning with a '#'." ]
       - label: Additional CSS
         name: page_css
         widget: text
         required: false
+        hint: Additional CSS you want to include to style your page. Primarily (but not excludively) used to help style any HTML you include in the main body of the page.
       - label: Summary
         name: summary
         widget: markdown
         required: true
+        hint: A summary of your project. This will be displayed over your hero image.
       - label: Project Leads
         name: lead_editors
         widget: relation
@@ -178,6 +194,8 @@ collections:
         name: name
         widget: string
         required: true
+        hint: Internal identifier. Must be composed only of lower-case ASCII letters, numbers, and dashes. Normally you will use the sequence name as a base, with spaces replaced by dashes.
+        pattern: [ "[a-z0-9-]+", "Must be composed only of lower-case ASCII letters, numbers, and dashes" ]
       - label: Name
         name: title
         widget: string
@@ -194,10 +212,11 @@ collections:
         name: count_phrase
         widget: string
         required: false
+        hint: The phrase to use after the day count from the sequence start. For example, the COVID-19 sequence uses "Pandemic Mean Time".
       - label: Sequence Description
         name: body
-        widget: markdown
-        required: false
+        widget: hidden
+        default: ""
   - label: Pages
     name: pages
     editor:
@@ -247,14 +266,16 @@ collections:
             name: partners_blurb
             widget: markdown
             required: true
+            hint: The text displayed above the partner list.
           - label: Collaborators Blurb
             name: collaborators_blurb
             widget: markdown
             required: true
+            hint: The text displayed above the collaborators list.
           - label: Content
             name: body
             widget: hidden
-            required: false
+            default: ""
       - label: About
         name: about-page
         file: about.md
