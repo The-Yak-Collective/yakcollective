@@ -87,7 +87,7 @@ exclude:
   - CHANGELOG.md
   - TODO.md
   - yak-build.sh
-  - yak-make-ini.rb
+  - yak-make-ini.sh
   - yak-make-posts.rb
   - yak-planet.db
   - yak-planet.ini
