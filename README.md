@@ -68,13 +68,13 @@ Here's a quick rundown of the moving parts here.
 
 ### Member Feeds (a.k.a. "Writings")
 
-Posts in `writings/_posts` are auto-pushed from member RSS feeds using [IFTTT]() and [Glitch]().
+Posts in `writings/_posts` are auto-pushed from member RSS feeds using [IFTTT](https://ifttt.com/) and [Glitch](https://glitch.com/).
 
 Current feeds pulled are documented in [`FEEDS.md`](https://github.com/The-Yak-Collective/yakcollective/blob/warren-structure/FEEDS.md). To add or update a member feed, follow the directions in that file.
 
 The Glitch bits of the feed infrastructure are in the [`yakcollective-ifttt-connector`](https://github.com/The-Yak-Collective/yakcollective-ifttt-connector) repo.
 
-Feeds were previously pulled using [Pluto](). While the IFTTT-Glitch-GitHub-Netlify pipeline (probably _way_ too much magic going on there!) is in testing, Pluto can still be used to update the current archives.
+Feeds were previously pulled using [Pluto](https://feedreader.github.io/). While the IFTTT-Glitch-GitHub-Netlify pipeline (probably _way_ too much magic going on there!) is in testing, Pluto can still be used to update the current archives.
 
 ```sh
 bundle exec pluto update yak-planet.ini
