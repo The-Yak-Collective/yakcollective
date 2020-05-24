@@ -31,7 +31,7 @@ collections:
         name: avatar
         widget: image
         required: true
-        hint: Must be a square image in JPEG format. To prevent blurry-ness, you should use an image at least 64 pixels on a side.
+        hint: Must be a square image in JPEG format. Please name using your UID. To prevent blurry-ness, you should use an image at least 64 pixels on a side.
       - label: Join Date
         name: date
         widget: datetime
