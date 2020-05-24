@@ -49,7 +49,7 @@
 	- Create links between members and all of their posts/projects.
 	- Use member and home pages as hubs/entrances.
 
-- [ ] Figure out how to make site friendly for non-technical updates (this almost certainly means migrating to another platform)
+- [X] Figure out how to make site friendly for non-technical updates (this almost certainly means migrating to another platform)
 
 	- ~~Migrate to Hugo and use a data file directory stored in Dropbox or Google Drive? Probably simplest, but least flexible long-run.~~
 	- Spin up NetlifyCMS.
@@ -58,7 +58,7 @@
 		- I think we'll want to use an "editorial approval" workflow, just to make sure that bad changes don't get pushed to the live site.
 	- ~~Migrate to Gatsby and push user-editable files into Google Drive or Dropbox? Not clear how to do this within a dev/prod setup. (But maybe we don't care?)~~
 
-- [ ] Use Glitch to create posts from member feeds
+- [X] Use Glitch to create posts from member feeds
 
 	- See: https://webrender.net/2017/11/23/automate-github-pages-ifttt-glitch.html
 	- No need for daily rebuild anymore...
@@ -66,8 +66,7 @@
 
 - [ ] Infrastructure housekeeping
 
-	- [ ] Add facility for tagging member skills
-	- [ ] Update `README.md`
+	- [X] Update `README.md`
 	- [ ] Move this list into Roam to encourage collaboration/ideas/etc.
 
 		- This should also include a "how to" for editing files.
@@ -84,6 +83,7 @@
 
 - [ ] Additional member info ideas:
 
+	- [ ] Add facility for tagging member skills
 	- [ ] Add facility for [project-related badges](https://discordapp.com/channels/692111190851059762/708772535172333618/711625982473404436) on member cards and profile pages
 		- Need to figure out what this will look like.
 	- [ ] Personal archetype?
