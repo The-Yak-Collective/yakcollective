@@ -77,7 +77,7 @@ collections:
           - label: URL
             name: url
             widget: string
-            pattern: [ "https?:\/\/[a-z0-9-_]+\.[a-z]{2,}.*", "Should be a website URL" ]
+            pattern: [ "https?:\\/\\/[a-z0-9-_]+\\.[a-z]{2,}.*", "Should be a website URL" ]
       - label: About
         name: body
         widget: markdown
