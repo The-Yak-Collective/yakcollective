@@ -53,9 +53,9 @@ private
     fn = "#{posts_root}/#{item.published.strftime('%Y-%m-%d')}-#{title_to_key(item.title)}.html"
 
     frontmatter = {
-      'title'      => item.title,
-      'created_at' => item.published,
-      'author'     => item.feed.title,
+      'title'  => item.title,
+      'date'   => item.published,
+      'author' => item.feed.title,
     }
 
     frontmatter['original_link'] = item.url    unless item.url.empty?

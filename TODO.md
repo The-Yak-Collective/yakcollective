@@ -58,6 +58,12 @@
 		- I think we'll want to use an "editorial approval" workflow, just to make sure that bad changes don't get pushed to the live site.
 	- ~~Migrate to Gatsby and push user-editable files into Google Drive or Dropbox? Not clear how to do this within a dev/prod setup. (But maybe we don't care?)~~
 
+- [ ] Use Glitch to create posts from member feeds
+
+	- See: https://webrender.net/2017/11/23/automate-github-pages-ifttt-glitch.html
+	- No need for daily rebuild anymore...
+	- Run Planet Pluto one last time to "seed" `writings/_posts/*`
+
 - [ ] Infrastructure housekeeping
 
 	- [ ] Add facility for tagging member skills
@@ -67,24 +73,20 @@
 		- This should also include a "how to" for editing files.
 
 	- [ ] Formally add a GitHub issue tracker, link to Roam. See [this](https://discordapp.com/channels/@me/707243573061353472/709852606096212048) and [this](https://discordapp.com/channels/@me/707243573061353472/709881527642620046).
+	- [ ] Figure out a better way to share logins for Yak Collective infrastructure.
 	- [ ] Schedule office hours, walk interested folks through the site changes.
 
 - [ ] Migrate [onboarding document](https://docs.google.com/document/d/1I63ZKu8o0DpBG0tWhssIsCinlXeBKO-xGyvmIMXXAWE/) into website (per [Venkatesh Rao](https://discordapp.com/channels/692111190851059762/692826420191297556/709550901555363861)).
 
-- [ ] Use Glitch to create posts from member feeds
-
-	- See: https://webrender.net/2017/11/23/automate-github-pages-ifttt-glitch.html
-	- No need for daily rebuild anymore...
-	- Run Planet Pluto one last time to "seed" `writings/_posts/*`
-
 - [ ] Figure out some kind of services / how to engage with us / contact us page. (How to do this while still being individual-member-centric?)
+
+- [ ] Use pure CSS for project "collaborator expander" 
 
 - [ ] Additional member info ideas:
 
 	- [ ] Add facility for [project-related badges](https://discordapp.com/channels/692111190851059762/708772535172333618/711625982473404436) on member cards and profile pages
 		- Need to figure out what this will look like.
 	- [ ] Personal archetype?
-	- [ ] Skills list?
 
 - [ ] Figure out how to automate some sort of mailing list
 
