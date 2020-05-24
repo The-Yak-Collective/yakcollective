@@ -1,4 +1,5 @@
 ---
+name: rodrigo-pinto
 title: Rodrigo Pinto
 date: 2020-04-28
 indie_status: 3+ years

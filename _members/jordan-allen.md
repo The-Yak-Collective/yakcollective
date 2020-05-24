@@ -1,4 +1,5 @@
 ---
+name: jordan-allen
 title: Jordan Allen
 date: 2020-04-28
 indie_status: 1+ years

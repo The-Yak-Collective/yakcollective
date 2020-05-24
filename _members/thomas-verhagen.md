@@ -1,4 +1,5 @@
 ---
+name: thomas-verhagen
 title: Thomas Verhagen
 date: 2020-04-28
 indie_status: 1+ year

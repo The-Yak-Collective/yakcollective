@@ -1,4 +1,5 @@
 ---
+name: david-mcdougall
 title: David McDougall
 date: 2020-04-28
 indie_status: 3+ years

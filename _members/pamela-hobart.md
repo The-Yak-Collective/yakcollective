@@ -1,4 +1,5 @@
 ---
+name: pamela-hobart
 title: Pamela Hobart
 date: 2020-04-27
 partner: true

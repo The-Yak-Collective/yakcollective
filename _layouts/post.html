@@ -4,8 +4,7 @@ layout: minimal
 <header>
 	<h1 class="yak-post">{% if page.original_link %}<a href="{{ page.original_link }}">{% endif %}{{ page.title }}{% if page.original_link %}</a>{% endif %}</h1>
 
-	{% assign member_uid = page.author %}
-	{% assign member = site.members | where: "slug", member_uid | first %}
+	{% assign member = site.members | where: "name", page.author | first %}
 	{% include member-card.html %}
 </header>
 

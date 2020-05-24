@@ -17,23 +17,27 @@
 {% if page.url == "/projects/" or page.layout == "member" %}
 	<style type="text/css">
 		{% for project in site.projects %}
-			{% if project.accent_color %}
-				.{{ project.slug }}-color { color: {{ project.accent_color }}; }
-			{% endif %}
-			{% if project.hero_image %}
-				.{{ project.slug }}-hero { background-image: url("{{ project.hero_image }}"); }
+			{% if project.name %}
+				{% if project.accent_color %}
+					.{{ project.name }}-color { color: {{ project.accent_color }}; }
+				{% endif %}
+				{% if project.hero_image %}
+					.{{ project.name }}-hero { background-image: url("{{ project.hero_image }}"); }
+				{% endif %}
 			{% endif %}
 		{% endfor%}
 	</style>
 {% endif %}
 {% if page.layout == "project" %}
-	{% if page.accent_color or page.page_css or page.hero_image %}
+	{% if page.page_css or (page.name and (page.accent_color or page.hero_image)) %}
 		<style type="text/css">
-			{% if page.accent_color %}
-				.{{ page.slug }}-color { color: {{ page.accent_color }}; }
-			{% endif %}
-			{% if page.hero_image %}
-				.{{ page.slug }}-hero { background-image: url("{{ page.hero_image }}"); }
+			{% if page.name %}
+				{% if page.accent_color %}
+					.{{ page.name }}-color { color: {{ page.accent_color }}; }
+				{% endif %}
+				{% if page.hero_image %}
+					.{{ page.name }}-hero { background-image: url("{{ page.hero_image }}"); }
+				{% endif %}
 			{% endif %}
 			{% if page.page_css %}
 				{{ page.page_css }}
@@ -50,7 +54,7 @@
 {% if page.layout == "member" %}
 	{% assign og_image = page.avatar %}
 {% elsif page.layout == "post" and page.author %}
-	{% assign member = site.members | where: "slug", page.author | first %}
+	{% assign member = site.members | where: "name", page.author | first %}
 	{% if member.avatar %}
 		{% assign og_image = member.avatar %}
 	{% else %}
@@ -69,7 +73,7 @@
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:site" content="@yak_collective">
 	{% if page.author %}
-		{% assign member = site.members | where: "slug", page.author | first %}
+		{% assign member = site.members | where: "name", page.author | first %}
 		{% if member.twitter %}
 			{% assign twitter_creator = member.twitter %}
 		{% else %}

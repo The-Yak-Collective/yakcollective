@@ -17,12 +17,18 @@ collections:
         name: layout
         widget: hidden
         default: member
+      - label: UID
+        name: name
+        widget: string
+        required: true
       - label: Name
         name: title
         widget: string
+        required: true
       - label: Avatar
         name: avatar
         widget: image
+        required: true
       - label: Join Date
         name: date
         widget: datetime
@@ -30,41 +36,46 @@ collections:
         dateFormat: true
         timeFormat: false
         pickerUtc:  true
+        required: true
       - label: Partner
         name: partner
         widget: boolean
+        required: false
       - label: Title
         name: tagline
         widget: string
+        required: false
       - label: Indie Status
         name: indie_status
         widget: string
+        required: true
       - label: Previously
         name: previously
         widget: string
+        required: false
       - label: Twitter
         name: twitter
         widget: string
+        required: false
       - label: RSS Feed
         name: feed
         widget: string
+        required: false
       - label: Web Links
         name: links
         widget: list
-        field:
-          - label: Link
-            name: link
-            widget: object
-            fields:
-              - label: Title
-                name: title
-                widget: string
-              - label: URL
-                name: url
-                widget: string
+        required: false
+        fields:
+          - label: Title
+            name: title
+            widget: string
+          - label: URL
+            name: url
+            widget: string
       - label: About
         name: body
         widget: markdown
+        required: false
   - name: projects
     label: Projects
     folder: _projects/
@@ -76,15 +87,22 @@ collections:
         name: layout
         widget: hidden
         default: project
+      - label: UID
+        name: name
+        widget: string
+        required: true
       - label: Name
         name: title
         widget: string
+        required: true
       - label: Tagline
         name: tagline
         widget: string
+        required: true
       - label: Is Published?
         name: published
         widget: boolean
+        required: false
       - label: Published Date
         name: date
         widget: datetime
@@ -92,46 +110,59 @@ collections:
         dateFormat: true
         timeFormat: false
         pickerUtc: true
+        required: false
       - label: Type
         name: type
         widget: select
         options: [ Report ]
         default: [ Report ]
+        required: true
       - label: Sequence
         name: sequence
-        widget: select
-        options: [ covid19 ]
+        widget: relation
+        collections: sequences
+        searchFields: [ title ]
+        valueField: name
+        displayFields: [ title ]
+        required: true
       - label: Hero Image
         name: hero_image
         widget: image
+        required: true
       - label: Accent Color
         name: accent_color
         widget: string
+        required: true
       - label: Additional CSS
         name: page_css
         widget: text
+        required: false
       - label: Summary
         name: summary
         widget: markdown
+        required: true
       - label: Project Leads
         name: lead_editors
         widget: relation
         collections: members
-        searchFields: [ name.title ]
-        valueField: "{{slug}}"
-        displayFields: [ name.title ]
+        searchFields: [ title ]
+        valueField: name
+        displayFields: [ title ]
         multiple: true
+        required: true
       - label: Collaborators
         name: collaborators
         widget: relation
         collections: members
-        searchFields: [ name.title ]
-        valueField: "{{slug}}"
-        displayFields: [ name.title ]
+        searchFields: [ title ]
+        valueField: name
+        displayFields: [ title ]
         multiple: true
+        required: true
       - label: Page Content
         name: body
         widget: markdown
+        required: true
   - label: Sequences
     name: sequences
     folder: _sequences/
@@ -145,11 +176,12 @@ collections:
         default: project-list
       - label: UID
         name: name
-        widget: hidden
-        default: "{{slug}}"
+        widget: string
+        required: true
       - label: Name
         name: title
         widget: string
+        required: true
       - label: Start Date
         name: date
         widget: datetime
@@ -157,12 +189,15 @@ collections:
         dateFormat: true
         timeFormat: false
         pickerUtc: true
+        required: true
       - label: Counting Phrase
         name: count_phrase
         widget: string
+        required: false
       - label: Sequence Description
         name: body
         widget: markdown
+        required: false
   - label: Pages
     name: pages
     editor:
@@ -179,6 +214,7 @@ collections:
           - label: Content
             name: body
             widget: markdown
+            required: true
       - label: Projects
         name: projects-page
         file: projects.md
@@ -190,9 +226,11 @@ collections:
           - label: Title
             name: title
             widget: string
+            required: true
           - label: Content
             name: body
             widget: markdown
+            required: true
       - label: Members
         name: members-page
         file: members.md
@@ -204,16 +242,19 @@ collections:
           - label: Title
             name: title
             widget: string
+            required: true
           - label: Partners Blurb
             name: partners_blurb
             widget: markdown
+            required: true
           - label: Collaborators Blurb
             name: collaborators_blurb
             widget: markdown
+            required: true
           - label: Content
             name: body
             widget: hidden
-            default: ""
+            required: false
       - label: About
         name: about-page
         file: about.md
@@ -225,6 +266,8 @@ collections:
           - label: Title
             name: title
             widget: string
+            required: true
           - label: Content
             name: body
             widget: markdown
+            required: true

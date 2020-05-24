@@ -16,7 +16,7 @@ title: The Yak Collective's Latest Writings
 		<ul>
 	{% endif %}
 
-    {% assign author = site.members | where: "slug", post.author | first %}
+    {% assign author = site.members | where: "name", post.author | first %}
 
 	<li>
 		<a href="{% if post.original_link %}{{ post.original_link }}{% else %}{{ post.url }}{% endif %}">{{ post.title }}</a>
@@ -24,7 +24,7 @@ title: The Yak Collective's Latest Writings
 			<a href="{{ post.url }}">{{ post.title }}</a>
 		-->
 		&middot;
-		<a href="/members/{{ post.author }}" class="link yak-link-override dim">{{ author.title }}</a>
+		<a href="/members/{{ author.slug }}" class="link yak-link-override dim">{{ author.title }}</a>
 		&middot;
 		<time class="i fw1">{{ post.date | date: "%B %e, %Y" }}</time>
 	</li>

@@ -1,4 +1,5 @@
 ---
+name: vlad-mehakovic
 title: Vlad Mehakovic
 date: 2020-04-28
 indie_status: Aug 2019

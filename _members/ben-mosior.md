@@ -1,4 +1,5 @@
 ---
+name: ben-mosior
 title: Ben Mosior
 date: 2020-04-28
 indie_status: 6+ years

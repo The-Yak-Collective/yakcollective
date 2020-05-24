@@ -1,4 +1,5 @@
 ---
+name: tom-critchlow
 title: Tom Critchlow
 date: 2020-04-27
 partner: true

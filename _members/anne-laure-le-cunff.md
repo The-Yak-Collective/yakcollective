@@ -1,4 +1,5 @@
 ---
+name: anne-laure-le-cunff
 title: Anne-Laure Le Cunff
 date: 2020-04-28
 indie_status: 2+ years

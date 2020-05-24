@@ -1,4 +1,5 @@
 ---
+name: amanda-reeves
 title: Amanda Reeves
 date: 2020-04-27
 indie_status: 1+ years

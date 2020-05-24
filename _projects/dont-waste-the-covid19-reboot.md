@@ -1,4 +1,5 @@
 ---
+name: dont-waste-the-covid19-reboot
 published: true
 title: Don't Waste the COVID-19 Reboot
 date: 2020-04-30

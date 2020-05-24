@@ -10,7 +10,6 @@ layout: minimal
 
 	{% assign member_partners = site.members | where: "partner", true %}
 	{% for member in member_partners %}
-		{% assign member_uid = member.slug %}
 		{% include member-card.html %}
 	{% endfor %}
 </section>
@@ -23,7 +22,6 @@ layout: minimal
 
 	{% assign member_collaborators = site.members | where_exp: "member", "member.partner != true" %}
 	{% for member in member_collaborators %}
-		{% assign member_uid = member.slug %}
 		{% include member-card.html %}
 	{% endfor %}
 </section>

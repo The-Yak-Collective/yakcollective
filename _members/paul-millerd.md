@@ -1,4 +1,5 @@
 ---
+name: paul-millerd
 title: Paul Millerd
 date: 2020-04-27
 partner: true
