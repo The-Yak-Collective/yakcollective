@@ -1,5 +1,6 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: The-Yak-Collective/yakcollective
   branch: warren-structure
 publish_mode: editorial_workflow
 media_folder: assets/
@@ -131,6 +132,37 @@ collections:
       - label: Page Content
         name: body
         widget: markdown
+  - label: Sequences
+    name: sequences
+    folder: _sequences/
+    create: true
+    editor:
+      preview: false
+    fields:
+      - label: Layout
+        name: layout
+        widget: hidden
+        default: project-list
+      - label: UID
+        name: name
+        widget: hidden
+        default: "{{slug}}"
+      - label: Name
+        name: title
+        widget: string
+      - label: Start Date
+        name: date
+        widget: datetime
+        format: YYYY-MM-DD
+        dateFormat: true
+        timeFormat: false
+        pickerUtc: true
+      - label: Counting Phrase
+        name: count_phrase
+        widget: string
+      - label: Sequence Description
+        name: body
+        widget: markdown
   - label: Pages
     name: pages
     editor:
@@ -196,9 +228,3 @@ collections:
           - label: Content
             name: body
             widget: markdown
-
-# Add sequences
-# Finish configuration here
-# Add login widget
-# Figure out if I can check things into GitHub during the build
-# Create a branch to test out the admin interface!

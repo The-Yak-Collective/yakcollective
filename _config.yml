@@ -51,6 +51,8 @@ collections:
       - jordan-allen.md
   projects:
     output: true
+  sequences:
+    output: false
 
 # Per-page defaults
 #

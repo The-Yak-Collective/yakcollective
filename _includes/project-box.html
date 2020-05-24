@@ -27,9 +27,9 @@
 					Published: {{ project.date | date_to_long_string: "ordinal", "US" }} UTC
 					<!-- After: https://stackoverflow.com/a/61051707 -->
 					{% if project.sequence %}
-						{% assign sequence_def = site.data.sequences[project.sequence] %}
-						{% assign sequence_start = sequence_def.start_date | date: "%s" %}
-						/ Day {{ project.date | date: "%s" | minus: sequence_start | divided_by: 3600 | divided_by: 24 | round }} {{ sequence_def.count_phrase }}
+						{% assign sequence = site.sequences | where: "name", project.sequence | first %}
+						{% assign sequence_start = sequence.date | date: "%s" %}
+						/ Day {{ project.date | date: "%s" | minus: sequence_start | divided_by: 3600 | divided_by: 24 | round }} {{ sequence.count_phrase }}
 					{% endif %}
 				</time>
 			</div>

@@ -11,9 +11,9 @@ layout: default
 						{{ page.date | date_to_long_string: "ordinal", "US" }} UTC
 						<!-- After: https://stackoverflow.com/a/61051707 -->
 						{% if page.sequence %}
-							{% assign sequence_def = site.data.sequences[page.sequence] %}
-							{% assign sequence_start = sequence_def.start_date | date: "%s" %}
-							<br>Day {{ page.date | date: "%s" | minus: sequence_start | divided_by: 3600 | divided_by: 24 | round }} {{ sequence_def.count_phrase }}
+							{% assign sequence = site.sequences | where: "name", page.sequence | first %}
+							{% assign sequence_start = sequence.date | date: "%s" %}
+							<br>Day {{ page.date | date: "%s" | minus: sequence_start | divided_by: 3600 | divided_by: 24 | round }} {{ sequence.count_phrase }}
 						{% endif %}
 					</time>
 					<p>

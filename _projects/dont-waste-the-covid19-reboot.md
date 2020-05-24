@@ -4,7 +4,7 @@ title: Don't Waste the COVID-19 Reboot
 date: 2020-04-30
 tagline: Making the next normal better than the last one
 type: Report
-sequence: covid19
+sequence: covid-19
 hero_image: /assets/dont-waste-the-covid19-reboot-hero.svg
 accent_color: "#aa23aa"
 page_css: |
