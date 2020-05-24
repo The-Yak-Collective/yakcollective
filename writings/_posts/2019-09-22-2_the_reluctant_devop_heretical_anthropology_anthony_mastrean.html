@@ -1,0 +1,731 @@
+---
+title: "#2 — The Reluctant Devop: Heretical Anthropology (Anthony Mastrean)"
+created_at: 2019-09-22 00:49:28.000000000 Z
+author: ben-mosior
+original_link: https://hiredthought.com/2019/09/22/2-the-reluctant-devop-heretical-anthropology/
+---
+
+<p>Ben kicks off episode 2 with Anthony Mastrean, a friend, colleague, and professional organizational agitator. They discuss the origin story leading to their work together, what it&#8217;s like changing an organization from the inside,  and the underrated discipline of Software Configuration Management.</p>
+
+
+
+<figure class="wp-block-embed-youtube wp-block-embed is-type-video is-provider-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">
+<iframe class='youtube-player' width='1080' height='608' src='https://www.youtube.com/embed/WyAVnNpFHTQ?version=3&#038;rel=1&#038;fs=1&#038;autohide=2&#038;showsearch=0&#038;showinfo=1&#038;iv_load_policy=1&#038;wmode=transparent' allowfullscreen='true' style='border:0;'></iframe>
+</div></figure>
+
+
+
+<figure class="wp-block-audio"><audio controls src="https://hiredthought.com/wp-content/uploads/2019/09/anthony.mp3"></audio></figure>
+
+
+
+<ul><li><a href="https://humanisticsystems.com/2016/12/05/the-varieties-of-human-work/">Steven Shorrock: The Varieties of Human Work</a></li><li><a href="https://tasshin.com/blog/series/burja-mapping/">Tasshin Fogleman: Burja Mapping</a></li><li><a href="https://vimeo.com/360821729">Discussion with Jabe Bloom and Sue Borchardt</a></li></ul>
+
+
+
+<p>Follow Anthony on Twitter:</p>
+
+
+
+<figure class="wp-block-embed-twitter wp-block-embed is-type-rich is-provider-twitter"><div class="wp-block-embed__wrapper">
+<blockquote class="twitter-tweet" data-width="550" data-dnt="true"><p lang="en" dir="ltr">Please define &quot;minor breaking change&quot;</p>&mdash; Anthony <img src="https://s.w.org/images/core/emoji/12.0.0-1/72x72/1f91e.png" alt="🤞" class="wp-smiley" style="height: 1em; max-height: 1em;" /> (@AnthonyMastrean) <a href="https://twitter.com/AnthonyMastrean/status/1139258175213973508?ref_src=twsrc&#x0023;5Etfw">June 13, 2019</a></blockquote><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div></figure>
+
+
+
+<p>Music by DJ Quads<br><a href="https://soundcloud.com/djquads">https://soundcloud.com/djquads</a></p>
+
+
+
+<h2>Transcript</h2>
+
+
+
+<p><strong>Ben </strong>[00:00:00] Hello
+everybody and welcome to episode 2 of the Hired Thought podcast. I am very
+happy to be joined today by Anthony Mastrean. He and I go way back. We worked
+together at an old organization. He taught me a lot of things, and I like to
+think that we have a lot of interesting stories to tell. Anthony tell us a
+little bit about yourself. Where are you right now in this wonderful world.?</p>
+
+
+
+<p><strong>Anthony </strong>[00:00:23] Hey
+Ben, I&#8217;m actually working from home these days which is&#8230; man, it&#8217;s really
+screwing me up for future employment. I don&#8217;t know if I can go back to somebody
+else&#8217;s office in any capacity. </p>
+
+
+
+<p><strong>Ben </strong>[00:00:39] Do
+you have a kid in each arm while you&#8217;re working every morning, is that how it
+works? </p>
+
+
+
+<p><strong>Anthony </strong>[00:00:41] Yeah
+well that&#8217;s a big part of it. I&#8217;ve got two little ones, so occasionally they&#8217;re
+my pair programmers or office partners, if you want to call them that. </p>
+
+
+
+<p><strong>Ben </strong>[00:00:51] Family
+mob programming I guess. </p>
+
+
+
+<p><strong>Anthony </strong>[00:00:53] Right.
+Yeah. So maybe in a couple of years when they&#8217;re in public school for most the
+day, that might change things, but&#8230; </p>
+
+
+
+<p><strong>Ben </strong>[00:00:58] So
+you&#8217;re working from home. We met when we were working at McKesson. We were
+working on pharmacy systems and doing kind of like lots of interesting stuff
+there. I guess let&#8217;s talk through the origin story just a little bit. I think I
+first met you at devopsdays Pittsburgh 2014. </p>
+
+
+
+<p><strong>Anthony </strong>[00:01:22] Yeah
+there was a&#8230; I think of that as the year of serendipity. There was a lot of
+meetings and and happenings and like intellectual things occurring for myself,
+I don&#8217;t know, maybe for Pittsburgh? It&#8217;s hard to claim anything for an entire
+region. But there was definitely some stuff starting that year. </p>
+
+
+
+<p><strong>Ben </strong>[00:01:40] Yeah,
+let&#8217;s claim it for Pittsburgh. Let&#8217;s claim it for you, too. So tell me a little
+bit about that though. What was going on that year for you? </p>
+
+
+
+<p><strong>Anthony </strong>[00:01:49]
+[00:01:49]I think the way I like to describe it to I don&#8217;t I don&#8217;t know
+whether to be cheeky or introspective. I think I became like a reluctant devop
+or something like that. [11.8s]</p>
+
+
+
+<p><strong>Ben </strong>[00:02:02] [00:02:02]The
+lone reluctant devop. [1.0s]</p>
+
+
+
+<p><strong>Anthony </strong>[00:02:05]
+[00:02:05]Was it reluctant, or is it&#8230; I don&#8217;t know. Anyway, I had had
+enough of just normal application development, which is funny, &#8217;cause that&#8217;s
+where&#8230; that&#8217;s the meat of this industry. So many developers developing right.
+Yet there&#8217;s so much more work to be done. And I think I either accidentally or
+kind of subconsciously found myself constantly drawn to that other stuff. The
+things that happened, not just before you start jamming on the keyboard, you
+know what&#8217;s up with work planning, you know? Or organization of teams? Or is
+this a JIRA ticket? Like what kind of system are we using? Right but like even
+after all that, right OK, we&#8217;ve got this code? Where&#8217;s it going? Is there a
+build?. Are there tests? Should you test first? Is the build passing? Has it
+been red for four months, like you know all these things. What about
+deployment. Who&#8217;s deploying this? And where and how are those environments
+managed? You know even down a little bit, like where am I committing this code
+to? Who&#8217;s server is running source control? It&#8217;s actually a desktop under
+someone&#8217;s desk&#8230; There&#8217;s all of these questions I think that surround
+development that&#8230;&nbsp; I think a lot of
+people make a lot of it, like &#8220;well,&nbsp;
+you know, developers ought to understand all that.&#8221; I think that&#8217;s
+like the Twitter version of the job, right. Sure. All you, you know, blue
+checkmark people on Twitter saying that developers should know all this. That&#8217;s
+different than the thousands of people we&#8217;ve all worked with who don&#8217;t work
+like that. So there&#8217;s this massive gap. [105.1s]</p>
+
+
+
+<p><strong>Ben </strong>[00:03:52] [00:03:52]You
+can point at all sorts of stuff, like how do people learn? How is it that you
+are supposed to have come by those skills, by that knowledge? And the reality
+is, I think in a lot of especially enterprise organizations, and perhaps
+enterprise organizations in Pittsburgh, in particular&#8230; Maybe I&#8217;m being a
+little bit too broad sweeping here, but I think there is a tendency to create
+bubbles and stay within them. And if you are doing any migrating it&#8217;s maybe
+between bubbles every couple of years, and they&#8217;re all such small bubbles that
+they&#8217;re missing the larger picture of the larger changes in practice. What do
+you think is at the center of that? Is it just we&#8217;re not learning when we
+should be learning? Or if we should know that stuff and all the blue checkmark
+people are telling us that, like OK, but how? And why? And when? [56.5s]</p>
+
+
+
+<p><strong>Anthony </strong>[00:04:48]
+[00:04:48]I guess it&#8217;s interesting maybe to use Pittsburgh as a foil. I
+don&#8217;t think we have any Thiel organizations right here in Pittsburgh, if you
+want to think of the wackiest organizations that are out there somewhere. So
+what we&#8217;ve got going on is very traditional right. Like, well, we need project
+management, so we&#8217;ve got a project management office. Well those developers
+just need to be developing, wo we&#8217;ve got the test group, and they&#8217;re probably
+offshore still. It&#8217;s 2019, and we still have offshore test groups. Or, well,
+the developers need to develop, so we need to have&#8230; well who&#8217;s going to put
+all that software together? Well let&#8217;s have a configuration management group,
+right, and let&#8217;s have a build release team. Certainly we have operators, right,
+and they&#8217;ve got their own V.P. of operations, like there is no direct line
+between developers and operations so&#8230; I hesitate to say these things just
+exist because they exist right. I don&#8217;t want to give a tautalogical answer but,
+man, these things just seem to exist. I don&#8217;t know&#8230; I don&#8217;t think we have
+enough&#8230; we need to bring the anthropologists in, and say, &#8220;Why, why did
+we do this? Tell us, because we can&#8217;t see it. We&#8217;re too close to it to to
+understand why they exist let alone how to change it, in some cases. These are
+the systems of rewards and incentives and, I mean how about just job
+descriptions?[78.3s]</p>
+
+
+
+<p><strong>Ben </strong>[00:06:08] [00:06:08]Oh
+don&#8217;t even get me started [0.0s]</p>
+
+
+
+<p><strong>Anthony </strong>[00:06:09]
+[00:06:09]I&#8217;m sure I&#8217;ve encountered plenty of these team members, right.
+You know, the developer, the CM guy, the whatever, who&#8230; maybe they even want
+to grow beyond what they&#8217;re doing now, but, boy, it&#8217;s not in the performance
+review system. So, &#8220;I&#8217;m not going to cross that line.&#8221; It&#8217;s too scary
+in a way. There&#8217;s too much risk in doing that. [20.1s]</p>
+
+
+
+<p><strong>Ben </strong>[00:06:30] You
+have to take on a lot of risk as an individual to attempt to be&#8230; essentially
+an anomaly, right? If the rest of the organization is aiming for uniformity&#8230; [00:06:42]It&#8217;s interesting that you mention job
+descriptions, because my whole thing with that is&#8230; tell me how you are going
+to describe exactly the kind of person that you want to bring in, as if it&#8217;s a
+part that you can go down to a shop and&#8230; &#8220;I need part CL-732, and I need
+it in this configuration and as part of this warranty package.&#8221; All that
+kind of stuff as if it&#8217;s a fungible thing you just plug in. [22.8s]</p>
+
+
+
+<p><strong>Anthony </strong>[00:07:05]
+[00:07:05]Yeah. Like, how dare you describe a complex job with very
+simple statements in a job description. Right? [7.5s]</p>
+
+
+
+<p><strong>Ben </strong>[00:07:15] [00:07:15]When
+I was looking for work, and really before we started working together, and even
+after and later stages in my career, I was just looking at job descriptions.
+And the problem for me was constantly trying to project a version of myself
+that might fit into some of these boxes, and I just found that to be an
+impossible kind of idea. Because one, they&#8217;re not describing it, remotely. Like
+phenomenologically they are not describing the thing. They are describing an
+idealized version of the thing, which is not even&#8230; that doesn&#8217;t exist. [34.6s]</p>
+
+
+
+<p><strong>Anthony </strong>[00:07:51]
+[00:07:51]I&#8217;m always going to get this wrong, but there&#8217;s a fellow out
+there, Steven Shorrock. I don&#8217;t know if it&#8217;s his idea or not, but he often
+comes back to this concept that there are overlapping and non overlapping
+things, like work as design, work as described, work as understood. And these
+things very rarely and in very small parts ever overlap. So you have the job
+description, it&#8217;s like wow, it&#8217;s&#8230; And who the hell wrote this thing too,
+right? That probably has a big effect as well. Is it what we want the job to
+be? Is it what the job is? Is it what I think the job is? Like there&#8217;s so
+many&#8230; Or is it what I think will get candidates in for the job? Like it&#8217;s
+just such nonsense. [43.4s]</p>
+
+
+
+<p><strong>Ben </strong>[00:08:35] It&#8217;s
+so multi-dimensional, and I think this shows up everywhere, right? I guess the
+kind of joke here is at one point I was helping write job descriptions. When I
+worked with the state of PA, we needed to hire sysadmins, and I won&#8217;t say that
+that was my responsibility, but I was certainly contributing to that. </p>
+
+
+
+<p><strong>Anthony </strong>[00:08:54] Like,
+&#8220;I can do this better,&#8221; right? &#8220;I can help make this
+improvement.&#8221; And maybe you do, within an axis. Like, within whatever
+version of the job description that you thought the job description should be.
+Maybe you did make it better but&#8230; </p>
+
+
+
+<p><strong>Ben </strong>[00:09:07] That&#8217;s
+our pathology I think, is we show up and go, &#8220;OK. The system seems to
+be&#8230; like, it&#8217;s working, clearly, but it&#8217;s also causing a lot of pain.&#8221;
+Like there are a lot of bones being ground up in the middle of it.</p>
+
+
+
+<p><strong>Anthony </strong>[00:09:18] Yeah,
+so I think it was&#8230; lots of accidents, right? Like I started my career at
+FedEx. And talk about all the syndromes that any organization could have, it
+was there. There&#8217;s pigeonholed development, offshore testing, a CM team. A team
+that was responsible for &#8220;the builds,&#8221; the golden images and such.
+And towards the end of my run there, it was so&#8230; I didn&#8217;t even know whether to
+call it dysfunctional or not because actually we made it functional by&#8230; At
+some point someone sent the CM team a script to build the software, because the
+CM team didn&#8217;t even write the scripts, right. They just ran the scripts to
+build the software. And at some point the script we gave them just printed,
+&#8220;success.&#8221; And then a senior architect went off and actually did the
+build and release separately. So again, dysfunctional or functional? I don&#8217;t
+even know how to describe&#8230; So there was some formative stuff going on there,
+at least. Here&#8217;s how some big organizations can operate. I won&#8217;t say that was
+all of them, but it sure did&#8230; it looked like a thing. </p>
+
+
+
+<p><strong>Ben </strong>[00:10:28] Well
+I mean we like our process. We like having little boxes to check off as we go
+along. But I think the thing that I learned while working with you a bit, and
+really the lesson that&#8217;s been reinforced over and over again as I&#8217;ve been
+finding my way into larger organizations working in a consulting and support
+capacity&#8230; I just see how much all this stuff is just made up. We are
+constructing reality around us to the extent that someone else has to construct
+an interface to that reality. Like the script example you just gave, &#8220;Oh
+this person will be nervous if they don&#8217;t have this part of their process to
+check off.&#8221; </p>
+
+
+
+<p><strong>Anthony </strong>[00:11:14] Or
+they might not have a job, which I mean, understandable, but like, is that a
+good reason? I think at McKesson it was interesting. [00:11:24]So
+I came in, the team was called Software Configuration Management. Like what is
+that? That terminology is really old, except maybe&#8230; it might only be old to
+the coasts, right? Like a lot of businesses in the middle of the country still
+have a thing called SCM. And I actually think it&#8217;s still a discipline. I think
+there are topic areas and there are knowledge areas there, and there are
+patterns and practices, and I hesitate to maybe even say best practices for
+Software Configuration Management. And oh man, I&#8217;m about to be like so, what is
+the word, well, I&#8217;m going to be cheesy. Like, this job shouldn&#8217;t exist, right?
+So I joined this weird place. Not a developer. Which actually I&#8217;m happy,
+because the software system we were working on, this 15-year-old Java Swing
+application, boy&#8230; I really don&#8217;t want to jump into that. But I could jump in
+on the edge of that, in the SCM team. So here, run the Subversion server.
+Babysit the builds. Handle the build and release process. So now I was that guy
+that I was previously handing empty scripts to. But could we effect change?
+Could we come in, and again, cheesy as it may sound, this job doesn&#8217;t need to
+exist. Developers are already doing this work right, or they&#8217;re so close to it.
+You know, and to hint at the Wardley side of things, why can&#8217;t we commoditize
+these things. Like, you&#8217;re branching strategy ought not to be creative. Your
+build system should not be bespoke, in most cases for line of business apps.
+Like literally, why does this job exist? Let&#8217;s buy a couple of cloud services,
+whether that&#8217;s some Bitbucket stuff, some GitLab stuff, some JIRA stuff. Just
+buy something. Buy something, follow a &#8220;best practice&#8221; Follow a
+decent practice that&#8217;s probably way better than what you&#8217;re doing now, maybe
+not the best, but the job doesn&#8217;t need to exist. But you know what job that
+does need to exist? The Agitator that gets everybody to change to the commodity
+thing. [121.7s]</p>
+
+
+
+<p><strong>Ben </strong>[00:13:26] Yeah
+I think that&#8217;s the key part of this. It&#8217;s the transition between&#8230; I think all
+these systems that we build tend to try to maintain what already is working and
+what already exists&#8230; The Known. And it&#8217;s working, so we should just keep
+doing it, right? </p>
+
+
+
+<p><strong>Anthony </strong>[00:13:41] Right,
+it&#8217;s working but it&#8217;s leaving&#8230; Look at the damage it&#8217;s leaving in its wake.
+And I don&#8217;t think, me 10 years ago, I wouldn&#8217;t have been talking like this. I
+think maybe I was on the same path technically, but I was less focused on the
+people side. I didn&#8217;t see it, maybe because 10 years ago I had boundless energy
+and whatnot. But like nowadays it&#8217;s like, man, we&#8217;re just killing people. These
+jobs are killing people! You know we could do so much better and unleash their
+capacity. And emotional capacity, too. Not just like, &#8220;Boy, we can get
+more stories done.&#8221; &#8220;Boy, we can make people feel more valuable.&#8221;
+And if that valuability adds value to the company let&#8217;s go for it. I think
+those two things are intertwined. </p>
+
+
+
+<p><strong>Ben </strong>[00:14:27] The
+change that has occurred over&#8230; there&#8217;s kind of a leapfrog moment, right,
+where you have the option to&#8230; If you&#8217;re not going to stay incrementally in
+step with the change that is going on around you, the evolution if you will, of
+things that are practices, patterns, the technology, all that kind of stuff. If
+you&#8217;re not going to stay in step with that, or even anticipate it, if you&#8217;re
+not gonna do that, you&#8217;re gonna fall behind. So I don&#8217;t know exactly how to
+describe this kind of transition should happen in general, but I think it&#8217;s
+useful to have a momentary transitionary role, where you go from&#8230; I mean what
+was the state of SCM before, before there was a centralized&#8230; </p>
+
+
+
+<p><strong>Anthony </strong>[00:15:16] Tickets
+were open for three years. Builds were red for four weeks at a time. </p>
+
+
+
+<p><strong>Ben </strong>[00:15:21] Yeah.
+</p>
+
+
+
+<p><strong>Anthony </strong>[00:15:22] It&#8217;s
+funny a lot of it&#8217;s technical stuff, right. As a new person into this
+organization, which I think is desperately what this organization needed. The
+new guy at this organization had been there for nine years. And I apol- I know
+I&#8217;m saying guy a lot. But like literally, that&#8217;s just who they were. But nine
+years, there&#8217;s no way you&#8217;re going to come in&#8230; you&#8217;re already taken away,
+you&#8217;re floating with the system at that point. So to be dropped in and to see
+that, to be able to see, &#8220;Oh that build has literally been red for 4
+weeks. This ticket in my backlog now has been open for three years. Close it or
+fix it or something!&#8221; But that&#8217;s easy for me to say, because I&#8217;m not here
+with all the organizational, emotional baggage of it how it needs to close
+that. I think maybe that&#8217;s important too. [00:16:15]This
+journey it&#8217;s not just technical. These people were shipping successful
+software, you know maybe not as fast as they could, which we found out later.
+We were able to ship much faster. So they were useful, technical, savvy
+individuals. So I think the problem was probably not like, &#8220;Oh we just
+needed someone to come in and figure Puppet out. Do this migration from SVN to
+GitLab or whatever.&#8221; A lot of people could do that. But a lot of the work
+was, &#8220;How do we bring these people along with us?&#8221; They&#8217;re scared. Like
+literally people were scared. &#8220;I don&#8217;t think we can do it this way. I&#8217;m
+nervous about that, either because we&#8217;re gonna lose work, or we&#8217;re going to
+break something, or it&#8217;s just going to hurt. What if we mess up? And then I&#8217;ve
+got to go backwards, or I have to learn something new. I&#8217;m so comfortable with
+the way we&#8217;re doing it now.&#8221; [53.2s]</p>
+
+
+
+<p><strong>Ben </strong>[00:17:10] The
+performance improvement situation as well. You are evaluated based on
+commitments that you made three quarters ago. </p>
+
+
+
+<p><strong>Anthony </strong>[00:17:17] A
+year ago.</p>
+
+
+
+<p><strong>Ben </strong>[00:17:19] What
+is&#8230; How!? You actually cannot change, unless you adopt a mentality and have
+the support structure that is able to look at that and go, &#8220;Yeah, well
+duh. This should have changed.&#8221; I think in some ways we had some luck
+there where some people were a little bit more willing to go along with the
+malleability of that. </p>
+
+
+
+<p><strong>Anthony </strong>[00:17:40] I
+believe our team was vacant for something like six to nine months. The previous
+folks had&#8230; I think it was a year that the last proper SCM person had quit.
+Someone had stepped in part time to manage things. So obviously that wasn&#8217;t
+going to be a huge change. And then it was literally vacant. So there was no
+CM. And again, well so CM shouldn&#8217;t exist, but in this context it desperately
+needed to exist. So yeah, we came in, and I think we came into a total&#8230; I
+don&#8217;t know how to recreate this or even if I should&#8230; But we had a new
+manager, a new director, a new VP, the president changed. This whole business
+unit down to our stupid little seats in the cube farm changed in weeks. So our
+performance review was not the same one that was happening to these folks who&#8217;d
+been there for 15 years. There&#8217;s lots and lots of things right. </p>
+
+
+
+<p><strong>Ben </strong>[00:18:39] Yeah
+I mean that was wild, because on the one hand we could literally shape the way
+that we could do the work, the way that we thought that it should be done. </p>
+
+
+
+<p><strong>Anthony </strong>[00:18:52] Yeah
+it was easy to come in and say, &#8220;This is not how CM works&#8221; even
+though I didn&#8217;t know that. Like I wasn&#8217;t sure. It was my first CM job. Like
+what even is CM right? That&#8217;s what I&#8217;ve been trying to say. Really accidentally
+joined the team this way in a position I&#8217;ve never formerly held. Is CM even
+taught? There&#8217;s like one book that I know of. </p>
+
+
+
+<p><strong>Ben </strong>[00:19:12] I
+remember you like going into all these places on the Internet, just trying to
+dig and dig and dig&#8230; like, &#8220;What is branching even?&#8221;&nbsp; Not just asking what branching strategy
+should we use, like what&#8217;s popular. It was more like, &#8220;What is this
+even?&#8221; </p>
+
+
+
+<p><strong>Anthony </strong>[00:19:27] Like
+what even yeah&#8230; This is the craziest thing about software development. And I
+guess a lot of people say, &#8220;Oh but it&#8217;s a young discipline.&#8221; But we
+don&#8217;t actually know for sure, evidence-wise. We don&#8217;t know that source control
+is good. Like prove&#8230; I know that it&#8217;s good, I feel good when I&#8217;m using it,
+but we don&#8217;t have anything like&#8230; There&#8217;s no study, there&#8217;s no pedagogy,
+there&#8217;s not like&#8230; all of these hundred dollar words. Like we don&#8217;t know why
+what we do should be done&#8230; what to do, why we should do it, how we should do
+it, we really don&#8217;t. We have a lot of stories right now. Maybe that&#8217;s how every
+industry like this starts. We don&#8217;t have 5000 years of history programming
+computers, but maybe someday we will. </p>
+
+
+
+<p><strong>Ben </strong>[00:20:16] I
+get really excited when I see some case studies about something. </p>
+
+
+
+<p><strong>Anthony </strong>[00:20:21] Yeah
+oh, we only have stories, but at least let&#8217;s bring 10 of them together in one
+paper. Can I make sense of any of this? </p>
+
+
+
+<p><strong>Ben </strong>[00:20:28] Somebody
+trying to do some analysis to figure out what makes sense here, what makes
+there. It&#8217;s largely expert based. You have people who we look to as the gods of
+the industry, if you will. </p>
+
+
+
+<p><strong>Anthony </strong>[00:20:41] Yeah.
+That&#8217;s problematic. </p>
+
+
+
+<p><strong>Ben </strong>[00:20:45] That&#8217;s
+the way, it&#8217;s the blue checkmark people. Here they are. Here&#8217;s the answer. And
+they&#8217;re largely giving experiential anecdotal evidence, and I&#8217;m just thinking
+of&#8230; </p>
+
+
+
+<p><strong>Anthony </strong>[00:20:56] And
+from a very unique perspective. </p>
+
+
+
+<p><strong>Ben </strong>[00:20:58] Yeah
+totally! </p>
+
+
+
+<p><strong>Anthony </strong>[00:20:58] Right,
+that&#8217;s the thing. Like the blue checkmark consultant, agile consultant, or
+whatever, devops&#8230; Like these people are already in a totally different
+context than the 30 of us that have been sitting on this team for the last
+three years just trying to do whatever it is we&#8217;re doing. There&#8217;s no&#8230; I like
+what the folks are doing with the State of DevOps report. And of course we&#8217;re
+going to go there, right. Like how you&#8217;ve got PhDs and scientists and
+statisticians. You know you&#8217;ve got serious people doing serious work on this industry
+that is sorely lacking anything that&#8217;s serious. But I struggle with that, like
+a lot of this stuff comes out which is just like &#8220;Just do Trunk Based
+Development.&#8221; OK. </p>
+
+
+
+<p><strong>Ben </strong>[00:21:45] &#8220;Just.&#8221;
+</p>
+
+
+
+<p><strong>Anthony </strong>[00:21:45] And
+then what. Or how do I even&#8230; Like, what do you mean, &#8220;just do Trunk
+Based Development?&#8221; We literally, I think we had&#8230; something on the order
+of 60 branches when we got there. And it was like, major, minor, patch, and
+hotfix. And I think we ran the numbers once, and we had like an average of 17
+hot fixes. We contractually promised a major, two minors, and like three patch
+versions. If you did the math on that, we were supporting forty five versions
+of the software at once. We were doing it through, or you know the team, you
+know the &#8220;we&#8221; that was there at the time, we were doing it through
+whatever branching strategy we could figure out. You can&#8217;t just like&#8230; these
+people on Twitter and there 120 characters at the time. &#8220;Just do Trunk
+Based Development. Good luck.&#8221; &#8220;Thanks a lot. You&#8217;re an
+asshole.&#8221; Like you can&#8217;t do anything with that. You know? </p>
+
+
+
+<p><strong>Ben </strong>[00:22:50] I
+think that&#8217;s it. </p>
+
+
+
+<p><strong>Anthony </strong>[00:22:51] It&#8217;s
+so frustrating. </p>
+
+
+
+<p><strong>Ben </strong>[00:22:52] It&#8217;s
+always advice, right. I get that in order to move things forward, you have to
+work at the edge, in the sense that you have to point at something that is&#8230;
+If you&#8217;re starting from nothing, you could probably consider starting here.
+That seems reasonable. </p>
+
+
+
+<p><strong>Anthony </strong>[00:23:08] Right.
+Definitely. If you were starting with nothing, right. That&#8217;s great. And I think
+there&#8217;s even like, there&#8217;s stuff out there, man. I&#8217;m just constantly impressed
+by GitLab. Like just go get GitLab. Like, just buy it. The entire thing they&#8217;ve
+got this whole&#8230; I know this is not an advertisement for GitLab but the
+concept like&#8230; </p>
+
+
+
+<p><strong>Ben </strong>[00:23:27] If
+they want to sponsor&#8230; </p>
+
+
+
+<p><strong>Anthony </strong>[00:23:27] There&#8217;s
+a team who&#8217;s producing tooling for you, and they&#8217;re saying, &#8220;We want to
+take care of the entire process, the entire lifecycle of software from planning
+to designing to developing to capturing issues to doing ops. We&#8217;re gonna give
+you a tool kit. Now, it has opinions. It works in a certain situation. Some of
+those tools are different maturity levels.&#8221; But the fact that they even
+published a maturity chart for each of their features *mind explosion noise* is
+really great. </p>
+
+
+
+<p><strong>Ben </strong>[00:23:54] I
+think that&#8217;s really important to have that kind of structure in place, because
+the defaults that you get are&#8230; if they&#8217;re not perfect, that&#8217;s fine. But
+they&#8217;re at least sensible and principled probably. </p>
+
+
+
+<p><strong>Anthony </strong>[00:24:05] And
+they&#8217;re at least not 15 years of custom scripts tying together custom
+processes. At least you&#8217;re moving from something structured. Hopefully to
+something else structured but that is a better choice for whatever your context
+is. And that&#8217;s again why it&#8217;s so frustrating to get this advice. Or another one
+that I love is like, &#8220;Just do feature flags.&#8221; So how do I move to
+Trunk Based Development when I&#8217;ve got release-per-branch, I&#8217;ve got 45 releases
+that I&#8217;m contractually obligated to maintain, I can&#8217;t&#8230; I&#8217;m a CM guy. I can&#8217;t
+make this corporation decide to contract their software differently. Right. We
+eventually did, but only because we had that whole management chain entwined in
+this. &#8220;Hey how can we actually produce software faster.&#8221; &#8220;Well
+stop promising that we&#8217;re going to support forty five versions.&#8221; That idea
+came from us, but it was enacted by them, they talked to legal and sales and
+everything. So that is doable, but on a much longer timescale. So okay how do I
+get to Trunk Based Development now that that&#8217;s my, okay great, that&#8217;s my holy
+grail. How do I get there? &#8220;Well just do feature flags.&#8221; Well that&#8217;s
+not like&#8230;. Have you ever done feature flags? It doesn&#8217;t mean one thing. It&#8217;s
+complicated at best. You just gotta turn stuff on and off? Well feature flags
+means you&#8217;ve got to really have your configuration sorted out, and that
+configuration now has to be exposed. Is that feature flags to the user, to an
+admin, to an operator? Who gets the feature flag? Where do they toggle it? How
+are you toggling? You really gotta have your dependency injection sorted out.
+What the hell is dependency injection? You have to unwind all of the job. You
+know, but just use feature flags dot com. So frustrating, this entire job. </p>
+
+
+
+<p><strong>Ben </strong>[00:25:50] There&#8217;s
+there&#8217;s so much work to be done to help people adopt practices from a
+standpoint of&#8230; you&#8217;re starting with what already exists. And actually finding
+a path from that, do something sensible that&#8217;s&#8230; not even just sensible,
+because it all makes sense, right. Even the legacy, if you will, makes sense. </p>
+
+
+
+<p><strong>Anthony </strong>[00:26:11] Right,
+like, it can&#8217;t be irrational if it got done by human beings and it was sold.
+You know what I mean, and I think a lot of people like to throw that around
+like, &#8220;Oh we&#8217;re not rational hahaha. Like randomness, you know.&#8221; No
+no. I think what rational means is that you&#8217;re reasoning. We are always
+reasoning, whether or not we&#8217;re coming up with the right answer or the best
+answer or whatever. But I think everybody was reasoning all along, right. These
+15 years, that transition from startup, to corporation, I think the team was
+bought and sold three or four times. [00:26:49]Everybody&#8217;s
+reasoning. Throughout all the different performance management programs, all
+the different changes in methodology, they&#8217;re reasoning all along the way. So I
+think we gotta be careful with that, that we&#8217;re not just harming people while
+we&#8217;re trying to unharm people. Like, &#8220;You idiots did that.&#8221; No, it&#8217;s
+like &#8220;We did this thing, obviously. But maybe we can do a little bit of a
+different thing.&#8221; [26.1s]</p>
+
+
+
+<p><strong>Ben </strong>[00:27:18] This
+is probably a weird place to go with this but the thing that I heard Jabe
+(@cyetain) say recently&#8230; We had a really interesting conversation with Sue
+Borchardt (@contemplatethis) about&#8230; It was focused on on some things that
+Jabe was tweeting about, but one of the things he mentioned was like Janus
+time. The god of transition, the two faces. When you&#8217;re changing, you are
+literally in both the future state and the previous past state at the same
+time, and you&#8217;re trying to reconcile both of those things together. Just
+hearing that was like, &#8220;Ohhhh, right. That&#8217;s why it&#8217;s so hard.&#8221;
+Because we have to be of two minds at once. I don&#8217;t know about you, but I have
+a hard time being of one mind at any one given point in time, let alone&#8230; </p>
+
+
+
+<p><strong>Anthony </strong>[00:28:08] Right.
+Right. And in part, you&#8217;re also, like we talked about earlier, you&#8217;re in the
+mind of the thing that you&#8217;re trying to change, too. The thing was brought
+together by how many people&#8230; We call it the organization, because it&#8217;s hard
+to&#8230; Sometimes it&#8217;s hard to literally know. I don&#8217;t know who to blame for
+this, to go ask them, &#8220;What were you thinking and why? And what were all
+the forces on you?&#8221; No, at some point we just have a shortcut. The
+organization made this, maybe you understand what was going on in the
+organization at the time. So now you&#8217;re of two minds, you&#8217;re reflecting on the
+other minds, right. Ah man! </p>
+
+
+
+<p><strong>Ben </strong>[00:28:47] Most
+often the answer is, nobody knows. It&#8217;s all in someone&#8217;s head, and the only way
+that would ever make its way out is if you asked them specifically about it.
+And to even know who to ask is of course a question. If you&#8217;re just doing
+inquiry, you&#8217;re just trying to find out what happened, what brought us to this
+point, so you can figure out how to go from there, how to move on, how to move
+forward. You almost have to do an archeological dig into the artifacts, into
+the org charts, into the email threads, just to figure out who was there. </p>
+
+
+
+<p><strong>Anthony </strong>[00:29:58] Right, these artifacts and these behaviors that other people are having around these artifacts, implicit or explicit, they&#8217;re shaping the next person who comes in, and the next person that comes in, or the next decision that&#8217;s made. How did you get away doing this for 15 years? It&#8217;s because the first person did it and never questioned it? Or it wasn&#8217;t hard enough, or it wasn&#8217;t within their&#8230; That&#8217;s what I wonder, too, like how many people&#8230; What was special about you and I, that we came in and got rubbed the wrong way by something that had been going on for 15 years. So was it bad if 15 years&#8217; worth of people lived with it for that long? How did we know to change it? Why now? To what? Let&#8217;s go, I&#8217;m on my TOC (Theory of Constraints) right now. Like why did we change this, and why did we change it to what we changed it to? And what was missing that nobody was changing it before? Or maybe we didn&#8217;t notice that they were crashing against the rocks of the organizational inertia, I don&#8217;t know. </p>
+
+
+
+<p><strong>Ben </strong>[00:31:06] I mean there is a notion of agitation here though, too. So you know about Tasshin. And Tasshin is a Buddhist monk. He&#8217;s really into the Theory of Constraints, all this kind of stuff. But one of the things he talks about is this thing called Burja Mapping, and Burja Mapping is a way to think about power dynamics in organizations, and really how to&#8230; It&#8217;s a way to think and model a system of social dynamics and power dynamics. But one of the aspects that he talks about is the difference between live and dead players. Dead players are basically following a script, and sometimes that&#8217;s very good to be doing, whereas live players are often breaking scripts and writing their own. And that is also great for certain circumstances, and all this kind of stuff. And it&#8217;s not like a binary thing. I think it&#8217;s probably more of a gradient kind of dynamic. But when you talk about, like, &#8220;What is it that&#8217;s keeping the things going?&#8221; is that you have a lot of people following scripts, and then there&#8217;s the agitator, the heretic. I think that&#8217;s kind of the role that you played&#8230; Maybe what happened was that there was a pocket of progressively more heretical individuals in this organization. And what that enabled was, those people bringing in other people that were even more heretical. </p>
+
+
+
+<p><strong>Anthony </strong>[00:32:32] It was kind of by chance then, even. </p>
+
+
+
+<p><strong>Ben </strong>[00:32:35] Well yeah. I mean everything is by chance, maybe. </p>
+
+
+
+<p><strong>Anthony </strong>[00:32:38] That&#8217;s probably true, right? </p>
+
+
+
+<p><strong>Ben </strong>[00:32:39] But at the same time, you were particularly&#8230; I&#8217;m gonna use the word &#8220;agitating,&#8221; but I mean it in a good way. You&#8217;re looking at this system and going, &#8220;What!? Like, what are you doing? This doesn&#8217;t make any sense. Why would you do that to that person?&#8221; All that kind of stuff didn&#8217;t make sense to you. </p>
+
+
+
+<p><strong>Anthony </strong>[00:32:59] And that&#8217;s what it comes down to it&#8217;s not&#8230; And I think this is hard for even the best operator&#8230; It&#8217;s not, &#8220;This is bad, morally.&#8221; Like, you&#8217;re doing something&#8230; Although maybe that is sometimes the first inclination. Maybe it&#8217;s more phrased like, &#8220;This is wrong technically.&#8221; But how do I know that, right. &#8220;Well because you&#8217;re hurting people.&#8221; But like you talked about in the episode I listened to, the process that occurred at the end of a release that someone had to take home on their laptop right and fight all weekend&#8230; How can you do this to people? How can you let this person perform this process at the end of the release for years and years on end? Chewing up weekends when it was an rsync. That&#8217;s what&#8217;s so frustrating. It&#8217;s not even new stuff right. It wasn&#8217;t new technology. It wasn&#8217;t some creative endeavor. Like if anybody took a minute to write it down, they would have been like, &#8220;What are we? We&#8217;re asking who to do what? How many times? When?&#8221; I think it would&#8217;ve been so obvious. But it&#8217;s hard to go back and think about it like that. </p>
+
+
+
+<p><strong>Ben </strong>[00:34:08] Anthony, thank you so much for coming on and talking to me. I really appreciate your time, and I&#8217;m so glad that we got to talk a little bit about software and systems and humans and all this wonderful stuff. How can people find out more about you? How can people ask you questions and things? </p>
+
+
+
+<p><strong>Anthony </strong>[00:34:26] Don&#8217;t, hahaha. I&#8217;m @AnthonyMastrean, and I&#8217;m sure Ben will put the link somewhere. That&#8217;s probably the best way to get to me right now. I have a bad web site that&#8217;s got garbage on it. I&#8217;m constantly hoping to update those materials, right&#8230; </p>
+
+
+
+<p><strong>Ben </strong>[00:34:44] It&#8217;s almost like it&#8217;s kind of a metaphor for software. </p>
+
+
+
+<p><strong>Anthony </strong>[00:34:48] It really is, right. That&#8217;s not gonna do it.</p>
+
+
+
+<p><strong>Ben </strong>[00:34:52] All right, thanks man. I&#8217;ll put a link to all the things in the show notes. </p>
+
+
+
+<p><strong>Anthony </strong>[00:34:57] Cool </p>

@@ -2,15 +2,8 @@
 .jekyll-cache/*
 _site/*
 vendor/*
-writings/_posts/*
-
-!writings/_posts/.keep
-
-yak-planet.ini
-yak-planet.db
 
 .DS_Store
 ._*
-*.db
 *~
 *.swp
