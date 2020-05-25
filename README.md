@@ -139,6 +139,10 @@ Reusable elements from the `_includes` folder:
 
 	Reusable "member card" element, currently used in the members list, individual member pages, and in the `_layouts/post.html` template.
 
+- `nav.html`
+
+	Page navigation elements.
+
 - `project-box.html`
 
 	Project card, used in the projects list and individual member pages.

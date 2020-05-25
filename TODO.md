@@ -79,8 +79,6 @@
 
 - [ ] Figure out some kind of services / how to engage with us / contact us page. (How to do this while still being individual-member-centric?)
 
-- [ ] Use pure CSS for project "collaborator expander" 
-
 - [ ] Additional member info ideas:
 
 	- [ ] Add facility for tagging member skills
@@ -95,6 +93,13 @@
 	- Push to Substack (how?) or Mailchimp (Mandrill API?)
 	- Minimal/no human curration
 	- [Reference idea](https://discordapp.com/channels/692111190851059762/692847835766325386/708707475117047910) (Nathan Acks/Darren Kong)
+
+- [ ] Figure out how to automatically switch between light and dark color schemes using [`prefers-color-scheme`](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme)
+
+	- The biggest barrier right now is that the default accent color is too dark for a black-on-white scheme
+		- We either need to be able to define two different accent colors, or (perhaps better yet), automatically adjust a given accent color to be lighter/darker by some percentage
+	- Change pages to allow for `light`, `dark`, and `no-preference` options
+		- Site includes will also need to be adjusted to support `no-preference`
 
 - [ ] Figure out how to integrate the Yak Collective Twitter list?
 

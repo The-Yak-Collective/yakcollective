@@ -141,12 +141,20 @@ collections:
         widget: image
         required: true
         hint: An image file that will be used as the "banner" for your report. Should be either an SVG file, or a JPEG or PNG image at least 1280x800 pixels in size. Text will be displayed over this, so don't use something with a lot of detail (very dark images will also need to use additional CSS to improve page readability).
+      - label: Project Color Scheme
+        name: color_scheme
+        widget: select
+		default: [ dark, light ]
+		default: [ light ]
+        required: true
+        hint: Whether the project page should use a black-on white (light) or white-on-black (dark) color scheme.
       - label: Accent Color
         name: accent_color
         widget: string
+		default: 170,35,170
         required: true
-        hint: The hex-color to use as the accent on your report for the projects list page. Should be chosen to go well with your hero image.
-        pattern: [ "#[0-9abcdef]{6}", "Should be a hex color string, beginning with a '#'." ]
+        hint: The (comma-separated) RGB color to use as the accent on your report for the projects list page. Should be chosen to go well with your hero image.
+        pattern: [ "[0-9]{1,3},[0-9]{1,3},[0-9]{1,3}", "Should be a comma-separated RGB color string." ]
       - label: Additional CSS
         name: page_css
         widget: text

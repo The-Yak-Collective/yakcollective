@@ -1,5 +1,6 @@
 html {
 	height: 100%;
+	z-index: -2;
 }
 
 body {
@@ -9,6 +10,15 @@ body {
 	min-height: 100%;
 	display: flex;
 	flex-direction: column;
+	z-index: -2;
+}
+
+a {
+	text-decoration-line: none;
+}
+
+a:hover {
+	text-decoration-line: underline;
 }
 
 .fill-space {
@@ -17,11 +27,6 @@ body {
 
 .container h2{
 	padding-top: 40px;
-}
-
-a.yak-link-override,
-a.yak-link-override:hover {
-	box-shadow: none;
 }
 
 .yak-post pre {
@@ -50,22 +55,9 @@ a.yak-link-override:hover {
 	max-width: 100%;
 }
 
-ul a,
-ol a,
-p a,
-form a,
-.mobilemenu a,
-.next,
-.previous,
-h1 a,
-h2 a,
-h3 a,
-h4 a,
-h5 a,
-h6 a,
-.yak-post a {
-	text-decoration: none;
-	transition: ease-in .05s border-bottom;
+.yak-content a {
+	color: inherit;
+	text-decoration-line: underline;
 }
 
 h1,
@@ -82,22 +74,43 @@ h6 {
 	font-family: "Playfair Display";
 }
 
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+	text-decoration-line: none !important;
+}
+
+h1 a:hover,
+h2 a:hover,
+h3 a:hover,
+h4 a:hover,
+h5 a:hover,
+h6 a:hover {
+	text-decoration-line: underline !important;
+}
+
 .yak-project-header aside {
 	box-sizing: border-box;
 }
 
-.yak-project-header aside a,
-.yak-project-header aside a:hover {
-	box-shadow: none;
+.project-box {
+	display: block;
 }
 
-.projectbox {
+.project-box time {
+	display: block;
+}
+
+a.member-box,
+a.project-box {
 	text-decoration: none;
-	display: block;
 }
 
-.projectbox time {
-	display: block;
+.pseudo-link {
+	text-decoration-line: underline;
 }
 
 .toc {

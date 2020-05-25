@@ -7,36 +7,26 @@ tagline: Making the next normal better than the last one
 type: Report
 sequence: covid-19
 hero_image: /assets/dont-waste-the-covid19-reboot-hero.svg
-accent_color: "#aa23aa"
+color_scheme: light
+accent_color: "170,35,170"
 page_css: |
-  .dont-waste-the-covid19-reboot-report {
+  .report {
     width: 140%;
-    margin-top: -150px;
-    height: 634px;
-    border-radius: 5px;
     margin-left: -20%;
-    box-shadow: 5px 5px 10px #888888;
-    border: 1px solid black;
+    margin-top: -7rem;
+    height: 634px;
     display: block;
   }
-  .dont-waste-the-covid19-reboot-report-links img {
-    height: 16px;
-    display: inline-block;
-  }
-  .dont-waste-the-covid19-reboot-report-links a {
-    text-decoration: none;
-    color: #212121;
-    box-shadow: inset 0 -0.25em 0 rgba(170,35,170,0.4);
-    transition: ease-in .05s border-bottom;
-  }
-  .dont-waste-the-covid19-reboot-report-links a:hover {
-    box-shadow: inset 0 -1.25em 0 rgba(170,35,170,0.4);
-  }
-  @media (max-width: 1024px) {
-    .dont-waste-the-covid19-reboot-report{
+  @media (max-width: 84em) {
+    .report{
       width: 100%;
-      margin-left: 0px;
-      height: 400px;
+      margin-left: 0;
+      height: 29rem;
+    }
+  @media (max-width: 60em) {
+    .report{
+      margin-top: -5rem;
+      height: 58vw;
     }
   }
 summary: |
@@ -69,9 +59,9 @@ collaborators:
   - jordan-allen
 ---
 
-<iframe class="dont-waste-the-covid19-reboot-report" src="https://docs.google.com/presentation/d/e/2PACX-1vTa8T4sQLAF2cbRFTqcxZGefI7A2HP54ZKBlyvpi03iTWrzt10W50MP-fQ13am5_svHeJL_-zjALkVT/embed?start=false&loop=false&delayms=60000" frameborder="0" width="1920" height="1109" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+<iframe class="report bw1" src="https://docs.google.com/presentation/d/e/2PACX-1vTa8T4sQLAF2cbRFTqcxZGefI7A2HP54ZKBlyvpi03iTWrzt10W50MP-fQ13am5_svHeJL_-zjALkVT/embed?start=false&loop=false&delayms=60000" frameborder="0" width="1920" height="1109" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 
-<aside class="dont-waste-the-covid19-reboot-report-links pv4">
+<aside class="pt3">
 <img class="h1" src="https://ssl.gstatic.com/docs/presentations/images/favicon5.ico"> <a href="https://docs.google.com/presentation/d/1OfBuSq4SImE1Gq2EaAGCAlkwC8LZRCWx-7O_VOHJ5TI/edit#slide=id.p1">Open Google Doc</a> / <img class="h1" src="/assets/pdf.png"> <a href="https://docs.google.com/presentation/d/1OfBuSq4SImE1Gq2EaAGCAlkwC8LZRCWx-7O_VOHJ5TI/export/pdf">Download PDF</a>
 </aside>
 

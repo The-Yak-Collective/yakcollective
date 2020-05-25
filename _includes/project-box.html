@@ -1,10 +1,10 @@
-{% if project.published == true %}<a href="/projects/{{ project.slug }}/" class="projectbox">{% else %}<div class="projectbox">{% endif %}
-	<div class="ba b--black-10 br2 mv4 relative">
+<div id="{{ project.name }}">
+	{% if project.published == true %}<a href="/projects/{{ project.slug }}/"{% else %}<div{% endif %} class="project-box ba mv4 relative" id="{{ project.name }}">
 		<div class="w-50">
-			<div class="f6 lh-title fw9 mv0 pt1 bt bw1 ph2 sans-serif ttu">{{ project.type }}</div>
-				<h2 class="{{ project.name }}-color ph2 fw8 f3 lh-solid pv1 mb1 mt4">{{ project.title }}</h2>
-				<p class="{{ project.name }}-color ph2 f5 lh-solid pv1 mt0 mb4 fw6 subhead">{{ project.tagline }}</p>
-				<p class="f6 ph2 mv2">
+			<div class="f6 lh-title fw9 mv0 pt1 bt bw1 ph2 sans-serif ttu silent-link">{{ project.type }}</div>
+				<h2 class="ph2 fw8 f3 lh-solid pv1 mb1 mt4 pseudo-link">{{ project.title }}</h2>
+				<p class="ph2 f5 lh-solid pv1 mt0 mb4 fw6 subhead pseudo-link">{{ project.tagline }}</p>
+				<p class="f6 ph2 mv2 silent-link">
 					<span class="ttu">Lead editors:</span>
 					{% assign lead_editors = project.lead_editors %}
 					{% assign total_editors = lead_editors.size %}
@@ -23,7 +23,7 @@
 						{% endfor %}
 					{% endif %}
 				</p>
-				<time class="f6 ph2 mv3 ttu tracked-tight gray">
+				<time class="f6 ph2 mv3 ttu tracked-tight">
 					Published: {{ project.date | date_to_long_string: "ordinal", "US" }} UTC
 					<!-- After: https://stackoverflow.com/a/61051707 -->
 					{% if project.sequence %}
@@ -33,6 +33,6 @@
 					{% endif %}
 				</time>
 			</div>
-		<div class="w-50 h-100 {{ project.name }}-hero absolute top-0 right-0"></div>
-	</div>
-{% if project.published == true %}</a>{% else %}</div>{% endif %}
+		<div class="w-50 h-100 absolute top-0 right-0 bl hero"></div>
+	{% if project.published == true %}</a>{% else %}</div>{% endif %}
+</div>
