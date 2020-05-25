@@ -48,7 +48,6 @@ Here's a quick rundown of the moving parts here.
 
 ### Assets
 
-- `css/*`
 - `assets/*`
 - `robots.txt`
 
