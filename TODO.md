@@ -98,8 +98,10 @@
 
 	- The biggest barrier right now is that the default accent color is too dark for a black-on-white scheme
 		- We either need to be able to define two different accent colors, or (perhaps better yet), automatically adjust a given accent color to be lighter/darker by some percentage
+		- I think that using two site colors might be the only way to do this at a practical level
 	- Change pages to allow for `light`, `dark`, and `no-preference` options
 		- Site includes will also need to be adjusted to support `no-preference`
+		- If we need to use two different accent colors for the entire site, then we'll probably need to _not_ support the `no-preference` option for project pages (otherwise it just gets too complicated).
 
 - [ ] Figure out how to integrate the Yak Collective Twitter list?
 
