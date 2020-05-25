@@ -43,7 +43,7 @@
 
 - [X] Move to a more warren-like structure?
 
-	- No navigation, more in-page links
+	- ~~No navigation~~, more in-page links
 	- ~~Heavy use of tagging for projects?~~
 	- ~~Can we figure out how to auto-tag incoming posts from feeds? Maybe some sort of light keyword-based classification? (This is another argument for moving to Gatsby, as this will probably be easier to implement there.)~~
 	- Create links between members and all of their posts/projects.

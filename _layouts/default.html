@@ -7,10 +7,9 @@
 
 	<body class="w-100 ph0-l center relative h-100">
 		<div class="fill-space">
+			{% include nav.html %}
 			{{ content }}
 		</div>
-		<footer class="bottom-0 ph3 ph5-m ph6-l mid-gray bt b--black-10 tc w-100">
-			{% include footer.html %}
-		</footer>
+		{% include footer.html %}
 	</body>
 </html>
