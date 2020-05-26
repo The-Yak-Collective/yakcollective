@@ -13,60 +13,24 @@
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200;400;700&family=Playfair+Display&display=swap">
 <link rel="stylesheet" href="/assets/tachyons.min.css">
-<link rel="stylesheet" href="/assets/format.css">
+<link rel="stylesheet" href="/assets/style.css">
 {% if page.color_scheme %}
 	{% assign color_scheme = page.color_scheme %}
 {% else %}
 	{% assign color_scheme = site.color_scheme %}
 {% endif %}
-<link rel="stylesheet" href="/assets/{{ color_scheme }}.css">
 <style type="text/css">
-	{% if page.accent_color %}
-		{% assign accent_color = page.accent_color %}
+	{% if color_scheme == "dark" %}
+		{% include dark.css %}
+	{% elsif color_scheme == "light" %}
+		{% include light.css %}
 	{% else %}
-		{% assign accent_color = site.accent_color %}
-	{% endif %}
-	a:hover { color: rgba({{ accent_color }},1.00); }
-	footer a:hover { color: rgba({{ accent_color }},0.75); }
-	a.yak-logo:hover .yak-logo-image { background-color: rgba({{ accent_color }},0.75); }
-	.yak-content a { text-decoration-color: rgba({{ accent_color }},0.60); }
-	.yak-content a:hover { color: rgba({{ accent_color }},1.00); text-decoration-color: rgba({{ accent_color }},1.00); }
-	.pseudo-link { text-decoration-color: rgba({{ accent_color }},0.60); }
-	a.member-box:hover { color: rgba({{ accent_color }},1.00); }
-	{% if page.hero_image %}
-		.hero { position: relative; }
-		.hero:before {
-			content : "";
-			display: block;
-			position: absolute;
-			top: 0;
-			left: 0;
-			background-image: url("{{ page.hero_image }}");
-			width: 100%;
-			height: 100%;
-			opacity : 0.4;
-			z-index: -1;
+		@media (prefers-color-scheme: dark) {
+			{% include dark.css %}
 		}
-	{% else %}
-		.hero { background-color: rgba({{ accent_color }},0.20); }
-	{% endif %}
-	{% if page.url == "/projects/" or page.layout == "member" %}
-		{% for project in site.projects %}
-			{% if project.name %}
-				{% if project.accent_color %}
-					{% assign accent_color = project.accent_color %}
-				{% else %}
-					{% assign accent_color = site.accent_color %}
-				{% endif %}
-				#{{ project.name }} a:hover { color: rgba({{ accent_color }},1.00); }
-				#{{ project.name }} .pseudo-link { text-decoration-color: rgba({{ accent_color }},0.60); }
-				{% if project.hero_image %}
-					#{{ project.name }} .hero { background-image: url("{{ project.hero_image }}"); }
-				{% else %}
-					#{{ project.name }} .hero { background-color: rgba({{ accent_color }},0.60); }
-				{% endif %}
-			{% endif %}
-		{% endfor%}
+		@media (prefers-color-scheme: light) {
+			{% include light.css %}
+		}
 	{% endif %}
 	{% if page.page_css %}
 		{{ page.page_css }}
