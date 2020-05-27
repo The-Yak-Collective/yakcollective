@@ -88,7 +88,7 @@
 
 - [ ] Figure out some kind of services / how to engage with us / contact us page. (How to do this while still being individual-member-centric?)
 
-- [ ] Migrate Glitch script to a [Netlify serverless function](https://docs.netlify.com/functions/overview/)
+- [ ] Migrate Glitch script to Netlify [serverless functions](https://docs.netlify.com/functions/overview/) or [build plugins](https://docs.netlify.com/configure-builds/build-plugins/)?
 
 - [ ] Additional member info ideas:
 
