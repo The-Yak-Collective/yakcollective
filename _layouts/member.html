@@ -40,7 +40,7 @@ layout: minimal
 {% assign writings = site.categories["writings"] | where: "author", member.name %}
 {% if writings.size > 0 %}
 	<section class="yak-post">
-		<h2 id="{{ member.name }}-writings">Latest Writings</h2>
+		<h2 id="{{ member.name }}-writings">Writings</h2>
 		<!-- Adapted from: https://stackoverflow.com/a/19104574 -->
 		{% for post in writings %}
 			{% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
