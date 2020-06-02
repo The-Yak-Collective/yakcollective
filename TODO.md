@@ -73,6 +73,14 @@
 		- Site includes will also need to be adjusted to support `no-preference`
 		- ~~If we need to use two different accent colors for the entire site, then we'll probably need to _not_ support the `no-preference` option for project pages (otherwise it just gets too complicated).~~
 
+- [ ] Migrate Glitch script to Netlify [serverless functions](https://docs.netlify.com/functions/overview/)
+
+	- https://github.com/DavidWells/netlify-functions-workshop#workshop-lessons
+	- https://www.trysmudford.com/blog/making-the-static-dynamic-instagram-importer/
+	- https://github.com/netlify/netlify-lambda
+	- https://github.com/rretsiem/renem.net/blob/master/src/functions/flickr-webhook.js
+	- https://docs.netlify.com/configure-builds/file-based-configuration/
+
 - [ ] Infrastructure housekeeping
 
 	- [X] Update `README.md`
@@ -87,8 +95,6 @@
 - [ ] Migrate [onboarding document](https://docs.google.com/document/d/1I63ZKu8o0DpBG0tWhssIsCinlXeBKO-xGyvmIMXXAWE/) into website (per [Venkatesh Rao](https://discordapp.com/channels/692111190851059762/692826420191297556/709550901555363861)).
 
 - [ ] Figure out some kind of services / how to engage with us / contact us page. (How to do this while still being individual-member-centric?)
-
-- [ ] Migrate Glitch script to Netlify [serverless functions](https://docs.netlify.com/functions/overview/) or [build plugins](https://docs.netlify.com/configure-builds/build-plugins/)?
 
 - [ ] Additional member info ideas:
 
