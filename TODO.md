@@ -96,6 +96,12 @@
 
 - [ ] Figure out some kind of services / how to engage with us / contact us page. (How to do this while still being individual-member-centric?)
 
+- [ ] Figure out how to post to Twitter when generating a "writings" post
+
+- [ ] Figure out how to integrate feed list into the Netlify function, rather than using IFTTT
+
+	- This needs to be user-editable!
+
 - [ ] Additional member info ideas:
 
 	- [ ] Add facility for tagging member skills
