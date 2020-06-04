@@ -1,0 +1,104 @@
+---
+title: |
+  Roam themes: how to style Roam Research with custom CSS
+date: 2020-06-04 02:00:00 +0000
+author: anne-laure-le-cunff
+original_link: https://nesslabs.com/roam-research-themes-custom-styling-css?utm_source=rss&utm_medium=rss&utm_campaign=roam-research-themes-custom-styling-css
+---
+
+<p>One of the most exciting aspects of Roam Research is metaprogramming: the ability to modify Roam&#8217;s behaviour inside Roam itself, without ever touching the source code. This ability opens the door for building custom algorithms for thoughts, and designing a thinking environment as close as possible to the way your mind works. Using CSS to styling Roam with a custom theme is just another way to map the way your Roam database works to your own thought processes.</p>
+
+
+
+<p>The best thing? Whether you know how to use CSS—which stands for Cascading Style Sheets and basically describes how elements are to be displayed on screen—you will be able to install custom themes in Roam. Let&#8217;s go through these steps together.</p>
+
+
+
+<h2>1. Create a new page for your CSS</h2>
+
+
+
+<p>The first thing you need to do is to create a new page which will be housing your custom styles. The new page should be named <code>roam/css</code> — make sure it’s all lower case, with no extra space.</p>
+
+
+
+<figure class="wp-block-image size-large"><img src="https://nesslabs.com/wp-content/uploads/2020/06/roam-research-custom-css-1-1024x544.png" alt="Roam themes - create roam/css page to install custom css" class="wp-image-9513" srcset="https://nesslabs.com/wp-content/uploads/2020/06/roam-research-custom-css-1-1024x544.png 1024w, https://nesslabs.com/wp-content/uploads/2020/06/roam-research-custom-css-1-300x159.png 300w, https://nesslabs.com/wp-content/uploads/2020/06/roam-research-custom-css-1-768x408.png 768w, https://nesslabs.com/wp-content/uploads/2020/06/roam-research-custom-css-1.png 1437w" sizes="(max-width: 1024px) 100vw, 1024px" /><figcaption>Create roam/css page to install custom CSS</figcaption></figure>
+
+
+
+<p>That&#8217;s it for the first page. In the future, any new styles you want to use will need to be added to this page, and not anywhere else.</p>
+
+
+
+<h2>2. Add CSS to the page</h2>
+
+
+
+<p>Now that your styles page is created, let&#8217;s make some magic with it. You need to follow these three steps to add and activate custom CSS to your Roam database.</p>
+
+
+
+<ul><li>The first block (bullet point) should have the name of your theme as a bracketed link. For instance, my theme is called <code>[[Roamness]]</code>. This is not technically mandatory but will allow you to easily turn the theme on and off in the future.</li><li>The second block should be an indented code block with your CSS. Just paste <code>```Your CSS here```</code> in the second block and press enter. Then, replace the placeholder text with your actual CSS. Please make sure the code block is indented under the first block so you can easily turn the theme on and off.</li><li>Finally, you need to turn the block type to CSS. Boom—your Roam database will now be styled with the CSS you added to the second block.</li></ul>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter size-large"><img src="https://nesslabs.com/wp-content/uploads/2020/06/roam-research-custom-css-2.png" alt="Install custom CSS" class="wp-image-9514" srcset="https://nesslabs.com/wp-content/uploads/2020/06/roam-research-custom-css-2.png 759w, https://nesslabs.com/wp-content/uploads/2020/06/roam-research-custom-css-2-300x72.png 300w" sizes="(max-width: 759px) 100vw, 759px" /><figcaption>Create dedicated blocks to house the custom styles</figcaption></figure></div>
+
+
+
+<h2>3. Turning a theme on and off</h2>
+
+
+
+<p>If you are sharing a database with other people, or if you are recording a demo video and need the vanilla theme, you may want to turn your theme off for a while.</p>
+
+
+
+<p>To do so, go to the <code>roam/css</code> page you created in the first step, click on the filter icon in the top right corner of the page (in the top bar), and <code>SHIFT + CLICK</code> on the name of your theme to filter it out.</p>
+
+
+
+<p>To turn it one again, go to the page, click on the filter icon, and <code>SHIFT + CLICK</code> again on the name of the theme.</p>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter size-large"><img src="https://nesslabs.com/wp-content/uploads/2020/06/roam-research-custom-css-3.png" alt="" class="wp-image-9515" srcset="https://nesslabs.com/wp-content/uploads/2020/06/roam-research-custom-css-3.png 465w, https://nesslabs.com/wp-content/uploads/2020/06/roam-research-custom-css-3-300x124.png 300w" sizes="(max-width: 465px) 100vw, 465px" /><figcaption>Turn themes on and off with the filter function</figcaption></figure></div>
+
+
+
+<p>Another way you can turn themes on and off is by changing the type of the code block from CSS to something else, such as HTML or JavaScript, so the code is not interpreted any longer.</p>
+
+
+
+<h2>3. Add pre-styled themes to Roam</h2>
+
+
+
+<p>Don’t want to code your own theme? Don’t know how to use CSS? Fear not, you can install Roam themes from the <a href="https://roamresearch.com/#/app/help/page/fJRcVITNY" target="_blank" rel="noreferrer noopener">gallery.</a></p>
+
+
+
+<p>Click on the question mark at the top right of the screen, then click on “Help Database” to open the documentation. Then, in the search bar, type “Roamcult Themes” to access the gallery, which features screenshots and CSS code for several themes.</p>
+
+
+
+<p>Navigate to a theme you like, copy the CSS, and paste it in the <code>roam/css</code> page in your own database. Make sure the code block’s type is CSS.</p>
+
+
+
+<p>If you’re a writer or content creator and want a theme designed for content creation, I created <a href="https://nesslabs.com/roamness-roam-research-theme">Roamness</a>, which you will find in the themes gallery. </p>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter size-large"><img src="https://nesslabs.com/wp-content/uploads/2020/06/roamness-screenshot-1024x604.png" alt="Roamness custom theme for Roam Research" class="wp-image-9510" srcset="https://nesslabs.com/wp-content/uploads/2020/06/roamness-screenshot-1024x604.png 1024w, https://nesslabs.com/wp-content/uploads/2020/06/roamness-screenshot-300x177.png 300w, https://nesslabs.com/wp-content/uploads/2020/06/roamness-screenshot-768x453.png 768w, https://nesslabs.com/wp-content/uploads/2020/06/roamness-screenshot.png 1081w" sizes="(max-width: 1024px) 100vw, 1024px" /><figcaption><a href="https://nesslabs.com/roamness-roam-research-theme">Roamness: a theme for content creators</a></figcaption></figure></div>
+
+
+
+<p>And if you are more of a visual person, Conor White-Sullivan put together a video walkthrough detailing each step to install custom CSS to style your Roam Research database. Have fun!</p>
+
+
+
+<figure class="wp-block-embed-youtube wp-block-embed is-type-video is-provider-youtube wp-embed-aspect-4-3 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">
+<iframe title="Applying Custom Themes for your RoamResearch Knowledge Graph" width="1100" height="825" src="https://www.youtube.com/embed/UY-sAC2eGyI?feature=oembed" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div></figure>
+<p>The post <a rel="nofollow" href="https://nesslabs.com/roam-research-themes-custom-styling-css">Roam themes: how to style Roam Research with custom CSS</a> appeared first on <a rel="nofollow" href="https://nesslabs.com">Ness Labs</a>.</p>
