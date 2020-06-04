@@ -73,6 +73,8 @@
 		- Site includes will also need to be adjusted to support `no-preference`
 		- ~~If we need to use two different accent colors for the entire site, then we'll probably need to _not_ support the `no-preference` option for project pages (otherwise it just gets too complicated).~~
 
+- [ ] [Create a _Join Us_ page](https://discordapp.com/channels/692111190851059762/704369362315772044/718228461684260944)
+
 - [ ] Migrate Glitch script to Netlify [serverless functions](https://docs.netlify.com/functions/overview/)
 
 	- https://github.com/DavidWells/netlify-functions-workshop#workshop-lessons
