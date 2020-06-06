@@ -14,8 +14,16 @@ a {
 	color: rgba(0,0,0,0.75);
 }
 
-a:hover {
+a:hover,
+.required {
 	color: rgba({{ accent_color }},1.00);
+}
+
+input,
+select {
+	color: rgba(0,0,0,1.00);
+	background-color: rgba(255,255,255,1.0);
+	border-color: rgba(0,0,0,0.15);
 }
 
 footer {
@@ -31,11 +39,9 @@ footer a:hover {
 	color: rgba({{ accent_color }},0.75);
 }
 
-details {
-	color: rgba(0,0,0,0.60);
-}
-
-time {
+time,
+details,
+.details {
 	color: rgba(0,0,0,0.60);
 }
 
@@ -119,7 +125,8 @@ a.member-box:hover {
 	color: rgba(0,0,0,0.60);
 }
 
-.toc {
+.toc,
+.submit {
 	background-color: rgba(0,0,0,0.05);
 }
 
