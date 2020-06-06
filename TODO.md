@@ -73,7 +73,7 @@
 		- Site includes will also need to be adjusted to support `no-preference`
 		- ~~If we need to use two different accent colors for the entire site, then we'll probably need to _not_ support the `no-preference` option for project pages (otherwise it just gets too complicated).~~
 
-- [ ] [Create a _Join Us_ page](https://discordapp.com/channels/692111190851059762/704369362315772044/718228461684260944)
+- [X] [Create a _Join Us_ page](https://discordapp.com/channels/692111190851059762/704369362315772044/718228461684260944)
 
 - [ ] Migrate Glitch script to Netlify [serverless functions](https://docs.netlify.com/functions/overview/)
 
@@ -95,6 +95,8 @@
 	- [ ] Schedule office hours, walk interested folks through the site changes.
 
 - [ ] Migrate [onboarding document](https://docs.google.com/document/d/1I63ZKu8o0DpBG0tWhssIsCinlXeBKO-xGyvmIMXXAWE/) into website (per [Venkatesh Rao](https://discordapp.com/channels/692111190851059762/692826420191297556/709550901555363861)).
+
+	- If it's not already in there, it seems like the [code of conduct](https://roamresearch.com/#/app/ArtOfGig/page/i92e8kE2x) should probably be added, and then explicitly linked from `join.md` and `welcome.md` (rather than continuing to link to Roam).
 
 - [ ] Figure out some kind of services / how to engage with us / contact us page. (How to do this while still being individual-member-centric?)
 
