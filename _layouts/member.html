@@ -27,7 +27,7 @@ layout: minimal
 {% if projects_lead.size > 0 %}
 	<section>
 		<h2 class="yak-post" id="{{ member.name }}-projects-lead">Project Lead On</h2>
-		{% for project in projects_lead %}
+		{% for project in projects_lead reversed %}
 			{% include project-box.html %}
 		{% endfor %}
 	</section>
@@ -35,7 +35,7 @@ layout: minimal
 {% if projects_collaborated.size > 0 %}
 	<section>
 		<h2 class="yak-post" id="{{ member.name }}-projects-lead">Collaborated On</h2>
-		{% for project in projects_collaborated %}
+		{% for project in projects_collaborated reversed %}
 			{% include project-box.html %}
 		{% endfor %}
 	</section>

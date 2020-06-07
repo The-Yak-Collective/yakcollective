@@ -5,8 +5,8 @@ layout: minimal
 <header>
 	{{ content }}
 </header>
-{% assign published_projects = site.projects | where_exp: "project", "project.date <= site.time or site.future == true" %}
-{% assign upcoming_projects = site.projects | where_exp: "project", "project.date > site.time and site.future == false" %}
+{% assign published_projects = site.projects | where_exp: "project", "project.date <= site.time or site.future == true" | reverse %}
+{% assign upcoming_projects = site.projects | where_exp: "project", "project.date > site.time and site.future == false" | reverse %}
 <section>
 	<header><h2>Latest Projects</h2></header>
 	{% for project in published_projects limit: 3 %}
