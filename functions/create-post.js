@@ -19,27 +19,27 @@ exports.handler = async function(event, context) {
 
 	// Reject requests without the right secret
 	//
-	//if (event.token !== process.env.WEBHOOK_TOKEN) {
-	//	return {
-	//		statusCode: 401,
-	//		body: "Access denied"
-	//	}
-	//}
+	if (event.queryStringParameters.token !== process.env.WEBHOOK_TOKEN) {
+		return {
+			statusCode: 401,
+			body: "Access denied"
+		}
+	}
 
 	// Set incoming post category, or none
 	//
-	//var postPath;
-	//if (event.category === null || event.category.length === 0) {
-	//	postPath = "_posts"
-	//} else {
-	//	postPath = event.category + "/_posts"
-	//}
+	var postPath;
+	if (event.queryStringParameters.category === null || event.queryStringParameters.category.length === 0) {
+		postPath = "_posts"
+	} else {
+		postPath = event.queryStringParameters.category + "/_posts"
+	}
 
 	// Demo return
 	//
 	return {
 		statusCode: 200,
-		//body: "Eventually, I will push posts to " + process.env.GH_USER_OR_TEAM + "/" + process.env.GH_REPO + ":" + process.env.GH_BRANCH + "/" + postPath
-		body: JSON.stringify(event)
+		body: "Eventually, I will push posts to " + process.env.GH_USER_OR_TEAM + "/" + process.env.GH_REPO + ":" + process.env.GH_BRANCH + "/" + postPath
+		//body: JSON.stringify(event)
 	}
 }
