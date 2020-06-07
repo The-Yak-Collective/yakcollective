@@ -75,7 +75,7 @@
 
 - [X] [Create a _Join Us_ page](https://discordapp.com/channels/692111190851059762/704369362315772044/718228461684260944)
 
-- [ ] Migrate Glitch script to Netlify [serverless functions](https://docs.netlify.com/functions/overview/)
+- [X] Migrate Glitch script to Netlify [serverless functions](https://docs.netlify.com/functions/overview/)
 
 	- https://github.com/DavidWells/netlify-functions-workshop#workshop-lessons
 	- https://www.trysmudford.com/blog/making-the-static-dynamic-instagram-importer/

@@ -67,21 +67,14 @@ Here's a quick rundown of the moving parts here.
 
 ### Member Feeds (a.k.a. "Writings")
 
-Posts in `writings/_posts` are auto-pushed from member RSS feeds using [IFTTT](https://ifttt.com/) and [Glitch](https://glitch.com/).
+Posts in `writings/_posts` are auto-pushed from member RSS feeds using [IFTTT](https://ifttt.com/) and [Netlify Functions](https://functions.netlify.com/).
 
 Current feeds pulled are documented in [`FEEDS.md`](https://github.com/The-Yak-Collective/yakcollective/blob/warren-structure/FEEDS.md). To add or update a member feed, follow the directions in that file.
 
-The Glitch bits of the feed infrastructure are in the [`yakcollective-ifttt-connector`](https://github.com/The-Yak-Collective/yakcollective-ifttt-connector) repo.
+The Glitch bits of the feed infrastructure are:
 
-Feeds were previously pulled using [Pluto](https://feedreader.github.io/). While the IFTTT-Glitch-GitHub-Netlify pipeline (probably _way_ too much magic going on there!) is in testing, Pluto can still be used to update the current archives.
-
-```sh
-bundle exec pluto update yak-planet.ini
-./yak-make-posts.rb
-find ./writings/_posts -type f -iname '*.html' -exec sed -i -e 's/{/\&#x007B;/g;s/}/\&#x007D;/g;s/%/\&#x0023;/g' "{}" \;
-```
-
-Once the new update system is verified to be working, `yak-make-posts.rb`, `yak-planet.db`, and `yak-planet.ini` will be removed, and Pluto-specific bits will be cleaned out of `_config.yml`, `Gemfile`, and `Gemfile.lock`.
+- `packages.json`
+- `functions/*`
 
 ### Templates
 
@@ -168,6 +161,6 @@ Reusable elements from the `_includes` folder:
 - `_config.yml`
 - `Gemfile`
 - `Gemfile.lock`
-- `_redirects`
+- `netlify.toml`
 
-	Netlify page redirect directives.
+	Various Netlify build directives, including redirects.

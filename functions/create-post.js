@@ -76,7 +76,7 @@ exports.handler = async function(event, context) {
 	} else {
 		return {
 			statusCode: 400,
-			body: "Post title not found!"
+			body: "Post title not found"
 		};
 	};
 	postContent = postContent.replace(/title:.*\n/, "");
@@ -86,7 +86,9 @@ exports.handler = async function(event, context) {
 	//
 	var slugTitle = moment(postDate).format("YYYY-MM-DD-") + (accents.remove(postTitle)).toLowerCase().replace(/[^a-z0-9]/g, "-").replace(/-+/g, "-");
 
-	// Post content to GitHub
+	// Post content to GitHub, after:
+	//
+	//   https://dev.to/remotesynth/build-your-own-api-with-netlify-functions-and-zapier-webhooks-part-2-j55
 	//
 	try {
 		const github = new Octokit({
@@ -102,20 +104,13 @@ exports.handler = async function(event, context) {
 		}).then(gitHubResponse => {
 			return {
 				statusCode: 200,
-				body: "Post creation succeeded. GitHub responded:\n\n" + JSON.stringify(gitHubResponse)
+				body: "Success"
 			};
 		});
 	} catch (gitHubError) {
 		return {
 			statusCode: 500,
-			body: "Post creation failed! GitHub responded:\n\n" + JSON.stringify(gitHubError)
+			body: "Post creation in GitHub failed"
 		};
-	};
-
-	// You should not be here.
-	//
-	return {
-		statusCode: 500,
-		body: "How did you get here?"
 	};
 };

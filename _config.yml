@@ -63,13 +63,10 @@ defaults:
 
 # Includes and excludes
 #
-include: 
-  - _redirects
 exclude:
   - README.md
   - FEEDS.md
   - TODO.md
-  - yak-build.sh
-  - yak-make-posts.rb
-  - yak-planet.db
-  - yak-planet.ini
+  - functions
+  - netlify.toml
+  - package.json
