@@ -6,10 +6,22 @@ tagline: Make Homes Productive Again
 type: Report
 sequence: covid-19
 hero_image: /assets/the-new-old-home-hero.jpg
-hero_image_opacity: 0.50
 color_scheme: no-preference
-accent_color: "250,150,100"
+accent_color: "225,125,75"
 page_css: |
+  @media (prefers-color-scheme: dark) {
+    .hero:before {
+      opacity: 0.35;
+    }
+  }
+  @media (prefers-color-scheme: light) {
+    .hero:before {
+      opacity: 0.65;
+    }
+  }
+  .hero:before {
+    background-size: cover;
+  }
   .report {
     width: 140%;
     margin-left: -20%;

@@ -142,16 +142,6 @@ collections:
         widget: image
         required: true
         hint: An image file that will be used as the "banner" for your report. Should be either an SVG file, or a JPEG or PNG image at least 1280x800 pixels in size. Text will be displayed over this, so don't use something with a lot of detail (very dark images will also need to use additional CSS to improve page readability).
-      - label: Hero Image Fade
-        name: hero_image_opacity
-        widget: number
-        valueType: float
-        min: 0
-        max: 1
-        step: 0.05
-        default: 0.40
-        required: true
-        hint: The hero image will be faded into the background on the project page to improve text legibility. 0 is entirely transparent, and 1 will display the hero image as it appears on your computer. The more complex the image, the closer the fade should be to 0 to ensure legibility. In general, fades above 0.50 are not recommended.
       - label: Project Color Scheme
         name: color_scheme
         widget: select
@@ -170,7 +160,7 @@ collections:
         name: page_css
         widget: text
         required: false
-        hint: Additional CSS you want to include to style your page. Primarily (but not excludively) used to help style any HTML you include in the main body of the page.
+        hint: Additional CSS you want to include to style your page. Primarily (but not excludively) used to help style any HTML you include in the main body of the page. In particular, the `.hero:before` class will allow you to apply additional/overide stylings for the hero image.
       - label: Project Leads
         name: lead_editors
         widget: relation
