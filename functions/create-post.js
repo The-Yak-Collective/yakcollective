@@ -13,9 +13,9 @@ exports.handler = async function(event, context) {
 
 	// Init GitHub connection
 	//
-	//const github = new Octokit({
-	//	auth: process.env.GH_TOKEN
-	//});
+	const github = new Octokit({
+		auth: process.env.GH_TOKEN
+	});
 
 	// Reject requests without the right secret
 	//
@@ -23,17 +23,17 @@ exports.handler = async function(event, context) {
 		return {
 			statusCode: 401,
 			body: "Access denied"
-		}
-	}
+		};
+	};
 
 	// Set incoming post category, or none
 	//
 	var postPath;
 	if (! (event.queryStringParameters).hasOwnProperty("category") || event.queryStringParameters.category === null || event.queryStringParameters.category.length === 0) {
-		postPath = "_posts"
+		postPath = "_posts";
 	} else {
-		postPath = event.queryStringParameters.category + "/_posts"
-	}
+		postPath = event.queryStringParameters.category + "/_posts";
+	};
 
 	// Cleanup formatting of incoming post, replace special chracters, etc.
 	//
@@ -71,7 +71,7 @@ exports.handler = async function(event, context) {
 		postDate = chrono.parseDate(dateSearch[1]);
 	} else {
 		postDate = new Date();
-	}
+	};
 	postContent = postContent.replace(/date:.*\n/, "");
 	postContent = postContent.replace(/---\n/, "---\ndate: " + moment(postDate).format("YYYY-MM-DD HH:mm:ss ZZ") + "\n");
 
@@ -85,8 +85,8 @@ exports.handler = async function(event, context) {
 		return {
 			statusCode: 400,
 			body: "Post title not found!"
-		}
-	}
+		};
+	};
 	postContent = postContent.replace(/title:.*\n/, "");
 	postContent = postContent.replace(/---\n/, "---\ntitle: |\n  " + postTitle + "\n");
 
@@ -94,10 +94,33 @@ exports.handler = async function(event, context) {
 	//
 	var slugTitle = moment(postDate).format("YYYY-MM-DD-") + (accents.remove(postTitle)).toLowerCase().replace(/[^a-z0-9]/g, "-").replace(/-+/g, "-");
 
-	// Demo return
+	// Post content to GitHub
+	//
+	github.repos.createOrUpdateFile({
+		owner: process.env.GH_USER_OR_TEAM,
+		repo: process.env.GH_REPO,
+		branch: process.env.GH_BRANCH,
+		path: postPath + "/" + slugTitle + ".html",
+		message: "Post automatically pushed from IFTTT",
+		content: new Buffer(postContent).toString("base64")
+	}, function(gitHubError, gitHubResponse) {
+		if (gitHubError) {
+			return {
+				statusCode: 500,
+				body: "Post creation failed! GitHub responded: " + gitHubError
+			};
+		} else {
+			return {
+				statusCode: 200,
+				body: "Post creation succeeded. GitHub responded: " + gitHubResponse
+			};
+		};
+	});
+
+	// You should not be here.
 	//
 	return {
-		statusCode: 200,
-		body: "Eventually, I will push a post to " + process.env.GH_USER_OR_TEAM + "/" + process.env.GH_REPO + ":" + process.env.GH_BRANCH + "/" + postPath + "/" + slugTitle + ".html with the following file name:\n\n" + postContent
-	}
-}
+		statusCode: 500,
+		body: "How did you get here?"
+	};
+};
