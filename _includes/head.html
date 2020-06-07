@@ -40,7 +40,9 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
 <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}The Yak Collective{% endif %}" />
-{% if page.layout == "member" %}
+{% if page.layout == "project" %}
+	{% assign og_image = page.hero_image %}
+{% elsif page.layout == "member" %}
 	{% assign og_image = page.avatar %}
 {% elsif page.layout == "post" and page.author %}
 	{% assign member = site.members | where: "name", page.author | first %}
