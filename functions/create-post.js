@@ -9,7 +9,7 @@ const { Octokit } = require("@octokit/rest");
 
 // Lambda function handler
 //
-exports.handler = function(event, context, callback) {
+exports.handler = async function(event, context) {
 
 	// Init GitHub connection
 	//
@@ -19,26 +19,27 @@ exports.handler = function(event, context, callback) {
 
 	// Reject requests without the right secret
 	//
-	if (event.token !== process.env.WEBHOOK_TOKEN) {
-		return callback(null, {
-			statusCode: 401,
-			body: "Access denied"
-		})
-	}
+	//if (event.token !== process.env.WEBHOOK_TOKEN) {
+	//	return {
+	//		statusCode: 401,
+	//		body: "Access denied"
+	//	}
+	//}
 
 	// Set incoming post category, or none
 	//
-	var postPath;
-	if (event.category === null || event.category.length === 0) {
-		postPath = "_posts"
-	} else {
-		postPath = event.category + "/_posts"
-	}
+	//var postPath;
+	//if (event.category === null || event.category.length === 0) {
+	//	postPath = "_posts"
+	//} else {
+	//	postPath = event.category + "/_posts"
+	//}
 
 	// Demo return
 	//
-	return callback(null, {
+	return {
 		statusCode: 200,
-		body: "Eventually, I will push posts to " + process.env.GH_USER_OR_TEAM + "/" + process.env.GH_REPO + ":" + process.env.GH_BRANCH + "/" + postPath
-	})
+		//body: "Eventually, I will push posts to " + process.env.GH_USER_OR_TEAM + "/" + process.env.GH_REPO + ":" + process.env.GH_BRANCH + "/" + postPath
+		body: JSON.stringify(event.body)
+	}
 }
