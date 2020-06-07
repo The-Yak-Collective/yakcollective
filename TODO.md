@@ -64,15 +64,6 @@
 	- No need for daily rebuild anymore...
 	- Run Planet Pluto one last time to "seed" `writings/_posts/*`
 
-- [X] Figure out how to automatically switch between light and dark color schemes using [`prefers-color-scheme`](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme)
-
-	- The biggest barrier right now is that the default accent color is too dark for a black-on-white scheme
-		- ~~We either need to be able to define two different accent colors, or (perhaps better yet), automatically adjust a given accent color to be lighter/darker by some percentage~~
-		- ~~I think that using two site colors might be the only way to do this at a practical level~~
-	- Change pages to allow for `light`, `dark`, and `no-preference` options
-		- Site includes will also need to be adjusted to support `no-preference`
-		- ~~If we need to use two different accent colors for the entire site, then we'll probably need to _not_ support the `no-preference` option for project pages (otherwise it just gets too complicated).~~
-
 - [X] [Create a _Join Us_ page](https://discordapp.com/channels/692111190851059762/704369362315772044/718228461684260944)
 
 - [X] Migrate Glitch script to Netlify [serverless functions](https://docs.netlify.com/functions/overview/)
@@ -129,6 +120,9 @@
 
 - [ ] Engage with an actual designer to help with accessibility
 
-	- Still having trouble picking the right shade of purple. I think that someone with some actual design chops could probably figure out how to tweak `dark.css`, `light.css`, and the default accent color to make things work.
+	- [ ] Figure out how to support both light and dark OS color schemes using [`prefers-color-scheme`](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme)
+
+		- This is a lot more complicated than you'd think, what with header images, accent colors, etc.
+		- We probably need help from someone who, you know, actually has some web design experience.
 
 - [ ] Revisit use of Google Analytics on the site (some folks on Discord have expressed GDPR worries)

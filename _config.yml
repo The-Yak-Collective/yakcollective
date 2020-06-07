@@ -5,7 +5,6 @@ version: 2.0.0
 # Default accent color
 #
 accent_color: "200,100,200"
-color_scheme: no-preference
 
 # General site settings
 #

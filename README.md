@@ -120,10 +120,6 @@ Reusable elements from the `_includes` folder:
 
 	Google Analytics code; included on all pages by proxy through `_layouts/default.html`.
 
-- `dark.css`
-
-	CSS used for dark color schemes.
-
 - `footer.html`
 
 	Page footer elements.
@@ -132,9 +128,9 @@ Reusable elements from the `_includes` folder:
 
 	HTML `<head/>` elements (things like `<meta/>` tags, _not_ page headers).
 
-- `light.css`
+- `page.css`
 
-	CSS used for light color schemes.
+	CSS used for per-page customization (accent colors, hero images, etc.).
 
 - `member-card-html`
 

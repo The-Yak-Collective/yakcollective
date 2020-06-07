@@ -5,6 +5,8 @@ html {
 
 body {
 	font-family:"Noto Serif SC";
+	color: rgba(0,0,0,1.00);
+	background-color: rgba(255,255,255,1.0);
 	padding: 0px;
 	margin: 0px;
 	min-height: 100%;
@@ -17,6 +19,7 @@ body {
 }
 
 a {
+	color: rgba(0,0,0,0.75);
 	text-decoration-line: none;
 }
 
@@ -26,6 +29,34 @@ a:hover {
 
 .fill-space {
 	flex: 1;
+}
+
+input,
+select {
+	color: rgba(0,0,0,1.00);
+	background-color: rgba(255,255,255,1.0);
+	border-color: rgba(0,0,0,0.15);
+}
+
+footer {
+	color: rgba(0,0,0,0.60);
+	border-top-color: rgba(0,0,0,0.15);
+}
+
+footer a {
+	color: rgba(0,0,0,0.85);
+}
+
+time,
+details,
+.details,
+.collaborators {
+	color: rgba(0,0,0,0.65);
+}
+
+a.yak-logo .yak-logo-image {
+	content: url("/assets/yak-logo-white-bg-cutout.png");
+	background-color: rgba(0,0,0,0.85);
 }
 
 .container h2{
@@ -99,6 +130,17 @@ h6 a:hover {
 	box-sizing: border-box;
 }
 
+.member-box,
+.project-box,
+.project-box .hero {
+	border-color: rgba(0,0,0,0.15);
+}
+
+.project-box .silent-link,
+.project-box .silent-link:hover {
+	color: rgba(0,0,0,1.00);
+}
+
 .project-box {
 	display: block;
 }
@@ -107,13 +149,35 @@ h6 a:hover {
 	display: block;
 }
 
+.member-box {
+	color: rgba(0,0,0,0.70);
+}
+
 a.member-box,
 a.project-box {
 	text-decoration: none;
 }
 
+a.member-box {
+	color: rgba(0,0,0,0.70);
+}
+
+.member-box .silent-link,
+.member-box .silent-link:hover {
+	color: rgba(0,0,0,0.70);
+}
+
 .pseudo-link {
 	text-decoration-line: underline;
+}
+
+.lead-editors {
+	color: rgba(0,0,0,1.00);
+}
+
+.toc,
+.submit {
+	background-color: rgba(0,0,0,0.05);
 }
 
 .toc {

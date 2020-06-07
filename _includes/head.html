@@ -14,24 +14,8 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200;400;700&family=Playfair+Display&display=swap">
 <link rel="stylesheet" href="/assets/tachyons.min.css">
 <link rel="stylesheet" href="/assets/style.css">
-{% if page.color_scheme %}
-	{% assign color_scheme = page.color_scheme %}
-{% else %}
-	{% assign color_scheme = site.color_scheme %}
-{% endif %}
 <style type="text/css">
-	{% if color_scheme == "dark" %}
-		{% include dark.css %}
-	{% elsif color_scheme == "light" %}
-		{% include light.css %}
-	{% else %}
-		@media (prefers-color-scheme: dark) {
-			{% include dark.css %}
-		}
-		@media (prefers-color-scheme: light) {
-			{% include light.css %}
-		}
-	{% endif %}
+	{% include page.css %}
 	{% if page.page_css %}
 		{{ page.page_css }}
 	{% endif %}
@@ -55,35 +39,37 @@
 	{% assign og_image = "/assets/yak-og.png" %}
 {% endif %}
 <meta property="og:image" content="{{ site.url }}{{ og_image }}" />
-{% if og_image == "/assets/yak-og.png" %}
-	<meta property="og:image:width" content="600" />
-	<meta property="og:image:height" content="315" />
-{% endif %}
 
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@yak_collective">
+{% if page.layout == "project" %}
+	{% assign twitter_image = page.hero_image %}
+{% else %}
+	{% assign twitter_image = "/assets/yak-og.png" %}
+{% endif %}
+{% assign twitter_creator = "yak_collective" %}
 {% if page.layout == "post" %}
-	<meta name="twitter:card" content="summary_large_image">
-	<meta name="twitter:site" content="@yak_collective">
 	{% if page.author %}
 		{% assign member = site.members | where: "name", page.author | first %}
 		{% if member.twitter %}
 			{% assign twitter_creator = member.twitter %}
-		{% else %}
-			{% assign twitter_creator = "yak_collective" %}
 		{% endif %}
 		{% if member.avatar %}
 			{% assign twitter_image = member.avatar %}
-		{% else %}
-			{% assign twitter_image = "/assets/yak-og.png" %}
 		{% endif %}
-	{% else %}
-		{% assign twitter_creator = "yak_collective" %}
-		{% assign twitter_image = "/assets/yak-og.png" %}
 	{% endif %}
-	<meta name="twitter:creator" content="@{{ twitter_creator }}">
-	<meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}The Yak Collective{% endif %}">
-	<meta name="twitter:description" content="{% if page.subtitle %}{{ page.subtitle }}{% else %}{{ page.content | truncatewords: 20 | strip_html }}{% endif %}">
-	<meta name="twitter:image" content="{{ site.url }}{{ twitter_image }}">
+{% elsif page.layout == "member" %}
+	{% if page.twitter %}
+		{% assign twitter_creator = page.twitter %}
+	{% endif %}
+	{% if page.avatar %}
+		{% assign twitter_image = page.avatar %}
+	{% endif %}
 {% endif %}
+<meta name="twitter:creator" content="@{{ twitter_creator }}">
+<meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}The Yak Collective{% endif %}">
+<meta name="twitter:description" content="{% if page.subtitle %}{{ page.subtitle }}{% elsif page.tagline %}{{ page.tagline }}{% elsif page.layout == "member" %}{{ page.title }}{% elsif page.content.length > 0 %}{{ page.content | truncatewords: 20 | strip_html }}{% elsif page.title %}{{ page.title }}{% else %}The Yak Collective{% endif %}">
+<meta name="twitter:image" content="{{ site.url }}{{ twitter_image }}">
 
 <link rel="alternate" type="application/json" title="The Yak Collective's Latest Writings" href="/writings/feed.json">
 <link rel="alternate" type="application/rss+xml" title="The Yak Collective's Latest Writings" href="/writings/feed.xml">

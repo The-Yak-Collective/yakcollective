@@ -6,18 +6,10 @@ tagline: Making the next normal better than the last one
 type: Report
 sequence: covid-19
 hero_image: /assets/dont-waste-the-covid19-reboot-hero.svg
-color_scheme: no-preference
 accent_color: "200,100,200"
 page_css: |
-  @media (prefers-color-scheme: dark) {
-    .hero:before {
-      opacity: 0.35;
-    }
-  }
-  @media (prefers-color-scheme: light) {
-    .hero:before {
-      opacity: 0.5;
-    }
+  .hero:before {
+    opacity: 0.5;
   }
   .report {
     width: 140%;
