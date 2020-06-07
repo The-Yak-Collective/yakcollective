@@ -1,7 +1,7 @@
 ---
 name: sachin-benny
 title: Sachin Benny
-date: 2020-04-28
+date: 2020-04-30
 indie_status: 1+ years
 twitter: sachinb91
 previously: Led growth for an online DTC furniture brand

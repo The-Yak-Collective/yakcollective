@@ -1,7 +1,7 @@
 ---
 name: randy-lubin
 title: Randy Lubin
-date: 2020-04-28
+date: 2020-04-30
 indie_status: 10+ years
 twitter: randylubin
 avatar: /assets/randy-lubin.jpg

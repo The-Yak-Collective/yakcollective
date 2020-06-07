@@ -1,7 +1,7 @@
 ---
 name: paul-millerd
 title: Paul Millerd
-date: 2020-04-27
+date: 2020-04-30
 partner: true
 previously: McKinsey, BCG, GE, Russell Reynolds 
 indie_status: 3+ years

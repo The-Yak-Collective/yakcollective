@@ -10,6 +10,8 @@ If you want to add yourself to this list or update an existing feed, ping Nathan
 	- https://hiredthought.com/feed/
 - Benjamin Taylor
 	- https://medium.com/feed/@antlerboy
+- Benton Heimsath -- **NEW!**
+	- https://www.layimby.org/blog?format=rss
 - David McDougall
 	- https://innovationatscale.substack.com/feed/
 - Pamela Hobart
@@ -18,6 +20,10 @@ If you want to add yourself to this list or update an existing feed, ping Nathan
 	- https://think-boundless.com/feed/
 - Randy Lubin
 	- https://blog.randylubin.com/feed.xml
+- Shreeda Segan -- **NEW!**
+	- https://shreeda.substack.com/feed/
+- Toby Shorin -- **NEW!**
+	- https://subpixel.space/feed.xml
 - Tom Critchlow
 	- https://tomcritchlow.com/feed
 - Vaughn Tan

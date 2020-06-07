@@ -1,12 +1,12 @@
 ---
 name: dont-waste-the-covid19-reboot
-published: true
 title: Don't Waste the COVID-19 Reboot
 date: 2020-04-30
 tagline: Making the next normal better than the last one
 type: Report
 sequence: covid-19
 hero_image: /assets/dont-waste-the-covid19-reboot-hero.svg
+hero_image_opacity: 0.30
 color_scheme: no-preference
 accent_color: "200,100,200"
 page_css: |
@@ -75,6 +75,6 @@ Want to keep up with our efforts? Follow us on [Twitter](https://twitter.com/yak
 
 **Like bits and pieces of what you saw in this deck?** Feel free to contact one or more individual contributors directly! The Yak Collective is not an agency or intermediary. Our members collaborate because they want to, and each of us maintains their own independent consulting practice. We offer you a catalog of ideas and people to choose from, not a bundle.
 
-**Like a lot of what you see?** Contact [Paul Millerd](mailto:pmillerd@gmail.com) to loop The Yak Collective into your reboot efforts. We will assemble the right small team and set of ideas to work with you, in whatever way is most effective. It might be a study or report. It might be facilitating a workshop or series of conversations for your executive team. Or it might just be an ongoing conversation with one or more of us.
+**Like a lot of what you see?** Contact [Paul Millerd](/members/paul-millerd) to loop The Yak Collective into your reboot efforts. We will assemble the right small team and set of ideas to work with you, in whatever way is most effective. It might be a study or report. It might be facilitating a workshop or series of conversations for your executive team. Or it might just be an ongoing conversation with one or more of us.
 
-**Want to hang out with us LIVE as we work these problems?** [Join our Discord server](https://discord.gg/Es8AkeC). Our working process is literally open. Any independent consultant from anywhere in the world who has ideas is welcome to join our efforts, contribute to and lead collaborative projects. Any prospective client is welcome to hang out as well.
+**Want to hang out with us LIVE as we work these problems?** [Join our Discord server](/join). Our working process is literally open. Any independent consultant from anywhere in the world who has ideas is welcome to join our efforts, contribute to and lead collaborative projects. Any prospective client is welcome to hang out as well.

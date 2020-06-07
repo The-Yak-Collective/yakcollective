@@ -1,7 +1,7 @@
 ---
 name: thomas-verhagen
 title: Thomas Verhagen
-date: 2020-04-28
+date: 2020-04-30
 indie_status: 1+ year
 twitter: thomasverhagen
 avatar: /assets/thomas-verhagen.jpg

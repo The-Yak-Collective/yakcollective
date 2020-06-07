@@ -41,8 +41,9 @@ footer a:hover {
 
 time,
 details,
-.details {
-	color: rgba(0,0,0,0.60);
+.details,
+.collaborators {
+	color: rgba(0,0,0,0.65);
 }
 
 a.yak-logo .yak-logo-image {
@@ -76,7 +77,11 @@ a.yak-logo:hover .yak-logo-image {
 		background-image: url("{{ page.hero_image }}");
 		width: 100%;
 		height: 100%;
-		opacity : 0.35;
+		{% if page.hero_image_opacity %}
+			opacity: {{ page.hero_image_opacity }};
+		{% else %}
+			opacity: 0.35;
+		{% endif %}
 		z-index: -1;
 	}
 {% else %}
@@ -121,10 +126,6 @@ a.member-box:hover {
 	color: rgba(0,0,0,1.00);
 }
 
-.collaborators {
-	color: rgba(0,0,0,0.60);
-}
-
 .toc,
 .submit {
 	background-color: rgba(0,0,0,0.05);
@@ -144,15 +145,13 @@ a.member-box:hover {
 			#{{ project.name }} .pseudo-link {
 				text-decoration-color: rgba({{ accent_color }},0.60);
 			}
-			{% if project.hero_image %}
-				#{{ project.name }} .hero {
+			#{{ project.name }} .hero {
+				background-color: rgba({{ accent_color }},0.60);
+				{% if project.hero_image %}
 					background-image: url("{{ project.hero_image }}");
-				}
-			{% else %}
-				#{{ project.name }} .hero {
-					background-color: rgba({{ accent_color }},0.60);
-				}
-			{% endif %}
+					background-size: cover;
+				{% endif %}
+			}
 		{% endif %}
 	{% endfor%}
 {% endif %}

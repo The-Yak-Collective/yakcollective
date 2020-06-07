@@ -1,5 +1,5 @@
 <div id="{{ project.name }}">
-	{% if project.published == true %}<a href="/projects/{{ project.slug }}/"{% else %}<div{% endif %} class="project-box ba mv4 relative" id="{{ project.name }}">
+	{% if project.date <= site.time or site.future == true %}<a href="/projects/{{ project.slug }}/"{% else %}<div{% endif %} class="project-box ba mh2 mt4 mb5 relative" id="{{ project.name }}">
 		<div class="w-50">
 			<div class="f6 lh-title fw9 mv0 pt1 bt bw1 ph2 sans-serif ttu silent-link">{{ project.type }}</div>
 				<h2 class="ph2 fw8 f3 lh-solid pv1 mb1 mt4 pseudo-link">{{ project.title }}</h2>
@@ -34,5 +34,5 @@
 				</time>
 			</div>
 		<div class="w-50 h-100 absolute top-0 right-0 bl hero"></div>
-	{% if project.published == true %}</a>{% else %}</div>{% endif %}
+	{% if project.date <= site.time or site.future == true %}</a>{% else %}</div>{% endif %}
 </div>

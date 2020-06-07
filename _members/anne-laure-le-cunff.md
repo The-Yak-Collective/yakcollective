@@ -1,7 +1,7 @@
 ---
 name: anne-laure-le-cunff
 title: Anne-Laure Le Cunff
-date: 2020-04-28
+date: 2020-04-30
 indie_status: 2+ years
 twitter: anthilemoon
 previously: Google, Entrepreneur First

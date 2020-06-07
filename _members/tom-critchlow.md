@@ -1,7 +1,7 @@
 ---
 name: tom-critchlow
 title: Tom Critchlow
-date: 2020-04-27
+date: 2020-04-30
 partner: true
 previously: Google
 indie_status: 5+ years

@@ -1,7 +1,7 @@
 ---
 name: david-mcdougall
 title: David McDougall
-date: 2020-04-28
+date: 2020-04-30
 indie_status: 3+ years
 previously: Product Management in SMEs across US & UK
 twitter: dmcdougall

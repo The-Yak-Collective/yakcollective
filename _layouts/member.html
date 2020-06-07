@@ -14,10 +14,14 @@ layout: minimal
 {% assign projects_lead = "" | split: "" %}
 {% assign projects_collaborated = "" | split: "" %}
 {% for project in site.projects %}
-	{% if project.lead_editors contains member.name and project.published %}
-		{% assign projects_lead = projects_lead | push: project %}
-	{% elsif project.collaborators contains member.name and project.published %}
-		{% assign projects_collaborated = projects_collaborated | push: project %}
+	{% if project.lead_editors contains member.name %}
+		{% if project.date <= site.time or site.future == true %}
+			{% assign projects_lead = projects_lead | push: project %}
+		{% endif %}
+	{% elsif project.collaborators contains member.name %}
+		{% if project.date <= site.time or site.future == true %}
+			{% assign projects_collaborated = projects_collaborated | push: project %}
+		{% endif %}
 	{% endif %}
 {% endfor %}
 {% if projects_lead.size > 0 %}

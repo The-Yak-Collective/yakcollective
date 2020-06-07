@@ -1,10 +1,11 @@
-<div class="w-100 pa2" id="{{ member.name }}">
+<div class="w-100 pa2 mb2" id="{{ member.name }}">
 	{% if page.url == "/members/" %}<a href="/members/{{ member.slug }}/"{% else %}<div{% endif %} class="flex items-center lh-copy pa3 ba member-box">
 		<img class="w2 h2 w3-ns h3-ns br-100" src="{{ member.avatar }}" />
 		<div class="pl3 flex-auto">
 			<span class="f6 db b{% if page.url == "/members/" %} pseudo-link{% endif %}">{{ member.title }}</span>
 			{% if member.tagline and member.tagline.size > 0 %}<span class="f6 db{% if page.url == "/members/" %} silent-link{% endif %}">{{ member.tagline }}</span>{% endif %}
-			<span class="f6 db{% if page.url == "/members/" %} silent-link{% endif %}">Indie status: {{ member.indie_status }}</span>
+			{% if member.indie_status and member.indie_status.size > 0 %}<span class="f6 db{% if page.url == "/members/" %} silent-link{% endif %}">Indie status: {{ member.indie_status }}</span>{% endif %}
+			{% if member.currently and member.currently.size > 0 %}<span class="f6 db{% if page.url == "/members/" %} silent-link{% endif %}">Currently: {{ member.currently }}</span>{% endif %}
 			{% if member.previously and member.previously.size > 0 %}<span class="f6 db{% if page.url == "/members/" %} silent-link{% endif %}">Previously: {{ member.previously }}</span>{% endif %}
 			{% if member.links %}
 				<span class="f6 db{% if page.url == "/members/" %} silent-link{% endif %}">

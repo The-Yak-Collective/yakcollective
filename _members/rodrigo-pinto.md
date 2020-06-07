@@ -1,7 +1,7 @@
 ---
 name: rodrigo-pinto
 title: Rodrigo Pinto
-date: 2020-04-28
+date: 2020-04-30
 indie_status: 3+ years
 twitter: Rodrigo_plp
 avatar: /assets/rodrigo-pinto.jpg

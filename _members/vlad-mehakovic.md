@@ -1,7 +1,7 @@
 ---
 name: vlad-mehakovic
 title: Vlad Mehakovic
-date: 2020-04-28
+date: 2020-04-30
 indie_status: Aug 2019
 twitter: vladiim
 avatar: /assets/vlad-mehakovic.jpg

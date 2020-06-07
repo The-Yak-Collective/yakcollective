@@ -11,6 +11,9 @@ body {
 	display: flex;
 	flex-direction: column;
 	z-index: -2;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 a {

@@ -1,7 +1,7 @@
 ---
 name: nita-baum
 title: Nita Baum
-date: 2020-04-28
+date: 2020-04-30
 indie_status: 13 years
 twitter: bfree_live
 avatar: /assets/nita-baum.jpg
