@@ -1,7 +1,5 @@
 // Load required packages
 //
-const express = require("express");
-const bodyParser = require("body-parser");
 const moment = require("moment");
 const chrono = require("chrono-node");
 const accents = require('remove-accents');
@@ -10,12 +8,6 @@ const { Octokit } = require("@octokit/rest");
 // Lambda function handler
 //
 exports.handler = async function(event, context) {
-
-	// Init GitHub connection
-	//
-	const github = new Octokit({
-		auth: process.env.GH_TOKEN
-	});
 
 	// Reject requests without the right secret
 	//
@@ -96,26 +88,29 @@ exports.handler = async function(event, context) {
 
 	// Post content to GitHub
 	//
-	github.repos.createOrUpdateFile({
-		owner: process.env.GH_USER_OR_TEAM,
-		repo: process.env.GH_REPO,
-		branch: process.env.GH_BRANCH,
-		path: postPath + "/" + slugTitle + ".html",
-		message: "Post automatically pushed from IFTTT",
-		content: new Buffer(postContent).toString("base64")
-	}, function(gitHubError, gitHubResponse) {
-		if (gitHubError) {
-			return {
-				statusCode: 500,
-				body: "Post creation failed! GitHub responded: " + gitHubError
-			};
-		} else {
+	try {
+		const github = new Octokit({
+			auth: process.env.GH_TOKEN
+		});
+		github.repos.createOrUpdateFile({
+			owner: process.env.GH_USER_OR_TEAM,
+			repo: process.env.GH_REPO,
+			branch: process.env.GH_BRANCH,
+			path: postPath + "/" + slugTitle + ".html",
+			message: "Post automatically pushed from IFTTT",
+			content: new Buffer(postContent).toString("base64")
+		}).then(gitHubResponse => {
 			return {
 				statusCode: 200,
-				body: "Post creation succeeded. GitHub responded: " + gitHubResponse
+				body: "Post creation succeeded. GitHub responded:\n\n" + gitHubResponse.toString()
 			};
+		});
+	} catch (gitHubError) {
+		return {
+			statusCode: 500,
+			body: "Post creation failed! GitHub responded:\n\n" + gitHubError.toString()
 		};
-	});
+	};
 
 	// You should not be here.
 	//
