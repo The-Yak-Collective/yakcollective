@@ -40,6 +40,6 @@ exports.handler = async function(event, context) {
 	return {
 		statusCode: 200,
 		//body: "Eventually, I will push posts to " + process.env.GH_USER_OR_TEAM + "/" + process.env.GH_REPO + ":" + process.env.GH_BRANCH + "/" + postPath
-		body: JSON.stringify(event.body)
+		body: JSON.stringify(event)
 	}
 }
