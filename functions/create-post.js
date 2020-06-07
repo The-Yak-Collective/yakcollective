@@ -102,13 +102,13 @@ exports.handler = async function(event, context) {
 		}).then(gitHubResponse => {
 			return {
 				statusCode: 200,
-				body: "Post creation succeeded. GitHub responded:\n\n" + gitHubResponse.toString()
+				body: "Post creation succeeded. GitHub responded:\n\n" + JSON.stringify(gitHubResponse)
 			};
 		});
 	} catch (gitHubError) {
 		return {
 			statusCode: 500,
-			body: "Post creation failed! GitHub responded:\n\n" + gitHubError.toString()
+			body: "Post creation failed! GitHub responded:\n\n" + JSON.stringify(gitHubError)
 		};
 	};
 
