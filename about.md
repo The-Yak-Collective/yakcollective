@@ -80,7 +80,6 @@ If you're interested in assembling a larger team from among our membership, cont
 
 <details class="f6">
 	<summary>Website colophon</summary>
-	<p>Site version {{ site.version }} - built using <a href="https://jekyllrb.com/">Jekyll</a>, <a href="https://github.com/">GitHub</a>, <a href="https://ifttt.com/">IFTTT</a>, <a href="https://glitch.com/">Glitch</a>, and <a href="https://www.netlify.com/">Netlify</a></p>
-	<p>Built by <a href="https://tomcritchlow.com">Tom Critchlow</a> &amp; Nathan Acks</p>
-	<p>SVG graphics from <a href="https://www.heropatterns.com/">Hero Patterns</a></p>
+	<p>Site version {{ site.version }}.</p>
+	<p>Built by <a href="https://tomcritchlow.com">Tom Critchlow</a> &amp; Nathan Acks using <a href="https://jekyllrb.com/">Jekyll</a>, <a href="https://github.com/">GitHub</a>, <a href="https://ifttt.com/">IFTTT</a>, and <a href="https://www.netlify.com/">Netlify</a>.</p>
 </details>

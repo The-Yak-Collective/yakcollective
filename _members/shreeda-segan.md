@@ -1,7 +1,7 @@
 ---
 name: shreeda-segan
 title: Shreeda Segan
-date: 2020-06-15
+date: 2020-06-10
 partner: false
 tagline: Design Thinker & Writer
 avatar: /assets/shreeda-segan.jpg

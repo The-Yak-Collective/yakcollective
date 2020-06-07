@@ -65,6 +65,11 @@ collaborators:
 <img class="h1" src="https://ssl.gstatic.com/docs/presentations/images/favicon5.ico"> <a href="https://docs.google.com/presentation/d/1OfBuSq4SImE1Gq2EaAGCAlkwC8LZRCWx-7O_VOHJ5TI/edit#slide=id.p1">Open Google Doc</a> / <img class="h1" src="/assets/pdf.png"> <a href="https://docs.google.com/presentation/d/1OfBuSq4SImE1Gq2EaAGCAlkwC8LZRCWx-7O_VOHJ5TI/export/pdf">Download PDF</a>
 </aside>
 
+<details class="f6" open>
+	<summary>Illustrations Credits</summary>
+	<p><a href="https://www.heropatterns.com/">Hero Patterns</a></p>
+</details>
+
 ## The Yak Wisdom Project
 
 This deck is just the first of what we hope will be a series of studies the Yak Collective will be undertaking over the coming months. We aim to generate a body of Covid-19 reboot intelligence that is fundamentally different from anything you might see anywhere else, not just in terms of content, but in terms of the process of getting to it. 
@@ -78,3 +83,7 @@ Want to keep up with our efforts? Follow us on [Twitter](https://twitter.com/yak
 **Like a lot of what you see?** Contact [Paul Millerd](/members/paul-millerd) to loop The Yak Collective into your reboot efforts. We will assemble the right small team and set of ideas to work with you, in whatever way is most effective. It might be a study or report. It might be facilitating a workshop or series of conversations for your executive team. Or it might just be an ongoing conversation with one or more of us.
 
 **Want to hang out with us LIVE as we work these problems?** [Join our Discord server](/join). Our working process is literally open. Any independent consultant from anywhere in the world who has ideas is welcome to join our efforts, contribute to and lead collaborative projects. Any prospective client is welcome to hang out as well.
+
+## Additional Credits
+
+SVG graphics provided by [Hero Patterns](https://www.heropatterns.com/).
