@@ -29,7 +29,7 @@ exports.handler = async function(event, context) {
 	// Set incoming post category, or none
 	//
 	var postPath;
-	if (event.queryStringParameters.category === null || event.queryStringParameters.category.length === 0) {
+	if (event.queryStringParameters.category === null) {
 		postPath = "_posts"
 	} else {
 		postPath = event.queryStringParameters.category + "/_posts"
