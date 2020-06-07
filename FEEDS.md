@@ -20,7 +20,7 @@ If you want to add yourself to this list or update an existing feed, ping Nathan
 	- https://think-boundless.com/feed/
 - Randy Lubin
 	- https://blog.randylubin.com/feed.xml
-- Shreeda Segan -- **NEW!**
+- Shreeda Segan
 	- https://shreeda.substack.com/feed/
 - Toby Shorin -- **NEW!**
 	- https://subpixel.space/feed.xml
