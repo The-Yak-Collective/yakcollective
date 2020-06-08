@@ -1,0 +1,15 @@
+[[redirects]]
+  from = "/feed.writings.json"
+  to = "/writings/feed.json"
+
+[[redirects]]
+  from = "/feed.writings.xml"
+  to = "/writings/feed.xml"
+
+[[redirects]]
+  from = "/projects/yak-wisdom"
+  to = "/projects/dont-waste-the-covid19-reboot"
+
+[[redirects]]
+  from = "/reports/yak-wisdom"
+  to = "/projects/dont-waste-the-covid19-reboot"

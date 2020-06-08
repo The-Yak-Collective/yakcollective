@@ -1,11 +1,21 @@
+# Site version. See: https://semver.org/
+#
+version: 2.0.0
+
+# Default accent color
+#
+accent_color: "200,100,200"
+
 # General site settings
 #
-permalink: /:categories/:title/
+permalink: pretty
 
 # RSS/JSON feed settings. See:
 #
 #   https://github.com/snaptortoise/jekyll-rss-feeds
 #   https://github.com/snaptortoise/jekyll-json-feeds
+#
+# Also used in some other places now, so check around before changing!
 #
 name: The Yak Collective
 description: The Yak Collective is a network of over 300 independent consultants, coaches, and freelancers with varied technical and creative skills.
@@ -14,16 +24,48 @@ feed_items: 255
 feed_update_period: daily
 feed_update_frequency: 1
 
+# Collections
+#
+collections:
+  members:
+    output: true
+  projects:
+    output: true
+  sequences:
+    output: false
+
+# Per-page defaults
+#
+defaults:
+  - scope:
+      path: ""
+      type: members
+    values:
+      layout: member
+      permalink: /:collection/:name
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: page
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: project
+      permalink: /:collection/:name
+
 # Includes and excludes
 #
-include: 
-  - _redirects
 exclude:
   - README.md
-  - CHANGELOG.md
+  - FEEDS.md
   - TODO.md
-  - yak-build.sh
-  - yak-make-ini.rb
-  - yak-make-posts.rb
-  - yak-planet.db
-  - yak-planet.ini
+  - functions
+  - netlify.toml
+  - package.json

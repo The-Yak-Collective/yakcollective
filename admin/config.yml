@@ -1,0 +1,296 @@
+backend:
+  name: github
+  repo: The-Yak-Collective/yakcollective
+  branch: warren-structure
+publish_mode: editorial_workflow
+media_folder: assets/
+site_url: https://yakcollective.org
+collections:
+  - name: members
+    label: Members
+    folder: _members/
+    create: true
+    editor:
+      preview: false
+    fields:
+      - label: Layout
+        name: layout
+        widget: hidden
+        default: member
+      - label: UID
+        name: name
+        widget: string
+        required: true
+        hint: Internal identifier. Must be composed only of lower-case ASCII letters and dashes. Normally you will use your full (romanized) name here, with spaces replaced by dashes.
+        pattern: [ "[a-z-]+", "Must be composed only of lower-case ASCII letters and dashes" ]
+      - label: Name
+        name: title
+        widget: string
+        required: true
+      - label: Avatar
+        name: avatar
+        widget: image
+        required: true
+        hint: Must be a square image in JPEG format. Please name using your UID. To prevent blurry-ness, you should use an image at least 64 pixels on a side.
+      - label: Join Date
+        name: date
+        widget: datetime
+        format: YYYY-MM-DD
+        dateFormat: true
+        timeFormat: false
+        pickerUtc:  true
+        required: true
+        hint: The date the member joined. If the date is in the future, the member will not be displayed.
+      - label: Partner
+        name: partner
+        widget: boolean
+        required: false
+      - label: Title
+        name: tagline
+        widget: string
+        required: false
+        hint: An additional "tagline" that will appear below your name in some places. Typically used for titles or professional descriptions.
+      - label: Indie Status
+        name: indie_status
+        widget: string
+        required: false
+        hint: How long have you been an indie? Most people use a format like "3+ years".
+      - label: Previously
+        name: previously
+        widget: string
+        required: false
+        hint: If desired, you can list of organizations you previously worked for/with.
+      - label: Currently
+        name: currently
+        widget: string
+        required: false
+        hint: If desired, you can list of organizations you currently work for/with.
+      - label: Twitter
+        name: twitter
+        widget: string
+        required: false
+        hint: Your Twitter handle, without the "@" symbol.
+        pattern: [ "[A-Za-z0-9-_]+", "Must only contain ASCII letters, numbers, dashes, and underscores" ]
+      - label: Web Links
+        name: links
+        widget: list
+        required: false
+        fields:
+          - label: Title
+            name: title
+            widget: string
+            hint: What should your link be displayed as? Typically, this is the name of the website you are linking to.
+          - label: URL
+            name: url
+            widget: string
+            pattern: [ "https?:\\/\\/[a-z0-9-_]+\\.[a-z]{2,}.*", "Should be a website URL" ]
+      - label: About
+        name: body
+        widget: markdown
+        required: false
+  - name: projects
+    label: Projects
+    folder: _projects/
+    create: true
+    editor:
+      preview: false
+    fields:
+      - label: Layout
+        name: layout
+        widget: hidden
+        default: project
+      - label: UID
+        name: name
+        widget: string
+        required: true
+        hint: Internal identifier. Must be composed only of lower-case ASCII letters, numbers, and dashes. Normally you will use the project title as a base, with spaces replaced by dashes.
+        pattern: [ "[a-z0-9-]+", "Must be composed only of lower-case ASCII letters, numbers, and dashes" ]
+      - label: Name
+        name: title
+        widget: string
+        required: true
+      - label: Tagline
+        name: tagline
+        widget: string
+        required: true
+        hint: A "tagline" or "subtitle" the briefly describes your project.
+      - label: Published Date
+        name: date
+        widget: datetime
+        format: YYYY-MM-DD
+        dateFormat: true
+        timeFormat: false
+        pickerUtc: true
+        required: true
+        hint: The date your project will go live. When the date is in the future, the project will be listed as "upcoming".
+      - label: Type
+        name: type
+        widget: select
+        options: [ Report ]
+        default: [ Report ]
+        required: true
+      - label: Sequence
+        name: sequence
+        widget: relation
+        collection: sequences
+        searchFields: [ title ]
+        valueField: name
+        displayFields: [ title ]
+        required: true
+      - label: Hero Image
+        name: hero_image
+        widget: image
+        required: true
+        hint: An image file that will be used as the "banner" for your report. Should be either an SVG file, or a JPEG or PNG image at least 1280x800 pixels in size. Text will be displayed over this, so don't use something with a lot of detail (very dark images will also need to use additional CSS to improve page readability).
+      - label: Accent Color
+        name: accent_color
+        widget: string
+        default: "200,100,200"
+        required: true
+        hint: The (comma-separated) RGB color to use as the accent on your report for the projects list page. Should be chosen to go well with your hero image.
+        pattern: [ "[0-9]{1,3},[0-9]{1,3},[0-9]{1,3}", "Should be a comma-separated RGB color string." ]
+      - label: Additional CSS
+        name: page_css
+        widget: text
+        required: false
+        hint: Additional CSS you want to include to style your page. Primarily (but not excludively) used to help style any HTML you include in the main body of the page. In particular, the `.hero:before` class will allow you to apply additional/overide stylings for the hero image.
+      - label: Project Leads
+        name: lead_editors
+        widget: relation
+        collection: members
+        searchFields: [ title ]
+        valueField: name
+        displayFields: [ title ]
+        multiple: true
+        required: true
+      - label: Collaborators
+        name: collaborators
+        widget: relation
+        collection: members
+        searchFields: [ title ]
+        valueField: name
+        displayFields: [ title ]
+        multiple: true
+        required: true
+      - label: Summary
+        name: summary
+        widget: markdown
+        required: true
+        hint: A summary of your project. This will be displayed over your hero image.
+      - label: Page Content
+        name: body
+        widget: markdown
+        required: true
+  - label: Sequences
+    name: sequences
+    folder: _sequences/
+    create: true
+    editor:
+      preview: false
+    fields:
+      - label: Layout
+        name: layout
+        widget: hidden
+        default: project-list
+      - label: UID
+        name: name
+        widget: string
+        required: true
+        hint: Internal identifier. Must be composed only of lower-case ASCII letters, numbers, and dashes. Normally you will use the sequence name as a base, with spaces replaced by dashes.
+        pattern: [ "[a-z0-9-]+", "Must be composed only of lower-case ASCII letters, numbers, and dashes" ]
+      - label: Name
+        name: title
+        widget: string
+        required: true
+      - label: Start Date
+        name: date
+        widget: datetime
+        format: YYYY-MM-DD
+        dateFormat: true
+        timeFormat: false
+        pickerUtc: true
+        required: true
+      - label: Counting Phrase
+        name: count_phrase
+        widget: string
+        required: false
+        hint: The phrase to use after the day count from the sequence start. For example, the COVID-19 sequence uses "Pandemic Mean Time".
+      - label: Sequence Description
+        name: body
+        widget: hidden
+        default: ""
+  - label: Pages
+    name: pages
+    editor:
+      preview: false
+    files: 
+      - label: Home
+        name: home-page
+        file: index.md
+        fields:
+          - label: Layout
+            name: layout
+            widget: hidden
+            default: minimal
+          - label: Content
+            name: body
+            widget: markdown
+            required: true
+      - label: Projects
+        name: projects-page
+        file: projects.md
+        fields:
+          - label: Layout
+            name: layout
+            widget: hidden
+            default: project-list
+          - label: Title
+            name: title
+            widget: string
+            required: true
+          - label: Content
+            name: body
+            widget: markdown
+            required: true
+      - label: Members
+        name: members-page
+        file: members.md
+        fields:
+          - label: Layout
+            name: layout
+            widget: hidden
+            default: member-list
+          - label: Title
+            name: title
+            widget: string
+            required: true
+          - label: Partners Blurb
+            name: partners_blurb
+            widget: markdown
+            required: true
+            hint: The text displayed above the partner list.
+          - label: Collaborators Blurb
+            name: collaborators_blurb
+            widget: markdown
+            required: true
+            hint: The text displayed above the collaborators list.
+          - label: Content
+            name: body
+            widget: hidden
+            default: ""
+      - label: About
+        name: about-page
+        file: about.md
+        fields:
+          - label: Layout
+            name: layout
+            widget: hidden
+            default: page
+          - label: Title
+            name: title
+            widget: string
+            required: true
+          - label: Content
+            name: body
+            widget: markdown
+            required: true

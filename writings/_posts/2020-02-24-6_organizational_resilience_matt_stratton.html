@@ -1,0 +1,654 @@
+---
+title: "#6 — Organizational Resilience (Matt Stratton)"
+date: 2020-02-24 05:26:58.000000000 Z
+author: ben-mosior
+original_link: https://hiredthought.com/2020/02/24/6-organizational-resilience/
+---
+
+<p>Legendary DevOps friend Matt Stratton joins Ben for a discussion on the very near and dear topic of organizational trauma. Matt shares important lessons from his experiences, as well as a few secrets to building organizational resilience through incident response. (Content warning: General discussion of trauma.)</p>
+
+
+
+<figure class="wp-block-embed-youtube wp-block-embed is-type-video is-provider-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">
+<iframe class='youtube-player' width='1080' height='608' src='https://www.youtube.com/embed/xBtbyNywus4?version=3&#038;rel=1&#038;fs=1&#038;autohide=2&#038;showsearch=0&#038;showinfo=1&#038;iv_load_policy=1&#038;wmode=transparent' allowfullscreen='true' style='border:0;'></iframe>
+</div></figure>
+
+
+
+<figure class="wp-block-audio"><audio controls src="https://hiredthought.com/wp-content/uploads/2020/02/Matt-Stratton.mp3"></audio></figure>
+
+
+
+<ul><li><a href="https://cfotech.com.au/story/fight-flight-or-freeze-releasing-organisational-trauma">Fight, flight or freeze: Releasing organisational trauma</a> (blog)</li><li><a href="https://speaking.mattstratton.com/UVUNH6">Fight, Flight, or Freeze — Releasing Organizational Trauma</a> (talk)</li><li><a href="https://www.greaterthancode.com/healing-organizational-trauma">Greater Than Code &#8211; Healing Organizational Trauma with Matt Stratton</a></li><li><a href="https://bestwecanandmore.blogspot.com/2014/11/window-of-tolerance.html">Window of Tolerance</a> </li><li><a href="https://www.codywiggs.com/blog/2017/5/2/mindfulness-trauma-part-2-of-4-the-fight-or-flight-response">Mindfulness &amp; Trauma Part 2 of 4: The Fight-or-Flight Response </a></li><li><a href="https://www.psychotherapy.net/interview/interview-peter-levine">Peter Levine on Somatic Experiencing </a></li><li><a href="https://www.amazon.com/Fifth-Discipline-Practice-Learning-Organization/dp/0385517254/">The Fifth Discipline</a></li><li><a href="https://www.arresteddevops.com/2019-in-review/">Arrested DevOps 2019 Year-End Wrap-Up</a></li><li><a href="http://speaking.mattstratton.com/">speaking.mattstratton.com</a></li></ul>
+
+
+
+<h2>About Matt</h2>
+
+
+
+<p>Matt Stratton is a DevOps Advocate at PagerDuty, where he helps dev and ops teams advance the practice of their craft and become more operationally mature. He collaborates with PagerDuty customers and industry thought leaders in the broader DevOps community, and back in the day, his license plate actually said “DevOps”.</p>
+
+
+
+<p>Matt has over 20 years experience in IT operations, ranging from large financial institutions such as JPMorganChase and internet firms, including Apartments.com. He is a sought-after speaker internationally, presenting at Agile, DevOps, and ITSM focused events, including ChefConf, DevOpsDays, Interop, PINK, and others worldwide. Matt is the founder and co-host of the popular <a href="https://www.arresteddevops.com/">Arrested DevOps</a> podcast, as well as a global organizer of the <a href="https://www.devopsdays.org/">DevOpsDays</a> set of conferences.</p>
+
+
+
+<p>He lives in Chicago and has three awesome kids, whom he loves just a little bit more than he loves Doctor Who. He is currently on a mission to discover the best phở in the world.</p>
+
+
+
+<figure class="wp-block-embed-twitter wp-block-embed is-type-rich is-provider-twitter"><div class="wp-block-embed__wrapper">
+<blockquote class="twitter-tweet" data-width="550" data-dnt="true"><p lang="en" dir="ltr">Hey <a href="https://twitter.com/nashvilledevops?ref_src=twsrc&#x0023;5Etfw">@nashvilledevops</a> folks! Slides from my talk “Fight, Flight, or Freeze &#8211; Releasing Organizational Trauma” are online now at <a href="https://t.co/diddN5Yihd">https://t.co/diddN5Yihd</a> <a href="https://twitter.com/hashtag/DevOpsDays?src=hash&amp;ref_src=twsrc&#x0023;5Etfw">#DevOpsDays</a></p>&mdash; Matt &quot;Garbage File&quot; Stratton (@mattstratton) <a href="https://twitter.com/mattstratton/status/1126894101243289600?ref_src=twsrc&#x0023;5Etfw">May 10, 2019</a></blockquote><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div></figure>
+
+
+
+<figure class="wp-block-embed-twitter wp-block-embed is-type-rich is-provider-twitter"><div class="wp-block-embed__wrapper">
+<blockquote class="twitter-tweet" data-width="550" data-dnt="true"><p lang="en" dir="ltr">I would like to take a minute to thank <a href="https://twitter.com/jpaulreed?ref_src=twsrc&#x0023;5Etfw">@jpaulreed</a> for encouraging me to initially submit my talk about organizational trauma. It’s been proving to be my most successful talk ever and I’m so happy every time I get to share it with a new audience. Thanks, Preed!</p>&mdash; Matt &quot;Garbage File&quot; Stratton (@mattstratton) <a href="https://twitter.com/mattstratton/status/1101518647686807556?ref_src=twsrc&#x0023;5Etfw">March 1, 2019</a></blockquote><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div></figure>
+
+
+
+<p>Intro / Outro Music by DJ Quads<br><a href="https://soundcloud.com/djquads">https://soundcloud.com/djquads</a></p>
+
+
+
+<h2>Transcript</h2>
+
+
+
+<p><strong>Ben: </strong>[00:00:00]
+Hello everyone, and welcome to episode six of The Hired Thought Podcast. My
+name is Ben Mosior and I&#8217;m joined today by special guest, Matt Stratton. I want
+to give you a quick heads up here at the beginning, a bit of a content warning.
+We are going to be talking about some topics and contents that could be
+actually triggering, oriented around trauma.</p>
+
+
+
+<p>We&#8217;re not going to discuss our own individual specific traumatic experiences. However, we are going to talk in general about the topic and get into how it relates to organizations as well. So with that intro, I am just absolutely floored to have Matt with us here today.</p>
+
+
+
+<p>I first kind of came into contact with Matt around 2014
+attending a DevOpsDays conference. He runs the Arrested DevOps Podcast with his
+cohosts. He&#8217;s also been part of HangOps, all these like wonderful fixtures of
+my early systems administration career that really set me on a path towards,
+let&#8217;s say towards the light, towards the goodness of collaboration and working
+together.</p>
+
+
+
+<p>Matt, I&#8217;m so happy to have you here today. </p>
+
+
+
+<p><strong>Matt: </strong>[00:00:56] Thank you for having me. I&#8217;m really excited, to be a part and I, I love being on podcasts. As you said. you know, I, I have my own show and it&#8217;s always really fun as a podcaster to be a guest, cause you&#8217;re like&#8230; You&#8217;ve got all this stuff&#8230; What your listeners don&#8217;t know, there&#8217;s all these things going on in your head cause you&#8217;re running the show and I&#8217;m like, I just get to talk! It&#8217;s so refreshing. </p>
+
+
+
+<p><strong>Ben: </strong>[00:01:16] Thank you for being here. I gave a bit of an intro and I think that relates you to my audience, but I was just kind of wondering, what else do you think they should know before we kind of dive into this really interesting topic of organizational trauma? </p>
+
+
+
+<p><strong>Matt: </strong>[00:01:28] Sure. So I work for PagerDuty now, as an advocate. And the reason I&#8217;m kind of bringing that up is, my focus, especially over the last couple of years, has been a lot around thinking about incident response, learning from incidents.</p>
+
+
+
+<p>And I&#8217;ve been doing a lot of thought around incidents and
+outages because that&#8217;s the focus of, what PagerDuty is really helping folks
+with. Comparatively, so, you know, for folks that don&#8217;t know, I used to work
+for Chef, so my thought was a lot more around software delivery and infra as
+code &#8230; So, you know, as, as you know, there&#8217;s all these things I&#8217;m interested
+in, but as I&#8217;ve been focusing and thinking a lot more about human factors,
+especially with incident response and how organizations work, that really is
+what led me to this topic that we&#8217;re talking about.</p>
+
+
+
+<p>So, kind of having that thought and background, I think is
+why it&#8217;s relevant. </p>
+
+
+
+<p><strong>Ben: </strong>[00:02:13]
+Absolutely. That, that brings me to kind of how we connected. What I&#8217;m thinking
+about right now is the talk that I just watched called, &#8220;Fight, Flight, or
+Freeze&#8221; that you&#8217;ve been giving at Monitorama and a couple other places,
+right?</p>
+
+
+
+<p><strong>Matt: </strong>[00:02:28]
+Yes. This was, this was my talk of the last year. I&#8217;ve traveled the world
+giving this talk at DevOps days, DevOps Enterprise Summit and Monitorama and
+all sorts of places. And people seem to like it, so I need to, now I have to, I
+need a new idea. But yeah, that&#8217;s a Future Matt problem. </p>
+
+
+
+<p><strong>Ben: </strong>[00:02:45] This is a such an interesting topic because I think in general, trauma, as a topic for both individuals and organizations, and frankly from a societal and cultural standpoint as well, it&#8217;s a bit stigmatized. And I think a lot of times it&#8217;s because it&#8217;s tied up with things like shame or, not having the right kind of language to express it in a healthy way, or it just hurts, and so you avoid it. And so when someone comes out with a talk, focused on something very close and near and dear to me like this, I am just absolutely floored that we&#8217;re sharing it and talking about this topic. </p>
+
+
+
+<p>So what was the background behind the motivation to submit
+this talk to conferences and really launch on this year long journey of sharing
+this story with others.</p>
+
+
+
+<p><strong>Matt: </strong>[00:03:31] So it&#8217;s, it&#8217;s, it&#8217;s kind of a fun story. As fun as anything connected to trauma can be, I realize. So back in the spring of 2018, I spent a month in a rehab facility, for treatment, for trauma, for my post traumatic stress, among a couple of other things. And when I was there, I went through some treatments involving somatic experiencing and EMDR.</p>
+
+
+
+<p>And shortly after I got out, I was visiting my friend Paul, so J Paul Reed in San Francisco, and we were, you know, this was like a week or two after I had gotten out and we were having coffee and just sort of debriefing with him about my experience. We both sort of sat there and were like, this sounds a lot like how companies act when they have outages and everything.</p>
+
+
+
+<p>And because this is the other thing, when you, when you do this kind of work, everything becomes a talk, everything in your life, you&#8217;re always like, how can I turn this into a talk? I have, I have a, a coworker who joined a monastery, she became a monk, and I was like, Oh, you&#8217;re going to come out of that with a great DevOps talk, right?</p>
+
+
+
+<p>So, so Paul and I were talking about that, and he said,
+well. I have a CFP open for this new conference I&#8217;m doing called redeploy,
+which is this conference about resilience engineering. And he&#8217;s like, you
+should write a, you should propose it for that. And I had already seen some of
+the folks that were speaking there and I was like, okay, Paul, whatever, like
+no way am I in the cohort that you&#8217;re talking about.</p>
+
+
+
+<p>Right. And but I wanted to do it because I just wanted to
+get feedback from him and from Mary Thengvall who were the organizers. I was
+like, okay, this&#8217;ll be a good way. Can write the abstract. I&#8217;ll submit it. I&#8217;ll
+get good feedback and I can go do it somewhere else. And then of course it got
+accepted and I went, Oh no, now I have to write this talk.</p>
+
+
+
+<p>And, and so I did. And I did. So I gave it for the first
+time at redeploy in the summer of 2018 and.&nbsp;
+it was, it was actually kind of funny cause for a long time that was the
+only video version of the talk. And I hated sharing it because it was so raw
+and so new to me and it&#8217;s gotten better and better. But it was, I ended up
+giving the talk and I got great positive feedback from a lot of people I
+respect who said this was really helpful.</p>
+
+
+
+<p>This was really interesting. You know, Paul came to me and said, this needs to be your talk of next year,   but it really came from my experiences of like what I was learning about individual treatment for post traumatic stress. And, and seeing that as that metaphor. And I think that&#8217;s why it&#8217;s been a, topic and a talk that I love to give and it&#8217;s been, you know, it&#8217;s been great to be able to do it over time and continually refine. Every time I do it, it&#8217;s a little better because I, like you talked about like this topic, personal trauma is very stigmatized and I get a lot of folks coming up to me after the talk that are just from a personal level or like, Hey, I have trauma in my background.</p>
+
+
+
+<p>This is what resonated. This is what didn&#8217;t. And there&#8217;s also people who don&#8217;t have that background can still get something from the talk. But then every time I have these conversations afterwards, there&#8217;s always something that I tweak and I go, Oh, now this is better. So it&#8217;s, it&#8217;s not like, Oh, it&#8217;s getting better just cause I&#8217;ve been practicing it more, but had been to be able to develop it just from conversations I&#8217;ve had with so many people that you, you don&#8217;t really realize how prevalent. This is and people don&#8217;t talk about it. </p>
+
+
+
+<p>&nbsp;<strong>Ben: </strong>[00:06:46] that right there I think is
+such an interesting&nbsp; point because by
+signaling that you are someone who is interested in this topic and willing to
+talk about it openly, on the one hand, you have people coming up to you and
+sharing those experiences. On the other hand, it&#8217;s helping others feel safe
+about thinking about it and talking to others about it, which I think is, look,
+if you can&#8217;t speak, if you can&#8217;t share. If you can&#8217;t process, then a lot of
+times that stuff stays stuck.</p>
+
+
+
+<p>And the way that trauma manifests for individuals and organizations is different, but it has a lot of the same kind of signs and I think sort of comorbidities along with it. It&#8217;s interesting that you bring up Paul because Paul, I&#8217;m going to get this wrong. So he&#8217;s probably gonna like, reach out on Twitter and be like, Hey! But he, he got a master&#8217;s right in, in human factors, right? So this, I think is an interesting intersection, right? Where I&#8217;ve, as you pointed out on the most recent episode of Arrested DevOps, it&#8217;s like anytime someone makes a connection between something, part of the industry that&#8217;s been around for awhile, but then applies it to software, it&#8217;s like, Oh. I made this, right. </p>
+
+
+
+<p>Human factors for software and thinking about outages as traumatic events, and I&#8217;ve also been thinking about what layoffs are like for people in organizations and so on. Tell me how that factors into how, what you share about this talk. Like what have you learned about these kinds of events and how organizations can respond to them?</p>
+
+
+
+<p><strong>Matt: </strong>[00:08:14] So there&#8217;s those kind of two, pieces to the, the trauma metaphor, the trauma topic in the talk.  so again, an incident can be traumatic to an individual because are participating in it. So I talk in some version of the talk, I talk about self care and talk about things to do.</p>
+
+
+
+<p>But the beginning and the first half is a lot more about.
+The metaphor, right? So if we think about what trauma is and why humans respond
+the way they do, what causes trauma. Trauma is basically when our nervous
+systems, our answer to something doesn&#8217;t work, right? We don&#8217;t know how, I
+don&#8217;t want to say we don&#8217;t know how to deal with it, but we don&#8217;t know how to
+respond.</p>
+
+
+
+<p>Or rather it&#8217;s not that we don&#8217;t know how to respond. Our
+responses are ineffective, right? To this bad thing. So that&#8217;s why, that&#8217;s why
+trauma is nuanced, right? So you and I can have a similar experience and it can
+be traumatic for me. And it can just be a crappy day for you, right? It doesn&#8217;t
+mean that like you love it, but it doesn&#8217;t necessarily manifest as trauma
+because of how our nervous systems respond differently and based on our
+background. </p>
+
+
+
+<p>And what I found was,&nbsp;
+because of our prefrontal cortex, we respond to perceive trauma
+physiologically the same way our sympathetic nervous system is activated the
+same way as the actual trauma. And that&#8217;s why, so, you know, trauma that
+occurred to me as a child, that that&#8217;s part of my post traumatic stress, things
+that are reminiscent of that or that trigger to them. They truly do trigger,
+that&#8217;s the right thing because they cause me to have the physiological
+response. And so organizations, we do this thing when we have an incident or an
+outage or something that&#8217;s similar to a thing that happened before and when it
+happened to before, it costs us $1 million a minute.</p>
+
+
+
+<p>So we&#8217;re like, &#8220;well, it&#8217;s happening again&#8221; and
+we, and we react the same way. The reality is it&#8217;s not necessarily the same.
+Incidents all have different shapes and just because something looks a little
+similar with the complexity of all the things going on, it&#8217;s not . We don&#8217;t
+want to respond the exact same way.</p>
+
+
+
+<p>The same way that like if something that reminds me of this
+traumatic thing doesn&#8217;t mean that I should respond the way that I did this when
+I was six years old because I&#8217;m a 45 year old adult, right? the fear is, it&#8217;s,
+it&#8217;s, it&#8217;s valid that I have that fear, but it&#8217;s not a thing to run and hide
+from.</p>
+
+
+
+<p>Like I&#8217;m, I know I&#8217;d have to be scared, honestly. I don&#8217;t
+have to be scared of it, but my response is, should be different and I need to
+learn how to make it different. Same thing with an organization. You know,
+this, this indicator last time caused this. So, and that&#8217;s what we do. And so
+the thing that happens with individuals, there&#8217;s this idea of the window of
+tolerance, right?</p>
+
+
+
+<p>So we get activated between the sympathetic and the parasympathetic nervous system. We go up and down with activation. That&#8217;s just normal. That&#8217;s just how we deal, right? Like nobody is even keeled all the time. But, and everybody&#8217;s window of tolerance is different. So the window of tolerance is. Beyond which you become activated and you don&#8217;t have the healthy response anymore.</p>
+
+
+
+<p>Right. And so what you can do is it can either get really
+spiky up, down, up, down, right? Or you can get stuck on or stuck off. And
+that&#8217;s usually what happens. So if you&#8217;re stuck on, that&#8217;s where you have.
+Anxiety. You know, anxiety comes in, a lot of other symptoms stuck off, has
+more lethargy, and organizations do this too, right?</p>
+
+
+
+<p>So when we see something that is reminiscent of that, we get into either being hyper aroused or hypo aroused, where we might fear any kind of change, right? We&#8217;re where we get into analysis paralysis because. Uh, or, or we become, almost, uh, paranoid, we have over vigilance, right? Where everything is an attack.</p>
+
+
+
+<p>Everything is says, and these are, neither of these are
+healthy for the org, for the organization, not the people part, but just for
+the company being able to do what it needs to do. And it&#8217;s also, it does reflect
+into&nbsp; the, Mental and emotional health of
+the employees, right?&nbsp; and it trickles
+down into that.</p>
+
+
+
+<p>So, so what I found was being able to help people identify
+that, cause that&#8217;s the first thing is like, identify, and remember we talked
+about the window of tolerance is nuanced. As true for people. And it&#8217;s true for
+organizations, right? Depending upon the culture of your company, the role of
+your company, the business you&#8217;re in, your window of tolerance is different.</p>
+
+
+
+<p>And it&#8217;s different for Netflix than it is from Chase than it
+is from, you know, healthcare company than it is from anybody, right? It&#8217;s all
+different and that&#8217;s okay. So that&#8217;s the first thing that I try to help people
+understand. Like figuring out where that window of tolerance exists for your
+organization and can you identify, can you recognize when it&#8217;s happening?</p>
+
+
+
+<p>Right. <s>Um, </s>cause
+that&#8217;s the first thing you kind of have to understand that, <s>uh, </s>just being aware can be very freeing
+because you can at least be aware of it. It can also be frustrating because
+then you&#8217;re like, well, yeah, they hear a lot of that too. They&#8217;re like, yup,
+you just described my company. It sucks.</p>
+
+
+
+<p>Like, well, the good news is there&#8217;s some things that we can
+do even as practitioners, a lot of times with this, people feel like it has to
+be a. You know, this is all about the personality of the CEO. It&#8217;s because
+executives doing X, Y, Z, and you know, some of that&#8217;s true. Some of this has
+changed. That is inflicted by senior leadership, but a lot of it is things that
+we can do to help the organization be better.</p>
+
+
+
+<p><strong>Ben: </strong>[00:13:04] so there are a couple things in there. One is a, it reminds me of a lot of the work that, you know, I&#8217;ve personally done in therapy where a lot of the times it&#8217;s about building up the language to describe what is happening so that when it happens, either in that moment. If you have had the chance to do this a couple of times and really reflect on it, or later when you are reflecting back on what happened and trying to understand it, you can have the language to describe, Oh, okay.</p>
+
+
+
+<p>So I was stuck on in this moment or I was stuck off. And, it just reminds me a lot just basically having a language for it means that we can together share that experience and reflect on it and actually develop the skills to more quickly bounce back, but also be more resilient to the situation and maybe expand that window over time of what&#8217;s, what&#8217;s tolerable and, or what&#8217;s appropriate.</p>
+
+
+
+<p><strong>Matt: </strong>[00:13:53]
+Yeah. So what, it makes me think a little bit around some of the concepts
+around cognitive behavioral therapy, right? Like where we understand about
+distortions. And in my talk, I talk about cognitive distortions that happen to
+us in IT, especially.</p>
+
+
+
+<p>But the biggest thing when we think about, and again, other disclaimer, I am not a mental health professional. So none of this is mental health advice, but things that I&#8217;ve learned, right? So. Like you can&#8217;t control how you feel, right?  you&#8217;re gonna have a feeling and it&#8217;s going to happen, and that&#8217;s totally okay.</p>
+
+
+
+<p>And it&#8217;s not bad than it happens. What we have control over
+our responses and our actions. So in CBT, we think about like being able
+to identify when a distortion occurs. So what happened. And that&#8217;s okay. But
+because like you said, the biggest thing is that we can identify it and we have
+an awareness of it.</p>
+
+
+
+<p>And I think that&#8217;s true in the company level too, is to say
+like, it&#8217;s going to happen. Right? And this, this all goes back to the myth of
+prevention, </p>
+
+
+
+<p>I can be known to be a little pedantic about words. Sometimes some words matter, some words don&#8217;t. One of the words I&#8217;ve been striving to excise from my vocabulary and I, I tried to like get other people along.</p>
+
+
+
+<p>This is the word prevention because. you&#8217;re setting
+yourself up to fail, no pun intended. When that happens, if you say, I&#8217;m going
+to prevent this from ever happening again, so you&#8217;ll see a lot of language
+around like, Oh, the point of this post-incident review is to prevent this from
+ever happening again.</p>
+
+
+
+<p>Nope. Cause that&#8217;s a fool&#8217;s errand. You&#8217;re not going to do
+that.</p>
+
+
+
+<p>&nbsp;What you want to do
+is, like you said, is be more resilient and have the adaptive capacity to
+mitigate the impact of when something similar happens again. Right? So
+we&#8217;re identify. So again, just like in CBT, we want to identify that it&#8217;s okay,
+it&#8217;s going to happen.</p>
+
+
+
+<p>We&#8217;re going to respond, we&#8217;re going to feel a certain way.
+That&#8217;s okay. What we&#8217;re not trying to do is keep ourselves from feeling that
+we&#8217;re trying to say, how do we minimize the impact, that feeling that way is,
+and that we&#8217;re able to move along and be productive and, and, and that rather
+than having, being this thing that sends me into a personal spiral where I&#8217;m
+depressed for three days.</p>
+
+
+
+<p>It&#8217;s a bad thing happens, I feel crappy about it, but I have
+a tool&nbsp; to be able to respond. And the
+same thing is true with your organization, right. Bad stuff&#8217;s gonna happen.
+Things are gonna break. Cool. Great. Don&#8217;t try to stop. It doesn&#8217;t mean don&#8217;t
+buy the main. Again, to be clear, I&#8217;m not saying like just YOLO everything into
+Prod.</p>
+
+
+
+<p>Don&#8217;t tell him I tried to say that, but don&#8217;t try to
+prevent. Right. Or don&#8217;t expect, don&#8217;t have the expectation of perfection. Try to prevent.
+That&#8217;s great. Yeah. Try to make things better. Don&#8217;t expect that you&#8217;re going
+to succeed in that, right. Or rather when you don&#8217;t succeed in it. That&#8217;s okay.
+</p>
+
+
+
+<p>again, It&#8217;s all going back to this idea of, the things are
+going to happen, we can mitigate them, we can minimize them, we can be more
+healthy and how we respond to them. So that in the case of a person individually,
+right? When the thing happens, I can move on and I can have this thing happen
+and I can be back inside my window of tolerance very quickly.</p>
+
+
+
+<p>And an organization, it can happen. We can restore service,
+we can recover, and we can move along with business. And it&#8217;s business as usual
+again. And the biggest thing about that is normalizing incident response. Incident
+response is business as usual. It&#8217;s going to happen. It&#8217;s not an anomaly to
+have an incident.</p>
+
+
+
+<p>You need to be that. That&#8217;s just a thing you do and doesn&#8217;t
+mean accept like, you know, say like, Oh, well 75&#x0023; of times fine. I mean, but
+you&#8217;re going to have hiccups are going to have incidents and responding to them
+should be. Just the thing that you do, man, right? That&#8217;s the whole point of this.
+This idea in the, organizational trauma from incidenc is that we&#8217;re normalizing
+them and we&#8217;re trying to create an association with incidents as, for the
+humans involved, as business as usual.</p>
+
+
+
+<p>We&#8217;re good at, we&#8217;re good at responding to incidents and. The
+irony is we&#8217;ve gotten worse at responding to incidents in some ways as we&#8217;ve
+gotten better at distributing on-call. </p>
+
+
+
+<p>so I think back, you know, I&#8217;ve been been a CIS admin for,
+for over 20 years.</p>
+
+
+
+<p>Right? And it&#8217;s like back in the day, I was probably, you
+know, first of all, I was on call every other week and backup the weeks I
+wasn&#8217;t. So I was basically on call constantly. That&#8217;s, that was our life.
+Right. And you probably had something breaking at least every hour you were
+doing incident response. All the time.</p>
+
+
+
+<p>It was business as usual, right? So now today you can be,
+you know, if you&#8217;ve got, if you&#8217;re doing a really good, healthy on-call rota,
+and you know, you&#8217;ve got developers on call, you&#8217;ve got people on their own
+domain. You could be on call for a year and have two incidents since you deal
+with. So the problem is when they do happen.</p>
+
+
+
+<p>You&#8217;re freak out because it&#8217;s like, Whoa, this is something crazy, right? This is something out of the blue and you don&#8217;t want to be&#8230; Number one, you don&#8217;t want to be trying to remember how to do instant response. So that&#8217;s why practice makes permanent, but also you don&#8217;t want it to be this, as much as we would love incidents to be an exception, and they should be, we don&#8217;t want to think about, the, the response process. As this exceptional thing that we only sometimes do. Right. </p>
+
+
+
+<p><strong>Ben: </strong>[00:18:49] That&#8217;s something really important that we can open up a little bit right now I&#8217;ve been reading through The Fifth Discipline lately, one of the things that comes to mind is, first of all, we always feel like we have to do something in response to something bad happening. We have to take action because that&#8217;s very much culturally the way that we approach things. And I think we could have a really good conversation about what non-intervention is and looks like for these big kind of messy problems.</p>
+
+
+
+<p>But the other thing that this book kind of points out a
+little bit is that whenever you&#8217;re doing an intervention. Yes. You may have
+short term effective things that won&#8217;t actually help you in the long term.
+Those are great for buying time, but at all times you need to be building
+capabilities. And so that building capabilities seems like one of the most
+important things about organizations and dealing with trauma because when you
+normalize the incident response, when you normalize what it looks like to work
+together.</p>
+
+
+
+<p>In, in a situation that is pressured, right? Then you can
+actually start to respond in a healthfully fully enacted way. </p>
+
+
+
+<p>And this reminds me of a lot of what I&#8217;ve been thinking
+about with learning things from army doctrine and mission command is like sand table
+exercises. firefighters use this as well for, for large scale wildfires.</p>
+
+
+
+<p>We get together and before we think about how to, deal with
+this specific problem, we learn in general what it&#8217;s like to deal with these
+specific problems within a model kind of system where we can kind of look from
+the top down and learn that way. So the question that I kind of want to pivot
+to is how do organizations build these capabilities.</p>
+
+
+
+<p>And what could it look like to take this to the next level?</p>
+
+
+
+<p><strong>Matt: </strong>[00:20:28] So there&#8217;s a, there&#8217;s a couple of things that I found to be really effective. And one is, you talked about sand table exercises. So when you think about game day, and this is all wound up into whether it&#8217;s part of your chaos engineering practice or your failure injection or just a straight up game day, this is all going to end up applying.</p>
+
+
+
+<p>Right? And whatever implementation of this is. What, it&#8217;s
+not is a DR test by the way. DR tests don&#8217;t count for this. But a game day of
+an incident and what you do is you, You, so you need to run your game days or
+your chaos experiments or anything like that. Run them like an incident, but
+you do them during a, a safe time, right? If you will. </p>
+
+
+
+<p>Like, so it&#8217;s, it&#8217;s, we always talk about, so PagerDuty, we have, we call them failure Fridays, although really failure any days, but we like alliteration. So we still call it failure Friday and it&#8217;s a failure injection exercise, right? It&#8217;s like, okay, we&#8217;ve got a, we&#8217;re going to test the service, we&#8217;re going to inject failure into it.</p>
+
+
+
+<p>You do a chaos experiment and see what happens, and again, our hypothesis was of course, that it will be fine. I always tell people with chaos, or I&#8217;m like, you&#8217;re testing a hypothesis, your hypothesis that things will go badly. Don&#8217;t test that. Then you&#8217;re not ready for the experiment. But anyway, we&#8217;re assuming that this will work.</p>
+
+
+
+<p>But we run it like a real incident. It&#8217;s spun up as an incident.
+We have it every, we have an incident commander, and in fact, that&#8217;s how we
+train our incident commanders. So if you&#8217;re going to join the incident
+commander rotation, you are expected to have run a failure Friday first. </p>
+
+
+
+<p>So what we&#8217;ve done is we&#8217;ve taken this, we made this pretty
+safe exercise because I mean, there&#8217;s risk, right? Like we&#8217;re, we&#8217;re, we&#8217;re
+testing in production as you always are, but we know what&#8217;s wrong.</p>
+
+
+
+<p>We know how we can bail out of it at any time if things go
+squirly. And that&#8217;s a big piece of that is. So what you&#8217;re doing is, so all
+those people involved, when they have an incident on that service at two in the
+morning, they, they, it&#8217;s associated with one in the afternoon, during the day
+in the office.</p>
+
+
+
+<p>Right. It&#8217;s just like, it&#8217;s a calm thing. And I&#8217;ve seen folks
+sometimes say like, okay, what am I going to do this failure exercise, I want
+to test it like an incident, that&#8217;s great. So the incident response team,
+we&#8217;re not going to tell them what&#8217;s wrong. And I&#8217;m like, this is not an
+exercise in troubleshooting.</p>
+
+
+
+<p>And it&#8217;s not an exercise to test, to stress test your
+people. People are getting news for you. You don&#8217;t need to inject stress into
+the people that work for you. We get plenty of practice of being under stress.
+It&#8217;s totally fine. We want to do the opposite. So when we&#8217;re doing this
+all the time. As part of our regular cadence of work.</p>
+
+
+
+<p>When it does happen at two in the morning, do I mean it&#8217;s not going to be stressful? Of course not. It&#8217;s going to be stressful because the business is on the line and it&#8217;s two in the morning and we&#8217;re just upset because we got woke up. But we&#8217;re able to be, we, I always like to say the beautiful thing about the human brain is we&#8217;re very smart and our brain is also very stupid, right? You can trick your brain, right? So we&#8217;re creating a physiological response. And I always tell people, if you don&#8217;t believe it, let me tell you some. I&#8217;ve worn contacts for the majority of my life, you know, since I was 16 years old, I&#8217;ve worn contacts. When I put my contacts in, in the morning, I wake up, I get more alert when I take them out at the end of the evening, I get a little sleepy, and that&#8217;s from, you know, 35 years or whatever, of putting contacts in first thing in the morning and taking them out at night. So what we&#8217;re doing is we want to create that physiological response, and that&#8217;s what we do in post traumatic stress treatment of somatic experiencing is we start with the body, right?</p>
+
+
+
+<p>Where we&#8217;re getting the physiological way we want to think. And then we associate that. Positive physiology. With the traumatic experience. And so we&#8217;re doing the same thing. We&#8217;re, we&#8217;re leading with the body. And that&#8217;s the idea. Beyond doing, like you said, doing these exercises, it&#8217;s really not to actually practice and get better at knowing how to log into PagerDuty or how to like, write a document or whatever.</p>
+
+
+
+<p>&nbsp;I mean, that&#8217;s good.
+You&#8217;re going to get that, but what you&#8217;re doing is you&#8217;re, you&#8217;re, you&#8217;re
+creating that association and it&#8217;s really powerful and very, very effective. <s>Um. </s>But you have to do them the same. That&#8217;s
+the trick, right? It doesn&#8217;t help if you don&#8217;t run those in the same way, you
+don&#8217;t make that association.</p>
+
+
+
+<p>There&#8217;s a similar thing to do that could be helpful. When you have incidents, you run them at their initial severity no matter what. And you run them to their ending. So false alarm incident, finish it out like an incident. I mean, it doesn&#8217;t mean like everybody panic and whatever, but this will happen, right?</p>
+
+
+
+<p>Like you&#8217;ll, you&#8217;ll kick off your instant response process
+cause you think something&#8217;s wrong and you get a few minutes into it and you
+realize, Oh, you know, flappy monitor, whatever kind of thing. Finish it up.
+Even if, because what you&#8217;re doing there is you&#8217;re saying like, we just do
+incident response.</p>
+
+
+
+<p>It&#8217;s just a thing. Oh, I bop into the Slack channel for an
+incident and I do my thing and we get on a call and we do the thing and it
+takes five minutes and we&#8217;re done. Okay. It&#8217;s just the thing we do, right. We
+want severe incidents to be an anomaly. We don&#8217;t want responding to squirly
+things with our systems to be.</p>
+
+
+
+<p>Like this weird like edge case, right? This is part of life,
+right? It&#8217;s part of being an engineer. </p>
+
+
+
+<p><strong>Ben: </strong>[00:25:18] I really want to call out one thing in particular, which is you differentiated what what is troubleshooting work from what is running the incident. And this building these kinds of capabilities by creating a safe place to exercise these capabilities and build that muscle is not, something that someone goes off in a room and designs a weird puzzle for. This is not about trying to make it hard or trying to stress people out or trying to, kind of, make it a different kind of problem than this. It is just making it safe to do incidents.</p>
+
+
+
+<p>And I think that is so enormously amazing. </p>
+
+
+
+<p>What is something that you would recommend in terms of
+material around this topic or in general for people to find out more about you?</p>
+
+
+
+<p>What kind of recommendations can be made. </p>
+
+
+
+<p><strong>Matt: </strong>[00:26:04] So a couple of things. And we&#8217;ll put some links to put in the show notes. So Dr. Peter Levine is a trauma doctor who&#8217;s done a lot of research around and kind of founded the somatic experiencing movement. So I gave a link around what Dr Levine has to say about somatic experiencing.</p>
+
+
+
+<p>I have another&#8230; gave another link that, that delves into the window of tolerance. And another one about how fight or flight really works. So we didn&#8217;t really get into that. But that&#8217;s, that&#8217;s a big part of where this comes in. I also did an episode of Greater than Code about about a year ago, talking about healing organizational trauma, and we&#8217;ve talked about a few different things.</p>
+
+
+
+<p>Talk a little bit more about&#8230; You mentioned at the
+beginning about how we have to actually process this stuff and get it out. And
+we didn&#8217;t get into that in this conversation. But that&#8217;s a whole other piece is
+like, we have to tell our stories, we have to share them within the
+organization because otherwise it&#8217;s unprocessed and it doesn&#8217;t get any better.</p>
+
+
+
+<p>So this is why. I always say, write-only postmortems don&#8217;t help anybody. Right? You have to they have to be shared and they need to be told. So we talked a lot more about that on that show. I really like that. You know, I rant about this on the Twitters all the time, you know, feel free to find me at Twitter, @MattStratton.</p>
+
+
+
+<p>And, we can follow up on this and talk some more on, and also, if you want to see. Where I might be coming to a conference near you. If you go to speaking.mattstratton.com that&#8217;s my speaking page. It&#8217;s got all my past talks and any upcoming things, so if you all listen to show and I see you at a conference somewhere, come say hi. I&#8217;d love to talk about this. </p>
+
+
+
+<p><strong>Ben: </strong>[00:27:36]
+Matt, it&#8217;s been so wonderful to have you. this is like one of my happiest
+moments in a very long time. I really appreciate your time today. Thanks so
+much. </p>
+
+
+
+<p><strong>Matt: </strong>[00:27:45]
+Thank you. My pleasure.</p>

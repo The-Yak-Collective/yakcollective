@@ -1,68 +1,80 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="description" content="The Yak Collective">
-		<meta name="viewport" content="width=device-width">
+<meta charset="utf-8">
+<meta name="description" content="{{ site.description }}">
+<meta name="viewport" content="width=device-width">
 
-		<title>{% if page.title %}{{ page.title }}{% else %}The Yak Collective{% endif %}</title>
+<title>{% if page.title %}{{ page.title }}{% else %}{{ site.name }}{% endif %}</title>
 
-		<!-- 
-			Site build commissioned by Yak Collective member #12
-			YakCoin transaction ID: 0x18ehd76h
-		-->
+<!-- 
+	Site build commissioned by Yak Collective member #12
+	YakCoin transaction ID: 0x18ehd76h
+-->
 
-		<link rel="icon" href="/images/yaklogo.png" />
+<link rel="icon" href="/assets/yak-logo.png" />
 
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200;400;700&family=Playfair+Display&display=swap">
-		<link rel="stylesheet" href="/css/tachyons.min.css">
-		<link rel="stylesheet" href="/css/all.css">
-		{% if page.url == "/projects/" %}
-			{% for project in site.categories["projects"] %}
-				{% assign project_path = project.id | split: "/" %}
-				{% assign project_id = project_path.last %}
-				<link rel="stylesheet" href="/css/{{ project_id }}-styles.css">
-			{% endfor%}
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200;400;700&family=Playfair+Display&display=swap">
+<link rel="stylesheet" href="/assets/tachyons.min.css">
+<link rel="stylesheet" href="/assets/style.css">
+<style type="text/css">
+	{% include page.css %}
+	{% if page.page_css %}
+		{{ page.page_css }}
+	{% endif %}
+</style>
+
+<meta property="og:type" content="article" />
+<meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+<meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}The Yak Collective{% endif %}" />
+{% if page.layout == "project" %}
+	{% assign og_image = page.hero_image %}
+{% elsif page.layout == "member" %}
+	{% assign og_image = page.avatar %}
+{% elsif page.layout == "post" and page.author %}
+	{% assign member = site.members | where: "name", page.author | first %}
+	{% if member.avatar %}
+		{% assign og_image = member.avatar %}
+	{% else %}
+		{% assign og_image = "/assets/yak-og.png" %}
+	{% endif %}
+{% else %}
+	{% assign og_image = "/assets/yak-og.png" %}
+{% endif %}
+<meta property="og:image" content="{{ site.url }}{{ og_image }}" />
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@yak_collective">
+{% if page.layout == "project" %}
+	{% assign twitter_image = page.hero_image %}
+{% else %}
+	{% assign twitter_image = "/assets/yak-og.png" %}
+{% endif %}
+{% assign twitter_creator = "yak_collective" %}
+{% if page.layout == "post" %}
+	{% if page.author %}
+		{% assign member = site.members | where: "name", page.author | first %}
+		{% if member.twitter %}
+			{% assign twitter_creator = member.twitter %}
 		{% endif %}
-		{% if page.layout == "project" %}
-			{% assign page_path = page.id | split: "/" %}
-			{% assign project_id = page_path.last %}
-			<link rel="stylesheet" href="/css/{{ project_id }}-styles.css">
-			<link rel="stylesheet" href="/css/{{ project_id }}-page.css">
+		{% if member.avatar %}
+			{% assign twitter_image = member.avatar %}
 		{% endif %}
+	{% endif %}
+{% elsif page.layout == "member" %}
+	{% if page.twitter %}
+		{% assign twitter_creator = page.twitter %}
+	{% endif %}
+	{% if page.avatar %}
+		{% assign twitter_image = page.avatar %}
+	{% endif %}
+{% endif %}
+<meta name="twitter:creator" content="@{{ twitter_creator }}">
+<meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}The Yak Collective{% endif %}">
+<meta name="twitter:description" content="{% if page.subtitle %}{{ page.subtitle }}{% elsif page.tagline %}{{ page.tagline }}{% elsif page.layout == "member" %}{{ page.title }}{% elsif page.content.length > 0 %}{{ page.content | truncatewords: 20 | strip_html }}{% elsif page.title %}{{ page.title }}{% else %}The Yak Collective{% endif %}">
+<meta name="twitter:image" content="{{ site.url }}{{ twitter_image }}">
 
-		<script src="//code.jquery.com/jquery-1.10.2.min.js" type="text/javascript"></script>
-
-		<meta property="og:type" content="article" />
-		<meta property="og:url" content="https://yakcollective.org{{page.url}}" />
-		<meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}The Yak Collective{% endif %}" />
-		<meta property="og:image" content="https://yakcollective.org/images/yak-og.png" />
-		<meta property="og:image:width" content="600" />
-		<meta property="og:image:height" content="315" />
-
-		{% if page.layout == "post" %}
-			<meta name="twitter:card" content="summary_large_image">
-			<meta name="twitter:site" content="@yak_collective">
-			<meta name="twitter:creator" content="@yak_collective">
-			<meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}The Yak Collective{% endif %}">
-			<meta name="twitter:description" content="{% if page.subtitle %}{{ page.subtitle }}{% else %}{{ page.content | truncatewords: 20 | strip_html }}{% endif %}">
-			<meta name="twitter:image" content="https://yakcollective.org/images/yak-og.png">
-		{% endif %}
-
-		<link rel="alternate" type="application/json" title="The Yak Collective's Latest Writings" href="/feed.writings.json">
-		<link rel="alternate" type="application/rss+xml" title="The Yak Collective's Latest Writings" href="/feed.writings.xml">
-		{% for member_data in site.data.members %}
-			{% assign member_uid = member_data[0] %}
-			{% assign member = member_data[1] %}
-			{% if member.feeds %}
-				{% for feed in member.feeds %}
-					<link rel="alternate" type="application/rss+xml" title="{{ member.name }}" href="{{ feed }}">
-				{% endfor %}
-			{% endif %}
-		{% endfor %}
-
-		{% include analytics.html %}
-</head>
-
-<body class="w-100 ph0-l center relative h-100">
-	{% include nav.html %}
+<link rel="alternate" type="application/json" title="The Yak Collective's Latest Writings" href="/writings/feed.json">
+<link rel="alternate" type="application/rss+xml" title="The Yak Collective's Latest Writings" href="/writings/feed.xml">
+{% for member in site.members %}
+	{% if member.feed %}
+		<link rel="alternate" type="application/rss+xml" title="{{ member.title }}" href="{{ member.feed }}">
+	{% endif %}
+{% endfor %}

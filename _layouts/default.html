@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		{% include head.html %}
+		{% include analytics.html %}
+	</head>
+
+	<body class="w-100 ph0-l center relative h-100">
+		<div class="fill-space">
+			{% include nav.html %}
+			<div class="yak-content">
+				{{ content }}
+			</div>
+		</div>
+		{% include footer.html %}
+	</body>
+</html>

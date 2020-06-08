@@ -1,44 +1,38 @@
-{% assign project_path = project.id | split: "/" %}
-{% assign project_id = project_path.last %}
-
-{% if project.published == true %}<a href="/projects/{{ project_id }}/" class="projectbox">{% else %}<div class="projectbox">{% endif %}
-	<div class="ba b--black-10 br2 mv4 relative">
+<div id="{{ project.name }}">
+	{% if project.date <= site.time or site.future == true %}<a href="/projects/{{ project.slug }}/"{% else %}<div{% endif %} class="project-box ba mh2 mt4 mb5 relative" id="{{ project.name }}">
 		<div class="w-50">
-			<div class="f6 lh-title fw9 mv0 pt1 bt bw1 ph2 sans-serif ttu">{{ project.type }}</div>
-				<h2 class="{{ project_id }}-color ph2 fw8 f3 lh-solid pv1 mb1 mt4">{{ project.title }}</h2>
-				<p class="{{ project_id }}-color ph2 f5 lh-solid pv1 mt0 mb4 fw6 subhead">{{ project.tagline }}</p>
-				<p class="f6 ph2 mv2">
+			<div class="f6 lh-title fw9 mv0 pt1 bt bw1 ph2 sans-serif ttu silent-link">{{ project.type }}</div>
+				<h2 class="ph2 fw8 f3 lh-solid pv1 mb1 mt4 pseudo-link">{{ project.title }}</h2>
+				<p class="ph2 f5 lh-solid pv1 mt0 mb4 fw6 subhead pseudo-link">{{ project.tagline }}</p>
+				<p class="f6 ph2 mv2 silent-link">
 					<span class="ttu">Lead editors:</span>
 					{% assign lead_editors = project.lead_editors %}
 					{% assign total_editors = lead_editors.size %}
 					{% if total_editors == 1 %}
-						{% assign editor_id = lead_editors[0] %}
-						{% assign editor = site.data.members[editor_id] %}
-						{{ editor.name }}
+						{% assign editor = site.members | where: "name", lead_editors[0] | first %}
+						{{ editor.title }}
 					{% elsif total_editors == 2 %}
-						{% assign first_editor_id = lead_editors[0] %}
-						{% assign first_editor = site.data.members[first_editor_id] %}
-						{% assign second_editor_id = lead_editors[1] %}
-						{% assign second_editor = site.data.members[second_editor_id] %}
-						{{ first_editor.name }} &amp; {{ second_editor.name }}
+						{% assign first_editor = site.members | where: "name", lead_editors[0] | first %}
+						{% assign second_editor = site.members | where: "name", lead_editors[1] | first %}
+						{{ first_editor.title }} &amp; {{ second_editor.title }}
 					{% else %}
 						{% assign last_editor = lead_editors.last %}
 						{% for lead_editor in lead_editors %}
-							{% assign editor = site.data.members[lead_editor] %}
-							{{ editor.name }}{% if lead_editor != last_editor %}, {% endif %}
+							{% assign editor = site.members | where: "name", lead_editors | first %}
+							{{ editor.title }}{% if lead_editor != last_editor %}, {% endif %}
 						{% endfor %}
 					{% endif %}
 				</p>
-				<time class="f6 ph2 mv3 ttu tracked-tight gray">
+				<time class="f6 ph2 mv3 ttu tracked-tight">
 					Published: {{ project.date | date_to_long_string: "ordinal", "US" }} UTC
 					<!-- After: https://stackoverflow.com/a/61051707 -->
 					{% if project.sequence %}
-						{% assign sequence_def = site.data.sequences[project.sequence] %}
-						{% assign sequence_start = sequence_def.start_date | date: "%s" %}
-						/ Day {{ project.date | date: "%s" | minus: sequence_start | divided_by: 3600 | divided_by: 24 | round }} {{ sequence_def.count_phrase }}
+						{% assign sequence = site.sequences | where: "name", project.sequence | first %}
+						{% assign sequence_start = sequence.date | date: "%s" %}
+						/ Day {{ project.date | date: "%s" | minus: sequence_start | divided_by: 3600 | divided_by: 24 | round }} {{ sequence.count_phrase }}
 					{% endif %}
 				</time>
 			</div>
-		<div class="w-50 h-100 {{ project_id }}-hero absolute top-0 right-0"></div>
-	</div>
-{% if project.published == true %}</a>{% else %}</div>{% endif %}
+		<div class="w-50 h-100 absolute top-0 right-0 bl hero"></div>
+	{% if project.date <= site.time or site.future == true %}</a>{% else %}</div>{% endif %}
+</div>

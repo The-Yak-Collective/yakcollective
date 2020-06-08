@@ -1,92 +1,72 @@
-{% include head.html %}
-
-{% assign page_path = page.id | split: "/" %}
-{% assign project_id = page_path.last %}
-
+---
+layout: default
+---
 <article class="yak-project">
-	<header class="{{ project_id }}-hero">
+	<header class="yak-project-header hero">
 		<div class="h-25 w-100 center pa3 mw9 center">
 			<div class="cf ph3 ph5-ns pv5-l pv3">
-				<aside class="fn fl-ns w-25-ns pr4-ns pl4-ns">
-					<div class="f5 lh-title fw9 mb3 mt0 pt3 bt bw2 sans-serif ttu">{{ page.type }}</div>
-					<time class="f6 ttu tracked-tight gray">
+				<aside class="fn fl-l w-30-l ph4-l">
+					<div class="project-type f5 lh-title fw9 mb3 mt0 pt3 bt bw2 sans-serif ttu">{{ page.type }}</div>
+					<time class="db f6 ttu mb3 tracked-tight">
 						{{ page.date | date_to_long_string: "ordinal", "US" }} UTC
 						<!-- After: https://stackoverflow.com/a/61051707 -->
 						{% if page.sequence %}
-							{% assign sequence_def = site.data.sequences[page.sequence] %}
-							{% assign sequence_start = sequence_def.start_date | date: "%s" %}
-							<br>Day {{ page.date | date: "%s" | minus: sequence_start | divided_by: 3600 | divided_by: 24 | round }} {{ sequence_def.count_phrase }}
+							{% assign sequence = site.sequences | where: "name", page.sequence | first %}
+							{% assign sequence_start = sequence.date | date: "%s" %}
+							<br>Day {{ page.date | date: "%s" | minus: sequence_start | divided_by: 3600 | divided_by: 24 | round }} {{ sequence.count_phrase }}
 						{% endif %}
 					</time>
-					<p>
-						<span class="ttu f6 lh-title">Lead editors:</span><br>
+					<details class="f6 mb3 lead-editors" open>
+						<summary class="ttu lh-title">Lead editors</summary>
+						<p>
 						{% assign lead_editors = page.lead_editors %}
 						{% assign total_editors = lead_editors.size %}
 						{% if total_editors == 1 %}
-							{% assign editor_id = lead_editors[0] %}
-							{% assign editor = site.data.members[editor_id] %}
-							{{ editor.name }}
+							{% assign editor = site.members | where: "name", lead_editors[0] | first %}
+							<a href="/members/{{ editor.slug }}">{{ editor.title }}</a>
 						{% elsif total_editors == 2 %}
-							{% assign first_editor_id = lead_editors[0] %}
-							{% assign first_editor = site.data.members[first_editor_id] %}
-							{% assign second_editor_id = lead_editors[1] %}
-							{% assign second_editor = site.data.members[second_editor_id] %}
-							{{ first_editor.name }} &amp; {{ second_editor.name }}
+							{% assign first_editor = site.members | where: "name", lead_editors[0] | first %}
+							{% assign second_editor = site.members | where: "name", lead_editors[1] | first %}
+							<a href="/members/{{ first_editor.slug }}">{{ first_editor.title }}</a> &amp; <a href="/members/{{ second_editor.slug }}">{{ second_editor.title }}</a>
 						{% else %}
 							{% assign last_editor = lead_editors.last %}
 							{% for lead_editor in lead_editors %}
-								{% assign editor = site.data.members[lead_editor] %}
-								{{ editor.name }}{% if lead_editor != last_editor %}, {% endif %}
+								{% assign editor = site.members | where: "name", lead_editor | first %}
+								<a href="/members/{{ editor.slug }}">{{ editor.title }}</a>{% if lead_editor != last_editor %}, {% endif %}
 							{% endfor %}
 						{% endif %}
-					</p>
-					<p class="gray">
-						<span class="ttu f6 lh-title">Collaborators:</span>
-						<span class="dn-l expand">+ expand</span><br>
-						<span class="dn db-l collablist">
+						</p>
+					</details>
+					<details class="f6 mb3 collaborators" open>
+						<summary class="ttu lh-title">Collaborators</summary>
+						<p>
 							{% assign collaborators = page.collaborators %}
 							{% assign total_collaborators = collaborators.size %}
 							{% if total_collaborators == 1 %}
-								{% assign collaborator_id = collaborators[0] %}
-								{% assign collaborator = site.data.members[collaborator_id] %}
-								{{ collaborator.name }}
+								{% assign collaborator = site.members | where: "name", collaborators[0] | first %}
+								<a href="/members/{{ collaborator.slug }}">{{ collaborator.title }}</a>
 							{% elsif total_collaborators == 2 %}
-								{% assign first_collaborator_id = collaborators[0] %}
-								{% assign first_collaborator = site.data.members[first_collaborator_id] %}
-								{% assign second_collaborator_id = collaborators[1] %}
-								{% assign second_collaborator = site.data.members[second_collaborator_id] %}
-								{{ first_collaborator.name }} &amp; {{ second_collaborator.name }}
+								{% assign first_collaborator = site.members | where: "name", collaborators[0] | first %}
+								{% assign second_collaborator = site.members | where: "name", collaborators[1] | first %}
+								<a href="/members/{{ first_collaborator.slug }}">{{ first_collaborator.title }}</a> &amp; <a href="/members/{{ second_collaborator.slug }}">{{ second_collaborator.title }}</a>
 							{% else %}
-								{% assign last_collaborators = collaborators.last %}
-								{% for collaborator_id in collaborators %}
-									{% assign collaborator = site.data.members[collaborator_id] %}
-									{{ collaborator.name }}{% if collaborator_id != last_collaborator %}, {% endif %}
+								{% assign last_collaborator = collaborators.last %}
+								{% for collaborator_uid in collaborators %}
+									{% assign collaborator = site.members | where: "name", collaborator_uid | first %}
+									<a href="/members/{{ collaborator.slug }}">{{ collaborator.title }}</a>{% if collaborator_uid != last_collaborator %}, {% endif %}
 								{% endfor %}
 							{% endif %}
-						</span>
-					</p>
+						</p>
+					</details>
 				</aside>
-				<div class="fn fl-ns w-50-ns pl4-ns">
+				<div class="fn fl-l w-70-l ph4-l">
 					<h1 class="ma0 pa0 fw8 f1">{{ page.title }}</h1>
-					<div class="subhead pt3 pb1 fw6 f3">{{ page.tagline }}</div>
-					<div class="f5 lh-copy pb5">{{ page.summary | markdownify }}</div>
+					<div class="subhead pt3 pb1 fw4 f3">{{ page.tagline }}</div>
+					<div class="f5 lh-copy mb3">{{ page.summary | markdownify }}</div>
 				</div>
 			</div>
-
-			<script>
-				$( ".expand" ).click(function() {
-					$(".collablist").toggle();
-					if ($(".expand").text() == "+ expand") {
-						$(".expand").text("- close"); 
-					} else if ($(".expand").text() == "- close") {
-						$(".expand").text("+ expand"); 
-					}
-				});
-			</script>
 		</div>
 	</header>
 
 	<div class="container mw7 cf pv5 f4-l center w-90 lh-copy">{{ content }}</div>
 </article>
-
-{% include footer.html %}

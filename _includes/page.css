@@ -1,0 +1,82 @@
+{% if page.accent_color %}
+	{% assign accent_color = page.accent_color %}
+{% else %}
+	{% assign accent_color = site.accent_color %}
+{% endif %}
+
+a:hover,
+.required {
+	color: rgba({{ accent_color }},1.00);
+}
+
+footer a:hover {
+	color: rgba({{ accent_color }},0.75);
+}
+
+a.yak-logo:hover .yak-logo-image {
+	background-color: rgba({{ accent_color }},1.00);
+}
+
+.yak-content a {
+	text-decoration-color: rgba({{ accent_color }},0.60);
+}
+
+.yak-content a:hover {
+	color: rgba({{ accent_color }},1.00);
+	text-decoration-color: rgba({{ accent_color }},1.00);
+}
+
+{% if page.hero_image %}
+	.hero {
+		position: relative;
+	}
+	.hero:before {
+		content : "";
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-image: url("{{ page.hero_image }}");
+		width: 100%;
+		height: 100%;
+		opacity: 0.5;
+		z-index: -1;
+	}
+{% else %}
+	.hero {
+		background-color: rgba({{ accent_color }},0.10);
+	}
+{% endif %}
+
+a.member-box:hover {
+	color: rgba({{ accent_color }},1.00);
+}
+
+.pseudo-link {
+	text-decoration-color: rgba({{ accent_color }},0.60);
+}
+
+{% if page.url == "/projects/" or page.layout == "member" %}
+	{% for project in site.projects %}
+		{% if project.name %}
+			{% if project.accent_color %}
+				{% assign accent_color = project.accent_color %}
+			{% else %}
+				{% assign accent_color = site.accent_color %}
+			{% endif %}
+			#{{ project.name }} a:hover {
+				color: rgba({{ accent_color }},1.00);
+			}
+			#{{ project.name }} .pseudo-link {
+				text-decoration-color: rgba({{ accent_color }},0.60);
+			}
+			#{{ project.name }} .hero {
+				background-color: rgba({{ accent_color }},0.60);
+				{% if project.hero_image %}
+					background-image: url("{{ project.hero_image }}");
+					background-size: cover;
+				{% endif %}
+			}
+		{% endif %}
+	{% endfor%}
+{% endif %}

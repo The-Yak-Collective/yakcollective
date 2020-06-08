@@ -1,11 +1,10 @@
 ---
-layout: page
 title: About the Yak Collective
 ---
 
 ## Our Origin Story
 
-The Yak Collective is a loosely coordinated network of over 300 independent consultants, coaches, and freelancers with varied technical and creative skills. Nearly 30 of our members contributed to our inaugural report, released on April 30, 2020, [Don't Waste the Reboot](https://yakcollective.org/projects/dont-waste-the-covid19-reboot). These numbers will evolve as we take on more shared projects, both internally initiated, and on behalf of clients.
+The Yak Collective is a loosely coordinated network of over 300 independent consultants, coaches, and freelancers with varied technical and creative skills. Nearly 30 of our members contributed to our inaugural report, released on April 30, 2020, [_Don't Waste the Reboot_](/projects/dont-waste-the-covid19-reboot). These numbers will evolve as we take on more shared projects, both internally initiated, and on behalf of clients.
 
 Though we launched formally in March, 2020, the network underlying the Yak Collective has been growing in the background since early 2019. What began as a conversation among a handful of indies swapping notes turned into a broader conversation among dozens, then hundreds of indies, around the world. 
 
@@ -75,13 +74,12 @@ If you're interested in assembling a larger team from among our membership, cont
 
 --
 
-***So if you're ready for a fresh approach. If you're ready to inject some imagination and nerve into your challenges, check us out. Browse our [Projects](/projects) page, check out our [Members](/members) page, and if you're intrigued by what you see -- ping one of us. Maybe we are the answer.***
+***So if you're ready for a fresh approach. If you're ready to inject some imagination and nerve into your challenges, check us out. Browse our [Projects page](/projects), check out our [Members page](/members), read some of our latest thoughts on the [Writings page](/writings), and if you're intrigued by what you see -- ping one of us. Maybe we are the answer.***
 
 --
 
-<details class="gray f6">
+<details class="f6">
 	<summary>Website colophon</summary>
-	<p>Site version 1.1 - deployed using <a href="https://jekyllrb.com/">Jekyll</a>, <a href="https://feedreader.github.io/">Pluto</a>, and <a href="https://www.netlify.com/">Netlify</a></p>
-	<p>Built by <a href="https://tomcritchlow.com">Tom Critchlow</a> &amp; Nathan Acks</p>
-	<p>SVG graphics from <a href="https://www.heropatterns.com/">Hero Patterns</a></p>
+	<p>Site version {{ site.version }}.</p>
+	<p>Built by <a href="https://tomcritchlow.com">Tom Critchlow</a> &amp; Nathan Acks using <a href="https://jekyllrb.com/">Jekyll</a>, <a href="https://github.com/">GitHub</a>, <a href="https://ifttt.com/">IFTTT</a>, and <a href="https://www.netlify.com/">Netlify</a>.</p>
 </details>
