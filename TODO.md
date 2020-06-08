@@ -97,6 +97,12 @@
 
 	- This needs to be user-editable!
 
+- [ ] Rotating slogans
+
+	- https://discordapp.com/channels/692111190851059762/712112363566006322/719654392327962643 (etc.)
+	- JavaScript (per page load)? Or randomized includes (per build)?
+		- Kinda inclined to go with randomized builds, as I so strongly dislike JavaScript.
+
 - [ ] Additional member info ideas:
 
 	- [ ] Add facility for tagging member skills
