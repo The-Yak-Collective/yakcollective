@@ -159,4 +159,4 @@ Reusable elements from the `_includes` folder:
 - `Gemfile.lock`
 - `netlify.toml`
 
-	Various Netlify build directives, including redirects.
+	Various Netlify build directives, just redirects right now.
