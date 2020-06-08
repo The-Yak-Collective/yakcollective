@@ -13,14 +13,19 @@ layout: minimal
 <!-- Adapted from: https://stackoverflow.com/a/42727933 -->
 {% assign projects_lead = "" | split: "" %}
 {% assign projects_collaborated = "" | split: "" %}
+{% assign projects_upcoming = "" | split: "" %}
 {% for project in site.projects %}
 	{% if project.lead_editors contains member.name %}
 		{% if project.date <= site.time or site.future == true %}
 			{% assign projects_lead = projects_lead | push: project %}
+		{% else %}
+			{% assign projects_upcoming = projects_upcoming | push: project %}
 		{% endif %}
 	{% elsif project.collaborators contains member.name %}
 		{% if project.date <= site.time or site.future == true %}
 			{% assign projects_collaborated = projects_collaborated | push: project %}
+		{% else %}
+			{% assign projects_upcoming = projects_upcoming | push: project %}
 		{% endif %}
 	{% endif %}
 {% endfor %}
@@ -36,6 +41,14 @@ layout: minimal
 	<section>
 		<h2 class="yak-post" id="{{ member.name }}-projects-lead">Collaborated On</h2>
 		{% for project in projects_collaborated reversed %}
+			{% include project-box.html %}
+		{% endfor %}
+	</section>
+{% endif %}
+{% if projects_upcoming.size > 0 %}
+	<section>
+		<h2 class="yak-post" id="{{ member.name }}-projects-upcoming">Upcoming Projects</h2>
+		{% for project in projects_upcoming reversed %}
 			{% include project-box.html %}
 		{% endfor %}
 	</section>
