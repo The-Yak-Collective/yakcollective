@@ -2,7 +2,7 @@
 name: the-new-old-home
 title: The New Old Home
 date: 2020-06-10
-tagline: Make Homes Productive Again
+tagline: Rediscovering the home as a production frontier
 type: Report
 sequence: covid-19
 hero_image: /assets/the-new-old-home-hero.jpg
