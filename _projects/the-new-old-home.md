@@ -59,10 +59,10 @@ collaborators:
   - venkatesh-rao
 ---
 
-<iframe class="report bw1" src="https://docs.google.com/presentation/d/e/1HBqIPQKq88hoxYUiYA3XVDpR-SDjag6iOWnQ4Xxckjg/embed?start=false&loop=false&delayms=60000" frameborder="0" width="1920" height="1109" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+<iframe class="report bw1" src="https://docs.google.com/presentation/d/e/2PACX-1vT7uxFO3uaCDHr6xzX8Mnt5F9OEDf2kebLXokHs0MlyDLyFIOeiAcIDelaV8r0qKQZlGyBISrcP1dfS/embed?start=false&loop=false&delayms=60000" frameborder="0" width="1920" height="1109" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 
 <aside class="pt3">
-<img class="h1" src="https://ssl.gstatic.com/docs/presentations/images/favicon5.ico"> <a href="https://docs.google.com/presentation/d/1HBqIPQKq88hoxYUiYA3XVDpR-SDjag6iOWnQ4Xxckjg/edit#slide=id.p1">Open Google Doc</a> / <img class="h1" src="/assets/pdf.png"> <a href="https://docs.google.com/presentation/d/1HBqIPQKq88hoxYUiYA3XVDpR-SDjag6iOWnQ4Xxckjg/export/pdf">Download PDF</a>
+<img class="h1" src="https://ssl.gstatic.com/docs/presentations/images/favicon5.ico"> <a href="https://docs.google.com/presentation/d/1Bgs4e6YIEydMot0VM4lf-onZM2z6Zei3n87f3JHCeSk/edit#slide=id.p">Open Google Doc</a> / <img class="h1" src="/assets/pdf.png"> <a href="https://docs.google.com/presentation/d/1Bgs4e6YIEydMot0VM4lf-onZM2z6Zei3n87f3JHCeSk/export/pdf">Download PDF</a>
 </aside>
 
 ## The Yak Wisdom Project
