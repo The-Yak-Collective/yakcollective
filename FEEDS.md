@@ -10,8 +10,8 @@ If you want to add yourself to this list or update an existing feed, ping Nathan
 	- https://hiredthought.com/feed/
 - Benjamin Taylor
 	- https://medium.com/feed/@antlerboy
-- Benton Heimsath -- **NEW!**
-	- https://www.layimby.org/blog?format=rss
+- Benton Heimsath
+	- https://www.bentonheimsath.com/writing?format=rss
 - David McDougall
 	- https://innovationatscale.substack.com/feed/
 - Pamela Hobart
