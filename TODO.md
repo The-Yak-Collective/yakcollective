@@ -85,6 +85,12 @@
 	- [ ] Figure out a better way to share logins for Yak Collective infrastructure.
 	- [ ] Schedule office hours, walk interested folks through the site changes.
 
+- [ ] Figure out how to [make the project page header a bit thinner](https://discordapp.com/channels/692111190851059762/709753766076874774/719731952852140163), to bring decks more above the fold.
+
+	- Reduce the font size of the left-hand sidebar?
+	- Reduce padding in the header?
+	- Slightly reduce the site font size?
+
 - [ ] Migrate [onboarding document](https://docs.google.com/document/d/1I63ZKu8o0DpBG0tWhssIsCinlXeBKO-xGyvmIMXXAWE/) into website (per [Venkatesh Rao](https://discordapp.com/channels/692111190851059762/692826420191297556/709550901555363861)).
 
 	- If it's not already in there, it seems like the [code of conduct](https://roamresearch.com/#/app/ArtOfGig/page/i92e8kE2x) should probably be added, and then explicitly linked from `join.md` and `welcome.md` (rather than continuing to link to Roam).
