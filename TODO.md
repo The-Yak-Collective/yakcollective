@@ -103,6 +103,13 @@
 
 	- This needs to be user-editable!
 
+- [ ] Integrate [Quotebacks](https://quotebacks.net/)?
+
+	- Maybe use this for the member post pages, to make it clear that these are coming from another site?
+	- Maybe automate pulling a quote (firxt `X` words) from a post, and then embedding it below the link?
+		- This could get kinda busy without pagination..
+	- If I do this, I wonder if people would be cool with exposing these pages directly?
+
 - [ ] Rotating slogans
 
 	- https://discordapp.com/channels/692111190851059762/712112363566006322/719654392327962643 (etc.)
