@@ -1,5 +1,5 @@
 <meta charset="utf-8">
-<meta name="description" content="{{ site.description }}">
+<meta name="description" content="{% if page.summary %}{{ page.summary | truncatewords: 20 | markdownify | strip_html }}{% elsif page.content.length > 0 %}{{ page.content | truncatewords: 20 | strip_html }}{% elsif page.subtitle %}{{ page.subtitle }}{% elsif page.tagline %}{{ page.tagline }}{% elsif site.description %}{{ site.description | truncatewords: 20 }}{% else %}The Yak Collective{% endif %}">
 <meta name="viewport" content="width=device-width">
 
 <title>{% if page.title %}{{ page.title }}{% else %}{{ site.name }}{% endif %}</title>
@@ -68,7 +68,7 @@
 {% endif %}
 <meta name="twitter:creator" content="@{{ twitter_creator }}">
 <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}The Yak Collective{% endif %}">
-<meta name="twitter:description" content="{% if page.subtitle %}{{ page.subtitle }}{% elsif page.tagline %}{{ page.tagline }}{% elsif page.layout == "member" %}{{ page.title }}{% elsif page.content.length > 0 %}{{ page.content | truncatewords: 20 | strip_html }}{% elsif page.title %}{{ page.title }}{% else %}The Yak Collective{% endif %}">
+<meta name="twitter:description" content="{% if page.summary %}{{ page.summary | truncatewords: 20 | markdownify | strip_html }}{% elsif page.content.length > 0 %}{{ page.content | truncatewords: 20 | strip_html }}{% elsif page.subtitle %}{{ page.subtitle }}{% elsif page.tagline %}{{ page.tagline }}{% elsif site.description %}{{ site.description | truncatewords: 20 }}{% else %}The Yak Collective{% endif %}">
 <meta name="twitter:image" content="{{ site.url }}{{ twitter_image }}">
 
 <link rel="alternate" type="application/json" title="The Yak Collective's Latest Writings" href="/writings/feed.json">
