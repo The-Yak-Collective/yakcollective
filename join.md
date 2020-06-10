@@ -39,12 +39,6 @@ https://docs.google.com/forms/u/0/d/e/1FAIpQLSfVUUvuIkzEGffk1CoEgzOkeO_yI05Nuw6z
 			<option value="Other">Other</option>
 		</select>
 	</p>
-	<p>
-		<span class="db b mb2">Would you like to be added to our email list?</span>
-		<small class="db f6 mb2 details">We do not yet have an email newsletter or update list, but we will eventually make one. If you'd like to start receiving updates when we do, check "Yes" below.</small>
-		<input class="ba" type="checkbox" name="entry.1148437568" id="entry.1148437568" value="Yes">
-		<label for="entry.1148437568">Yes</label>
-	</p>
 	<p class="mb0">
 		<input class="b ba ph3 pv2 submit" type="submit" value="Submit">
 	</p>
