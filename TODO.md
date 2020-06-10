@@ -89,6 +89,10 @@
 
 	- https://discordapp.com/channels/692111190851059762/692111190851059766/720322044490678423
 
+- [ ] Make the project page hero text `w-50-l` (or something like that), and modify the horizontal padding to keep things relatively centered
+
+	- https://discordapp.com/channels/@me/706704472784633968/720317081660162089
+
 - [ ] Figure out how to [make the project page header a bit thinner](https://discordapp.com/channels/692111190851059762/709753766076874774/719731952852140163), to bring decks more above the fold.
 
 	- Reduce the font size of the left-hand sidebar?
