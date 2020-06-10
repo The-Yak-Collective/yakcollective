@@ -26,6 +26,10 @@ When doing local development, you may want to run `bundle exec jekyll serve` ins
 
 Netlify will rebuild the site automatically whenever changes are pushed to the repo and/or merged in.
 
+### A Warning!
+
+Netlify's build environment uses UTC, so when using `site.time` to mask pages (which we do sometimes), be aware that they will become unmasked relative to UTC!
+
 ## Documentation
 
 Here's a quick rundown of the moving parts here.
