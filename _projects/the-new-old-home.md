@@ -54,7 +54,7 @@ collaborators:
   - shreeda-segan
   - thomas-hollands
   - thomas-verhagen
-  - toby-shorin
+  - toby-schorin
   - tom-critchlow
   - venkatesh-rao
 ---

@@ -13,3 +13,7 @@
 [[redirects]]
   from = "/reports/yak-wisdom"
   to = "/projects/dont-waste-the-covid19-reboot"
+
+[[redirects]]
+  from = "/members/toby-shorin"
+  to = "/members/toby-schorin"

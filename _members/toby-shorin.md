@@ -1,6 +1,6 @@
 ---
-name: toby-shorin
-title: Toby Shorin
+name: toby-schorin
+title: Toby Schorin
 date: 2020-06-10
 partner: false
 previously: Other Internet
