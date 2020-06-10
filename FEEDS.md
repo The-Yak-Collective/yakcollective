@@ -15,7 +15,7 @@ If you want to add yourself to this list or update an existing feed, ping Nathan
 - David McDougall
 	- https://innovationatscale.substack.com/feed/
 - Pamela Hobart
-	- https://pamelajhobart.substack.com/feed/
+	- https://www.pamelajhobart.com/blog?format=rss
 - Paul Millerd
 	- https://think-boundless.com/feed/
 - Randy Lubin
