@@ -107,6 +107,8 @@
 
 	- This needs to be user-editable!
 
+- [ ] Creating an SVG for the "yak head" logo (and then integrating it in for links, etc. where color change is important) would be potentially useful
+
 - [ ] Integrate [Quotebacks](https://quotebacks.net/)?
 
 	- Maybe use this for the member post pages, to make it clear that these are coming from another site?
