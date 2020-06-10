@@ -85,6 +85,10 @@
 	- [ ] Figure out a better way to share logins for Yak Collective infrastructure.
 	- [ ] Schedule office hours, walk interested folks through the site changes.
 
+- [ ] Figure out why non-member edits aren't working in Netlify CMS
+
+	- https://discordapp.com/channels/692111190851059762/692111190851059766/720322044490678423
+
 - [ ] Figure out how to [make the project page header a bit thinner](https://discordapp.com/channels/692111190851059762/709753766076874774/719731952852140163), to bring decks more above the fold.
 
 	- Reduce the font size of the left-hand sidebar?
