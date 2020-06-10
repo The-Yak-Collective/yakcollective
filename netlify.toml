@@ -15,5 +15,5 @@
   to = "/projects/dont-waste-the-covid19-reboot"
 
 [[redirects]]
-  from = "/members/toby-shorin"
-  to = "/members/toby-schorin"
+  from = "/members/toby-schorin"
+  to = "/members/toby-shorin"

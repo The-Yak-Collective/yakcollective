@@ -22,7 +22,7 @@ If you want to add yourself to this list or update an existing feed, ping Nathan
 	- https://blog.randylubin.com/feed.xml
 - Shreeda Segan
 	- https://shreeda.substack.com/feed/
-- Toby Schorin
+- Toby Shorin
 	- https://subpixel.space/feed.xml
 - Tom Critchlow
 	- https://tomcritchlow.com/feed
