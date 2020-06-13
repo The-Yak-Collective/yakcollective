@@ -1,6 +1,12 @@
+# Newsletter
+
+The _Yak Talk_ newsletter is archived under `newsletter/_posts`. It's feed is:
+
+- https://yakcollective.substack.com/feed/
+
 # Member RSS Feeds
 
-Below is a list of member RSS feeds that are aggregated under `writings/_posts`. Right now, we don't do anything with the content of these posts, instead using them to generate a list of recent member writings and drive traffic to _their_ websites. You can see the list of current writings at https://yakcollective.org/writings/. To learn how individual posts are pushed from IFTTT to https://yakcollective.org, check out the [`yakcollective-ifttt-connector` repo](https://github.com/The-Yak-Collective/yakcollective-ifttt-connector).
+Below is a list of member RSS feeds that are aggregated under `writings/_posts`. Right now, we don't do anything with the content of these posts, instead using them to generate a list of recent member writings and drive traffic to _their_ websites. You can see the list of current writings at https://yakcollective.org/writings/. To learn how individual posts are pushed from IFTTT to https://yakcollective.org, check out `functions/create-post.js`.
 
 If you want to add yourself to this list or update an existing feed, ping Nathan Acks, Tom Critchlow, or Venkatesh Rao, or submit a pull request against this file.
 
