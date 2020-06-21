@@ -12,6 +12,8 @@ Updates can be made using Netlify CMS at https://yakcollective.org/admin. Change
 
 Significant website changes should be made using short-lived [topic branches](https://git-scm.com/book/en/v2/Git-Branching-Branching-Workflows) that are merged into `netlify-prod` when ready. The Yak Collective Netlify account can be used to create temporary websites when such changes need to be reviewed broadly.
 
+Issues, features, and website milestones are [tracked in GitHub](https://github.com/The-Yak-Collective/yakcollective/issues).
+
 ## Make It Go
 
 To build things locally...
