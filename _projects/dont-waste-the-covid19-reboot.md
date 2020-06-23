@@ -12,22 +12,46 @@ page_css: |
     opacity: 0.5;
   }
   .report {
-    width: 140%;
-    margin-left: -20%;
-    margin-top: -7rem;
-    height: 634px;
     display: block;
   }
-  @media (max-width: 84em) {
+  @media (min-width: 70em) {
+    .report {
+      width: 130%;
+      margin-left: -15%;
+      margin-top: -6rem;
+      height: 37rem;
+    }
+  }
+  @media (min-width: 60em) and (max-width: 70em) {
+    .report{
+      width: 110%;
+      margin-left: -5%;
+      margin-top: -6rem;
+      height: 31.5rem;
+    }
+  }
+  @media (min-width: 50em) and (max-width: 60em) {
     .report{
       width: 100%;
       margin-left: 0;
+      margin-top: -5rem;
       height: 29rem;
     }
-  @media (max-width: 60em) {
+  }
+  @media (min-width: 40em) and (max-width: 50em) {
     .report{
+      width: 100%;
+      margin-left: 0;
       margin-top: -5rem;
-      height: 58vw;
+      height: 26.5rem;
+    }
+  }
+  @media (max-width: 40em) {
+    .report{
+      width: 100%;
+      margin-left: 0;
+      margin-top: -5rem;
+      height: 21.5rem;
     }
   }
 summary: |
