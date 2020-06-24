@@ -138,7 +138,7 @@ bundle exec jekyll build```
                 - Various Netlify build directives, just redirects right now.
         - ### Secrets
             - Netlify CMS uses GitHub as an OAuth provider; connection secrets can be found in Netlify under **Settings > Access control > OAuth**.
-            - The `create-post` function stores configuration information, a GitHub access token, and a token used to authenticate incoming requests in Netlify under **Settings > Build & deploy > Environment > Environment variables**.
+            - The `create-post` function stores configuration information, a GitHub access token, and a token used to authenticate incoming requests, and Discord webhook channel and token information in Netlify under **Settings > Build & deploy > Environment > Environment variables**.
 - # Site History
     - Notes for v1.0 and v.20 adapted from the June 13, 2020 #infrastructure chat notes.
     - ## v1.0
