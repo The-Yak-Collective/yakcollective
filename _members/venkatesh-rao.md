@@ -2,7 +2,6 @@
 name: venkatesh-rao
 title: Venkatesh Rao
 date: 2020-04-30
-partner: true
 indie_status: 9+ years
 previously: Xerox
 twitter: vgr

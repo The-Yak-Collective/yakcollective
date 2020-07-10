@@ -2,7 +2,6 @@
 name: thomas-hollands
 title: Thomas Hollands
 date: 2020-06-10
-partner: false
 tagline: Writing and Strategy
 previously: Barclays & UCL
 currently: L.E.K. Consulting

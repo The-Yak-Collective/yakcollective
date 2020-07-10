@@ -2,7 +2,6 @@
 name: pamela-hobart
 title: Pamela Hobart
 date: 2020-04-30
-partner: true
 tagline: Philosopher, Mother of 3
 currently: The Life Coach for Smart People
 indie_status: 3+ years

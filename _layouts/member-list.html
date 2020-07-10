@@ -4,30 +4,13 @@ layout: minimal
 
 <section>
 	<header>
-		<h1>Partners</h1>
-		{{ page.partners_blurb | markdownify }}
+		<h1>Members</h1>
+		{{ content }}
 	</header>
 
-	{% assign member_partners = site.members | where_exp: "member", "member.partner == true" %}
-	{% for member in member_partners %}
+	{% for member in site.members %}
 		{% if member.date <= site.time or site.future == true %}
 			{% include member-card.html %}
 		{% endif %}
 	{% endfor %}
 </section>
-
-<section>
-	<header>
-		<h2 class="cf pt3">Collaborators</h2>
-		{{ page.collaborators_blurb | markdownify }}
-	</header>
-
-	{% assign member_collaborators = site.members | where_exp: "member", "member.partner != true" %}
-	{% for member in member_collaborators %}
-		{% if member.date <= site.time or site.future == true %}
-			{% include member-card.html %}
-		{% endif %}
-	{% endfor %}
-</section>
-
-<!-- {{ content }} -->

@@ -41,11 +41,7 @@ collections:
         pickerUtc:  true
         required: true
         hint: The date the member joined. If the date is in the future, the member will not be displayed.
-      - label: Partner
-        name: partner
-        widget: boolean
-        required: false
-      - label: Title
+        - label: Title
         name: tagline
         widget: string
         required: false
@@ -264,20 +260,11 @@ collections:
             name: title
             widget: string
             required: true
-          - label: Partners Blurb
-            name: partners_blurb
-            widget: markdown
-            required: true
-            hint: The text displayed above the partner list.
-          - label: Collaborators Blurb
-            name: collaborators_blurb
-            widget: markdown
-            required: true
-            hint: The text displayed above the collaborators list.
           - label: Content
             name: body
-            widget: hidden
-            default: ""
+            widget: markdown
+            required: true
+            hint: The text displayed above the members list.
       - label: About
         name: about-page
         file: about.md
