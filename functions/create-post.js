@@ -140,7 +140,7 @@ exports.handler = async function(event, context) {
 		} catch (discordError) {
 			return {
 				statusCode: 500,
-				body: "Post notification in Discord failed"
+				body: "Post notification in Discord failed" + "\n\n" + discordURL + "\n\n" + discordContent + "\n\n" + discrodError
 			};
 		}
 	}
