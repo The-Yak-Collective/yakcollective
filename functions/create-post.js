@@ -2,7 +2,8 @@
 //
 const moment = require("moment");
 const chrono = require("chrono-node");
-const accents = require('remove-accents');
+const accents = require("remove-accents");
+const axios = require("axios");
 const { Octokit } = require("@octokit/rest");
 
 // Lambda function handler
@@ -82,6 +83,19 @@ exports.handler = async function(event, context) {
 	postContent = postContent.replace(/title:.*\n/, "");
 	postContent = postContent.replace(/---\n/, "---\ntitle: |\n  " + postTitle + "\n");
 
+	// Figure out the post URL. Abort if none is set.
+	//
+	var postURL;
+	var urlSearch = postContent.match(/original_link: ?(.+)\n/);
+	if (urlSearch !== null && urlSearch.length > 0) {
+		postURL = urlSearch[1].trim().replace(/^"/, "").replace(/"$/, "");
+	} else {
+		return {
+			statusCode: 400,
+			body: "Post URL not found"
+		};
+	};
+
 	// Create slug (for use in file names).
 	//
 	var slugTitle = moment(postDate).format("YYYY-MM-DD-") + (accents.remove(postTitle)).toLowerCase().replace(/[^a-z0-9]/g, "-").replace(/-+/g, "-");
@@ -101,11 +115,34 @@ exports.handler = async function(event, context) {
 			path: postPath + "/" + slugTitle + ".html",
 			message: "Post automatically pushed from IFTTT",
 			content: new Buffer(postContent).toString("base64")
-		}).then(gitHubResponse => {
-			return {
-				statusCode: 200,
-				body: "Success"
-			};
+		}).then((gitHubResponse) => {
+			if (event.queryStringParameters.category == "writings") {
+
+				// Post to URL using Axios, after:
+				//
+				//   https://attacomsian.com/blog/node-http-post-request
+				//
+				const discordContent = {
+					content: "New member content: \"" + postTitle + "\" " + postURL
+				}
+				const discordURL = "https://discordapp.com/api/webhooks/" + process.env.DISCORD_CHANNEL + "/" + process.env.DISCORD_WEBHOOK_TOKEN;
+				axios.post(discordURL, discordContent).then((axiosResponse) => {
+					return {
+						statusCode: 201,
+						body: "Success"
+					};
+				}).catch((axiosError) => {
+					return {
+						statusCode: 500,
+						body: "Post creation in GitHub succeeded but Discord notification failed"
+					};
+				});
+			} else {
+				return {
+					statusCode: 201,
+					body: "Success"
+				};
+			}
 		});
 	} catch (gitHubError) {
 		return {
