@@ -22,10 +22,13 @@ exports.handler = async function(event, context) {
 	// Set incoming post category, or none
 	//
 	var postPath;
+	var postCategory;
 	if (! (event.queryStringParameters).hasOwnProperty("category") || event.queryStringParameters.category === null || event.queryStringParameters.category.length === 0) {
+		postCategory = "";
 		postPath = "_posts";
 	} else {
-		postPath = event.queryStringParameters.category + "/_posts";
+		postCategory = event.queryStringParameters.category;
+		postPath = postCategory + "/_posts";
 	};
 
 	// Cleanup formatting of incoming post, replace special chracters, etc.
@@ -116,7 +119,7 @@ exports.handler = async function(event, context) {
 			message: "Post automatically pushed from IFTTT",
 			content: new Buffer(postContent).toString("base64")
 		}).then((gitHubResponse) => {
-			if (event.queryStringParameters.category == "writings") {
+			if (postCategory === "writings") {
 
 				// Post to URL using Axios, after:
 				//
