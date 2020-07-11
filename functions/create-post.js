@@ -133,14 +133,14 @@ exports.handler = async function(event, context) {
 	if (postCategory === "writings") {
 		const discordURL = "https://discordapp.com/api/webhooks/" + process.env.DISCORD_CHANNEL + "/" + process.env.DISCORD_WEBHOOK_TOKEN;
 		const discordContent = {
-			content: "New member content: \"" + postTitle + "\" " + postURL
+			content: postTitle + " " + postURL
 		}
 		try {
 			await axios.post(discordURL, discordContent);
 		} catch (discordError) {
 			return {
 				statusCode: 500,
-				body: "Post notification in Discord failed" + "\n\n" + discordURL + "\n\n" + discordContent + "\n\n" + discordError
+				body: "Post notification in Discord failed"
 			};
 		}
 	}
