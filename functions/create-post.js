@@ -111,7 +111,7 @@ exports.handler = async function(event, context) {
 		const github = new Octokit({
 			auth: process.env.GH_TOKEN
 		});
-		return github.repos.createOrUpdateFile({
+		github.repos.createOrUpdateFile({
 			owner: process.env.GH_USER_OR_TEAM,
 			repo: process.env.GH_REPO,
 			branch: process.env.GH_BRANCH,
