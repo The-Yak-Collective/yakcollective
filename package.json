@@ -1,7 +1,8 @@
 {
   "name": "functions",
-  "version": "2.0",
+  "version": "2.0.0",
   "description": "Yak Collective webhooks",
+  "private": true,
   "keywords": [
     "netlify",
     "jekyll",
