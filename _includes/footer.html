@@ -1,7 +1,15 @@
 <footer class="bottom-0 ph3 ph5-m ph6-l bt tc w-100">
 	<small class="f6 db tc mt3">The Yak Collective</small>
         <!--added from here. note it shows vertical. lets see on real system-->
-    <div class="f6 db tc mt3" id="footer_slogan"></div>
+        <!--
+        get length
+        random number up to length size
+        use that line-height
+        -->
+    {% assign num_slogs = site.data.atbuild_slogans | size %}
+    {% assign which_one = "now" | date: "%N" | modulo: num_slogs %}
+    {% assign theone = site.data.atbuild_slogans[which_one].slog %}
+    <div class="f6 db tc mt3" id="footer_slogan">{{ theone }}</div>
     <script>
     var footer_slogans;
     var footer_slogans_num;
@@ -14,8 +22,8 @@
             console.log(data);
             footer_slogans=data.split('\n');
             footer_slogans_num=footer_slogans.length;
-            footer_change_slogan();
-            window.setInterval(footer_change_slogan,3000);
+            //footer_change_slogan();//first time it will be what system pre-sets
+            window.setInterval(footer_change_slogan,6000);
         })
     }
     function footer_change_slogan(){
