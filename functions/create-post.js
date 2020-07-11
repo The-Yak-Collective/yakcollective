@@ -111,46 +111,44 @@ exports.handler = async function(event, context) {
 		const github = new Octokit({
 			auth: process.env.GH_TOKEN
 		});
-		github.repos.createOrUpdateFile({
+		await github.repos.createOrUpdateFile({
 			owner: process.env.GH_USER_OR_TEAM,
 			repo: process.env.GH_REPO,
 			branch: process.env.GH_BRANCH,
 			path: postPath + "/" + slugTitle + ".html",
 			message: "Post automatically pushed from IFTTT",
 			content: new Buffer(postContent).toString("base64")
-		}).then((gitHubResponse) => {
-			if (postCategory === "writings") {
-
-				// Post to URL using Axios, after:
-				//
-				//   https://attacomsian.com/blog/node-http-post-request
-				//
-				const discordContent = {
-					content: "New member content: \"" + postTitle + "\" " + postURL
-				}
-				const discordURL = "https://discordapp.com/api/webhooks/" + process.env.DISCORD_CHANNEL + "/" + process.env.DISCORD_WEBHOOK_TOKEN;
-				axios.post(discordURL, discordContent).then((axiosResponse) => {
-					return {
-						statusCode: 201,
-						body: "Success"
-					};
-				}).catch((axiosError) => {
-					return {
-						statusCode: 500,
-						body: "Post creation in GitHub succeeded but Discord notification failed"
-					};
-				});
-			} else {
-				return {
-					statusCode: 201,
-					body: "Success"
-				};
-			}
 		});
 	} catch (gitHubError) {
 		return {
 			statusCode: 500,
 			body: "Post creation in GitHub failed"
 		};
+	};
+
+	// Post to URL using Axios, after:
+	//
+	//   https://attacomsian.com/blog/node-http-post-request
+	//
+	if (postCategory === "writings") {
+		try {
+			const discordURL = "https://discordapp.com/api/webhooks/" + process.env.DISCORD_CHANNEL + "/" + process.env.DISCORD_WEBHOOK_TOKEN;
+			const discordContent = {
+				content: "New member content: \"" + postTitle + "\" " + postURL
+			}
+			await axios.post(discordURL, discordContent);
+		} catch (discordError) {
+			return {
+				statusCode: 500,
+				body: "Post notification in Discord failed"
+			};
+		}
+	}
+
+	// Return success
+	//
+	return {
+		statusCode: 201,
+		body: "Success"
 	};
 };
