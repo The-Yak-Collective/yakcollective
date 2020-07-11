@@ -131,11 +131,11 @@ exports.handler = async function(event, context) {
 	//   https://attacomsian.com/blog/node-http-post-request
 	//
 	if (postCategory === "writings") {
+		const discordURL = "https://discordapp.com/api/webhooks/" + process.env.DISCORD_CHANNEL + "/" + process.env.DISCORD_WEBHOOK_TOKEN;
+		const discordContent = {
+			content: "New member content: \"" + postTitle + "\" " + postURL
+		}
 		try {
-			const discordURL = "https://discordapp.com/api/webhooks/" + process.env.DISCORD_CHANNEL + "/" + process.env.DISCORD_WEBHOOK_TOKEN;
-			const discordContent = {
-				content: "New member content: \"" + postTitle + "\" " + postURL
-			}
 			await axios.post(discordURL, discordContent);
 		} catch (discordError) {
 			return {
