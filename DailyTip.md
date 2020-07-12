@@ -1,6 +1,7 @@
 ---
 layout: minimal
-title: Daily Tip from 100 Consulting Tips of [Art of Gig](https://artofgig.substack.com/)
+title: Daily Tip from 100 Consulting Tips of Art of Gig
+
 ---
 
     {% assign num_tips = site.data.artofgig100tips | size %}
@@ -10,10 +11,10 @@ title: Daily Tip from 100 Consulting Tips of [Art of Gig](https://artofgig.subst
 
 
 # {{ theone }} #{{ which_one | plus: 1}} 
-{: #consultingtip :}
+{: #consultingtip }
 
 {{ thewords }}
-{: #thewords :}
+{: #thewords }
 <html>
 <button id="nexttipbutton" class="b ba ph3 pv2 submit" onClick="window.location.reload();" style="display:none;">Another One Please</button>
 
@@ -32,7 +33,7 @@ function dailytip_get_tips_from_data(){
 function dailytip_change_tip(){
     to_show=Math.floor(Math.random() * dailytip_tips_num);
     to_showplus1=to_show+1;
-    document.getElementById("consultingtip").innerHTML=dailytip_tips[to_show].tip+"#"+to_showplus1;
+    document.getElementById("consultingtip").innerHTML=dailytip_tips[to_show].tip+" #"+to_showplus1;
     document.getElementById("thewords").innerHTML=dailytip_tips[to_show].thewords;
 }
 dailytip_get_tips_from_data();
