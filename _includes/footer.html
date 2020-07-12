@@ -16,22 +16,26 @@
     const footer_slogans_url=//'https://raw.githubusercontent.com/The-Yak-Collective/yakcollective/netlify-prod/assets/slogans.html'; 
     '/assets/slogans.html'; //lets see if this works
     
-    function footer_get_slogans(){
+    function footer_get_slogans_from_assets(){/*probbaly depreciated*/
         fetch(footer_slogans_url, {method: 'GET'})
         .then((resp) => resp.text()).then(function(data){ //
             console.log(data);
             footer_slogans=data.split('\n');
             footer_slogans_num=footer_slogans.length;
-            footer_change_slogan();//first time it will be what system pre-sets. and now there will be no random slogan at all...
-            //window.setInterval(footer_change_slogan,6000);
-            
-        })
+            footer_change_slogan();//first time it will be what system pre-sets. 
+            //window.setInterval(footer_change_slogan,6000);//now change periodically
+        });
+    }
+    function footer_get_slogans_from_data(){
+        footer_slogans={{site.data.atbuild_slogans | jsonify}};
+        footer_slogans_num=footer_slogans.length;
+        footer_change_slogan();
     }
     function footer_change_slogan(){//seems like sometimes reads a blank line. maybe last line in file is blank? make sure not
         footer_slogan_to_show=Math.floor(Math.random() * footer_slogans_num);
-        document.getElementById("footer_slogan").innerHTML=footer_slogans[footer_slogan_to_show].trim();
+        document.getElementById("footer_slogan").innerHTML=footer_slogans[footer_slogan_to_show].slog;
     }
-    footer_get_slogans()
+    footer_get_slogans_from_data();
 
     </script>
     <!--to here-->
