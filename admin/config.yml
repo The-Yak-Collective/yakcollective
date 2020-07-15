@@ -222,11 +222,11 @@ collections:
       preview: false
     files:
       - label: Slogans
-        name: slogans_all
+        name: slogans
         file: _data/slogans.yml
         fields:
           - label: Slogans
-            name: slogans
+            name: slogans_list
             widget: list
             collapsed: false
             fields:
@@ -236,11 +236,11 @@ collections:
                 required: true
                 hint: Text only; no markdown or HTML.
       - label: Tips
-        name: tips_all
+        name: tips
         file: _data/tips.yml
         fields:
           - label: Tips
-            name: tips
+            name: tips_list
             widget: list
             collapsed: false
             fields:
