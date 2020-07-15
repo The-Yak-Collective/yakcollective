@@ -4,7 +4,7 @@ title: tentative help file for admin, now in the folder
 
 ## collections
 
-choose a collection to see what is in it, edit or add new
+this version from the "_helpfiles" folder choose a collection to see what is in it, edit or add new
 
 ## workflow
 
