@@ -9,7 +9,7 @@ site_url: https://yakcollective.org
 collections:
   - name: help
     label: How do i use this interface
-    folder: _helpfiles/
+#    folder: _helpfiles/
     create: false
     editor:
       preview: false
