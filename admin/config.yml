@@ -9,31 +9,11 @@ site_url: https://yakcollective.org
 collections:
   - name: help
     label: How do i use this interface
-#    folder: _helpfiles/
+    folder: _helpfiles/
     create: true
-    editor:
-      preview: false
-    files: 
-      - label: help file
-        name: help-file
-        file: help.md
-        fields:
-          - label: Layout
-            name: layout
-            widget: hidden
-            default: minimal
-          - label: Title
-            name: title
-            widget: string
-            required: true
-          - label: Content
-            name: body
-            widget: markdown
-            required: true
-      - label: infolder help file
-        name: another-help-file
-        file: _helpfiles/infolderhelp.md
-        fields:
+#    editor:
+#      preview: false
+    fields:
           - label: Layout
             name: layout
             widget: hidden
@@ -43,9 +23,43 @@ collections:
             widget: string
             required: true
           - label: Content
-            name: content
+            name: body
             widget: markdown
             required: true
+      
+#    files: 
+#      - label: help file
+#        name: help-file
+#        file: help.md
+#        fields:
+#          - label: Layout
+#            name: layout
+#            widget: hidden
+#            default: minimal
+#          - label: Title
+#            name: title
+#            widget: string
+#            required: true
+#          - label: Content
+#            name: body
+#            widget: markdown
+#            required: true
+#      - label: infolder help file
+#        name: another-help-file
+#        file: _helpfiles/infolderhelp.md
+#        fields:
+#         - label: Layout
+#           name: layout
+#            widget: hidden
+#            default: page
+#          - label: Title
+#            name: title
+#            widget: string
+#            required: true
+#          - label: Content
+#            name: content
+#            widget: markdown
+#            required: true
 
 
 
