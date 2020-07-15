@@ -31,7 +31,7 @@ collections:
     files: 
       - label: "help file"
         name: help_file
-        file: "help.md"
+        file: "about.md"
         fields:
           - label: Layout
             name: layout
