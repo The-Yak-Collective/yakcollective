@@ -41,7 +41,7 @@ collections:
         pickerUtc:  true
         required: true
         hint: The date the member joined. If the date is in the future, the member will not be displayed.
-        - label: Title
+      - label: Title
         name: tagline
         widget: string
         required: false
