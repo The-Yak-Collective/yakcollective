@@ -1,4 +1,4 @@
 ---
-title: how can i create
+title: first help file entry, say for overview
 ---
-i wanted to see the help file here
+i had hoped that help.md would appear here, but it did not
