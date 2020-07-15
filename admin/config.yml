@@ -1,7 +1,8 @@
 backend:
   name: github
   repo: The-Yak-Collective/yakcollective
-  branch: warren-structure
+  branch: v2.1
+  open_authoring: true
 publish_mode: editorial_workflow
 media_folder: assets/
 site_url: https://yakcollective.org
@@ -221,24 +222,26 @@ collections:
       preview: false
     files:
       - label: All Slogans
-        name: slogans-all
+        name: slogans_all
         file: _data/slogans.yml
         fields:
           - label: Slogans
             name: slogans
             widget: list
+            fields:
               - label: Slogan
                 name: slogan
                 widget: string
                 required: true
                 hint: Text only; no markdown or HTML.
       - label: All Tips
-        name: tips-all
+        name: tips_all
         file: _data/tips.yml
         fields:
           - label: Tips
             name: tips
             widget: list
+            fields:
               - label: Author
                 name: author
                 widget: relation
