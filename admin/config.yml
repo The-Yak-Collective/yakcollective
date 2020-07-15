@@ -10,7 +10,7 @@ collections:
   - name: help
     label: How do i use this interface
     folder: _helpfiles/
-    create: true
+    create: false
     editor:
       preview: false
     fields:
@@ -26,24 +26,43 @@ collections:
             name: body
             widget: markdown
 #            required: true
-      
-#    files: 
-#      - label: help file
-#        name: help-file
-#        file: help.md
-#        fields:
-#          - label: Layout
-#            name: layout
-#            widget: hidden
+  - name: help1
+    label: alt How do i use this interface
+    files: 
+      - label: "help file"
+        name: help_file
+        file: help.md
+        fields:
+          - label: Layout
+            name: layout
+            widget: hidden
 #            default: minimal
-#          - label: Title
-#            name: title
-#            widget: string
+          - label: Title
+            name: title
+            widget: string
 #            required: true
-#          - label: Content
-#            name: body
-#            widget: markdown
+          - label: Content
+            name: body
+            widget: markdown
 #            required: true
+      - label: "help file1"
+        name: help_file1
+        file: help.md
+        fields:
+          - label: Layout
+            name: layout
+            widget: hidden
+#            default: minimal
+          - label: Title
+            name: title
+            widget: string
+#            required: true
+          - label: Body
+            name: body
+            widget: markdown
+#            required: true
+
+
 #      - label: infolder help file
 #        name: another-help-file
 #        file: _helpfiles/infolderhelp.md
