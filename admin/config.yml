@@ -215,6 +215,42 @@ collections:
         name: body
         widget: hidden
         default: ""
+  - label: Slogans & Tips
+    name: slogans-and-tips
+    editor:
+      preview: false
+    files:
+      - label: Slogans (All)
+        name: slogans-all
+        file: _data/slogans.yml
+        fields:
+          - label: Slogans
+            name: slogans
+            widget: list
+              - label: Slogan
+                name: slogan
+                widget: string
+                required: true
+      - label: Tips (All)
+        name: tips-all
+        file: _data/tips.yml
+        fields:
+          - label: Tips
+            name: tips
+            widget: list
+              - label: Author
+                name: author
+                widget: relation
+                collection: members
+                searchFields: [ title ]
+                valueField: name
+                displayFields: [ title ]
+                multiple: false
+                required: true
+              - label: Tip
+                name: tip
+                widget: string
+                required: true
   - label: Pages
     name: pages
     editor:
