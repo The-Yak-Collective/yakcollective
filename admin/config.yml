@@ -30,6 +30,22 @@ collections:
             name: body
             widget: markdown
             required: true
+      - label: infolder help file
+        name: help-file
+        file: _helpfiles/infolderhelp.md
+        fields:
+          - label: Layout
+            name: layout
+            widget: hidden
+            default: page
+          - label: Title
+            name: title
+            widget: string
+            required: true
+          - label: Content
+            name: body
+            widget: markdown
+            required: true
 
 
 
