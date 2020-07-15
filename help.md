@@ -1,6 +1,7 @@
 ---
 title: tentative help file for admin
 ---
+some text before headline
 
 ## collections
 
