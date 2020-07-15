@@ -31,7 +31,7 @@ collections:
             widget: markdown
             required: true
       - label: infolder help file
-        name: help-file
+        name: another-help-file
         file: _helpfiles/infolderhelp.md
         fields:
           - label: Layout
