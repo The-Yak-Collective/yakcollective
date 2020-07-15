@@ -7,6 +7,18 @@ publish_mode: editorial_workflow
 media_folder: assets/
 site_url: https://yakcollective.org
 collections:
+  - name: Help
+    label: How do i use this interface
+    file: help.md
+    create: true
+    editor:
+      preview: True
+    fields:
+      - label: do i need one
+        name: layout
+        widget: hidden
+        Hint: this is an attempt to give instructions on how to use this interface
+
   - name: members
     label: Members
     folder: _members/
