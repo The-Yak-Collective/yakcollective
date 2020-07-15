@@ -11,8 +11,8 @@ collections:
     label: How do i use this interface
     folder: _helpfiles/
     create: true
-#    editor:
-#      preview: false
+    editor:
+      preview: false
     fields:
           - label: Layout
             name: layout
@@ -21,11 +21,11 @@ collections:
           - label: Title
             name: title
             widget: string
-            required: true
+#            required: true
           - label: Content
             name: body
             widget: markdown
-            required: true
+#            required: true
       
 #    files: 
 #      - label: help file
