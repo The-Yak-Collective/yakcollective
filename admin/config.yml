@@ -10,6 +10,8 @@ collections:
 
   - name: help
     label: How do i use this interface
+    editor:
+      preview: false
     files: 
       - label: "instructions for using the admin interface"
         name: help_file
