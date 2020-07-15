@@ -9,7 +9,20 @@ site_url: https://yakcollective.org
 collections:
   - name: Help
     label: How do i use this interface
-    file: help.md
+    files: 
+      - label: help file
+        name: help-file
+        file: help.md
+        fields:
+          - label: Layout
+            name: layout
+            widget: hidden
+            default: minimal
+          - label: Content
+            name: body
+            widget: markdown
+            required: true
+
     create: true
     editor:
       preview: True
