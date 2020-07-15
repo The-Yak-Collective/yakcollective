@@ -7,47 +7,13 @@ publish_mode: editorial_workflow
 media_folder: assets/
 site_url: https://yakcollective.org
 collections:
+
   - name: help
     label: How do i use this interface
-    folder: _helpfiles/
-    create: false
-    editor:
-      preview: false
-    fields:
-          - label: Layout
-            name: layout
-            widget: hidden
-            default: page
-          - label: Title
-            name: title
-            widget: string
-#            required: true
-          - label: Content
-            name: body
-            widget: markdown
-#            required: true
-  - name: help1
-    label: alt How do i use this interface
     files: 
-      - label: "help file"
+      - label: "instructions for using the admin interface"
         name: help_file
-        file: "about.md"
-        fields:
-          - label: Layout
-            name: layout
-            widget: hidden
-#            default: minimal
-          - label: Title
-            name: title
-            widget: string
-#            required: true
-          - label: Content
-            name: body
-            widget: markdown
-#            required: true
-      - label: "help file1"
-        name: help_file1
-        file: "_helpfiles/infolderhelp.md"
+        file: "about.md" #should be admin_help.md
         fields:
           - label: Layout
             name: layout
@@ -57,28 +23,11 @@ collections:
             name: title
             widget: string
             required: true
-          - label: Body
+          - label: Content
             name: body
             widget: markdown
             required: true
 
-
-#      - label: infolder help file
-#        name: another-help-file
-#        file: _helpfiles/infolderhelp.md
-#        fields:
-#         - label: Layout
-#           name: layout
-#            widget: hidden
-#            default: page
-#          - label: Title
-#            name: title
-#            widget: string
-#            required: true
-#          - label: Content
-#            name: content
-#            widget: markdown
-#            required: true
 
 
 
