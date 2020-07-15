@@ -10,7 +10,7 @@ collections:
   - name: help
     label: How do i use this interface
 #    folder: _helpfiles/
-    create: false
+    create: true
     editor:
       preview: false
     files: 
@@ -21,7 +21,7 @@ collections:
           - label: Layout
             name: layout
             widget: hidden
-            default: page
+            default: minimal
           - label: Title
             name: title
             widget: string
@@ -43,7 +43,7 @@ collections:
             widget: string
             required: true
           - label: Content
-            name: body
+            name: content
             widget: markdown
             required: true
 

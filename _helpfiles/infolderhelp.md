@@ -1,4 +1,5 @@
 ---
+layout: minimal
 title: tentative help file for admin, now in the folder
 ---
 
