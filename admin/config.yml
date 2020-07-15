@@ -215,12 +215,12 @@ collections:
         name: body
         widget: hidden
         default: ""
-  - label: Slogans & Tips
+  - label: "Slogans & Tips"
     name: slogans-and-tips
     editor:
       preview: false
     files:
-      - label: Slogans (All)
+      - label: All Slogans
         name: slogans-all
         file: _data/slogans.yml
         fields:
@@ -231,7 +231,8 @@ collections:
                 name: slogan
                 widget: string
                 required: true
-      - label: Tips (All)
+                hint: Text only; no markdown or HTML.
+      - label: All Tips
         name: tips-all
         file: _data/tips.yml
         fields:
@@ -247,10 +248,12 @@ collections:
                 displayFields: [ title ]
                 multiple: false
                 required: true
+                hint: Tip author (must be a Yak Collective member).
               - label: Tip
                 name: tip
                 widget: string
                 required: true
+                hint: Text only; no markdown or HTML.
   - label: Pages
     name: pages
     editor:
