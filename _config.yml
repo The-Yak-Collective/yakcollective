@@ -27,6 +27,8 @@ feed_update_frequency: 1
 # Collections
 #
 collections:
+  help:
+    output: true
   members:
     output: true
   projects:
