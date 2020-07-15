@@ -18,18 +18,22 @@ collections:
             name: layout
             widget: hidden
             default: minimal
+          - label: Title
+            name: title
+            widget: string
+            required: true
           - label: Content
             name: body
             widget: markdown
             required: true
 
-    create: true
+    create: false
     editor:
-      preview: True
+      preview: false
     fields:
       - label: do i need one
         name: layout
-        widget: hidden
+        widget: string
         Hint: this is an attempt to give instructions on how to use this interface
 
   - name: members
