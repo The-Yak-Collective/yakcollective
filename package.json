@@ -1,7 +1,8 @@
 {
   "name": "functions",
   "version": "2.0.0",
-  "description": "Commit Jekyll posts to GitHub from IFTTT",
+  "description": "Yak Collective webhooks",
+  "private": true,
   "keywords": [
     "netlify",
     "jekyll",
@@ -14,6 +15,7 @@
     "moment": "^2.24.0",
     "chrono-node": "^1.3.5",
     "remove-accents": "^0.4.2",
+    "axios": "^0.19.2",
     "@octokit/rest": "^17.9.0"
   },
   "repository": {

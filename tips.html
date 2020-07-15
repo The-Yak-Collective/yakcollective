@@ -1,0 +1,26 @@
+---
+layout: minimal
+title: Yak Collective Consulting Tip
+---
+{% assign num_tips = site.data.tips.tips | size %}
+{% assign which_one = "now" | date: "%N" | modulo: num_tips %}
+{% assign the_one = which_one | plus: 1 %}
+{% assign the_author_slug = site.data.tips.tips[which_one].author %}
+{% assign the_author = site.members | where: "name", the_author_slug | first %}
+{% assign the_words = site.data.tips.tips[which_one].tip %}
+
+<h1 id="yak-collective-consulting-tip-number">Yak Collective Consulting Tip #{{ the_one }}</h1>
+<p><span id="yak-collective-consulting-tip">{{ the_words }}</span> &mdash; <a href="/members/{{ the_author_slug }}" id="yak-collective-consulting-tip-author">{{ the_author.title }}</a></p>
+
+{% assign last_member = site.members.last %}
+<script>
+	var members = { {% for member in site.members %}"{{ member.name }}":"{{ member.title }}"{% if member.name != last_member.name %},{% endif %}{% endfor %} };
+	var tips = {{ site.data.tips | jsonify }};
+	var tips_total = (tips.tips).length;
+	var tip_to_show = Math.floor(Math.random() * tips_total);
+	var tip_num = tip_to_show + 1;
+	document.getElementById("yak-collective-consulting-tip-number").innerHTML = "Yak Collective Consulting Tip #" + tip_num;
+	document.getElementById("yak-collective-consulting-tip").innerHTML = tips.tips[tip_to_show].tip;
+	document.getElementById("yak-collective-consulting-author").href = "/members/" + tips.tips[tip_to_show].author;
+	document.getElementById("yak-collective-consulting-author").innerHTML = members[tips.tips[tip_to_show].author];
+</script>

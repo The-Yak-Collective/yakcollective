@@ -47,6 +47,11 @@ footer a {
 	color: rgba(0,0,0,0.85);
 }
 
+#footer-slogan, #footer-slogan:hover {
+	color: rgba(0,0,0,0.60);
+	text-decoration: none;
+}
+
 time,
 details,
 .details,
