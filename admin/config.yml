@@ -28,14 +28,7 @@ collections:
             widget: markdown
             required: true
 
-    create: false
-    editor:
-      preview: false
-    fields:
-      - label: do i need one
-        name: layout
-        widget: string
-        Hint: this is an attempt to give instructions on how to use this interface
+
 
   - name: members
     label: Members
