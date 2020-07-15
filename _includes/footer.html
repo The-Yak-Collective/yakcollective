@@ -1,5 +1,44 @@
 <footer class="bottom-0 ph3 ph5-m ph6-l bt tc w-100">
 	<small class="f6 db tc mt3">The Yak Collective</small>
+        <!--added from here. note it shows vertical. lets see on real system-->
+        <!--
+        get length
+        random number up to length size
+        use that line-height
+        -->
+    {% assign num_slogs = site.data.atbuild_slogans | size %}
+    {% assign which_one = "now" | date: "%N" | modulo: num_slogs %}
+    {% assign theone = site.data.atbuild_slogans[which_one].slog %}
+    <div class="f6 db tc mt2" id="footer_slogan">{{ theone }} </div>
+    <script>
+    var footer_slogans;
+    var footer_slogans_num;
+    const footer_slogans_url=//'https://raw.githubusercontent.com/The-Yak-Collective/yakcollective/netlify-prod/assets/slogans.html'; 
+    '/assets/slogans.html'; //lets see if this works
+    
+    function footer_get_slogans_from_assets(){/*probbaly depreciated*/
+        fetch(footer_slogans_url, {method: 'GET'})
+        .then((resp) => resp.text()).then(function(data){ //
+            console.log(data);
+            footer_slogans=data.split('\n');
+            footer_slogans_num=footer_slogans.length;
+            footer_change_slogan();//first time it will be what system pre-sets. 
+            //window.setInterval(footer_change_slogan,6000);//now change periodically
+        });
+    }
+    function footer_get_slogans_from_data(){
+        footer_slogans={{site.data.atbuild_slogans | jsonify}};
+        footer_slogans_num=footer_slogans.length;
+        footer_change_slogan();
+    }
+    function footer_change_slogan(){//seems like sometimes reads a blank line. maybe last line in file is blank? make sure not
+        footer_slogan_to_show=Math.floor(Math.random() * footer_slogans_num);
+        document.getElementById("footer_slogan").innerHTML=footer_slogans[footer_slogan_to_show].slog;
+    }
+    footer_get_slogans_from_data();
+
+    </script>
+    <!--to here-->
 	<a class="link dib h1 w1 ma3" href="https://www.facebook.com/theyakcollective/" title="Facebook">
 		<svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M15.117 0H.883C.395 0 0 .395 0 .883v14.234c0 .488.395.883.883.883h7.663V9.804H6.46V7.39h2.086V5.607c0-2.066 1.262-3.19 3.106-3.19.883 0 1.642.064 1.863.094v2.16h-1.28c-1 0-1.195.476-1.195 1.176v1.54h2.39l-.31 2.416h-2.08V16h4.077c.488 0 .883-.395.883-.883V.883C16 .395 15.605 0 15.117 0" fill-rule="nonzero"/></svg>
 	</a>
