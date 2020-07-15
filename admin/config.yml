@@ -41,9 +41,9 @@ collections:
             name: title
             widget: string
 #            required: true
-#          - label: Content
-#            name: body
-#            widget: markdown
+          - label: Content
+            name: body
+            widget: markdown
 #            required: true
       - label: "help file1"
         name: help_file1
