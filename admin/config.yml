@@ -1,11 +1,11 @@
 backend:
   name: github
   repo: The-Yak-Collective/yakcollective
-  branch: netlify-prod
+  branch: admin-improvements
   open_authoring: true
 publish_mode: editorial_workflow
 media_folder: assets/
-site_url: https://yakcollective.org
+site_url: https://inspiring-villani-8898ca.netlify.app
 collections:
   - name: members
     label: Members
