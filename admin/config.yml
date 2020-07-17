@@ -1,7 +1,7 @@
 backend:
   name: github
   repo: The-Yak-Collective/yakcollective
-  branch: v2.1
+  branch: netlify-prod
   open_authoring: true
 publish_mode: editorial_workflow
 media_folder: assets/
