@@ -19,7 +19,7 @@ permalink: pretty
 #
 name: The Yak Collective
 description: The Yak Collective is a network of over 300 independent consultants, coaches, and freelancers with varied technical and creative skills.
-url: https://yakcollective.org
+url: https://inspiring-villani-8898ca.netlify.app
 feed_items: 255
 feed_update_period: daily
 feed_update_frequency: 1
@@ -64,8 +64,6 @@ defaults:
 #
 exclude:
   - README.md
-  - FEEDS.md
-  - TODO.md
   - functions
   - netlify.toml
   - package.json
