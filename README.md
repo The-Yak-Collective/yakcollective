@@ -1,8 +1,6 @@
 - ![Netlify Status](https://api.netlify.com/api/v1/badges/943ff646-41b6-4b4b-ab86-a891698c72c7/deploy-status)
-    
     - **Deploy page:** https://app.netlify.com/sites/practical-lichterman-20c7e0/deploys
-- When updating this document, please make sure to keep the [Roam page](https://roamresearch.com/#/app/ArtOfGig/page/chpV4mwUT) and [site `README.md` file](https://github.com/The-Yak-Collective/yakcollective/blob/netlify-prod/README.md) in sync!
-    
+- When updating this document, please make sure to keep the [Roam page](https://roamresearch.com/#/app/ArtOfGig/page/chpV4mwUT) and [site README file](https://github.com/The-Yak-Collective/yakcollective/blob/netlify-prod/README.md) in sync!
     - The easiest way to do this is to make updates in Roam, **Export** the page as Markdown using the "three dots" overflow menu in the upper right, and then overwrite `README.md` with the contents of that file.
 - Last updated June 21, 2020 by [[Nathan Acks]].
 - # Contributing
@@ -16,7 +14,9 @@
             - If you're not comfortable with any of the above, you should [open a ticket](https://github.com/The-Yak-Collective/yakcollective/issues/new) clearly describing the change you want to make.
             - As a last resort, or in the unlikely event of an emergency update, you can ping [[Nathan Acks]], [[Tom Critchlow]], or [[Venkatesh Rao]] (in that order) on Discord.
         - ### Writings
-            - Writings are pushed into the GitHub repo (which then triggers a site rebuild) using [IFTTT](https://ifttt.com/) + [the `create-post` function](https://github.com/The-Yak-Collective/yakcollective/blob/netlify-prod/functions/create-post.js).
+            - Writings are pushed into the following places:
+                - The website GitHub repo (which then triggers a site rebuild) using [IFTTT](https://ifttt.com/) + [the `create-post` function](https://github.com/The-Yak-Collective/yakcollective/blob/netlify-prod/functions/create-post.js).
+                - The [@yak_collective](https://twitter.com/yak_collective) Twitter feed using IFTTT.
             - Writings are sourced from member RSS feeds.
             - These feeds are __documented__ below, but adding them requires making changes in IFTTT. If you wish to add an RSS feed or update an existing feed, please [open a ticket](https://github.com/The-Yak-Collective/yakcollective/issues/new).
             - **Member RSS Feeds**
@@ -56,13 +56,11 @@
         - ### Make It Go
             - To build things locally...
                 - ```clojure
-  bundle config set path vendor/bundle
-  bundle install
-  bundle exec jekyll build```
-                  ```
+bundle config set path vendor/bundle
+bundle install
+bundle exec jekyll build```
             - When doing local development, you may want to run `bundle exec jekyll serve` instead to fire up Jekyll's local server mode so that you can connect to [http://localhost:4000](http://localhost:4000) and browse the current version of the site.
             - Netlify will rebuild the site automatically whenever changes are pushed to the repo and/or merged in.
-                
                 - **Warning!** Netlify's build environment uses UTC, so when using `site.time` to mask pages (which we do sometimes), be aware that they will become unmasked relative to UTC!
     - ## Related Projects
         - [[Yak Talk Newsletter – To Do and Content Ideas]]
@@ -140,7 +138,7 @@
                 - Various Netlify build directives, just redirects right now.
         - ### Secrets
             - Netlify CMS uses GitHub as an OAuth provider; connection secrets can be found in Netlify under **Settings > Access control > OAuth**.
-            - The `create-post` function stores configuration information, a GitHub access token, and a token used to authenticate incoming requests in Netlify under **Settings > Build & deploy > Environment > Environment variables**.
+            - The `create-post` function stores configuration information, a GitHub access token, and a token used to authenticate incoming requests, and Discord webhook channel and token information in Netlify under **Settings > Build & deploy > Environment > Environment variables**.
 - # Site History
     - Notes for v1.0 and v.20 adapted from the June 13, 2020 #infrastructure chat notes.
     - ## v1.0

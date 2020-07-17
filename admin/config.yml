@@ -1,7 +1,8 @@
 backend:
   name: github
   repo: The-Yak-Collective/yakcollective
-  branch: warren-structure
+  branch: netlify-prod
+  open_authoring: true
 publish_mode: editorial_workflow
 media_folder: assets/
 site_url: https://yakcollective.org
@@ -41,10 +42,6 @@ collections:
         pickerUtc:  true
         required: true
         hint: The date the member joined. If the date is in the future, the member will not be displayed.
-      - label: Partner
-        name: partner
-        widget: boolean
-        required: false
       - label: Title
         name: tagline
         widget: string
@@ -219,6 +216,49 @@ collections:
         name: body
         widget: hidden
         default: ""
+  - label: "Slogans & Tips"
+    name: slogans-and-tips
+    editor:
+      preview: false
+    files:
+      - label: Slogans
+        name: slogans
+        file: _data/slogans.yml
+        fields:
+          - label: Slogans
+            name: slogans_list
+            widget: list
+            collapsed: false
+            fields:
+              - label: Slogan
+                name: slogan
+                widget: string
+                required: true
+                hint: Text only; no markdown or HTML.
+      - label: Tips
+        name: tips
+        file: _data/tips.yml
+        fields:
+          - label: Tips
+            name: tips_list
+            widget: list
+            collapsed: false
+            fields:
+              - label: Tip
+                name: tip
+                widget: string
+                required: true
+                hint: Text only; no markdown or HTML.
+              - label: Author
+                name: author
+                widget: relation
+                collection: members
+                searchFields: [ title ]
+                valueField: name
+                displayFields: [ title ]
+                multiple: false
+                required: true
+                hint: Tip author (must be a Yak Collective member).
   - label: Pages
     name: pages
     editor:
@@ -264,20 +304,11 @@ collections:
             name: title
             widget: string
             required: true
-          - label: Partners Blurb
-            name: partners_blurb
-            widget: markdown
-            required: true
-            hint: The text displayed above the partner list.
-          - label: Collaborators Blurb
-            name: collaborators_blurb
-            widget: markdown
-            required: true
-            hint: The text displayed above the collaborators list.
           - label: Content
             name: body
-            widget: hidden
-            default: ""
+            widget: markdown
+            required: true
+            hint: The text displayed above the members list.
       - label: About
         name: about-page
         file: about.md
