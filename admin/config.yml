@@ -356,8 +356,11 @@ collections:
             widget: list
             collapsed: false
             fields:
-              - label: item
-                name: item
-                widget: text
+              - label: from
+                name: from
+                widget: string
+              - label: to
+                name: to
+                widget: string
 
 
