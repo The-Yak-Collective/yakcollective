@@ -226,7 +226,7 @@ collections:
         file: _data/slogans.yml
         fields:
           - label: Slogans
-            name: slogans_list
+            name: slogan
             widget: list
             collapsed: false
             fields:
