@@ -6,7 +6,7 @@ indie_status: 5+ years
 previously: Google
 currently: University College London School of Management
 twitter: vaughn_tan
-avatar: /assets/vaughn-tan.jpg
+avatar: /assets/img/vaughn-tan.jpg
 links:
   - title: bio
     url: https://vaughntan.org/bio

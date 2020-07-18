@@ -8,7 +8,7 @@ layout: null-layout
   "description": "{{ site.description | jsonify }}",
   "home_page_url": "{{ site.url }}",
   "feed_url": "{{ site.url }}/feed.writings.json",
-  "favicon": "{{ site.url}}/assets/yak-logo.png",
+  "favicon": "{{ site.url}}/assets/img/yak-logo.png",
   {% if site.author %}
   "author": {
     "name": {{ site.author | jsonify }}

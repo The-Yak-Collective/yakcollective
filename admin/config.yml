@@ -4,7 +4,7 @@ backend:
   branch: admin-improvements
   open_authoring: true
 publish_mode: editorial_workflow
-media_folder: assets/
+media_folder: assets/img/
 site_url: https://inspiring-villani-8898ca.netlify.app
 collections:
   - label: How to use this interface #is first so it is open by default
@@ -30,6 +30,7 @@ collections:
     create: true
     editor:
       preview: false
+    sortableFields:['name','date']
     fields:
       - label: Layout
         name: layout
@@ -347,7 +348,7 @@ collections:
     editor:
       preview: false
     files: 
-      - label: toml
+      - label: edit netlify.toml - only redirects - i think
         name: toml
         file: netlify.toml
         fields:
