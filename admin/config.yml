@@ -7,6 +7,23 @@ publish_mode: editorial_workflow
 media_folder: assets/
 site_url: https://inspiring-villani-8898ca.netlify.app
 collections:
+  - label: How to use this interface #is first so it is open by default
+    name: help
+    editor:
+      preview: false
+    files: 
+      - label: Help
+        name: help
+        file: help.md
+        fields:
+          - label: Layout
+            name: layout
+            widget: hidden
+            default: minimal
+          - label: Content
+            name: body
+            widget: markdown
+            required: true
   - name: members
     label: Members
     folder: _members/
@@ -325,20 +342,12 @@ collections:
             name: body
             widget: markdown
             required: true
-  - label: How to use this interface
-    name: help
+  - label: netlify.toml
+    name: toml test
     editor:
       preview: false
     files: 
-      - label: Help
-        name: help
-        file: help.md
-        fields:
-          - label: Layout
-            name: layout
-            widget: hidden
-            default: minimal
-          - label: Content
-            name: body
-            widget: markdown
-            required: true
+      - label: toml
+        name: toml
+        file: netlify.toml
+
