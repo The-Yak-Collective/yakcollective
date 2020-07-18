@@ -240,7 +240,7 @@ collections:
         file: _data/tips.yml
         fields:
           - label: Tips
-            name: tips_list
+            name: tips
             widget: list
             collapsed: false
             fields:
