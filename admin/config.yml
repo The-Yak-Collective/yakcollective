@@ -30,7 +30,7 @@ collections:
     create: true
     editor:
       preview: false
-    #sortableFields:['date']
+    sortableFields:['name','date']
     fields:
       - label: Layout
         name: layout
