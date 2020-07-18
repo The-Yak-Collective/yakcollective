@@ -350,4 +350,8 @@ collections:
       - label: toml
         name: toml
         file: netlify.toml
+        fields:
+          - label: redirects
+            name: redirects
+            widget: text
 
