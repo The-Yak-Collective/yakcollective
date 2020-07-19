@@ -23,9 +23,6 @@ url: https://inspiring-villani-8898ca.netlify.app
 feed_items: 255
 feed_update_period: daily
 feed_update_frequency: 1
-plugins: [jekyll-paginate]
-paginate: 6
-paginate_path: /page:num
 
 # Collections
 #
