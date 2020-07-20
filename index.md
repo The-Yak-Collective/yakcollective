@@ -11,10 +11,10 @@ Our second report, [_The New Old Home_](/projects/the-new-old-home), is now avai
 
 Follow us on [Twitter](https://twitter.com/yak_collective), [Facebook](https://www.facebook.com/theyakcollective/), or [LinkedIn](https://www.linkedin.com/company/yak-collective/) to stay in the loop.
 
-	{% assign num_slogans = site.data.slogans.slogans | size %}
-	{% assign which_one = "now" | date: "%N" | modulo: num_slogans %}
-	{% assign the_one = site.data.slogans.slogans[which_one].slogan %}
-<small class="f6 db tc mt3 w-75 w-100-l center"><a href="/tips" class="dib tl" id="featured_yak">{{ site.collections[0] }} _and_ {{ site.members |size }} __and__ {{ site.members[3] }} </a></small>
+	{% assign num_members = site.members | size %}
+	{% assign which_one = "now" | date: "%N" | divided_by 100 | modulo: num_members %}
+	{% assign the_one = site.members[which_one] %}
+<small class="f6 db tc mt3 w-75 w-100-l center"><a href="{{site.members[which_one].}}" class="dib tl" id="featured_yak">{{ site.members |size }} __and__ {{ site.members[which_one].content }} </a></small>
 <script>
 	var footer_slogans = {{ site.data.slogans | jsonify }};
 	var footer_slogans_total = (footer_slogans.slogans).length;
