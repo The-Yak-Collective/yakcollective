@@ -1,0 +1,25 @@
+<div class="w-100 pa2 mb2" id="{{ include.member.name }}">
+	{% if page.url == "/members/" %}<a href="/members/{{ include.member.slug }}/"{% else %}<div{% endif %} class="flex items-center lh-copy pa3 ba member-box">
+		<img class="w2 h2 w3-ns h3-ns br-100" src="{{ include.member.avatar }}" />
+		<div class="pl3 flex-auto">
+			<span class="f6 db b{% if page.url == "/members/" %} pseudo-link{% endif %}">{{ include.member.title }}</span>
+			{% if include.member.tagline and include.member.tagline.size > 0 %}<span class="f6 db{% if page.url == "/members/" %} silent-link{% endif %}">{{ include.member.tagline }}</span>{% endif %}
+			{% if include.member.indie_status and include.member.indie_status.size > 0 %}<span class="f6 db{% if page.url == "/members/" %} silent-link{% endif %}">Indie status: {{ include.member.indie_status }}</span>{% endif %}
+			{% if include.member.currently and include.member.currently.size > 0 %}<span class="f6 db{% if page.url == "/members/" %} silent-link{% endif %}">Currently: {{ include.member.currently }}</span>{% endif %}
+			{% if include.member.previously and include.member.previously.size > 0 %}<span class="f6 db{% if page.url == "/members/" %} silent-link{% endif %}">Previously: {{ include.member.previously }}</span>{% endif %}
+			{% if include.member.links %}
+				<span class="f6 db{% if page.url == "/members/" %} silent-link{% endif %}">
+					{% for link in include.member.links %}
+						{% if forloop.first == true %}{% else %} / {% endif %}
+						{% if page.url != "/members/" %}<a href="{{ link.url }}">{% endif %}{{ link.title }}{% if page.url != "/members/" %}</a>{% endif %}
+					{% endfor %}
+				</span>
+			{% endif %}
+		</div>
+		{% if include.member.twitter and include.member.twitter.size > 0 %}
+			<div class="f6{% if page.url == "/members/" %} silent-link{% endif %}">
+				{% if page.url != "/members/" %}<a href="https://twitter.com/{{ include.member.twitter }}">{% endif %}@{{ include.member.twitter }}{% if page.url != "/members/" %}</a>{% endif %}
+			</div>
+		{% endif %}
+	{% if page.url == "/members/" %}</a>{% else %}</div>{% endif %}
+</div>
