@@ -14,11 +14,12 @@ Follow us on [Twitter](https://twitter.com/yak_collective), [Facebook](https://w
 	{% assign num_members = site.members | size %}
 	{% assign which_one = "now" | date: "%N" | modulo: num_members %}
 	{% assign the_one = site.members[which_one] %}
-<small class="f6 db tc mt3 w-75 w-100-l center"><a href="{{site.members[which_one].url}}" class="dib tl" id="featured_yak">{{ which_one }} __and__ {% include member-card-include.html member=the_one %} </a></small>
+<small class="f6 db tc mt3 w-75 w-100-l center">Featured Yak:</small>
+<a href="{{site.members[which_one].url}}" class="dib tl" id="featured_yak"> {% include member-card-include.html member=the_one %} </a>
 <script>
 	var footer_slogans = {{ site.data.slogans | jsonify }};
 	var footer_slogans_total = (footer_slogans.slogans).length;
 	var footer_slogan_to_show = Math.floor(Math.random() * footer_slogans_total);
 	//document.getElementById("featured_yak").innerHTML = footer_slogans.slogans[footer_slogan_to_show].slogan;
 </script>
-Featured Yak: 
+ 
