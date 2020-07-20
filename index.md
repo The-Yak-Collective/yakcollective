@@ -14,7 +14,7 @@ Follow us on [Twitter](https://twitter.com/yak_collective), [Facebook](https://w
 	{% assign num_slogans = site.data.slogans.slogans | size %}
 	{% assign which_one = "now" | date: "%N" | modulo: num_slogans %}
 	{% assign the_one = site.data.slogans.slogans[which_one].slogan %}
-<small class="f6 db tc mt3 w-75 w-100-l center"><a href="/tips" class="dib tl" id="featured_yak">{{ site.collections[0] }} _and_ {{ site.collections[0] |size }} __and__ {{ site.collections[0] }} </a></small>
+<small class="f6 db tc mt3 w-75 w-100-l center"><a href="/tips" class="dib tl" id="featured_yak">{{ site.collections[0] }} _and_ {{ site.members |size }} __and__ {{ site.members[3] }} </a></small>
 <script>
 	var footer_slogans = {{ site.data.slogans | jsonify }};
 	var footer_slogans_total = (footer_slogans.slogans).length;
