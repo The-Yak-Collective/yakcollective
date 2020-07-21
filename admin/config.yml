@@ -280,7 +280,7 @@ collections:
   - label: Pages
     name: pages
     editor:
-      preview: false
+      preview: true
     files: 
       - label: Home
         name: home-page
