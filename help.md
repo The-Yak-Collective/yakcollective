@@ -1,7 +1,6 @@
 ---
 title: About the Yak Collective
 ---
-
 ## Overview
 
 The "admin" interface (provided by Netlify) is used to edit the content which is shown on the Yak-Collective.org (YC.org) website. Currently, the way to get here is to tack "/admin" at the end of the url of YC.org. You also needed to login using your github account.
@@ -11,7 +10,7 @@ There are two types of users:
 1. Regular users can propose changes, which will then be reviewed and rejected or accepted.
 2. Administrative users are capable of reviewing and accepting their own changes and therefore should be more careful.
 
-the menu bar includes three icons on the left, used for selecting tabs:
+The menu bar includes three icons on the left, used for selecting tabs:
 
 1. Contents
 2. Workflow
