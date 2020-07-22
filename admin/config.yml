@@ -108,7 +108,7 @@ collections:
     folder: _projects/
     create: true
     editor:
-      preview: false
+      preview: true
     fields:
       - label: Layout
         name: layout
