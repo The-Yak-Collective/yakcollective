@@ -2,7 +2,7 @@
 title: About the Yak Collective
 ---
 
-## Our Origin Story
+## Our Origin Story 
 
 The Yak Collective is a loosely coordinated network of over 300 independent consultants, coaches, and freelancers with varied technical and creative skills. Nearly 30 of our members contributed to our inaugural report, released on April 30, 2020, [_Don't Waste the Reboot_](/projects/dont-waste-the-covid19-reboot). These numbers will evolve as we take on more shared projects, both internally initiated, and on behalf of clients.
 
