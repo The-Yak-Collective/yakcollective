@@ -83,7 +83,7 @@ The *Delete* button deletes entries.
 
 * When you make a change that is accepted, it can take 1-3 minutes before the updated website is built. So, do not expect instant changes in the website, and do not multi-click in a futile effort to make things faster. In some (rare) cases, what you change will cause a failure to build and then the website will not be updated. Such failure is not reflected in the "admin" interface.
 * Please do not amend the .toml file
-* while the pages are in Markdown format, they also include Jekyll directives {% raw %} (e.g., curly braces "{" of various types ) {% endraw %} and HTML and Javascript. Please be careful not to modify these unintentionally.
+* while the pages are in Markdown format, they also include Jekyll directives {% raw %} (e.g., curly braces of various types ) {% endraw %} and HTML and Javascript. Please be careful not to modify these unintentionally.
 * I did not describe some additional minor functionality.
 
 ## Things that don't work
