@@ -20,7 +20,7 @@ You are now in the *Contents* tab. The *Media* tab is used for managing media (i
 
 The "Quick add" pulldown menu can be used to quickly jump to the interface for adding members, projects and sequences.
 
-\###the contents tab###
+### The contents tab###
 
 The YC.org website is built by taking items out of collections and creating websites from them (currently using Netlify for the content management and Jekyll for the arrangement. This may change and the format of the content will probably change as well at that time).
 
@@ -29,16 +29,16 @@ Most of the data is provided as markdown files (.md), with yamal-style front mat
 
 The first one is not part of the website and merely contains this helpfile. Please do not edit it by mistake while reading the help. Following are:
 
-* *members* which is used for adding and editing member data.
-* *projects* which is used for adding and editing project data.
-* *sequences* which is used for adding and editing sequence data.
-* *slogans & tips* which is used for adding and editing slogans (what you see on bottom of page) and tips data (what you see if you find the tips).
-* *pages* which is used for editing the static text on pages.
-* *netlify.toml* for managing some configuration information of the Netlify system. you probably should ignore this.
+* *members*, used for adding and editing member data.
+* *projects*, used for adding and editing project data.
+* *sequences*, used for adding and editing sequence data.
+* *slogans & tips*, used for adding and editing slogans (what you see on bottom of page) and tips data (what you see if you find the tips).
+* *pages*, used for editing the static text on pages.
+* *netlify.toml*, for managing some configuration information of the Netlify system. you probably should ignore this.
 
 ## Typical Activities
 
-\###Edit a regular page###
+### Edit a regular page###
 
 * Select the *Pages* collection
 * Select a page to edit, from the collection list
@@ -47,7 +47,7 @@ The first one is not part of the website and merely contains this helpfile. Plea
 * Note the "View Live" option on the top menu, on the right, which takes you to the website. If you are not able to *Publish* it will not reflect any changes you make. If you do publish, it takes a few minutes to propagate.
 * Go back to the collection list using the left arrow in upper right side of screen (hopefully marked "CHANGES SAVED").
 
-\###Edit an existing member###
+### Edit an existing member###
 
 * Select the *Members* collection
 * Select a member to edit, from the collection list. Note the availability of sort and of grid view.
@@ -56,7 +56,7 @@ The first one is not part of the website and merely contains this helpfile. Plea
 * Note the "View Live" option on the top menu, on the right, which takes you to the website. If you are not able to *Publish* it will not reflect any changes you make. If you do publish, it takes a few minutes to propagate.
 * Go back to collection list using the left arrow in upper right side of screen (hopefully marked "CHANGES SAVED").
 
-\###Add a tip###
+### Add a tip###
 
 * Select the *Slogans & Tips* collection
 * Select  *Tips* from the  list
