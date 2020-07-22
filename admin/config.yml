@@ -29,7 +29,7 @@ collections:
     folder: _members/
     create: true
     editor:
-      preview: false
+      preview: true
     sortableFields: ['name','date']
     fields:
       - label: Layout
