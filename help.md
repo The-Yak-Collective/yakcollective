@@ -1,5 +1,5 @@
 ---
-title: About the Yak Collective
+title: Help file for using the Netlify "admin" interface
 ---
 ## Overview
 
