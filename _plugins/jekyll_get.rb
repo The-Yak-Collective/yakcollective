@@ -42,7 +42,7 @@ module Jekyll_Get
 "Accept" =>"application/vnd.github.squirrel-girl-preview+json"))
                 p "read it"
                 p tmp
-                site.data['issues'][i]['reactions']=tmp
+                site.data['issues'][i].push({"reactions"=> tmp})
                 p "reactions="
                 p site.data['issues'][i]['reactions']
             end
