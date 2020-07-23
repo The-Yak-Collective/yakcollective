@@ -29,7 +29,7 @@ module Jekyll_Get
           p d['data']
           puts d['data']
           puts "random string"
-          p site.data['issues'][0]
+          p JSON.pretty_generate(site.data['issues'][0])
           puts "another random string"
           p site.data['issues'][0]['number']
           #if d['data'] == "issues" #it always is, no?
