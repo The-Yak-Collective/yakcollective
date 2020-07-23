@@ -28,6 +28,7 @@ module Jekyll_Get
 #          end
           p d['data']
           puts d['data']
+          p site.data.issues[0]
           p site.data.issues[0]['number']
           #if d['data'] == "issues" #it always is, no?
             numissues=site.data['issues'][0]['number'].to_i
