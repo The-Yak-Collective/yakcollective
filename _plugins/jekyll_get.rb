@@ -29,7 +29,7 @@ module Jekyll_Get
           p d['data']
           puts d['data']
           p site.data.issues[0]['number']
-          if d['data'] == "issues"
+          #if d['data'] == "issues" #it always is, no?
             numissues=site.data['issues'][0]['number'].to_i
             p "it was issues"
             p numissues
@@ -40,7 +40,7 @@ module Jekyll_Get
                 p "reactions="
                 p site.data['issues'][i]['reactions']
             end
-          end
+          #end
           if d['cache']
             data_source = (site.config['data_source'] || '_data')
             path = "#{data_source}/#{d['data']}.json"
