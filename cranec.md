@@ -11,6 +11,8 @@ right now, reading from a public repository re covid-19.
 
 **labels:** {% for label in issue.labels %} <span style="background-color:#{{label.color}};"> {{label.name}} </span> {% endfor %}
 
+**reactions:** {% for reaction in issue.reactions %} {{reaction.content}}  {% endfor %}
+
 **Content:** {{issue.body}}
 
 ---
