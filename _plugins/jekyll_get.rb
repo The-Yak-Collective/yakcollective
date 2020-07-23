@@ -26,12 +26,17 @@ module Jekyll_Get
             site.data[d['data']] = source
             
 #          end
-          p d['data']
+#          p d['data']
           if d['data'] == "issues"
             numissues=site.data['issues'][0].number.to_i
+            p "it was issues"
+            p numissues
             for i in 1..numissues
+                p i
                 site.data['issues'][i].reactions=JSON.load(open('https://api.github.com/repos/cranec-project/Covid-19/issues/'+i.to_s+'/reactions',
 "Accept" =>"application/vnd.github.squirrel-girl-preview+json"))
+                p "reactions="
+                p site.data['issues'][i].reactions
             end
           end
           if d['cache']
