@@ -2,4 +2,5 @@
 #
 source "https://rubygems.org"
 gem "jekyll"
+source "/opt/build/repo/_plugins"
 gem "jekyll_get"
