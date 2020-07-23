@@ -31,7 +31,7 @@ module Jekyll_Get
           puts "random string"
           p site.data['issues'][0]
           puts "another random string"
-          p site.data['issues']['number']
+          p site.data['issues'][0]['number']
           #if d['data'] == "issues" #it always is, no?
             numissues=site.data['issues'][0]['number'].to_i
             p "it was issues"
