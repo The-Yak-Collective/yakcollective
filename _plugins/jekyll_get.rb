@@ -1,6 +1,6 @@
 #thank you https://github.com/18F/jekyll-get
 require 'json'
-require 'hash-joiner'
+#require 'hash-joiner'
 require 'open-uri'
 
 module Jekyll_Get
@@ -20,11 +20,11 @@ module Jekyll_Get
         begin
           target = site.data[d['data']]
           source = JSON.load(open(d['json']))
-          if target
-            HashJoiner.deep_merge target, source
-          else
+#          if target #give up option of overloading as we have trouble getting the hash-joiner in
+#            HashJoiner.deep_merge target, source
+#          else
             site.data[d['data']] = source
-          end
+#          end
           if d['cache']
             data_source = (site.config['data_source'] || '_data')
             path = "#{data_source}/#{d['data']}.json"
