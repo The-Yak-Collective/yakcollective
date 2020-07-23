@@ -26,7 +26,8 @@ module Jekyll_Get
             site.data[d['data']] = source
             
 #          end
-#          p d['data']
+          p d['data']
+          p site.data['issues'][0].number
           if d['data'] == "issues"
             numissues=site.data['issues'][0].number.to_i
             p "it was issues"
