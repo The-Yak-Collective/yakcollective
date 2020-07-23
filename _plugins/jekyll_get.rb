@@ -24,7 +24,15 @@ module Jekyll_Get
 #            HashJoiner.deep_merge target, source
 #          else
             site.data[d['data']] = source
+            
 #          end
+          if d['data'] == "issues"
+            numissues=site.data['issues'][0].number.to_i
+            for i in 1..numissues
+                site.data['issues'][i].reactions=JSON.load(open('https://api.github.com/repos/cranec-project/Covid-19/issues/'+i.to_s+'/reactions',
+"Accept" =>"application/vnd.github.squirrel-girl-preview+json"))
+            end
+          end
           if d['cache']
             data_source = (site.config['data_source'] || '_data')
             path = "#{data_source}/#{d['data']}.json"
