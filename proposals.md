@@ -4,7 +4,7 @@ title: Testpage to show github issues and maybe also recations, as part of autom
 ---
 
 # list of proposals read from github 
-right now, reading from a public repository re covid-19.
+right now, reading yakcollective. will need its own site
 
 {% for issue in site.data.issues %}
 **Issue number:** {{issue.number}}     **title:** {{issue.title}}

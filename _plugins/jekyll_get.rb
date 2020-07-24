@@ -20,32 +20,21 @@ module Jekyll_Get
         begin
           target = site.data[d['data']]
           source = JSON.load(open(d['json']))
-#          if target #give up option of overloading as we have trouble getting the hash-joiner in
+#          if target #give up option of overloading as we have trouble getting the hash-joiner in. maybe it means i shoudl delete cache as well...
 #            HashJoiner.deep_merge target, source
 #          else
-
-
-            
 #          end
             if (d['data'] == "issues")
                 numissues=source[0]['number'].to_i
-                p "it has issues"
-                p numissues
                 for i in 55..numissues #fundge as going 1-63 gets stuck on 30 due to rate limit
                     p i
                     tmp=JSON.load(open(d['json']+"/"+i.to_s+'/reactions',
     "Accept" =>"application/vnd.github.squirrel-girl-preview+json"))
-                    p "read it"
-                    #puts JSON.pretty_generate(tmp)
-                    #p tmp
-                    p i
-                    puts "now the big one"
                     source[numissues-i]['reactions']= tmp #reverse order because issues provided in reverse order by github
-                    puts "survived"
                 end
                 site.data[d['data']] = source #is a readonly after set!?
-                puts JSON.pretty_generate(site.data['issues'][0])
-              #end
+#                puts JSON.pretty_generate(site.data['issues'][0])
+
                       if d['cache']
                         data_source = (site.config['data_source'] || '_data')
                         path = "#{data_source}/#{d['data']}.json"
