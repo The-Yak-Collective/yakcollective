@@ -55,9 +55,9 @@ module Jekyll_Get
                 puts "can we see '63'"
                 #puts site.data['issues']['63'] #does not work 
                 p "can we see a number"
-                puts site.data['issues'][i]['number']
+                # puts site.data['issues'][i]['number'] #crashes
                 puts "now the big one"
-                #site.data['issues'][i]['reactions'] = tmp
+                #site.data['issues'][i]['reactions'] = tmp #also crashes. probbaly due to teh i index
                 puts "survived"
                 p "reactions="
                 #p site.data['issues'][i]['reactions']
