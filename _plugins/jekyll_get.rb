@@ -47,7 +47,7 @@ module Jekyll_Get
                 p i
                 p site.data['issues'][i]
                 puts "and without i?"
-                p JSON.pretty_generate(site.data['issues'])
+                p "works so no need to show it" #JSON.pretty_generate(site.data['issues'])
                 puts "let try number again"
                 p site.data['issues'][0]['number']
                 puts "can we see 63"
@@ -57,10 +57,10 @@ module Jekyll_Get
                 p "can we see a number"
                 puts site.data['issues'][i]['number']
                 puts "now the big one"
-                site.data['issues'][i]['reactions'] = tmp
+                #site.data['issues'][i]['reactions'] = tmp
                 puts "survived"
                 p "reactions="
-                p site.data['issues'][i]['reactions']
+                #p site.data['issues'][i]['reactions']
             end
           #end
           if d['cache']
