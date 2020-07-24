@@ -42,6 +42,8 @@ module Jekyll_Get
 "Accept" =>"application/vnd.github.squirrel-girl-preview+json"))
                 p "read it"
                 puts JSON.pretty_generate(tmp)
+                puts site.data['issues'][i]
+                puts "can we see a number"
                 puts site.data['issues'][i]['number']
                 puts "now the big one"
                 site.data['issues'][i]['reactions'] = tmp
