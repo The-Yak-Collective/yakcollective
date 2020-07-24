@@ -57,7 +57,7 @@ module Jekyll_Get
                 p "can we see a number"
                 # puts site.data['issues'][i]['number'] #crashes
                 puts "now the big one"
-                site.data['issues'][i]['reactions'] = "not the tmp" #tmp #also crashes. probbaly due to teh i index
+                site.data['issues'][i]['id'] = 17 #tmp #also crashes. probbaly due to teh i index
                 puts "survived"
                 p "reactions="
                 #p site.data['issues'][i]['reactions']
