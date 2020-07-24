@@ -45,14 +45,16 @@ module Jekyll_Get
                 puts JSON.pretty_generate(tmp)
                 p tmp
                 p i
-                puts site.data['issues'][i]
+                p site.data['issues'][i]
+                puts "and without i?"
+                p JSON.pretty_generate(site.data['issues'])
                 puts "let try number again"
                 p site.data['issues'][0]['number']
                 puts "can we see 63"
-                puts site.data['issues'][63]
+                p site.data['issues'][63]
                 puts "can we see '63'"
                 puts site.data['issues']['63']
-                puts "can we see a number"
+                p "can we see a number"
                 puts site.data['issues'][i]['number']
                 puts "now the big one"
                 site.data['issues'][i]['reactions'] = tmp
