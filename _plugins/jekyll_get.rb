@@ -35,15 +35,15 @@ module Jekyll_Get
                 tmp=JSON.load(open('https://api.github.com/repos/cranec-project/Covid-19/issues/'+i.to_s+'/reactions',
 "Accept" =>"application/vnd.github.squirrel-girl-preview+json"))
                 p "read it"
-                puts JSON.pretty_generate(tmp)
-                p tmp
+                #puts JSON.pretty_generate(tmp)
+                #p tmp
                 p i
                 puts "now the big one"
                 source[numissues-i]['reactions']= tmp #reverse order because issues provided in reverse order by github
                 puts "survived"
             end
             site.data[d['data']] = source #is a readonly after set!?
-            p site.data['issues'][0]['reactions'] 
+            p JSON.pretty_generate(site.data['issues'][0])
           #end
           if d['cache']
             data_source = (site.config['data_source'] || '_data')
