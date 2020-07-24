@@ -23,6 +23,7 @@ module Jekyll_Get
 #          if target #give up option of overloading as we have trouble getting the hash-joiner in
 #            HashJoiner.deep_merge target, source
 #          else
+            source << {"a key","a value"}
             site.data[d['data']] = source
             
 #          end
