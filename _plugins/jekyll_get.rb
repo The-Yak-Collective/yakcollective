@@ -43,6 +43,10 @@ module Jekyll_Get
                 p "read it"
                 puts JSON.pretty_generate(tmp)
                 puts site.data['issues'][i]
+                puts "can we see 63"
+                puts site.data['issues'][63]
+                puts "can we see '63'"
+                puts site.data['issues']['63']
                 puts "can we see a number"
                 puts site.data['issues'][i]['number']
                 puts "now the big one"
