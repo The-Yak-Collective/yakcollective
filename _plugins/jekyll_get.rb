@@ -38,11 +38,16 @@ module Jekyll_Get
             p numissues
             for i in 55..numissues #fundge as going 1-63 gets stuck on 30 due to rate limit
                 p i
+                p i.to_s
                 tmp=JSON.load(open('https://api.github.com/repos/cranec-project/Covid-19/issues/'+i.to_s+'/reactions',
 "Accept" =>"application/vnd.github.squirrel-girl-preview+json"))
                 p "read it"
                 puts JSON.pretty_generate(tmp)
+                p tmp
+                p i
                 puts site.data['issues'][i]
+                puts "let try number again"
+                p site.data['issues'][0]['number']
                 puts "can we see 63"
                 puts site.data['issues'][63]
                 puts "can we see '63'"
