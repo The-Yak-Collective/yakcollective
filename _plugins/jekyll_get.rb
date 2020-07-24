@@ -41,7 +41,7 @@ module Jekyll_Get
                 tmp=JSON.load(open('https://api.github.com/repos/cranec-project/Covid-19/issues/'+i.to_s+'/reactions',
 "Accept" =>"application/vnd.github.squirrel-girl-preview+json"))
                 p "read it"
-                pits JSON.pretty_generate(tmp)
+                puts JSON.pretty_generate(tmp)
                 puts site.data['issues'][i]['number']
                 puts "now the big one"
                 site.data['issues'][i]['reactions'] = tmp
