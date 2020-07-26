@@ -11,3 +11,6 @@ links:
   - title: alexdobrenko.com
     url: https://alexdobrenko.com/
 ---
+#below the line
+
+{{site.data.featured}}  and {{site.data.members[site.data.featured].name}}
