@@ -12,5 +12,6 @@ links:
     url: https://alexdobrenko.com/
 ---
 #below the line
-
-{{site.data.featured}}  and {{site.members[site.data.featured].name}}
+{% assign nummembers = site.members | size %}
+{% assign featuredone= site.data.featured | modulo: nummembers %} 
+{{featuredone}}  and {{site.members[featuredone].name}}
