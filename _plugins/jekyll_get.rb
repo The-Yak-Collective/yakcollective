@@ -2,6 +2,7 @@
 require 'json'
 #require 'hash-joiner'
 require 'open-uri'
+require 'date'
 
 module Jekyll_Get
   class Generator < Jekyll::Generator
@@ -22,6 +23,7 @@ module Jekyll_Get
       puts "have time"
       #puts td % site.members.length() #can do this in liquid...
       site.data['featured']=td
+      site.data['build_date']=Date.today
       puts "set site var"
       puts site.data['featured']
 
