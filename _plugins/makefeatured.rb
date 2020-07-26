@@ -11,9 +11,9 @@ module makefeatured
       td=Time.now.to_i %(3600*24)
       puts "have time"
       puts td
-      site.data['featured']=td
+      #site.data['featured']=td
       puts "set site var"
-      puts site.data['featured']
+      #puts site.data['featured']
     end
   end
 end
