@@ -21,7 +21,7 @@ module Jekyll_Get
       puts "before time"
       td=Time.now.to_i / (3600*24)
       puts "have time"
-      puts site.members[0].name #can do this in liquid... but better here, if it works
+      puts site.collections.members[0].name #can do this in liquid... but better here, if it works
       site.data['featured']=td
       site.data['build_date']=Date.today
       puts "set site var"
