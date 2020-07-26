@@ -29,13 +29,13 @@ module Jekyll_Get
       end
       begin
       puts 2
-      puts site.collections['members'][2] #having trouble getting # members during plugin run
+      puts site.collections['members'].docs[2] #having trouble getting # members during plugin run
       rescue
       puts "failed again2"
       end
       begin
       puts 3
-      puts site.collections[1] #having trouble getting # members during plugin run
+      puts site.collections['members'].docs.length() #having trouble getting # members during plugin run
       rescue
       puts "failed again3"
       end
