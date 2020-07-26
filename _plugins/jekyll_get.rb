@@ -22,7 +22,7 @@ module Jekyll_Get
       td=Time.now.to_i / (3600*24)
       puts "have time"
       begin
-      puts site.collections.members[0].name #can do this in liquid... but better here, if it works
+      puts site.collections #can do this in liquid... but better here, if it works
       rescue
       puts "failed again"
       end
