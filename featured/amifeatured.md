@@ -17,8 +17,10 @@ image: <img src="{{memb.avatar}}">
  
  
 ##date format test
+
 {{site.time | date_to_rfc822}}
 
+or
 
 {{page.date | date_to_rfc822}}
 
