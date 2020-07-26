@@ -13,3 +13,12 @@ image: <img src="{{memb.avatar}}">
 ## vs
 
  {% include member-card-include.html member=memb %} 
+ 
+ 
+ 
+##date format test
+{{site.time | date_to_rfc822}}
+
+
+{{page.date | date_to_rfc822}}
+
