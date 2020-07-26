@@ -22,9 +22,19 @@ module Jekyll_Get
       td=Time.now.to_i / (3600*24)
       puts "have time"
       begin
-      puts site.collections #can do this in liquid... but better here, if it works
+      puts site.collections[0] #having trouble getting # members during plugin run
       rescue
-      puts "failed again"
+      puts "failed again1"
+      end
+      begin
+      puts site.collections.members #having trouble getting # members during plugin run
+      rescue
+      puts "failed again2"
+      end
+      begin
+      puts site.collections.members[0] #having trouble getting # members during plugin run
+      rescue
+      puts "failed again3"
       end
       site.data['featured']=td
       site.data['build_date']=Date.today
