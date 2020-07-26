@@ -18,8 +18,8 @@ layout: null-layout
 				<title>{{ memb.title | xml_escape }}</title>
 					<description>{{ "Today's featured Yak collective member" | xml_escape }}</description>
 				<pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
-				<link>{{ site.url }}members/{{ memb.name }}</link>
-				<guid isPermaLink="true">{{ site.url }}members/{{ memb.name }}</guid>
+				<link>{{ site.url }}/members/{{ memb.name }}</link>
+				<guid isPermaLink="true">{{ site.url }}/members/{{ memb.name }}</guid>
 			</item>
 
 	</channel>
