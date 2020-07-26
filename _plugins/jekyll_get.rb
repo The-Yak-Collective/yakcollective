@@ -17,13 +17,13 @@ module Jekyll_Get
         config = [config]
       end
 #should be in seperate plugin, but i have something missing      
-      
-      td=Time.now.to_i %(3600*24)
+      puts "before time"
+      td=Time.now.to_i / (3600*24)
       puts "have time"
-      puts td
-      #site.data['featured']=td
+      puts td % site.members.length()
+      site.data['featured']=td
       puts "set site var"
-      #puts site.data['featured']
+      puts site.data['featured']
 
       
 #end of other plugin
