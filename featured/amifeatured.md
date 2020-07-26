@@ -22,5 +22,13 @@ image: <img src="{{memb.avatar}}">
 
 or
 
-{{page.date}}
+{{page.date | date_to_string}}
+
+or
+
+{{page.time}}
+
+
+
+and thats it
 
