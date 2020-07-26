@@ -16,6 +16,17 @@ module Jekyll_Get
       if !config.kind_of?(Array)
         config = [config]
       end
+#should be in seperate plugin, but i have something missing      
+      
+      td=Time.now.to_i %(3600*24)
+      puts "have time"
+      puts td
+      #site.data['featured']=td
+      puts "set site var"
+      #puts site.data['featured']
+
+      
+#end of other plugin
       config.each do |d|
         begin
           target = site.data[d['data']]
