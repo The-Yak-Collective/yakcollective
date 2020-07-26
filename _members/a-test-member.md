@@ -7,4 +7,4 @@ date: 2020-07-22
 tagline: just test along there
 discordUID: discording
 ---
-i just appeared out of nowhere
+i just appeared out of nowhere, so?
