@@ -10,14 +10,14 @@ layout: null-layout
 		<sy:updateFrequency>1</sy:updateFrequency>
 		<link>{{ site.url }}</link>
 		<atom:link href="{{ site.url }}/{{ page.path }}" rel="self" type="application/rss+xml" />
-		<lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
+		<lastBuildDate>{{ site.data.build_date | date_to_rfc822 }}</lastBuildDate>
 			<item>
                 {% assign nummembers = site.members | size %}
                 {% assign featuredone= site.data.featured | modulo: nummembers %} 
                 {% assign memb=site.members[featuredone] %}
 				<title>{{ memb.title | xml_escape }}</title>
 					<description>{{ "Today's featured Yak collective member" | xml_escape }}</description>
-				<pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
+				<pubDate>{{ site.data.build_date | date_to_rfc822 }}</pubDate>
 				<link>{{ site.url }}/members/{{ memb.name }}</link>
 				<guid isPermaLink="true">{{ site.url }}/members/{{ memb.name }}</guid>
 			</item>
