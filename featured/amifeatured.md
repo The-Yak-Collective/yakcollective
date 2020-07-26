@@ -26,7 +26,7 @@ or
 
 or
 
-{{page.time}}
+{{Time.now}}
 
 
 
