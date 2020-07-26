@@ -22,5 +22,5 @@ image: <img src="{{memb.avatar}}">
 
 or
 
-{{page.date | date_to_rfc822}}
+{{page.date}}
 
