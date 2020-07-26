@@ -29,6 +29,11 @@ feed_update_frequency: 1
 jekyll_get:
   data: issues
   json: 'https://api.github.com/repos/The-Yak-Collective/yakcollective/issues'
+plugins:
+    -jekyll-feed
+feed:
+    collections:
+        -featured
 # Collections
 #
 collections:
@@ -38,6 +43,8 @@ collections:
     output: true
   sequences:
     output: false
+  featured:
+    output: true
 
 # Per-page defaults
 #
