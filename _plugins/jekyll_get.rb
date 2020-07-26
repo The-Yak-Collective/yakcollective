@@ -27,12 +27,12 @@ module Jekyll_Get
       puts "failed again1"
       end
       begin
-      puts site.collections.members #having trouble getting # members during plugin run
+      puts site.collections['members'] #having trouble getting # members during plugin run
       rescue
       puts "failed again2"
       end
       begin
-      puts site.collections.members[0] #having trouble getting # members during plugin run
+      puts site.collections[1] #having trouble getting # members during plugin run
       rescue
       puts "failed again3"
       end
