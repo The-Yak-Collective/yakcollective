@@ -13,4 +13,4 @@ links:
 ---
 #below the line
 
-{{site.data.featured}}  and {{site.data.members[site.data.featured].name}}
+{{site.data.featured}}  and {{site.members[site.data.featured].name}}
