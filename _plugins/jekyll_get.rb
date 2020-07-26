@@ -17,37 +17,6 @@ module Jekyll_Get
       if !config.kind_of?(Array)
         config = [config]
       end
-=begin
-#should be in seperate plugin, but i have something missing      
-      puts "before time"
-      td=Time.now.to_i / (3600*24)
-      puts "have time"
-      begin
-      puts 1
-      puts site.collections[2] #having trouble getting # members during plugin run
-      rescue
-      puts "failed again1"
-      end
-      begin
-      puts 2
-      puts site.collections['members'].docs[2] #having trouble getting # members during plugin run
-      rescue
-      puts "failed again2"
-      end
-      begin
-      puts 3
-      puts site.collections['members'].docs.length() #having trouble getting # members during plugin run
-      rescue
-      puts "failed again3"
-      end
-      site.data['featured']=td
-      site.data['build_date']=Date.today
-      puts "set site var"
-      puts site.data['featured']
-
-      
-#end of other plugin
-=end
       config.each do |d|
         begin
           target = site.data[d['data']]

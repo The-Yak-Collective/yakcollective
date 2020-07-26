@@ -1,8 +1,8 @@
 ---
 layout: minimal
 ---
-                {% assign nummembers = site.members | size %}
-                {% assign featuredone= site.data.featured | modulo: nummembers %} 
+
+                {% assign featuredone= site.data.featured %} 
                 {% assign memb=site.members[featuredone] %}
 ## {{memb.title}}
 
