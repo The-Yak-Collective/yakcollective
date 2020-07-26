@@ -1,17 +1,15 @@
 ---
-name: alex-dobrenko
-title: Alex Dobrenko
-date: 2020-04-30
-indie_status: 5+ years
-tagline: Improviser / Writer / Filmmaker
-twitter: Dobrenkz
-previously: Distance / UCB / Funny or Die
-avatar: /assets/img/alex-dobrenko.jpg
-links:
-  - title: alexdobrenko.com
-    url: https://alexdobrenko.com/
+layout: minimal
 ---
-#below the line
-{% assign nummembers = site.members | size %}
-{% assign featuredone= site.data.featured | modulo: nummembers %} 
-{{featuredone}}  and {{site.members[featuredone].name}}
+                {% assign nummembers = site.members | size %}
+                {% assign featuredone= site.data.featured | modulo: nummembers %} 
+                {% assign memb=site.members[featuredone] %}
+## {{memb.title}}
+
+follow: @{{memb.twitter}}
+
+image: <img src="{{memb.avatar}}">
+
+## vs
+
+ {% include member-card-include.html member=memb %} 
