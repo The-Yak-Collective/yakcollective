@@ -8,29 +8,13 @@ layout: minimal
 
 follow: @{{memb.twitter}}
 
+sorry, no "special skill" field yet
+
 image: <img src="{{memb.avatar}}">
 
 ## vs
 
  {% include member-card-include.html member=memb %} 
  
- 
- 
-##date format test
 
-{{site.time | date_to_rfc822}}
-
-or
-
-{{site.data.build_date | date_to_rfc822}}
-
-or
-
-{{site.data.build_date | date_to_string}}
-
-
-
-
-
-and thats it
 
