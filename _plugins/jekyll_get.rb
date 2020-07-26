@@ -17,6 +17,7 @@ module Jekyll_Get
       if !config.kind_of?(Array)
         config = [config]
       end
+=begin
 #should be in seperate plugin, but i have something missing      
       puts "before time"
       td=Time.now.to_i / (3600*24)
@@ -46,6 +47,7 @@ module Jekyll_Get
 
       
 #end of other plugin
+=end
       config.each do |d|
         begin
           target = site.data[d['data']]
