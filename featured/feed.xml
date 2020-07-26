@@ -16,7 +16,7 @@ layout: null-layout
                 {% assign featuredone= site.data.featured | modulo: nummembers %} 
                 {% assign memb=site.members[featuredone] %}
 				<title>{{ memb.title | xml_escape }}</title>
-					<description>{{ "Today's featured Yak collective member | xml_escape }}</description>
+					<description>{{ "Today's featured Yak collective member" | xml_escape }}</description>
 				<pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
 				<link>{{ site.url }}members/{{ memb.name }}</link>
 				<guid isPermaLink="true">{{ site.url }}members/{{ memb.name }}</guid>
