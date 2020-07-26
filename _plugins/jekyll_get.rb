@@ -20,7 +20,7 @@ module Jekyll_Get
       puts "before time"
       td=Time.now.to_i / (3600*24)
       puts "have time"
-      puts td % site.members.length()
+      #puts td % site.members.length() #can do this in liquid...
       site.data['featured']=td
       puts "set site var"
       puts site.data['featured']
