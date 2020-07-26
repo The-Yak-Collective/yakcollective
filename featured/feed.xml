@@ -12,8 +12,7 @@ layout: null-layout
 		<atom:link href="{{ site.url }}/{{ page.path }}" rel="self" type="application/rss+xml" />
 		<lastBuildDate>{{ site.data.build_date | date_to_rfc822 }}</lastBuildDate>
 			<item>
-                {% assign nummembers = site.members | size %}
-                {% assign featuredone= site.data.featured | modulo: nummembers %} 
+                {% assign featuredone= site.data.featured %} 
                 {% assign memb=site.members[featuredone] %}
 				<title>{{ memb.title | xml_escape }}</title>
 					<description>{{ "Today's featured Yak collective member" | xml_escape }}</description>
