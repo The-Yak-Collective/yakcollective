@@ -22,11 +22,13 @@ image: <img src="{{memb.avatar}}">
 
 or
 
-{{page.date | date_to_string}}
+{{site.data.build_date | date_to_rfc822}}
 
 or
 
-{{Time.now}}
+{{site.data.build_date | date_to_string}}
+
+
 
 
 
