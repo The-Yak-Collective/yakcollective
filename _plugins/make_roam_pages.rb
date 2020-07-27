@@ -17,7 +17,7 @@ module Jekyll
         dir =  'roam'
 
         site.data['roam'].each_with_index do |pag,idx| #page was catagory in original code
-          puts "at roam page:", idx
+          print "at roam page:", idx
           break if idx == 500
           site.pages << RoamPage.new(site, site.source, dir, pag)
         end
@@ -57,7 +57,7 @@ module Jekyll
       def ttl2link(s)
         t=s.dup
         t.gsub!(' ','_')
-        return Addressable::URI.encode_component(t)
+        return Addressable::URI.encode(t)
       end
 
       def render(obj,n)
