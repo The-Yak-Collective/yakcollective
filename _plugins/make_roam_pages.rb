@@ -17,9 +17,9 @@ module Jekyll
         dir =  'roam'
        p 3
         site.data['roam'].each_with_index do |pag,idx| #page was catagory in original code
-        p 4
+        p 4,idx
 #        p pag
-        p pag['title']
+#        p pag['title']
           break if idx == 30
           site.pages << RoamPage.new(site, site.source, dir, pag)
         end
@@ -36,7 +36,7 @@ module Jekyll
   class RoamPage < Page
     def initialize(site, base, dir, pag)
     p 5
-    p site,base,dir,pag['title']
+    #p site,base,dir,pag['title']
     p 5.1
       @site = site
       @base = base
@@ -53,7 +53,7 @@ p 6
           self.data['title'] = pag['title']
       rescue
           puts "failed for page builder :("
-          puts  pag['title']
+          puts  "pag['title']"
           puts "managed to print title..."
       end
     end
