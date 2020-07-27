@@ -41,12 +41,14 @@ p 1
       @base = base
       @dir  = dir
 p 5.5
-      @name = Addressable::URI.encode_component(pag['title'])
+n=Addressable::URI.encode_component(pag['title'])
+puts "added name:",n
+      @name = n
 p 6
       begin 
           self.process(@name)
           self.read_yaml(File.join(base, '_layouts'), 'roam_format.html')
-          self.data['content']="no content for now" #page.string
+          self.data['content']="no content for now" #json records have title, always. some have "children". can have both string and children.  each children has a string, i think. children can have children. have []() links and [[]]links
           self.data['title'] = pag['title']
       rescue
           puts "failed for page builder"
