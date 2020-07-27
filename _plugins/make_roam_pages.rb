@@ -19,15 +19,19 @@ module Jekyll
       f=File.read('_data/demo.json')
       puts JSON.pretty_generate(JSON.load(f))
       p 3.1
-      puts site.data['roam'][1]
-      p 4
-       puts site.data['roam'].demo
-      p 5
+
      puts site.data['roam'].length()
+      p 4
+      f=File.read('_data/artofgig.json')
+      puts JSON.pretty_generate(JSON.load(f))
+
+      p site.data.artofgig[0]
+      p 5
+       puts site.data['roam'].demo
      p 6
       f=File.read('_data/artofgig.json')
       puts JSON.pretty_generate(JSON.load(f))
-      p 3.1
+
 
 =begin      
       if site.layouts.key? 'roam_format'
