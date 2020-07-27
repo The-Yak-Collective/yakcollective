@@ -18,7 +18,7 @@ module Jekyll
 
         site.data['roam'].each_with_index do |pag,idx| #page was catagory in original code
           print "at roam page:", idx
-          break if idx == 10 # to make it faster
+          #break if idx == 10 # to make it faster
           site.pages << RoamPage.new(site, site.source, dir, pag)
         end
        
