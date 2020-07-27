@@ -13,7 +13,7 @@ module Jekyll
        puts site.data.artofgig[1].title
       
      puts site.data.artofgig.length()
-      
+=begin      
       if site.layouts.key? 'roam_format'
         dir =  'Roam'
         site.data.ArtOfGig.each_key do |page| #page was catagory
@@ -21,6 +21,7 @@ module Jekyll
         #get url, if possible
           site.pages << RoamPage.new(site, site.source, File.join(dir, page), page)
         end
+=end        
       end
       rescue
       puts "failed in main"
