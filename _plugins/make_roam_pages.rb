@@ -18,7 +18,7 @@ module Jekyll
 
         site.data['roam'].each_with_index do |pag,idx| #page was catagory in original code
           print "at roam page:", idx
-          break if idx == 500
+          #break if idx == 500
           site.pages << RoamPage.new(site, site.source, dir, pag)
         end
        
@@ -89,7 +89,7 @@ module Jekyll
             s1=s[0..sp+1]
             s2=s[sp+2..ep-1]
             s3=s[ep..-1]
-            lnk=' [' << s2 << '](' << dir << '/' << ttl2link(s2) << ')' 
+            lnk=' [' << s2 << '](' << site.url << 'roam/' << ttl2link(s2) << ')' 
             return linkify(s1 << lnk <<s3,ep+2)
         else
             return s
