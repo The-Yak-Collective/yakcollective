@@ -38,8 +38,7 @@ module Jekyll
       @base = base
       @dir  = dir
 
-      t=pag['title'] << ' '
-      t.gsub! ' ','_'
+      t=pag['title'].gsub!(' ','_')
       n=Addressable::URI.encode_component(t)
 
       @name = n << '.html'
@@ -49,7 +48,7 @@ module Jekyll
           self.read_yaml(File.join(base, '_layouts'), 'roam_format.html')
           self.data['cont']="no content for now, but maybe... " <<  render(pag,0) 
           
-          self.data['title'] = pag['title'] << " no?"
+          self.data['title'] = pag['title'] 
       rescue
           puts "failed for page builder :("
           puts  pag['title']
@@ -60,14 +59,14 @@ module Jekyll
       def render(obj,n)
         obj.each_key do |k|
             if k == 'string'
-                return '>'*n << "<p>" << obj[k] << "</p>\n"
+                return  '>'*n <<  ' ' << obj[k] << "\n"
             else
                 if k == 'children'
                     s=''
                     obj[k].each do |c|
                         s=s << render(c,n+1)
                     end
-                    return '<div>' << s << '</div>'
+                    return s 
                 end
             end
         end
