@@ -11,10 +11,13 @@ module Jekyll
       p "started"
 f=File.read('_data/artofgig.json')
       site.data['roam']=JSON.load(f) 
-
+p 1
       if site.layouts.key? 'roam_format'
+      p 2
         dir =  'roam'
+        p 3
         site.data['roam'].each_key do |page| #page was catagory in original code
+        p 4
           site.pages << RoamPage.new(site, site.source, dir, page)
         end
        
@@ -29,11 +32,12 @@ f=File.read('_data/artofgig.json')
   # A Page subclass. page has contenst and roam_url. and title
   class RoamPage < Page
     def initialize(site, base, dir, page)
+    p 5
       @site = site
       @base = base
       @dir  = dir
       @name = Addressable::URI.encode_component(page.title)
-
+p 6
       begin 
           self.process(@name)
           self.read_yaml(File.join(base, '_layouts'), 'roam_format.html')
