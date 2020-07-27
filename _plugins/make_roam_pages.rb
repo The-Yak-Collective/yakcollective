@@ -16,7 +16,7 @@ p 1
       p 2
         dir =  'roam'
         p 3
-        site.data['roam'].each_key do |page| #page was catagory in original code
+        site.data['roam'].each do |page| #page was catagory in original code
         p 4
           site.pages << RoamPage.new(site, site.source, dir, page)
         end
