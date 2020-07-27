@@ -38,7 +38,7 @@ module Jekyll
       @base = base
       @dir  = dir
 
-      t=pag['title']
+      t=pag['title'] << ' '
       t.gsub! ' ','_'
       n=Addressable::URI.encode_component(t)
 
