@@ -38,8 +38,11 @@ module Jekyll
       @base = base
       @dir  = dir
 
-
-      @name = ttl2link(pag['title']) << '.md'
+      begin
+        @name = ttl2link(pag['title']) << '.md'
+      rescue
+        puts "trouble with encoding name", pag['title']
+      end
 
       begin 
           self.process(@name)
