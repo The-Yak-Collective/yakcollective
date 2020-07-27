@@ -21,8 +21,9 @@ module Jekyll
         #get url, if possible
           site.pages << RoamPage.new(site, site.source, File.join(dir, page), page)
         end
-=end        
+       
       end
+=end 
       rescue
       puts "failed in main"
       end
