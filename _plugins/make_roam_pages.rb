@@ -9,28 +9,14 @@ module Jekyll
     def generate(site)
       begin
       p "we read directly from administartive branch for now. someday will debug the open file mechanism and even the read from site data mechanism"
-
-      site.data['roam']=JSON.load(open('https://raw.githubusercontent.com/The-Yak-Collective/yakcollective/admin-improvements/_data/demo.json')) #demo is shorter than artofgig
+f=File.read('_data/artofgig.json')
+      site.data['roam']=JSON.load(f) 
       p 1
-      p site.data['roam']
+      p site.data['roam'].length()
       p 2
-      puts site.data['roam']
+      puts site.data['roam'][2]
          p 3   
-      f=File.read('_data/demo.json')
-      puts JSON.pretty_generate(JSON.load(f))
-      p 3.1
 
-     puts site.data['roam'].length()
-      p 4
-      f=File.read('_data/artofgig.json')
-      puts JSON.pretty_generate(JSON.load(f))
-
-      p site.data.artofgig[0]
-      p 5
-       puts site.data['roam'].demo
-     p 6
-      f=File.read('_data/artofgig.json')
-      puts JSON.pretty_generate(JSON.load(f))
 
 
 =begin      
