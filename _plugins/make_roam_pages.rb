@@ -18,7 +18,7 @@ module Jekyll
 
         site.data['roam'].each_with_index do |pag,idx| #page was catagory in original code
           puts "at roam page:", idx
-          #break if idx == 100
+          break if idx == 500
           site.pages << RoamPage.new(site, site.source, dir, pag)
         end
        
@@ -49,7 +49,7 @@ module Jekyll
           self.data['title'] = pag['title'] 
       rescue
           puts "failed for page builder :("
-          puts  pag['title']
+          p  pag['title'], @name
           puts "managed to print title..."
       end
     end
