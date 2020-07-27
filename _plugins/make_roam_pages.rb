@@ -8,21 +8,20 @@ module Jekyll
 
     def generate(site)
       begin
-      p "started"
-      f=File.open('/opt/build/repo/_data/artofgig.json')
-      jff=f.read
-      p jff
-      site.data['roam']=JSON.parse(jff)
-      
-      p site.data['roam']
+      p "we read directly from administartive branch for now. someday will debug teh open file mechanism and even the read from site data mechanism"
 
+      site.data['roam']=JSON.load(open(https://raw.githubusercontent.com/The-Yak-Collective/yakcollective/admin-improvements/_data/artofgig))
+      p 1
+      p site.data['roam']
+p 2
       puts site.data['roam']
-            
+         p 3   
       puts site.data['roam'][1]
-      
+      p 4
        puts site.data['roam'][1].title
-      
+      p 5
      puts site.data['roam'].length()
+     p 6
 =begin      
       if site.layouts.key? 'roam_format'
         dir =  'Roam'
