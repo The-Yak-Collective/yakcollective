@@ -48,12 +48,20 @@ module Jekyll
           self.process(@name)
           self.read_yaml(File.join(base, '_layouts'), 'roam_format.html')
           self.data['cont']="no content for now" #json records have title, always. some have "children". can have both string and children.  each children has a string, i think. children can have children. have []() links and [[]]links
+          render(pag)
           self.data['title'] = pag['title'] << " no?"
       rescue
           puts "failed for page builder :("
           puts  "pag['title']"
           puts "managed to print title..."
       end
+    end
+  end
+  def render(obj)
+    obj.each_key do |k|
+        if k=='string'
+            puts "found a string", k, obj[k]
+        end
     end
   end
 end
