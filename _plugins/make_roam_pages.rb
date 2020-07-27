@@ -9,7 +9,7 @@ module Jekyll
     def generate(site)
       begin
       p "started"
-      f=File.open('_data/artofgig.json')
+      f=File.open('/opt/build/repo/_data/artofgig.json')
       jff=f.read
       p jff
       site.data['roam']=JSON.parse(jff)
