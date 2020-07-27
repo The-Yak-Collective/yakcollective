@@ -47,8 +47,8 @@ module Jekyll
       begin 
           self.process(@name)
           self.read_yaml(File.join(base, '_layouts'), 'roam_format.html')
-          self.data['cont']="no content for now" #json records have title, always. some have "children". can have both string and children.  each children has a string, i think. children can have children. have []() links and [[]]links
-          render(pag)
+          self.data['cont']="no content for now, but maybe... " <<  render(pag,0) 
+          
           self.data['title'] = pag['title'] << " no?"
       rescue
           puts "failed for page builder :("
@@ -56,12 +56,19 @@ module Jekyll
           puts "managed to print title..."
       end
     end
-
-      def render(obj)
+#json records have title, always. some have "children". can have both string and children.  each children has a string, i think. children can have children. have []() links and [[]]links
+      def render(obj,n)
         obj.each_key do |k|
-            puts k
             if k == 'string'
-                puts "found a string", k, obj[k]
+                return '>'*n << "<p>" << obj[k] << "</p>\n"
+            else
+                if k == 'children'
+                    s=''
+                    obj[k].each do |c|
+                        s=s << render(c,n+1)
+                    end
+                    return '<div>' << s << '</div>'
+                end
             end
         end
       end
