@@ -56,12 +56,13 @@ module Jekyll
           puts "managed to print title..."
       end
     end
-  end
-  def render(obj)
-    obj.each_key do |k|
-        if k=='string'
-            puts "found a string", k, obj[k]
+
+      def render(obj)
+        obj.each_key do |k|
+            if k=='string'
+                puts "found a string", k, obj[k]
+            end
         end
-    end
+      end
   end
 end
