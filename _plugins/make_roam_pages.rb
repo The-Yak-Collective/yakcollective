@@ -10,7 +10,7 @@ module Jekyll
       begin
       p "we read directly from administartive branch for now. someday will debug the open file mechanism and even the read from site data mechanism"
 
-      site.data['roam']=JSON.load(open('https://raw.githubusercontent.com/The-Yak-Collective/yakcollective/admin-improvements/_data/artofgig.json'))
+      site.data['roam']=JSON.load(open('https://raw.githubusercontent.com/The-Yak-Collective/yakcollective/admin-improvements/_data/demo.json')) #demo is shorter than artofgig
       p 1
       p site.data['roam']
       p 2
