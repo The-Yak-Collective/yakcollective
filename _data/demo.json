@@ -1,0 +1,6 @@
+{ "demo": 
+  { 
+    "rama" : { "Name": "demo" },
+    "krishna" : { "Name": "hare","place": "bharat", "hawa": { "maina": "tota"} } 
+  }
+}
