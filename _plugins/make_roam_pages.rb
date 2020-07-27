@@ -24,11 +24,13 @@ module Jekyll
       @dir  = dir
       @name = 'index.html'
 
-      self.process(@name)
+      begin self.process(@name)
       self.read_yaml(File.join(base, '_layouts'), 'roam_format.html')
       self.data['roam_title'] = Addressable::URI.encode_component(page.title)
       self.data['content']=page.string
       self.data['title'] = page.title
+      rescue
+      puts "failed for ", page
     end
   end
 end
