@@ -20,7 +20,7 @@ module Jekyll
         p 4,idx
 #        p pag
 #        p pag['title']
-          break if idx == 30
+          break if idx == 10
           site.pages << RoamPage.new(site, site.source, dir, pag)
         end
        
