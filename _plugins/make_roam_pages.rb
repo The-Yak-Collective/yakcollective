@@ -18,7 +18,7 @@ p 1
         p 3
         site.data['roam'].each do |pag| #page was catagory in original code
         p 4
-        p pag
+#        p pag
         p pag['title']
           site.pages << RoamPage.new(site, site.source, dir, pag)
         end
