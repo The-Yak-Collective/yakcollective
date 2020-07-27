@@ -51,7 +51,7 @@ p 6
           self.data['content']="no content for now" #json records have title, always. some have "children". can have both string and children.  each children has a string, i think. children can have children. have []() links and [[]]links
           self.data['title'] = pag['title']
       rescue
-          puts "failed for page builder"
+          puts "failed for page builder :("
           puts  pag['title']
           puts "managed to print title..."
       end
