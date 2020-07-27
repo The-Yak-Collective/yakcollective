@@ -9,17 +9,18 @@ module Jekyll
     def generate(site)
       begin
       p "started"
-f=File.read('_data/artofgig.json')
+    f=File.read('_data/artofgig.json')
       site.data['roam']=JSON.load(f) 
-p 1
+    p 1
       if site.layouts.key? 'roam_format'
-#      p 2
+      p 2
         dir =  'roam'
-#        p 3
-        site.data['roam'].each do |pag| #page was catagory in original code
-#        p 4
+       p 3
+        site.data['roam'].each_with_index do |pag,idx| #page was catagory in original code
+        p 4
 #        p pag
-#        p pag['title']
+        p pag['title']
+          break if idx == 30
           site.pages << RoamPage.new(site, site.source, dir, pag)
         end
        
@@ -34,17 +35,17 @@ p 1
   # A Page subclass. page has contenst and roam_url. and title
   class RoamPage < Page
     def initialize(site, base, dir, pag)
-#    p 5
-#    p site,base,dir,pag['title']
-#    p 5.1
+    p 5
+    p site,base,dir,pag['title']
+    p 5.1
       @site = site
       @base = base
       @dir  = dir
-#p 5.5
+p 5.5
 n=Addressable::URI.encode_component(pag['title'])
-#puts "added name:",n
+puts "added name:",n
       @name = n
-#p 6
+p 6
       begin 
           self.process(@name)
           self.read_yaml(File.join(base, '_layouts'), 'roam_format.html')
