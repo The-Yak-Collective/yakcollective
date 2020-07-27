@@ -8,7 +8,10 @@ module Jekyll
 
     def generate(site)
       begin
-      jff=File.read('_data/artofgig.json')
+      p "started"
+      f=File.open('_data/artofgig.json')
+      jff=f.read
+      p jff
       site.data['roam']=JSON.parse(jff)
       
       p site.data['roam']
