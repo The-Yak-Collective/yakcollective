@@ -8,17 +8,17 @@ module Jekyll
 
     def generate(site)
       begin
-      site.data['roam']=JSON.load(open('/_data/artofgig.json'))
+      site.data['roam']=JSON.load(File.open('_data/artofgig.json'))
       
-      p site.data.['roam']
+      p site.data['roam']
 
-      puts site.data.['roam']
+      puts site.data['roam']
             
-      puts site.data.['roam'][1]
+      puts site.data['roam'][1]
       
-       puts site.data.['roam'][1].title
+       puts site.data['roam'][1].title
       
-     puts site.data.['roam'].length()
+     puts site.data['roam'].length()
 =begin      
       if site.layouts.key? 'roam_format'
         dir =  'Roam'
