@@ -60,7 +60,7 @@ module Jekyll
       def ttl2link(s)
         t=s.dup
         t.gsub!(' ','_')
-        return Addressable::URI.encode(t)
+        return Addressable::URI.encode_component(t)
       end
 
       def render(obj,n)
