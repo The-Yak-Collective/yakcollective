@@ -42,12 +42,12 @@ module Jekyll
       t.gsub!(' ','_')
       n=Addressable::URI.encode_component(t)
 
-      @name = n << '.html'
+      @name = n << '.md'
 
       begin 
           self.process(@name)
           self.read_yaml(File.join(base, '_layouts'), 'roam_format.html')
-          self.data['cont']="no content for now, but maybe... " <<  render(pag,0) 
+          self.data['cont']="no content for now, but maybe... \n" <<  render(pag,0) 
           
           self.data['title'] = pag['title'] 
       rescue
