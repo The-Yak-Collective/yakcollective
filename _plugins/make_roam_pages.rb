@@ -5,6 +5,7 @@ module Jekyll
     safe true
 
     def generate(site)
+      begin
       if site.layouts.key? 'roam_format'
         dir =  'Roam'
         site.data.ArtOfGig.each_key do |page| #page was catagory
@@ -12,6 +13,9 @@ module Jekyll
         #get url, if possible
           site.pages << RoamPage.new(site, site.source, File.join(dir, page), page)
         end
+      end
+      rescue
+      puts "failed in main"
       end
     end
   end
@@ -30,7 +34,7 @@ module Jekyll
       self.data['content']=page.string
       self.data['title'] = page.title
       rescue
-      puts "failed for ", page
+      puts "failed for page builder"
     end
   end
 end
