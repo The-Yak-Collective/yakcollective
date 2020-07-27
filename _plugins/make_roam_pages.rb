@@ -1,4 +1,5 @@
-#require 'addressable/uri'
+require 'addressable/uri'
+require 'json'
 
 module Jekyll
   class RoamPageGenerator < Generator
@@ -6,6 +7,8 @@ module Jekyll
 
     def generate(site)
       begin
+      p site.data.demo
+
       puts site.data.artofgig
             
       puts site.data.artofgig[1]
