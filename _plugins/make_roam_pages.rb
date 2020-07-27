@@ -71,6 +71,7 @@ module Jekyll
                 end
             end
         end
+        return ''
       end
   end
 end
