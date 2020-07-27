@@ -14,7 +14,7 @@ module Jekyll
       p 1
       p site.data['roam']
       p 2
-      p site.demo.demo
+      p site.data.demo.demo
       p 2.2
       puts site.data['roam']
          p 3   
