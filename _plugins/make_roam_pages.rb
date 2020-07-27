@@ -8,12 +8,12 @@ module Jekyll
 
     def generate(site)
       begin
-      p "we read directly from administartive branch for now. someday will debug teh open file mechanism and even the read from site data mechanism"
+      p "we read directly from administartive branch for now. someday will debug the open file mechanism and even the read from site data mechanism"
 
-      site.data['roam']=JSON.load(open(https://raw.githubusercontent.com/The-Yak-Collective/yakcollective/admin-improvements/_data/artofgig.json))
+      site.data['roam']=JSON.load(open('https://raw.githubusercontent.com/The-Yak-Collective/yakcollective/admin-improvements/_data/artofgig.json'))
       p 1
       p site.data['roam']
-p 2
+      p 2
       puts site.data['roam']
          p 3   
       puts site.data['roam'][1]
