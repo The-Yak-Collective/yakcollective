@@ -8,28 +8,18 @@ module Jekyll
 
     def generate(site)
       begin
-      p "we read directly from administartive branch for now. someday will debug the open file mechanism and even the read from site data mechanism"
+      p "started"
 f=File.read('_data/artofgig.json')
       site.data['roam']=JSON.load(f) 
-      p 1
-      p site.data['roam'].length()
-      p 2
-      puts site.data['roam'][2]
-         p 3   
 
-
-
-=begin      
       if site.layouts.key? 'roam_format'
-        dir =  'Roam'
-        site.data.ArtOfGig.each_key do |page| #page was catagory
-        dir='roam_pages'
-        #get url, if possible
-          site.pages << RoamPage.new(site, site.source, File.join(dir, page), page)
+        dir =  'roam'
+        site.data['roam'].each_key do |page| #page was catagory in original code
+          site.pages << RoamPage.new(site, site.source, dir, page)
         end
        
       end
-=end 
+
       rescue
       puts "failed in main"
       end
@@ -42,15 +32,15 @@ f=File.read('_data/artofgig.json')
       @site = site
       @base = base
       @dir  = dir
-      @name = 'index.html'
+      @name = Addressable::URI.encode_component(page.title)
 
-      begin self.process(@name)
+      begin 
+          self.process(@name)
           self.read_yaml(File.join(base, '_layouts'), 'roam_format.html')
-          self.data['roam_title'] = Addressable::URI.encode_component(page.title)
-          self.data['content']=page.string
+          self.data['content']="no content for now" #page.string
           self.data['title'] = page.title
       rescue
-          puts "failed for page builder"
+          puts "failed for page builder", page.title
       end
     end
   end
