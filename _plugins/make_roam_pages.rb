@@ -18,7 +18,7 @@ module Jekyll
 
         site.data['roam'].each_with_index do |pag,idx| #page was catagory in original code
           puts "at roam page:", idx
-          break if idx == 50
+          break if idx == 100
           site.pages << RoamPage.new(site, site.source, dir, pag)
         end
        
@@ -44,7 +44,7 @@ module Jekyll
       begin 
           self.process(@name)
           self.read_yaml(File.join(base, '_layouts'), 'roam_format.html')
-          self.data['cont']="no content for now, but maybe... \n" <<  render(pag,0) 
+          self.data['cont']= render(pag,0) 
           
           self.data['title'] = pag['title'] 
       rescue
@@ -65,7 +65,7 @@ module Jekyll
             if k == 'string'
                 s=obj[k]
                 s=linkify(s,0)
-                return  '&nbsp;&nbsp;&nbsp;&nbsp;'*n <<  '* ' << obj[k] << "\n\n"
+                return  '&nbsp;&nbsp;&nbsp;&nbsp;'*n <<  '* ' << s << "\n\n"
             else
                 if k == 'children'
                     s=''
