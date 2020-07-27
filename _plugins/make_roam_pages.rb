@@ -60,7 +60,7 @@ module Jekyll
       def render(obj,n)
         obj.each_key do |k|
             if k == 'string'
-                return  '>'*n <<  ' ' << obj[k] << "\n"
+                return  '&nbsp;&nbsp;&nbsp;&nbsp;'*n <<  '* ' << obj[k] << "\n\n"
             else
                 if k == 'children'
                     s=''
