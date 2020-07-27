@@ -33,9 +33,12 @@ p 1
   class RoamPage < Page
     def initialize(site, base, dir, page)
     p 5
+    p site,base,dir,page.title
+    p 5.1
       @site = site
       @base = base
       @dir  = dir
+p 5.5
       @name = Addressable::URI.encode_component(page.title)
 p 6
       begin 
