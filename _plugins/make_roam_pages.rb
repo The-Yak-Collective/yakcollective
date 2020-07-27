@@ -1,4 +1,4 @@
-require 'addressable/uri'
+#require 'addressable/uri'
 
 module Jekyll
   class RoamPageGenerator < Generator
@@ -6,9 +6,13 @@ module Jekyll
 
     def generate(site)
       begin
-      puts site.data.ArtOfGig.length()
+      puts site.data.artofgig
+            
+      puts site.data.artofgig[1]
       
-      puts site.data.ArtOfGig[1].title
+       puts site.data.artofgig[1].title
+      
+     puts site.data.artofgig.length()
       
       if site.layouts.key? 'roam_format'
         dir =  'Roam'
