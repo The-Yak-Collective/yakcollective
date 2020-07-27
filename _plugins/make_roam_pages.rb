@@ -52,7 +52,7 @@ module Jekyll
           self.data['title'] = pag['title'] << " no?"
       rescue
           puts "failed for page builder :("
-          puts  "pag['title']"
+          puts  pag['title']
           puts "managed to print title..."
       end
     end
