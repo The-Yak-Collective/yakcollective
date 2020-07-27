@@ -59,7 +59,8 @@ module Jekyll
 
       def render(obj)
         obj.each_key do |k|
-            if k=='string'
+            puts k
+            if k == 'string'
                 puts "found a string", k, obj[k]
             end
         end
