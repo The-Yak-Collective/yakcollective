@@ -1,5 +1,6 @@
 require 'addressable/uri'
 require 'json'
+require 'open-uri'
 
 module Jekyll
   class RoamPageGenerator < Generator
@@ -7,15 +8,17 @@ module Jekyll
 
     def generate(site)
       begin
-      p site.data.demo
+      site.data['roam']=JSON.load(open('/_data/artofgig.json'))
+      
+      p site.data.['roam']
 
-      puts site.data.artofgig
+      puts site.data.['roam']
             
-      puts site.data.artofgig[1]
+      puts site.data.['roam'][1]
       
-       puts site.data.artofgig[1].title
+       puts site.data.['roam'][1].title
       
-     puts site.data.artofgig.length()
+     puts site.data.['roam'].length()
 =begin      
       if site.layouts.key? 'roam_format'
         dir =  'Roam'
