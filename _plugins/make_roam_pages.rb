@@ -38,7 +38,8 @@ module Jekyll
       @base = base
       @dir  = dir
 
-      t=pag['title'].gsub!(' ','_')
+      t=pag['title'].dup
+      t.gsub!(' ','_')
       n=Addressable::URI.encode_component(t)
 
       @name = n << '.html'
