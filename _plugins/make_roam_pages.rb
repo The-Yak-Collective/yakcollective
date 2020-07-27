@@ -18,7 +18,7 @@ module Jekyll
 
         site.data['roam'].each_with_index do |pag,idx| #page was catagory in original code
           print "at roam page:", idx
-          break if idx == 10
+          #break if idx == 10 # to make it faster
           site.pages << RoamPage.new(site, site.source, dir, pag)
         end
        
@@ -82,7 +82,7 @@ module Jekyll
         return ''
       end
       def linkify(s,i0)
-        puts dir #fudge=dir[0..dir.index('/roam/')] << #cannot figure out how dir got the page name added to it. was it markup?
+        #puts dir #fudge=dir[0..dir.index('/roam/')] << #cannot figure out how dir got the page name added to it. was it markup? no. it is already here '/roam/Directory'
         sp=s.index('[[',i0)
         ep=s.index(']]',i0)
         if sp && ep && (sp<ep)
@@ -90,7 +90,7 @@ module Jekyll
             s1=s[0..sp+1]
             s2=s[sp+2..ep-1]
             s3=s[ep..-1]
-            lnk=' [' << s2 << '](' << dir <<  ttl2link(s2) << ')' << ' [' << s2 << '](' << '../' <<  ttl2link(s2) << ')'
+            lnk= ' [' << s2 << '](' << '../' <<  ttl2link(s2) << ')' #old one was ' [' << s2 << '](' << dir <<  ttl2link(s2) << ')' <<
             return linkify(s1 << lnk <<s3,ep+2)
         else
             return s
