@@ -18,7 +18,7 @@ module Jekyll
 
         site.data['roam'].each_with_index do |pag,idx| #page was catagory in original code
           puts "at roam page:", idx
-          break if idx == 10
+          break if idx == 50
           site.pages << RoamPage.new(site, site.source, dir, pag)
         end
        
@@ -42,7 +42,7 @@ module Jekyll
       t.gsub! ' ','_'
       n=Addressable::URI.encode_component(t)
 
-      @name = n
+      @name = n << '.html'
 
       begin 
           self.process(@name)
