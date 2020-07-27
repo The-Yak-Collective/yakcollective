@@ -84,7 +84,7 @@ module Jekyll
         if sp && ep && (sp<ep)
             
             s1=s[0..sp+1]
-            s2=s[sp+1..ep-1]
+            s2=s[sp+2..ep-1]
             s3=s[ep..-1]
             lnk=' [' << s2 << '](' << dir << '/' << ttl2link(s2) << ')' 
             return linkify(s1 << lnk <<s3,ep+2)
