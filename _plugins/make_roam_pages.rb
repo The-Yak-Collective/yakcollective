@@ -6,6 +6,10 @@ module Jekyll
 
     def generate(site)
       begin
+      puts site.data.ArtOfGig.length()
+      
+      puts site.data.ArtOfGig[1].title
+      
       if site.layouts.key? 'roam_format'
         dir =  'Roam'
         site.data.ArtOfGig.each_key do |page| #page was catagory
