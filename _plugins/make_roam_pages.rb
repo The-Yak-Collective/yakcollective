@@ -14,11 +14,13 @@ module Jekyll
       p 1
       p site.data['roam']
       p 2
+      p site.demo.demo
+      p 2.2
       puts site.data['roam']
          p 3   
       puts site.data['roam'][1]
       p 4
-       puts site.data['roam'][1].title
+       puts site.data['roam'][1].demo
       p 5
      puts site.data['roam'].length()
      p 6
