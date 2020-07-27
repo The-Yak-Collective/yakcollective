@@ -9,7 +9,7 @@ module Jekyll
     def generate(site)
       begin
       p "started reading roam files"
-    f=File.read('_data/artofgig.json')
+    f=File.read('_data/artofgig.json')# of course, by putting it in data, it means the files are read twice and now they are also avaiable under site.data.artofgig
       site.data['roam']=JSON.load(f) 
 
       if site.layouts.key? 'roam_format'
@@ -18,7 +18,7 @@ module Jekyll
 
         site.data['roam'].each_with_index do |pag,idx| #page was catagory in original code
           puts "at roam page:", idx
-          break if idx == 100
+          #break if idx == 100
           site.pages << RoamPage.new(site, site.source, dir, pag)
         end
        
@@ -83,8 +83,8 @@ module Jekyll
         ep=s.index(']]',i0)
         if sp && ep && (sp<ep)
             
-            s1=s[0..sp+2]
-            s2=s[sp+2..ep]
+            s1=s[0..sp+1]
+            s2=s[sp+1..ep-1]
             s3=s[ep..-1]
             lnk=' [' << s2 << '](' << dir << '/' << ttl2link(s2) << ')' 
             return linkify(s1 << lnk <<s3,ep+2)
