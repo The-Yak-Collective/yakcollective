@@ -21,10 +21,14 @@ module Jekyll
       p 3.1
       puts site.data['roam'][1]
       p 4
-       puts site.data['roam'][1].demo
+       puts site.data['roam'].demo
       p 5
      puts site.data['roam'].length()
      p 6
+      f=File.read('_data/artofgig.json')
+      puts JSON.pretty_generate(JSON.load(f))
+      p 3.1
+
 =begin      
       if site.layouts.key? 'roam_format'
         dir =  'Roam'
