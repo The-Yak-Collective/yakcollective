@@ -16,6 +16,9 @@ module Jekyll
       p 2
       puts site.data['roam']
          p 3   
+      f=File.read('_data/demo.json')
+      puts JSON.pretty_generate(JSON.load(f))
+      p 3.1
       puts site.data['roam'][1]
       p 4
        puts site.data['roam'][1].demo
