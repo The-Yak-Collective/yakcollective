@@ -19,7 +19,7 @@ p 1
         site.data['roam'].each do |pag| #page was catagory in original code
         p 4
         p pag
-        p pag.title
+        p pag['title']
           site.pages << RoamPage.new(site, site.source, dir, pag)
         end
        
@@ -35,22 +35,22 @@ p 1
   class RoamPage < Page
     def initialize(site, base, dir, pag)
     p 5
-    p site,base,dir,pag.title
+    p site,base,dir,pag['title']
     p 5.1
       @site = site
       @base = base
       @dir  = dir
 p 5.5
-      @name = Addressable::URI.encode_component(pag.title)
+      @name = Addressable::URI.encode_component(pag['title'])
 p 6
       begin 
           self.process(@name)
           self.read_yaml(File.join(base, '_layouts'), 'roam_format.html')
           self.data['content']="no content for now" #page.string
-          self.data['title'] = pag.title
+          self.data['title'] = pag['title']
       rescue
           puts "failed for page builder"
-          puts  pag.title
+          puts  pag['title']
           puts "managed to print title..."
       end
     end
