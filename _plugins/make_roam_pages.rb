@@ -1,4 +1,4 @@
-#require 'addressable/uri'
+require 'addressable/uri'
 
 module Jekyll
   class RoamPageGenerator < Generator
@@ -29,12 +29,13 @@ module Jekyll
       @name = 'index.html'
 
       begin self.process(@name)
-      self.read_yaml(File.join(base, '_layouts'), 'roam_format.html')
-      self.data['roam_title'] = Addressable::URI.encode_component(page.title)
-      self.data['content']=page.string
-      self.data['title'] = page.title
+          self.read_yaml(File.join(base, '_layouts'), 'roam_format.html')
+          self.data['roam_title'] = Addressable::URI.encode_component(page.title)
+          self.data['content']=page.string
+          self.data['title'] = page.title
       rescue
-      puts "failed for page builder"
+          puts "failed for page builder"
+      end
     end
   end
 end
