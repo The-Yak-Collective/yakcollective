@@ -60,7 +60,7 @@ module Jekyll
       def ttl2link(s)
         t=s.dup
         t.gsub!(' ','_')
-        return Addressable::URI.encode_component(t)
+        return t.gsub!(/[^0-9A-Za-z.\-]/, '_') || t #Addressable::URI.encode_component(t) # does not remove ":" # need better FS safe encoding here
       end
 
       def render(obj,n)
