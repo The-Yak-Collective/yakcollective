@@ -24,10 +24,10 @@ module Jekyll_Get
 #          if target #give up option of overloading as we have trouble getting the hash-joiner in. maybe it means i shoudl delete cache as well...
 #            HashJoiner.deep_merge target, source
 #          else
-#          end
+#          end # this part removed from original by MF
             if (d['data'] == "issues")
                 numissues=source[0]['number'].to_i
-                for i in 55..numissues #fundge as going 1-63 gets stuck on 30 due to rate limit
+                for i in 55..numissues #fudge as going 1-63 gets stuck on 30 due to rate limit #mf
                     p i
                     tmp=JSON.load(open(d['json']+"/"+i.to_s+'/reactions',
     "Accept" =>"application/vnd.github.squirrel-girl-preview+json"))
