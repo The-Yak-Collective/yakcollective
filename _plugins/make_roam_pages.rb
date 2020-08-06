@@ -1,3 +1,4 @@
+#basics copied from basic page generation example in jekyll docs. #mf
 require 'addressable/uri'
 require 'json'
 require 'open-uri'
@@ -63,7 +64,7 @@ module Jekyll
         return t.gsub!(/[^0-9A-Za-z.\-]/, '_') || t #Addressable::URI.encode_component(t) # does not remove ":" # need better FS safe encoding here
       end
 
-      def render(obj,n)
+      def render(obj,n) #recursivly render a roam page #mf
         obj.each_key do |k|
             if k == 'string'
                 s=obj[k]
@@ -82,8 +83,8 @@ module Jekyll
         return ''
       end
       
-      def linkify(s)
-        #puts dir #fudge=dir[0..dir.index('/roam/')] << #cannot figure out how dir got the page name added to it. was it markup? no. it is already here '/roam/Directory'
+      def linkify(s) #convert [[links]] in s to website links #mf
+        #puts dir #fudge=dir[0..dir.index('/roam/')] << #cannot figure out how dir got the page name added to it. was it markup? no. it is already here '/roam/Directory' #mf
         sp=s.index('[[')
         if !sp
             return s
