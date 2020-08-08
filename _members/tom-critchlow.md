@@ -5,7 +5,7 @@ date: 2020-04-30
 previously: Google
 indie_status: 5+ years
 twitter: tomcritchlow
-avatar: /assets/img/tom-critchlow.jpg
+avatar: /assets/dynamic/tom-critchlow.jpg
 links:
   - title: tomcritchlow.com
     url: https://tomcritchlow.com/

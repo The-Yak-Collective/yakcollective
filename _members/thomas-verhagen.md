@@ -4,7 +4,7 @@ title: Thomas Verhagen
 date: 2020-04-30
 indie_status: 1+ year
 twitter: thomasverhagen
-avatar: /assets/img/thomas-verhagen.jpg
+avatar: /assets/dynamic/thomas-verhagen.jpg
 links:
   - title: Analyze, structure & boost
     url: https://www.linkedin.com/in/thomasverhagen/

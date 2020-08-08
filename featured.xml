@@ -1,0 +1,25 @@
+---
+layout: null-layout
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/">
+	<channel>
+		<title>{{ site.name | xml_escape }} - Daily Featured Member</title>
+		<description>Today's featured member from the Yak Collective</description>
+		<sy:updatePeriod>daily</sy:updatePeriod>
+		<sy:updateFrequency>1</sy:updateFrequency>
+		<link>{{ site.url }}</link>
+		<atom:link href="{{ site.url }}/{{ page.path }}" rel="self" type="application/rss+xml" />
+		<lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
+			<item>
+				{% assign num_members = site.members | size %}
+				{% assign random_member = site.time | date: "%Y%m%d" | modulo: num_members %}
+				{% assign member = site.members[random_member] %}
+				<title>{{ member.title | xml_escape }}</title>
+				<description>{% if member.twitter and member.twitter.size > 0 %}@{{ member.twitter }}{% elsif member.tagline and member.tagline.size > 0 %}{{ member.tagline }}{% endif %}</description>
+				<pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
+				<link>{{ site.url }}/members/{{ member.slug }}</link>
+				<guid isPermaLink="false">{{ site.time | date: "%Y%m%d" }}</guid>
+			</item>
+	</channel>
+</rss>

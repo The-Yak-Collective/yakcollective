@@ -7,14 +7,13 @@ layout: minimal
 		<h1>Members</h1>
 		{{ content }}
 	</header>
-    {% comment %}
-    next two lines reorder the member list, github issue 69
-    #mf
-    {% endcomment %}
-{% assign num_members = site.members | size %}
-{% assign membs = site.members | sample: num_members %}
-
-	{% for member in membs %}
+	{% comment %}
+		The next two lines randomize the member list. Closes GitHub
+		issue #69. @tilnow
+	{% endcomment %}
+	{% assign num_members = site.members | size %}
+	{% assign members_randomized = site.members | sample: num_members %}
+	{% for member in members_randomized %}
 		{% if member.date <= site.time or site.future == true %}
 			{% include member-card.html %}
 		{% endif %}

@@ -1,6 +1,6 @@
 # Site version. See: https://semver.org/
 #
-version: 2.0.0
+version: 2.5.0
 
 # Default accent color
 #
@@ -19,21 +19,11 @@ permalink: pretty
 #
 name: The Yak Collective
 description: The Yak Collective is a network of over 300 independent consultants, coaches, and freelancers with varied technical and creative skills.
-url: https://inspiring-villani-8898ca.netlify.app
+url: https://yakcollective.org
 feed_items: 255
 feed_update_period: daily
 feed_update_frequency: 1
 
-# plugins
-#
-jekyll_get:
-  data: issues
-  json: 'https://api.github.com/repos/The-Yak-Collective/yakcollective/issues'
-#plugins: #wanted to use this but had no access to build command, so will do plugin instead
-#    -jekyll-feed
-#feed:
-#    collections:
-#        -featured
 # Collections
 #
 collections:
@@ -43,8 +33,6 @@ collections:
     output: true
   sequences:
     output: false
-#  featured: #woudl have been a collection of 1 for feed
-#    output: true
 
 # Per-page defaults
 #
@@ -75,7 +63,8 @@ defaults:
 # Includes and excludes
 #
 exclude:
-  - README.md
   - functions
+  - help.md
   - netlify.toml
   - package.json
+  - README.md
