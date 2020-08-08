@@ -9,11 +9,11 @@
 	YakCoin transaction ID: 0x18ehd76h
 -->
 
-<link rel="icon" href="/assets/img/yak-logo.png" />
+<link rel="icon" href="/assets/static/yak-logo.png" />
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200;400;700&family=Playfair+Display&display=swap">
-<link rel="stylesheet" href="/assets/tachyons.min.css">
-<link rel="stylesheet" href="/assets/style.css">
+<link rel="stylesheet" href="/assets/static/tachyons.min.css">
+<link rel="stylesheet" href="/assets/static/style.css">
 <style type="text/css">
 	{% include page.css %}
 	{% if page.page_css %}
@@ -33,10 +33,10 @@
 	{% if member.avatar %}
 		{% assign og_image = member.avatar %}
 	{% else %}
-		{% assign og_image = "/assets/img/yak-og.png" %}
+		{% assign og_image = "/assets/static/yak-og.png" %}
 	{% endif %}
 {% else %}
-	{% assign og_image = "/assets/img/yak-og.png" %}
+	{% assign og_image = "/assets/static/yak-og.png" %}
 {% endif %}
 <meta property="og:image" content="{{ site.url }}{{ og_image }}" />
 
@@ -45,7 +45,7 @@
 {% if page.layout == "project" %}
 	{% assign twitter_image = page.hero_image %}
 {% else %}
-	{% assign twitter_image = "/assets/img/yak-og.png" %}
+	{% assign twitter_image = "/assets/static/yak-og.png" %}
 {% endif %}
 {% assign twitter_creator = "yak_collective" %}
 {% if page.layout == "post" %}

@@ -11,8 +11,8 @@ Our second report, [_The New Old Home_](/projects/the-new-old-home), is now avai
 
 Follow us on [Twitter](https://twitter.com/yak_collective), [Facebook](https://www.facebook.com/theyakcollective/), or [LinkedIn](https://www.linkedin.com/company/yak-collective/) to stay in the loop.
 
-	{% assign the_one = site.members[site.data.featured] %}
 <a href="{{the_one.url}}" class="dib tl" id="featured_yak"><small class="f6 db tc mt3 w-75 w-100-l center">Featured Yak:</small></a>
- {% include member-card-include.html member=the_one %} 
-
- 
+{% assign num_members = site.members | size %}
+{% assign random_member = site.time | date: "%Y%m%d" | modulo: num_members %}
+{% assign member = site.members[random_member] %}
+{% include member-card.html %}

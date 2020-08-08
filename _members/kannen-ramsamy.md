@@ -3,7 +3,7 @@ name: kannen-ramsamy
 title: Kannen Ramsamy
 date: 2020-06-10
 tagline: Policy & Communications
-avatar: /assets/img/kannen-ramsamy.png
+avatar: /assets/dynamic/kannen-ramsamy.png
 links:
   - title: LinkedIn
     url: https://www.linkedin.com/in/kannen-ramsamy-ab9a241b0/

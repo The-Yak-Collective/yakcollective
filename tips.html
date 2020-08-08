@@ -3,11 +3,10 @@ layout: minimal
 title: Yak Collective Consulting Tip
 ---
 {% assign num_tips = site.data.tips.tips | size %}
-{% assign which_one = "now" | date: "%N" | modulo: num_tips %}
-{% assign the_one = which_one | plus: 1 %}
-{% assign the_author_slug = site.data.tips.tips[which_one].author %}
+{% assign random_tip = site.data.tips.tips | sample: 1 %}
+{% assign the_author_slug = random_tip.author %}
 {% assign the_author = site.members | where: "name", the_author_slug | first %}
-{% assign the_words = site.data.tips.tips[which_one].tip %}
+{% assign the_words = random_tip.tip %}
 
 <h1 id="yak-collective-consulting-tip-number">Yak Collective Consulting Tip #{{ the_one }}</h1>
 <p><span id="yak-collective-consulting-tip">{{ the_words }}</span> &mdash; <a href="/members/{{ the_author_slug }}" id="yak-collective-consulting-tip-author">{{ the_author.title }}</a></p>

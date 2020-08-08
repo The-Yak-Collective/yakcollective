@@ -4,7 +4,7 @@ title: Darren Kong
 date: 2020-04-30
 indie_status: 3+ years
 previously: Other Internet
-avatar: /assets/img/darren-kong.jpg
+avatar: /assets/dynamic/darren-kong.jpg
 twitter: varietalxyz
 links:
   - title: Varietal Digital 
