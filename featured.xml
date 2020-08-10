@@ -12,11 +12,12 @@ layout: null-layout
 		<atom:link href="{{ site.url }}/{{ page.path }}" rel="self" type="application/rss+xml" />
 		<lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
 			<item>
-				{% assign num_members = site.members | size %}
+				{% assign current_members = site.members | where_exp: "member", "member.date <= site.time" %}
+				{% assign num_members = current_members | size %}
 				{% assign random_member = site.time | date: "%Y%m%d" | modulo: num_members %}
-				{% assign member = site.members[random_member] %}
+				{% assign member = current_members[random_member] %}
 				<title>{{ member.title | xml_escape }}</title>
-				<description>{% if member.twitter and member.twitter.size > 0 %}@{{ member.twitter }}{% elsif member.tagline and member.tagline.size > 0 %}{{ member.tagline }}{% endif %}</description>
+				<description>{% if member.twitter and member.twitter.size > 0 %}(@{{ member.twitter }}){% endif %}{% if member.tagline and member.tagline.size > 0 %} - {{ member.tagline }}{% endif %}</description>
 				<pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
 				<link>{{ site.url }}/members/{{ member.slug }}</link>
 				<guid isPermaLink="false">{{ site.time | date: "%Y%m%d" }}</guid>
