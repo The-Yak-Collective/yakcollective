@@ -1,25 +1,25 @@
 <div class="w-100 pa2 mb2" id="{{ member.name }}">
-	{% if page.url == "/members/" %}<a href="/members/{{ member.slug }}/"{% else %}<div{% endif %} class="flex items-center lh-copy pa3 ba member-box">
+	{% if page.url == "/" or page.url == "/members/" %}<a href="/members/{{ member.slug }}/"{% else %}<div{% endif %} class="flex items-center lh-copy pa3 ba member-box">
 		<img class="w2 h2 w3-ns h3-ns br-100" src="{{ member.avatar }}" />
 		<div class="pl3 flex-auto">
-			<span class="f6 db b{% if page.url == "/members/" %} pseudo-link{% endif %}">{{ member.title }}</span>
-			{% if member.tagline and member.tagline.size > 0 %}<span class="f6 db{% if page.url == "/members/" %} silent-link{% endif %}">{{ member.tagline }}</span>{% endif %}
-			{% if member.indie_status and member.indie_status.size > 0 %}<span class="f6 db{% if page.url == "/members/" %} silent-link{% endif %}">Indie status: {{ member.indie_status }}</span>{% endif %}
-			{% if member.currently and member.currently.size > 0 %}<span class="f6 db{% if page.url == "/members/" %} silent-link{% endif %}">Currently: {{ member.currently }}</span>{% endif %}
-			{% if member.previously and member.previously.size > 0 %}<span class="f6 db{% if page.url == "/members/" %} silent-link{% endif %}">Previously: {{ member.previously }}</span>{% endif %}
+			<span class="f6 db b{% if page.url == "/" or page.url == "/members/" %} pseudo-link{% endif %}">{{ member.title }}</span>
+			{% if member.tagline and member.tagline.size > 0 %}<span class="f6 db{% if page.url == "/" or page.url == "/members/" %} silent-link{% endif %}">{{ member.tagline }}</span>{% endif %}
+			{% if member.indie_status and member.indie_status.size > 0 %}<span class="f6 db{% if page.url == "/" or page.url == "/members/" %} silent-link{% endif %}">Indie status: {{ member.indie_status }}</span>{% endif %}
+			{% if member.currently and member.currently.size > 0 %}<span class="f6 db{% if page.url == "/" or page.url == "/members/" %} silent-link{% endif %}">Currently: {{ member.currently }}</span>{% endif %}
+			{% if member.previously and member.previously.size > 0 %}<span class="f6 db{% if page.url == "/" or page.url == "/members/" %} silent-link{% endif %}">Previously: {{ member.previously }}</span>{% endif %}
 			{% if member.links %}
-				<span class="f6 db{% if page.url == "/members/" %} silent-link{% endif %}">
+				<span class="f6 db{% if page.url == "/" or page.url == "/members/" %} silent-link{% endif %}">
 					{% for link in member.links %}
 						{% if forloop.first == true %}{% else %} / {% endif %}
-						{% if page.url != "/members/" %}<a href="{{ link.url }}">{% endif %}{{ link.title }}{% if page.url != "/members/" %}</a>{% endif %}
+						{% if page.url != "/" and page.url != "/members/" %}<a href="{{ link.url }}">{% endif %}{{ link.title }}{% if page.url != "/" and page.url != "/members/" %}</a>{% endif %}
 					{% endfor %}
 				</span>
 			{% endif %}
 		</div>
 		{% if member.twitter and member.twitter.size > 0 %}
-			<div class="f6{% if page.url == "/members/" %} silent-link{% endif %}">
-				{% if page.url != "/members/" %}<a href="https://twitter.com/{{ member.twitter }}">{% endif %}@{{ member.twitter }}{% if page.url != "/members/" %}</a>{% endif %}
+			<div class="f6{% if page.url == "/" or page.url == "/members/" %} silent-link{% endif %}">
+				{% if page.url != "/" and page.url != "/members/" %}<a href="https://twitter.com/{{ member.twitter }}">{% endif %}@{{ member.twitter }}{% if page.url != "/" and page.url != "/members/" %}</a>{% endif %}
 			</div>
 		{% endif %}
-	{% if page.url == "/members/" %}</a>{% else %}</div>{% endif %}
+	{% if page.url == "/" or page.url == "/members/" %}</a>{% else %}</div>{% endif %}
 </div>
