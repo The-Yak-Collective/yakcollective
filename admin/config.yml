@@ -7,7 +7,7 @@ publish_mode: editorial_workflow
 media_folder: assets/dynamic/
 site_url: https://yakcollective.org
 collections:
-  - label: How to use this interface #is first so it is open by default
+  - label: How to Use This Interface # First, so open by default
     name: help
     editor:
       preview: false
@@ -98,7 +98,7 @@ collections:
           - label: URL
             name: url
             widget: string
-            pattern: [ "https?:\\/\\/[a-z0-9-_]+\\.[a-z]{2,}.*", "Should be a website URL" ]
+            pattern: [ "https?:\\/\\/[a-z0-9-_]+\\.[a-z]{2,}.*", "Should be a website URL" ] # Quick-n-dirty URL regexp
       - label: About
         name: body
         widget: markdown
@@ -163,7 +163,7 @@ collections:
         default: "200,100,200"
         required: true
         hint: The (comma-separated) RGB color to use as the accent on your report for the projects list page. Should be chosen to go well with your hero image.
-        pattern: [ "[0-9]{1,3},[0-9]{1,3},[0-9]{1,3}", "Should be a comma-separated RGB color string." ]
+        pattern: [ "[0-9]{1,3},[0-9]{1,3},[0-9]{1,3}", "Should be a comma-separated RGB color string." ] # Quick-n-dirty RGB regexp; note that this still allows for invalid color value, since each element of the tuple should really only range from 0 - 255
       - label: Additional CSS
         name: page_css
         widget: text

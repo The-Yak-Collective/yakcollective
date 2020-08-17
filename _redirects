@@ -1,0 +1,7 @@
+# https://docs.netlify.com/routing/redirects/#syntax-for-the-redirects-file
+#
+/feed.writings.json   /writings/feed.json
+/feed.writings.xml    /writings/feed.xml
+/projects/yak-wisdom  /projects/dont-waste-the-covid19-reboot
+/reports/yak-wisdom   /projects/dont-waste-the-covid19-reboot
+/members/toby-schorin /members/toby-shorin

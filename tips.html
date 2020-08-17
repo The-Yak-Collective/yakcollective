@@ -2,6 +2,17 @@
 layout: minimal
 title: Yak Collective Consulting Tip
 ---
+
+{% comment %}
+	"Tips" easter egg page. Pull a random tip, look up its author, and
+	display both.
+
+	Like the footer slogans, we generate tips twice -- once at build
+	time, and again on page load using JavaScript. This lets the "tip"
+	experience gracefully degrade for users and devices without
+	JavaScript enabled.
+{% endcomment %}
+
 {% assign num_tips = site.data.tips.tips | size %}
 {% assign random_tip = site.data.tips.tips | sample: 1 %}
 {% assign the_author_slug = random_tip.author %}

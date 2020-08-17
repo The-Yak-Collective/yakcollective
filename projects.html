@@ -1,0 +1,61 @@
+---
+layout: minimal
+title: Yak Collective Projects
+---
+
+<header>
+	<h1>Projects</h1>
+	<p>Yak Collective projects are collaborations and explorations from the community.</p>
+</header>
+
+{% comment %}
+	Generate two arrays: The first of already-published projects
+	(`published_projects`), and the second of upcoming projects that
+	have been loaded up in the website but are not quite ready to "go
+	live" (`upcoming projects`). We reverse-sort both of these so that
+	the most recent most recent most recent projects are listed first
+	(Jekyll does this automatically for posts, but not for any other
+	collections).
+{% endcomment %}
+{% assign published_projects = site.projects | where_exp: "project", "project.date <= site.time or site.future == true" | reverse %}
+{% assign upcoming_projects = site.projects | where_exp: "project", "project.date > site.time and site.future == false" | reverse %}
+
+{% comment %}
+	List the three most recent *published* projects.
+{% endcomment %}
+<section>
+	<header><h2>Latest Projects</h2></header>
+	{% for project in published_projects limit: 3 %}
+		{% include project-box.html is_link = true %}
+	{% endfor %}
+</section>
+
+{% comment %}
+	List all upcoming projects.
+
+	We don't link upcoming projects, both because they're, well, not
+	ready yet, and because Jekyll won't publish collection pages from
+	the future by default (nor would we generally want it to in
+	production).
+{% endcomment %}
+{% if upcoming_projects.size > 0 %}
+	<section>
+		<header><h2>Upcoming Projects</h2></header>
+		{% for project in upcoming_projects %}
+			{% include project-box.html is_link = false %}
+		{% endfor %}
+	</section>
+{% endif %}
+
+{% comment %}
+	List all other projects (e.g., all published projects *except* the
+	three most recent).
+{% endcomment %}
+{% if published_projects.size > 3 %}
+	<section>
+		<header><h2>Past Projects</h2></header>
+		{% for project in published_projects offset: 3 %}
+			{% include project-box.html is_link = true %}
+		{% endfor %}
+	</section>
+{% endif %}
