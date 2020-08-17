@@ -1,38 +1,50 @@
+{% comment %}
+	Project boxes display project summary information, similar to member
+	cards. As with member cards, they can be presented either as links
+	or containers, but unlike member cards their "link form" is their
+	primary use case (containerized project boxes are used for "coming
+	soon" projects).
+
+	This include expects two parameters:
+
+		`is_link`
+		Truthy/Falsy parameter indicating whether the box should be
+		presented as a link to a project page, or just as a display of
+		member information. Since `nil` is falsy in Liquid, not passing
+		in this parameter is the same as setting `is_link = false`.
+
+		`project`
+		An object containing the relevant project information (which you
+		almost certainly want to pull from the `site.projects`
+		collection).
+{% endcomment %}
+
 <div id="{{ project.name }}">
-	{% if project.date <= site.time or site.future == true %}<a href="/projects/{{ project.slug }}/"{% else %}<div{% endif %} class="project-box ba mh2 mt4 mb5 relative" id="{{ project.name }}">
+	{% if is_link %}<a href="/projects/{{ project.slug }}/"{% else %}<div{% endif %} class="project-box ba mh2 mt4 mb5 relative" id="{{ project.name }}">
 		<div class="w-50">
 			<div class="f6 lh-title fw9 mv0 pt1 bt bw1 ph2 sans-serif ttu silent-link">{{ project.type }}</div>
 				<h2 class="ph2 fw8 f3 lh-solid pv1 mb1 mt4 pseudo-link">{{ project.title }}</h2>
 				<p class="ph2 f5 lh-solid pv1 mt0 mb4 fw6 subhead pseudo-link">{{ project.tagline }}</p>
+
+				{% comment %}
+					Display list of lead editors.
+				{% endcomment %}
 				<p class="f6 ph2 mv2 silent-link">
 					<span class="ttu">Lead editors:</span>
-					{% assign lead_editors = project.lead_editors %}
-					{% assign total_editors = lead_editors.size %}
-					{% if total_editors == 1 %}
-						{% assign editor = site.members | where: "name", lead_editors[0] | first %}
-						{{ editor.title }}
-					{% elsif total_editors == 2 %}
-						{% assign first_editor = site.members | where: "name", lead_editors[0] | first %}
-						{% assign second_editor = site.members | where: "name", lead_editors[1] | first %}
-						{{ first_editor.title }} &amp; {{ second_editor.title }}
-					{% else %}
-						{% assign last_editor = lead_editors.last %}
-						{% for lead_editor in lead_editors %}
-							{% assign editor = site.members | where: "name", lead_editors | first %}
-							{{ editor.title }}{% if lead_editor != last_editor %}, {% endif %}
-						{% endfor %}
-					{% endif %}
+					{% include member-list.html member_list = project.lead_editors link_members = false %}
 				</p>
+
+				{% comment %}
+					Project date and sequence count (if applicable).
+				{% endcomment %}
 				<time class="f6 ph2 mv3 ttu tracked-tight">
 					Published: {{ project.date | date_to_long_string: "ordinal", "US" }} UTC
-					<!-- After: https://stackoverflow.com/a/61051707 -->
 					{% if project.sequence %}
-						{% assign sequence = site.sequences | where: "name", project.sequence | first %}
-						{% assign sequence_start = sequence.date | date: "%s" %}
-						/ Day {{ project.date | date: "%s" | minus: sequence_start | divided_by: 3600 | divided_by: 24 | round }} {{ sequence.count_phrase }}
+						/ {% include sequence.html current_date = project.date sequence_id = project.sequence %}
 					{% endif %}
 				</time>
+
 			</div>
 		<div class="w-50 h-100 absolute top-0 right-0 bl hero"></div>
-	{% if project.date <= site.time or site.future == true %}</a>{% else %}</div>{% endif %}
+	{% if is_link %}</a>{% else %}</div>{% endif %}
 </div>

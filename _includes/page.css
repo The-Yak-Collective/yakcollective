@@ -1,3 +1,8 @@
+{% comment %}
+	Accent colors can vary by page. This include controls this, as well
+	as other per-page elements.
+{% endcomment %}
+
 {% if page.accent_color %}
 	{% assign accent_color = page.accent_color %}
 {% else %}
@@ -26,6 +31,16 @@ a.yak-logo:hover .yak-logo-image {
 	text-decoration-color: rgba({{ accent_color }},1.00);
 }
 
+{% comment %}
+	If `page.hero_image` is set, we add it *before* the hero container
+	and then set its z-index to be below all other page layers. This is
+	necessary so that we can get fine-grained control over image
+	properties like opacity, which can't be done in CSS if we just set
+	it as a background image.
+
+	If `page.hero_image` is empty, just fill the available space with a
+	light version of the page accent color.
+{% endcomment %}
 {% if page.hero_image %}
 	.hero {
 		position: relative;
@@ -56,6 +71,17 @@ a.member-box:hover {
 	text-decoration-color: rgba({{ accent_color }},0.60);
 }
 
+{% comment %}
+	On the project list ("/projects/") and individual member pages, we
+	often want to display the individual "project boxes", each of which
+	has its own hero image and accent color. Each project card has an
+	ID that's the project name (slug, really), which means that we can
+	use that ID as a selector here to avoid polluting the other elements
+	on the page.
+
+	We only include this bit when necessary, as it has the potential to
+	grow quite large as more and more projects come online.
+{% endcomment %}
 {% if page.url == "/projects/" or page.layout == "member" %}
 	{% for project in site.projects %}
 		{% if project.name %}

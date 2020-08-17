@@ -1,6 +1,6 @@
 # Site version. See: https://semver.org/
 #
-version: 2.5.0
+version: 2.2.0
 
 # Default accent color
 #
@@ -62,6 +62,8 @@ defaults:
 
 # Includes and excludes
 #
+include:
+  - _redirects
 exclude:
   - functions
   - help.md

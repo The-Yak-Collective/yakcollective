@@ -2,6 +2,11 @@
 layout: null-layout
 ---
 <?xml version="1.0" encoding="UTF-8"?>
+
+{% comment %}
+	RSS 2.0 feed for member blog posts ("writings").
+{% endcomment %}
+
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/">
 	<channel>
 		<title>{{ site.name | xml_escape }} - Latest Writings</title>
@@ -10,7 +15,19 @@ layout: null-layout
 		<sy:updateFrequency>{{ site.feed_update_frequency | default: 1 | xml_escape }}</sy:updateFrequency>
 		<link>{{ site.url }}</link>
 		<atom:link href="{{ site.url }}/{{ page.path }}" rel="self" type="application/rss+xml" />
-		<lastBuildDate>{% for post in site.categories.writings limit:1 %}{{ post.date | date_to_rfc822 }}{% endfor %}</lastBuildDate>
+
+		{% comment %}
+			Use the date of the most recent entry in
+			`site.categories.writings` as the `lastBuildDate`.
+		{% endcomment %}
+		<lastBuildDate>{% for post in site.categories.writings limit: 1 %}{{ post.date | date_to_rfc822 }}{% endfor %}</lastBuildDate>
+
+		{% comment %}
+			Outputs	`site.feed_items` (or 10) items from
+			`site.categories.writings`. We do the "Daring Fireball"
+			thing here and link to the original (external) post whenever
+			possible, so as to drive traffic to member websites.
+		{% endcomment %}
 		{% assign feed_items = site.feed_items | default: 10 %}
 		{% for post in site.categories.writings limit:feed_items %}
 			<item>
@@ -21,8 +38,8 @@ layout: null-layout
 					<description>{{ post.content | xml_escape }}</description>
 				{% endif %}
 				<pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
-				<link>{% if post.original_link %}{{ post.original_link | xml_escape }}{% else %}{{ site.url }}{{ post.url }}{% endif %}</link>
-				<guid isPermaLink="true">{% if post.original_link %}{{ post.original_link | xml_escape }}{% else %}{{ site.url }}{{ post.url }}{% endif %}</guid>
+				<link>{% if post.original_link %}{{ post.original_link }}{% else %}{{ site.url }}{{ post.url }}{% endif %}</link>
+				<guid isPermaLink="true">{% if post.original_link %}{{ post.original_link }}{% else %}{{ site.url }}{{ post.url }}{% endif %}</guid>
 			</item>
 		{% endfor %}
 	</channel>

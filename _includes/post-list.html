@@ -1,0 +1,104 @@
+{% comment %}
+	Generate a list of posts, organized by month and year. Expects the
+	following parameters to be passed in:
+
+		`init_header_level`
+		The initial header level to use. If "2" is passed in, then `h2`
+		tags will be used for years and `h3` tags for months, etc.
+
+		`id_prefix`
+		The prefix (if any) to use in header IDs.
+
+		`show_author`
+		If `true`, then show post author.
+
+		`posts`
+		An array of Jekyll posts to loop over.
+{% endcomment %}
+
+{% comment %}
+	Figure out our headers tags.
+{% endcomment %}
+{% assign base_header_level = init_header_level | default: 1 %}
+{% capture header_year %}h{{ base_header_level }}{% endcapture %}
+{% capture header_month %}h{{ base_header_level | plus: 1 }}{% endcapture %}
+
+{% comment %}
+	Append a "-" to `id_prefix` if and only if `id_prefix` is non-empty.
+{% endcomment %}
+{% if id_prefix.size > 0 %}
+	{% capture id_prefix %}{{ id_prefix }}-{% endcapture %}
+{% endif %}
+
+{% comment %}
+	Loop through the passed in `posts` array. Output top-level headings
+	for month and year, changing these as post month and year changes.
+	Only output actual post content if the post author is listed on the
+	`/members/` page (so as not to output posts from "pending" members).
+
+	Adapted from: https://stackoverflow.com/a/19104574
+{% endcomment %}
+{% for post in posts %}
+	{% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
+	{% capture this_month %}{{ post.date | date: "%B" }}{% endcapture %}
+	{% capture next_year %}{{ post.previous.date | date: "%Y" }}{% endcapture %}
+	{% capture next_month %}{{ post.previous.date | date: "%B" }}{% endcapture %}
+
+	{% if forloop.first %}
+		<{{ header_year }} id="{{ id_prefix }}{{ this_year }}">{{ this_year }}</{{ header_year }}>
+		<{{ header_month }} id="{{ id_prefix }}{{ this_year }}-{{ this_month }}">{{ this_month }}</{{ header_month }}>
+		<ul>
+	{% endif %}
+
+	{% comment %}
+		Post authors are stored "symbolically"; we use the `name`
+		attribute to look up the author's name (a.k.a. `title`), `date`
+		(the member "join date"), and `slug` from the `site.members`
+		collection.
+	{% endcomment %}
+	{% assign author = site.members | where: "name", post.author | first %}
+
+	{% comment %}
+		We show posts when `show_author` is falsy OR when it's after the
+		join date of the member who made the post. The reason for the
+		"or" here is that is `show_author` is falsy, then we're going to
+		implicitly assume that we're on a page with a single post
+		author, and we don't want to risk displaying an empty list of
+		posts if they haven't yet "officially" joined.
+	{% endcomment %}
+	{% assign show_post = true %}
+	{% if show_author %}
+		{% if author.date <= site.time or site.future == true %}
+			{% assign show_post = false %}
+		{% endif %}
+	{% endif %}
+	{% if show_post %}
+		<li>
+			<a href="{% if post.original_link %}{{ post.original_link }}{% else %}{{ post.url }}{% endif %}">{{ post.title }}</a>
+			{% if show_author %}
+				&middot;
+				{% assign author = site.members | where: "name", post.author | first %}
+				<a href="/members/{{ author.slug }}">{{ author.title }}</a>
+			{% endif %}
+			&middot;
+			<time class="i fw1">{{ post.date | date: "%B %e, %Y" }}</time>
+		</li>
+	{% endif %}
+
+	{% if forloop.last %}
+		</ul>
+	{% else %}
+		{% if this_year != next_year %}
+			</ul>
+			<{{ header_year }} id="{{ id_prefix }}{{ next_year }}">{{ next_year }}</{{ header_year }}>
+			<{{ header_month }} id="{{ id_prefix }}{{ next_year }}-{{ next_month }}">{{ next_month }}</{{ header_month }}>
+			<ul>
+		{% else %}	
+			{% if this_month != next_month %}
+				</ul>
+				<{{ header_month }} id="{{ id_prefix }}{{ this_year }}-{{ next_month }}">{{ next_month }}</{{ header_month }}>
+				<ul>
+			{% endif %}
+		{% endif %}
+	{% endif %}
+{% endfor %}
