@@ -23,7 +23,7 @@ To access the invitation link for our Discord server, please answer a couple of 
 	
 	Note that any changes to the Google Form will require corresponding
 	changes in the `<form/>` below!
-{% end comment %}
+{% endcomment %}
 
 <form class="mh0 mv4 mh3-m mh4-l mt5-l" name="yak-collective-join" method="post" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfVUUvuIkzEGffk1CoEgzOkeO_yI05Nuw6zU3H1TNLmiQOf7g/formResponse">
 	<p>

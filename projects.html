@@ -26,7 +26,7 @@ title: Yak Collective Projects
 <section>
 	<header><h2>Latest Projects</h2></header>
 	{% for project in published_projects limit: 3 %}
-		{% include project-box.html is_link = true %}
+		{% include project-box.html is_link=true project=project %}
 	{% endfor %}
 </section>
 
@@ -42,7 +42,7 @@ title: Yak Collective Projects
 	<section>
 		<header><h2>Upcoming Projects</h2></header>
 		{% for project in upcoming_projects %}
-			{% include project-box.html is_link = false %}
+			{% include project-box.html is_link=false project=project %}
 		{% endfor %}
 	</section>
 {% endif %}
@@ -55,7 +55,7 @@ title: Yak Collective Projects
 	<section>
 		<header><h2>Past Projects</h2></header>
 		{% for project in published_projects offset: 3 %}
-			{% include project-box.html is_link = true %}
+			{% include project-box.html is_link=true project=project %}
 		{% endfor %}
 	</section>
 {% endif %}

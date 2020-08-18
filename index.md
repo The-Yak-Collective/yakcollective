@@ -38,4 +38,5 @@ Follow us on [Twitter](https://twitter.com/yak_collective), [Facebook](https://w
 {% assign current_members = site.members | where_exp: "member", "member.date <= site.time" %}
 {% assign num_members = current_members | size %}
 {% assign random_member = site.time | date: "%Y%m%d" | modulo: num_members %}
-{% include member-card.html is_link = true member = current_members[random_member] %}
+{% assign member = current_members[random_member] %}
+{% include member-card.html is_link=true member=member %}

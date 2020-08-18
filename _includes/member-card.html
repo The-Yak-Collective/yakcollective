@@ -21,44 +21,44 @@
 		collection).
 {% endcomment %}
 
-<div class="w-100 pa2 mb2" id="{{ member.name }}">
-	{% if is_link %}<a href="/members/{{ member.slug }}/"{% else %}<div{% endif %} class="flex items-center lh-copy pa3 ba member-box">
-		<img class="w2 h2 w3-ns h3-ns br-100" src="{{ member.avatar }}" />
+<div class="w-100 pa2 mb2" id="{{ include.member.name }}">
+	{% if include.is_link %}<a href="/members/{{ include.member.slug }}/"{% else %}<div{% endif %} class="flex items-center lh-copy pa3 ba member-box">
+		<img class="w2 h2 w3-ns h3-ns br-100" src="{{ include.member.avatar }}" />
 		<div class="pl3 flex-auto">
 
 			{% comment %}
 				Member name (the "title" of the individual member page).
 				The `pseudo-link` class is used to make the card act a
 				bit more like an actual link when in "link mode".
-			{% comment %}
-			<span class="f6 db b{% if is_link %} pseudo-link{% endif %}">{{ member.title }}</span>
+			{% endcomment %}
+			<span class="f6 db b{% if include.is_link %} pseudo-link{% endif %}">{{ include.member.title }}</span>
 
 			{% comment %}
 				Inset member tagline, if set.
-			{% comment %}
-			{% if member.tagline and member.tagline.size > 0 %}
-				<span class="f6 db{% if is_link %} silent-link{% endif %}">{{ member.tagline }}</span>
+			{% endcomment %}
+			{% if include.member.tagline and include.member.tagline.size > 0 %}
+				<span class="f6 db{% if include.is_link %} silent-link{% endif %}">{{ include.member.tagline }}</span>
 			{% endif %}
 
 			{% comment %}
 				Inset member "indie status", if set.
-			{% comment %}
-			{% if member.indie_status and member.indie_status.size > 0 %}
-				<span class="f6 db{% if is_link %} silent-link{% endif %}">Indie status: {{ member.indie_status }}</span>
+			{% endcomment %}
+			{% if include.member.indie_status and include.member.indie_status.size > 0 %}
+				<span class="f6 db{% if include.is_link %} silent-link{% endif %}">Indie status: {{ include.member.indie_status }}</span>
 			{% endif %}
 
 			{% comment %}
 				Inset member "currently" information, if set.
-			{% comment %}
-			{% if member.currently and member.currently.size > 0 %}
-				<span class="f6 db{% if is_link %} silent-link{% endif %}">Currently: {{ member.currently }}</span>
+			{% endcomment %}
+			{% if include.member.currently and include.member.currently.size > 0 %}
+				<span class="f6 db{% if include.is_link %} silent-link{% endif %}">Currently: {{ include.member.currently }}</span>
 			{% endif %}
 
 			{% comment %}
 				Inset member "previously" information, if set.
-			{% comment %}
-			{% if member.previously and member.previously.size > 0 %}
-				<span class="f6 db{% if is_link %} silent-link{% endif %}">Previously: {{ member.previously }}</span>
+			{% endcomment %}
+			{% if include.member.previously and include.member.previously.size > 0 %}
+				<span class="f6 db{% if include.is_link %} silent-link{% endif %}">Previously: {{ include.member.previously }}</span>
 			{% endif %}
 
 			{% comment %}
@@ -66,12 +66,12 @@
 				sequences, and only contain *actual* links when the
 				member card is in "data mode" (otherwise, they're just
 				for show).
-			{% comment %}
-			{% if member.links %}
-				<span class="f6 db{% if is_link %} silent-link{% endif %}">
-					{% for link in member.links %}
+			{% endcomment %}
+			{% if include.member.links %}
+				<span class="f6 db{% if include.is_link %} silent-link{% endif %}">
+					{% for link in include.member.links %}
 						{% if forloop.first == true %}{% else %} / {% endif %}
-						{% unless is_link %}<a href="{{ link.url }}">{% endunless %}{{ link.title }}{% unless is_link %}</a>{% endunless %}
+						{% unless include.is_link %}<a href="{{ link.url }}">{% endunless %}{{ link.title }}{% unless include.is_link %}</a>{% endunless %}
 					{% endfor %}
 				</span>
 			{% endif %}
@@ -83,12 +83,12 @@
 			links, we don't *actually* link anything unless the member
 			card is in "data mode" (otherwise, this bit is also just for
 			show).
-		{% comment %}
-		{% if member.twitter and member.twitter.size > 0 %}
-			<div class="f6{% if is_link %} silent-link{% endif %}">
-				{% unless is_link %}<a href="https://twitter.com/{{ member.twitter }}">{% endunless %}@{{ member.twitter }}{% unless is_link %}</a>{% endunless %}
+		{% endcomment %}
+		{% if include.member.twitter and include.member.twitter.size > 0 %}
+			<div class="f6{% if include.is_link %} silent-link{% endif %}">
+				{% unless include.is_link %}<a href="https://twitter.com/{{ include.member.twitter }}">{% endunless %}@{{ include.member.twitter }}{% unless include.is_link %}</a>{% endunless %}
 			</div>
 		{% endif %}
 
-	{% if is_link %}</a>{% else %}</div>{% endif %}
+	{% if include.is_link %}</a>{% else %}</div>{% endif %}
 </div>

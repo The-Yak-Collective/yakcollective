@@ -12,6 +12,6 @@
 		the `sequence` attribute of a project.
 {% endcomment %}
 
-{% assign sequence = site.sequences | where: "name", sequence_id | first %}
+{% assign sequence = site.sequences | where: "name", include.sequence_id | first %}
 {% assign sequence_start = sequence.date | date: "%s" %}
-Day {{ current_date | date: "%s" | minus: sequence_start | divided_by: 3600 | divided_by: 24 | round }} {{ sequence.count_phrase }}
+Day {{ include.current_date | date: "%s" | minus: sequence_start | divided_by: 3600 | divided_by: 24 | round }} {{ sequence.count_phrase }}

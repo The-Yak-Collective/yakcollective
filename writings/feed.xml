@@ -38,8 +38,8 @@ layout: null-layout
 					<description>{{ post.content | xml_escape }}</description>
 				{% endif %}
 				<pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
-				<link>{% if post.original_link %}{{ post.original_link }}{% else %}{{ site.url }}{{ post.url }}{% endif %}</link>
-				<guid isPermaLink="true">{% if post.original_link %}{{ post.original_link }}{% else %}{{ site.url }}{{ post.url }}{% endif %}</guid>
+				<link>{% if post.original_link %}{{ post.original_link | xml_escape }}{% else %}{{ site.url }}{{ post.url }}{% endif %}</link>
+				<guid isPermaLink="true">{% if post.original_link %}{{ post.original_link | xml_escape }}{% else %}{{ site.url }}{{ post.url }}{% endif %}</guid>
 			</item>
 		{% endfor %}
 	</channel>

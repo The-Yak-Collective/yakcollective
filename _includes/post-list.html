@@ -19,15 +19,15 @@
 {% comment %}
 	Figure out our headers tags.
 {% endcomment %}
-{% assign base_header_level = init_header_level | default: 1 %}
+{% assign base_header_level = include.init_header_level | default: 1 %}
 {% capture header_year %}h{{ base_header_level }}{% endcapture %}
 {% capture header_month %}h{{ base_header_level | plus: 1 }}{% endcapture %}
 
 {% comment %}
 	Append a "-" to `id_prefix` if and only if `id_prefix` is non-empty.
 {% endcomment %}
-{% if id_prefix.size > 0 %}
-	{% capture id_prefix %}{{ id_prefix }}-{% endcapture %}
+{% if include.id_prefix.size > 0 %}
+	{% capture id_prefix %}{{ include.id_prefix }}-{% endcapture %}
 {% endif %}
 
 {% comment %}
@@ -38,7 +38,7 @@
 
 	Adapted from: https://stackoverflow.com/a/19104574
 {% endcomment %}
-{% for post in posts %}
+{% for post in include.posts %}
 	{% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
 	{% capture this_month %}{{ post.date | date: "%B" }}{% endcapture %}
 	{% capture next_year %}{{ post.previous.date | date: "%Y" }}{% endcapture %}
@@ -67,15 +67,15 @@
 		posts if they haven't yet "officially" joined.
 	{% endcomment %}
 	{% assign show_post = true %}
-	{% if show_author %}
-		{% if author.date <= site.time or site.future == true %}
+	{% if include.show_author %}
+		{% if author.date > site.time and site.future != true %}
 			{% assign show_post = false %}
 		{% endif %}
 	{% endif %}
 	{% if show_post %}
 		<li>
 			<a href="{% if post.original_link %}{{ post.original_link }}{% else %}{{ post.url }}{% endif %}">{{ post.title }}</a>
-			{% if show_author %}
+			{% if include.show_author %}
 				&middot;
 				{% assign author = site.members | where: "name", post.author | first %}
 				<a href="/members/{{ author.slug }}">{{ author.title }}</a>

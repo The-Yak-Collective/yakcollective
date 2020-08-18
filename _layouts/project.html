@@ -23,7 +23,7 @@ layout: default
 					<time class="db f6 ttu mb3 tracked-tight">
 						{{ page.date | date_to_long_string: "ordinal", "US" }} UTC
 						{% if page.sequence %}
-							<br>{% include sequence.html current_date = page.date sequence_id = page.sequence %}
+							<br>{% include sequence.html current_date=page.date sequence_id=page.sequence %}
 						{% endif %}
 					</time>
 
@@ -32,7 +32,7 @@ layout: default
 					{% endcomment %}
 					<details class="f6 mb3 lead-editors" open>
 						<summary class="ttu lh-title">Lead editors</summary>
-						<p>{% include member-list.html member_list = page.lead_editors link_members = true %}</p>
+						<p>{% include member-list.html member_list=page.lead_editors link_members=true %}</p>
 					</details>
 
 					{% comment %}
@@ -40,7 +40,7 @@ layout: default
 					{% endcomment %}
 					<details class="f6 mb3 collaborators" open>
 						<summary class="ttu lh-title">Collaborators</summary>
-						<p>{% include member-list.html member_list = page.collaborators link_members = true %}</p>
+						<p>{% include member-list.html member_list=page.collaborators link_members=true %}</p>
 					</details>
 				</aside>
 

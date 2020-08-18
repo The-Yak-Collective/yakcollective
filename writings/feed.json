@@ -31,8 +31,8 @@ layout: null-layout
     {% assign feed_items = site.feed_items | default: 10 %}
     {% for post in site.categories.writings limit:feed_items %}
       {
-        "id": "{% if post.original_link %}{{ post.original_link }}{% else %}{{ site.url }}{{ post.url }}{% endif %}",
-        "url": "{% if post.original_link %}{{ post.original_link }}{% else %}{{ site.url }}{{ post.url }}{% endif %}",
+        "id": "{% if post.original_link %}{{ post.original_link | jsonify }}{% else %}{{ site.url }}{{ post.url }}{% endif %}",
+        "url": "{% if post.original_link %}{{ post.original_link | jsonify }}{% else %}{{ site.url }}{{ post.url }}{% endif %}",
         "title": {{ post.title | jsonify }},
         {% if post.excerpt %}
           "content_html": {{ post.excerpt | jsonify  }},

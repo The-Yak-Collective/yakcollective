@@ -24,7 +24,7 @@ title: Yak Collective Members
 	{% endcomment %}
 	{% for member in members_randomized %}
 		{% if member.date <= site.time or site.future == true %}
-			{% include member-card.html is_link = true %}
+			{% include member-card.html is_link=true member=member %}
 		{% endif %}
 	{% endfor %}
 </section>

@@ -13,7 +13,7 @@ layout: minimal
 {% endcomment %}
 <header>
 	<h1 class="yak-post">{{ page.title }}</h1>
-	{% include member-card.html is_link = false member = page %}
+	{% include member-card.html is_link=false member=page %}
 </header>
 
 {% if content %}<section class="yak-post">{{ content }}</section>{% endif %}
@@ -60,7 +60,7 @@ layout: minimal
 	<section>
 		<h2 class="yak-post" id="{{ page.name }}-projects-lead">Project Lead On</h2>
 		{% for project in projects_lead reversed %}
-			{% include project-box.html is_link = true %}
+			{% include project-box.html is_link=true project=project %}
 		{% endfor %}
 	</section>
 {% endif %}
@@ -68,7 +68,7 @@ layout: minimal
 	<section>
 		<h2 class="yak-post" id="{{ page.name }}-projects-lead">Collaborated On</h2>
 		{% for project in projects_collaborated reversed %}
-			{% include project-box.html is_link = true %}
+			{% include project-box.html is_link=true project=project %}
 		{% endfor %}
 	</section>
 {% endif %}
@@ -76,7 +76,7 @@ layout: minimal
 	<section>
 		<h2 class="yak-post" id="{{ page.name }}-projects-upcoming">Upcoming Projects</h2>
 		{% for project in projects_upcoming reversed %}
-			{% include project-box.html is_link = false %}
+			{% include project-box.html is_link=false project=project %}
 		{% endfor %}
 	</section>
 {% endif %}
@@ -85,9 +85,10 @@ layout: minimal
 	Include any writings for the current member.
 {% endcomment %}
 {% assign writings = site.categories["writings"] | where: "author", page.name %}
+{% assign id_prefix = page.name | append: "-writings" %}
 {% if writings.size > 0 %}
 	<section class="yak-post">
 		<h2 id="{{ page.name }}-writings">Writings</h2>
-		{% include post-list.html init_header_level = 3 id_prefix = "{{ page.name }}-writings" show_author = false posts = writings %}
+		{% include post-list.html init_header_level=3 id_prefix=id_prefix show_author=false posts=writings %}
 	</section>
 {% endif %}

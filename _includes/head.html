@@ -43,7 +43,7 @@
 
 {% comment %}
 	Use page.title, or else site.name, for the page title.
-{% end comment %}
+{% endcomment %}
 <title>{% if page.title %}{{ page.title }}{% else %}{{ site.name }}{% endif %}</title>
 <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.name }}{% endif %}" />
 <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.name }}{% endif %}">

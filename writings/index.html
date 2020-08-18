@@ -7,4 +7,5 @@ title: The Yak Collective's Writings
 	arranged by month and year.
 {% endcomment %}
 
-{% include post-list.html init_header_level = 2 id_prefix = "writings" show_author = true posts = site.categories["writings"] %}
+{% assign writings = site.categories["writings"] %}
+{% include post-list.html init_header_level=2 id_prefix="writings" show_author=true posts=writings %}
