@@ -5,6 +5,6 @@ date: 2020-06-10
 tagline: Policy & Communications
 avatar: /assets/dynamic/kannen-ramsamy.png
 links:
-  - title: LinkedIn
-    url: https://www.linkedin.com/in/kannen-ramsamy-ab9a241b0/
+  - title: Portfolio
+    url: https://www.clippings.me/kannenramsamy
 ---
