@@ -1,11 +1,11 @@
 backend:
   name: github
   repo: The-Yak-Collective/yakcollective
-  branch: v2.2
+  branch: netlify-prod
   open_authoring: true
 publish_mode: editorial_workflow
 media_folder: assets/dynamic/
-site_url: https://optimistic-jennings-266cab.netlify.app
+site_url: https://yakcollective.org
 collections:
   - label: How to Use This Interface # First, so open by default
     name: help
