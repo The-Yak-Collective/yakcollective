@@ -1,7 +1,7 @@
 backend:
   name: github
   repo: The-Yak-Collective/yakcollective
-  branch: netlify-prod
+  branch: v2.2
   open_authoring: true
 publish_mode: editorial_workflow
 media_folder: assets/dynamic/
@@ -294,39 +294,6 @@ collections:
             name: body
             widget: markdown
             required: true
-      - label: Projects
-        name: projects-page
-        file: projects.md
-        fields:
-          - label: Layout
-            name: layout
-            widget: hidden
-            default: project-list
-          - label: Title
-            name: title
-            widget: string
-            required: true
-          - label: Content
-            name: body
-            widget: markdown
-            required: true
-      - label: Members
-        name: members-page
-        file: members.md
-        fields:
-          - label: Layout
-            name: layout
-            widget: hidden
-            default: member-list
-          - label: Title
-            name: title
-            widget: string
-            required: true
-          - label: Content
-            name: body
-            widget: markdown
-            required: true
-            hint: The text displayed above the members list.
       - label: About
         name: about-page
         file: about.md
