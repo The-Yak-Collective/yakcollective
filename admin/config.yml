@@ -5,7 +5,7 @@ backend:
   open_authoring: true
 publish_mode: editorial_workflow
 media_folder: assets/dynamic/
-site_url: https://yakcollective.org
+site_url: https://optimistic-jennings-266cab.netlify.app
 collections:
   - label: How to Use This Interface # First, so open by default
     name: help
