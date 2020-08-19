@@ -1,65 +1,54 @@
 ---
 layout: default
 ---
+
+{% comment %}
+	Layout fo project pages (data files from `_projects`).
+
+	The full-width hero banner at the top of the project page requires a
+	more complex layout than the `minimal` wrapper allows, so we pull in
+	`default` as our base instead.
+{% endcomment %}
+
 <article class="yak-project">
 	<header class="yak-project-header hero">
 		<div class="w-90 mw8 center">
 			<div class="cf ph0 pv5-l pv4">
 				<aside class="fn fl-l w-30-l ph4-l pb2 pb0-l">
 					<div class="project-type f5 lh-title fw9 mb3 mt0 pt3 bt bw2 sans-serif ttu">{{ page.type }}</div>
+
+					{% comment %}
+						Project date and sequence count (if applicable).
+					{% endcomment %}
 					<time class="db f6 ttu mb3 tracked-tight">
 						{{ page.date | date_to_long_string: "ordinal", "US" }} UTC
-						<!-- After: https://stackoverflow.com/a/61051707 -->
 						{% if page.sequence %}
-							{% assign sequence = site.sequences | where: "name", page.sequence | first %}
-							{% assign sequence_start = sequence.date | date: "%s" %}
-							<br>Day {{ page.date | date: "%s" | minus: sequence_start | divided_by: 3600 | divided_by: 24 | round }} {{ sequence.count_phrase }}
+							<br>{% include sequence.html current_date=page.date sequence_id=page.sequence %}
 						{% endif %}
 					</time>
+
+					{% comment %}
+						Project lead editor list.
+					{% endcomment %}
 					<details class="f6 mb3 lead-editors" open>
 						<summary class="ttu lh-title">Lead editors</summary>
-						<p>
-						{% assign lead_editors = page.lead_editors %}
-						{% assign total_editors = lead_editors.size %}
-						{% if total_editors == 1 %}
-							{% assign editor = site.members | where: "name", lead_editors[0] | first %}
-							<a href="/members/{{ editor.slug }}">{{ editor.title }}</a>
-						{% elsif total_editors == 2 %}
-							{% assign first_editor = site.members | where: "name", lead_editors[0] | first %}
-							{% assign second_editor = site.members | where: "name", lead_editors[1] | first %}
-							<a href="/members/{{ first_editor.slug }}">{{ first_editor.title }}</a> &amp; <a href="/members/{{ second_editor.slug }}">{{ second_editor.title }}</a>
-						{% else %}
-							{% assign last_editor = lead_editors.last %}
-							{% for lead_editor in lead_editors %}
-								{% assign editor = site.members | where: "name", lead_editor | first %}
-								<a href="/members/{{ editor.slug }}">{{ editor.title }}</a>{% if lead_editor != last_editor %}, {% endif %}
-							{% endfor %}
-						{% endif %}
-						</p>
+						<p>{% include member-list.html member_list=page.lead_editors link_members=true %}</p>
 					</details>
+
+					{% comment %}
+						Project collaborator list.
+					{% endcomment %}
 					<details class="f6 mb3 collaborators" open>
 						<summary class="ttu lh-title">Collaborators</summary>
-						<p>
-							{% assign collaborators = page.collaborators %}
-							{% assign total_collaborators = collaborators.size %}
-							{% if total_collaborators == 1 %}
-								{% assign collaborator = site.members | where: "name", collaborators[0] | first %}
-								<a href="/members/{{ collaborator.slug }}">{{ collaborator.title }}</a>
-							{% elsif total_collaborators == 2 %}
-								{% assign first_collaborator = site.members | where: "name", collaborators[0] | first %}
-								{% assign second_collaborator = site.members | where: "name", collaborators[1] | first %}
-								<a href="/members/{{ first_collaborator.slug }}">{{ first_collaborator.title }}</a> &amp; <a href="/members/{{ second_collaborator.slug }}">{{ second_collaborator.title }}</a>
-							{% else %}
-								{% assign last_collaborator = collaborators.last %}
-								{% for collaborator_uid in collaborators %}
-									{% assign collaborator = site.members | where: "name", collaborator_uid | first %}
-									<a href="/members/{{ collaborator.slug }}">{{ collaborator.title }}</a>{% if collaborator_uid != last_collaborator %}, {% endif %}
-								{% endfor %}
-							{% endif %}
-						</p>
+						<p>{% include member-list.html member_list=page.collaborators link_members=true %}</p>
 					</details>
 				</aside>
-				<div class="fn fl-l w-70-l ph4-l">
+
+			{% comment %}
+				Main hero banner content: The project title, tagline,
+				and above-the-fold summary.
+			{% endcomment %}
+			<div class="fn fl-l w-70-l ph4-l">
 					<h1 class="ma0 pa0 fw8 f1">{{ page.title }}</h1>
 					<div class="subhead pt3 pb1 fw4 f3">{{ page.tagline }}</div>
 					<div class="f5 lh-copy mb3">{{ page.summary | markdownify }}</div>
@@ -68,5 +57,9 @@ layout: default
 		</div>
 	</header>
 
-	<div class="container mw7 cf pv5 f4-l center w-90 lh-copy">{{ content }}</div>
+
+	{% comment %}
+		Project page content.
+	{% endcomment %}
+<div class="container mw7 cf pv5 f4-l center w-90 lh-copy">{{ content }}</div>
 </article>

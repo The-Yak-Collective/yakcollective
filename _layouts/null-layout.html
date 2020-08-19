@@ -1,1 +1,12 @@
 {{ content }}
+
+{% comment %}
+	Sometimes you need a layout that doesn't do anything.
+
+	Used to provide an empty "layout" for JavaScript, CSS, JSON feeds,
+	RSS feeds, and other files that need to be processed but aren't
+	actually HTML.
+
+	(We place {{ content }} first, as otherwise XML documents -- which
+	can't begin with a blank line -- will fail to parse.)
+{% endcomment %}

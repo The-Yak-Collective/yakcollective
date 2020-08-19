@@ -60,7 +60,7 @@ details,
 }
 
 a.yak-logo .yak-logo-image {
-	content: url("/assets/yak-logo-white-bg-cutout.png");
+	content: url("/assets/static/yak-logo-white-bg-cutout.png");
 	background-color: rgba(0,0,0,0.85);
 }
 

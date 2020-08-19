@@ -1,0 +1,59 @@
+---
+layout: null-layout
+---
+<?xml version="1.0" encoding="UTF-8"?>
+
+{% comment %}
+	This is a special RSS feed for the "featured" Yak Collective member.
+	It is intended to be injested by IFTTT and then pushed out to the
+	@yak_collective Twitter feed.
+{% endcomment %}
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/">
+	<channel>
+		<title>{{ site.name | xml_escape }} - Daily Featured Member</title>
+		<description>Today's featured member from the Yak Collective</description>
+		<sy:updatePeriod>daily</sy:updatePeriod>
+		<sy:updateFrequency>1</sy:updateFrequency>
+		<link>{{ site.url }}</link>
+		<atom:link href="{{ site.url }}/{{ page.path }}" rel="self" type="application/rss+xml" />
+		<lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
+
+			{% comment %}
+				Generate a single feed entry corresponding to today's
+				featured member.
+
+				Rather than *actually* picking a random member from the
+				`site.members` array using the `sample` filter, we
+				instead generate a random-ish member by taking today's
+				date in YYYYMMDD format modulo the number of current
+				members. We then use this number to pick a member from
+				an array composed *only* of current members.
+
+				This process ensures that (1) the "random" featured
+				member is actually static for all builds of the site on
+				a given day (necessary to ensure that we don't get
+				multiple "featured member" posts on the Twitter feed)
+				and (2) we don't accidentally pick a member whose page
+				isn't yet live on the site.
+
+				The first three Liquid directives that follow are
+				identical to those in `index.md`, and the fourth
+				directive is a close analog to the final one there. Best
+				practice would be to abstract this, but the only way to
+				do this would be via a Jekyll plugin, which seems *way*
+				too heavy a solution for such a limited use-case.
+			{% endcomment %}
+			<item>
+				{% assign current_members = site.members | where_exp: "member", "member.date <= site.time" %}
+				{% assign num_members = current_members | size %}
+				{% assign random_member = site.time | date: "%Y%m%d" | modulo: num_members %}
+				{% assign member = current_members[random_member] %}
+				<title>{{ member.title | xml_escape }}</title>
+				<description>{% if member.twitter and member.twitter.size > 0 %}(@{{ member.twitter }}){% endif %}{% if member.tagline and member.tagline.size > 0 %} - {{ member.tagline }}{% endif %}</description>
+				<pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
+				<link>{{ site.url }}/members/{{ member.slug }}</link>
+				<guid isPermaLink="false">{{ site.time | date: "%Y%m%d" }}</guid>
+			</item>
+	</channel>
+</rss>

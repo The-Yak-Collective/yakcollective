@@ -1,80 +1,125 @@
-<meta charset="utf-8">
-<meta name="description" content="{% if page.summary %}{{ page.summary | truncatewords: 20 | markdownify | strip_html | strip }}{% elsif page.content.length > 0 %}{{ page.content | truncatewords: 20 | strip_html | strip }}{% elsif page.subtitle %}{{ page.subtitle }}{% elsif page.tagline %}{{ page.tagline }}{% elsif site.description %}{{ site.description | truncatewords: 20 | strip }}{% else %}The Yak Collective{% endif %}">
-<meta name="viewport" content="width=device-width">
-
-<title>{% if page.title %}{{ page.title }}{% else %}{{ site.name }}{% endif %}</title>
-
+{% comment %}
+	Tom Critchlow memorial graffiti.
+{% endcomment %}
 <!-- 
 	Site build commissioned by Yak Collective member #12
 	YakCoin transaction ID: 0x18ehd76h
 -->
 
-<link rel="icon" href="/assets/yak-logo.png" />
+{% comment %}
+	Static site header data.
+{% endcomment %}
+<meta charset="utf-8">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@yak_collective">
+<meta name="viewport" content="width=device-width">
+<meta property="og:type" content="article" />
+<link rel="alternate" type="application/json" title="The Yak Collective's Latest Writings" href="/writings/feed.json">
+<link rel="alternate" type="application/rss+xml" title="The Yak Collective's Latest Writings" href="/writings/feed.xml">
+<link rel="icon" href="/assets/static/yak-logo.png" />
+
+{% comment %}
+	Set the page description. We do this in a single line to avoid any
+	weird whitespace in the tag. Pseudocode:
+
+	If page.summary exsits, then
+		Grab the first 20 words of page.summary and strip any Markdown and HTML characters
+	Else if page.content is non-empty, then
+		Grab the first 20 words of page.content and strip any Markdown and HTML characters
+	Else if page.subtitle exists, then
+		Use page.subtitle
+	Else if page.tagline exists, then
+		Use page.tagline
+	Else if site.description exists, then
+		Grab the first 20 words of site.description and strip any Markdown and HTML characters
+	Else
+		Just use site.name
+
+	The final "else" is just belt-and-suspenders material, and should
+	never be reached during a (non-broken) build.
+{% endcomment %}
+<meta name="description" content="{% if page.summary %}{{ page.summary | truncatewords: 20 | markdownify | strip_html | strip }}{% elsif page.content.length > 0 %}{{ page.content | truncatewords: 20 | strip_html | strip }}{% elsif page.subtitle %}{{ page.subtitle }}{% elsif page.tagline %}{{ page.tagline }}{% elsif site.description %}{{ site.description | truncatewords: 20 | strip }}{% else %}{{ site.name }}{% endif %}">
+<meta name="twitter:description" content="{% if page.summary %}{{ page.summary | truncatewords: 20 | markdownify | strip_html | strip }}{% elsif page.content.length > 0 %}{{ page.content | truncatewords: 20 | strip_html | strip }}{% elsif page.subtitle %}{{ page.subtitle }}{% elsif page.tagline %}{{ page.tagline }}{% elsif site.description %}{{ site.description | truncatewords: 20 | strip }}{% else %}{{ site.name }}{% endif %}">
+
+{% comment %}
+	Use page.title, or else site.name, for the page title.
+{% endcomment %}
+<title>{% if page.title %}{{ page.title }}{% else %}{{ site.name }}{% endif %}</title>
+<meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.name }}{% endif %}" />
+<meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.name }}{% endif %}">
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200;400;700&family=Playfair+Display&display=swap">
-<link rel="stylesheet" href="/assets/tachyons.min.css">
-<link rel="stylesheet" href="/assets/style.css">
+<link rel="stylesheet" href="/assets/static/tachyons.min.css">
+<link rel="stylesheet" href="/assets/static/style.css">
 <style type="text/css">
+	{% comment %}
+		Include `page.css` file; currently used for per-project colors.
+	{% endcomment %}
 	{% include page.css %}
+
+	{% comment %}
+		Include per-page `page.page_css` attribute. Currently only used
+		by project pages (but could also be used elsewhere.) This is the
+		LAST style directive by design, so as to allow any previously
+		loaded styles to be "cleanly" (well, as cleanly as CSS ever
+		gets) overridden.
+	{% endcomment %}
 	{% if page.page_css %}
 		{{ page.page_css }}
 	{% endif %}
 </style>
 
-<meta property="og:type" content="article" />
-<meta property="og:url" content="{{ site.url }}{{ page.url }}" />
-<meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}The Yak Collective{% endif %}" />
-{% if page.layout == "project" %}
-	{% assign og_image = page.hero_image %}
-{% elsif page.layout == "member" %}
-	{% assign og_image = page.avatar %}
-{% elsif page.layout == "post" and page.author %}
-	{% assign member = site.members | where: "name", page.author | first %}
-	{% if member.avatar %}
-		{% assign og_image = member.avatar %}
-	{% else %}
-		{% assign og_image = "/assets/yak-og.png" %}
-	{% endif %}
-{% else %}
-	{% assign og_image = "/assets/yak-og.png" %}
-{% endif %}
-<meta property="og:image" content="{{ site.url }}{{ og_image }}" />
+{% comment %}
+	Determine the image that should be associated with the page (for
+	Twitter and Facebook), as well as the page author (just for
+	Twitter).
 
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:site" content="@yak_collective">
-{% if page.layout == "project" %}
-	{% assign twitter_image = page.hero_image %}
-{% else %}
-	{% assign twitter_image = "/assets/yak-og.png" %}
-{% endif %}
-{% assign twitter_creator = "yak_collective" %}
+	We start by assigning some sensible defaults: @yak_collective for
+	the page author and the "wandering yak" cartoon for the page image.
+
+	Then...
+	
+	If the page is a "post" and `page.author` is set, look the author up
+	in the `site.members` data structure and use their Twitter handle
+	and avatar (if set).
+
+	If the page is a member page, pull the member's Twitter handle and
+	avatar (if set). (The member isn't *really* the page author in this
+	case, but we still want to associate this page with them.)
+
+	Finally, if the page is a project page, then leave the author as
+	@yak_collective, but set the image to the project `hero_image` (if
+	set).
+{% endcomment %}
+{% assign page_author = "yak_collective" %}
+{% assign page_image = "/assets/static/yak-og.png" %}
 {% if page.layout == "post" %}
 	{% if page.author %}
 		{% assign member = site.members | where: "name", page.author | first %}
 		{% if member.twitter %}
-			{% assign twitter_creator = member.twitter %}
+			{% assign page_author = member.twitter %}
 		{% endif %}
 		{% if member.avatar %}
-			{% assign twitter_image = member.avatar %}
+			{% assign page_image = member.avatar %}
 		{% endif %}
 	{% endif %}
 {% elsif page.layout == "member" %}
 	{% if page.twitter %}
-		{% assign twitter_creator = page.twitter %}
+		{% assign page_author = page.twitter %}
 	{% endif %}
 	{% if page.avatar %}
-		{% assign twitter_image = page.avatar %}
+		{% assign page_image = page.avatar %}
+	{% endif %}
+{% elsif page.layout == "project" %}
+	{% if page.hero_image %}
+		{% assign page_image = page.hero_image %}
 	{% endif %}
 {% endif %}
-<meta name="twitter:creator" content="@{{ twitter_creator }}">
-<meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}The Yak Collective{% endif %}">
-<meta name="twitter:description" content="{% if page.summary %}{{ page.summary | truncatewords: 20 | markdownify | strip_html | strip }}{% elsif page.content.length > 0 %}{{ page.content | truncatewords: 20 | strip_html | strip }}{% elsif page.subtitle %}{{ page.subtitle }}{% elsif page.tagline %}{{ page.tagline }}{% elsif site.description %}{{ site.description | truncatewords: 20 | strip }}{% else %}The Yak Collective{% endif %}">
-<meta name="twitter:image" content="{{ site.url }}{{ twitter_image }}">
+<meta name="twitter:creator" content="@{{ page_author }}">
+<meta name="twitter:image" content="{{ site.url }}{{ page_image }}">
+<meta property="og:image" content="{{ site.url }}{{ page_image }}" />
 
-<link rel="alternate" type="application/json" title="The Yak Collective's Latest Writings" href="/writings/feed.json">
-<link rel="alternate" type="application/rss+xml" title="The Yak Collective's Latest Writings" href="/writings/feed.xml">
-{% for member in site.members %}
-	{% if member.feed %}
-		<link rel="alternate" type="application/rss+xml" title="{{ member.title }}" href="{{ member.feed }}">
-	{% endif %}
-{% endfor %}
+{% comment %}
+	Canonical page URL for Facebook.
+{% endcomment %}
+<meta property="og:url" content="{{ site.url }}{{ page.url }}" />

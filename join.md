@@ -11,11 +11,20 @@ Be sure to take a moment to read our [code of conduct](https://roamresearch.com/
 
 To access the invitation link for our Discord server, please answer a couple of simple questions (all <span class="required">*</span> fields are required).
 
-<!--
-https://docs.google.com/forms/u/0/d/e/1FAIpQLSfVUUvuIkzEGffk1CoEgzOkeO_yI05Nuw6zU3H1TNLmiQOf7g/formResponse?emailAddress=testy.mctesterson%40example.com&entry.579811979=Denver%2C+CO&entry.2065359511=Uber%2FLyft+etc+%28%22under+the+API%22+gig+economy%29&entry.1148437568=Yes
--->
+{% comment %}
+	Example post response that Google forms will accept:
 
-<!-- <form name="yak-collective-join" method="post" action="/welcome" data-netlify="true"> -->
+		https://docs.google.com/forms/u/0/d/e/1FAIpQLSfVUUvuIkzEGffk1CoEgzOkeO_yI05Nuw6zU3H1TNLmiQOf7g/formResponse?emailAddress=testy.mctesterson%40example.com&entry.579811979=Denver%2C+CO&entry.2065359511=Uber%2FLyft+etc+%28%22under+the+API%22+gig+economy%29&entry.1148437568=Yes
+
+	Alternately, we could use Netlify forms here by replacing the first
+	`<form ...>` line with:
+
+		<form name="yak-collective-join" method="post" action="/welcome" data-netlify="true">
+	
+	Note that any changes to the Google Form will require corresponding
+	changes in the `<form/>` below!
+{% endcomment %}
+
 <form class="mh0 mv4 mh3-m mh4-l mt5-l" name="yak-collective-join" method="post" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfVUUvuIkzEGffk1CoEgzOkeO_yI05Nuw6zU3H1TNLmiQOf7g/formResponse">
 	<p>
 		<label class="db b mb2" for="emailAddress">Email address <span class="required">*</span></label>

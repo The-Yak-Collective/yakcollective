@@ -6,7 +6,7 @@ tagline: Philosopher, Mother of 3
 currently: The Life Coach for Smart People
 indie_status: 3+ years
 twitter: amelapay
-avatar: /assets/pamela-hobart.jpg
+avatar: /assets/dynamic/pamela-hobart.jpg
 links:
   - title: pamelajhobart.com
     url: https://www.pamelajhobart.com/

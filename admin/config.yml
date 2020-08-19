@@ -4,15 +4,33 @@ backend:
   branch: netlify-prod
   open_authoring: true
 publish_mode: editorial_workflow
-media_folder: assets/
+media_folder: assets/dynamic/
 site_url: https://yakcollective.org
 collections:
+  - label: How to Use This Interface # First, so open by default
+    name: help
+    editor:
+      preview: false
+    files: 
+      - label: Help
+        name: help
+        file: help.md
+        fields:
+          - label: Layout
+            name: layout
+            widget: hidden
+            default: minimal
+          - label: Content
+            name: body
+            widget: markdown
+            required: true
   - name: members
     label: Members
     folder: _members/
     create: true
     editor:
-      preview: false
+      preview: true
+    sortableFields: ["name", "date"]
     fields:
       - label: Layout
         name: layout
@@ -80,7 +98,7 @@ collections:
           - label: URL
             name: url
             widget: string
-            pattern: [ "https?:\\/\\/[a-z0-9-_]+\\.[a-z]{2,}.*", "Should be a website URL" ]
+            pattern: [ "https?:\\/\\/[a-z0-9-_]+\\.[a-z]{2,}.*", "Should be a website URL" ] # Quick-n-dirty URL regexp
       - label: About
         name: body
         widget: markdown
@@ -90,7 +108,7 @@ collections:
     folder: _projects/
     create: true
     editor:
-      preview: false
+      preview: true
     fields:
       - label: Layout
         name: layout
@@ -145,7 +163,7 @@ collections:
         default: "200,100,200"
         required: true
         hint: The (comma-separated) RGB color to use as the accent on your report for the projects list page. Should be chosen to go well with your hero image.
-        pattern: [ "[0-9]{1,3},[0-9]{1,3},[0-9]{1,3}", "Should be a comma-separated RGB color string." ]
+        pattern: [ "[0-9]{1,3},[0-9]{1,3},[0-9]{1,3}", "Should be a comma-separated RGB color string." ] # Quick-n-dirty RGB regexp; note that this still allows for invalid color value, since each element of the tuple should really only range from 0 - 255
       - label: Additional CSS
         name: page_css
         widget: text
@@ -226,7 +244,7 @@ collections:
         file: _data/slogans.yml
         fields:
           - label: Slogans
-            name: slogans_list
+            name: slogans
             widget: list
             collapsed: false
             fields:
@@ -240,7 +258,7 @@ collections:
         file: _data/tips.yml
         fields:
           - label: Tips
-            name: tips_list
+            name: tips
             widget: list
             collapsed: false
             fields:
@@ -262,7 +280,7 @@ collections:
   - label: Pages
     name: pages
     editor:
-      preview: false
+      preview: true
     files: 
       - label: Home
         name: home-page
@@ -276,39 +294,6 @@ collections:
             name: body
             widget: markdown
             required: true
-      - label: Projects
-        name: projects-page
-        file: projects.md
-        fields:
-          - label: Layout
-            name: layout
-            widget: hidden
-            default: project-list
-          - label: Title
-            name: title
-            widget: string
-            required: true
-          - label: Content
-            name: body
-            widget: markdown
-            required: true
-      - label: Members
-        name: members-page
-        file: members.md
-        fields:
-          - label: Layout
-            name: layout
-            widget: hidden
-            default: member-list
-          - label: Title
-            name: title
-            widget: string
-            required: true
-          - label: Content
-            name: body
-            widget: markdown
-            required: true
-            hint: The text displayed above the members list.
       - label: About
         name: about-page
         file: about.md

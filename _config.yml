@@ -1,6 +1,6 @@
 # Site version. See: https://semver.org/
 #
-version: 2.0.0
+version: 2.2.0
 
 # Default accent color
 #
@@ -62,10 +62,11 @@ defaults:
 
 # Includes and excludes
 #
+include:
+  - _redirects
 exclude:
-  - README.md
-  - FEEDS.md
-  - TODO.md
   - functions
+  - help.md
   - netlify.toml
   - package.json
+  - README.md
