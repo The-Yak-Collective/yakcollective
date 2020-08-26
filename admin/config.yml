@@ -1,7 +1,7 @@
 backend:
   name: github
   repo: The-Yak-Collective/yakcollective
-  branch: astonishing stories
+  branch: astonishing-stories
   open_authoring: true
 publish_mode: editorial_workflow
 media_folder: assets/dynamic/
