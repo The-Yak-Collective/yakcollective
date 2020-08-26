@@ -55,7 +55,8 @@ footer a {
 time,
 details,
 .details,
-.collaborators {
+.collaborators,
+.project-page-author {
 	color: rgba(0,0,0,0.65);
 }
 
@@ -135,22 +136,56 @@ h6 a:hover {
 	box-sizing: border-box;
 }
 
+.project-pages {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-start;
+}
+
+.project-page-box-container {
+	width: 100%;
+	flex-grow: 0;
+}
+
+.page-info {
+	height: auto;
+	overflow: auto;
+}
+
+@media (min-width: 60em) {
+	.project-page-box-container {
+		width: 19rem;
+		flex-grow: 1;
+	}
+
+	.page-info {
+		height: 21rem;
+		overflow: hidden;
+	}
+}
+
 .member-box,
 .project-box,
-.project-box .hero {
+.project-box .hero,
+.project-page-box,
+.project-page-box .hero {
 	border-color: rgba(0,0,0,0.15);
 }
 
 .project-box .silent-link,
-.project-box .silent-link:hover {
+.project-box .silent-link:hover,
+.project-page-box .silent-link,
+.project-page-box .silent-link:hover {
 	color: rgba(0,0,0,1.00);
 }
 
-.project-box {
+.project-box,
+.project-page-box {
 	display: block;
 }
 
-.project-box time {
+.project-box time,
+.project-page-box time {
 	display: block;
 }
 
@@ -159,7 +194,8 @@ h6 a:hover {
 }
 
 a.member-box,
-a.project-box {
+a.project-box,
+a.project-page-box {
 	text-decoration: none;
 }
 
@@ -181,16 +217,27 @@ a.member-box {
 }
 
 .toc,
-.submit {
+.submit,
+.footnotes {
 	background-color: rgba(0,0,0,0.05);
 }
 
 .toc {
-	padding: 40px;
-	font-size: 16px;
+	padding: 20px 20px 20px 40px;
+	font-size: 80%;
 }
 
 .toc li {
 	padding-top: 5px;
 	padding-bottom: 5px;
+}
+
+.toc li ul {
+	margin-top: 5px;
+	margin-bottom: -5px;
+}
+
+.footnotes {
+	padding: 1em 2em 1em 0.5em;
+	font-size: 80%;
 }

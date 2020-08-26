@@ -1,0 +1,50 @@
+---
+layout: minimal
+---
+
+{% comment %}
+	Used for project pages.
+
+	If applicable, prepend a header linking back to the off-site page +
+	a member card providing information about the Yak Collective member
+	who authored the page.
+
+	Finally, preprend a navigation tree of all project pages with
+	`display: true`. If no such pages exist, this just serves as a link
+	to return to the original project.
+{% endcomment %}
+
+<header>
+	<h1 class="yak-post">{% if page.original_link %}<a href="{{ page.original_link }}">{% endif %}{{ page.title }}{% if page.original_link %}</a>{% endif %}</h1>
+
+	{% if page.author %}
+		{% assign member = site.members | where: "name", page.author | first %}
+		{% include member-card.html is_link=false member=member %}
+	{% endif %}
+
+	<nav><ul class="toc"><li>
+		{% assign project = site.projects | where: "name", page.project | first %}
+		<a href="/projects/{{ project.name }}/">{{ project.title }}</a>
+
+		{% comment %}
+			FIXME: The code below for determining the list of project
+			pages to display is identical in all essential ways to the
+			project page display code in `project.html`, and should be
+			abstracted.
+		{% endcomment %}
+		{% assign project_pages = site.project_pages | where: "project", project.name | where: "display", true %}
+		{% if project_pages.size > 0 %}
+			{% assign test_pp = project_pages[1] %}
+			{% if test_pp.date %}
+				{% assign sorted_project_pages = project_pages | sort: "date" | reverse %}
+			{% endif %}
+			<ul>
+				{% for pp in sorted_project_pages %}
+					<li>{% if pp.name == page.name %}<strong>{% else %}<a href="{% if pp.original_link %}{{ pp.original_link }}{% else %}{{ pp.permalink }}{% endif %}">{% endif %}{{ pp.title }}{% if pp.name == page.name %}</strong>{% else %}</a>{% endif %}</li>
+				{% endfor %}
+			</ul>
+		{% endif %}
+	</li></ul></nav>
+</header>
+
+{{ content }}

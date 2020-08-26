@@ -5,6 +5,9 @@
 
 {% if page.accent_color %}
 	{% assign accent_color = page.accent_color %}
+{% elsif page.layout == "project-page" %}
+	{% assign project = site.projects | where: "name", page.project | first %}
+	{% assign accent_color = project.accent_color %}
 {% else %}
 	{% assign accent_color = site.accent_color %}
 {% endif %}

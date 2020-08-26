@@ -19,7 +19,7 @@ page_css: |
     .report {
       width: 130%;
       margin-left: -15%;
-      margin-top: -6rem;
+      margin-top: -3rem;
       height: 37rem;
     }
   }
@@ -27,7 +27,7 @@ page_css: |
     .report{
       width: 110%;
       margin-left: -5%;
-      margin-top: -6rem;
+      margin-top: -3rem;
       height: 31.5rem;
     }
   }
@@ -35,7 +35,7 @@ page_css: |
     .report{
       width: 100%;
       margin-left: 0;
-      margin-top: -5rem;
+      margin-top: -2rem;
       height: 29rem;
     }
   }
@@ -43,7 +43,7 @@ page_css: |
     .report{
       width: 100%;
       margin-left: 0;
-      margin-top: -5rem;
+      margin-top: -2rem;
       height: 26.5rem;
     }
   }
@@ -51,7 +51,7 @@ page_css: |
     .report{
       width: 100%;
       margin-left: 0;
-      margin-top: -5rem;
+      margin-top: -2rem;
       height: 21.5rem;
     }
   }

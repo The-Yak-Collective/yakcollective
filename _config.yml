@@ -19,7 +19,7 @@ permalink: pretty
 #
 name: The Yak Collective
 description: The Yak Collective is a network of over 300 independent consultants, coaches, and freelancers with varied technical and creative skills.
-url: https://yakcollective.org
+url: https://optimistic-jennings-266cab.netlify.app
 feed_items: 255
 feed_update_period: daily
 feed_update_frequency: 1
@@ -30,6 +30,8 @@ collections:
   members:
     output: true
   projects:
+    output: true
+  project_pages:
     output: true
   sequences:
     output: false
@@ -42,7 +44,7 @@ defaults:
       type: members
     values:
       layout: member
-      permalink: /:collection/:name
+      permalink: /members/:name/
   - scope:
       path: ""
       type: pages
@@ -58,7 +60,13 @@ defaults:
       type: projects
     values:
       layout: project
-      permalink: /:collection/:name
+      permalink: /projects/:name/
+  - scope:
+      path: ""
+      type: project_pages
+    values:
+      layout: project-page
+      permalink: /projects/pages/:name/
 
 # Includes and excludes
 #
