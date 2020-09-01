@@ -12,7 +12,7 @@ display: true
 He looked down in pain at his programmable forearm tattoo[^1] after finishing his last note. The microbots in his arm etched a new web of nodes mirroring his note taking system on Roam. His mind had become a mess since his father's death and now it was reflected on his arm for all to see. "How can I possibly untangle this mess" he thought to himself.
 
 <img
-  src="{{ site.url }}/assets/dynamic/astonishing-stories-untitled-story-included-in-template.jpg"
+  src="/assets/dynamic/astonishing-stories-untitled-story-included-in-template.jpg"
   alt="Programmable tattoo kit."
   class="fn mw-100 fr-m ml4-m mr2-m mt1-m mb2-m mw5-m fr-l ml4-l mr1-l mt2-l mb2-l mw6-l" />
 

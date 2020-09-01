@@ -16,7 +16,7 @@ Short try/fail Sed eget sem eu velit sodales iaculis. Aenean vel egestas[^1] leo
 Short first attempt to resolve Fusce iaculis[^2] risus non varius euismod. [Phrase linked to external article](https://roamresearch.com/#/app/Astonishing_Stories/page/YLj-7R4GY) Praesent porta iaculis libero, id pretium purus bibendum vel. In hac habitasse platea dictumst. Phasellus volutpat erat lorem, quis tempor justo cursus vitae. Aliquam lorem metus, faucibus a eros et, posuere dignissim libero. Aliquam justo purus, efficitur vel mauris ut, porta scelerisque lectus. Nunc mattis vulputate ex lacinia malesuada. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam convallis porta eleifend. Donec ut tempor felis, ac volutpat risus. Gentium Basic.
 
 <img
-  src="{{ site.url }}/assets/dynamic/astonishing-stories-short-title.png"
+  src="/assets/dynamic/astonishing-stories-short-title.png"
   alt="A nullam orci sem."
   class="fn mw-100 fr-m ml4-m mr2-m mt1-m mb2-m mw5-m fr-l ml4-l mr1-l mt2-l mb2-l mw6-l" />
 

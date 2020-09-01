@@ -11,10 +11,7 @@ display: true
 ---
 "Goddammit, Judd, why is your Clarinet-MLv2 in pieces in the garage! How are you going to get into the AllStateJuniorRonaldMcDonaldPeabody Conservatory with a broken Machine Learning Clarinet[^1]? Don't you want a break from all this homeschooling to make some new friends in meatspace?”
 
-<img
-  src="{{ site.url }}/assets/dynamic/astonishing-stories-in-a-class-of-their-own.jpg"
-  alt="Class is not actually dismissed."
-  class="fn mw-100 fl-m mr4-m ml2-m mt1-m mb2-m mw5-m fl-l mr4-l ml1-l mt2-l mb2-l mw6-l" />
+![Class is not actually dismissed.](/assets/dynamic/astonishing-stories-in-a-class-of-their-own.jpg)
 
 "Shhh!" Judd holds his finger to his lips emphatically. Looking nervously over his shoulder while shunting his father to the corner of the garage away from the decomposed Clarinet, he whispers, "It was already on the fritz, Dad. No matter what I played, it kept repeating the same thing.”
 

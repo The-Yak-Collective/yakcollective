@@ -12,7 +12,7 @@ display: true
 Long intro Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dui nulla, hendrerit eu tincidunt eu, egestas a mi. Aliquam ac dignissim massa, eu congue ante. Donec ut ante venenatis, dapibus tortor quis, imperdiet eros. Nulla in rhoncus est, vel lobortis urna. Mauris porttitor lectus et tortor consectetur, non elementum urna sagittis. Morbi interdum erat nulla, ac viverra nunc elementum a. Nunc at dolor eget dolor dignissim ullamcorper. In vel pulvinar libero.
 
 <img
-  src="{{ site.url }}/assets/dynamic/astonishing-stories-a-title-that-is-really-quite-long-and-contains-a-fair-amount-of-detail-and-content-and-goes-on-a-bit.jpg"
+  src="/assets/dynamic/astonishing-stories-a-title-that-is-really-quite-long-and-contains-a-fair-amount-of-detail-and-content-and-goes-on-a-bit.jpg"
   alt="Nam non orci."
   class="fn mw-100 fl-m mr4-m ml2-m mt1-m mb2-m mw5-m fl-l mr4-l ml1-l mt2-l mb2-l mw6-l" />
 
