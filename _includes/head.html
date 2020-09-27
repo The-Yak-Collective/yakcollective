@@ -79,21 +79,20 @@
 
 	Then...
 	
-	If the page is a "post" and `page.author` is set, look the author up
-	in the `site.members` data structure and use their Twitter handle
-	and avatar (if set).
+	If the page is a "post" or "project page" and `page.author` is set,
+	look the author up in the `site.members` data structure and use
+	their Twitter handle and avatar (if set).
 
 	If the page is a member page, pull the member's Twitter handle and
 	avatar (if set). (The member isn't *really* the page author in this
 	case, but we still want to associate this page with them.)
 
-	Finally, if the page is a project page, then leave the author as
-	@yak_collective, but set the image to the project `hero_image` (if
-	set).
+	Finally, if the page has a "hero image" associated with it, set the
+	page image to that, regardless of what else is going on.
 {% endcomment %}
 {% assign page_author = "yak_collective" %}
 {% assign page_image = "/assets/static/yak-og.png" %}
-{% if page.layout == "post" %}
+{% if page.layout == "post" or page.layout == "project-page" %}
 	{% if page.author %}
 		{% assign member = site.members | where: "name", page.author | first %}
 		{% if member.twitter %}
@@ -110,10 +109,9 @@
 	{% if page.avatar %}
 		{% assign page_image = page.avatar %}
 	{% endif %}
-{% elsif page.layout == "project" %}
-	{% if page.hero_image %}
-		{% assign page_image = page.hero_image %}
-	{% endif %}
+{% endif %}
+{% if page.hero_image %}
+	{% assign page_image = page.hero_image %}
 {% endif %}
 <meta name="twitter:creator" content="@{{ page_author }}">
 <meta name="twitter:image" content="{{ site.url }}{{ page_image }}">
