@@ -1,8 +1,8 @@
 ---
-name: an-example-of-a-goldilocks-title-we-might-expect
+name: astonishing-stories-an-example-of-a-goldilocks-title-we-might-expect
 title: An example of a Goldilocks title we might expect
 permalink: /projects/astonishing-stories/an-example-of-a-goldilocks-title-we-might-expect/
-date: 2020-09-15
+date: 2020-10-26
 hero_image: /assets/dynamic/astonishing-stories-an-example-of-a-goldilocks-title-we-might-expect.jpg
 author: drew-schorno
 description: Goldilocks intro Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -13,7 +13,7 @@ Goldilocks intro Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praese
 
 Goldilocks Try/fail Sed faucibus ut lectus vestibulum fringilla. [Phrase linked to external article](https://roamresearch.com/#/app/Astonishing_Stories/page/YLj-7R4GY) Aenean rhoncus[^1] sit amet mauris sit amet gravida. Etiam sodales neque a justo rutrum, venenatis rutrum arcu eleifend. Nunc volutpat nisl ut efficitur vestibulum. Curabitur in feugiat felis. Pellentesque et tortor nulla. Donec ornare est dui, vel placerat ex bibendum venenatis. Ut blandit quam lorem, a egestas turpis feugiat ut. Vestibulum euismod neque sit amet tortor tempor lacinia. Nam eu libero euismod, tempus diam eget, luctus est. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi accumsan sem nec vehicula ultricies. Duis non erat risus.
 
-![Goldilocks.](/assets/dynamic/astonishing-stories-an-example-of-a-goldilocks-title-we-might-expect.jpg)
+![]({{ page.hero_image }})
 
 Goldilocks First resolve Sed dui ante, eleifend a massa at, dignissim cursus magna. Quisque et est turpis. In elementum, massa ut varius varius, urna turpis blandit velit, ut malesuada ipsum tellus id sem. Ut consectetur ultricies [Phrase linked to another external article](https://roamresearch.com/#/app/Astonishing_Stories/page/YLj-7R4GY) elit, sit amet facilisis leo sollicitudin ac. Suspendisse potenti. Aliquam vitae diam elit. Pellentesque et eros sed ante tincidunt pulvinar sed sodales dui[^2]. Suspendisse non rhoncus nisl. Quisque ultrices faucibus metus quis dictum. Vivamus ac ex sapien. Nulla elementum molestie dolor in accumsan. Donec pharetra sodales ullamcorper. Suspendisse ante justo, malesuada eget tempus sit amet, commodo eu ex. Aliquam erat volutpat.
 

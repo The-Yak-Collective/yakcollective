@@ -1,7 +1,7 @@
 ---
 name: astonishing-stories
 title: Astonishing Stories
-date: 2020-09-01
+date: 2020-10-12
 tagline: Weird is part of the job.
 type: Zine
 sequence: covid-19
@@ -22,8 +22,8 @@ lead_editors:
   - amanda-reeves
   - sachin-benny
 collaborators:
+  - nathan-chen
   - paul-millerd
-  - pamela-hobart
   - drew-schorno
 ---
 

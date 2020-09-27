@@ -1,8 +1,8 @@
 ---
-name: short-title
+name: astonishing-stories-short-title
 title: Short title
 permalink: /projects/astonishing-stories/short-title/
-date: 2020-09-01
+date: 2020-10-12
 hero_image: /assets/dynamic/astonishing-stories-short-title.png
 author: paul-millerd
 description: Short intro Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -13,12 +13,12 @@ Short intro Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac torto
 
 Short try/fail Sed eget sem eu velit sodales iaculis. Aenean vel egestas[^1] leo. Nulla facilisi. Duis diam nunc, suscipit vel mattis in, elementum at ex. Mauris aliquet pretium lacus vitae bibendum. Praesent dapibus lacinia porttitor. Faustina.
 
-Short first attempt to resolve Fusce iaculis[^2] risus non varius euismod. [Phrase linked to external article](https://roamresearch.com/#/app/Astonishing_Stories/page/YLj-7R4GY) Praesent porta iaculis libero, id pretium purus bibendum vel. In hac habitasse platea dictumst. Phasellus volutpat erat lorem, quis tempor justo cursus vitae. Aliquam lorem metus, faucibus a eros et, posuere dignissim libero. Aliquam justo purus, efficitur vel mauris ut, porta scelerisque lectus. Nunc mattis vulputate ex lacinia malesuada. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam convallis porta eleifend. Donec ut tempor felis, ac volutpat risus. Gentium Basic.
-
 <img
-  src="/assets/dynamic/astonishing-stories-short-title.png"
+  src="{{ page.hero_image }}"
   alt="A nullam orci sem."
-  class="fn mw-100 fr-m ml4-m mr2-m mt1-m mb2-m mw5-m fr-l ml4-l mr1-l mt2-l mb2-l mw6-l" />
+  class="fn mw-100 fr-m ml4-m mr2-m mt1-m mb2-m mw5-m fr-l ml4-l mr1-l mt2-l mb2-l mw5-l" />
+
+Short first attempt to resolve Fusce iaculis[^2] risus non varius euismod. [Phrase linked to external article](https://roamresearch.com/#/app/Astonishing_Stories/page/YLj-7R4GY) Praesent porta iaculis libero, id pretium purus bibendum vel. In hac habitasse platea dictumst. Phasellus volutpat erat lorem, quis tempor justo cursus vitae. Aliquam lorem metus, faucibus a eros et, posuere dignissim libero. Aliquam justo purus, efficitur vel mauris ut, porta scelerisque lectus. Nunc mattis vulputate ex lacinia malesuada. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam convallis porta eleifend. Donec ut tempor felis, ac volutpat risus. Gentium Basic.
 
 Short second attempt to resolve Nullam orci sem, vulputate vitae rutrum at, auctor sit amet arcu. Integer commodo vel justo non aliquam. Aenean aliquam ligula eu gravida dignissim. Donec vulputate ex egestas, semper leo id, rhoncus orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec ullamcorper lacinia nunc at interdum. Suspendisse malesuada elit nulla, sit amet ullamcorper risus dapibus vitae. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Tinos.
 

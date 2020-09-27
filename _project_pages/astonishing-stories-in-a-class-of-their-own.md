@@ -1,8 +1,8 @@
 ---
-name: in-a-class-of-their-own
+name: astonishing-stories-in-a-class-of-their-own
 title: In a class of their own
 permalink: /projects/astonishing-stories/in-a-class-of-their-own/
-date: 2020-09-22
+date: 2020-11-02
 hero_image: /assets/dynamic/astonishing-stories-in-a-class-of-their-own.jpg
 author: amanda-reeves
 description: Don't you want a break from all this homeschooling to make some new friends in meatspace?
@@ -11,11 +11,11 @@ display: true
 ---
 "Goddammit, Judd, why is your Clarinet-MLv2 in pieces in the garage! How are you going to get into the AllStateJuniorRonaldMcDonaldPeabody Conservatory with a broken Machine Learning Clarinet[^1]? Don't you want a break from all this homeschooling to make some new friends in meatspace?”
 
-![Class is not actually dismissed.](/assets/dynamic/astonishing-stories-in-a-class-of-their-own.jpg)
-
 "Shhh!" Judd holds his finger to his lips emphatically. Looking nervously over his shoulder while shunting his father to the corner of the garage away from the decomposed Clarinet, he whispers, "It was already on the fritz, Dad. No matter what I played, it kept repeating the same thing.”
 
 Judd mockingly adopts the calm, slightly patronizing/British tone of Clarence, his AI-assisted music instructor:  “My algorithm finds that you are currently at the 46th percentile amongst clarinetists in your peer competition group. Practice your arpeggios and improve your score before the final evaluation! 16 year-olds in your city with finely articulated arpeggios are generally ranked in the top quartile. Add a strong swing-eighths style and you could be in the top decile. Say 'practice arpeggios' or 'practice swing-eighths' for a lesson”
+
+![]({{ page.hero_image }})
 
 Judd continues, "And I mean, No. Matter. What. I. Play. I practiced my arpeggios for 2 hours and it tells me 46th percentile and practice arpeggios. I play a series of high-pitched squeals. 'My algorithm finds that you are currently at the 46th percentile" blah, blah, blah. I even take it apart and remove the analog-to-digital converter and feed it recordings of whale sounds or Benny Goodman for 15 straight hours. And every time the same thing: "You're at the 46th percentile, and you need to practice your arpeggios." Judd throws up his hands excitedly.  
 
