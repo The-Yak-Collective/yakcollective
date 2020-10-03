@@ -15,9 +15,11 @@ page_css: |
     display: block;
   }
 summary: |
-  Is that an observation or a diagnosis? Engage! I don't have a life. I have a program. That was awfully close. What if you killed me? What makes you think I wasn't trying? If you hear muffled screams, consider that a request for a beam out. Is something wrong? Yes. Terribly wrong.
-  
-  Your brain is not on file. I must prove to him that persistence is futile. It's like being pecked to death by ducks. You punch like a Ferengi. Well, let me guess! You're either lost, or desperately searching for a good tailor. "Impossible" is a word that humans use far too often.
+  The upside of an extremely uncertain environment is that we have been free to purely indulge in speculation about the future. The result is Astonishing Stories, an anthology of short speculative fiction developed from the networked thoughts of over 30 Indie consultants. 
+
+  Our working process is open and visible to all on our Roam Graph. The future fragments were developed by Indie consultants from different industries and experience levels through playing sessions of The Thing From The Future. The fragments provided a jumping off point for authors of short speculative fiction and can be used by anyone to develop stories of their own or speculate on the post-covid world.
+
+  The stories here are not meant to predict the future but to be imagination extenders for entrepreneurs and consultants navigating a post-Covid landscape.
 lead_editors:
   - amanda-reeves
   - sachin-benny
