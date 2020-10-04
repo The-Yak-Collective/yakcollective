@@ -15,11 +15,11 @@ page_css: |
     display: block;
   }
 summary: |
-  The upside of an extremely uncertain environment is that we have been free to purely indulge in speculation about the future. The result is Astonishing Stories, an anthology of short speculative fiction developed from the networked thoughts of over 30 Indie consultants. 
+  The upside of an extremely uncertain environment is that we have been free to purely indulge in speculation about the future. The result is _Astonishing Stories_, an anthology of short speculative fiction developed from the networked thoughts of over 30 indie consultants. 
 
-  Our working process is open and visible to all on our Roam Graph. The future fragments were developed by Indie consultants from different industries and experience levels through playing sessions of The Thing From The Future. The fragments provided a jumping off point for authors of short speculative fiction and can be used by anyone to develop stories of their own or speculate on the post-covid world.
+  Our working process is open and visible to all on our [Roam graph](https://roamresearch.com/#/app/Astonishing_Stories/search). The future fragments were developed by Indie consultants from different industries and experience levels through playing sessions of _The Thing From The Future_. The fragments provided a jumping off point for authors of short speculative fiction and can be used by anyone to develop stories of their own or speculate on the post-COVID world.
 
-  The stories here are not meant to predict the future but to be imagination extenders for entrepreneurs and consultants navigating a post-Covid landscape.
+  The stories here are not meant to predict the future but to be imagination extenders for entrepreneurs and consultants navigating a post-COVID landscape.
 lead_editors:
   - amanda-reeves
   - sachin-benny
