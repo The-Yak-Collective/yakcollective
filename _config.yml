@@ -73,6 +73,8 @@ defaults:
 include:
   - _redirects
 exclude:
+  - assets/static/fonts-src.css
+  - assets/static/mkfonts.sh
   - functions
   - help.md
   - netlify.toml
