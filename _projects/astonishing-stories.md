@@ -7,13 +7,15 @@ type: Zine
 sequence: covid-19
 hero_image: /assets/dynamic/astonishing-stories-hero.svg
 accent_color: "125,150,175"
-page_css: |
-  .hero:before {
-    opacity: 0.4;
-  }
-  .story-container {
-    display: block;
-  }
+page_headers: |
+  <style type="text/css">
+    .hero:before {
+      opacity: 0.4;
+    }
+    .story-container {
+      display: block;
+    }
+  </style>
 summary: |
   The upside of an extremely uncertain environment is that we have been free to purely indulge in speculation about the future. The result is _Astonishing Stories_, an anthology of short speculative fiction developed from the networked thoughts of over 30 indie consultants. 
 

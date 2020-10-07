@@ -164,11 +164,11 @@ collections:
         required: true
         hint: The (comma-separated) RGB color to use as the accent on your report for the projects list page. Should be chosen to go well with your hero image.
         pattern: [ "[0-9]{1,3},[0-9]{1,3},[0-9]{1,3}", "Should be a comma-separated RGB color string." ] # Quick-n-dirty RGB regexp; note that this still allows for invalid color value, since each element of the tuple should really only range from 0 - 255
-      - label: Additional CSS
-        name: page_css
+      - label: Page-Specific Headers
+        name: page_headers
         widget: text
         required: false
-        hint: Additional CSS you want to include to style your page. Primarily (but not excludively) used to help style any HTML you include in the main body of the page. In particular, the `.hero:before` class will allow you to apply additional/overide stylings for the hero image.
+        hint: Additional header elements (such as CSS blocks or JavaScript imports) you want to include for this page. Primarily (but not exclusively) used to help style any HTML you include in the main body of the page. In particular, using the `.hero:before` class will allow you to apply additional/overide stylings for the hero image.
       - label: Project Leads
         name: lead_editors
         widget: relation
@@ -257,6 +257,11 @@ collections:
         widget: image
         required: true
         hint: An image file that will be used to represent the page in the corresponding project's page. Should ideally be either an SVG file, or a JPEG or PNG image at least 1280x800 pixels in size. Be aware that the image will be cropped to (almost) a square in many cases, so all of the important parts should be in the central 800x800 region.
+      - label: Page-Specific Headers
+        name: page_headers
+        widget: text
+        required: false
+        hint: Additional header elements (such as CSS blocks or JavaScript imports) you want to include for this page. Primarily (but not exclusively) used to help style any HTML you include in the main body of the page.
       - label: Description
         name: description
         widget: text
@@ -365,6 +370,11 @@ collections:
             name: layout
             widget: hidden
             default: minimal
+          - label: Page-Specific Headers
+            name: page_headers
+            widget: text
+            required: false
+            hint: Additional header elements (such as CSS blocks or JavaScript imports) you want to include for this page. Primarily (but not exclusively) used to help style any HTML you include in the main body of the page.
           - label: Content
             name: body
             widget: markdown
@@ -381,6 +391,11 @@ collections:
             name: title
             widget: string
             required: true
+          - label: Page-Specific Headers
+            name: page_headers
+            widget: text
+            required: false
+            hint: Additional header elements (such as CSS blocks or JavaScript imports) you want to include for this page. Primarily (but not exclusively) used to help style any HTML you include in the main body of the page.
           - label: Content
             name: body
             widget: markdown

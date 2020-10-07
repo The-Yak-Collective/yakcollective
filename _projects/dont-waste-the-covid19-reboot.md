@@ -7,53 +7,55 @@ type: Report
 sequence: covid-19
 hero_image: /assets/dynamic/dont-waste-the-covid19-reboot-hero.svg
 accent_color: "200,100,200"
-page_css: |
-  .hero:before {
-    opacity: 0.5;
-  }
-  .report {
-    display: block;
-  }
-  @media (min-width: 70em) {
+page_headers: |
+  <style type="text/css">
+    .hero:before {
+      opacity: 0.5;
+    }
     .report {
-      width: 130%;
-      margin-left: -15%;
-      margin-top: -3rem;
-      height: 37rem;
+      display: block;
     }
-  }
-  @media (min-width: 60em) and (max-width: 70em) {
-    .report{
-      width: 110%;
-      margin-left: -5%;
-      margin-top: -3rem;
-      height: 31.5rem;
+    @media (min-width: 70em) {
+      .report {
+        width: 130%;
+        margin-left: -15%;
+        margin-top: -3rem;
+        height: 37rem;
+      }
     }
-  }
-  @media (min-width: 50em) and (max-width: 60em) {
-    .report{
-      width: 100%;
-      margin-left: 0;
-      margin-top: -2rem;
-      height: 29rem;
+    @media (min-width: 60em) and (max-width: 70em) {
+      .report{
+        width: 110%;
+        margin-left: -5%;
+        margin-top: -3rem;
+        height: 31.5rem;
+      }
     }
-  }
-  @media (min-width: 40em) and (max-width: 50em) {
-    .report{
-      width: 100%;
-      margin-left: 0;
-      margin-top: -2rem;
-      height: 26.5rem;
+    @media (min-width: 50em) and (max-width: 60em) {
+      .report{
+        width: 100%;
+        margin-left: 0;
+        margin-top: -2rem;
+        height: 29rem;
+      }
     }
-  }
-  @media (max-width: 40em) {
-    .report{
-      width: 100%;
-      margin-left: 0;
-      margin-top: -2rem;
-      height: 21.5rem;
+    @media (min-width: 40em) and (max-width: 50em) {
+      .report{
+        width: 100%;
+        margin-left: 0;
+        margin-top: -2rem;
+        height: 26.5rem;
+      }
     }
-  }
+    @media (max-width: 40em) {
+      .report{
+        width: 100%;
+        margin-left: 0;
+        margin-top: -2rem;
+        height: 21.5rem;
+      }
+    }
+  </style>
 summary: |
   The inaugural report by the Yak Collective, _Don't Waste the Reboot_ offers organizations a smorgasbord of 25 creative and unexpected provocations, ideas, and action frameworks to navigate the COVID-19 crisis.
   

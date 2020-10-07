@@ -56,17 +56,6 @@
 		Include `page.css` file; currently used for per-project colors.
 	{% endcomment %}
 	{% include page.css %}
-
-	{% comment %}
-		Include per-page `page.page_css` attribute. Currently only used
-		by project pages (but could also be used elsewhere.) This is the
-		LAST style directive by design, so as to allow any previously
-		loaded styles to be "cleanly" (well, as cleanly as CSS ever
-		gets) overridden.
-	{% endcomment %}
-	{% if page.page_css %}
-		{{ page.page_css }}
-	{% endif %}
 </style>
 
 {% comment %}
@@ -121,3 +110,14 @@
 	Canonical page URL for Facebook.
 {% endcomment %}
 <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+
+{% comment %}
+	Include per-page `page.page_headers` attribute. Currently only used
+	by project pages (but could also be used elsewhere). Since any
+	header elements can be included in this block, we load it last so
+	we can guarantee that CSS overrides and script dependencies work
+	correctly.
+{% endcomment %}
+{% if page.page_headers %}
+	{{ page.page_headers }}
+{% endif %}

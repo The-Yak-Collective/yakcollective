@@ -7,54 +7,56 @@ type: Report
 sequence: covid-19
 hero_image: /assets/dynamic/the-new-old-home-hero.jpg
 accent_color: "225,125,75"
-page_css: |
-  .hero:before {
-    background-size: cover;
-    opacity: 0.65;
-  }
-  .report {
-    display: block;
-  }
-  @media (min-width: 70em) {
+page_headers: |
+  <style type="text/css">
+    .hero:before {
+      background-size: cover;
+      opacity: 0.65;
+    }
     .report {
-      width: 130%;
-      margin-left: -15%;
-      margin-top: -3rem;
-      height: 37rem;
+      display: block;
     }
-  }
-  @media (min-width: 60em) and (max-width: 70em) {
-    .report{
-      width: 110%;
-      margin-left: -5%;
-      margin-top: -3rem;
-      height: 31.5rem;
+    @media (min-width: 70em) {
+      .report {
+        width: 130%;
+        margin-left: -15%;
+        margin-top: -3rem;
+        height: 37rem;
+      }
     }
-  }
-  @media (min-width: 50em) and (max-width: 60em) {
-    .report{
-      width: 100%;
-      margin-left: 0;
-      margin-top: -2rem;
-      height: 29rem;
+    @media (min-width: 60em) and (max-width: 70em) {
+      .report{
+        width: 110%;
+        margin-left: -5%;
+        margin-top: -3rem;
+        height: 31.5rem;
+      }
     }
-  }
-  @media (min-width: 40em) and (max-width: 50em) {
-    .report{
-      width: 100%;
-      margin-left: 0;
-      margin-top: -2rem;
-      height: 26.5rem;
+    @media (min-width: 50em) and (max-width: 60em) {
+      .report{
+        width: 100%;
+        margin-left: 0;
+        margin-top: -2rem;
+        height: 29rem;
+      }
     }
-  }
-  @media (max-width: 40em) {
-    .report{
-      width: 100%;
-      margin-left: 0;
-      margin-top: -2rem;
-      height: 21.5rem;
+    @media (min-width: 40em) and (max-width: 50em) {
+      .report{
+        width: 100%;
+        margin-left: 0;
+        margin-top: -2rem;
+        height: 26.5rem;
+      }
     }
-  }
+    @media (max-width: 40em) {
+      .report{
+        width: 100%;
+        margin-left: 0;
+        margin-top: -2rem;
+        height: 21.5rem;
+      }
+    }
+  </style>
 summary: |
   The Yak Collective's second report, _The New Old Home_, offers 22 perspectives built around Pamela Hobart's central thesis: as work returns to the home in the form of remote work opportunities (a trend now dramatically accelerated by pandemic circumstances), we can turn to historical modes of integrated living, reconsidered in light of newer technology, to guide our attempts at co-located life and work. 
 
