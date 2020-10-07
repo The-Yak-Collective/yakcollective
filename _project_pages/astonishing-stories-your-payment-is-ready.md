@@ -1,10 +1,11 @@
 ---
-name: astonishing-stories-in-a-class-of-their-own
-title: In a class of their own
-permalink: /projects/astonishing-stories/in-a-class-of-their-own/
-date: 2020-11-02
-hero_image: /assets/dynamic/astonishing-stories-in-a-class-of-their-own.jpg
-author: amanda-reeves
+name: astonishing-stories-your-payment-is-ready
+title: Your Payment is Ready
+permalink: /projects/astonishing-stories/your-payment-is-ready/
+date: 2020-10-12
+hero_image: /assets/dynamic/astonishing-stories-your-payment-is-ready.jpg
+author: ben-smith
+google_doc: https://docs.google.com/document/d/15LRvkKeNMwRgr6Zf8dYLBBAqhpBxIyLP_WBE16H-PCg/edit
 description: Don't you want a break from all this homeschooling to make some new friends in meatspace?
 project: astonishing-stories
 display: true
@@ -15,7 +16,10 @@ display: true
 
 Judd mockingly adopts the calm, slightly patronizing/British tone of Clarence, his AI-assisted music instructor:  “My algorithm finds that you are currently at the 46th percentile amongst clarinetists in your peer competition group. Practice your arpeggios and improve your score before the final evaluation! 16 year-olds in your city with finely articulated arpeggios are generally ranked in the top quartile. Add a strong swing-eighths style and you could be in the top decile. Say 'practice arpeggios' or 'practice swing-eighths' for a lesson”
 
-![]({{ page.hero_image }})
+<img
+  src="{{ page.hero_image }}"
+  alt="Your Payment is Ready"
+  class="fn mw-100 fr-m ml4-m mr2-m mt1-m mb2-m mw5-m fr-l ml4-l mr1-l mt2-l mb2-l mw6-l" />
 
 Judd continues, "And I mean, No. Matter. What. I. Play. I practiced my arpeggios for 2 hours and it tells me 46th percentile and practice arpeggios. I play a series of high-pitched squeals. 'My algorithm finds that you are currently at the 46th percentile" blah, blah, blah. I even take it apart and remove the analog-to-digital converter and feed it recordings of whale sounds or Benny Goodman for 15 straight hours. And every time the same thing: "You're at the 46th percentile, and you need to practice your arpeggios." Judd throws up his hands excitedly.  
 

@@ -1,10 +1,11 @@
 ---
-name: astonishing-stories-untitled
-title: Untitled
-permalink: /projects/astonishing-stories/untitled/
-date: 2020-11-09
-hero_image: /assets/dynamic/astonishing-stories-untitled.jpg
-author: sachin-benny
+name: astonishing-stories-agglomerizing-the-aesthetic
+title: Agglomerizing the Aesthetic
+permalink: /projects/astonishing-stories/agglomerizing-the-aesthetic/
+date: 2020-11-02
+hero_image: /assets/dynamic/astonishing-stories-agglomerizing-the-aesthetic.jpg
+author: ben-smith
+google_doc: https://docs.google.com/document/d/15LRvkKeNMwRgr6Zf8dYLBBAqhpBxIyLP_WBE16H-PCg/edit
 description: How can I possibly untangle this mess?
 project: astonishing-stories
 display: true
@@ -15,8 +16,8 @@ He had tried everything, even subscribing to the "Love the Land"[^2] program spo
 
 <img
   src="{{ page.hero_image }}"
-  alt="Programmable tattoo kit."
-  class="fn mw-100 fr-m ml4-m mr2-m mt1-m mb2-m mw5-m fr-l ml4-l mr1-l mt2-l mb2-l mw5-l" />
+  alt="Agglomerizing the Aesthetic"
+  class="fn mw-100 fr-m ml4-m mr2-m mt1-m mb2-m mw5-m fr-l ml4-l mr1-l mt2-l mb2-l mw6-l" />
 
 Now, he was swiping through the Perfect Father app that his friend had suggested as something he could try. He eventually ended up hiring an older man with a slightly disappointed resting face as his father. Rather than this being a sado-masochistic experience, it so happened that Mr.Vader, the man he hired to be his father is actually a pretty decent indie-life coach. Mr.Vader introduced him to the concept of "reparenting". The act of imagining being a parent to your younger self, the way you would have liked to be parented and coached. He had always thought of himself as the son who never lived up to his father's expectations but oddly enough Mr.Vader had made him realize that this aggrandizing, hypercritical inner self that he had acquired during his formal years was kind of a drag. But, now he was angry at his dead father.
 
