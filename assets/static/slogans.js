@@ -8,7 +8,8 @@ layout: null-layout
 	the footer.
 
 	We break this off as its own file to allow browsers to just pull it
-	from cache, rather than appending the entire `slogans` data
+	from cache (and so that we can `defer` it and improve page load
+	performance), rather than appending the entire `slogans` data
 	structure to every page.
 {% endcomment %}
 
