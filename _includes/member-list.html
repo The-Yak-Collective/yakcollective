@@ -16,19 +16,19 @@
 {% assign total_members = include.member_list.size %}
 {% if total_members == 1 %}
 	{% assign member = site.members | where: "name", include.member_list[0] | first %}
-	{% if include.link_members %}<a href="/members/{{ member.slug }}">{% endif %}{{ member.title }}{% if include.link_members %}</a>{% endif %}
+	{% if include.link_members %}<a href="/members/{{ member.slug }}">{% endif %}{{ member.title | replace: " ", "&nbsp;" }}{% if include.link_members %}</a>{% endif %}
 {% elsif total_members == 2 %}
 	{% assign first_member = site.members | where: "name", include.member_list[0] | first %}
 	{% assign second_member = site.members | where: "name", include.member_list[1] | first %}
 
-	{% if include.link_members %}<a href="/members/{{ first_member.slug }}">{% endif %}{{ first_member.title }}{% if include.link_members %}</a>{% endif %}
+	{% if include.link_members %}<a href="/members/{{ first_member.slug }}">{% endif %}{{ first_member.title | replace: " ", "&nbsp;" }}{% if include.link_members %}</a>{% endif %}
 	&amp;
-	{% if include.link_members %}<a href="/members/{{ second_member.slug }}">{% endif %}{{ second_member.title }}{% if include.link_members %}</a>{% endif %}
+	{% if include.link_members %}<a href="/members/{{ second_member.slug }}">{% endif %}{{ second_member.title | replace: " ", "&nbsp;" }}{% if include.link_members %}</a>{% endif %}
 {% else %}
 	{% assign last_member = include.member_list.last %}
 	{% for member_id in include.member_list %}
 		{% assign member = site.members | where: "name", member_id | first %}
 
-		{% if include.link_members %}<a href="/members/{{ member.slug }}">{% endif %}{{ member.title }}{% if include.link_members %}</a>{% endif %}{% if member_id != last_member %}, {% endif %}
+		{% if include.link_members %}<a href="/members/{{ member.slug }}">{% endif %}{{ member.title | replace: " ", "&nbsp;" }}{% if include.link_members %}</a>{% endif %}{% if member_id != last_member %}, {% endif %}
 	{% endfor %}
 {% endif %}
