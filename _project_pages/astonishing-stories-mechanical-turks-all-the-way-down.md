@@ -49,11 +49,11 @@ The display flashed an icon to be more casual. I continued: "just think about al
 
 Am I helping someone's machine buy themselves a gift? What would be the impact if I did recommend the wrong thing? Is there solidarity between those working gigs?
 
-It made me pause in thought again. Lots of existential questions. The system dinged at me that I was taking too long. 
+It made me pause in thought again. Lots of existential questions. The system dinged at me that I was taking too long.
 
 The requestor pinged at the same time: "The optimal time to get this to them will be within the next hour and thirty-five minutes. Acknowledge?"
 
-"I would recommend the Chupa Chups reproduction taste machine instead. It gets at something that your ‘principal' posted a long time ago in the archives." It was a long shot item on the list the system had spit out with low confidence and high uncertainty. 
+"I would recommend the Chupa Chups reproduction taste machine instead. It gets at something that your 'principal' posted a long time ago in the archives." It was a long shot item on the list the system had spit out with low confidence and high uncertainty.
 
 "This was not the highest confidence score for a gift. If I boost that original memory it will change the ranking. It scores very high on nostalgia for my principal. 🙌👉👈👾💞"
 

@@ -21,7 +21,7 @@ Each main ingredient was in a distinct pile; foie gras, unagi, avocado, and stur
   alt="Wholeness in a Timeless Activity"
   class="fn mw-100 fr-m ml4-m mr2-m mt1-m mb2-m mw5-m fr-l ml4-l mr1-l mt2-l mb2-l mw6-l" />
 
-Despite knowing no one was watching, Koichi nodded in approval. He was gazing at the final dish when colorful boxes popped into his vision, surrounding the sushi.[^1] They showed the source of several ingredients; the farm where the avocado was picked, the facility where the sturgeon was bred. Koichi angrily blinked thrice and the advertisements disappeared. He was annoyed -- his new AR lenses meant everything was a QR code now. Let's just get it over with, he thought.  
+Despite knowing no one was watching, Koichi nodded in approval. He was gazing at the final dish when colorful boxes popped into his vision, surrounding the sushi. They showed the source of several ingredients; the farm where the avocado was picked, the facility where the sturgeon was bred. Koichi angrily blinked thrice and the advertisements disappeared. He was annoyed -- his new AR lenses meant everything was a QR code now. Let's just get it over with, he thought.  
 
 Koichi placed one of the slices in his mouth. It was faultless like the many others before it. He dolefully gazed down the line, at the hundred-or-so disconnected arms. Picking up a trash bin, he swept the remaining sushi off the table. His work here was done.
 
@@ -33,12 +33,8 @@ A large advertisement suddenly overtook his vision.
 
 > **_Farmed by the nourished. Find wholeness in a timeless activity._**
 
-His fingers broke through the skin of the avocado in surprise. He began to blink rapidly -- then stopped. It was the farm that the avocado came from. It seemed to also be some sort of luxury retreat for city dwellers.[^2] But it was the text at the bottom that had caused Koichi to stop:
+His fingers broke through the skin of the avocado in surprise. He began to blink rapidly -- then stopped. It was the farm that the avocado came from. It seemed to also be some sort of luxury retreat for city dwellers. But it was the text at the bottom that had caused Koichi to stop:
 
 > _Chefs wanted._
 
 There was an image of a chef standing next to the table of a young, smiling couple. Koichi chuckled. He placed the avocado in the pocket of his apron and walked out the door.
-
-[^1]: Grandma Flair: [A food advertisement](https://www.thegrocer.co.uk/technology-and-supply-chain/new-food-nutrition-sensor-can-scan-for-fat-and-sugar-levels/529874.article) that delights you about the real food that you are eating. If the food you are eating has fewer than five ingredients or ingredients that you can pronounce, it [fills the space with colorful delight](https://www.youtube.com/watch?v=hfxfx-XXLEo).
-
-[^2]: [Farm Stays](https://en.wikipedia.org/wiki/Farm_stay): In the year 2025, as the "always-on" mode of being constantly connected to work (via smartphone, internet, etc.) becomes passe and low-class, large midwest farms place full page advertisements in the New York Times for wealthy urbanites to come pick fruit and other crops as a type of retreat from busy urban life.

@@ -10,25 +10,31 @@ description: How can I possibly untangle this mess?
 project: astonishing-stories
 display: true
 ---
-He looked down in pain at his programmable forearm tattoo[^1] after finishing his last note. The microbots in his arm etched a new web of nodes mirroring his note taking system on Roam. His mind had become a mess since his father's death and now it was reflected on his arm for all to see. "How can I possibly untangle this mess" he thought to himself.
+Sometimes I just marvel at the world we live in. People always bitch about the global, remote workforce -- a race to the bottom, downward pressure on wages, blah, blah, blah -- but here I was getting ready to Virtual HouseGuest with my new girlfriend's parents for dinner tomorrow, and I was about to get some niche expertise on styling my hair on a Sunday night. You needed something, no matter how minor, someone, somewhere in the world could help you with it. It was amazing!
 
-He had tried everything, even subscribing to the "Love the Land"[^2] program sponsored by the state. The people from the LLE (Love the land enforcement) had taken away all his electronic devices and internet connected implants and put him on a homestead 150 miles west of Austin in the West Texas desert. There, every evening he looked at the wind turbines lined across the entire horizon and wondered when his mind would cease to become an endless loop of the same thoughts going round and round.
+"Hi, this is JoAnne, your Medium-Length Men's Hair consultant. First, can I get your hair profile?" I turned my head from side to side so that the camera on my computer could capture all the angles of my head. "Thank you. While that's processing, what can I help you with today?"
+
+"Yeah, I've been growing my hair out for the first time since -- well, I guess since the last pandemic. Ha! Time flies, right? Anyway, I'm virtually meeting my girlfriend's parents for the first time tomorrow. I want to look relaxed but not flaky, amenable but not ambivalent. What should I do with my hair?"
 
 <img
   src="{{ page.hero_image }}"
   alt="Agglomerizing the Aesthetic"
   class="fn mw-100 fr-m ml4-m mr2-m mt1-m mb2-m mw5-m fr-l ml4-l mr1-l mt2-l mb2-l mw6-l" />
 
-Now, he was swiping through the Perfect Father app that his friend had suggested as something he could try. He eventually ended up hiring an older man with a slightly disappointed resting face as his father. Rather than this being a sado-masochistic experience, it so happened that Mr.Vader, the man he hired to be his father is actually a pretty decent indie-life coach. Mr.Vader introduced him to the concept of "reparenting". The act of imagining being a parent to your younger self, the way you would have liked to be parented and coached. He had always thought of himself as the son who never lived up to his father's expectations but oddly enough Mr.Vader had made him realize that this aggrandizing, hypercritical inner self that he had acquired during his formal years was kind of a drag. But, now he was angry at his dead father.
+"Well, I think you're asking your hair to do a lot of heavy lifting here," JoAnne chided playfully and winked, "But let me see how I can help. First, you'll need to answer a few questions about your hair, your grooming habits, your girlfriend, her parents, your parents --"
 
-He decided to feed the memories from his iRemember account that collected artefacts from his life and his own Roam notes to GPT-51 which accurately represented his father, except for the occasional off hand complement which he hated. He found yelling and getting extremely angry at GPT-51 to be surprisingly cathartic, kind of like an escape room experience but for relationships.
+"Whoa, JoAnne! Geez," Putting my hands up in mock resignation. "I'm trying to get some styling tips, not a security clearance!" I laughed loudly. The thing about a global labor market was that you had to be on top of your game, because if you weren't there was always someone else looking to replace you. Customer service had become an art form and that included witty repartee. I loved it.
 
-Today, he was browsing through the App Store and found that GTP-51 PREFAB FATHER was not the top selling app this month. He looked down at his forearm tattoo, which right now resembled the beautiful constellations he observed on that dreadful Love the Land escapade, and thought "Who knew you could be rich from your trauma."
+JoAnne smiled graciously. "Don't worry. I've helped thousands of men with medium-length hair in hundreds of different situations. We'll figure out exactly what you need." The survey appeared on my screen. Twenty minutes later I clicked Send.
 
-[^1]: A programmable forearm tattoo controlled by micro bots who can add and remove ink dynamically. It connects to the API of your personal note taking system. As you take notes and develop original ideas, the tattoo adds or removes nodes. Like the Roam node graph, but visible on your forearm. You can write your own CSS to style the tattoo as you wish. Expansive node graphs and original styling are highly respected as publicly visible performances of knowledge work.
+"Read it and weep, JoAnne." I joked. "Don't fall in love with me now."
 
-[^2]: **Love The Land:** A return to simpler times, this federal campaign advertises the joys of simple life -- work the land and grow your own crops, disconnect from technology. Some  take this earnestly and reconnect to growing their own food, others take it as permission to make love on the land, creating delightful 60's era 'make love' communes.
+JoAnne smiled, "No, no, we'll get right down to it. So first --" JoAnne paused as she read my survey answers. Her brow furrowed and she looked quickly to the screen with my hair profile.
 
-[^3]: <https://www.newyorker.com/magazine/2018/04/30/japans-rent-a-family-industry>
+There was an intake of breath through clenched teeth. "Oooh, I'm sorry. It looks like your hair has some potential pH balance issues. I only handle hair in the normal 4.5 - 5.5 range. Don't worry though! I'm going to connect you with our pH specialist and she will take care of you."
 
-[^4]: <https://www.gwern.net/GPT-3>
+"Wait, I just need --" the video call disconnects and after a long pause, I see another face appear on-screen.
+
+"Hi, this Sandy, your pH balance hair specialist. First, can I get your hair profile? I'll also need you to answer a few questions about your hair, your grooming habits, your girlfriend, her parents, your parents..."
+
+"Goddammit..."

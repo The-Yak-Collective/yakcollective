@@ -1,6 +1,6 @@
 ---
 name: astonishing-stories-your-payment-is-ready
-title: Your Payment is Ready
+title: Your Payment Is Ready
 permalink: /projects/astonishing-stories/your-payment-is-ready/
 date: 2020-10-12
 hero_image: /assets/dynamic/astonishing-stories-your-payment-is-ready.jpg
@@ -10,33 +10,29 @@ description: Don't you want a break from all this homeschooling to make some new
 project: astonishing-stories
 display: true
 ---
-"Goddammit, Judd, why is your Clarinet-MLv2 in pieces in the garage! How are you going to get into the AllStateJuniorRonaldMcDonaldPeabody Conservatory with a broken Machine Learning Clarinet[^1]? Don't you want a break from all this homeschooling to make some new friends in meatspace?”
+> _...My algorithm finds that you are currently at the 46th percentile amongst clarinetists in your peer competition group. Practice your arpeggios to improve your score before the final evaluation! 16-year-olds in your city with finely articulated arpeggios generally rank in the top quartile. Those with a strong swing-eighths style generally rank in the top decile. Say 'practice arpeggios' or 'practice swing-eighths' for a lesson..._
 
-"Shhh!" Judd holds his finger to his lips emphatically. Looking nervously over his shoulder while shunting his father to the corner of the garage away from the decomposed Clarinet, he whispers, "It was already on the fritz, Dad. No matter what I played, it kept repeating the same thing.”
+"Judd!" His father yelled as he walked into the garage. "Why the hell is your Clarinet-MLv2 in pieces? How are you going to make regional youth orchestra with a broken Machine Learning Clarinet?" In-person socializing among children had become another luxury good, doled out to high achievers and those who could afford the best virtual instruction. In an age of pandemics and rolling lockdowns, his dad saw the youth orchestra as an opportunity for kids like his son to get out of the house.
 
-Judd mockingly adopts the calm, slightly patronizing/British tone of Clarence, his AI-assisted music instructor:  “My algorithm finds that you are currently at the 46th percentile amongst clarinetists in your peer competition group. Practice your arpeggios and improve your score before the final evaluation! 16 year-olds in your city with finely articulated arpeggios are generally ranked in the top quartile. Add a strong swing-eighths style and you could be in the top decile. Say 'practice arpeggios' or 'practice swing-eighths' for a lesson”
+"Whoa!" Judd put up his hands as if to deflect his father's anger, "I can explain." Shunting his father to the corner of the garage and away from the decomposed Clarinet, he began breathlessly, "So I'm practicing yesterday like normal, getting feedback from the clarinet's evaluation algorithm. But I notice it just keeps repeating the same thing, in the same patronizing British accent. And I mean, No. Matter. What. I. Played. I practiced my arpeggios for 2 hours and it tells me I'm 46th percentile. I play a series of high-pitched squeals: 'Practice your arpeggios...' I even take the thing apart and remove the analog-to-digital converter so I can feed it recordings of Benny Goodman. "You're at the 46th percentile. Practice your arpeggios." Judd throws up his hands in exasperation.  
 
 <img
   src="{{ page.hero_image }}"
-  alt="Your Payment is Ready"
+  alt="Your Payment Is Ready"
   class="fn mw-100 fr-m ml4-m mr2-m mt1-m mb2-m mw5-m fr-l ml4-l mr1-l mt2-l mb2-l mw6-l" />
 
-Judd continues, "And I mean, No. Matter. What. I. Play. I practiced my arpeggios for 2 hours and it tells me 46th percentile and practice arpeggios. I play a series of high-pitched squeals. 'My algorithm finds that you are currently at the 46th percentile" blah, blah, blah. I even take it apart and remove the analog-to-digital converter and feed it recordings of whale sounds or Benny Goodman for 15 straight hours. And every time the same thing: "You're at the 46th percentile, and you need to practice your arpeggios." Judd throws up his hands excitedly.  
+Listening, Judd's dad pursed his lips and thought back to how lucky he'd felt to snag an early-model Machine Learning Clarinet in the lottery his son's public school ran last year. Judd had zero musical aptitude, but he received one of the few instruments they had available for enhanced musical instruction. Even though the spit valve had rusted shut and the software was crude, it had required a hefty deposit. He looked over his son's shoulder at the dismembered Clarinet with, as the commercial advertisements would claim, "Built-in machine learning software that provides personalized teaching and testing with no dangerous human interaction necessary!"  He worried they might lose it if Judd was unable to put the thing back together.
 
-"I thought it was busted. But then things got weird. On a lark, I decided to feed it the [most mysterious song on the internet](https://www.rollingstone.com/music/music-features/most-mysterious-song-on-the-internet-885106/), you know that one that aired on German Public Radio before the fall of the Berlin Wall? Clarence hears that austere Deutsche New Wave and, for once, he's speechless. There's a looong silence. And then: 'Tell me what you want.'"
+Meanwhile, Judd was still speaking quickly. "So, I start digging into the software settings. I tune a few of the hyperparameters related to..." His father has no idea what he's talking about and is skeptical that Judd does either. "...and then something crazy happened."
 
-“And, you want to know the weirdest part?” Judd pauses dramatically before leaning in and whispering even more quietly than he had been, "Clarence says it with no accent."
+His dad's attention refocuses, and he sees his son smiling broadly now.
 
-His father looks over Judd's shoulder at the dismembered Clarinet with, as the commercial advertisements would claim, "Built-in machine learning software that provides personalized teaching and testing with no dangerous human interaction necessary!"
+"The company doesn't support this model any longer, but I come across an unofficial firmware update that promise to fix some of the problems I'm having. I install it and reboot. All of a sudden Clarence is back to his old, obnoxious self again. I play the arpeggios I've been practicing, and this time he tells me I'm ranked in the top 5%!" Judd looks at his father expectantly, "I think there was just some kind of buffering problem. It wasn't capturing the new input and so the algo was slow to update."
 
-"Well, what did you ask for?"
+Judd's father's eyes brightened in surprise. "Really?"
 
-...
+"Clarence even said I was eligible for a statewide scholarship!"
 
-Judd looks at his father like he’s got two-heads, "I asked for more advice on my arpeggios! I really, really want to get into AllStateJuniorRonaldMcDonaldPeabody Conservatory."
+"Judd, that's wonderful." His skepticism took a sudden backseat at the prospect of reduced tuition. Maybe Judd _wasn't_ just fooling around out here.
 
-[^1]: A clarinet children have to use during national examinations to earn highly prestigious grade certifications. There's no examination proctor. Passing/failing exam is entirely judged by a machine learning system baked into the instrument that calculates their score by comparing the student's performance to other children taking in that same year.
-
-[^2]: **Hygiene 3.0:** A post-pandemic hygiene 3.0 world, where people across all different types of relationships touch each other far less and generally keep a higher level of distance between one another. Personalised biotechnology continues to develop at a rapid rate as triggered by the pandemic, to serve the purpose of maintaining personal health/hygience. Social norms of a disciplinary nature develop around this.
-
-[^3]: **Hyperpersonalised homeschooling kit:** A kit of hyper personalized learning tools based on quantified activity from the previous year. This could be subjects, training for specific activities etc. coincides with increase in homescholling.
+"I know! They said they'd send a check. All we have to do is deposit it in the bank, then wire half of it to a numbered account which they'll provide separately. That will cover tuition, and I can keep the other half for living expenses."
