@@ -2,13 +2,31 @@
 name: astonishing-stories-mechanical-turks-all-the-way-down
 title: Mechanical Turks All the Way Down
 permalink: /projects/astonishing-stories/mechanical-turks-all-the-way-down/
-date: 2020-11-09
+date: 2020-11-16
 hero_image: /assets/dynamic/astonishing-stories-mechanical-turks-all-the-way-down.jpg
 author: chris-butler
 google_doc: https://docs.google.com/document/d/1HpnU_k_Q3xulIfwiEtdpfMycZeTRvR-cPWDl8mA___E/edit
 description: Can't be too eager on your first day of the job.
 project: astonishing-stories
 display: true
+page_headers: |
+  <style type="text/css">
+    html {
+      font-size: 1.2em;
+    }
+    body {
+      font-family: "Mouse Memoirs", "Comic Sans MS", cursive, sans-serif;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    .subhead {
+      font-family: Bangers, Impact, Charcoal, sans-serif;
+    }
+  </style>
 ---
 I jabbed at the "accept" button on one of the many touch surfaces in my shared office, home, and daycare. Can't be too eager on your first day of the job.
 

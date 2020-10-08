@@ -2,13 +2,31 @@
 name: astonishing-stories-your-payment-is-ready
 title: Your Payment Is Ready
 permalink: /projects/astonishing-stories/your-payment-is-ready/
-date: 2020-10-12
+date: 2020-10-19
 hero_image: /assets/dynamic/astonishing-stories-your-payment-is-ready.jpg
 author: ben-smith
 google_doc: https://docs.google.com/document/d/15LRvkKeNMwRgr6Zf8dYLBBAqhpBxIyLP_WBE16H-PCg/edit
-description: Don't you want a break from all this homeschooling to make some new friends in meatspace?
+description: In-person socializing among children had become another luxury good, doled out to high achievers and those who could afford the best virtual instruction.
 project: astonishing-stories
 display: true
+page_headers: |
+  <style type="text/css">
+    html {
+      font-size: 1.2em;
+    }
+    body {
+      font-family: "Mouse Memoirs", "Comic Sans MS", cursive, sans-serif;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    .subhead {
+      font-family: Bangers, Impact, Charcoal, sans-serif;
+    }
+  </style>
 ---
 > _...My algorithm finds that you are currently at the 46th percentile amongst clarinetists in your peer competition group. Practice your arpeggios to improve your score before the final evaluation! 16-year-olds in your city with finely articulated arpeggios generally rank in the top quartile. Those with a strong swing-eighths style generally rank in the top decile. Say 'practice arpeggios' or 'practice swing-eighths' for a lesson..._
 

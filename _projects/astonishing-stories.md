@@ -1,7 +1,7 @@
 ---
 name: astonishing-stories
 title: Astonishing Stories
-date: 2020-10-12
+date: 2020-10-19
 tagline: Weird is part of the job.
 roam_page: https://roamresearch.com/#/app/Astonishing_Stories/page/5x1kRx_Fx
 type: Zine
@@ -10,6 +10,21 @@ hero_image: /assets/dynamic/astonishing-stories-hero.svg
 accent_color: "125,150,175"
 page_headers: |
   <style type="text/css">
+    html {
+      font-size: 1.2em;
+    }
+    body {
+      font-family: "Mouse Memoirs", "Comic Sans MS", cursive, sans-serif;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    .subhead {
+      font-family: Bangers, Impact, Charcoal, sans-serif;
+    }
     .hero:before {
       opacity: 0.4;
     }

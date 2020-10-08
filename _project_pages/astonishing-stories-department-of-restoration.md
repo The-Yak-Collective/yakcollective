@@ -2,17 +2,35 @@
 name: astonishing-stories-department-of-restoration
 title: Department of Restoration
 permalink: /projects/astonishing-stories/department-of-restoration/
-date: 2020-10-26
+date: 2020-11-02
 hero_image: /assets/dynamic/astonishing-stories-department-of-restoration.jpg
 author: scott-garlinger
 google_doc: https://docs.google.com/document/d/1JrlKrp4C3sy9ByOecAEWc2mxnoodvM5PWVAqpGVFhVY/edit
-description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id gravida metus.
+description: "At a certain time, in a certain space, a person may speak or act and find himself under a recent form of judgment: cancelation."
 project: astonishing-stories
 display: true
+page_headers: |
+  <style type="text/css">
+    html {
+      font-size: 1.2em;
+    }
+    body {
+      font-family: "Mouse Memoirs", "Comic Sans MS", cursive, sans-serif;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    .subhead {
+      font-family: Bangers, Impact, Charcoal, sans-serif;
+    }
+  </style>
 ---
 At a certain time, in a certain space, a person may speak or act and find himself under a recent form of judgment: _cancelation_.
 
-Indeed, this algorithmic  tribunal stands watch over many, many occurances, and their decrees hold unforeseen consequences. Those people, those consequences, still navigate day-to-day life but haven't the chance to go back or go forward.
+Indeed, this algorithmic tribunal stands watch over many, many occurances, and their decrees hold unforeseen consequences. Those people, those consequences, still navigate day-to-day life but haven't the chance to go back or go forward.
 
 <img
   src="{{ page.hero_image }}"

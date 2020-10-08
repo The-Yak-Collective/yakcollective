@@ -2,13 +2,31 @@
 name: astonishing-stories-agglomerizing-the-aesthetic
 title: Agglomerizing the Aesthetic
 permalink: /projects/astonishing-stories/agglomerizing-the-aesthetic/
-date: 2020-11-02
+date: 2020-11-09
 hero_image: /assets/dynamic/astonishing-stories-agglomerizing-the-aesthetic.jpg
 author: ben-smith
 google_doc: https://docs.google.com/document/d/15LRvkKeNMwRgr6Zf8dYLBBAqhpBxIyLP_WBE16H-PCg/edit
-description: How can I possibly untangle this mess?
+description: You needed something, no matter how minor, someone, somewhere in the world could help you with it.
 project: astonishing-stories
 display: true
+page_headers: |
+  <style type="text/css">
+    html {
+      font-size: 1.2em;
+    }
+    body {
+      font-family: "Mouse Memoirs", "Comic Sans MS", cursive, sans-serif;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    .subhead {
+      font-family: Bangers, Impact, Charcoal, sans-serif;
+    }
+  </style>
 ---
 Sometimes I just marvel at the world we live in. People always bitch about the global, remote workforce -- a race to the bottom, downward pressure on wages, blah, blah, blah -- but here I was getting ready to Virtual HouseGuest with my new girlfriend's parents for dinner tomorrow, and I was about to get some niche expertise on styling my hair on a Sunday night. You needed something, no matter how minor, someone, somewhere in the world could help you with it. It was amazing!
 

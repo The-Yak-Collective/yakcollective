@@ -4,7 +4,7 @@ html {
 }
 
 body {
-	font-family: "Noto Serif SC", Georgia, serif;
+	font-family: "Noto Serif SC", "Palatino Linotype", "Book Antiqua", Palatino, serif;
 	color: rgba(0,0,0,1.00);
 	background-color: rgba(255,255,255,1.0);
 	padding: 0px;

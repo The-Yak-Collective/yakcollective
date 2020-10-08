@@ -22,29 +22,29 @@ layout: minimal
 		{% include member-card.html is_link=false member=member %}
 	{% endif %}
 
-	<nav><ul class="toc"><li>
-		{% assign project = site.projects | where: "name", page.project | first %}
-		<a href="/projects/{{ project.name }}/">{{ project.title }}</a>
-
-		{% comment %}
-			FIXME: The code below for determining the list of project
-			pages to display is identical in all essential ways to the
-			project page display code in `project.html`, and should be
-			abstracted.
-		{% endcomment %}
-		{% assign project_pages = site.project_pages | where: "project", project.name | where: "display", true %}
-		{% if project_pages.size > 0 %}
-			{% assign test_pp = project_pages[1] %}
-			{% if test_pp.date %}
-				{% assign sorted_project_pages = project_pages | sort: "date" | reverse %}
-			{% endif %}
-			<ul>
-				{% for pp in sorted_project_pages %}
-					<li>{% if pp.name == page.name %}<strong>{% else %}<a href="{% if pp.original_link %}{{ pp.original_link }}{% else %}{{ pp.permalink }}{% endif %}">{% endif %}{{ pp.title }}{% if pp.name == page.name %}</strong>{% else %}</a>{% endif %}</li>
-				{% endfor %}
-			</ul>
-		{% endif %}
-	</li></ul></nav>
 </header>
 
 {{ content }}
+
+<nav class="pt4"><ul class="toc"><li>
+	{% assign project = site.projects | where: "name", page.project | first %}
+	<a href="/projects/{{ project.name }}/">{{ project.title }}</a>
+
+	{% comment %}
+		FIXME: The code below for determining the list of project pages
+		to display is identical in all essential ways to the project
+		page display code in `project.html`, and should be abstracted.
+	{% endcomment %}
+	{% assign project_pages = site.project_pages | where: "project", project.name | where: "display", true %}
+	{% if project_pages.size > 0 %}
+		{% assign test_pp = project_pages[1] %}
+		{% if test_pp.date %}
+			{% assign sorted_project_pages = project_pages | sort: "date" | reverse %}
+		{% endif %}
+		<ul>
+			{% for pp in sorted_project_pages %}
+				<li>{% if pp.name == page.name %}<strong>{% else %}<a href="{% if pp.original_link %}{{ pp.original_link }}{% else %}{{ pp.permalink }}{% endif %}">{% endif %}{{ pp.title }}{% if pp.name == page.name %}</strong>{% else %}</a>{% endif %}</li>
+			{% endfor %}
+		</ul>
+	{% endif %}
+</li></ul></nav>
