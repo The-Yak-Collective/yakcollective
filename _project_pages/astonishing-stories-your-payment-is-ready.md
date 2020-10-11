@@ -11,11 +11,8 @@ project: astonishing-stories
 display: true
 page_headers: |
   <style type="text/css">
-    html {
-      font-size: 1.2em;
-    }
     body {
-      font-family: "Mouse Memoirs", "Comic Sans MS", cursive, sans-serif;
+      font-family: "Noto Sans SC", Verdana, sans-serif;
     }
     h1,
     h2,
