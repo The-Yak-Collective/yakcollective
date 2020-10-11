@@ -11,9 +11,11 @@ project: astonishing-stories
 display: true
 page_headers: |
   <style type="text/css">
+    /*
     body {
       font-family: "Noto Sans SC", Verdana, sans-serif;
     }
+    */
     h1,
     h2,
     h3,
