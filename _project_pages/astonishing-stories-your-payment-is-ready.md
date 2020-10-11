@@ -4,7 +4,7 @@ title: Your Payment Is Ready
 permalink: /projects/astonishing-stories/your-payment-is-ready/
 date: 2020-10-19
 hero_image: /assets/dynamic/astonishing-stories-your-payment-is-ready.jpg
-author: ben-smith
+author: smith-ben
 google_doc: https://docs.google.com/document/d/15LRvkKeNMwRgr6Zf8dYLBBAqhpBxIyLP_WBE16H-PCg/edit
 description: In-person socializing among children had become another luxury good, doled out to high achievers and those who could afford the best virtual instruction.
 project: astonishing-stories

@@ -10,11 +10,8 @@ hero_image: /assets/dynamic/astonishing-stories-hero.svg
 accent_color: "125,150,175"
 page_headers: |
   <style type="text/css">
-    html {
-      font-size: 1.2em;
-    }
     body {
-      font-family: "Mouse Memoirs", "Comic Sans MS", cursive, sans-serif;
+      font-family: "Noto Sans SC", Verdana, sans-serif;
     }
     h1,
     h2,
@@ -39,13 +36,13 @@ summary: |
 
   The stories here are not meant to predict the future but to be imagination extenders for entrepreneurs and consultants navigating a post-COVID landscape.
 lead_editors:
-  - amanda-reeves
-  - sachin-benny
+  - benny-sachin
+  - reeves-amanda
 collaborators:
-  - ben-smith
-  - chris-butler
-  - nathan-chen
-  - scott-garlinger
+  - butler-chris
+  - chen-nathan
+  - garlinger-scott
+  - smith-ben
 ---
 
 ## Additional Credits

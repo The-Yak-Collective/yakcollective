@@ -4,7 +4,7 @@ title: Mechanical Turks All the Way Down
 permalink: /projects/astonishing-stories/mechanical-turks-all-the-way-down/
 date: 2020-11-16
 hero_image: /assets/dynamic/astonishing-stories-mechanical-turks-all-the-way-down.jpg
-author: chris-butler
+author: butler-chris
 google_doc: https://docs.google.com/document/d/1HpnU_k_Q3xulIfwiEtdpfMycZeTRvR-cPWDl8mA___E/edit
 description: Can't be too eager on your first day of the job.
 project: astonishing-stories

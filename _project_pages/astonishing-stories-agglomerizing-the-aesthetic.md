@@ -4,7 +4,7 @@ title: Agglomerizing the Aesthetic
 permalink: /projects/astonishing-stories/agglomerizing-the-aesthetic/
 date: 2020-11-09
 hero_image: /assets/dynamic/astonishing-stories-agglomerizing-the-aesthetic.jpg
-author: ben-smith
+author: smith-ben
 google_doc: https://docs.google.com/document/d/15LRvkKeNMwRgr6Zf8dYLBBAqhpBxIyLP_WBE16H-PCg/edit
 description: You needed something, no matter how minor, someone, somewhere in the world could help you with it.
 project: astonishing-stories

@@ -40,7 +40,7 @@ collections:
         name: name
         widget: string
         required: true
-        hint: Internal identifier. Must be composed only of lower-case ASCII letters and dashes. Normally you will use your full (romanized) name here, with spaces replaced by dashes.
+        hint: Internal identifier. Must be composed only of lower-case ASCII letters and dashes. Normally you will use your (romanized) name here, with spaces replaced by dashes, family name first (so, "Jamie Smith" would be "smith-jamie").
         pattern: [ "[a-z-]+", "Must be composed only of lower-case ASCII letters and dashes" ]
       - label: Name
         name: title

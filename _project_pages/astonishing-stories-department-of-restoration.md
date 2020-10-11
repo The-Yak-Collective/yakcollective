@@ -4,7 +4,7 @@ title: Department of Restoration
 permalink: /projects/astonishing-stories/department-of-restoration/
 date: 2020-11-02
 hero_image: /assets/dynamic/astonishing-stories-department-of-restoration.jpg
-author: scott-garlinger
+author: garlinger-scott
 google_doc: https://docs.google.com/document/d/1JrlKrp4C3sy9ByOecAEWc2mxnoodvM5PWVAqpGVFhVY/edit
 description: "At a certain time, in a certain space, a person may speak or act and find himself under a recent form of judgment: cancelation."
 project: astonishing-stories
