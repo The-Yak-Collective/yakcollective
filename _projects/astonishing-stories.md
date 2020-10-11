@@ -10,9 +10,11 @@ hero_image: /assets/dynamic/astonishing-stories-hero.svg
 accent_color: "125,150,175"
 page_headers: |
   <style type="text/css">
+    /*
     body {
       font-family: "Noto Sans SC", Verdana, sans-serif;
     }
+    */
     h1,
     h2,
     h3,
