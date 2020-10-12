@@ -4,7 +4,7 @@ version: 2.2.0
 
 # Default accent color
 #
-accent_color: "250,200,100"
+accent_color: "250,175,50"
 
 # General site settings
 #
