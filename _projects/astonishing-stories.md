@@ -24,6 +24,9 @@ page_headers: |
     .subhead {
       font-family: Bangers, Impact, Charcoal, sans-serif;
     }
+    .subhead {
+      font-weight: normal;
+    }
     .hero:before {
       opacity: 0.4;
     }

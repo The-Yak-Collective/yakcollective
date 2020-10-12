@@ -257,6 +257,20 @@ collections:
         widget: image
         required: true
         hint: An image file that will be used to represent the page in the corresponding project's page. Should ideally be either an SVG file, or a JPEG or PNG image at least 1280x800 pixels in size. Be aware that the image will be cropped to (almost) a square in many cases, so all of the important parts should be in the central 800x800 region.
+      - label: Hero Image Vertical Position
+        name: hero_attach_vertical
+        widget: select
+        options: [ top, center, bottom ]
+        default: center
+        required: false
+        hint: Project pages are displayed as "cards" on their corresponding project page. The hero image can be anchored vertically to the top, center, or bottom, depending on what corresponds best to the image's focus.
+      - label: Hero Image Horizontal Position
+        name: hero_attach_horizontal
+        widget: select
+        options: [ left, center, right ]
+        default: center
+        required: false
+        hint: Project pages are displayed as "cards" on their corresponding project page. The hero image can be anchored horizontally to the left, center, or right, depending on what corresponds best to the image's focus.
       - label: Page-Specific Headers
         name: page_headers
         widget: text

@@ -148,7 +148,7 @@ h6 a:hover {
 
 .project-page-box-container {
 	width: 100%;
-	flex-grow: 0;
+	/* flex-grow: 0; */
 }
 
 .page-info {
@@ -156,16 +156,33 @@ h6 a:hover {
 	overflow: auto;
 }
 
-@media (min-width: 60em) {
+@media (min-width: 48em) {
 	.project-page-box-container {
-		width: 19rem;
-		flex-grow: 1;
+		width: calc(100% / 2);
 	}
 
 	.page-info {
-		height: 21rem;
+		height: 18rem;
 		overflow: hidden;
 	}
+}
+
+@media (min-width: 64em) {
+	.project-page-box-container {
+		width: calc(100% / 3);
+	}
+}
+
+@media (min-width: 80em) {
+	.project-page-box-container {
+		width: calc(100% / 4);
+		/* width: 19rem;
+		flex-grow: 1; */
+	}
+}
+
+.project-page-box .hero {
+	height: 27rem;
 }
 
 .member-box,

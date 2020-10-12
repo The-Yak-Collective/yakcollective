@@ -4,6 +4,8 @@ title: Wholeness in a Timeless Activity
 permalink: /projects/astonishing-stories/wholeness-in-a-timeless-activity/
 date: 2020-10-26
 hero_image: /assets/dynamic/astonishing-stories-wholeness-in-a-timeless-activity.jpg
+hero_attach_vertical: top
+hero_attach_horizontal: center
 author: chen-nathan
 google_doc: https://docs.google.com/document/d/1Uke-4h8kYARpFZixBfa5Ht6H-UWa7PyJar9Iqq8-rCE/edit
 description: There are some activities the wealthy occasionally lust after. But there is one they will never stop avoiding.
@@ -24,6 +26,9 @@ page_headers: |
     h6,
     .subhead {
       font-family: Bangers, Impact, Charcoal, sans-serif;
+    }
+    .subhead {
+      font-weight: normal;
     }
   </style>
 ---

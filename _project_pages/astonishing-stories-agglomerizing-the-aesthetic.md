@@ -4,6 +4,8 @@ title: Agglomerizing the Aesthetic
 permalink: /projects/astonishing-stories/agglomerizing-the-aesthetic/
 date: 2020-11-09
 hero_image: /assets/dynamic/astonishing-stories-agglomerizing-the-aesthetic.jpg
+hero_attach_vertical: center
+hero_attach_horizontal: center
 author: smith-ben
 google_doc: https://docs.google.com/document/d/15LRvkKeNMwRgr6Zf8dYLBBAqhpBxIyLP_WBE16H-PCg/edit
 description: You needed something, no matter how minor, someone, somewhere in the world could help you with it.
@@ -24,6 +26,9 @@ page_headers: |
     h6,
     .subhead {
       font-family: Bangers, Impact, Charcoal, sans-serif;
+    }
+    .subhead {
+      font-weight: normal;
     }
   </style>
 ---

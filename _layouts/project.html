@@ -76,7 +76,7 @@ layout: default
 		{% if test_pp.date %}
 			{% assign sorted_project_pages = project_pages | sort: "date" | reverse %}
 		{% endif %}
-		<section class="project-pages pt3 w-90 mw9 center">
+		<section class="project-pages ph2 w-100 ph0-l w-90-l mw9 center">
 			{% for pp in sorted_project_pages %}
 				{% include project-page-box.html pp=pp %}
 			{% endfor %}

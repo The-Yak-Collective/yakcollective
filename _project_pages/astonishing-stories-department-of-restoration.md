@@ -4,6 +4,8 @@ title: Department of Restoration
 permalink: /projects/astonishing-stories/department-of-restoration/
 date: 2020-11-02
 hero_image: /assets/dynamic/astonishing-stories-department-of-restoration.jpg
+hero_attach_vertical: center
+hero_attach_horizontal: center
 author: garlinger-scott
 google_doc: https://docs.google.com/document/d/1JrlKrp4C3sy9ByOecAEWc2mxnoodvM5PWVAqpGVFhVY/edit
 description: "At a certain time, in a certain space, a person may speak or act and find himself under a recent form of judgment: cancelation."
@@ -24,6 +26,9 @@ page_headers: |
     h6,
     .subhead {
       font-family: Bangers, Impact, Charcoal, sans-serif;
+    }
+    .subhead {
+      font-weight: normal;
     }
   </style>
 ---
