@@ -2,7 +2,7 @@
 name: astonishing-stories-department-of-restoration
 title: Department of Restoration
 permalink: /projects/astonishing-stories/department-of-restoration/
-date: 2020-11-02
+date: 2020-10-30
 hero_image: /assets/dynamic/astonishing-stories-department-of-restoration.jpg
 hero_attach_vertical: center
 hero_attach_horizontal: center
@@ -45,7 +45,7 @@ This growing body of consequences now finally sees a new option, an outlet for m
 
 This department of restoration achieves a plane never before seen. The department will have many adherents because, as they say, _we are always on trial_. They say this will be the end of forgiveness as we know it.
 
-* * *
++++
 
 Of course, we know this is impossible.
 

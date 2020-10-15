@@ -1,9 +1,9 @@
 ---
-name: astonishing-stories-in-a-class-of-their-own
-title: In a Class of Their Own
-permalink: /projects/astonishing-stories/in-a-class-of-their-own/
-date: 2020-10-19
-hero_image: /assets/dynamic/astonishing-stories-in-a-class-of-their-own.jpg
+name: astonishing-stories-your-payment-is-ready
+title: Your Payment is Ready
+permalink: /projects/astonishing-stories/your-payment-is-ready/
+date: 2020-10-23
+hero_image: /assets/dynamic/astonishing-stories-your-payment-is-ready.jpg
 hero_attach_vertical: center
 hero_attach_horizontal: center
 author: smith-ben

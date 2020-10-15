@@ -69,12 +69,19 @@ layout: default
 		`project_pages` to check if `date` exists there before sorting,
 		on the assumption that all elements of `project_pages` have a
 		consistent set of attributes (after filtering).
+
+		We *don't* use a reverse sort here (unlike most of Jekyll) in
+		order to better support ghosted "coming soon" page cards. If
+		dates aren't present, we sort in alphabetical order by page
+		slug.
 	{% endcomment %}
 	{% assign project_pages = site.project_pages | where: "project", page.name | where: "display", true %}
 	{% if project_pages.size > 0 %}
 		{% assign test_pp = project_pages[1] %}
 		{% if test_pp.date %}
-			{% assign sorted_project_pages = project_pages | sort: "date" | reverse %}
+			{% assign sorted_project_pages = project_pages | sort: "date" %}
+		{% else %}
+			{% assign sorted_project_pages = project_pages | sort: "name" %}
 		{% endif %}
 		<section class="project-pages ph2 w-100 ph0-l w-90-l mw9 center">
 			{% for pp in sorted_project_pages %}
