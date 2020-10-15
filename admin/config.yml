@@ -252,6 +252,11 @@ collections:
         displayFields: [ title ]
         multiple: false
         required: true
+      - label: Page Author Bio
+        name: author_bio
+        widget: markdown
+        required: false
+        hint: A page-specific bio blurb. Markdown is allowed.
       - label: Hero Image
         name: hero_image
         widget: image

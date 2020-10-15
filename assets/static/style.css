@@ -4,8 +4,8 @@ html {
 }
 
 body {
-	/* font-family: "Noto Serif SC", "Palatino Linotype", "Book Antiqua", Palatino, serif; */
-	font-family: "Noto Sans SC", Verdana, sans-serif;
+	/* font-family: "Noto Serif", "Palatino Linotype", "Book Antiqua", Palatino, serif; */
+	font-family: "Noto Sans";
 	color: rgba(0,0,0,1.00);
 	background-color: rgba(255,255,255,1.0);
 	padding: 0px;
@@ -162,7 +162,7 @@ h6 a:hover {
 	}
 
 	.page-info {
-		height: 18rem;
+		height: 20rem;
 		overflow: hidden;
 	}
 }
@@ -176,13 +176,11 @@ h6 a:hover {
 @media (min-width: 80em) {
 	.project-page-box-container {
 		width: calc(100% / 4);
-		/* width: 19rem;
-		flex-grow: 1; */
 	}
 }
 
 .project-page-box .hero {
-	height: 27rem;
+	height: 30rem;
 }
 
 .member-box,

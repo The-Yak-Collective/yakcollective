@@ -10,11 +10,6 @@ hero_image: /assets/dynamic/astonishing-stories-hero.svg
 accent_color: "125,150,175"
 page_headers: |
   <style type="text/css">
-    /*
-    body {
-      font-family: "Noto Sans SC", Verdana, sans-serif;
-    }
-    */
     h1,
     h2,
     h3,
@@ -22,16 +17,55 @@ page_headers: |
     h5,
     h6,
     .subhead {
-      font-family: Bangers, Impact, Charcoal, sans-serif;
+      font-family: "Sonsie One";
+    }
+    h1 {
+      font-size: 1.8em;
+    }
+    h2 {
+      font-size: 1.35em;
+    }
+    h3 {
+      font-size: 1.053em;
+    }
+    h4 {
+      font-size: 0.9em;
+    }
+    h5 {
+      font-size: 0.747em;
+    }
+    h6 {
+      font-size: 0.603em;
+    }
+    .f1 {
+      font-size: 2.7rem
     }
     .subhead {
       font-weight: normal;
+      font-size: 0.9em
     }
     .hero:before {
       opacity: 0.4;
     }
-    .story-container {
-      display: block;
+    #astonishing-stories-agglomerizing-the-aesthetic h2,
+    #astonishing-stories-your-payment-is-ready h2 {
+      font-family: "Sonsie One";
+      font-size: 1.35em;
+      margin-block-start: 0.922em;
+      margin-block-end: 0.922em;
+    }
+    #astonishing-stories-department-of-restoration h2 {
+      font-family: "Ceviche One";
+      font-size: 2.1em;
+      margin-block-start: 0.395em;
+      margin-block-end: 0.395em;
+    }
+    #astonishing-stories-mechanical-turks-all-the-way-down h2,
+    #astonishing-stories-wholeness-in-a-timeless-activity h2 {
+      font-family: Bangers;
+      font-size: 1.65em;
+      margin-block-start: 0.755em;
+      margin-block-end: 0.755em;
     }
   </style>
 summary: |

@@ -13,11 +13,6 @@ project: astonishing-stories
 display: true
 page_headers: |
   <style type="text/css">
-    /*
-    body {
-      font-family: "Noto Sans SC", Verdana, sans-serif;
-    }
-    */
     h1,
     h2,
     h3,
@@ -25,10 +20,32 @@ page_headers: |
     h5,
     h6,
     .subhead {
-      font-family: Bangers, Impact, Charcoal, sans-serif;
+      font-family: "Ceviche One";
+    }
+    h1 {
+      font-size: 2.8em;
+    }
+    h2 {
+      font-size: 2.1em;
+    }
+    h3 {
+      font-size: 1.638em;
+    }
+    h4 {
+      font-size: 1.4em;
+    }
+    h5 {
+      font-size: 1.162em;
+    }
+    h6 {
+      font-size: 0.938em;
+    }
+    .f1 {
+      font-size: 4.2rem
     }
     .subhead {
       font-weight: normal;
+      font-size: 1.4em
     }
   </style>
 ---

@@ -15,18 +15,24 @@ layout: minimal
 {% endcomment %}
 
 <header>
-	<h1 class="yak-post">{% if page.original_link %}<a href="{{ page.original_link }}">{% endif %}{{ page.title }}{% if page.original_link %}</a>{% endif %}</h1>
-
-	{% if page.author %}
-		{% assign member = site.members | where: "name", page.author | first %}
-		{% include member-card.html is_link=false member=member %}
-	{% endif %}
-
+	<h1>{% if page.original_link %}<a href="{{ page.original_link }}">{% endif %}{{ page.title }}{% if page.original_link %}</a>{% endif %}</h1>
 </header>
 
 {{ content }}
 
-<nav class="pt4"><ul class="toc"><li>
+<footer class="pt4">
+	{% if page.author %}
+		{% assign member = site.members | where: "name", page.author | first %}
+		{% include member-card.html is_link=false member=member %}
+		<div class="f6 ph2 pb1">
+			{% if page.author_bio %}
+				{{ page.author_bio | markdownify }}
+			{% endif %}
+		</div>
+	{% endif %}
+</footer>
+
+<nav><ul class="toc"><li>
 	{% assign project = site.projects | where: "name", page.project | first %}
 	<a href="/projects/{{ project.name }}/">{{ project.title }}</a>
 
@@ -39,7 +45,9 @@ layout: minimal
 	{% if project_pages.size > 0 %}
 		{% assign test_pp = project_pages[1] %}
 		{% if test_pp.date %}
-			{% assign sorted_project_pages = project_pages | sort: "date" | reverse %}
+			{% assign sorted_project_pages = project_pages | sort: "date" %}
+		{% else %}
+			{% assign sorted_project_pages = project_pages | sort: "name" %}
 		{% endif %}
 		<ul>
 			{% for pp in sorted_project_pages %}
