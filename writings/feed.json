@@ -28,7 +28,7 @@ layout: null-layout
     drive traffic to member websites.
   {% endcomment %}
   "items": [
-    {% assign feed_items = site.feed_items | default: 10 %}
+    {% assign feed_items = site.feed_items | default: 15 %}
     {% for post in site.categories.writings limit:feed_items %}
       {
         "id": "{% if post.original_link %}{{ post.original_link | jsonify }}{% else %}{{ site.url }}{{ post.url }}{% endif %}",

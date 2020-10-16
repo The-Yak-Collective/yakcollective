@@ -28,7 +28,7 @@ layout: null-layout
 			thing here and link to the original (external) post whenever
 			possible, so as to drive traffic to member websites.
 		{% endcomment %}
-		{% assign feed_items = site.feed_items | default: 10 %}
+		{% assign feed_items = site.feed_items | default: 15 %}
 		{% for post in site.categories.writings limit:feed_items %}
 			<item>
 				<title>{{ post.title | xml_escape }}</title>
