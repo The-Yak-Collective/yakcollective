@@ -15,6 +15,9 @@ project: astonishing-stories
 display: true
 page_headers: |
   <style type="text/css">
+    body {
+      font-family: "Noto Sans", Verdana, sans-serif;
+    }
     h1,
     h2,
     h3,
@@ -22,7 +25,7 @@ page_headers: |
     h5,
     h6,
     .subhead {
-      font-family: "Sonsie One";
+      font-family: "Sonsie One", "Comic Sans MS", cursive, sans-serif;
     }
     h1 {
       font-size: 1.8em;

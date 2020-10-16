@@ -10,6 +10,9 @@ hero_image: /assets/dynamic/astonishing-stories-hero.svg
 accent_color: "125,150,175"
 page_headers: |
   <style type="text/css">
+    body {
+      font-family: "Noto Sans", Verdana, sans-serif;
+    }
     h1,
     h2,
     h3,
@@ -17,7 +20,7 @@ page_headers: |
     h5,
     h6,
     .subhead {
-      font-family: "Sonsie One";
+      font-family: "Sonsie One", "Comic Sans MS", cursive, sans-serif;
     }
     h1 {
       font-size: 1.8em;
@@ -49,20 +52,20 @@ page_headers: |
     }
     #astonishing-stories-agglomerizing-the-aesthetic h2,
     #astonishing-stories-your-payment-is-ready h2 {
-      font-family: "Sonsie One";
+      font-family: "Sonsie One", "Comic Sans MS", cursive, sans-serif;
       font-size: 1.35em;
       margin-block-start: 0.922em;
       margin-block-end: 0.922em;
     }
     #astonishing-stories-department-of-restoration h2 {
-      font-family: "Ceviche One";
+      font-family: "Ceviche One", Impact, sans-serif;
       font-size: 2.1em;
       margin-block-start: 0.395em;
       margin-block-end: 0.395em;
     }
     #astonishing-stories-mechanical-turks-all-the-way-down h2,
     #astonishing-stories-wholeness-in-a-timeless-activity h2 {
-      font-family: Bangers;
+      font-family: Bangers, Impact, sans-serif;
       font-size: 1.65em;
       margin-block-start: 0.755em;
       margin-block-end: 0.755em;

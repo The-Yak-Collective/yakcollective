@@ -4,8 +4,7 @@ html {
 }
 
 body {
-	/* font-family: "Noto Serif", "Palatino Linotype", "Book Antiqua", Palatino, serif; */
-	font-family: "Noto Sans";
+	font-family: "Noto Serif", Georgia, serif;
 	color: rgba(0,0,0,1.00);
 	background-color: rgba(255,255,255,1.0);
 	padding: 0px;
@@ -101,7 +100,6 @@ a.yak-logo .yak-logo-image {
 	text-decoration-line: underline;
 }
 
-/*
 h1,
 h2,
 h3,
@@ -109,13 +107,10 @@ h4,
 h5,
 h6 {
 	font-family: "Playfair Display", Georgia, serif;
-	font-weight: 400;
 }
-*/
 
 .subhead {
-	/* font-family: "Playfair Display", Georgia, serif; */
-	font-weight: bold; /* Added when removing "Playfair Display" */
+	font-family: "Playfair Display", Georgia, serif;
 }
 
 h1 a,
