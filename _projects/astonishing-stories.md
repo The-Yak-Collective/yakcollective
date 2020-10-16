@@ -1,7 +1,7 @@
 ---
 name: astonishing-stories
 title: Astonishing Stories
-date: 2020-10-16
+date: 2020-10-23
 tagline: Weird is part of the job.
 roam_page: https://roamresearch.com/#/app/Astonishing_Stories/page/5x1kRx_Fx
 type: Zine

@@ -2,7 +2,7 @@
 name: astonishing-stories-department-of-restoration
 title: Department of Restoration
 permalink: /projects/astonishing-stories/department-of-restoration/
-date: 2020-10-30
+date: 2020-11-06
 hero_image: /assets/dynamic/astonishing-stories-department-of-restoration.jpg
 hero_attach_vertical: center
 hero_attach_horizontal: center

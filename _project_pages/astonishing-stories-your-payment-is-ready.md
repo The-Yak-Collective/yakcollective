@@ -2,7 +2,7 @@
 name: astonishing-stories-your-payment-is-ready
 title: Your Payment is Ready
 permalink: /projects/astonishing-stories/your-payment-is-ready/
-date: 2020-10-23
+date: 2020-10-30
 hero_image: /assets/dynamic/astonishing-stories-your-payment-is-ready.jpg
 hero_attach_vertical: center
 hero_attach_horizontal: center

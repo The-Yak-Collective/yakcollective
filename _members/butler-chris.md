@@ -1,6 +1,6 @@
 ---
 name: butler-chris
 title: Chris Butler
-date: 2020-10-16
+date: 2020-10-23
 avatar: /assets/dynamic/butler-chris.png
 ---

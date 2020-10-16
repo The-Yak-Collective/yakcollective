@@ -2,7 +2,7 @@
 name: astonishing-stories-mechanical-turks-all-the-way-down
 title: Mechanical Turks All the Way Down
 permalink: /projects/astonishing-stories/mechanical-turks-all-the-way-down/
-date: 2020-11-13
+date: 2020-11-20
 hero_image: /assets/dynamic/astonishing-stories-mechanical-turks-all-the-way-down.jpg
 hero_attach_vertical: center
 hero_attach_horizontal: center

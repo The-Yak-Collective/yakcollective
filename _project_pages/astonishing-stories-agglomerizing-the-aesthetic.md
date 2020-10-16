@@ -2,7 +2,7 @@
 name: astonishing-stories-agglomerizing-the-aesthetic
 title: Agglomerizing the Aesthetic
 permalink: /projects/astonishing-stories/agglomerizing-the-aesthetic/
-date: 2020-11-06
+date: 2020-11-13
 hero_image: /assets/dynamic/astonishing-stories-agglomerizing-the-aesthetic.jpg
 hero_attach_vertical: center
 hero_attach_horizontal: center
