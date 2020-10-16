@@ -50,6 +50,22 @@ page_headers: |
       font-weight: normal;
       font-size: 1.1em
     }
+    #astonishing-stories-mechanical-turks-all-the-way-down article {
+      padding-top: 0;
+      padding-bottom: 1rem;
+    }
+    @media screen and (min-width: 60em) {
+      #astonishing-stories-mechanical-turks-all-the-way-down {
+        background-image: url("/assets/dynamic/astonishing-stories-mechanical-turks-all-the-way-down-background-radius-50-medium.jpg");
+        background-position: top center;
+        background-size: cover;
+      }
+      #astonishing-stories-mechanical-turks-all-the-way-down article {
+        background-color: #ffffff;
+        padding-left: 2rem;
+        padding-right: 2rem;
+      }
+    }
   </style>
 ---
 I jabbed at the "accept" button on one of the many touch surfaces in my shared office, home, and daycare. Can't be too eager on your first day of the job.

@@ -50,6 +50,22 @@ page_headers: |
       font-weight: normal;
       font-size: 1.4em
     }
+    #astonishing-stories-department-of-restoration article {
+      padding-top: 0;
+      padding-bottom: 1rem;
+    }
+    @media screen and (min-width: 60em) {
+      #astonishing-stories-department-of-restoration {
+        background-image: url("/assets/dynamic/astonishing-stories-department-of-restoration-background-radius-50-medium.jpg");
+        background-position: top center;
+        background-size: cover;
+      }
+      #astonishing-stories-department-of-restoration article {
+        background-color: #ffffff;
+        padding-left: 2rem;
+        padding-right: 2rem;
+      }
+    }
   </style>
 ---
 At a certain time, in a certain space, a person may speak or act and find himself under a recent form of judgment: _cancelation_.

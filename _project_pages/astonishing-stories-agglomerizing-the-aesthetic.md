@@ -52,6 +52,22 @@ page_headers: |
       font-weight: normal;
       font-size: 0.9em
     }
+    #astonishing-stories-agglomerizing-the-aesthetic article {
+      padding-top: 0;
+      padding-bottom: 1rem;
+    }
+    @media screen and (min-width: 60em) {
+      #astonishing-stories-agglomerizing-the-aesthetic {
+        background-image: url("/assets/dynamic/astonishing-stories-agglomerizing-the-aesthetic-background-radius-50-medium.jpg");
+        background-position: top center;
+        background-size: cover;
+      }
+      #astonishing-stories-agglomerizing-the-aesthetic article {
+        background-color: #ffffff;
+        padding-left: 2rem;
+        padding-right: 2rem;
+      }
+    }
   </style>
 ---
 Sometimes I just marvel at the world we live in. People always bitch about the global, remote workforce -- a race to the bottom, downward pressure on wages, blah, blah, blah -- but here I was getting ready to Virtual HouseGuest with my new girlfriend's parents for dinner tomorrow, and I was about to get some niche expertise on styling my hair on a Sunday night. You needed something, no matter how minor, someone, somewhere in the world could help you with it. It was amazing!

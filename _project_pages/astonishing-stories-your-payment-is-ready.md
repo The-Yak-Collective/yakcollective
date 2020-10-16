@@ -52,6 +52,22 @@ page_headers: |
       font-weight: normal;
       font-size: 0.9em
     }
+    #astonishing-stories-your-payment-is-ready article {
+      padding-top: 0;
+      padding-bottom: 1rem;
+    }
+    @media screen and (min-width: 60em) {
+      #astonishing-stories-your-payment-is-ready {
+        background-image: url("/assets/dynamic/astonishing-stories-your-payment-is-ready-background-radius-50-medium.jpg");
+        background-position: top center;
+        background-size: cover;
+      }
+      #astonishing-stories-your-payment-is-ready article {
+        background-color: #ffffff;
+        padding-left: 2rem;
+        padding-right: 2rem;
+      }
+    }
   </style>
 ---
 > _...My algorithm finds that you are currently at the 46th percentile amongst clarinetists in your peer competition group. Practice your arpeggios to improve your score before the final evaluation! 16-year-olds in your city with finely articulated arpeggios generally rank in the top quartile. Those with a strong swing-eighths style generally rank in the top decile. Say 'practice arpeggios' or 'practice swing-eighths' for a lesson..._

@@ -7,7 +7,7 @@ roam_page: https://roamresearch.com/#/app/Astonishing_Stories/page/5x1kRx_Fx
 type: Zine
 sequence: covid-19
 hero_image: /assets/dynamic/astonishing-stories-hero.svg
-accent_color: "125,150,175"
+accent_color: "150,50,50"
 page_headers: |
   <style type="text/css">
     body {
@@ -47,8 +47,21 @@ page_headers: |
       font-weight: normal;
       font-size: 0.9em
     }
+    .hero {
+      background-color: transparent;
+    }
     .hero:before {
-      opacity: 0.4;
+      background-image: none;
+    }
+    .hero .pv4 {
+      padding-top: 2rem;
+      padding-bottom: 0;
+    }
+    @media screen and (min-width: 60em) {
+      .hero .pv5-l {
+        padding-top: 4rem;
+        padding-bottom: 0;
+      }
     }
     #astonishing-stories-agglomerizing-the-aesthetic h2,
     #astonishing-stories-your-payment-is-ready h2 {
