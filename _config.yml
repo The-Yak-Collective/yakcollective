@@ -49,11 +49,6 @@ defaults:
     values:
       layout: page
   - scope:
-      path: members
-      type: pages
-    values:
-      layout: member
-  - scope:
       path: ""
       type: posts
     values:

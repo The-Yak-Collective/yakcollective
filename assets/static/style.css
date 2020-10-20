@@ -91,21 +91,16 @@ a.yak-logo .yak-logo-image {
 	max-width: 100%;
 }
 
-.yak-content {
-	display: grid;
-	grid-template-columns: 1fr min(68ch, 100% - 2.5rem) 1fr; /* Change to 65ch once new layout is finalized */
+.yak-content > *:not(.full-bleed):not(.capped-bleed) {
+	max-width: min(48rem, 100% - 2.5rem); /* Switch to 46rem once new layout is finalized */
+	margin-left: auto;
+	margin-right: auto;
 }
 
-.yak-content > * {
-	grid-column: 2;
-	margin-bottom: 0;
-}
-
-.yak-content *:first-child {
-	margin-top: 0;
-}
-
-.yak-content *:last-child {
+.yak-content > *:last-child,
+.yak-content > *:last-child > *:last-child,
+.yak-content > *:last-child > *:last-child > *:last-child,
+.yak-content > *:last-child > *:last-child > *:last-child > *:last-child {
 	margin-bottom: 0;
 }
 
@@ -114,27 +109,25 @@ a.yak-logo .yak-logo-image {
 	text-decoration-line: underline;
 }
 
+.yak-content ol,
 .yak-content ul {
 	padding-inline-start: 3rem;
 }
 
-.yak-content ul p:last-child {
-	margin-block-end: 1em;
-}
-
-.yak-content ul li:last-child {
-	margin-block-end: -1em;
+.yak-content blockquote {
+	padding-inline-start: 3rem;
+	padding-inline-end: 3rem;
 }
 
 .yak-content .full-bleed {
+	display: block;
 	width: 100%;
-	grid-column: 1 / -1;
 }
 
 .yak-content .capped-bleed {
+	display: block;
 	width: 100%;
 	max-width: 1440px;
-	grid-column: 1 / -1;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -146,7 +139,7 @@ h4,
 h5,
 h6 {
 	font-family: "Playfair Display", Georgia, serif;
-	margin: max(2em, 1rem) 0;
+	margin-top: max(1.2em, 1rem);
 }
 
 .subhead {
@@ -269,6 +262,10 @@ a.member-box {
 	color: rgba(0,0,0,1.00);
 }
 
+h2#featured-yak {
+	margin-top: 2em;
+}
+
 #markdown-toc,
 .submit,
 .footnotes {
@@ -276,18 +273,16 @@ a.member-box {
 }
 
 #markdown-toc {
-	padding: 1rem 2rem 2rem 3rem;
+	padding: 1rem 2rem 1rem 3rem;
 	font-size: 80%;
 }
 
 #markdown-toc li {
-	padding-top: 0.25rem;
-	padding-bottom: 0.25rem;
+	margin-top: 0.5rem;
+	margin-bottom: 0.5rem;
 }
 
 #markdown-toc li ul {
-	margin-top: 0.25rem;
-	margin-bottom: 0.75rem;
 	padding-inline-start: 2rem;
 }
 
