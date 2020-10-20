@@ -78,7 +78,7 @@ Sometimes I just marvel at the world we live in. People always bitch about the g
 
 <img
   src="{{ page.hero_image }}"
-  alt="Agglomerizing the Aesthetic"
+  alt="Agglomerizing the Aesthetic (illustration by Justice)"
   class="fn mw-100 fr-m ml4-m mr2-m mt1-m mb2-m mw5-m fr-l ml4-l mr1-l mt2-l mb2-l mw6-l" />
 
 "Well, I think you're asking your hair to do a lot of heavy lifting here," JoAnne chided playfully and winked, "but let me see how I can help. First, you'll need to answer a few questions about your hair, your grooming habits, your girlfriend, her parents, your parents --"

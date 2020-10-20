@@ -70,7 +70,8 @@ page_headers: |
       margin-block-start: 0.922em;
       margin-block-end: 0.922em;
     }
-    #astonishing-stories-department-of-restoration h2 {
+    #astonishing-stories-department-of-restoration h2,
+    #astonishing-stories-gpt-51-pre-fab-father h2 {
       font-family: "Ceviche One", Impact, sans-serif;
       font-size: 2.1em;
       margin-block-start: 0.395em;
@@ -97,9 +98,38 @@ collaborators:
   - butler-chris
   - chen-nathan
   - garlinger-scott
+  - segan-shreeda
   - smith-ben
+  -
+  - acks-nathan
+  - appleton-maggie
+  - brinkerhoff-tracy
+  - de-la-maza-michael
+  - dixon-jenna
+  - gandhi-prashant
+  - justice
+  - li-zhan
+  - loureiro-murilo
+  - mathur-praful
+  - paul-choudhury-sumit
+  - peters-claire
+  - reid-chris
+  - sandberg-erik
+  - wimsat-mike
 ---
 
-## Additional Credits
+## Credits
 
-SVG graphics provided by [Hero Patterns](https://www.heropatterns.com/).
+- **Lead Editors:** [Sachin Benny](/members/benny-sachin/), [Amanda Reeves](/members/reeves-amanda/)
+
+- **Co-Editors:** [Jenna Dixon](/members/dixon-jenna/), [Scott Garlinger](/members/garlinger-scott/), [Praful Mathur](/members/mathur-praful/), [Shreeda Segan](/members/segan-shreeda/)
+
+- **Writers:** [Sachin Benny](/members/benny-sachin/), [Chris Butler](/members/butler-chris/), [Nathan Chen](/members//), [Scott Garlinger](/members/garlinger-scott/), [Ben Smith](/members/smith-ben/)
+
+- **Illustrations:** [Justice](/members/justice/)
+
+- **Website Development:** [Nathan Acks](/members/acks-nathan/)
+
+- **Additional Collaborators:** [Maggie Appleton](/members/appleton-maggie/), [Tracy Brinkerhoff](/members/brinkerhoff-tracy/), [Michael de la Maza](/members/de-la-maza-michael/), [Prashant Gandhi](/members/gandhi-prashant/), [Zhan Li](/members/li-zhan/), [Murilo Loureiro](/members/loureiro-murilo/), [Sumit Paul-Choudhury](/members/paul-choudhury-sumit/), [Claire Peters](/members/peters-claire/), [Chris Reid](/members/reid-chris/), [Erik Sandberg](/members/sandberg-erik/), [Mike Wimsat](/members/wimsat-mike/)
+
+- **Additional Graphics:** [Hero Patterns](https://www.heropatterns.com/)

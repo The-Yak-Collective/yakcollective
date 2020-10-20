@@ -78,7 +78,7 @@ page_headers: |
 
 <img
   src="{{ page.hero_image }}"
-  alt="Your Payment Is Ready"
+  alt="Your Payment Is Ready (illustration by Justice)"
   class="fn mw-100 fr-m ml4-m mr2-m mt1-m mb2-m mw5-m fr-l ml4-l mr1-l mt2-l mb2-l mw6-l" />
 
 Listening, Judd's dad pursed his lips and thought back to how lucky he'd felt to snag an early-model Machine Learning Clarinet in the lottery his son's public school ran last year. Judd had zero musical aptitude, but he received one of the few instruments they had available for enhanced musical instruction. Even though the spit valve had rusted shut and the software was crude, it had required a hefty deposit. He looked over his son's shoulder at the dismembered Clarinet with, as the commercial advertisements would claim, "Built-in machine learning software that provides personalized teaching and testing with no dangerous human interaction necessary!"  He worried they might lose it if Judd was unable to put the thing back together.
