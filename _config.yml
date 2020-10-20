@@ -82,6 +82,7 @@ include:
   - _redirects
 exclude:
   - assets/static/fonts-src.css
+  - assets/static/member-placeholder.jpg
   - assets/static/mkfonts.sh
   - functions
   - package.json

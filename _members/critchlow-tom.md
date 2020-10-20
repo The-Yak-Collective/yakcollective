@@ -10,5 +10,5 @@ links:
   - title: tomcritchlow.com
     url: https://tomcritchlow.com/
   - title: Little Futures
-    url: https://littlefutures.club
+    url: https://littlefutures.club/
 ---

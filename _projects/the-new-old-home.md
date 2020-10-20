@@ -101,9 +101,9 @@ This deck is the **second** in a series of studies the Yak Collective is underta
 
 **Like bits and pieces of what you saw in this deck?** Feel free to contact one or more individual contributors directly! The Yak Collective is not an agency or intermediary. Our members collaborate because they want to, and each of us maintains their own independent consulting practice. We offer you a catalog of ideas and people to choose from, not a bundle.
 
-**Like a lot of what you see?** Contact [Pamela Hobart](/members/hobart-pamela) to loop The Yak Collective into your reboot efforts. We will assemble the right small team and set of ideas to work with you, in whatever way is most effective. It might be a study or report. It might be facilitating a workshop or series of conversations for your executive team. Or it might just be an ongoing conversation with one or more of us.
+**Like a lot of what you see?** Contact [Pamela Hobart](/members/hobart-pamela/) to loop The Yak Collective into your reboot efforts. We will assemble the right small team and set of ideas to work with you, in whatever way is most effective. It might be a study or report. It might be facilitating a workshop or series of conversations for your executive team. Or it might just be an ongoing conversation with one or more of us.
 
-**Want to hang out with us _live_ as we work on these problems?** [Join our Discord server.](/join) Our working process is literally open. Any independent consultant from anywhere in the world who has ideas is welcome to join our efforts, contribute to and lead collaborative projects. Any prospective client is welcome to hang out as well.
+**Want to hang out with us _live_ as we work on these problems?** [Join our Discord server.](/join/) Our working process is literally open. Any independent consultant from anywhere in the world who has ideas is welcome to join our efforts, contribute to and lead collaborative projects. Any prospective client is welcome to hang out as well.
 
 ## Additional Credits
 
