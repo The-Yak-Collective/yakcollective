@@ -1,5 +1,5 @@
 ---
-layout: minimal
+layout: page
 ---
 
 {% comment %}
@@ -23,7 +23,7 @@ layout: minimal
 <footer class="pt4">
 	{% if page.author %}
 		{% assign member = site.members | where: "name", page.author | first %}
-		{% include member-card.html is_link=false member=member %}
+		{% include widget-member-card.html member=member %}
 		<div class="f6 ph2 pb1">
 			{% if page.author_bio %}
 				{{ page.author_bio | markdownify }}

@@ -1,5 +1,4 @@
 ---
-layout: minimal
 title: The Yak Collective
 ---
 
@@ -13,8 +12,4 @@ Follow us on [Twitter](https://twitter.com/yak_collective), [Facebook](https://w
 
 ## Featured Yak
 
-{% comment %}
-	Pick a single, random-ish "featured" member and include their
-	member card in "link mode". Requires the `featured-yak` plugin.
-{% endcomment %}
-{% include member-card.html is_link=true member=site.data.featured_yak %}
+{% include widget-member-card.html member=site.data.featured_yak %}

@@ -33,8 +33,6 @@ collections:
     output: true
   project_pages:
     output: true
-  sequences:
-    output: false
 
 # Per-page defaults
 #
@@ -50,6 +48,11 @@ defaults:
       type: pages
     values:
       layout: page
+  - scope:
+      path: members
+      type: pages
+    values:
+      layout: member
   - scope:
       path: ""
       type: posts
@@ -68,6 +71,11 @@ defaults:
       layout: project-page
       permalink: /projects/pages/:name/
 
+# Kramdown parser option
+#
+kramdown:
+  toc_levels: 2..6
+
 # Includes and excludes
 #
 include:
@@ -76,7 +84,5 @@ exclude:
   - assets/static/fonts-src.css
   - assets/static/mkfonts.sh
   - functions
-  - help.md
-  - netlify.toml
   - package.json
   - README.md

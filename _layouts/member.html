@@ -1,5 +1,5 @@
 ---
-layout: minimal
+layout: page
 ---
 
 {% comment %}
@@ -13,7 +13,7 @@ layout: minimal
 {% endcomment %}
 <header>
 	<h1 class="yak-post">{{ page.title }}</h1>
-	{% include member-card.html is_link=false member=page %}
+	{% include widget-member-card.html standalone=true member=page %}
 </header>
 
 {% if content %}<section class="yak-post">{{ content }}</section>{% endif %}
@@ -84,11 +84,11 @@ layout: minimal
 {% comment %}
 	Include any writings for the current member.
 {% endcomment %}
-{% assign writings = site.categories["writings"] | where: "author", page.name %}
-{% assign id_prefix = page.name | append: "-writings" %}
-{% if writings.size > 0 %}
+{% assign post_list_author = page.name %}
+{% assign num_writings = site.categories["writings"] | where: "author", post_list_author | size %}
+{% if num_writings > 0 %}
 	<section class="yak-post">
 		<h2 id="{{ page.name }}-writings">Writings</h2>
-		{% include post-list.html init_header_level=3 id_prefix=id_prefix show_author=false posts=writings %}
+		{% include widget-post-list.html init_header_level=3 show_author=false author=post_list_author posts="writings" %}
 	</section>
 {% endif %}

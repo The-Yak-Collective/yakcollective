@@ -1,18 +1,24 @@
----
-layout: minimal
----
+<!DOCTYPE html>
 
 {% comment %}
-	Used for most "normal" pages.
-	
-	Makes sure that the `page.title` is prepended as an <h1/> tag and
-	adds a "table of contents" based on the `content` heading structure.
+	"Default" template for yakcollective.org, including HTML header,
+	page navigation elements, and page footer. Intended to be called as
+	a wrapper around more specialized templates.
 {% endcomment %}
 
-<header>
-	<h1>{{page.title}}</h1>
+<html lang="en">
+	<head>
+		{% include head.html %}
+		{% include analytics.html %}
+	</head>
 
-	<nav>{% include toc.html html=content class="toc" %}</nav>
-</header>
-
-{{ content }}
+	<body class="w-100 ph0-l center relative h-100">
+		<div class="fill-space">
+			{% include nav.html %}
+			<div id="{{ page.url | replace: '/', ' ' | strip | replace: ' ', '-' | default: 'index' }}" class="yak-content pv5 f4-l lh-copy">
+				{{ content }}
+			</div>
+		</div>
+		{% include footer.html %}
+	</body>
+</html>

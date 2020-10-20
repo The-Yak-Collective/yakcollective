@@ -1,5 +1,5 @@
 ---
-layout: null-layout
+layout: none
 ---
 
 {% comment %}

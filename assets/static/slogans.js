@@ -1,5 +1,5 @@
 ---
-layout: null-layout
+layout: none
 ---
 
 {% comment %}
@@ -14,6 +14,6 @@ layout: null-layout
 {% endcomment %}
 
 var footer_slogans = {{ site.data.slogans | jsonify }};
-var footer_slogans_total = (footer_slogans.slogans).length;
+var footer_slogans_total = footer_slogans.length;
 var footer_slogan_to_show = Math.floor(Math.random() * footer_slogans_total);
-document.getElementById("footer-slogan").innerHTML = footer_slogans.slogans[footer_slogan_to_show].slogan;
+document.getElementById("footer-slogan").innerHTML = footer_slogans[footer_slogan_to_show];

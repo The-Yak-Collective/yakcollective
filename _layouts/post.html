@@ -1,25 +1,21 @@
 ---
-layout: minimal
+layout: page
 ---
 
 {% comment %}
 	Used for normal "posts," which right now mean cached newsletters and
 	member blog posts (a.k.a. "writings").
 
-	Prepends a header linking back to the original post + a member card
-	providing information about the Yak Collective member who authored
-	the post.
+	Provides a header linking back to the original post + a member card
+	with information about the Yak Collective member who authored the
+	post.
 {% endcomment %}
 
-<header>
-	<h1>{% if page.original_link %}<a href="{{ page.original_link }}">{% endif %}{{ page.title }}{% if page.original_link %}</a>{% endif %}</h1>
-</header>
+<h1>{% if page.original_link %}<a href="{{ page.original_link }}">{% endif %}{{ page.title }}{% if page.original_link %}</a>{% endif %}</h1>
 
 <div class="yak-post">{{ content }}</div>
 
-<footer>
-	{% if page.author %}
-		{% assign member = site.members | where: "name", page.author | first %}
-		{% include member-card.html is_link=false member=member %}
-	{% endif %}
-</footer>
+{% if page.author %}
+	{% assign member = site.members | where: "name", page.author | first %}
+	{% include widget-member-card.html member=member %}
+{% endif %}

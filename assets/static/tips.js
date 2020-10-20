@@ -1,5 +1,5 @@
 ---
-layout: null-layout
+layout: none
 ---
 
 {% comment %}
@@ -16,11 +16,11 @@ layout: null-layout
 
 var members = { {% for member in site.members %}"{{ member.name }}":"{{ member.title }}"{% if member.name != last_member.name %},{% endif %}{% endfor %} };
 var tips = {{ site.data.tips | jsonify }};
-var tips_total = (tips.tips).length;
+var tips_total = tips.length;
 var tip_to_show = Math.floor(Math.random() * tips_total);
 var tip_num = tip_to_show + 1;
 
 document.getElementById("yak-collective-consulting-tip-number").innerHTML = "Yak Collective Consulting Tip #" + tip_num;
-document.getElementById("yak-collective-consulting-tip").innerHTML = tips.tips[tip_to_show].tip;
-document.getElementById("yak-collective-consulting-tip-author").href = "/members/" + tips.tips[tip_to_show].author;
-document.getElementById("yak-collective-consulting-tip-author").innerHTML = members[tips.tips[tip_to_show].author];
+document.getElementById("yak-collective-consulting-tip").innerHTML = tips[tip_to_show].tip;
+document.getElementById("yak-collective-consulting-tip-author").href = "/members/" + tips[tip_to_show].author;
+document.getElementById("yak-collective-consulting-tip-author").innerHTML = members[tips[tip_to_show].author];
