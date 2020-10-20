@@ -41,7 +41,7 @@ page_headers: |
       font-size: 0.603em;
     }
     .f1 {
-      font-size: 2.7rem
+      font-size: 2.6rem
     }
     .subhead {
       font-weight: normal;
