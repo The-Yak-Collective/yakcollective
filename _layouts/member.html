@@ -3,43 +3,37 @@ layout: page
 ---
 
 {% comment %}
-	Template for individual member pages; inherits from the "minimal"
-	template. Applied to data files from the `_members` collection.
+	Template for individual member pages; inherits from the "page"
+	template. Applied to data files from the `members` category.
 {% endcomment %}
+
+<h1>{{ page.title }}</h1>
 
 {% comment %}
 	Pull in the member card (which functions as an information box
 	here, rather than a link).
 {% endcomment %}
-<header>
-	<h1 class="yak-post">{{ page.title }}</h1>
-	{% include widget-member-card.html standalone=true member=page %}
-</header>
+{% include widget-member-card.html standalone=true member=page %}
 
-{% if content %}<section class="yak-post">{{ content }}</section>{% endif %}
+{{ content }}
 
 {% comment %}
 	Generate a list of projects that the current member (1) was a lead
-	on, (2) was a collaborator on, or (3) will be involved with
-	("upcoming", not-yet-published projects).
+	on or (2) was a collaborator on.
 
-	We begin by creating three arrays to hold these lists. Liquid lacks
-	a way to natively create empty arrays, so we `split` an empty string
+	We begin by creating two arrays to hold these lists. Liquid lacks a
+	way to natively create empty arrays, so we `split` an empty string
 	instead. ¯\_(ツ)_/¯
 
-	Then, we loop through the `site.projects` collection. If the project
-	is in the future, then we test to see if the current member is
-	involved in some capacity, and if so add them to the
-	`projects_upcoming` array. Otherwise the project is already
-	published, so we check to see if the current member is a lead editor
-	or a collaborator, and add them to the appropriate array
-	(`projects_lead` or `projects_collaborated`) if so.
+	Then, we loop through the `site.projects` collection. So long as the
+	project is not in the future, we check to see if the current member
+	is a lead editor or a collaborator and add them to the appropriate
+	array (`projects_lead` or `projects_collaborated`).
 
 	Adapted from: https://stackoverflow.com/a/42727933
 {% endcomment %}
 {% assign projects_lead = "" | split: "" %}
 {% assign projects_collaborated = "" | split: "" %}
-{% assign projects_upcoming = "" | split: "" %}
 {% for project in site.projects %}
 	{% if project.date < site.time or site.future == true %}
 		{% if project.lead_editors contains page.name %}
@@ -54,30 +48,29 @@ layout: page
 	Output the `projects_lead` and `projects_collaborated` arrays.
 {% endcomment %}
 {% if projects_lead.size > 0 %}
-	<section>
-		<h2 class="yak-post" id="{{ page.name }}-projects-lead">Project Lead On</h2>
-		{% for project in projects_lead reversed %}
-			{% include widget-project-box.html project=project %}
-		{% endfor %}
-	</section>
+	<h2 id="project-lead">Project Lead On</h2>
+	{% for project in projects_lead reversed %}
+		{% include widget-project-box.html project=project %}
+	{% endfor %}
 {% endif %}
 {% if projects_collaborated.size > 0 %}
-	<section>
-		<h2 class="yak-post" id="{{ page.name }}-projects-lead">Collaborated On</h2>
-		{% for project in projects_collaborated reversed %}
-			{% include widget-project-box.html project=project %}
-		{% endfor %}
-	</section>
+	<h2 id="collaborator">Collaborated On</h2>
+	{% for project in projects_collaborated reversed %}
+		{% include widget-project-box.html project=project %}
+	{% endfor %}
 {% endif %}
 
 {% comment %}
 	Include any writings for the current member.
+
+	Note that, since the post list widget only outputs Markdown, we
+	can't include it directly. Instead, we capture its output and then
+	transform it into HTML using `markdownify`.
 {% endcomment %}
 {% assign post_list_author = page.name %}
 {% assign num_writings = site.categories["writings"] | where: "author", post_list_author | size %}
 {% if num_writings > 0 %}
-	<section class="yak-post">
-		<h2 id="{{ page.name }}-writings">Writings</h2>
-		{% include widget-post-list.html init_header_level=3 show_author=false author=post_list_author posts="writings" %}
-	</section>
+	<h2 id="writings">Writings</h2>
+	{% capture member_writings %}{% include widget-post-list.html init_header_level=3 show_author=false author=post_list_author category="writings" %}{% endcapture %}
+	{{ member_writings | markdownify }}
 {% endif %}

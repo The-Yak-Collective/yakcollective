@@ -7,8 +7,6 @@ hero_image: /assets/dynamic/astonishing-stories-agglomerizing-the-aesthetic.jpg
 hero_attach_vertical: center
 hero_attach_horizontal: center
 author: smith-ben
-author_bio: |
-  Ben is a social science researcher interested in the gig economy and the future of work. He enjoys creative writing and is curious about the potential of speculative fiction as a research tool. He grew up reading Tom Clancy and Philip K. Dick novels.
 google_doc: https://docs.google.com/document/d/15LRvkKeNMwRgr6Zf8dYLBBAqhpBxIyLP_WBE16H-PCg/edit
 description: You needed something, no matter how minor, someone, somewhere in the world could help you with it.
 project: astonishing-stories
