@@ -65,32 +65,6 @@ a.yak-logo .yak-logo-image {
 	background-color: rgba(0,0,0,0.85);
 }
 
-.yak-post pre {
-	white-space: pre-wrap;
-}
-
-.yak-post img {
-	max-width: 100% !important;
-}
-
-.yak-post div.tweet,
-.yak-post div.youtube-wrap,
-.yak-post a.image-link {
-	margin-inline-start: 4rem;
-	margin-block-end: 1em;
-	display: block;
-	max-width: calc(100% - 4rem);
-}
-
-.yak-post li div.tweet,
-.yak-post li div.youtube-wrap,
-.yak-post li a.image-link {
-	margin-inline-start: 0;
-	margin-block-end: 1rem;
-	display: block;
-	max-width: 100%;
-}
-
 .yak-content > *:not(.full-bleed):not(.capped-bleed) {
 	max-width: min(48rem, 100% - 2.5rem); /* Switch to 46rem once new layout is finalized */
 	margin-left: auto;
@@ -132,18 +106,58 @@ a.yak-logo .yak-logo-image {
 	margin-right: auto;
 }
 
+.yak-content .yak-post pre {
+	white-space: pre-wrap;
+}
+
+.yak-content .yak-post img {
+	max-width: 100% !important;
+}
+
+.yak-content .yak-post figcaption {
+	font-size: 60%;
+	opacity: 0.6;
+}
+
+.yak-content .yak-post div.tweet,
+.yak-content .yak-post div.youtube-wrap {
+	margin-inline-start: 2rem;
+	display: block;
+	max-width: calc(100% - 4rem);
+}
+
+.yak-content .yak-post li div.tweet,
+.yak-content .yak-post li div.youtube-wrap {
+	margin-inline-start: 0;
+	display: block;
+	max-width: 100%;
+}
+
+.yak-content .yak-post blockquote {
+	padding-inline-start: 0;
+	padding-inline-end: 0;
+}
+
 h1,
 h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+.subhead {
 	font-family: "Playfair Display", Georgia, serif;
+}
+
+h1 {
 	margin-top: max(1.2em, 1rem);
 }
 
-.subhead {
-	font-family: "Playfair Display", Georgia, serif;
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin-top: max(1.8em, 1rem);
 }
 
 h1 a,

@@ -41,26 +41,23 @@ layout: page
 {% assign projects_collaborated = "" | split: "" %}
 {% assign projects_upcoming = "" | split: "" %}
 {% for project in site.projects %}
-	{% if project.date > site.time and site.future != true %}
-		{% if project.lead_editors contains page.name or project.collaborators contains page.name %}
-			{% assign projects_upcoming = projects_upcoming | push: project %}
+	{% if project.date < site.time or site.future == true %}
+		{% if project.lead_editors contains page.name %}
+			{% assign projects_lead = projects_lead | push: project %}
+		{% elsif project.collaborators contains page.name %}
+			{% assign projects_collaborated = projects_collaborated | push: project %}
 		{% endif %}
-	{% elsif project.lead_editors contains page.name %}
-		{% assign projects_lead = projects_lead | push: project %}
-	{% elsif project.collaborators contains page.name %}
-		{% assign projects_collaborated = projects_collaborated | push: project %}
 	{% endif %}
 {% endfor %}
 
 {% comment %}
-	Output the `projects_lead`, `projects_collaborated`, and
-	`projects_upcoming` arrays.
+	Output the `projects_lead` and `projects_collaborated` arrays.
 {% endcomment %}
 {% if projects_lead.size > 0 %}
 	<section>
 		<h2 class="yak-post" id="{{ page.name }}-projects-lead">Project Lead On</h2>
 		{% for project in projects_lead reversed %}
-			{% include project-box.html is_link=true project=project %}
+			{% include widget-project-box.html project=project %}
 		{% endfor %}
 	</section>
 {% endif %}
@@ -68,15 +65,7 @@ layout: page
 	<section>
 		<h2 class="yak-post" id="{{ page.name }}-projects-lead">Collaborated On</h2>
 		{% for project in projects_collaborated reversed %}
-			{% include project-box.html is_link=true project=project %}
-		{% endfor %}
-	</section>
-{% endif %}
-{% if projects_upcoming.size > 0 %}
-	<section>
-		<h2 class="yak-post" id="{{ page.name }}-projects-upcoming">Upcoming Projects</h2>
-		{% for project in projects_upcoming reversed %}
-			{% include project-box.html is_link=false project=project %}
+			{% include widget-project-box.html project=project %}
 		{% endfor %}
 	</section>
 {% endif %}

@@ -5,25 +5,19 @@
 	primary use case (containerized project boxes are used for "coming
 	soon" projects).
 
-	This include expects two parameters:
+	This include takes a single parameter, `project`, which should be
+	An object containing the relevant project information (which you
+	almost certainly want to pull from the `site.projects` collection).
 
-		`is_link`
-		Truthy/Falsy parameter indicating whether the box should be
-		presented as a link to a project page, or just as a display of
-		member information. Since `nil` is falsy in Liquid, not passing
-		in this parameter is the same as setting `is_link = false`.
-
-		`project`
-		An object containing the relevant project information (which you
-		almost certainly want to pull from the `site.projects`
-		collection).
+	Note that this widget outputs HTML in a safe way, and is thus
+	suitable for inclusion in both Markdown and HTML pages.
 {% endcomment %}
 
-<div id="{{ include.project.name }}" class="mh2 mt4 mb5">
-	{% if include.is_link %}<a href="/projects/{{ include.project.slug }}/"{% else %}<div{% endif %} class="project-box ba relative">
+<div id="{{ include.project.name }}" class="mv5">
+	<a href="/projects/{{ include.project.slug }}/" class="project-box ba relative">
 		<div class="w-50">
 			<div class="f6 lh-title fw9 mv0 pt1 bt bw1 ph2 sans-serif ttu silent-link">{{ include.project.type }}</div>
-			<h2 class="ph2 fw8 f3 lh-solid pv1 mb1 mt4 pseudo-link">{{ include.project.title }}</h2>
+			<h2 class="ph2 fw8 f3 lh-solid pt4 pb1 mb1 mt4 pseudo-link">{{ include.project.title }}</h2>
 			<p class="ph2 f5 lh-solid pv1 mt0 mb4 fw6 subhead pseudo-link">{{ include.project.tagline }}</p>
 
 			{% comment %}
@@ -37,7 +31,7 @@
 			{% comment %}
 				Project date and sequence count (if applicable).
 			{% endcomment %}
-			<time class="f6 ph2 mv3 ttu tracked-tight">
+			<time class="f6 ph2 mt3 mb2 ttu tracked-tight">
 				Published: {{ include.project.date | date_to_long_string: "ordinal", "US" }} UTC
 				{% if include.project.sequence %}
 					/ {% include sequence.html current_date=include.project.date sequence_id=include.project.sequence %}
@@ -46,5 +40,5 @@
 
 		</div>
 		<div class="w-50 h-100 absolute top-0 right-0 bl hero"></div>
-	{% if include.is_link %}</a>{% else %}</div>{% endif %}
+	</a>
 </div>
