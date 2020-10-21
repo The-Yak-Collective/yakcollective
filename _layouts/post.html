@@ -15,7 +15,21 @@ layout: page
 
 <div class="yak-post">{{ content }}</div>
 
+{% comment %}
+	If `page.author` is set, build our member list, locate the
+	appropriate member data page, and display the member card.
+{% endcomment %}
 {% if page.author %}
-	{% assign member = site.members | where: "name", page.author | first %}
+	{% assign members = "" | split: "" %}
+	{% for the_page in site.pages %}
+		{% assign path_array = the_page.url | replace: "/", " " | strip | split: " " %}
+		{% assign path_init = path_array | first %}
+		{% assign path_size = path_array | size %}
+		{% if path_init == "members" and path_size == 2 %}
+			{% assign members = members | push: the_page %}
+		{% endif %}
+	{% endfor %}
+	{% assign author_file = page.author | append: ".md" %}
+	{% assign member = members | where: "name", author_file | first %}
 	{% include widget-member-card.html member=member %}
 {% endif %}

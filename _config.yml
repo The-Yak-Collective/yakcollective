@@ -27,8 +27,6 @@ feed_update_frequency: 1
 # Collections
 #
 collections:
-  members:
-    output: true
   projects:
     output: true
   project_pages:
@@ -38,11 +36,10 @@ collections:
 #
 defaults:
   - scope:
-      path: ""
-      type: members
+      path: "members/"
+      type: pages
     values:
       layout: member
-      permalink: /members/:name/
   - scope:
       path: ""
       type: pages

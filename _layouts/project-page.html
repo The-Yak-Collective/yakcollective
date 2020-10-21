@@ -18,8 +18,23 @@ layout: page
 
 {{ content }}
 
+{% comment %}
+	If `page.author` is set, build our member list, locate the
+	appropriate member data page, and display the member card (as well
+	as the member `short_bio`, if it exists).
+{% endcomment %}
 {% if page.author %}
-	{% assign member = site.members | where: "name", page.author | first %}
+	{% assign members = "" | split: "" %}
+	{% for the_page in site.pages %}
+		{% assign path_array = the_page.url | replace: "/", " " | strip | split: " " %}
+		{% assign path_init = path_array | first %}
+		{% assign path_size = path_array | size %}
+		{% if path_init == "members" and path_size == 2 %}
+			{% assign members = members | push: the_page %}
+		{% endif %}
+	{% endfor %}
+	{% assign author_file = page.author | append: ".md" %}
+	{% assign member = members | where: "name", author_file | first %}
 	{% include widget-member-card.html member=member %}
 	{% if member.short_bio %}
 		<div class="f6 ph2 pb1">
@@ -46,8 +61,10 @@ layout: page
 			{% assign sorted_project_pages = project_pages | sort: "name" %}
 		{% endif %}
 		<ul>
+			{% assign site_epoch = site.time | date: "%s" %}
 			{% for pp in sorted_project_pages %}
-				<li>{% if pp.name == page.name %}<strong>{% elsif include.pp.date <= site.time or site.future == true %}<a href="{% if pp.original_link %}{{ pp.original_link }}{% else %}{{ pp.permalink }}{% endif %}">{% endif %}{{ pp.title }}{% if pp.name == page.name %}</strong>{% elsif include.pp.date <= site.time or site.future == true %}</a>{% endif %}</li>
+				{% assign pp_epoch = include.pp.date | date: "%s" %}
+				<li>{% if pp.name == page.name %}<strong>{% elsif pp_epoch <= site_epoch or site.future == true %}<a href="{% if pp.original_link %}{{ pp.original_link }}{% else %}{{ pp.permalink }}{% endif %}">{% endif %}{{ pp.title }}{% if pp.name == page.name %}</strong>{% elsif pp_epoch <= site_epoch or site.future == true %}</a>{% endif %}</li>
 			{% endfor %}
 		</ul>
 	{% endif %}

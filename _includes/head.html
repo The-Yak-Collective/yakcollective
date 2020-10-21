@@ -59,6 +59,19 @@
 </style>
 
 {% comment %}
+	Build array of members.
+{% endcomment %}
+{% assign members = "" | split: "" %}
+{% for the_page in site.pages %}
+	{% assign path_array = the_page.url | replace: "/", " " | strip | split: " " %}
+	{% assign path_init = path_array | first %}
+	{% assign path_size = path_array | size %}
+	{% if path_init == "members" and path_size == 2 %}
+		{% assign members = members | push: the_page %}
+	{% endif %}
+{% endfor %}
+
+{% comment %}
 	Determine the image that should be associated with the page (for
 	Twitter and Facebook), as well as the page author (just for
 	Twitter).
@@ -69,8 +82,8 @@
 	Then...
 	
 	If the page is a "post" or "project page" and `page.author` is set,
-	look the author up in the `site.members` data structure and use
-	their Twitter handle and avatar (if set).
+	pull the author from the `site.pages` array and use	their Twitter
+	handle and avatar (if set).
 
 	If the page is a member page, pull the member's Twitter handle and
 	avatar (if set). (The member isn't *really* the page author in this
@@ -83,7 +96,8 @@
 {% assign page_image = "/assets/static/yak-og.png" %}
 {% if page.layout == "post" or page.layout == "project-page" %}
 	{% if page.author %}
-		{% assign member = site.members | where: "name", page.author | first %}
+		{% assign author_file = page.author | append: ".md" %}
+		{% assign member = members | where: "name", author_file | first %}
 		{% if member.twitter %}
 			{% assign page_author = member.twitter %}
 		{% endif %}

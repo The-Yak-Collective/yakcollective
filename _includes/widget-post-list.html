@@ -56,6 +56,19 @@
 {% endcapture %}
 
 {% comment %}
+	Build array of members. We'll need this later too.
+{% endcomment %}
+{% assign members = "" | split: "" %}
+{% for the_page in site.pages %}
+	{% assign path_array = the_page.url | replace: "/", " " | strip | split: " " %}
+	{% assign path_init = path_array | first %}
+	{% assign path_size = path_array | size %}
+	{% if path_init == "members" and path_size == 2 %}
+		{% assign members = members | push: the_page %}
+	{% endif %}
+{% endfor %}
+
+{% comment %}
 	Filter `site.posts` depending on `author` and `category`.
 {% endcomment %}
 {% if include.category %}
@@ -95,12 +108,13 @@
 	{% endif %}
 
 	{% comment %}
-		Post authors are stored "symbolically"; we use the `name`
-		attribute to look up the author's name (a.k.a. `title`), `date`
-		(the member "join date"), and `slug` from the `site.members`
-		collection.
+		Post authors are stored "symbolically". We use the `name`
+		attribute to look up the author's name (a.k.a. `title`), and
+		`date` (the member "join date") from the `members` array we
+		generated at the start of this include.
 	{% endcomment %}
-	{% assign author = site.members | where: "name", post.author | first %}
+	{% assign author_file = post.author | append: ".md" %}
+	{% assign author = members | where: "name", author_file | first %}
 
 	{% comment %}
 		We show posts when `show_author` is falsy OR when it's after the
@@ -112,7 +126,9 @@
 	{% endcomment %}
 	{% assign show_post = true %}
 	{% if include.show_author %}
-		{% if author.date > site.time and site.future != true %}
+		{% assign author_epoch = author.date | date: "%s" %}
+		{% assign site_epoch = site.time | date: "%s" %}
+		{% if author_epoch > site_epoch and site.future != true %}
 			{% assign show_post = false %}
 		{% endif %}
 	{% endif %}
@@ -128,10 +144,9 @@
 		{% assign post_list = post_list | append: ")" %}
 		{% if include.show_author %}
 			{% assign post_list = post_list | append: " &middot; [" %}
-			{% assign author = site.members | where: "name", post.author | first %}
 			{% assign post_list = post_list | append: author.title %}
 			{% assign post_list = post_list | append: "](/members/" %}
-			{% assign post_list = post_list | append: author.slug %}
+			{% assign post_list = post_list | append: post.author %}
 			{% assign post_list = post_list | append: "/)" %}
 		{% endif %}
 		{% assign post_list = post_list | append: ' &middot; <time class="i fw1">' %}

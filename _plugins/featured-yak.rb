@@ -26,9 +26,11 @@ module MakeFeaturedYak
 			# `buildDate` should be considered.
 			#
 			currentMembers = Array.new
-			site.collections["members"].docs.each do |member|
-				if member.date <= buildDate
-					currentMembers << member
+			site.pages.each do |page|
+				if page.url =~ /^\/members\/[^\/]+\// and !page.data["date"].nil?
+					if page.data["date"].to_time <= buildDate
+						currentMembers << page
+					end
 				end
 			end
 			currentMemberCount = currentMembers.length()

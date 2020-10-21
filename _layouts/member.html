@@ -10,6 +10,11 @@ layout: page
 <h1>{{ page.title }}</h1>
 
 {% comment %}
+	Generate the `member_id`. We'll need it later.
+{% endcomment %}
+{% assign member_id = page.name | split: "." | first %}
+
+{% comment %}
 	Pull in the member card (which functions as an information box
 	here, rather than a link).
 {% endcomment %}
@@ -34,11 +39,13 @@ layout: page
 {% endcomment %}
 {% assign projects_lead = "" | split: "" %}
 {% assign projects_collaborated = "" | split: "" %}
+{% assign site_epoch = site.time | date: "%s" %}
 {% for project in site.projects %}
-	{% if project.date < site.time or site.future == true %}
-		{% if project.lead_editors contains page.name %}
+	{% assign project_epoch = project.date | date: "%s" %}
+	{% if project_epoch < site_epoch or site.future == true %}
+		{% if project.lead_editors contains member_id %}
 			{% assign projects_lead = projects_lead | push: project %}
-		{% elsif project.collaborators contains page.name %}
+		{% elsif project.collaborators contains member_id %}
 			{% assign projects_collaborated = projects_collaborated | push: project %}
 		{% endif %}
 	{% endif %}
@@ -67,10 +74,9 @@ layout: page
 	can't include it directly. Instead, we capture its output and then
 	transform it into HTML using `markdownify`.
 {% endcomment %}
-{% assign post_list_author = page.name %}
-{% assign num_writings = site.categories["writings"] | where: "author", post_list_author | size %}
+{% assign num_writings = site.categories["writings"] | where: "author", member_id | size %}
 {% if num_writings > 0 %}
 	<h2 id="writings">Writings</h2>
-	{% capture member_writings %}{% include widget-post-list.html init_header_level=3 show_author=false author=post_list_author category="writings" %}{% endcapture %}
+	{% capture member_writings %}{% include widget-post-list.html init_header_level=3 show_author=false author=member_id category="writings" %}{% endcapture %}
 	{{ member_writings | markdownify }}
 {% endif %}
