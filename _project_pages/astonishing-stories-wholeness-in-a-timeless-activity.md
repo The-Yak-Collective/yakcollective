@@ -2,7 +2,7 @@
 name: astonishing-stories-wholeness-in-a-timeless-activity
 title: Wholeness in a Timeless Activity
 permalink: /projects/astonishing-stories/wholeness-in-a-timeless-activity/
-date: 2020-10-21
+date: 2020-10-23
 hero_image: /assets/dynamic/astonishing-stories-wholeness-in-a-timeless-activity.jpg
 hero_attach_vertical: top
 hero_attach_horizontal: center
