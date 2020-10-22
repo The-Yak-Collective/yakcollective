@@ -8,7 +8,7 @@ hero_attach_vertical: center
 hero_attach_horizontal: center
 author: garlinger-scott
 google_doc: https://docs.google.com/document/d/1JrlKrp4C3sy9ByOecAEWc2mxnoodvM5PWVAqpGVFhVY/edit
-description: "At a certain time, in a certain space, a person may speak or act and find himself under a recent form of judgment: cancelation."
+description: "At a certain time, in a certain space, a person may speak or act and find himself under a recent form of judgment: cancellation."
 project: astonishing-stories
 display: true
 page_headers: |
@@ -72,22 +72,22 @@ page_headers: |
 
 At a certain time, in a certain space, a person may speak or act and find himself under a recent form of judgment: cancellation.
 
-Indeed, this algorithmic tribunal stands watch over many, many occurrences and it decrees hold unforeseen consequences. Those people, those consequences, still navigate day-to-day life but haven't the chance to go back or go forward.
+Indeed, this algorithmic tribunal stands watch over many, many occurrences and it decrees hold unforeseen consequences. Those people, those consequences, still navigate day-to-day life but haven’t the chance to go back or go forward.
 
 <img
   src="{{ page.hero_image }}"
-  alt="Department of Restoration (illustration by Justice)"
+  alt="Department of Restoration (illustration by Justice Thelot)"
   class="fn mw-100 fr-m ml4-m mr2-m mt1-m mb2-m mw5-m fr-l ml4-l mr1-l mt2-l mb2-l mw6-l" />
 
 This growing body of consequences now finally sees a new option, an outlet for moving forward. A select team, carrying rites handed down by religious sects, futurists, and ancient literature, service a series of practices. They elucidate practicable ways: making amends, settling disputes, and beginning again for a new time and place.
 
 This Department of Restoration achieves a plane never before seen. The department will have many adherents because, as they say, we are always on trial. They say this will be the end of forgiveness as we know it.
 
--
+—
 
 Of course, we know this is impossible.
 
-One mustn't trust the above in the same manner that we would dismiss a man made of cobwebs.
+One mustn’t trust the above in the same manner that we would dismiss a man made of cobwebs.
 
 No effort could deplete the delicate, extending arms of misfortune. Room after room, gesture after intolerable gesture, the department will become bailiffs and stenographers in an ever more complex milieu.
 

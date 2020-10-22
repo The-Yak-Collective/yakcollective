@@ -77,7 +77,7 @@ This was my second job today. A basic anniversary gig like I’d seen in the tra
 
 If I’m not in the top tier we can’t afford the next level of healthcare we need to make it through another fire summer and its corresponding respiratory issues.
 
-“It is a special anniversary of working for my principal. They are middle aged (36) and work at a mid-sized company. They have most recently purchased a new pair of shoes, some weekly groceries, and a MMREC home booster immunization kit. I want it to be really special. They tend to enjoy things like food, travel, and collecting little items from their travels. More than anything they are striving to be more efficient in their life and get more out of it...”
+“It is a special anniversary of working for my principal. They are middle aged (36) and work at a mid-sized company. They have most recently purchased a new pair of shoes, some weekly groceries, and a MMREC home booster immunization kit. I want it to be really special. They tend to enjoy things like food, travel, and collecting little items from their travels. More than anything they are striving to be more efficient in their life and get more out of it…”
 
 It just went on and on like that. It was saying a lot without really saying much about the person getting the gift.
 
@@ -85,7 +85,7 @@ The final comment was alarming:
 
 <img
   src="{{ page.hero_image }}"
-  alt="Mechanical Turks All the Way Down (illustration by Justice)"
+  alt="Mechanical Turks All the Way Down (illustration by Justice Thelot)"
   class="fn mw-100 fr-m ml4-m mr2-m mt1-m mb2-m mw5-m fr-l ml4-l mr1-l mt2-l mb2-l mw6-l" />
 
 “How do I know that you are a person or a machine?”
