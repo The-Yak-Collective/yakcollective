@@ -2,7 +2,7 @@
 name: astonishing-stories-wholeness-in-a-timeless-activity
 title: Wholeness in a Timeless Activity
 permalink: /projects/astonishing-stories/wholeness-in-a-timeless-activity/
-date: 2020-10-23
+date: 2020-10-21
 hero_image: /assets/dynamic/astonishing-stories-wholeness-in-a-timeless-activity.jpg
 hero_attach_vertical: top
 hero_attach_horizontal: center
@@ -76,7 +76,7 @@ Each main ingredient was in a distinct pile; foie gras, unagi, avocado, and stur
 
 <img
   src="{{ page.hero_image }}"
-  alt="Wholeness in a Timeless Activity (illustration by Justice)"
+  alt="Wholeness in a Timeless Activity (illustration by Justice Thelot)"
   class="fn mw-100 fr-m ml4-m mr2-m mt1-m mb2-m mw5-m fr-l ml4-l mr1-l mt2-l mb2-l mw6-l" />
 
 Despite knowing no one was watching, Koichi nodded in approval. He was gazing at the final dish when colorful boxes popped into his vision, surrounding the sushi.[^1] They showed the source of several ingredients; the farm where the avocado was picked, the facility where the sturgeon was bred. Koichi angrily blinked thrice and the advertisements disappeared. He was annoyed — his new AR lenses meant everything was a QR code now. Let’s just get it over with, he thought.  

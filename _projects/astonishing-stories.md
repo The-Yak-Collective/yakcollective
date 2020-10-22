@@ -1,8 +1,8 @@
 ---
 name: astonishing-stories
 title: Astonishing Stories
-date: 2020-10-23
-tagline: Weird is part of the job.
+date: 2020-10-21
+tagline: Weird is part of the job
 roam_page: https://roamresearch.com/#/app/Astonishing_Stories/page/5x1kRx_Fx
 type: Zine
 sequence: covid-19
@@ -95,19 +95,16 @@ lead_editors:
   - benny-sachin
   - reeves-amanda
 collaborators:
-  - butler-chris
-  - chen-nathan
-  - garlinger-scott
-  - segan-shreeda
-  - smith-ben
-  -
   - acks-nathan
   - appleton-maggie
   - brinkerhoff-tracy
+  - butler-chris
+  - chen-nathan
   - de-la-maza-michael
   - dixon-jenna
   - gandhi-prashant
-  - justice
+  - garlinger-scott
+  - thelot-justice
   - li-zhan
   - loureiro-murilo
   - mathur-praful
@@ -115,7 +112,9 @@ collaborators:
   - peters-claire
   - reid-chris
   - sandberg-erik
-  - wimsat-mike
+  - segan-shreeda
+  - smith-ben
+  - wimsatt-mike
 ---
 
 ## Credits
@@ -126,10 +125,10 @@ collaborators:
 
 - **Writers:** [Sachin Benny](/members/benny-sachin/), [Chris Butler](/members/butler-chris/), [Nathan Chen](/members//), [Scott Garlinger](/members/garlinger-scott/), [Ben Smith](/members/smith-ben/)
 
-- **Illustrations:** [Justice](/members/justice/)
+- **Illustrations:** [Justice Thelot](/members/thelot-justice/)
 
 - **Website Development:** [Nathan Acks](/members/acks-nathan/)
 
-- **Additional Collaborators:** [Maggie Appleton](/members/appleton-maggie/), [Tracy Brinkerhoff](/members/brinkerhoff-tracy/), [Michael de la Maza](/members/de-la-maza-michael/), [Prashant Gandhi](/members/gandhi-prashant/), [Zhan Li](/members/li-zhan/), [Murilo Loureiro](/members/loureiro-murilo/), [Sumit Paul-Choudhury](/members/paul-choudhury-sumit/), [Claire Peters](/members/peters-claire/), [Chris Reid](/members/reid-chris/), [Erik Sandberg](/members/sandberg-erik/), [Mike Wimsat](/members/wimsat-mike/)
+- **Additional Collaborators:** [Maggie Appleton](/members/appleton-maggie/), [Tracy Brinkerhoff](/members/brinkerhoff-tracy/), [Michael de la Maza](/members/de-la-maza-michael/), [Prashant Gandhi](/members/gandhi-prashant/), [Zhan Li](/members/li-zhan/), [Murilo Loureiro](/members/loureiro-murilo/), [Sumit Paul-Choudhury](/members/paul-choudhury-sumit/), [Claire Peters](/members/peters-claire/), [Chris Reid](/members/reid-chris/), [Erik Sandberg](/members/sandberg-erik/), [Mike Wimsatt](/members/wimsatt-mike/)
 
 - **Additional Graphics:** [Hero Patterns](https://www.heropatterns.com/)
