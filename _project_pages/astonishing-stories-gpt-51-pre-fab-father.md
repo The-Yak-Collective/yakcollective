@@ -56,7 +56,7 @@ page_headers: |
     }
     @media screen and (min-width: 60em) {
       #astonishing-stories-gpt-51-pre-fab-father {
-        background-image: url("/assets/dynamic/astonishing-stories-department-of-restoration-background-radius-50-medium.jpg");
+        background-image: url("/assets/dynamic/astonishing-stories-gpt-51-pre-fab-father-background-radius-50-medium.jpg");
         background-position: top center;
         background-size: cover;
       }
