@@ -86,11 +86,13 @@ page_headers: |
     }
   </style>
 summary: |
-  The upside of an extremely uncertain environment is that we have been free to purely indulge in speculation about the future. The result is _Astonishing Stories_, an anthology of short speculative fiction developed from the networked thoughts of over 30 indie consultants. 
+  The upside of an extremely uncertain environment is that we have been free to indulge in pure speculation about the know knowns and unknown unknowns of the future. The result is Astonishing Stories, an anthology of short speculative fiction developed from the networked thoughts of over 30 indie consultants.
 
-  Our working process is open and visible to all on our [Roam graph](https://roamresearch.com/#/app/Astonishing_Stories/graph). The future fragments were developed by Indie consultants from different industries and experience levels through playing sessions of [_The Thing From The Future_](https://situationlab.org/project/the-thing-from-the-future/). The fragments provided a jumping off point for authors of short speculative fiction and can be used by anyone to develop stories of their own or speculate on the post-COVID world.
+  Our working process is open and visible to all on our [Roam graph](https://roamresearch.com/#/app/Astonishing_Stories/graph) where we developed provoking descriptions of objects from the near and far future using [The Thing From The Future](http://situationlab.org/project/the-thing-from-the-future/). The objects served as jumping off points for our authors as they tried to imagine a world in which the pandemic is the background event for other shifts. 
 
   The stories here are not meant to predict the future but to be imagination extenders for entrepreneurs and consultants navigating a post-COVID landscape.
+
+  <a href="https://open.spotify.com/playlist/7o4hqg7Jo8rrz1p61V7037"><strong><i class="fab fa-spotify"></i> Listen to the accompanying Spotify playlist.</strong></a>
 lead_editors:
   - benny-sachin
   - reeves-amanda
@@ -125,7 +127,7 @@ collaborators:
 
 - **Writers:** [Sachin Benny](/members/benny-sachin/), [Chris Butler](/members/butler-chris/), [Nathan Chen](/members//), [Scott Garlinger](/members/garlinger-scott/), [Ben Smith](/members/smith-ben/)
 
-- **Illustrations:** [Justice Thelot](/members/thelot-justice/)
+- **Illustrations:** [Justice](/members/thelot-justice/)
 
 - **Website Development:** [Nathan Acks](/members/acks-nathan/)
 

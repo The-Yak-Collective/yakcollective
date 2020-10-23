@@ -51,7 +51,7 @@ layout: minimal
 		{% endif %}
 		<ul>
 			{% for pp in sorted_project_pages %}
-				<li{% if pp.date > site.time and site.future != true %}class="o-60"{% endif %}>{% if pp.name == page.name %}<strong>{% elsif pp.date <= site.time or site.future == true %}<a href="{% if pp.original_link %}{{ pp.original_link }}{% else %}{{ pp.permalink }}{% endif %}">{% endif %}{{ pp.title }}{% if pp.name == page.name %}</strong>{% elsif pp.date <= site.time or site.future == true %}</a>{% endif %}</li>
+				<li{% if pp.date > site.time and site.future != true %}class="o-40"{% endif %}>{% if pp.name == page.name %}<strong>{% elsif pp.date <= site.time or site.future == true %}<a href="{% if pp.original_link %}{{ pp.original_link }}{% else %}{{ pp.permalink }}{% endif %}">{% endif %}{{ pp.title }}{% if pp.name == page.name %}</strong>{% elsif pp.date <= site.time or site.future == true %}</a>{% endif %}</li>
 			{% endfor %}
 		</ul>
 	{% endif %}

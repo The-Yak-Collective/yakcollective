@@ -15,7 +15,7 @@
 {% endcomment %}
 
 <div id="{{ include.pp.name }}" class="project-page-box-container dib mt4 mt5-l">
-	{% if include.pp.date <= site.time or site.future == true %}<a href="{% if include.pp.original_link %}{{ include.pp.original_link }}{% else %}{{ include.pp.permalink }}{% endif %}"{% else %}<div{% endif %} class="project-page-box ba mh3 {% if include.pp.date > site.time and site.future != true %}o-30 {% endif %}relative">
+	{% if include.pp.date <= site.time or site.future == true %}<a href="{% if include.pp.original_link %}{{ include.pp.original_link }}{% else %}{{ include.pp.permalink }}{% endif %}"{% else %}<div{% endif %} class="project-page-box ba mh3 {% if include.pp.date > site.time and site.future != true %}o-40 {% endif %}relative">
 
 		{% comment %}
 			Hero image. Displayed portrait-ish, if present.
