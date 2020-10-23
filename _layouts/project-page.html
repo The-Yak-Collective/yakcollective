@@ -21,7 +21,7 @@ layout: page
 {% comment %}
 	If `page.author` is set, build our member list, locate the
 	appropriate member data page, and display the member card (as well
-	as the member `short_bio`, if it exists).
+	as the member `bio_short`, if it exists).
 {% endcomment %}
 {% if page.author %}
 	{% assign members = "" | split: "" %}
@@ -36,9 +36,9 @@ layout: page
 	{% assign author_file = page.author | append: ".md" %}
 	{% assign member = members | where: "name", author_file | first %}
 	{% include widget-member-card.html member=member %}
-	{% if member.short_bio %}
+	{% if member.bio_short %}
 		<div class="f6 ph2 pb1">
-			{{ member.short_bio | markdownify }}
+			{{ member.bio_short | markdownify }}
 		</div>
 	{% endif %}
 {% endif %}
