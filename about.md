@@ -89,5 +89,5 @@ If you're interested in assembling a larger team from among our membership, send
 <details class="f6">
     <summary>Website colophon</summary>
     <p>Site version {{ site.version }}.</p>
-    <p>Built by <a href="/members/critchlow-tom/">Tom Critchlow</a>, <a href="/members/acks-nathan/">Nathan Acks</a>, and <a href="/members/fenster-maier">Maier Fenster</a> using <a href="https://fontawesome.com/">Font Awesome</a>, <a href="https://jekyllrb.com/">Jekyll</a>, <a href="https://github.com/">GitHub</a>, <a href="https://ifttt.com/">IFTTT</a>, and <a href="https://www.netlify.com/">Netlify</a>.</p>
+    <p>Built by <a href="/members/critchlow-tom/">Tom Critchlow</a>, <a href="/members/acks-nathan/">Nathan Acks</a>, and <a href="/members/fenster-maier/">Maier Fenster</a> using <a href="https://fontawesome.com/">Font Awesome</a>, <a href="https://jekyllrb.com/">Jekyll</a>, <a href="https://github.com/">GitHub</a>, <a href="https://ifttt.com/">IFTTT</a>, and <a href="https://www.netlify.com/">Netlify</a>.</p>
 </details>
