@@ -1,8 +1,8 @@
 ---
 name: thelot-justice
-title: Justice Thelot
+title: Justice # Thélot
 date: 2020-10-23
 tagline: everything digital
 twitter: being_on_line
-avatar: /assets/dynamic/justice.png
+avatar: /assets/dynamic/thelot-justice.png
 ---
