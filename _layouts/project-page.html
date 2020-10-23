@@ -63,7 +63,7 @@ layout: page
 		<ul>
 			{% assign site_epoch = site.time | date: "%s" %}
 			{% for pp in sorted_project_pages %}
-				{% assign pp_epoch = include.pp.date | date: "%s" %}
+				{% assign pp_epoch = pp.date | date: "%s" %}
 				<li{% if pp.date > site.time and site.future != true %} class="o-40"{% endif %}>{% if pp.name == page.name %}<strong>{% elsif pp_epoch <= site_epoch or site.future == true %}<a href="{% if pp.original_link %}{{ pp.original_link }}{% else %}{{ pp.permalink }}{% endif %}">{% endif %}{{ pp.title }}{% if pp.name == page.name %}</strong>{% elsif pp_epoch <= site_epoch or site.future == true %}</a>{% endif %}</li>
 			{% endfor %}
 		</ul>
