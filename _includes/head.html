@@ -22,7 +22,9 @@
 	Set the page description. We do this in a single line to avoid any
 	weird whitespace in the tag. Pseudocode:
 
-	If page.summary exsits, then
+	If page.description exists, then
+		Use page.description
+	Else page.summary exsits, then
 		Grab the first 20 words of page.summary and strip any Markdown and HTML characters
 	Else if page.content is non-empty, then
 		Grab the first 20 words of page.content and strip any Markdown and HTML characters
@@ -38,8 +40,8 @@
 	The final "else" is just belt-and-suspenders material, and should
 	never be reached during a (non-broken) build.
 {% endcomment %}
-<meta name="description" content="{% if page.summary %}{{ page.summary | truncatewords: 20 | markdownify | strip_html | strip }}{% elsif page.content.length > 0 %}{{ page.content | truncatewords: 20 | strip_html | strip }}{% elsif page.subtitle %}{{ page.subtitle }}{% elsif page.tagline %}{{ page.tagline }}{% elsif site.description %}{{ site.description | truncatewords: 20 | strip }}{% else %}{{ site.name }}{% endif %}">
-<meta name="twitter:description" content="{% if page.summary %}{{ page.summary | truncatewords: 20 | markdownify | strip_html | strip }}{% elsif page.content.length > 0 %}{{ page.content | truncatewords: 20 | strip_html | strip }}{% elsif page.subtitle %}{{ page.subtitle }}{% elsif page.tagline %}{{ page.tagline }}{% elsif site.description %}{{ site.description | truncatewords: 20 | strip }}{% else %}{{ site.name }}{% endif %}">
+<meta name="description" content="{% if page.description %}{{ page.description | markdownify | strip_html | strip }}{% elsif page.summary %}{{ page.summary | truncatewords: 20 | markdownify | strip_html | strip }}{% elsif page.content.length > 0 %}{{ page.content | truncatewords: 20 | strip_html | strip }}{% elsif page.subtitle %}{{ page.subtitle }}{% elsif page.tagline %}{{ page.tagline }}{% elsif site.description %}{{ site.description | truncatewords: 20 | strip }}{% else %}{{ site.name }}{% endif %}">
+<meta name="twitter:description" content="{% if page.description %}{{ page.description | markdownify | strip_html | strip }}{% elsif page.summary %}{{ page.summary | truncatewords: 20 | markdownify | strip_html | strip }}{% elsif page.content.length > 0 %}{{ page.content | truncatewords: 20 | strip_html | strip }}{% elsif page.subtitle %}{{ page.subtitle }}{% elsif page.tagline %}{{ page.tagline }}{% elsif site.description %}{{ site.description | truncatewords: 20 | strip }}{% else %}{{ site.name }}{% endif %}">
 
 {% comment %}
 	Use page.title, or else site.name, for the page title.
@@ -49,6 +51,7 @@
 <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.name }}{% endif %}">
 
 <link rel="stylesheet" href="/assets/static/fonts.css">
+<link rel="stylesheet" href="/assets/static/font-awesome.min.css">
 <link rel="stylesheet" href="/assets/static/tachyons.min.css">
 <link rel="stylesheet" href="/assets/static/style.css">
 <style type="text/css">
