@@ -21,9 +21,8 @@ title: Yak Collective Consulting Tip
 {% assign members = "" | split: "" %}
 {% for the_page in site.pages %}
     {% assign path_array = the_page.url | replace: "/", " " | strip | split: " " %}
-    {% assign path_init = path_array | first %}
     {% assign path_size = path_array | size %}
-    {% if path_init == "members" and path_size == 2 %}
+    {% if path_array[0] == "members" and path_size == 2 %}
         {% assign members = members | push: the_page %}
     {% endif %}
 {% endfor %}
@@ -43,6 +42,6 @@ title: Yak Collective Consulting Tip
 # Yak Collective Consulting Tip #{{ the_one | plus: 1 }}
 {: #yak-collective-consulting-tip-number}
 
-<span id="yak-collective-consulting-tip">{{ the_words }}</span> &mdash; [{{ the_author.title }}](/members/{{ the_tip.author }}){: #yak-collective-consulting-tip-author}
+<span id="yak-collective-consulting-tip">{{ the_words }}</span> &mdash; [{{ the_author.title }}]({{ the_author.url }}){: #yak-collective-consulting-tip-author}
 
 <script defer src="/assets/static/tips.js"></script>

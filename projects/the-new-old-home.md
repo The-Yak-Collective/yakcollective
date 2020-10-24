@@ -1,5 +1,4 @@
 ---
-name: the-new-old-home
 title: The New Old Home
 date: 2020-06-10
 tagline: Rediscovering the home as a production frontier
@@ -93,7 +92,7 @@ collaborators:
 
 ## The Yak Wisdom Project
 
-This deck is the **second** in a series of studies the Yak Collective is undertaking over the coming months. If you find this report interesting, be sure to check out our first, [_Don't Waste the Reboot_](/projects/dont-waste-the-reboot). We aim to generate a body of Covid-19 reboot intelligence that is fundamentally different from anything you might see anywhere else, not just in terms of content, but in terms of the process of getting to it. 
+This deck is the **second** in a series of studies the Yak Collective is undertaking over the coming months. If you find this report interesting, be sure to check out our first, [_Don't Waste the Reboot_](/projects/dont-waste-the-reboot/). We aim to generate a body of Covid-19 reboot intelligence that is fundamentally different from anything you might see anywhere else, not just in terms of content, but in terms of the process of getting to it. 
 
 ## Let the Yak Collective Guide Your Reboot
 

@@ -6,15 +6,20 @@
 	soon" projects).
 
 	This include takes a single parameter, `project`, which should be
-	An object containing the relevant project information (which you
-	almost certainly want to pull from the `site.projects` collection).
+	an object containing the relevant project information from
+	`site.pages`.
 
 	Note that this widget outputs HTML in a safe way, and is thus
 	suitable for inclusion in both Markdown and HTML pages.
 {% endcomment %}
 
-<div id="{{ include.project.name }}" class="mt4 mb5">
-	<a href="/projects/{{ include.project.slug }}/" class="project-box ba relative">
+{% comment %}
+	(Re)Generate the project ID/slug.
+{% endcomment %}
+{% assign project_id = include.project.name | split: "." | first %}
+
+<div id="{{ project_id }}" class="mt4 mb5">
+	<a href="{{ include.project.url }}" class="project-box ba relative">
 		<div class="w-50">
 			<div class="smaller lh-title fw9 mv0 pt1 bt bw1 ph2 sans-serif ttu silent-link">{{ include.project.type }}</div>
 			<h2 class="ph2 fw8 f3 lh-solid pt4 pb1 mb1 mt4 pseudo-link">{{ include.project.title }}</h2>

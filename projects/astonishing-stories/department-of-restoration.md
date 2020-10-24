@@ -1,7 +1,5 @@
 ---
-name: astonishing-stories-department-of-restoration
 title: Department of Restoration
-permalink: /projects/astonishing-stories/department-of-restoration/
 date: 2020-11-06
 hero_image: /assets/dynamic/astonishing-stories-department-of-restoration.jpg
 hero_attach_vertical: center
@@ -9,7 +7,6 @@ hero_attach_horizontal: center
 author: garlinger-scott
 google_doc: https://docs.google.com/document/d/1JrlKrp4C3sy9ByOecAEWc2mxnoodvM5PWVAqpGVFhVY/edit
 description: "At a certain time, in a certain space, a person may speak or act and find himself under a recent form of judgment: cancellation."
-project: astonishing-stories
 display: true
 page_headers: |
   <style type="text/css">
@@ -50,17 +47,17 @@ page_headers: |
       font-weight: normal;
       font-size: 1.4em
     }
-    #astonishing-stories-department-of-restoration article {
+    #department-of-restoration article {
       padding-top: 0;
       padding-bottom: 1rem;
     }
     @media screen and (min-width: 60em) {
-      #astonishing-stories-department-of-restoration {
+      #department-of-restoration {
         background-image: url("/assets/dynamic/astonishing-stories-department-of-restoration-background-radius-50-medium.jpg");
         background-position: top center;
         background-size: cover;
       }
-      #astonishing-stories-department-of-restoration article {
+      #department-of-restoration article {
         background-color: #ffffff;
         padding-left: 2rem;
         padding-right: 2rem;
@@ -74,10 +71,13 @@ At a certain time, in a certain space, a person may speak or act and find himsel
 
 Indeed, this algorithmic tribunal stands watch over many, many occurrences and it decrees hold unforeseen consequences. Those people, those consequences, still navigate day-to-day life but haven’t the chance to go back or go forward.
 
-<img
-  src="{{ page.hero_image }}"
-  alt="Department of Restoration (illustration by Justice Thelot)"
-  class="fn mw-100 fr-m ml4-m mr2-m mt1-m mb2-m mw5-m fr-l ml4-l mr1-l mt2-l mb2-l mw6-l" />
+{%
+  include widget-image.html
+  layout="left"
+  image=page.hero_image
+  alt="Department of Restoration"
+  caption="Illustration by [Justice](/members/thelot-justice/)."
+%}
 
 This growing body of consequences now finally sees a new option, an outlet for moving forward. A select team, carrying rites handed down by religious sects, futurists, and ancient literature, service a series of practices. They elucidate practicable ways: making amends, settling disputes, and beginning again for a new time and place.
 

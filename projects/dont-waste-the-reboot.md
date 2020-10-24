@@ -1,5 +1,4 @@
 ---
-name: dont-waste-the-reboot
 title: Don’t Waste the Reboot
 date: 2020-04-30
 tagline: Making the next normal better than the last one

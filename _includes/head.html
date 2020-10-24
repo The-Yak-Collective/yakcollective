@@ -68,9 +68,8 @@
 {% assign members = "" | split: "" %}
 {% for the_page in site.pages %}
 	{% assign path_array = the_page.url | replace: "/", " " | strip | split: " " %}
-	{% assign path_init = path_array | first %}
 	{% assign path_size = path_array | size %}
-	{% if path_init == "members" and path_size == 2 %}
+	{% if path_array[0] == "members" and path_size == 2 %}
 		{% assign members = members | push: the_page %}
 	{% endif %}
 {% endfor %}
@@ -98,7 +97,7 @@
 {% endcomment %}
 {% assign page_author = "yak_collective" %}
 {% assign page_image = "/assets/static/yak-og.png" %}
-{% if page.layout == "post" or page.layout == "project-page" %}
+{% if page.layout == "post" %}
 	{% if page.author %}
 		{% assign author_file = page.author | append: ".md" %}
 		{% assign member = members | where: "name", author_file | first %}

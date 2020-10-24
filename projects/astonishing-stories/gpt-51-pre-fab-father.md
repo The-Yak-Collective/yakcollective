@@ -1,7 +1,5 @@
 ---
-name: astonishing-stories-gpt-51-pre-fab-father
 title: GPT 51 Pre-Fab Father
-permalink: /projects/astonishing-stories/gpt-51-pre-fab-father/
 date: 2020-11-27
 hero_image: /assets/dynamic/astonishing-stories-gpt-51-pre-fab-father.jpg
 hero_attach_vertical: center
@@ -9,7 +7,6 @@ hero_attach_horizontal: center
 author: benny-sachin
 google_doc: https://docs.google.com/document/d/1ypHVOPVaIv-XLi8RxXVM77XIdwEy266-viriWmlBNAg/edit
 description: How can I possibly untangle this mess?
-project: astonishing-stories
 display: true
 page_headers: |
   <style type="text/css">
@@ -50,17 +47,17 @@ page_headers: |
       font-weight: normal;
       font-size: 1.4em
     }
-    #astonishing-stories-gpt-51-pre-fab-father article {
+    #gpt-51-pre-fab-father article {
       padding-top: 0;
       padding-bottom: 1rem;
     }
     @media screen and (min-width: 60em) {
-      #astonishing-stories-gpt-51-pre-fab-father {
+      #gpt-51-pre-fab-father {
         background-image: url("/assets/dynamic/astonishing-stories-gpt-51-pre-fab-father-background-radius-50-medium.jpg");
         background-position: top center;
         background-size: cover;
       }
-      #astonishing-stories-gpt-51-pre-fab-father article {
+      #gpt-51-pre-fab-father article {
         background-color: #ffffff;
         padding-left: 2rem;
         padding-right: 2rem;
@@ -72,10 +69,13 @@ He looked down in pain at his [programmable forearm tattoo](https://roamresearch
 
 “How can I possibly untangle this mess?” he thought to himself. He had tried everything, even subscribing to the [_Love the Land_ program](https://roamresearch.com/#/app/Astonishing_Stories/page/b0JBkV_8Q) sponsored by the state. The people from the LLE (Love the land enforcement) had taken away all his electronic devices and internet connected implants and put him on a homestead 150 miles west of Austin in the West Texas desert. There, every evening he looked at the wind turbines lined across the entire horizon and wondered when his mind would cease to become an endless loop of the same thoughts going round and round.
 
-<img
-  src="{{ page.hero_image }}"
-  alt="GPT 51 Pre-Fab Father (illustration by Justice Thelot)"
-  class="fn mw-100 fr-m ml4-m mr2-m mt1-m mb2-m mw5-m fr-l ml4-l mr1-l mt2-l mb2-l mw6-l" />
+{%
+  include widget-image.html
+  layout="right"
+  image=page.hero_image
+  alt="GPT 51 Pre-Fab Father"
+  caption="Illustration by [Justice](/members/thelot-justice/)."
+%}
 
 Now, he was swiping through the Perfect Father app that his friend had suggested as something he could try. He eventually ended up hiring an older man with a slightly disappointed resting face as his father. Rather than this being a sado-masochistic experience, it so happened that Mr. Vader, the man he hired to be his father, is actually a pretty decent indie-life coach. Mr. Vader introduced him to reparenting: Imagining being a parent to your younger self, the way you would have liked to be parented and coached. He had always thought of himself as the son who never lived up to his father’s expectations, but oddly enough Mr. Vader had made him realize that this aggrandizing, hypercritical inner self that he had acquired during his formal years was kind of a drag. But, now he was angry at his dead father.
 

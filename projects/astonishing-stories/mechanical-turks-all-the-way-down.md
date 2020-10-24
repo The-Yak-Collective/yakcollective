@@ -1,7 +1,5 @@
 ---
-name: astonishing-stories-mechanical-turks-all-the-way-down
 title: Mechanical Turks All the Way Down
-permalink: /projects/astonishing-stories/mechanical-turks-all-the-way-down/
 date: 2020-11-20
 hero_image: /assets/dynamic/astonishing-stories-mechanical-turks-all-the-way-down.jpg
 hero_attach_vertical: center
@@ -10,7 +8,6 @@ author: butler-chris
 roam_page: https://roamresearch.com/#/app/Astonishing_Stories/page/-u1nPZcZu
 google_doc: https://docs.google.com/document/d/1HpnU_k_Q3xulIfwiEtdpfMycZeTRvR-cPWDl8mA___E/edit
 description: Can't be too eager on your first day of the job.
-project: astonishing-stories
 display: true
 page_headers: |
   <style type="text/css">
@@ -51,17 +48,17 @@ page_headers: |
       font-weight: normal;
       font-size: 1.1em
     }
-    #astonishing-stories-mechanical-turks-all-the-way-down article {
+    #mechanical-turks-all-the-way-down article {
       padding-top: 0;
       padding-bottom: 1rem;
     }
     @media screen and (min-width: 60em) {
-      #astonishing-stories-mechanical-turks-all-the-way-down {
+      #mechanical-turks-all-the-way-down {
         background-image: url("/assets/dynamic/astonishing-stories-mechanical-turks-all-the-way-down-background-radius-50-medium.jpg");
         background-position: top center;
         background-size: cover;
       }
-      #astonishing-stories-mechanical-turks-all-the-way-down article {
+      #mechanical-turks-all-the-way-down article {
         background-color: #ffffff;
         padding-left: 2rem;
         padding-right: 2rem;
@@ -83,10 +80,13 @@ It just went on and on like that. It was saying a lot without really saying much
 
 The final comment was alarming:
 
-<img
-  src="{{ page.hero_image }}"
-  alt="Mechanical Turks All the Way Down (illustration by Justice Thelot)"
-  class="fn mw-100 fr-m ml4-m mr2-m mt1-m mb2-m mw5-m fr-l ml4-l mr1-l mt2-l mb2-l mw6-l" />
+{%
+  include widget-image.html
+  layout="left"
+  image=page.hero_image
+  alt="Mechanical Turks All the Way Down"
+  caption="Illustration by [Justice](/members/thelot-justice/)."
+%}
 
 “How do I know that you are a person or a machine?”
 

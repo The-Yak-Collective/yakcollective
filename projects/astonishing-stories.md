@@ -1,5 +1,4 @@
 ---
-name: astonishing-stories
 title: Astonishing Stories
 date: 2020-10-23
 tagline: Weird is part of the job
@@ -63,22 +62,22 @@ page_headers: |
         padding-bottom: 0;
       }
     }
-    #astonishing-stories-agglomerizing-the-aesthetic h2,
-    #astonishing-stories-your-payment-is-ready h2 {
+    #agglomerizing-the-aesthetic h2,
+    #your-payment-is-ready h2 {
       font-family: "Sonsie One", "Comic Sans MS", cursive, sans-serif;
       font-size: 1.35em;
       margin-block-start: 0.922em;
       margin-block-end: 0.922em;
     }
-    #astonishing-stories-department-of-restoration h2,
-    #astonishing-stories-gpt-51-pre-fab-father h2 {
+    #department-of-restoration h2,
+    #gpt-51-pre-fab-father h2 {
       font-family: "Ceviche One", Impact, sans-serif;
       font-size: 2.1em;
       margin-block-start: 0.395em;
       margin-block-end: 0.395em;
     }
-    #astonishing-stories-mechanical-turks-all-the-way-down h2,
-    #astonishing-stories-wholeness-in-a-timeless-activity h2 {
+    #mechanical-turks-all-the-way-down h2,
+    #wholeness-in-a-timeless-activity h2 {
       font-family: Bangers, Impact, sans-serif;
       font-size: 1.65em;
       margin-block-start: 0.755em;

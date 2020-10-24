@@ -1,33 +1,58 @@
 {% comment %}
 	Project page boxes display page information for projects that have
-	one or more sub-pages. Each sub-page MUST have a `title` and either
-	a `original_link` (for pages pointing offsite, like member writings)
-	of `permalink` (for on-site pages) attribute, and then can contain
-	any combination of the following attributes (including none at all):
-	`hero_image`, `author`, `date`, and `description`. For best results,
-	all sub-pages associated with a given project (with `display: true`)
-	should have the same set of attributes defined.
+	one or more sub-pages. Each sub-page MUST have a `title` and then
+	can contain any combination of the following attributes (including
+	none at all): `hero_image`, `author`, `date`, `description` and
+	`original_link` (for pages pointing offsite, like member writings).
+	For best results, all sub-pages associated with a given project
+	(with `display: true`) should have the same set of attributes
+	defined.
 
 	This include expects a single parameter:
 
 		`pp`
-		An object containing the relevant project page information.
+		An object containing the relevant project page information from
+		`site.pages`.
 
 	Note that this widget outputs HTML in a safe way, and is thus
 	suitable for inclusion in both Markdown and HTML pages.
 {% endcomment %}
 
-<div id="{{ include.pp.name }}" class="project-page-box-container dib mt4 mt5-l">
+{% comment %}
+	(Re)Generate the project page ID/slug.
+{% endcomment %}
+{% assign project_page_id = include.pp.name | split: "." | first %}
+
+{% comment %}
+	What is the page project?
+{% endcomment %}
+{% assign path_array = include.pp.url | replace: "/", " " | strip | split: " " %}
+{% assign page_project = path_array[1] %}
+
+{% comment %}
+    Build array of projects.
+{% endcomment %}
+{% assign projects = "" | split: "" %}
+{% for the_page in site.pages %}
+    {% assign path_array = the_page.url | replace: "/", " " | strip | split: " " %}
+    {% assign path_size = path_array | size %}
+    {% if path_array[0] == "projects" and path_size == 2 %}
+        {% assign projects = projects | push: the_page %}
+    {% endif %}
+{% endfor %}
+
+<div id="{{ project_page_id }}" class="project-page-box-container dib mt4 mt5-l">
     {% assign pp_epoch = include.pp.date | date: "%s" %}
     {% assign site_epoch = site.time | date: "%s" %}
-	{% if pp_epoch <= site_epoch or site.future == true %}<a href="{% if include.pp.original_link %}{{ include.pp.original_link }}{% else %}{{ include.pp.permalink }}{% endif %}"{% else %}<div{% endif %} class="project-page-box ba mh3 {% if pp_epoch > site_epoch and site.future != true %}o-40 {% endif %}relative">
+	{% if pp_epoch <= site_epoch or site.future == true %}<a href="{% if include.pp.original_link %}{{ include.pp.original_link }}{% else %}{{ include.pp.url }}{% endif %}"{% else %}<div{% endif %} class="project-page-box ba mh3 {% if pp_epoch > site_epoch and site.future != true %}o-40 {% endif %}relative">
 
 		{% comment %}
 			Hero image. Displayed portrait-ish, if present.
 
 			We look up the background color from the associated project.
 		{% endcomment %}
-		{% assign project_data = site.projects | where: "name", include.pp.project | first %}
+		{% assign project_file = page_project | append: ".md" %}
+		{% assign project_data = projects | where: "name", project_file | first %}
 		<div class="hero bb" style="background: rgb({{ project_data.accent_color }}){% if include.pp.hero_image %} url('{{ include.pp.hero_image }}') {{ include.pp.hero_attach_vertical | default: "center" }} {{ include.pp.hero_attach_horizontal | default: "center" }}{% endif %}; background-size: cover;"></div>
 
 		<div class="page-info mh4 mt1 mb3">

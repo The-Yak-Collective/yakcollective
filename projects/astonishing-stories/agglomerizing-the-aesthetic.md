@@ -1,7 +1,5 @@
 ---
-name: astonishing-stories-agglomerizing-the-aesthetic
 title: Agglomerizing the Aesthetic
-permalink: /projects/astonishing-stories/agglomerizing-the-aesthetic/
 date: 2020-11-13
 hero_image: /assets/dynamic/astonishing-stories-agglomerizing-the-aesthetic.jpg
 hero_attach_vertical: center
@@ -9,7 +7,6 @@ hero_attach_horizontal: center
 author: smith-ben
 google_doc: https://docs.google.com/document/d/15LRvkKeNMwRgr6Zf8dYLBBAqhpBxIyLP_WBE16H-PCg/edit
 description: You needed something, no matter how minor, someone, somewhere in the world could help you with it.
-project: astonishing-stories
 display: true
 page_headers: |
   <style type="text/css">
@@ -50,17 +47,17 @@ page_headers: |
       font-weight: normal;
       font-size: 0.9em
     }
-    #astonishing-stories-agglomerizing-the-aesthetic article {
+    #agglomerizing-the-aesthetic article {
       padding-top: 0;
       padding-bottom: 1rem;
     }
     @media screen and (min-width: 60em) {
-      #astonishing-stories-agglomerizing-the-aesthetic {
+      #agglomerizing-the-aesthetic {
         background-image: url("/assets/dynamic/astonishing-stories-agglomerizing-the-aesthetic-background-radius-50-medium.jpg");
         background-position: top center;
         background-size: cover;
       }
-      #astonishing-stories-agglomerizing-the-aesthetic article {
+      #agglomerizing-the-aesthetic article {
         background-color: #ffffff;
         padding-left: 2rem;
         padding-right: 2rem;
@@ -74,10 +71,13 @@ Sometimes I just marvel at the world we live in. People always bitch about the g
 
 “Yeah, I’ve been growing my hair out for the first time since—well, I guess since the last pandemic. Ha! Time flies, right? Anyway, I’m virtually meeting my girlfriend’s parents for the first time tomorrow. I want to look relaxed but not flaky, amenable but not ambivalent. What should I do with my hair?”
 
-<img
-  src="{{ page.hero_image }}"
-  alt="Agglomerizing the Aesthetic (illustration by Justice Thelot)"
-  class="fn mw-100 fr-m ml4-m mr2-m mt1-m mb2-m mw5-m fr-l ml4-l mr1-l mt2-l mb2-l mw6-l" />
+{%
+  include widget-image.html
+  layout="right"
+  image=page.hero_image
+  alt="Agglomerizing the Aesthetic"
+  caption="Illustration by [Justice](/members/thelot-justice/)."
+%}
 
 “Well, I think you’re asking your hair to do a lot of heavy lifting here,” JoAnne chided playfully and winked, “But let me see how I can help. First, you’ll need to answer a few questions about your hair, your grooming habits, your girlfriend, her parents, your parents—”
 

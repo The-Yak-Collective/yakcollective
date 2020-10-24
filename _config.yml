@@ -36,7 +36,7 @@ collections:
 #
 defaults:
   - scope:
-      path: "members/"
+      path: "members/*"
       type: pages
     values:
       layout: member
@@ -51,17 +51,15 @@ defaults:
     values:
       layout: post
   - scope:
-      path: ""
-      type: projects
+      path: "projects/*"
+      type: pages
     values:
       layout: project
-      permalink: /projects/:name/
   - scope:
-      path: ""
-      type: project_pages
+      path: "projects/*/*"
+      type: pages
     values:
-      layout: project-page
-      permalink: /projects/pages/:name/
+      layout: post
 
 # Kramdown parser option
 #

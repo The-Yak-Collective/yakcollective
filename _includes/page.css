@@ -1,12 +1,30 @@
 {% comment %}
+    Build array of projects.
+{% endcomment %}
+{% assign projects = "" | split: "" %}
+{% for the_page in site.pages %}
+    {% assign path_array = the_page.url | replace: "/", " " | strip | split: " " %}
+    {% assign path_size = path_array | size %}
+    {% if path_array[0] == "projects" and path_size == 2 %}
+        {% assign projects = projects | push: the_page %}
+    {% endif %}
+{% endfor %}
+
+{% comment %}
+	Turn the page path into an array.
+{% endcomment %}
+{% assign path_array = page.url | replace: "/", " " | strip | split: " " %}
+
+{% comment %}
 	Accent colors can vary by page. This include controls this, as well
 	as other per-page elements.
 {% endcomment %}
-
 {% if page.accent_color %}
 	{% assign accent_color = page.accent_color %}
-{% elsif page.layout == "project-page" %}
-	{% assign project = site.projects | where: "name", page.project | first %}
+{% elsif page.layout == "post" and path_array[0] == "projects" %}
+	{% assign path_array = page.url | replace: "/", " " | strip | split: " " %}
+	{% assign project_file = path_array[1] | append: ".md" %}
+	{% assign project = projects | where: "name", project_file | first %}
 	{% assign accent_color = project.accent_color %}
 {% else %}
 	{% assign accent_color = site.accent_color %}
@@ -86,26 +104,25 @@ a.member-box:hover {
 	grow quite large as more and more projects come online.
 {% endcomment %}
 {% if page.url == "/projects/" or page.layout == "member" %}
-	{% for project in site.projects %}
-		{% if project.name %}
-			{% if project.accent_color %}
-				{% assign accent_color = project.accent_color %}
-			{% else %}
-				{% assign accent_color = site.accent_color %}
-			{% endif %}
-			#{{ project.name }} a:hover {
-				color: rgba({{ accent_color }},1.00);
-			}
-			#{{ project.name }} .pseudo-link {
-				text-decoration-color: rgba({{ accent_color }},0.60);
-			}
-			#{{ project.name }} .hero {
-				background-color: rgba({{ accent_color }},0.60);
-				{% if project.hero_image %}
-					background-image: url("{{ project.hero_image }}");
-					background-size: cover;
-				{% endif %}
-			}
+	{% for project in projects %}
+		{% assign project_id = project.name | split: "." | first %}
+		{% if project.accent_color %}
+			{% assign accent_color = project.accent_color %}
+		{% else %}
+			{% assign accent_color = site.accent_color %}
 		{% endif %}
+		#{{ project_id }} a:hover {
+			color: rgba({{ accent_color }},1.00);
+		}
+		#{{ project_id }} .pseudo-link {
+			text-decoration-color: rgba({{ accent_color }},0.60);
+		}
+		#{{ project_id }} .hero {
+			background-color: rgba({{ accent_color }},0.60);
+			{% if project.hero_image %}
+				background-image: url("{{ project.hero_image }}");
+				background-size: cover;
+			{% endif %}
+		}
 	{% endfor%}
 {% endif %}
