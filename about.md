@@ -10,7 +10,7 @@ title: About the Yak Collective
 
 The Yak Collective is a loosely coordinated network of over 300 independent consultants, coaches, and freelancers with varied technical and creative skills. Nearly 30 of our members contributed to our inaugural report, released on April 30, 2020, [_Don't Waste the Reboot_](/projects/dont-waste-the-reboot/). These numbers will evolve as we take on more shared projects, both internally initiated, and on behalf of clients.
 
-<div class="left-box"><div class="box-interior"><figure class="ma0"><img src="/assets/dynamic/astonishing-stories-wholeness-in-a-timeless-activity.jpg" alt="foo bar baz" class="w-100"><figcaption class="f7">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</figcaption></figure></div></div>
+<div class="left-box"><div class="box-interior"><figure class="ma0"><img src="/assets/dynamic/astonishing-stories-wholeness-in-a-timeless-activity.jpg" alt="foo bar baz" class="w-100"><figcaption class="yak-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</figcaption></figure></div></div>
 
 Though we launched formally in March, 2020, the network underlying the Yak Collective has been growing in the background since early 2019. What began as a conversation among a handful of indies swapping notes turned into a broader conversation among dozens, then hundreds of indies, around the world.
 
@@ -22,7 +22,7 @@ We wanted a way to generate alternatives to warmed-over output from the last cri
 
 We have nothing _against_ consulting firms, MBA programs, think tanks, design agencies, TED talk givers, and the ideas of famous professors _per se_. In fact we happily and liberally steal and use their ideas where they fit -- and you'll see evidence of such influence in our work. Many of us are in fact veterans of the literary-industrial complex. Some of us even have current, active affiliations in those worlds. And many more of us have productive collaborations and cordial friendships with people in those worlds.  In fact we fully expect our friends in those worlds to help us bootstrap the Yak Collective.
 
-<div class="right-box"><div class="box-interior"><figure class="ma0"><img src="/assets/dynamic/astonishing-stories-wholeness-in-a-timeless-activity.jpg" alt="foo bar baz" class="w-100"><figcaption class="f7">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</figcaption></figure></div></div>
+<div class="right-box"><div class="box-interior"><figure class="ma0"><img src="/assets/dynamic/astonishing-stories-wholeness-in-a-timeless-activity.jpg" alt="foo bar baz" class="w-100"><figcaption class="yak-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</figcaption></figure></div></div>
 
 But crucially, not all of us are from those worlds, or affiliated with them, or actively connected to them. Or truth be told, welcome in them. Each of us has chosen to grow our network in a much more open, promiscuous way than any traditional institution can afford to, connecting liberally beyond the boundaries of the literary-industrial complex. We've chosen to do so because we believe many other worlds have as much value to offer, perhaps more. We believe, in fact, that the long tail of *Other Worlds* inhabited by indie consultants is rapidly creating and accruing value with greater volume, velocity, and variety than the literary industrial complex.
 
@@ -34,7 +34,7 @@ What makes us different -- and what makes the indie alternative a _real_ alterna
 
 Each of us has our own consulting practice or small freelancer business, but we also work together on larger projects -- and we want to do more of that. We range in experience from newbies who have yet to make their first buck from indie work, to veteran hustlers with long-established independent practices who have already billed thousands of hours and earned hundreds of thousands of dollars through independent consulting work.
 
-<div class="center-box"><div class="box-interior"><figure class="ma0"><img src="/assets/dynamic/the-new-old-home-hero.jpg" alt="foo bar baz" class="w-100"><figcaption class="f7">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</figcaption></figure></div></div>
+<div class="center-box"><div class="box-interior"><figure class="ma0"><img src="/assets/dynamic/the-new-old-home-hero.jpg" alt="foo bar baz" class="w-100"><figcaption class="yak-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</figcaption></figure></div></div>
 
 Our members are from all over the world: The Americas, Europe, Asia, Africa, and Australia.
 
@@ -48,7 +48,7 @@ Our functional experience spectrum ranges from industrial R&D and software devel
 
 All of us went indie because we wanted to work on real, hard problems, as best as we could, and enjoy the genuine intellectual challenges and meaning-making that result. We have all been willing to give up significant comfort and security for that. We went indie because we valued a sense of accomplishment over easy money for bullshit work. We went indie because we wanted to bring the right capabilities to problems, not distort problems to match our capabilities.
 
-<div class="full-bleed-box"><div class="box-interior"><figure class="ma0"><img src="/assets/dynamic/the-new-old-home-hero.jpg" alt="foo bar baz" class="w-100"><figcaption class="f7">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</figcaption></figure></div></div>
+<div class="full-bleed-box"><div class="box-interior"><figure class="ma0"><img src="/assets/dynamic/the-new-old-home-hero.jpg" alt="foo bar baz" class="w-100"><figcaption class="yak-content wide">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</figcaption></figure></div></div>
 
 This means sometimes we try weird new ideas and untested methods, and wander from our zones of expertise into our zones of amateurishness. We are open to _really_ trying new things and owning the inevitable failures that can sometimes result, as well as the successes, because if we aren't _open_ in that way, we can't land gigs or make money.
 
@@ -58,7 +58,7 @@ As independents, we do not have the luxury of hiding among dozens of interchange
 
 The inventory of methods, tools, and processes we bring to any problem range from wild, untested crackpottery, to approaches that have been _really_ tested and validated under live fire on serious business problems. We do not dismiss any approach simply because it is unformed and new, or is being proposed by a young, inexperienced contributor lacking in confidence. Nor do we uncritically accept supposedly gold-standard approaches from grizzled veterans simply because they come with Famous Names and Glowing Halos attached.
 
-<div class="full-bleed-box capped"><div class="box-interior"><figure class="ma0"><img src="/assets/dynamic/the-new-old-home-hero.jpg" alt="foo bar baz" class="w-100"><figcaption class="f7">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</figcaption></figure></div></div>
+<div class="full-bleed-box capped"><div class="box-interior"><figure class="ma0"><img src="/assets/dynamic/the-new-old-home-hero.jpg" alt="foo bar baz" class="w-100"><figcaption class="yak-content wide">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</figcaption></figure></div></div>
 
 - We're not in it for high-priced bullshit work, but we _do_ know how to pragmatically navigate a real world where bullshit is an environmental hazard one must deal with.
 
