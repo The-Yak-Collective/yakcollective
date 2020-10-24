@@ -15,7 +15,7 @@ layout: page
 		<div class="w-90 mw8 center">
 			<div class="cf ph0 pv5-l pv4">
 				<aside class="fn fl-l w-30-l ph4-l pb2 pb0-l">
-					<div class="project-type f5 lh-title fw9 mb3 mt0 pt3 bt bw2 sans-serif ttu">{{ page.type }}</div>
+					<div class="project-type small lh-title fw9 mb3 mt0 pt3 bt bw2 sans-serif ttu">{{ page.type }}</div>
 
 					{% comment %}
 						Project date and sequence count (if applicable).
@@ -30,7 +30,7 @@ layout: page
 					{% comment %}
 						Project lead editor list.
 					{% endcomment %}
-					<details class="f6 mb3 lead-editors" open>
+					<details class="mb3 lead-editors" open>
 						<summary class="ttu lh-title">Lead editors</summary>
 						<p>{% include member-list.html member_list=page.lead_editors link_members=true %}</p>
 					</details>
@@ -38,7 +38,7 @@ layout: page
 					{% comment %}
 						Project collaborator list.
 					{% endcomment %}
-					<details class="f6 mb3 collaborators" open>
+					<details class="mb3 collaborators" open>
 						<summary class="ttu lh-title">Collaborators</summary>
 						<p>{% include member-list.html member_list=page.collaborators link_members=true %}</p>
 					</details>
@@ -51,7 +51,7 @@ layout: page
 			<div class="fn fl-l w-70-l ph4-l">
 					<h1 class="ma0 pa0 fw8 f1">{{ page.title }}</h1>
 					<div class="subhead pt3 pb1 fw4 f3">{{ page.tagline }}</div>
-					<div class="f5 lh-copy mb3">{{ page.summary | markdownify }}</div>
+					<div class="small lh-copy mb3">{{ page.summary | markdownify }}</div>
 				</div>
 			</div>
 		</div>
@@ -93,5 +93,5 @@ layout: page
 	{% comment %}
 		Project page content.
 	{% endcomment %}
-	<section class="container mw7 cf pt1 pb5 f4-l center w-90 lh-copy">{{ content }}</section>
+	<section class="container mw7 cf pt1 pb5 center w-90 lh-copy">{{ content }}</section>
 </article>

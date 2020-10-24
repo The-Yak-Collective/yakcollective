@@ -1,5 +1,6 @@
 :root {
-	--content-width: 48rem; /* Switch to 46rem once new layout is finalized */
+	--content-width: 36rem;
+	--content-width-l: 48rem; /* Switch to 46rem once new layout is finalized */
 	--content-padding: 1.25rem;
 }
 
@@ -66,29 +67,27 @@ figcaption,
 	color: rgba(0,0,0,0.65);
 }
 
-figcaption {
-	font-size: 60%;
+.small,
+details,
+.footnotes,
+figcaption,
+#markdown-toc {
+	font-size: 80%;
+}
+
+.smaller {
+	font-size: 70%;
 }
 
 a.yak-logo .yak-logo-image {
 	content: url("/assets/static/yak-logo-white-bg-cutout.png");
 	background-color: rgba(0,0,0,0.85);
+	width: 2.5rem;
+	height: 2.5rem
 }
 
 .yak-content > *:not(.left-box):not(.right-box):not(.center-box):not(.full-bleed-box) {
 	max-width: min(var(--content-width), 100% - (2 * var(--content-padding)));
-	margin-left: auto;
-	margin-right: auto;
-}
-
-.yak-content.wide {
-	max-width: min((1.5 * var(--content-width)) + (2 * var(--content-padding)), 100% - (2 * var(--content-padding)));
-	margin-left: auto;
-	margin-right: auto;
-}
-
-.yak-content.narrow {
-	max-width: min((0.75 * var(--content-width)) + (2 * var(--content-padding)), 100% - (2 * var(--content-padding)));
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -181,14 +180,20 @@ a.yak-logo .yak-logo-image {
 	width: 100%;
 }
 
-.yak-content .full-bleed-box.capped {
-	max-width: 1440px;
-	margin-left: auto;
-	margin-right: auto;
-}
-
 .yak-content .full-bleed-box .box-interior {
 	padding: var(--content-padding) 0;
+}
+
+.yak-content .box-interior .yak-content > * {
+	max-width: 100% !important;
+}
+
+.yak-content .box-interior .yak-content.wide > * {
+	max-width: min((1.5 * var(--content-width)) + (2 * var(--content-padding)), 100% - (2 * var(--content-padding))) !important;
+}
+
+.yak-content .box-interior .yak-content.narrow > * {
+	max-width: min((0.75 * var(--content-width)) + (2 * var(--content-padding)), 100% - (2 * var(--content-padding))) !important;
 }
 
 .yak-content .yak-post pre {
@@ -368,7 +373,6 @@ h2#featured-yak {
 
 #markdown-toc {
 	padding: 1rem 2rem 1rem 3rem;
-	font-size: 80%;
 }
 
 #markdown-toc li {
@@ -382,5 +386,4 @@ h2#featured-yak {
 
 .footnotes {
 	padding: 1em 2em 1em 0.5em;
-	font-size: 80%;
 }

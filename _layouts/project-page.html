@@ -37,7 +37,7 @@ layout: page
 	{% assign member = members | where: "name", author_file | first %}
 	{% include widget-member-card.html member=member %}
 	{% if member.bio_short %}
-		<div class="f6 ph2 pb1">
+		<div class="small ph2 pb1">
 			{{ member.bio_short | markdownify }}
 		</div>
 	{% endif %}

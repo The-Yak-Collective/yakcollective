@@ -39,34 +39,34 @@
 				The `pseudo-link` class is used to make the card act a
 				bit more like an actual link when in "link mode".
 			{% endcomment %}
-			<span class="f6 db b{% unless include.standalone %} pseudo-link{% endunless %}">{{ include.member.title }}</span>
+			<small class="db b{% unless include.standalone %} pseudo-link{% endunless %}">{{ include.member.title }}</small>
 
 			{% comment %}
 				Inset member tagline, if set.
 			{% endcomment %}
 			{% if include.member.tagline and include.member.tagline.size > 0 %}
-				<span class="f6 db{% unless include.standalone %} silent-link{% endunless %}">{{ include.member.tagline }}</span>
+				<small class="db{% unless include.standalone %} silent-link{% endunless %}">{{ include.member.tagline }}</small>
 			{% endif %}
 
 			{% comment %}
 				Inset member "indie status", if set.
 			{% endcomment %}
 			{% if include.member.indie_status and include.member.indie_status.size > 0 %}
-				<span class="f6 db{% unless include.standalone %} silent-link{% endunless %}">Indie status: {{ include.member.indie_status }}</span>
+				<small class="db{% unless include.standalone %} silent-link{% endunless %}">Indie status: {{ include.member.indie_status }}</small>
 			{% endif %}
 
 			{% comment %}
 				Inset member "currently" information, if set.
 			{% endcomment %}
 			{% if include.member.currently and include.member.currently.size > 0 %}
-				<span class="f6 db{% unless include.standalone %} silent-link{% endunless %}">Currently: {{ include.member.currently }}</span>
+				<small class="db{% unless include.standalone %} silent-link{% endunless %}">Currently: {{ include.member.currently }}</small>
 			{% endif %}
 
 			{% comment %}
 				Inset member "previously" information, if set.
 			{% endcomment %}
 			{% if include.member.previously and include.member.previously.size > 0 %}
-				<span class="f6 db{% unless include.standalone %} silent-link{% endunless %}">Previously: {{ include.member.previously }}</span>
+				<small class="db{% unless include.standalone %} silent-link{% endunless %}">Previously: {{ include.member.previously }}</small>
 			{% endif %}
 
 			{% comment %}
@@ -76,12 +76,12 @@
 				for show).
 			{% endcomment %}
 			{% if include.member.links %}
-				<span class="f6 db{% unless include.standalone %} silent-link{% endunless %}">
+				<small class="db{% unless include.standalone %} silent-link{% endunless %}">
 					{% for link in include.member.links %}
 						{% if forloop.first == true %}{% else %} / {% endif %}
 						{% if include.standalone %}<a href="{{ link.url }}">{% endif %}{{ link.title }}{% if include.standalone %}</a>{% endif %}
 					{% endfor %}
-				</span>
+				</small>
 			{% endif %}
 
 		</div>
@@ -93,7 +93,7 @@
 			show).
 		{% endcomment %}
 		{% if include.member.twitter and include.member.twitter.size > 0 %}
-			<div class="f6{% unless include.standalone %} silent-link{% endunless %}">
+			<div class="small{% unless include.standalone %} silent-link{% endunless %}">
 				{% if include.standalone %}<a href="https://twitter.com/{{ include.member.twitter }}">{% endif %}@{{ include.member.twitter }}{% if include.standalone %}</a>{% endif %}
 			</div>
 		{% endif %}

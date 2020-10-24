@@ -22,7 +22,7 @@ To access the invitation link for our Discord server, please answer a couple of 
         </p>
         <p>
             <label class="db b mb2" for="entry.2065359511">What best describes you? <span class="required">*</span></label>
-            <small class="db f6 mb2 details">What best describes your relationship to the gig economy?</small>
+            <small class="db mb2 details">What best describes your relationship to the gig economy?</small>
             <select class="db ba pa2 w-100 w-80-m w-60-l" name="entry.2065359511" id="entry.2065359511" required="true">
                 <option value=""></option>
                 <option value="Independent consultant">Independent consultant</option>

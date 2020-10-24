@@ -37,7 +37,7 @@
 				Project page date.
 			{% endcomment %}
 			{% if include.pp.date %}
-				<time class="f6 ttu tracked-tight">
+				<time class="small ttu tracked-tight">
 					{{ include.pp.date | date_to_long_string: "ordinal", "US" }}
 				</time>
 			{% endif %}
@@ -51,7 +51,7 @@
 			{% endcomment %}
 			{% if include.pp.author %}
 				{% assign author = include.pp.author | split: " " %}
-				<p class="project-page-author f6 ttu tracked-tight">{% include member-list.html member_list=author link_members=false %}</p>
+				<p class="project-page-author small ttu tracked-tight">{% include member-list.html member_list=author link_members=false %}</p>
 			{% endif %}
 
 			{% comment %}

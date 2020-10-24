@@ -12,10 +12,10 @@
 		{% include analytics.html %}
 	</head>
 
-	<body class="w-100 ph0-l center relative h-100">
+	<body class="w-100 ph0-l f4-l center relative h-100">
 		<div class="fill-space">
 			{% include nav.html %}
-			<div id="{{ page.url | replace: '/', ' ' | strip | replace: ' ', '-' | default: 'index' }}" class="yak-content pb5 f4-l lh-copy">
+			<div id="{{ page.url | replace: '/', ' ' | strip | replace: ' ', '-' | default: 'index' }}" class="yak-content pb5 lh-copy">
 				{{ content }}
 			</div>
 		</div>

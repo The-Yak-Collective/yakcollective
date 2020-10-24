@@ -1,0 +1,39 @@
+{% comment %}
+	A more flexible image include than just writing `![]()` in Markdown.
+	Expects the following inputs:
+
+		`layout`
+		One of `left`, `right`, `center`, or `full-bleed`. Defaults to
+		`center`.
+
+		`image`
+		Path to the image to include (relative to the final site).
+
+		`alt`
+		Optional (but recommended for accessibility reasons) image alt
+		text. NO MARKDOWN!
+
+		`caption`
+		Optional image caption; Markdown permitted.
+
+	Note that this widget outputs HTML in a safe way, and is thus
+	suitable for inclusion in both Markdown and HTML pages.
+{% endcomment %}
+
+{% assign the_layout = include.layout | default: "center" %}
+
+{% comment %}
+	Note that the `<figure/>` block can't be indented here, or the
+	`markdownify` filter in `widget-breakout-box.html` will turn it into
+	a code block.
+{% endcomment %}
+{% capture the_content %}<figure class="ma0">
+	<img src="{{ include.image }}"{% if include.alt %} alt="{{ include.alt | markdownify | strip_html | strip }}"{% endif %} class="w-100">
+	{% if include.caption %}
+		<figcaption class="yak-content{% if the_layout == "full-bleed" %} wide{% endif %}">
+			{{ include.caption | markdownify }}
+		</figcaption>
+	{% endif %}
+</figure>{% endcapture %}
+
+{% include widget-breakout-box.html layout=the_layout content=the_content %}

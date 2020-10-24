@@ -1,0 +1,24 @@
+{% comment %}
+	Wrap incoming content in a box that removes it from the regular
+	page flow. You *probably* want to wrap any text you pass in with a
+	`<div/>` of class `yak-content`, though other elements (images,
+	iframes, etc.) are best left unwrapped. Because of this, you almost
+	certainly want to pass in HTML rather than markdown, though we use
+	`markdownify` to make any incoming content safe, just in case.
+
+	Expects two variables:
+
+		`layout`
+		One of `left`, `right`, `center`, or `full-bleed`. Defaults to
+		`center`.
+
+		`content`
+		Content to be put in the box.
+
+	Note that this widget outputs HTML in a safe way, and is thus
+	suitable for inclusion in both Markdown and HTML pages.
+{% endcomment %}
+
+<div class="{{ include.layout | default: 'center' }}-box"><div class="box-interior">
+	{{ include.content | markdownify }}
+</div></div>
