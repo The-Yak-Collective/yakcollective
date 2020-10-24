@@ -1,3 +1,8 @@
+:root {
+	--content-width: 48rem; /* Switch to 46rem once new layout is finalized */
+	--content-padding: 1.25rem;
+}
+
 html {
 	height: 100%;
 	z-index: -2;
@@ -65,8 +70,8 @@ a.yak-logo .yak-logo-image {
 	background-color: rgba(0,0,0,0.85);
 }
 
-.yak-content > *:not(.full-bleed):not(.capped-bleed) {
-	max-width: min(48rem, 100% - 2.5rem); /* Switch to 46rem once new layout is finalized */
+.yak-content > *:not(.left-box):not(.right-box):not(.center-box):not(.full-bleed-box) {
+	max-width: min(var(--content-width), 100% - (2 * var(--content-padding)));
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -93,14 +98,74 @@ a.yak-logo .yak-logo-image {
 	padding-inline-end: 3rem;
 }
 
-.yak-content .full-bleed {
+/*
+                                              min(48rem, 100% - 2.5rem)
+|--------------------------------------------|+++++++++++++++++++++++++|--------------------------------------------|
+ calc((100% - min(48rem, 100% - 2.5rem)) / 2)                           calc((100% - min(48rem, 100% - 2.5rem)) / 2)
+
+min(24rem, 50% - 2.5rem)
+
+calc((100% - min(48rem, 100% - 2.5rem) + min(24rem, 50% - 2.5rem)) / 2)
+*/
+
+.yak-content .left-box,
+.yak-content .right-box {
 	display: block;
-	width: 100%;
+	width: calc(
+		(
+			100% - min(
+				var(--content-width),
+				100% - (2 * var(--content-padding))
+			) + min(
+				var(--content-width) / 2,
+				50% - (2 * var(--content-padding))
+			)
+		) / 2
+	);
+	min-width: min(
+		(var(--content-width) / 2) + (2 * var(--content-padding)),
+		100%
+	);
+	margin-top: calc(-0.75 * var(--content-padding));
 }
 
-.yak-content .capped-bleed {
+.yak-content .left-box .box-interior,
+.yak-content .right-box .box-interior {
+	width: min(
+		(var(--content-width) / 2) + (2 * var(--content-padding)),
+		100%
+	);
+	padding: var(--content-padding);
+}
+
+.yak-content .left-box {
+	float: left;
+}
+
+.yak-content .left-box .box-interior {
+	float: right;
+}
+
+.yak-content .right-box {
+	float: right;
+}
+
+.yak-content .right-box .box-interior {
+	float: left;
+}
+
+.yak-content .center-box {
+	display: block;
+	padding: var(--content-padding);
+}
+
+.yak-content .full-bleed-box {
 	display: block;
 	width: 100%;
+	padding: var(--content-padding) 0;
+}
+
+.yak-content .full-bleed-box.capped {
 	max-width: 1440px;
 	margin-left: auto;
 	margin-right: auto;
