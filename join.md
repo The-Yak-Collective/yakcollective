@@ -11,19 +11,19 @@ Be sure to take a moment to read our [code of conduct](https://roamresearch.com/
 To access the invitation link for our Discord server, please answer a couple of simple questions (all <span class="required">*</span> fields are required).
 
 <div>
-    <form class="mt4 mt5-l mh0 mh3-m mh4-l" method="post" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfVUUvuIkzEGffk1CoEgzOkeO_yI05Nuw6zU3H1TNLmiQOf7g/formResponse">
+    <form class="mt4 mt5-l mh0 mh4-l" method="post" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfVUUvuIkzEGffk1CoEgzOkeO_yI05Nuw6zU3H1TNLmiQOf7g/formResponse">
         <p>
             <label class="db b mb2" for="emailAddress">Email address <span class="required">*</span></label>
-            <input class="db ba pa2 w-100 w-80-m w-60-l" type="email" name="emailAddress" id="emailAddress" required="true">
+            <input class="db ba pa2 w-100 w-75-l" type="email" name="emailAddress" id="emailAddress" required="true">
         </p>
         <p>
             <label class="db b mb2" for="entry.579811979">What city are you located in? <span class="required">*</span></label>
-            <input class="db ba pa2 w-100 w-80-m w-60-l" type="text" name="entry.579811979" id="entry.579811979" required="true">
+            <input class="db ba pa2 w-100 w-75-l" type="text" name="entry.579811979" id="entry.579811979" required="true">
         </p>
         <p>
             <label class="db b mb2" for="entry.2065359511">What best describes you? <span class="required">*</span></label>
             <small class="db mb2 details">What best describes your relationship to the gig economy?</small>
-            <select class="db ba pa2 w-100 w-80-m w-60-l" name="entry.2065359511" id="entry.2065359511" required="true">
+            <select class="db ba pa2 w-100 w-75-l" name="entry.2065359511" id="entry.2065359511" required="true">
                 <option value=""></option>
                 <option value="Independent consultant">Independent consultant</option>
                 <option value="Skilled contractor/freelancer">Skilled contractor/freelancer</option>
