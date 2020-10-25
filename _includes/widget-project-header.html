@@ -1,0 +1,78 @@
+{% comment %}
+	Project page header/hero.
+
+	By default, this widget assumes that it is included in a project
+	homepage, and will use that page's information to determine which
+	project pages to display. This can be overridden by passing in
+	suitable page data as the `project` parameter.
+
+	Note that this widget outputs HTML in a safe way, and is thus
+	suitable for inclusion in both Markdown and HTML pages.
+{% endcomment %}
+
+{% comment %}
+	Set the current project.
+{% endcomment %}
+{% assign project = include.project | default: page %}
+
+{% comment %}
+	Figure out the current project ID.
+{% endcomment %}
+{% assign project_id = project.name | split: "." | first %}
+
+{% comment %}
+	Output project hero.
+{% endcomment %}
+<header id="{{ project_id }}-hero" class="yak-project-header hero">
+	<div class="w-90 mw8 center">
+		<div class="cf ph0 pv5-l pv4">
+			<aside class="fn fl-l w-30-l ph4-l pb2 pb0-l">
+				{% if project.type %}
+					<div class="project-type small lh-title fw9 mb3 mt0 pt3 bt bw2 sans-serif ttu">{{ project.type }}</div>
+				{% endif %}
+
+				{% comment %}
+					Project date and sequence count (if applicable).
+				{% endcomment %}
+				{% if project.date %}
+					<time class="db f6 ttu mb3 tracked-tight">
+						{{ project.date | date_to_long_string: "ordinal", "US" }} UTC
+						{% if project.sequence %}
+							<br>{% include sequence.html current_date=project.date sequence_id=project.sequence %}
+						{% endif %}
+					</time>
+				{% endif %}
+
+				{% comment %}
+					Project lead editor list.
+				{% endcomment %}
+				{% if project.lead_editors %}
+					<details class="mb3 lead-editors" open>
+						<summary class="ttu lh-title">Lead editors</summary>
+						<p>{% include member-list.html member_list=project.lead_editors link_members=true %}</p>
+					</details>
+				{% endif %}
+
+				{% comment %}
+					Project collaborator list.
+				{% endcomment %}
+				{% if project.collaborators %}
+					<details class="mb3 collaborators" open>
+						<summary class="ttu lh-title">Collaborators</summary>
+						<p>{% include member-list.html member_list=project.collaborators link_members=true %}</p>
+					</details>
+				{% endif %}
+			</aside>
+
+			{% comment %}
+				Main hero banner content: The project title, tagline,
+				and above-the-fold summary.
+			{% endcomment %}
+			<div class="fn fl-l w-70-l ph4-l">
+				{% if project.title %}<h1 class="ma0 pa0 fw8 f1">{{ project.title }}</h1>{% endif %}
+				{% if project.tagline %}<div class="subhead pt3 pb1 fw4 f3">{{ project.tagline }}</div>{% endif %}
+				{% if project.summary %}<div class="small lh-copy mb3">{{ project.summary | markdownify }}</div>{% endif %}
+			</div>
+		</div>
+	</div>
+</header>

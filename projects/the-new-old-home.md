@@ -12,49 +12,6 @@ page_headers: |
       background-size: cover;
       opacity: 0.65;
     }
-    .report {
-      display: block;
-    }
-    @media (min-width: 70em) {
-      .report {
-        width: 130%;
-        margin-left: -15%;
-        margin-top: -3rem;
-        height: 37rem;
-      }
-    }
-    @media (min-width: 60em) and (max-width: 70em) {
-      .report{
-        width: 110%;
-        margin-left: -5%;
-        margin-top: -3rem;
-        height: 31.5rem;
-      }
-    }
-    @media (min-width: 50em) and (max-width: 60em) {
-      .report{
-        width: 100%;
-        margin-left: 0;
-        margin-top: -2rem;
-        height: 29rem;
-      }
-    }
-    @media (min-width: 40em) and (max-width: 50em) {
-      .report{
-        width: 100%;
-        margin-left: 0;
-        margin-top: -2rem;
-        height: 26.5rem;
-      }
-    }
-    @media (max-width: 40em) {
-      .report{
-        width: 100%;
-        margin-left: 0;
-        margin-top: -2rem;
-        height: 21.5rem;
-      }
-    }
   </style>
 summary: |
   The Yak Collective's second report, _The New Old Home_, offers 22 perspectives built around Pamela Hobart's central thesis: as work returns to the home in the form of remote work opportunities (a trend now dramatically accelerated by pandemic circumstances), we can turn to historical modes of integrated living, reconsidered in light of newer technology, to guide our attempts at co-located life and work. 
@@ -84,11 +41,9 @@ collaborators:
   - verhagen-thomas
 ---
 
-<iframe class="report bw1" src="https://docs.google.com/presentation/d/e/2PACX-1vT7uxFO3uaCDHr6xzX8Mnt5F9OEDf2kebLXokHs0MlyDLyFIOeiAcIDelaV8r0qKQZlGyBISrcP1dfS/embed?start=false&loop=false&delayms=60000" frameborder="0" width="1920" height="1109" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+{% include widget-project-header.html %}
 
-<aside class="pt3">
-<img class="h1" src="https://ssl.gstatic.com/docs/presentations/images/favicon5.ico"> <a href="https://docs.google.com/presentation/d/1Bgs4e6YIEydMot0VM4lf-onZM2z6Zei3n87f3JHCeSk/edit#slide=id.p">Open Google Doc</a> / <img class="h1" src="/assets/static/pdf.png"> <a href="https://docs.google.com/presentation/d/1Bgs4e6YIEydMot0VM4lf-onZM2z6Zei3n87f3JHCeSk/export/pdf">Download PDF</a>
-</aside>
+{% include widget-google-slides.html gid="1Bgs4e6YIEydMot0VM4lf-onZM2z6Zei3n87f3JHCeSk" %}
 
 ## The Yak Wisdom Project
 

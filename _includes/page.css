@@ -52,38 +52,6 @@ a.yak-logo:hover .yak-logo-image {
 	text-decoration-color: rgba({{ accent_color }},1.00);
 }
 
-{% comment %}
-	If `page.hero_image` is set, we add it *before* the hero container
-	and then set its z-index to be below all other page layers. This is
-	necessary so that we can get fine-grained control over image
-	properties like opacity, which can't be done in CSS if we just set
-	it as a background image.
-
-	If `page.hero_image` is empty, just fill the available space with a
-	light version of the page accent color.
-{% endcomment %}
-{% if page.hero_image %}
-	.hero {
-		position: relative;
-	}
-	.hero:before {
-		content : "";
-		display: block;
-		position: absolute;
-		top: 0;
-		left: 0;
-		background-image: url("{{ page.hero_image }}");
-		width: 100%;
-		height: 100%;
-		opacity: 0.5;
-		z-index: -1;
-	}
-{% else %}
-	.hero {
-		background-color: rgba({{ accent_color }},0.10);
-	}
-{% endif %}
-
 a.member-box:hover {
 	color: rgba({{ accent_color }},1.00);
 }
@@ -93,36 +61,47 @@ a.member-box:hover {
 }
 
 {% comment %}
-	On the project list ("/projects/") and individual member pages, we
-	often want to display the individual "project boxes", each of which
-	has its own hero image and accent color. Each project card has an
-	ID that's the project name (slug, really), which means that we can
-	use that ID as a selector here to avoid polluting the other elements
-	on the page.
-
-	We only include this bit when necessary, as it has the potential to
-	grow quite large as more and more projects come online.
+	Generate project-specific styles.
 {% endcomment %}
-{% if page.url == "/projects/" or page.layout == "member" %}
-	{% for project in projects %}
-		{% assign project_id = project.name | split: "." | first %}
-		{% if project.accent_color %}
-			{% assign accent_color = project.accent_color %}
-		{% else %}
-			{% assign accent_color = site.accent_color %}
+{% for project in projects %}
+	{% assign project_id = project.name | split: "." | first %}
+	{% if project.accent_color %}
+		{% assign accent_color = project.accent_color %}
+	{% else %}
+		{% assign accent_color = site.accent_color %}
+	{% endif %}
+	{% if project.hero_image %}
+		#{{ project_id }}-hero.hero {
+			position: relative;
+		}
+		#{{ project_id }}-hero.hero:before {
+			content : "";
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			background-image: url("{{ project.hero_image }}");
+			width: 100%;
+			height: 100%;
+			opacity: 0.5;
+			z-index: -1;
+		}
+	{% else %}
+		#{{ project_id }}-hero .hero {
+			background-color: rgba({{ accent_color }},0.10);
+		}
+	{% endif %}
+	#{{ project_id }}-box a:hover {
+		color: rgba({{ accent_color }},1.00);
+	}
+	#{{ project_id }}-box .pseudo-link {
+		text-decoration-color: rgba({{ accent_color }},0.60);
+	}
+	#{{ project_id }}-box .hero {
+		background-color: rgba({{ accent_color }},0.60);
+		{% if project.hero_image %}
+			background-image: url("{{ project.hero_image }}");
+			background-size: cover;
 		{% endif %}
-		#{{ project_id }} a:hover {
-			color: rgba({{ accent_color }},1.00);
-		}
-		#{{ project_id }} .pseudo-link {
-			text-decoration-color: rgba({{ accent_color }},0.60);
-		}
-		#{{ project_id }} .hero {
-			background-color: rgba({{ accent_color }},0.60);
-			{% if project.hero_image %}
-				background-image: url("{{ project.hero_image }}");
-				background-size: cover;
-			{% endif %}
-		}
-	{% endfor%}
-{% endif %}
+	}
+{% endfor%}

@@ -1,0 +1,30 @@
+{% comment %}
+	Insert a Google Slide show. Requires a single parameter:
+
+		`gid`
+		Google Drive document ID for the Google Slides you want to
+		embed.
+
+	The `gid` is the long random string immediately prior to `/edit` in
+	the URL for your document (not including the leading or trailing
+	`/`).
+
+	Note that this widget outputs HTML in a safe way, and is thus
+	suitable for inclusion in both Markdown and HTML pages.
+{% endcomment %}
+
+{% capture slideshow %}
+<div class="google-slideshow-wrapper">
+	<iframe class="google-slideshow" src="https://docs.google.com/presentation/d/{{ include.gid }}/embed?start=false&loop=false&delayms=60000" frameborder="0" width="1920" height="1109" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+</div>
+
+<aside class="pt3">
+	<img class="h1" src="https://ssl.gstatic.com/docs/presentations/images/favicon5.ico">
+	<a href="https://docs.google.com/presentation/d/{{ include.gid }}/edit">Open Google Doc</a>
+	/
+	<img class="h1" src="/assets/static/pdf.png">
+	<a href="https://docs.google.com/presentation/d/{{ include.gid }}/export/pdf">Download PDF</a>
+</aside>
+{% endcapture %}
+
+{% include widget-breakout-box.html layout="center" content=slideshow %}

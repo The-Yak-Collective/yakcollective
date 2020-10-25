@@ -51,11 +51,6 @@ defaults:
     values:
       layout: post
   - scope:
-      path: "projects/*"
-      type: pages
-    values:
-      layout: project
-  - scope:
       path: "projects/*/*"
       type: pages
     values:

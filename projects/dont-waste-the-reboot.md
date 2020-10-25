@@ -11,49 +11,6 @@ page_headers: |
     .hero:before {
       opacity: 0.5;
     }
-    .report {
-      display: block;
-    }
-    @media (min-width: 70em) {
-      .report {
-        width: 130%;
-        margin-left: -15%;
-        margin-top: -3rem;
-        height: 37rem;
-      }
-    }
-    @media (min-width: 60em) and (max-width: 70em) {
-      .report{
-        width: 110%;
-        margin-left: -5%;
-        margin-top: -3rem;
-        height: 31.5rem;
-      }
-    }
-    @media (min-width: 50em) and (max-width: 60em) {
-      .report{
-        width: 100%;
-        margin-left: 0;
-        margin-top: -2rem;
-        height: 29rem;
-      }
-    }
-    @media (min-width: 40em) and (max-width: 50em) {
-      .report{
-        width: 100%;
-        margin-left: 0;
-        margin-top: -2rem;
-        height: 26.5rem;
-      }
-    }
-    @media (max-width: 40em) {
-      .report{
-        width: 100%;
-        margin-left: 0;
-        margin-top: -2rem;
-        height: 21.5rem;
-      }
-    }
   </style>
 summary: |
   The inaugural report by the Yak Collective, _Don't Waste the Reboot_ offers organizations a smorgasbord of 25 creative and unexpected provocations, ideas, and action frameworks to navigate the COVID-19 crisis.
@@ -85,11 +42,9 @@ collaborators:
   - verhagen-thomas
 ---
 
-<iframe class="report bw1" src="https://docs.google.com/presentation/d/e/2PACX-1vTa8T4sQLAF2cbRFTqcxZGefI7A2HP54ZKBlyvpi03iTWrzt10W50MP-fQ13am5_svHeJL_-zjALkVT/embed?start=false&loop=false&delayms=60000" frameborder="0" width="1920" height="1109" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+{% include widget-project-header.html %}
 
-<aside class="pt3">
-<img class="h1" src="https://ssl.gstatic.com/docs/presentations/images/favicon5.ico"> <a href="https://docs.google.com/presentation/d/1OfBuSq4SImE1Gq2EaAGCAlkwC8LZRCWx-7O_VOHJ5TI/edit#slide=id.p1">Open Google Doc</a> / <img class="h1" src="/assets/static/pdf.png"> <a href="https://docs.google.com/presentation/d/1OfBuSq4SImE1Gq2EaAGCAlkwC8LZRCWx-7O_VOHJ5TI/export/pdf">Download PDF</a>
-</aside>
+{% include widget-google-slides.html gid="1OfBuSq4SImE1Gq2EaAGCAlkwC8LZRCWx-7O_VOHJ5TI" %}
 
 ## The Yak Wisdom Project
 

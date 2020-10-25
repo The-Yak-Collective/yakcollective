@@ -118,6 +118,10 @@ collaborators:
   - wimsatt-mike
 ---
 
+{% include widget-project-header.html %}
+
+{% include widget-project-page-list.html %}
+
 ## Credits
 
 - **Lead Editors:** [Sachin Benny](/members/benny-sachin/), [Amanda Reeves](/members/reeves-amanda/)
