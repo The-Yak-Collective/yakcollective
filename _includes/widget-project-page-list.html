@@ -41,8 +41,8 @@
 	Note that we need to eliminate the HTML indent in order to guard
 	against Jekyll interpreting this as a code block.
 {% endcomment %}
-{% if project_pages.size > 0 %}<div class="project-pages ph2 w-100 ph0-l w-90-l mw9 center">
+{% if project_pages.size > 0 %}<section class="project-pages ph2 w-100 ph0-l w-90-l mw9 center">
 	{% for pp in project_pages %}
 		{% include widget-project-page-box.html pp=pp %}
 	{% endfor %}
-</div>{% endif %}
+</section>{% endif %}

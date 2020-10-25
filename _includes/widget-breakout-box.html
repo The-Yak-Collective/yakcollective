@@ -15,10 +15,18 @@
 		`content`
 		Content to be put in the box.
 
+	There is also an optional parameter:
+
+		`extra_class`
+		Additional class(es) that will be added to the outer `<div/>`.
+		Useful for controlling positioning for fancy formatting.
+
 	Note that this widget outputs HTML in a safe way, and is thus
 	suitable for inclusion in both Markdown and HTML pages.
 {% endcomment %}
 
-<div class="{{ include.layout | default: 'center' }}-box"><div class="box-interior">
-	{{ include.content | markdownify }}
-</div></div>
+<div class="{{ include.layout | default: 'center' }}-box{% if include.extra_class %} {{ include.extra_class }}{% endif %}">
+	<div class="box-interior">
+		{{ include.content | markdownify }}
+	</div>
+</div>

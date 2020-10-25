@@ -26,8 +26,9 @@ layout: page
 	Page `content`. We wrap this in a `yak-post` `<div/>` for regular
 	"posts", as incoming HTML requires some normalization we don't need
 	for pages we make ourselves.
+
 {% endcomment %}
-{% if path_array[0] != "projects" %}<div class="yak-post">{% endif %}{{ content }}{% if path_array[0] != "projects" %}</div>{% endif %}
+{% if path_array[0] != "writings" and path_array[0] != "newsletters" %}<div class="yak-post">{% endif %}{{ content }}{% if path_array[0] != "projects" %}</div>{% endif %}
 
 {% comment %}
 	If `page.author` is set, build our member list, locate the

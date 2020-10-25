@@ -9,7 +9,12 @@ accent_color: "200,100,200"
 page_headers: |
   <style type="text/css">
     .hero:before {
-      opacity: 0.5;
+      background-size: auto !important;
+    }
+    @media screen and (min-width: 60em) {
+      .google-slideshow-wrapper {
+        margin-top: -4.5rem !important;
+      }
     }
   </style>
 summary: |

@@ -188,11 +188,11 @@ a.yak-logo .yak-logo-image {
 	max-width: 100% !important;
 }
 
-.yak-content .box-interior .yak-content.wide > * {
+.yak-content .box-interior .wide > * {
 	max-width: min((1.5 * var(--content-width)) + (2 * var(--content-padding)), 100% - (2 * var(--content-padding))) !important;
 }
 
-.yak-content .box-interior .yak-content.narrow > * {
+.yak-content .box-interior .narrow > * {
 	max-width: min((0.75 * var(--content-width)) + (2 * var(--content-padding)), 100% - (2 * var(--content-padding))) !important;
 }
 
@@ -268,13 +268,13 @@ h6 a:hover {
 }
 
 /* Copied from: https://css-tricks.com/scaled-proportional-blocks-with-css-and-javascript/ */
-.google-slideshow-wrapper {
+.google-slideshow-outer {
 	height: 0;
 	padding-bottom: calc(56.25% + 29px); /* 16:9 + Google Slides controls */
 	position: relative;
 }
 
-.google-slideshow {
+.google-slideshow-inner {
 	position: absolute;
 	top: 0;
 	left: 0;

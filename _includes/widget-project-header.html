@@ -21,12 +21,13 @@
 {% assign project_id = project.name | split: "." | first %}
 
 {% comment %}
-	Output project hero.
+	Project header/hero.
 {% endcomment %}
+{% capture the_content %}
 <header id="{{ project_id }}-hero" class="yak-project-header hero">
-	<div class="w-90 mw8 center">
+	<div class="yak-content wide">
 		<div class="cf ph0 pv5-l pv4">
-			<aside class="fn fl-l w-30-l ph4-l pb2 pb0-l">
+			<aside class="fn fl-l w-third-l pl5-l pr4-l pb2 pb0-l">
 				{% if project.type %}
 					<div class="project-type small lh-title fw9 mb3 mt0 pt3 bt bw2 sans-serif ttu">{{ project.type }}</div>
 				{% endif %}
@@ -35,7 +36,7 @@
 					Project date and sequence count (if applicable).
 				{% endcomment %}
 				{% if project.date %}
-					<time class="db f6 ttu mb3 tracked-tight">
+					<time class="smaller db ttu mb3 tracked-tight">
 						{{ project.date | date_to_long_string: "ordinal", "US" }} UTC
 						{% if project.sequence %}
 							<br>{% include sequence.html current_date=project.date sequence_id=project.sequence %}
@@ -47,7 +48,7 @@
 					Project lead editor list.
 				{% endcomment %}
 				{% if project.lead_editors %}
-					<details class="mb3 lead-editors" open>
+					<details class="smaller mb3 lead-editors" open>
 						<summary class="ttu lh-title">Lead editors</summary>
 						<p>{% include member-list.html member_list=project.lead_editors link_members=true %}</p>
 					</details>
@@ -57,7 +58,7 @@
 					Project collaborator list.
 				{% endcomment %}
 				{% if project.collaborators %}
-					<details class="mb3 collaborators" open>
+					<details class="smaller mb3 collaborators" open>
 						<summary class="ttu lh-title">Collaborators</summary>
 						<p>{% include member-list.html member_list=project.collaborators link_members=true %}</p>
 					</details>
@@ -68,7 +69,7 @@
 				Main hero banner content: The project title, tagline,
 				and above-the-fold summary.
 			{% endcomment %}
-			<div class="fn fl-l w-70-l ph4-l">
+			<div class="fn fl-l w-two-thirds-l pl4-l pr5-l">
 				{% if project.title %}<h1 class="ma0 pa0 fw8 f1">{{ project.title }}</h1>{% endif %}
 				{% if project.tagline %}<div class="subhead pt3 pb1 fw4 f3">{{ project.tagline }}</div>{% endif %}
 				{% if project.summary %}<div class="small lh-copy mb3">{{ project.summary | markdownify }}</div>{% endif %}
@@ -76,3 +77,6 @@
 		</div>
 	</div>
 </header>
+{% endcapture %}
+
+{% include widget-breakout-box.html layout="full-bleed" extra_class="yak-project-header-wrapper" content=the_content %}

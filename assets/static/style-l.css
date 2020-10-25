@@ -42,10 +42,10 @@
 	width: min((1.5 * var(--content-width-l)) + (4 * var(--content-padding)), 100%);
 }
 
-.yak-content .box-interior .yak-content.wide > * {
+.yak-content .box-interior .wide > * {
 	max-width: min((1.5 * var(--content-width-l)) + (2 * var(--content-padding)), 100% - (2 * var(--content-padding))) !important;
 }
 	
-.yak-content .box-interior .yak-content.narrow > * {
+.yak-content .box-interior .narrow > * {
 	max-width: min((0.75 * var(--content-width-l)) + (2 * var(--content-padding)), 100% - (2 * var(--content-padding))) !important;
 }

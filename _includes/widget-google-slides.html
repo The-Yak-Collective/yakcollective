@@ -14,17 +14,19 @@
 {% endcomment %}
 
 {% capture slideshow %}
-<div class="google-slideshow-wrapper">
-	<iframe class="google-slideshow" src="https://docs.google.com/presentation/d/{{ include.gid }}/embed?start=false&loop=false&delayms=60000" frameborder="0" width="1920" height="1109" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-</div>
+<figure class="ma0">
+	<div class="google-slideshow-outer">
+		<iframe class="google-slideshow-inner" src="https://docs.google.com/presentation/d/{{ include.gid }}/embed?start=false&loop=false&delayms=60000" frameborder="0" width="1920" height="1109" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+	</div>
 
-<aside class="pt3">
-	<img class="h1" src="https://ssl.gstatic.com/docs/presentations/images/favicon5.ico">
-	<a href="https://docs.google.com/presentation/d/{{ include.gid }}/edit">Open Google Doc</a>
-	/
-	<img class="h1" src="/assets/static/pdf.png">
-	<a href="https://docs.google.com/presentation/d/{{ include.gid }}/export/pdf">Download PDF</a>
-</aside>
+	<figcaption class="yak-content"><p>
+		<img class="h1" src="https://ssl.gstatic.com/docs/presentations/images/favicon5.ico">
+		<a href="https://docs.google.com/presentation/d/{{ include.gid }}/edit">Open Google Doc</a>
+		/
+		<img class="h1" src="/assets/static/pdf.png">
+		<a href="https://docs.google.com/presentation/d/{{ include.gid }}/export/pdf">Download PDF</a>
+	</p></figcaption>
+</figure>
 {% endcapture %}
 
-{% include widget-breakout-box.html layout="center" content=slideshow %}
+{% include widget-breakout-box.html layout="center" extra_class="google-slideshow-wrapper" content=slideshow %}
