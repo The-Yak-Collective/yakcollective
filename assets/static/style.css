@@ -69,14 +69,12 @@ figcaption,
 
 .small,
 details,
-.footnotes,
+.smaller,
 figcaption,
+.footnotes,
+.page-info,
 #markdown-toc {
 	font-size: 80%;
-}
-
-.smaller {
-	font-size: 70%;
 }
 
 a.yak-logo .yak-logo-image {
@@ -286,42 +284,24 @@ h6 a:hover {
 	display: flex;
 	flex-wrap: wrap;
 	align-items: flex-start;
+	padding-left: calc(var(--content-padding) / 2);
+	padding-right: calc(var(--content-padding) / 2);
 }
 
 .project-page-box-container {
 	width: 100%;
+	margin-top: var(--content-padding);
+	margin-left: calc(var(--content-padding) / 2);
+	margin-right: calc(var(--content-padding) / 2);
+}
+
+.project-page-box .hero {
+	height: 24rem;
 }
 
 .page-info {
 	height: auto;
 	overflow: auto;
-}
-
-@media (min-width: 48em) {
-	.project-page-box-container {
-		width: calc(100% / 2);
-	}
-
-	.page-info {
-		height: 20rem;
-		overflow: hidden;
-	}
-}
-
-@media (min-width: 64em) {
-	.project-page-box-container {
-		width: calc(100% / 3);
-	}
-}
-
-@media (min-width: 80em) {
-	.project-page-box-container {
-		width: calc(100% / 4);
-	}
-}
-
-.project-page-box .hero {
-	height: 30rem;
 }
 
 .member-box,

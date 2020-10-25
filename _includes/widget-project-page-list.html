@@ -27,11 +27,11 @@
 {% endcomment %}
 {% assign project_pages = "" | split: "" %}
 {% for the_page in site.pages %}
-    {% assign path_array = the_page.url | replace: "/", " " | strip | split: " " %}
-    {% assign path_size = path_array | size %}
-    {% if path_array[0] == "projects" and path_array[1] == project_id and path_size >= 3 %}
-        {% assign project_pages = project_pages | push: the_page %}
-    {% endif %}
+	{% assign path_array = the_page.url | replace: "/", " " | strip | split: " " %}
+	{% assign path_size = path_array | size %}
+	{% if path_array[0] == "projects" and path_array[1] == project_id and path_size >= 3 %}
+		{% assign project_pages = project_pages | push: the_page %}
+	{% endif %}
 {% endfor %}
 {% assign project_pages = project_pages | sort: "name" | sort: "date" %}
 
@@ -41,8 +41,11 @@
 	Note that we need to eliminate the HTML indent in order to guard
 	against Jekyll interpreting this as a code block.
 {% endcomment %}
-{% if project_pages.size > 0 %}<section class="project-pages ph2 w-100 ph0-l w-90-l mw9 center">
-	{% for pp in project_pages %}
-		{% include widget-project-page-box.html pp=pp %}
-	{% endfor %}
-</section>{% endif %}
+{% if project_pages.size > 0 %}
+	{% capture the_content %}<section class="project-pages w-100">
+		{% for pp in project_pages %}
+			{% include project-page-box.html pp=pp %}
+		{% endfor %}
+	</section>{% endcapture %}
+	{% include widget-breakout-box.html layout="full-bleed" extra_class="yak-project-page-list-wrapper" content=the_content %}
+{% endif %}

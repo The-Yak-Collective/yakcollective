@@ -3,6 +3,11 @@
 	--content-padding: 1.25rem;
 }
 
+.smaller,
+.page-info {
+	font-size: 70%;
+}
+
 .yak-nav {
 	font-size: 80%;
 }
@@ -48,4 +53,24 @@
 	
 .yak-content .box-interior .narrow > * {
 	max-width: min((0.75 * var(--content-width-l)) + (2 * var(--content-padding)), 100% - (2 * var(--content-padding))) !important;
+}
+
+.project-pages {
+	padding-left: var(--content-padding);
+	padding-right: var(--content-padding);
+}
+
+.project-page-box-container {
+	width: calc((100% - (6 * var(--content-padding))) / 3);
+	margin-top: calc(2 * var(--content-padding));
+	margin-left: var(--content-padding);
+	margin-right: var(--content-padding);
+}
+
+.project-page-box .hero {
+	height: 27rem;
+}
+	
+.page-info {
+	height: 18rem;
 }

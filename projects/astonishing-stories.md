@@ -46,20 +46,20 @@ page_headers: |
       font-weight: normal;
       font-size: 0.9em
     }
-    .hero {
+    #astonishing-stories-hero.hero {
       background-color: transparent;
     }
-    .hero:before {
-      background-image: none;
+    #astonishing-stories-hero.hero:before {
+      background-image: none !important;
     }
-    .hero .pv4 {
-      padding-top: 2rem;
+    #astonishing-stories-hero .pv4 {
+      padding-top: 0.5rem;
       padding-bottom: 0;
     }
-    @media screen and (min-width: 60em) {
-      .hero .pv5-l {
-        padding-top: 4rem;
-        padding-bottom: 0;
+    @media (min-width: 60em) {
+      #astonishing-stories-hero .pv5-l {
+        padding-top: 2rem;
+        padding-bottom: 1rem;
       }
     }
     #agglomerizing-the-aesthetic h2,

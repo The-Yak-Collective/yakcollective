@@ -1,0 +1,7 @@
+:root {
+	--content-padding: 1.25rem;
+}
+
+.project-page-box-container {
+	width: calc((100% - (8 * var(--content-padding))) / 4);
+}
