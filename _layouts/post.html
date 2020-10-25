@@ -57,6 +57,7 @@ layout: page
 	If this is a project page, append the appropriate table of contents.
 {% endcomment %}
 {% if path_array[0] == "projects" %}
+	{% assign page_project = path_array[1] %}
 
 	{% comment %}
     	Build array of projects.
@@ -86,7 +87,7 @@ layout: page
 	{% comment %}
 		Project table of contents.
 	{% endcomment %}
-	<ul class="toc"><li>
+	<ul id="markdown-toc"><li>
 		{% assign project_file = page_project | append: ".md" %}
 		{% assign project = projects | where: "name", project_file | first %}
 		<a href="/projects/{{ page_project }}/">{{ project.title }}</a>
