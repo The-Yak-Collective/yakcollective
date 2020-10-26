@@ -73,6 +73,8 @@ exports.handler = async function(event, context) {
 
 	// Figure out the post title. Abort if none is set.
 	//
+	// (Also use this opportunity to set the post layout to "external").
+	//
 	var postTitle;
 	var titleSearch = postContent.match(/title: ?(.+)\n/);
 	if (titleSearch !== null && titleSearch.length > 0) {
@@ -84,7 +86,7 @@ exports.handler = async function(event, context) {
 		};
 	};
 	postContent = postContent.replace(/title:.*\n/, "");
-	postContent = postContent.replace(/---\n/, "---\ntitle: |\n  " + postTitle + "\n");
+	postContent = postContent.replace(/---\n/, "---\nlayout: external\ntitle: |\n  " + postTitle + "\n");
 
 	// Figure out the post URL. Abort if none is set.
 	//

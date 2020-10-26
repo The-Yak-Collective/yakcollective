@@ -1,5 +1,4 @@
 ---
-title: Your Payment is Ready
 date: 2020-10-30
 hero_image: /assets/dynamic/astonishing-stories-your-payment-is-ready.jpg
 hero_attach_vertical: center
@@ -7,7 +6,7 @@ hero_attach_horizontal: center
 author: smith-ben
 google_doc: https://docs.google.com/document/d/15LRvkKeNMwRgr6Zf8dYLBBAqhpBxIyLP_WBE16H-PCg/edit
 description: In an age of pandemics and rolling lockdowns, his dad saw the youth orchestra as an opportunity for kids like his son to get out of the house.
-display: true
+hidden: false
 page_headers: |
   <style type="text/css">
     body {
@@ -65,6 +64,8 @@ page_headers: |
     }
   </style>
 ---
+# Your Payment is Ready
+
 > _…my algorithm finds that you are currently at the 46th percentile amongst clarinetists in your peer competition group. Practice your arpeggios to improve your score before the final evaluation! 16-year-olds in your city with finely articulated arpeggios generally rank in the top quartile. Those with a strong swing-eighths style generally rank in the top decile. Say ‘practice arpeggios’ or ‘practice swing-eighths’ for a lesson._
 
 “Judd!” His father yelled as he walked into the garage. “Why the hell is your Clarinet-MLv2 in pieces? How are you going to make regional youth orchestra with a broken machine learning clarinet?” In-person socializing among children had become another luxury good, doled out to high achievers and those who could afford the best virtual instruction. In an age of pandemics and rolling lockdowns, his dad saw the youth orchestra as an opportunity for kids like his son to get out of the house.

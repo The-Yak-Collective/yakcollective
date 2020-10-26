@@ -1,5 +1,4 @@
 ---
-title: Join the Yak Collective
 ---
 
 # Join the Yak Collective

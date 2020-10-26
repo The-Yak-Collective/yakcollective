@@ -1,5 +1,4 @@
 ---
-title: About the Yak Collective
 ---
 
 # About the Yak Collective

@@ -1,5 +1,4 @@
 ---
-title: Mechanical Turks All the Way Down
 date: 2020-11-20
 hero_image: /assets/dynamic/astonishing-stories-mechanical-turks-all-the-way-down.jpg
 hero_attach_vertical: center
@@ -8,7 +7,7 @@ author: butler-chris
 roam_page: https://roamresearch.com/#/app/Astonishing_Stories/page/-u1nPZcZu
 google_doc: https://docs.google.com/document/d/1HpnU_k_Q3xulIfwiEtdpfMycZeTRvR-cPWDl8mA___E/edit
 description: Can't be too eager on your first day of the job.
-display: true
+hidden: false
 page_headers: |
   <style type="text/css">
     body {
@@ -66,6 +65,8 @@ page_headers: |
     }
   </style>
 ---
+# Mechanical Turks All the Way Down
+
 I jabbed at the “accept” button on one of the many touch surfaces in my shared office, home, and daycare. Can’t be too eager on your first day of the job.
 
 There was a low din of my five year old arguing again about what they would or would not eat for breakfast. Thank god for the dynamic distraction canceling face mask. With them on I could safely ignore the mounting skirmish between them and my partner.

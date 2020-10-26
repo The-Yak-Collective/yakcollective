@@ -1,5 +1,4 @@
 ---
-title: The Yak Collective
 ---
 
 # The Yak Collective

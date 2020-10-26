@@ -1,5 +1,4 @@
 ---
-title: Welcome to the Yak Collective
 ---
 
 # Welcome to the Yak Collective

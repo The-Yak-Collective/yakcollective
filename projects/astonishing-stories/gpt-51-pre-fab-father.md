@@ -1,5 +1,4 @@
 ---
-title: GPT 51 Pre-Fab Father
 date: 2020-11-27
 hero_image: /assets/dynamic/astonishing-stories-gpt-51-pre-fab-father.jpg
 hero_attach_vertical: center
@@ -7,7 +6,7 @@ hero_attach_horizontal: center
 author: benny-sachin
 google_doc: https://docs.google.com/document/d/1ypHVOPVaIv-XLi8RxXVM77XIdwEy266-viriWmlBNAg/edit
 description: How can I possibly untangle this mess?
-display: true
+hidden: false
 page_headers: |
   <style type="text/css">
     body {
@@ -65,6 +64,8 @@ page_headers: |
     }
   </style>
 ---
+# GPT 51 Pre-Fab Father
+
 He looked down in pain at his [programmable forearm tattoo](https://roamresearch.com/#/app/Astonishing_Stories/page/6jX2RXOls) after finishing his last note. The microbots in his arm etched a new web of nodes mirroring his note taking system on Roam. His mind was a mess since his father’s death and now it was reflected on his arm for all to see.
 
 “How can I possibly untangle this mess?” he thought to himself. He had tried everything, even subscribing to the [_Love the Land_ program](https://roamresearch.com/#/app/Astonishing_Stories/page/b0JBkV_8Q) sponsored by the state. The people from the LLE (Love the land enforcement) had taken away all his electronic devices and internet connected implants and put him on a homestead 150 miles west of Austin in the West Texas desert. There, every evening he looked at the wind turbines lined across the entire horizon and wondered when his mind would cease to become an endless loop of the same thoughts going round and round.

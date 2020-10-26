@@ -1,5 +1,4 @@
 ---
-title: Wholeness in a Timeless Activity
 date: 2020-10-23
 hero_image: /assets/dynamic/astonishing-stories-wholeness-in-a-timeless-activity.jpg
 hero_attach_vertical: top
@@ -7,7 +6,7 @@ hero_attach_horizontal: center
 author: chen-nathan
 google_doc: https://docs.google.com/document/d/1Uke-4h8kYARpFZixBfa5Ht6H-UWa7PyJar9Iqq8-rCE/edit
 description: There are some activities the wealthy occasionally lust after. But there is one they will never stop avoiding.
-display: true
+hidden: false
 page_headers: |
   <style type="text/css">
     body {
@@ -65,6 +64,8 @@ page_headers: |
     }
   </style>
 ---
+# Wholeness in a Timeless Activity
+
 There are some activities the wealthy occasionally lust after. But there is one they will never stop avoiding.
 
 Koichi gripped his chef’s hat as the metal hand centered itself above the ingredients on the bamboo mat. The fingers twitched with faint whirs as they calibrated. His eyes followed the hand to its arm encased in white plastic, protruding awkwardly from the wall. It was tempting to envision a body on the other side, but Koichi knew from service repairs there were only gears and hydraulics. The mechanical whirs stopped and the hand descended.

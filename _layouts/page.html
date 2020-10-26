@@ -17,6 +17,85 @@
 			{% include nav.html %}
 			<article id="{{ page.url | replace: '/', ' ' | strip | replace: ' ', '-' | default: 'index' }}" class="yak-content pb5 lh-copy">
 				{{ content }}
+
+				{% comment %}
+					If `page.author` is set, locate the appropriate
+					member data page and display the member card (as
+					well as the member `bio_short`, if it exists).
+				{% endcomment %}
+				{% if page.author %}
+					{% assign author_file = page.author | append: ".md" %}
+					{% for the_page in site.pages %}
+						{% assign path_array = the_page.url | replace: "/", " " | strip | split: " " %}
+						{% assign path_size = path_array | size %}
+						{% if path_array[0] == "members" and path_size == 2 and the_page.name == author_file %}
+							{% assign author = the_page %}
+							{% break %}
+						{% endif %}
+					{% endfor %}
+					{% if author %}
+						{% include widget-member-card.html member=author %}
+						{% if author.bio_short %}
+							<div class="small ph2 pb1">
+								{{ author.bio_short | markdownify }}
+							</div>
+						{% endif %}
+					{% endif %}
+				{% endif %}
+
+				{% comment %}
+					If this is a project page, append the appropriate
+					table of contents.
+				{% endcomment %}
+				{% assign path_array = page.url | replace: "/", " " | strip | split: " " %}
+				{% if path_array[0] == "projects" and path_array.size > 2 %}
+					{% assign page_project = path_array[1] %}
+					{% assign project_file = page_project | append: ".md" %}
+			
+					{% comment %}
+						Locate the current project.
+					{% endcomment %}
+					{% for the_page in site.pages %}
+						{% assign path_array = the_page.url | replace: "/", " " | strip | split: " " %}
+						{% assign path_size = path_array | size %}
+						{% if path_array[0] == "projects" and path_size == 2 and the_page.name == project_file %}
+							{% assign project = the_page %}
+							{% break %}
+						{% endif %}
+					{% endfor %}
+			
+					{% comment %}
+						Build array of pages for this project.
+					{% endcomment %}
+					{% assign project_pages = "" | split: "" %}
+					{% for the_page in site.pages %}
+						{% assign path_array = the_page.url | replace: "/", " " | strip | split: " " %}
+						{% assign path_size = path_array | size %}
+						{% if path_array[0] == "projects" and path_array[1] == page_project and path_size >= 3 %}
+							{% unless the_page.hidden %}
+								{% assign project_pages = project_pages | push: the_page %}
+							{% endunless %}
+						{% endif %}
+					{% endfor %}
+					{% assign project_pages = project_pages | sort: "name" | sort: "date" %}
+			
+					{% comment %}
+						Project table of contents.
+					{% endcomment %}
+					<ul id="markdown-toc"><li>
+						<a href="/projects/{{ page_project }}/">{{ project.title }}</a>
+						{% if project_pages.size > 0 %}
+							<ul>
+								{% assign site_epoch = site.time | date: "%s" %}
+								{% for pp in project_pages %}
+									{% assign pp_epoch = pp.date | default: 0 | date: "%s" %}
+									<li{% if pp_epoch > site_epoch and site.future != true %} class="o-40"{% endif %}>{% if pp.name == page.name %}<strong>{% elsif pp_epoch <= site_epoch or site.future == true %}<a href="{% if pp.original_link %}{{ pp.original_link }}{% else %}{{ pp.url }}{% endif %}">{% endif %}{{ pp.title }}{% if pp.name == page.name %}</strong>{% elsif pp_epoch <= site_epoch or site.future == true %}</a>{% endif %}</li>
+								{% endfor %}
+							</ul>
+						{% endif %}
+					</li></ul>
+				{% endif %}
+
 			</article>
 		</div>
 		{% include footer.html %}

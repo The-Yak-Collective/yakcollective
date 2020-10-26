@@ -1,5 +1,4 @@
 ---
-title: The Yak Collective's Writings
 ---
 
 # The Yak Collective's Writings

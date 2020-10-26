@@ -24,13 +24,10 @@ feed_items: 255
 feed_update_period: daily
 feed_update_frequency: 1
 
-# Collections
+# Gemfile-based plugins
 #
-collections:
-  projects:
-    output: true
-  project_pages:
-    output: true
+plugins:
+  - jekyll-titles-from-headings
 
 # Per-page defaults
 #
@@ -42,19 +39,8 @@ defaults:
       layout: member
   - scope:
       path: ""
-      type: pages
     values:
       layout: page
-  - scope:
-      path: ""
-      type: posts
-    values:
-      layout: post
-  - scope:
-      path: "projects/*/*"
-      type: pages
-    values:
-      layout: post
 
 # Kramdown parser option
 #
