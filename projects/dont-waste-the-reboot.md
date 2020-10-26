@@ -8,7 +8,7 @@ hero_image: /assets/dynamic/dont-waste-the-reboot-hero.svg
 accent_color: "200,100,200"
 page_headers: |
   <style type="text/css">
-    .hero:before {
+    .hero {
       background-size: auto !important;
     }
     @media screen and (min-width: 60em) {

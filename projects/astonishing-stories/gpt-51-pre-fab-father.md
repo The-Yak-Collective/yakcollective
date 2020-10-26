@@ -46,21 +46,10 @@ page_headers: |
       font-weight: normal;
       font-size: 1.4em
     }
-    #gpt-51-pre-fab-father article {
-      padding-top: 0;
-      padding-bottom: 1rem;
-    }
-    @media screen and (min-width: 60em) {
-      #gpt-51-pre-fab-father {
-        background-image: url("/assets/dynamic/astonishing-stories-gpt-51-pre-fab-father-background-radius-50-medium.jpg");
-        background-position: top center;
-        background-size: cover;
-      }
-      #gpt-51-pre-fab-father article {
-        background-color: #ffffff;
-        padding-left: 2rem;
-        padding-right: 2rem;
-      }
+    .fill-space {
+      background-image: url("/assets/dynamic/astonishing-stories-gpt-51-pre-fab-father-background-radius-50-medium.jpg");
+      background-position: top center;
+      background-size: cover;
     }
   </style>
 ---

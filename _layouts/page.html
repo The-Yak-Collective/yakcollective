@@ -15,7 +15,8 @@
 	<body class="w-100 ph0-l f4-l center relative h-100">
 		<div class="fill-space">
 			{% include nav.html %}
-			<article id="{{ page.url | replace: '/', ' ' | strip | replace: ' ', '-' | default: 'index' }}" class="yak-content pb5 lh-copy">
+			<div class="column-background-wrapper"><div class="column-background"></div></div>
+			<article id="{{ page.url | replace: '/', ' ' | strip | replace: ' ', '-' | default: 'index' }}" class="yak-content pb5 mb3 lh-copy">
 				{{ content }}
 
 				{% comment %}
@@ -34,9 +35,9 @@
 						{% endif %}
 					{% endfor %}
 					{% if author %}
-						{% include widget-member-card.html member=author %}
+						<div class="mt4">{% include widget-member-card.html member=author %}</div>
 						{% if author.bio_short %}
-							<div class="small ph2 pb1">
+							<div class="author-bio">
 								{{ author.bio_short | markdownify }}
 							</div>
 						{% endif %}
@@ -82,7 +83,7 @@
 					{% comment %}
 						Project table of contents.
 					{% endcomment %}
-					<ul id="markdown-toc"><li>
+					<ul id="markdown-toc" class="mt4"><li>
 						<a href="/projects/{{ page_project }}/">{{ project.title }}</a>
 						{% if project_pages.size > 0 %}
 							<ul>

@@ -46,21 +46,10 @@ page_headers: |
       font-weight: normal;
       font-size: 0.9em
     }
-    #agglomerizing-the-aesthetic article {
-      padding-top: 0;
-      padding-bottom: 1rem;
-    }
-    @media screen and (min-width: 60em) {
-      #agglomerizing-the-aesthetic {
-        background-image: url("/assets/dynamic/astonishing-stories-agglomerizing-the-aesthetic-background-radius-50-medium.jpg");
-        background-position: top center;
-        background-size: cover;
-      }
-      #agglomerizing-the-aesthetic article {
-        background-color: #ffffff;
-        padding-left: 2rem;
-        padding-right: 2rem;
-      }
+    .fill-space {
+      background-image: url("/assets/dynamic/astonishing-stories-agglomerizing-the-aesthetic-background-radius-50-medium.jpg");
+      background-position: top center;
+      background-size: cover;
     }
   </style>
 ---

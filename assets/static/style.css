@@ -35,6 +35,28 @@ a:hover {
 
 .fill-space {
 	flex: 1;
+	z-index: -9;
+}
+
+.yak-nav {
+	background-color: rgba(255,255,255,1.0);
+}
+
+.column-background-wrapper {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: -8;
+}
+
+.column-background {
+	width: min(var(--content-width) + (2 * var(--content-padding)), 100%);
+	height: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: rgba(255,255,255,1.0);
 }
 
 input,
@@ -46,6 +68,7 @@ select {
 
 footer {
 	color: rgba(0,0,0,0.60);
+	background-color: rgba(255,255,255,1.0);
 	border-top-color: rgba(0,0,0,0.15);
 }
 
@@ -62,6 +85,7 @@ time,
 details,
 .details,
 figcaption,
+.author-bio,
 .collaborators,
 .project-page-author {
 	color: rgba(0,0,0,0.65);
@@ -73,6 +97,7 @@ details,
 figcaption,
 .footnotes,
 .page-info,
+.author-bio,
 #markdown-toc {
 	font-size: 80%;
 }
@@ -82,6 +107,10 @@ a.yak-logo .yak-logo-image {
 	background-color: rgba(0,0,0,0.85);
 	width: 2.5rem;
 	height: 2.5rem
+}
+
+.yak-content {
+	position: relative;
 }
 
 .yak-content > *:not(.left-box):not(.right-box):not(.center-box):not(.full-bleed-box) {
@@ -110,6 +139,10 @@ a.yak-logo .yak-logo-image {
 .yak-content blockquote {
 	padding-inline-start: 3rem;
 	padding-inline-end: 3rem;
+}
+
+.box-interior {
+	background-color: rgba(255,255,255,1.0);
 }
 
 .yak-content .left-box,
@@ -261,6 +294,10 @@ h6 a:hover {
 	text-decoration-line: underline !important;
 }
 
+.yak-project-header {
+	position: relative;
+}
+
 .yak-project-header aside {
 	box-sizing: border-box;
 }
@@ -331,6 +368,7 @@ h6 a:hover {
 
 .member-box {
 	color: rgba(0,0,0,0.70);
+	background-color: rgba(255,255,255,1.0);
 }
 
 a.member-box,

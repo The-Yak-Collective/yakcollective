@@ -47,21 +47,10 @@ page_headers: |
       font-weight: normal;
       font-size: 1.1em
     }
-    #mechanical-turks-all-the-way-down article {
-      padding-top: 0;
-      padding-bottom: 1rem;
-    }
-    @media screen and (min-width: 60em) {
-      #mechanical-turks-all-the-way-down {
-        background-image: url("/assets/dynamic/astonishing-stories-mechanical-turks-all-the-way-down-background-radius-50-medium.jpg");
-        background-position: top center;
-        background-size: cover;
-      }
-      #mechanical-turks-all-the-way-down article {
-        background-color: #ffffff;
-        padding-left: 2rem;
-        padding-right: 2rem;
-      }
+    .fill-space {
+      background-image: url("/assets/dynamic/astonishing-stories-mechanical-turks-all-the-way-down-background-radius-50-medium.jpg");
+      background-position: top center;
+      background-size: cover;
     }
   </style>
 ---

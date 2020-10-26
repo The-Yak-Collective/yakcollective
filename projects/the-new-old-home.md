@@ -8,7 +8,7 @@ hero_image: /assets/dynamic/the-new-old-home-hero.jpg
 accent_color: "225,125,75"
 page_headers: |
   <style type="text/css">
-    .hero:before {
+    .hero {
       opacity: 0.65 !important;
     }
     @media screen and (min-width: 60em) {

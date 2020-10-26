@@ -46,11 +46,8 @@ page_headers: |
       font-weight: normal;
       font-size: 0.9em
     }
-    #astonishing-stories-hero.hero {
-      background-color: transparent;
-    }
-    #astonishing-stories-hero.hero:before {
-      background-image: none !important;
+    #astonishing-stories-hero .hero {
+      display: none;
     }
     #astonishing-stories-hero .pv4 {
       padding-top: 0.5rem;

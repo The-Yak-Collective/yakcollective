@@ -46,21 +46,10 @@ page_headers: |
       font-weight: normal;
       font-size: 0.9em
     }
-    #your-payment-is-ready article {
-      padding-top: 0;
-      padding-bottom: 1rem;
-    }
-    @media screen and (min-width: 60em) {
-      #your-payment-is-ready {
-        background-image: url("/assets/dynamic/astonishing-stories-your-payment-is-ready-background-radius-50-medium.jpg");
-        background-position: top center;
-        background-size: cover;
-      }
-      #your-payment-is-ready article {
-        background-color: #ffffff;
-        padding-left: 2rem;
-        padding-right: 2rem;
-      }
+    .fill-space {
+      background-image: url("/assets/dynamic/astonishing-stories-your-payment-is-ready-background-radius-50-medium.jpg");
+      background-position: top center;
+      background-size: cover;
     }
   </style>
 ---

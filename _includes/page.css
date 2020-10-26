@@ -21,7 +21,7 @@
 {% endcomment %}
 {% if page.accent_color %}
 	{% assign accent_color = page.accent_color %}
-{% elsif page.layout == "post" and path_array[0] == "projects" %}
+{% elsif path_array[0] == "projects" and path_array.size > 2 %}
 	{% assign path_array = page.url | replace: "/", " " | strip | split: " " %}
 	{% assign project_file = path_array[1] | append: ".md" %}
 	{% assign project = projects | where: "name", project_file | first %}
@@ -71,10 +71,7 @@ a.member-box:hover {
 		{% assign accent_color = site.accent_color %}
 	{% endif %}
 	{% if project.hero_image %}
-		#{{ project_id }}-hero.hero {
-			position: relative;
-		}
-		#{{ project_id }}-hero.hero:before {
+		#{{ project_id }}-hero .hero {
 			content : "";
 			display: block;
 			position: absolute;
@@ -85,7 +82,6 @@ a.member-box:hover {
 			width: 100%;
 			height: 100%;
 			opacity: 0.5;
-			z-index: -1;
 		}
 	{% else %}
 		#{{ project_id }}-hero .hero {

@@ -46,21 +46,10 @@ page_headers: |
       font-weight: normal;
       font-size: 1.1em
     }
-    #wholeness-in-a-timeless-activity article {
-      padding-top: 0;
-      padding-bottom: 1rem;
-    }
-    @media screen and (min-width: 60em) {
-      #wholeness-in-a-timeless-activity {
-        background-image: url("/assets/dynamic/astonishing-stories-wholeness-in-a-timeless-activity-background-radius-50-medium.jpg");
-        background-position: top center;
-        background-size: cover;
-      }
-      #wholeness-in-a-timeless-activity article {
-        background-color: #ffffff;
-        padding-left: 2rem;
-        padding-right: 2rem;
-      }
+    .fill-space {
+      background-image: url("/assets/dynamic/astonishing-stories-wholeness-in-a-timeless-activity-background-radius-50-medium.jpg");
+      background-position: top center;
+      background-size: cover;
     }
   </style>
 ---
