@@ -8,6 +8,7 @@
 module MakeFeaturedYak
 	class Generator < Jekyll::Generator
 		safe true
+		priority :lowest
 
 		def generate(site)
 
@@ -19,8 +20,6 @@ module MakeFeaturedYak
 			# hence the monstrosity in the first line below.
 			#
 			buildDate = Time.new(Time.now.year, Time.now.month, Time.now.day)
-			site.data["build_date"] = buildDate
-			puts "Featured yak build date: #{buildDate.strftime('%Y-%m-%d')}"
 
 			# Only members whose `date` property is on or after
 			# `buildDate` should be considered.
@@ -34,22 +33,24 @@ module MakeFeaturedYak
 				end
 			end
 			currentMemberCount = currentMembers.length()
-			puts "Currently active members: #{currentMemberCount}"
 
 			# Grab a pseudo-random current member for our featured yak.
-			# We do this by taking the current date in YYYYMMDD form
-			# modulo the `currentMemberCount`, and then using that as
-			# our array index. The reason to do this, rather than just
-			# using Ruby's rand(), is to ensure that while the featured
-			# yak is random-ish for outside observers, it is actually
-			# deterministic with respect to the build date (since the
-			# featured yak should be the same for every build in a
-			# given day).
+			# We do this by taking the current date in seconds since
+			# epoch modulo the `currentMemberCount` and then using that
+			# as our array index. The reason to do this, rather than
+			# just using Ruby's rand() (or Jekyll's `sample`), is to
+			# ensure that while the featured yak is random-ish for
+			# outside observers, it is actually deterministic with
+			# respect to the build date (since the featured yak should
+			# be the same for every build in a given day). (Since new
+			# members go live on specific dates, invariance w.r.t. date
+			# is the same as invariance w.r.t. the list of members on
+			# that date.)
 			#
-			featuredYakIndex = buildDate.strftime("%Y%m%d").to_i % currentMemberCount
+			featuredYakIndex = buildDate.strftime("%s").to_i % currentMemberCount
 			featuredYak = currentMembers[featuredYakIndex]
 			site.data["featured_yak"] = featuredYak
-			puts "Today's featured yak is: #{featuredYak.data['title']}"
+			puts "      Featured yak: #{featuredYak.data['title']}"
 		end
 	end
 end

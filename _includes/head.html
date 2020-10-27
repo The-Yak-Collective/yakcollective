@@ -40,15 +40,17 @@
 	The final "else" is just belt-and-suspenders material, and should
 	never be reached during a (non-broken) build.
 {% endcomment %}
-<meta name="description" content="{% if page.description %}{{ page.description | markdownify | strip_html | strip }}{% elsif page.summary %}{{ page.summary | truncatewords: 20 | markdownify | strip_html | strip }}{% elsif page.content.length > 0 %}{{ page.content | truncatewords: 20 | strip_html | strip }}{% elsif page.subtitle %}{{ page.subtitle }}{% elsif page.tagline %}{{ page.tagline }}{% elsif site.description %}{{ site.description | truncatewords: 20 | strip }}{% else %}{{ site.name }}{% endif %}">
-<meta name="twitter:description" content="{% if page.description %}{{ page.description | markdownify | strip_html | strip }}{% elsif page.summary %}{{ page.summary | truncatewords: 20 | markdownify | strip_html | strip }}{% elsif page.content.length > 0 %}{{ page.content | truncatewords: 20 | strip_html | strip }}{% elsif page.subtitle %}{{ page.subtitle }}{% elsif page.tagline %}{{ page.tagline }}{% elsif site.description %}{{ site.description | truncatewords: 20 | strip }}{% else %}{{ site.name }}{% endif %}">
+{% capture the_description %}{% if page.description %}{{ page.description | markdownify | strip_html | strip }}{% elsif page.summary %}{{ page.summary | truncatewords: 20 | markdownify | strip_html | strip }}{% elsif page.content.length > 0 %}{{ page.content | truncatewords: 20 | strip_html | strip }}{% elsif page.subtitle %}{{ page.subtitle }}{% elsif page.tagline %}{{ page.tagline }}{% elsif site.description %}{{ site.description | truncatewords: 20 | strip }}{% else %}{{ site.name }}{% endif %}{% endcapture %}
+<meta name="description" content="{{ the_description }}">
+<meta name="twitter:description" content="{{ the_description }}">
 
 {% comment %}
 	Use page.title, or else site.name, for the page title.
 {% endcomment %}
-<title>{% if page.title %}{{ page.title }}{% else %}{{ site.name }}{% endif %}</title>
-<meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.name }}{% endif %}" />
-<meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.name }}{% endif %}">
+{% capture the_title %}{% if page.title %}{{ page.title }}{% else %}{{ site.name }}{% endif %}{% endcapture %}
+<title>{{ the_title }}</title>
+<meta property="og:title" content="{{ the_title }}" />
+<meta name="twitter:title" content="{{ the_title }}">
 
 <link rel="stylesheet" href="/assets/static/fonts.css">
 <link rel="stylesheet" href="/assets/static/font-awesome.min.css">
@@ -65,18 +67,6 @@
 </style>
 
 {% comment %}
-	Build array of members.
-{% endcomment %}
-{% assign members = "" | split: "" %}
-{% for the_page in site.pages %}
-	{% assign path_array = the_page.url | replace: "/", " " | strip | split: " " %}
-	{% assign path_size = path_array | size %}
-	{% if path_array[0] == "members" and path_size == 2 %}
-		{% assign members = members | push: the_page %}
-	{% endif %}
-{% endfor %}
-
-{% comment %}
 	Determine the image that should be associated with the page (for
 	Twitter and Facebook), as well as the page author (just for
 	Twitter).
@@ -86,9 +76,8 @@
 
 	Then...
 	
-	If the page is a "post" or "project page" and `page.author` is set,
-	pull the author from the `site.pages` array and use	their Twitter
-	handle and avatar (if set).
+	If `page.author` is set, pull the author from the `site.pages` array
+	and use their Twitter handle and avatar (if set).
 
 	If the page is a member page, pull the member's Twitter handle and
 	avatar (if set). (The member isn't *really* the page author in this
@@ -99,10 +88,10 @@
 {% endcomment %}
 {% assign page_author = "yak_collective" %}
 {% assign page_image = "/assets/static/yak-og.png" %}
-{% if page.layout == "post" %}
-	{% if page.author %}
-		{% assign author_file = page.author | append: ".md" %}
-		{% assign member = members | where: "name", author_file | first %}
+{% if page.author %}
+	{% assign author_url = "/members/" | append: page.author | append: "/" %}
+	{% assign member = site.pages | find: "url", author_url %}
+	{% if member %}
 		{% if member.twitter %}
 			{% assign page_author = member.twitter %}
 		{% endif %}

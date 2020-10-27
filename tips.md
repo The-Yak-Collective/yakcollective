@@ -16,27 +16,15 @@ title: Yak Collective Consulting Tip
 {% endcomment %}
 
 {% comment %}
-    Build array of members.
-{% endcomment %}
-{% assign members = "" | split: "" %}
-{% for the_page in site.pages %}
-    {% assign path_array = the_page.url | replace: "/", " " | strip | split: " " %}
-    {% assign path_size = path_array | size %}
-    {% if path_array[0] == "members" and path_size == 2 %}
-        {% assign members = members | push: the_page %}
-    {% endif %}
-{% endfor %}
-
-{% comment %}
     Figure out the tip we want. Note that we can't use `sample` here,
     since we need an actual tip number, and Liquid doesn't give us an
     easy way to determine what index we extracted from our array with
     that method.
 {% endcomment %}
-{% assign the_one = site.time | date: "%s" | modulo: site.data.tips.size %}
+{% assign the_one = site.time | date: "%s" | plus: 0 | modulo: site.data.tips.size %}
 {% assign the_tip = site.data.tips[the_one] %}
-{% assign the_author_file = the_tip.author | append: ".md" %}
-{% assign the_author = members | where: "name", the_author_file | first %}
+{% assign the_author_url = "/members/" | append: the_tip.author | append: "/" %}
+{% assign the_author = site.pages | find: "url", the_author_url %}
 {% assign the_words = the_tip.tip %}
 
 # Yak Collective Consulting Tip #{{ the_one | plus: 1 }}

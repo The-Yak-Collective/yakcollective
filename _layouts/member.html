@@ -12,7 +12,7 @@ layout: page
 {% comment %}
 	Generate the `member_id`. We'll need it later.
 {% endcomment %}
-{% assign member_id = page.name | split: "." | first %}
+{% assign member_id = page.url | replace: "/", " " | strip | split: " " | last %}
 
 {% comment %}
 	Pull in the member card (which functions as an information box
@@ -21,18 +21,6 @@ layout: page
 {% include widget-member-card.html standalone=true member=page %}
 
 {{ content }}
-
-{% comment %}
-    Build array of projects.
-{% endcomment %}
-{% assign projects = "" | split: "" %}
-{% for the_page in site.pages %}
-    {% assign path_array = the_page.url | replace: "/", " " | strip | split: " " %}
-    {% assign path_size = path_array | size %}
-    {% if path_array[0] == "projects" and path_size == 2 %}
-        {% assign projects = projects | push: the_page %}
-    {% endif %}
-{% endfor %}
 
 {% comment %}
 	Generate a list of projects that the current member (1) was a lead
@@ -51,14 +39,19 @@ layout: page
 {% endcomment %}
 {% assign projects_lead = "" | split: "" %}
 {% assign projects_collaborated = "" | split: "" %}
-{% assign site_epoch = site.time | date: "%s" %}
-{% for project in projects %}
-	{% assign project_epoch = project.date | date: "%s" %}
-	{% if project_epoch < site_epoch or site.future == true %}
-		{% if project.lead_editors contains member_id %}
-			{% assign projects_lead = projects_lead | push: project %}
-		{% elsif project.collaborators contains member_id %}
-			{% assign projects_collaborated = projects_collaborated | push: project %}
+{% assign site_epoch = site.time | date: "%s" | plus: 0 %}
+{% for the_page in site.pages %}
+	{% if the_page.layout == "page" %}
+		{% assign path_array = the_page.url | replace: "/", " " | strip | split: " " %}
+		{% if path_array[0] == "projects" and path_array.size == 2 %}
+			{% assign project_epoch = the_page.date | date: "%s" | plus: 0 %}
+			{% if project_epoch < site_epoch or site.future == true %}
+				{% if the_page.lead_editors contains member_id %}
+					{% assign projects_lead = projects_lead | push: the_page %}
+				{% elsif the_page.collaborators contains member_id %}
+					{% assign projects_collaborated = projects_collaborated | push: the_page %}
+				{% endif %}
+			{% endif %}
 		{% endif %}
 	{% endif %}
 {% endfor %}

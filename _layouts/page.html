@@ -25,15 +25,8 @@
 					well as the member `bio_short`, if it exists).
 				{% endcomment %}
 				{% if page.author %}
-					{% assign author_file = page.author | append: ".md" %}
-					{% for the_page in site.pages %}
-						{% assign path_array = the_page.url | replace: "/", " " | strip | split: " " %}
-						{% assign path_size = path_array | size %}
-						{% if path_array[0] == "members" and path_size == 2 and the_page.name == author_file %}
-							{% assign author = the_page %}
-							{% break %}
-						{% endif %}
-					{% endfor %}
+					{% assign author_url = "/members/" | append: page.author | append: "/" %}
+					{% assign author = site.pages | find: "url", author_url %}
 					{% if author %}
 						<div class="mt4">{% include widget-member-card.html member=author %}</div>
 						{% if author.bio_short %}
@@ -49,48 +42,39 @@
 					table of contents.
 				{% endcomment %}
 				{% assign path_array = page.url | replace: "/", " " | strip | split: " " %}
-				{% if path_array[0] == "projects" and path_array.size > 2 %}
+				{% if path_array[0] == "projects" and path_array.size >= 3 %}
 					{% assign page_project = path_array[1] %}
-					{% assign project_file = page_project | append: ".md" %}
-			
-					{% comment %}
-						Locate the current project.
-					{% endcomment %}
-					{% for the_page in site.pages %}
-						{% assign path_array = the_page.url | replace: "/", " " | strip | split: " " %}
-						{% assign path_size = path_array | size %}
-						{% if path_array[0] == "projects" and path_size == 2 and the_page.name == project_file %}
-							{% assign project = the_page %}
-							{% break %}
-						{% endif %}
-					{% endfor %}
-			
+					{% assign project_url = "/projects/" | append: page_project | append: "/" %}
+					{% assign project_url_size = project_url.size %}
+					{% assign project = site.pages | find: "url", project_url %}
+						
 					{% comment %}
 						Build array of pages for this project.
 					{% endcomment %}
 					{% assign project_pages = "" | split: "" %}
 					{% for the_page in site.pages %}
-						{% assign path_array = the_page.url | replace: "/", " " | strip | split: " " %}
-						{% assign path_size = path_array | size %}
-						{% if path_array[0] == "projects" and path_array[1] == page_project and path_size >= 3 %}
-							{% unless the_page.hidden %}
-								{% assign project_pages = project_pages | push: the_page %}
-							{% endunless %}
+						{% if the_page.layout == "page" %}
+							{% assign the_page_leader = the_page.url | slice: 0, project_url_size %}
+							{% if the_page_leader == project_url and the_page.url.size > project_url_size %}
+								{% unless the_page.hidden %}
+									{% assign project_pages = project_pages | push: the_page %}
+								{% endunless %}
+							{% endif %}
 						{% endif %}
 					{% endfor %}
-					{% assign project_pages = project_pages | sort: "name" | sort: "date" %}
+					{% assign project_pages = project_pages | sort: "url" | sort: "date" %}
 			
 					{% comment %}
 						Project table of contents.
 					{% endcomment %}
 					<ul id="markdown-toc" class="mt4"><li>
-						<a href="/projects/{{ page_project }}/">{{ project.title }}</a>
+						<a href="{{ project.url }}">{{ project.title }}</a>
 						{% if project_pages.size > 0 %}
 							<ul>
-								{% assign site_epoch = site.time | date: "%s" %}
+								{% assign site_epoch = site.time | date: "%s" | plus: 0 %}
 								{% for pp in project_pages %}
-									{% assign pp_epoch = pp.date | default: 0 | date: "%s" %}
-									<li{% if pp_epoch > site_epoch and site.future != true %} class="o-40"{% endif %}>{% if pp.name == page.name %}<strong>{% elsif pp_epoch <= site_epoch or site.future == true %}<a href="{% if pp.original_link %}{{ pp.original_link }}{% else %}{{ pp.url }}{% endif %}">{% endif %}{{ pp.title }}{% if pp.name == page.name %}</strong>{% elsif pp_epoch <= site_epoch or site.future == true %}</a>{% endif %}</li>
+									{% assign pp_epoch = pp.date | date: "%s" | plus: 0 %}
+									<li{% if pp_epoch > site_epoch and site.future != true %} class="o-40"{% endif %}>{% if pp.url == page.url %}<strong>{% elsif pp_epoch <= site_epoch or site.future == true %}<a href="{% if pp.original_link %}{{ pp.original_link }}{% else %}{{ pp.url }}{% endif %}">{% endif %}{{ pp.title }}{% if pp.url == page.url %}</strong>{% elsif pp_epoch <= site_epoch or site.future == true %}</a>{% endif %}</li>
 								{% endfor %}
 							</ul>
 						{% endif %}
