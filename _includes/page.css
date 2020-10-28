@@ -24,7 +24,7 @@
 {% elsif path_array[0] == "projects" and path_array.size > 2 %}
 	{% assign path_array = page.url | replace: "/", " " | strip | split: " " %}
 	{% assign project_file = path_array[1] | append: ".md" %}
-	{% assign project = projects | where: "name", project_file | first %}
+	{% assign project = projects | find: "name", project_file %}
 	{% assign accent_color = project.accent_color %}
 {% else %}
 	{% assign accent_color = site.accent_color %}
