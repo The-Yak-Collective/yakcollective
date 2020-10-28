@@ -86,7 +86,7 @@ exports.handler = async function(event, context) {
 		};
 	};
 	postContent = postContent.replace(/title:.*\n/, "");
-	postContent = postContent.replace(/---\n/, "---\nlayout: external\ntitle: |\n  " + postTitle + "\n");
+	postContent = postContent.replace(/---\n/, "---\nlayout: post-external\ntitle: |\n  " + postTitle + "\n");
 
 	// Figure out the post URL. Abort if none is set.
 	//

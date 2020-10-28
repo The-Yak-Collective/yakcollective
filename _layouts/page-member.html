@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 ---
 
 {% comment %}
@@ -41,7 +41,7 @@ layout: page
 {% assign projects_collaborated = "" | split: "" %}
 {% assign site_epoch = site.time | date: "%s" | plus: 0 %}
 {% for the_page in site.pages %}
-	{% if the_page.layout == "page" %}
+	{% if the_page.layout == "page-project" %}
 		{% assign path_array = the_page.url | replace: "/", " " | strip | split: " " %}
 		{% if path_array[0] == "projects" and path_array.size == 2 %}
 			{% assign project_epoch = the_page.date | date: "%s" | plus: 0 %}

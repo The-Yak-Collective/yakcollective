@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+{% comment %}
+	"Default" template for yakcollective.org, including HTML header,
+	page navigation elements, and page footer. Intended to be called as
+	a wrapper around more specialized templates.
+{% endcomment %}
+
+<html lang="en">
+	<head>
+		{% include head.html %}
+		{% include analytics.html %}
+	</head>
+
+	<body class="w-100 ph0-l f4-l center relative h-100">
+		<div class="fill-space">
+			{% include nav.html %}
+			<div class="column-background-wrapper"><div class="column-background"></div></div>
+			<article id="{{ page.url | replace: '/', ' ' | strip | replace: ' ', '-' | default: 'index' }}" class="yak-content pb5 mb3 lh-copy">
+				{{ content }}
+			</article>
+		</div>
+		{% include footer.html %}
+	</body>
+</html>

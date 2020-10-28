@@ -21,7 +21,7 @@ Yak Collective members have contributed to one or more projects.
 {% assign members = "" | split: "" %}
 {% assign site_epoch = site.time | date: "%s" | plus: 0 %}
 {% for the_page in site.pages %}
-    {% if the_page.layout == "member" %}
+    {% if the_page.layout == "page-member" %}
         {% assign path_array = the_page.url | replace: "/", " " | strip | split: " " %}
         {% if path_array[0] == "members" and path_array.size == 2 %}
             {% assign member_epoch = member.date | date: "%s" | plus: 0 %}

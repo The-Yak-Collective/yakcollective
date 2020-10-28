@@ -1,0 +1,14 @@
+---
+layout: default
+---
+
+{% comment %}
+	Default layout for posts and other pages that require author
+	information.
+{% endcomment %}
+
+{{ content }}
+
+{% if page.author %}
+	{% include author-info.html author=page.author %}
+{% endif %}

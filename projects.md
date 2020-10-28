@@ -14,7 +14,7 @@ Yak Collective projects are collaborations and explorations from the community.
 {% assign projects = "" | split: "" %}
 {% assign site_epoch = site.time | date: "%s" | plus: 0 %}
 {% for the_page in site.pages %}
-    {% if the_page.layout == "page" %}
+    {% if the_page.layout == "page-project" %}
         {% assign path_array = the_page.url | replace: "/", " " | strip | split: " " %}
         {% if path_array[0] == "projects" and path_array.size == 2 %}
             {% assign project_epoch = project.date | date: "%s" | plus: 0 %}

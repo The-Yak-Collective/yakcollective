@@ -36,11 +36,27 @@ defaults:
       path: "members/*"
       type: pages
     values:
-      layout: member
+      layout: page-member
+  - scope:
+      path: "projects/*/*"
+      type: pages
+    values:
+      layout: page-project-page
+  - scope:
+      path: "projects/*"
+      type: pages
+    values:
+      layout: page-project
   - scope:
       path: ""
+      type: pages
     values:
       layout: page
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
 
 # Kramdown parser option
 #

@@ -1,0 +1,22 @@
+{% comment %}
+	Given an author identifier (`rao-venkatesh`), generate a footer
+	suitable for a post or project page.
+
+	We break this functionality out as an include rather than a layout
+	because layout inheritance isn't flexible enough to otherwise
+	prevent us from duplicating this
+
+	Expects a single parameter, `author`, which identies the post/page
+	author.
+{% endcomment %}
+
+{% assign author_url = "/members/" | append: include.author | append: "/" %}
+{% assign author = site.pages | find: "url", author_url %}
+{% if author %}
+	<div class="mt4">{% include widget-member-card.html member=author %}</div>
+	{% if author.bio_short %}
+		<div class="author-bio">
+			{{ author.bio_short | markdownify }}
+		</div>
+	{% endif %}
+{% endif %}
