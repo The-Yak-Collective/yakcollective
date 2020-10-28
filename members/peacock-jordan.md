@@ -1,6 +1,6 @@
 ---
 title: Jordan Peacock
-date: 2020-04-30
+date: 2020-04-30 00:00:00
 indie_status: 3+ years
 twitter: hewhocutsdown
 tagline: CEO, Becoming Machinic; Founder, Sortilege

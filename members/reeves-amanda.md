@@ -1,6 +1,6 @@
 ---
 title: Amanda Reeves
-date: 2020-04-30
+date: 2020-04-30 00:00:00
 indie_status: 1+ years
 previously: Strategic coaching & health service redesign
 twitter: WabiSabiFutures

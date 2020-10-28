@@ -1,5 +1,5 @@
 ---
-date: 2020-11-06
+date: 2020-11-06 00:00:00
 hero_image: /assets/dynamic/astonishing-stories-department-of-restoration.jpg
 hero_attach_vertical: center
 hero_attach_horizontal: center

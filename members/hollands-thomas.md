@@ -1,6 +1,6 @@
 ---
 title: Thomas Hollands
-date: 2020-06-10
+date: 2020-06-10 00:00:00
 tagline: Writing and Strategy
 previously: Barclays & UCL
 currently: L.E.K. Consulting

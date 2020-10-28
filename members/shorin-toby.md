@@ -1,6 +1,6 @@
 ---
 title: Toby Shorin
-date: 2020-06-10
+date: 2020-06-10 00:00:00
 previously: Other Internet
 twitter: tobyshorin
 avatar: /assets/dynamic/shorin-toby.jpg

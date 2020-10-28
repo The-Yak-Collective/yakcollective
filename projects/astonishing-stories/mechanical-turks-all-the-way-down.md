@@ -1,5 +1,5 @@
 ---
-date: 2020-11-20
+date: 2020-11-20 00:00:00
 hero_image: /assets/dynamic/astonishing-stories-mechanical-turks-all-the-way-down.jpg
 hero_attach_vertical: center
 hero_attach_horizontal: center

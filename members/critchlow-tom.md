@@ -1,6 +1,6 @@
 ---
 title: Tom Critchlow
-date: 2020-04-30
+date: 2020-04-30 00:00:00
 previously: Google
 indie_status: 5+ years
 twitter: tomcritchlow

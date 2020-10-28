@@ -1,5 +1,5 @@
 ---
-date: 2020-10-30
+date: 2020-10-30 00:00:00
 hero_image: /assets/dynamic/astonishing-stories-your-payment-is-ready.jpg
 hero_attach_vertical: center
 hero_attach_horizontal: center

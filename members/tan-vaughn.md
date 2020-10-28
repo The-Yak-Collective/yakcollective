@@ -1,6 +1,6 @@
 ---
 title: Vaughn Tan
-date: 2020-04-30
+date: 2020-04-30 00:00:00
 indie_status: 5+ years
 previously: Google
 currently: University College London School of Management

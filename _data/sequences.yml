@@ -4,5 +4,5 @@
 #
 - sequence: covid-19
   name: COVID-19
-  date: 2020-03-16
+  date: 2020-03-16 00:00:00
   count_phrase: Pandemic Mean Time

@@ -1,6 +1,6 @@
 ---
 title: Don’t Waste the Reboot
-date: 2020-04-30
+date: 2020-04-30 00:00:00
 tagline: Making the next normal better than the last one
 type: Report
 sequence: covid-19

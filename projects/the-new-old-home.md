@@ -1,6 +1,6 @@
 ---
 title: The New Old Home
-date: 2020-06-10
+date: 2020-06-10 00:00:00
 tagline: Rediscovering the home as a production frontier
 type: Report
 sequence: covid-19

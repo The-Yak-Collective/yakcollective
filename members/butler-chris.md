@@ -1,6 +1,6 @@
 ---
 title: Chris Butler
-date: 2020-10-23
+date: 2020-10-23 00:00:00
 tagline: Chaotic good product manager
 twitter: chrizbot
 avatar: /assets/dynamic/butler-chris.jpg

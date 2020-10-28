@@ -1,6 +1,6 @@
 ---
 title: Martha Balaile
-date: 2020-04-30
+date: 2020-04-30 00:00:00
 indie_status: 1+ years
 twitter: MythologyStudio
 avatar: /assets/dynamic/balaile-martha.jpg

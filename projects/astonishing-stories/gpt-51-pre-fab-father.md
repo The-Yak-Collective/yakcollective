@@ -1,5 +1,5 @@
 ---
-date: 2020-11-27
+date: 2020-11-27 00:00:00
 hero_image: /assets/dynamic/astonishing-stories-gpt-51-pre-fab-father.jpg
 hero_attach_vertical: center
 hero_attach_horizontal: center

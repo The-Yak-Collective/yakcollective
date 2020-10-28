@@ -1,6 +1,6 @@
 ---
 title: Venkatesh Rao
-date: 2020-04-30
+date: 2020-04-30 00:00:00
 indie_status: 9+ years
 previously: Xerox
 twitter: vgr

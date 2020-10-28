@@ -1,6 +1,6 @@
 ---
 title: Shreeda Segan
-date: 2020-06-10
+date: 2020-06-10 00:00:00
 tagline: Design Thinker & Writer
 twitter: freeshreeda
 avatar: /assets/dynamic/segan-shreeda.jpg

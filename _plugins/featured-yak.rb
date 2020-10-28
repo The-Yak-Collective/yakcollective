@@ -13,7 +13,10 @@ module MakeFeaturedYak
 		def generate(site)
 
 			# What is today's date? We use a `Time` object, since
-			# that's how Jekyll stores timestamps internally.
+			# that's how Jekyll stores timestamps internally. (We
+			# *don't* use `site.time`, because that's a full timestamp,
+			# and we need to ignore the hours/minutes/seconds bit so
+			# that builds are consistent.)
 			#
 			# Unfortunately, I can't find a sensible way to build a
 			# `Time` object that corresponds to "the start of today",
@@ -27,7 +30,7 @@ module MakeFeaturedYak
 			currentMembers = Array.new
 			site.pages.each do |page|
 				if page.url =~ /^\/members\/[^\/]+\// and !page.data["date"].nil?
-					if page.data["date"].to_time <= buildDate
+					if page.data["date"] <= buildDate
 						currentMembers << page
 					end
 				end

@@ -1,6 +1,6 @@
 ---
 title: Thomas Verhagen
-date: 2020-04-30
+date: 2020-04-30 00:00:00
 indie_status: 1+ year
 current: Clipper.earth
 previously: Cambridge Institute for Sustainability Leadership

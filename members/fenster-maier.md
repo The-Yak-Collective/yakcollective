@@ -1,5 +1,5 @@
 ---
 title: Maier Fenster
-date: 2020-07-11
+date: 2020-07-11 00:00:00
 avatar: /assets/dynamic/fenster-maier.jpg
 ---

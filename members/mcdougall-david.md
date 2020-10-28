@@ -1,6 +1,6 @@
 ---
 title: David McDougall
-date: 2020-04-30
+date: 2020-04-30 00:00:00
 currently: Director of Product, Arabesque S-Ray
 previously: Founder, Lusiad Innovation
 twitter: dmcdougall
