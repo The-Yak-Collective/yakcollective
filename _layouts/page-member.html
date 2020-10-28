@@ -25,51 +25,28 @@ layout: default
 {% comment %}
 	Generate a list of projects that the current member (1) was a lead
 	on or (2) was a collaborator on.
-
-	We begin by creating two arrays to hold these lists. Liquid lacks a
-	way to natively create empty arrays, so we `split` an empty string
-	instead. ¯\_(ツ)_/¯
-
-	Then, we loop through the `projects` array created above. So long as
-	the	project is not in the future, we check to see if the current
-	member is a lead editor or a collaborator and add them to the
-	appropriate array (`projects_lead` or `projects_collaborated`).
-
-	Adapted from: https://stackoverflow.com/a/42727933
 {% endcomment %}
-{% assign projects_lead = "" | split: "" %}
-{% assign projects_collaborated = "" | split: "" %}
-{% assign site_epoch = site.time | date: "%s" | plus: 0 %}
-{% for the_page in site.pages %}
-	{% if the_page.layout == "page-project" %}
-		{% assign path_array = the_page.url | replace: "/", " " | strip | split: " " %}
-		{% if path_array[0] == "projects" and path_array.size == 2 %}
-			{% assign project_epoch = the_page.date | date: "%s" | plus: 0 %}
-			{% if project_epoch < site_epoch or site.future == true %}
-				{% if the_page.lead_editors contains member_id %}
-					{% assign projects_lead = projects_lead | push: the_page %}
-				{% elsif the_page.collaborators contains member_id %}
-					{% assign projects_collaborated = projects_collaborated | push: the_page %}
-				{% endif %}
-			{% endif %}
-		{% endif %}
-	{% endif %}
-{% endfor %}
-{% assign projects_lead = projects_lead | sort: "date" | reverse %}
-{% assign projects_collaborated = projects_collaborated | sort: "date" | reverse %}
+{% assign projects = site.pages | where: "layout", "page-project"
+                                | where_exp: "project", "project.date < site.time or site.future == true" %}
+{% assign projects_lead = projects | where_exp: "project", "project.lead_editors contains member_id"
+                                   | sort: "date"
+                                   | reverse %}
+{% assign projects_collaborated = projects | where_exp: "project", "project.collaborators contains member_id"
+                                           | sort: "date"
+                                           | reverse %}
 
 {% comment %}
 	Output the `projects_lead` and `projects_collaborated` arrays.
 {% endcomment %}
 {% if projects_lead.size > 0 %}
 	<h2 id="project-lead">Project Lead On</h2>
-	{% for project in projects_lead reversed %}
+	{% for project in projects_lead %}
 		{% include widget-project-box.html project=project %}
 	{% endfor %}
 {% endif %}
 {% if projects_collaborated.size > 0 %}
 	<h2 id="collaborator">Collaborated On</h2>
-	{% for project in projects_collaborated reversed %}
+	{% for project in projects_collaborated %}
 		{% include widget-project-box.html project=project %}
 	{% endfor %}
 {% endif %}

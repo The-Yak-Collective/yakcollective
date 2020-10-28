@@ -18,41 +18,36 @@ layout: default
 	If this is a project page, append the appropriate table of contents.
 {% endcomment %}
 {% assign path_array = page.url | replace: "/", " " | strip | split: " " %}
-{% if path_array[0] == "projects" and path_array.size >= 3 %}
-	{% assign page_project = path_array[1] %}
-	{% assign project_url = "/projects/" | append: page_project | append: "/" %}
-	{% assign project_url_size = project_url.size %}
-	{% assign project = site.pages | find: "url", project_url %}
+{% assign project_name = path_array[1] %}
+{% assign project_url = "/projects/" | append: project_name | append: "/" %}
+{% assign project = site.pages | find: "url", project_url %}
 	
-	{% comment %}
-		Build array of pages for this project.
-	{% endcomment %}
-	{% assign project_pages = "" | split: "" %}
-	{% for the_page in site.pages %}
-		{% if the_page.layout == "page-project-page" %}
-			{% assign the_page_leader = the_page.url | slice: 0, project_url_size %}
-			{% if the_page_leader == project_url and the_page.url.size > project_url_size %}
-				{% unless the_page.hidden %}
-					{% assign project_pages = project_pages | push: the_page %}
-				{% endunless %}
-			{% endif %}
+{% comment %}
+	Build array of pages for this project.
+{% endcomment %}
+{% assign project_pages = "" | split: "" %}
+{% for the_page in site.pages %}
+	{% if the_page.layout == "page-project-page" %}
+		{% assign path_array = the_page.url | replace: "/", " " | strip | split: " " %}
+		{% if path_array[1] == project_name %}
+			{% unless the_page.hidden %}
+				{% assign project_pages = project_pages | push: the_page %}
+			{% endunless %}
 		{% endif %}
-	{% endfor %}
-	{% assign project_pages = project_pages | sort: "url" | sort: "date" %}
+	{% endif %}
+{% endfor %}
+{% assign project_pages = project_pages | sort: "url" | sort: "date" %}
 
-	{% comment %}
-		Project table of contents.
-	{% endcomment %}
-	<ul id="markdown-toc" class="mt4"><li>
-		<a href="{{ project.url }}">{{ project.title }}</a>
-		{% if project_pages.size > 0 %}
-			<ul>
-				{% assign site_epoch = site.time | date: "%s" | plus: 0 %}
-				{% for pp in project_pages %}
-					{% assign pp_epoch = pp.date | date: "%s" | plus: 0 %}
-					<li{% if pp_epoch > site_epoch and site.future != true %} class="o-40"{% endif %}>{% if pp.url == page.url %}<strong>{% elsif pp_epoch <= site_epoch or site.future == true %}<a href="{% if pp.original_link %}{{ pp.original_link }}{% else %}{{ pp.url }}{% endif %}">{% endif %}{{ pp.title }}{% if pp.url == page.url %}</strong>{% elsif pp_epoch <= site_epoch or site.future == true %}</a>{% endif %}</li>
-				{% endfor %}
-			</ul>
-		{% endif %}
-	</li></ul>
-{% endif %}
+{% comment %}
+	Project table of contents.
+{% endcomment %}
+<ul id="markdown-toc" class="mt4"><li>
+	<a href="{{ project.url }}">{{ project.title }}</a>
+	{% if project_pages.size > 0 %}
+		<ul>
+			{% for pp in project_pages %}
+				<li{% if pp.date > site.time and site.future != true %} class="o-40"{% endif %}>{% if pp.url == page.url %}<strong>{% elsif pp.date <= site.time or site.future == true %}<a href="{% if pp.original_link %}{{ pp.original_link }}{% else %}{{ pp.url }}{% endif %}">{% endif %}{{ pp.title }}{% if pp.url == page.url %}</strong>{% elsif pp.date <= site.time or site.future == true %}</a>{% endif %}</li>
+			{% endfor %}
+		</ul>
+	{% endif %}
+</li></ul>

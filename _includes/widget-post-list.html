@@ -56,18 +56,6 @@
 {% endcapture %}
 
 {% comment %}
-	Build array of members. We'll need this later too.
-{% endcomment %}
-{% assign members = "" | split: "" %}
-{% for the_page in site.pages %}
-	{% assign path_array = the_page.url | replace: "/", " " | strip | split: " " %}
-	{% assign path_size = path_array | size %}
-	{% if path_array[0] == "members" and path_size == 2 %}
-		{% assign members = members | push: the_page %}
-	{% endif %}
-{% endfor %}
-
-{% comment %}
 	Filter `site.posts` depending on `author` and `category`.
 {% endcomment %}
 {% if include.category %}
@@ -100,20 +88,33 @@
 	{% assign next_month = post.previous.date | date: "%B" %}
 
 	{% if forloop.first %}
-		{% assign post_list = post_list | append: header_year | append: this_year | append: one_newline %}
-		{% assign post_list = post_list | append: "{: #" | append: id_prefix | append: this_year | append: "}" | append: two_newlines%}
-		{% assign post_list = post_list | append: header_month | append: this_month | append: one_newline %}
-		{% assign post_list = post_list | append: "{: #" | append: id_prefix | append: this_year | append: "-" | append: this_month | append: "}" | append: two_newlines%}
+		{% assign post_list = post_list | append: header_year
+		                                | append: this_year
+		                                | append: one_newline %}
+		{% assign post_list = post_list | append: "{: #"
+		                                | append: id_prefix
+		                                | append: this_year
+		                                | append: "}"
+		                                | append: two_newlines%}
+		{% assign post_list = post_list | append: header_month
+		                                | append: this_month
+		                                | append: one_newline %}
+		{% assign post_list = post_list | append: "{: #"
+		                                | append: id_prefix
+		                                | append: this_year
+		                                | append: "-"
+		                                | append: this_month
+		                                | append: "}"
+		                                | append: two_newlines %}
 	{% endif %}
 
 	{% comment %}
 		Post authors are stored "symbolically". We use the `name`
 		attribute to look up the author's name (a.k.a. `title`), and
-		`date` (the member "join date") from the `members` array we
-		generated at the start of this include.
+		`date` (the member "join date") from the `site.pages` array.
 	{% endcomment %}
-	{% assign author_file = post.author | append: ".md" %}
-	{% assign author = members | where: "name", author_file | first %}
+	{% assign author_url = "/members/" | append: post.author | append: "/" %}
+	{% assign author = site.pages | find: "url", author_url %}
 
 	{% comment %}
 		We show posts when `show_author` is falsy OR when it's after the
@@ -124,12 +125,8 @@
 		posts if they haven't yet "officially" joined.
 	{% endcomment %}
 	{% assign show_post = true %}
-	{% if include.show_author %}
-		{% assign author_epoch = author.date | date: "%s" %}
-		{% assign site_epoch = site.time | date: "%s" %}
-		{% if author_epoch > site_epoch and site.future != true %}
-			{% assign show_post = false %}
-		{% endif %}
+	{% if include.show_author and author.date > site.time and site.future != true %}
+		{% assign show_post = false %}
 	{% endif %}
 	{% if show_post %}
 		{% assign post_list = post_list | append: "- [" %}
@@ -160,15 +157,37 @@
 	{% else %}
 		{% if this_year != next_year %}
 			{% assign post_list = post_list | append: one_newline %}
-			{% assign post_list = post_list | append: header_year | append: next_year | append: one_newline %}
-			{% assign post_list = post_list | append: "{: #" | append: id_prefix | append: next_year | append: "}" | append: two_newlines%}
-			{% assign post_list = post_list | append: header_month | append: next_month | append: one_newline %}
-			{% assign post_list = post_list | append: "{: #" | append: id_prefix | append: next_year | append: "-" | append: next_month | append: "}" | append: two_newlines%}
+			{% assign post_list = post_list | append: header_year
+			                                | append: next_year
+			                                | append: one_newline %}
+			{% assign post_list = post_list | append: "{: #"
+			                                | append: id_prefix
+			                                | append: next_year
+			                                | append: "}"
+			                                | append: two_newlines %}
+			{% assign post_list = post_list | append: header_month
+			                                | append: next_month
+			                                | append: one_newline %}
+			{% assign post_list = post_list | append: "{: #"
+			                                | append: id_prefix
+			                                | append: next_year
+			                                | append: "-"
+			                                | append: next_month
+			                                | append: "}"
+			                                | append: two_newlines %}
 		{% else %}	
 			{% if this_month != next_month %}
 				{% assign post_list = post_list | append: one_newline %}
-				{% assign post_list = post_list | append: header_month | append: next_month | append: one_newline %}
-				{% assign post_list = post_list | append: "{: #" | append: id_prefix | append: next_year | append: "-" | append: next_month | append: "}" | append: two_newlines%}
+				{% assign post_list = post_list | append: header_month
+				                                | append: next_month
+				                                | append: one_newline %}
+				{% assign post_list = post_list | append: "{: #"
+				                                | append: id_prefix
+				                                | append: next_year
+				                                | append: "-"
+				                                | append: next_month
+				                                | append: "}"
+				                                | append: two_newlines %}
 			{% endif %}
 		{% endif %}
 	{% endif %}

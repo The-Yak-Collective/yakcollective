@@ -19,41 +19,19 @@
 {% endcomment %}
 
 {% comment %}
-	(Re)Generate the project page ID/slug.
-{% endcomment %}
-{% assign project_page_id = include.pp.name | split: "." | first %}
-
-{% comment %}
-	What is the page project?
+	Grab project information.
 {% endcomment %}
 {% assign path_array = include.pp.url | replace: "/", " " | strip | split: " " %}
-{% assign page_project = path_array[1] %}
+{% assign project_url = "/projects/" | append: path_array[1] | append: "/" %}
+{% assign project = site.pages | find: "url", project_url %}
 
-{% comment %}
-	Build array of projects.
-{% endcomment %}
-{% assign projects = "" | split: "" %}
-{% for the_page in site.pages %}
-	{% assign path_array = the_page.url | replace: "/", " " | strip | split: " " %}
-	{% assign path_size = path_array | size %}
-	{% if path_array[0] == "projects" and path_size == 2 %}
-		{% assign projects = projects | push: the_page %}
-	{% endif %}
-{% endfor %}
-
-<div id="{{ project_page_id }}" class="project-page-box-container dib">
-	{% assign pp_epoch = include.pp.date | date: "%s" %}
-	{% assign site_epoch = site.time | date: "%s" %}
-	{% if pp_epoch <= site_epoch or site.future == true %}<a href="{% if include.pp.original_link %}{{ include.pp.original_link }}{% else %}{{ include.pp.url }}{% endif %}"{% else %}<div{% endif %} class="project-page-box ba {% if pp_epoch > site_epoch and site.future != true %}o-40 {% endif %}relative">
+<div id="{{ include.pp.name | split: '.' | first }}" class="project-page-box-container dib">
+	{% if include.pp.date <= site.time or site.future == true %}<a href="{% if include.pp.original_link %}{{ include.pp.original_link }}{% else %}{{ include.pp.url }}{% endif %}"{% else %}<div{% endif %} class="project-page-box ba {% if include.pp.date > site.time and site.future != true %}o-40 {% endif %}relative">
 
 		{% comment %}
 			Hero image. Displayed portrait-ish, if present.
-
-			We look up the background color from the associated project.
 		{% endcomment %}
-		{% assign project_file = page_project | append: ".md" %}
-		{% assign project_data = projects | where: "name", project_file | first %}
-		<div class="hero bb" style="background: rgb({{ project_data.accent_color }}){% if include.pp.hero_image %} url('{{ include.pp.hero_image }}') {{ include.pp.hero_attach_vertical | default: "center" }} {{ include.pp.hero_attach_horizontal | default: "center" }}{% endif %}; background-size: cover;"></div>
+		<div class="hero bb" style="background: rgb({{ project.accent_color }}){% if include.pp.hero_image %} url('{{ include.pp.hero_image }}') {{ include.pp.hero_attach_vertical | default: "center" }} {{ include.pp.hero_attach_horizontal | default: "center" }}{% endif %}; background-size: cover;"></div>
 
 		<div class="page-info mh4 mt1 mb3">
 			<h2 class="pseudo-link">{{ include.pp.title }}</h2>
@@ -86,5 +64,5 @@
 				<p class="silent-link">{{ include.pp.description }}</p>
 			{% endif %}
 		</div>
-	</{% if pp_epoch <= site_epoch or site.future == true %}a{% else %}div{% endif %}>
+	</{% if include.pp.date <= site.time or site.future == true %}a{% else %}div{% endif %}>
 </div>
