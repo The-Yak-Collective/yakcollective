@@ -25,7 +25,7 @@
 {% assign project_url = "/projects/" | append: path_array[1] | append: "/" %}
 {% assign project = site.pages | find: "url", project_url %}
 
-<div id="{{ include.pp.name | split: '.' | first }}" class="project-page-box-container dib">
+<div id="{{ include.pp.url | replace: '/', ' ' | strip | split: ' ' | last }}" class="project-page-box-container dib">
 	{% if include.pp.date <= site.time or site.future == true %}<a href="{% if include.pp.original_link %}{{ include.pp.original_link }}{% else %}{{ include.pp.url }}{% endif %}"{% else %}<div{% endif %} class="project-page-box ba {% if include.pp.date > site.time and site.future != true %}o-40 {% endif %}relative">
 
 		{% comment %}

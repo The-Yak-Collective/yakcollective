@@ -16,15 +16,11 @@
 {% assign project = include.project | default: page %}
 
 {% comment %}
-	Figure out the current project ID.
-{% endcomment %}
-{% assign project_id = project.name | split: "." | first %}
-
-{% comment %}
-	Project header/hero.
+	Project header/hero. No indentation to prevent Markdown conversion
+	weirdness.
 {% endcomment %}
 {% capture the_content %}
-<header id="{{ project_id }}-hero" class="yak-project-header">
+<header id="{{ project.url | replace: '/', ' ' | strip | split: ' ' | last }}-hero" class="yak-project-header">
 	<div class="hero"></div>
 	<div class="yak-content wide">
 		<div class="cf ph0 pv5-l pv4">

@@ -13,12 +13,7 @@
 	suitable for inclusion in both Markdown and HTML pages.
 {% endcomment %}
 
-{% comment %}
-	(Re)Generate the project ID/slug.
-{% endcomment %}
-{% assign project_id = include.project.name | split: "." | first %}
-
-<div id="{{ project_id }}-box" class="mv4">
+<div id="{{ include.project.url | replace: '/', ' ' | strip | split: ' ' | last }}-box" class="mv4">
 	<a href="{{ include.project.url }}" class="project-box ba relative">
 		<div class="w-50">
 			<div class="smaller lh-title fw9 mv0 pt1 bt bw1 ph2 sans-serif ttu silent-link">{{ include.project.type }}</div>

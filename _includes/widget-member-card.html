@@ -24,12 +24,7 @@
 	suitable for inclusion in both Markdown and HTML pages.
 {% endcomment %}
 
-{% comment %}
-	(Re)Generate the member ID/slug.
-{% endcomment %}
-{% assign member_id = include.member.name | split: "." | first %}
-
-<div class="w-100 mv3" id="{{ member_id }}">
+<div class="w-100 mv3" id="{{ include.member.url | replace: '/', ' ' | strip | split: ' ' | last }}">
 	{% if include.standalone %}<div{% else %}<a href="{{ include.member.url }}"{% endif %} class="flex items-center lh-copy pa3 ba member-box">
 		<img class="w3 h3 br-100" src="{{ include.member.avatar }}" />
 		<div class="pl3 pr2 flex-auto">

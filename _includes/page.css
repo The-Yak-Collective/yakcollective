@@ -1,30 +1,13 @@
 {% comment %}
-    Build array of projects.
-{% endcomment %}
-{% assign projects = "" | split: "" %}
-{% for the_page in site.pages %}
-    {% assign path_array = the_page.url | replace: "/", " " | strip | split: " " %}
-    {% assign path_size = path_array | size %}
-    {% if path_array[0] == "projects" and path_size == 2 %}
-        {% assign projects = projects | push: the_page %}
-    {% endif %}
-{% endfor %}
-
-{% comment %}
-	Turn the page path into an array.
-{% endcomment %}
-{% assign path_array = page.url | replace: "/", " " | strip | split: " " %}
-
-{% comment %}
 	Accent colors can vary by page. This include controls this, as well
 	as other per-page elements.
 {% endcomment %}
 {% if page.accent_color %}
 	{% assign accent_color = page.accent_color %}
-{% elsif path_array[0] == "projects" and path_array.size > 2 %}
+{% elsif page.layout == "page-project-page" %}
 	{% assign path_array = page.url | replace: "/", " " | strip | split: " " %}
-	{% assign project_file = path_array[1] | append: ".md" %}
-	{% assign project = projects | find: "name", project_file %}
+	{% assign project_url = "/projects/" | append: path_array[1] | append: "/" %}
+	{% assign project = site.pages | find: "url", project_url %}
 	{% assign accent_color = project.accent_color %}
 {% else %}
 	{% assign accent_color = site.accent_color %}
@@ -63,8 +46,9 @@ a.member-box:hover {
 {% comment %}
 	Generate project-specific styles.
 {% endcomment %}
+{% assign projects = site.pages | where: "layout", "page-project" %}
 {% for project in projects %}
-	{% assign project_id = project.name | split: "." | first %}
+	{% assign project_id = project.url | replace: "/", " " | strip | split: " " | last %}
 	{% if project.accent_color %}
 		{% assign accent_color = project.accent_color %}
 	{% else %}

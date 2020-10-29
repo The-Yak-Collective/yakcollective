@@ -12,23 +12,12 @@ layout: none
 	structure to the "tips" page.
 {% endcomment %}
 
-{% comment %}
-	Build array of members.
-{% endcomment %}
-{% assign members = "" | split: "" %}
-{% for the_page in site.pages %}
-	{% assign path_array = the_page.url | replace: "/", " " | strip | split: " " %}
-	{% assign path_size = path_array | size %}
-	{% if path_array[0] == "members" and path_size == 2 %}
-		{% assign members = members | push: the_page %}
-	{% endif %}
-{% endfor %}
-
 var members = {
+	{% assign members = site.pages | where: "layout", "page-member" %}
 	{% assign last_member = members.last %}
 	{% for member in members %}
-		{% assign member_id = member.name | split: "." | first %}
-		"{{ member_id }}": "{{ member.title }}"{% if member.name != last_member.name %},{% endif %}
+		{% assign member_id = member.url | replace: "/", " " | strip | split: " " | last %}
+		"{{ member_id }}": "{{ member.title }}"{% if member.url != last_member.url %},{% endif %}
 	{% endfor %} };
 var tips = {{ site.data.tips | jsonify }};
 var tips_total = tips.length;

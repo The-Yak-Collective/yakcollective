@@ -19,7 +19,7 @@
 {% comment %}
 	Figure out the current project ID.
 {% endcomment %}
-{% assign project_id = project.name | split: "." | first %}
+{% assign project_id = project.url | replace: "/", " " | strip | split: " " | last %}
 
 {% comment %}
 	Generate a list of project pages associated with the current
@@ -27,13 +27,16 @@
 {% endcomment %}
 {% assign project_pages = "" | split: "" %}
 {% for the_page in site.pages %}
-	{% assign path_array = the_page.url | replace: "/", " " | strip | split: " " %}
-	{% assign path_size = path_array | size %}
-	{% if path_array[0] == "projects" and path_array[1] == project_id and path_size >= 3 %}
-		{% assign project_pages = project_pages | push: the_page %}
+	{% if the_page.layout == "page-project-page" %}
+		{% assign path_array = the_page.url | replace: "/", " " | strip | split: " " %}
+		{% if path_array[1] == project_id %}
+			{% unless the_page.hidden %}
+				{% assign project_pages = project_pages | push: the_page %}
+			{% endunless %}
+		{% endif %}
 	{% endif %}
 {% endfor %}
-{% assign project_pages = project_pages | sort: "name" | sort: "date" %}
+{% assign project_pages = project_pages | sort: "url" | sort: "date" %}
 
 {% comment %}
 	Output project pages (if they exist).
