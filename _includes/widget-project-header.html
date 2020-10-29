@@ -42,23 +42,27 @@
 				{% endif %}
 
 				{% comment %}
-					Project lead editor list.
-				{% endcomment %}
-				{% if project.lead_editors %}
-					<details class="smaller mb3 lead-editors" open>
-						<summary class="ttu lh-title">Lead editors</summary>
-						<p>{% include member-list.html member_list=project.lead_editors link_members=true %}</p>
-					</details>
-				{% endif %}
+					Output project credits. Having a `lead_editors`
+					entry is HIGHLY recommended, but not strictly
+					required. Solution after:
 
-				{% comment %}
-					Project collaborator list.
+					https://stackoverflow.com/questions/8206869/iterate-over-hashes-in-liquid-templates
 				{% endcomment %}
-				{% if project.collaborators %}
-					<details class="smaller mb3 collaborators" open>
-						<summary class="ttu lh-title">Collaborators</summary>
-						<p>{% include member-list.html member_list=project.collaborators link_members=true %}</p>
-					</details>
+				{% if project.credits %}
+					{% for credits_block in project.credits %}
+						{% if credits_block[1].size > 0 %}
+							{% assign credits_class = credits_block[0] | replace: "_", "-" | downcase %}
+							{% if credits_class != "lead-editors" %}
+								{% assign credits_class = "collaborators" %}
+							{% endif %}
+							{% assign credits_title = credits_block[0] | replace: "_", " " | capitalize %}
+							{% assign credits_list = credits_block[1] %}
+							<details class="smaller mb3 {{ credits_class }}" open>
+								<summary class="ttu lh-title">{{ credits_title }}</summary>
+								<p>{% include member-list.html member_list=credits_list link_members=true %}</p>
+							</details>
+						{% endif %}
+					{% endfor %}
 				{% endif %}
 			</aside>
 

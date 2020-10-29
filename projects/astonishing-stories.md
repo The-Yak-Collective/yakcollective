@@ -89,48 +89,43 @@ summary: |
   The stories here are not meant to predict the future but to be imagination extenders for entrepreneurs and consultants navigating a post-COVID landscape.
 
   <a href="https://open.spotify.com/playlist/7o4hqg7Jo8rrz1p61V7037"><strong><i class="fab fa-spotify"></i> Listen to the accompanying Spotify playlist.</strong></a>
-lead_editors:
-  - benny-sachin
-  - reeves-amanda
-collaborators:
-  - acks-nathan
-  - appleton-maggie
-  - brinkerhoff-tracy
-  - butler-chris
-  - chen-nathan
-  - de-la-maza-michael
-  - dixon-jenna
-  - gandhi-prashant
-  - garlinger-scott
-  - thelot-justice
-  - li-zhan
-  - loureiro-murilo
-  - mathur-praful
-  - paul-choudhury-sumit
-  - peters-claire
-  - reid-chris
-  - sandberg-erik
-  - segan-shreeda
-  - smith-ben
-  - wimsatt-mike
+credits:
+  lead_editors:
+    - benny-sachin
+    - reeves-amanda
+  co-editors:
+    - dixon-jenna
+    - garlinger-scott
+    - mathur-praful
+    - segan-shreeda
+  writers:
+    - benny-sachin
+    - butler-chris
+    - chen-nathan
+    - garlinger-scott
+    - smith-ben
+  illustrations:
+    - thelot-justice
+  website_development:
+    - acks-nathan
+  additional_collaborators:
+    - appleton-maggie
+    - brinkerhoff-tracy
+    - de-la-maza-michael
+    - gandhi-prashant
+    - li-zhan
+    - loureiro-murilo
+    - paul-choudhury-sumit
+    - peters-claire
+    - reid-chris
+    - sandberg-erik
+    - wimsatt-mike
 ---
 
 {% include widget-project-header.html %}
 
 {% include widget-project-page-list.html %}
 
-## Credits
+## Additional Credits
 
-- **Lead Editors:** [Sachin Benny](/members/benny-sachin/), [Amanda Reeves](/members/reeves-amanda/)
-
-- **Co-Editors:** [Jenna Dixon](/members/dixon-jenna/), [Scott Garlinger](/members/garlinger-scott/), [Praful Mathur](/members/mathur-praful/), [Shreeda Segan](/members/segan-shreeda/)
-
-- **Writers:** [Sachin Benny](/members/benny-sachin/), [Chris Butler](/members/butler-chris/), [Nathan Chen](/members//), [Scott Garlinger](/members/garlinger-scott/), [Ben Smith](/members/smith-ben/)
-
-- **Illustrations:** [Justice](/members/thelot-justice/)
-
-- **Website Development:** [Nathan Acks](/members/acks-nathan/)
-
-- **Additional Collaborators:** [Maggie Appleton](/members/appleton-maggie/), [Tracy Brinkerhoff](/members/brinkerhoff-tracy/), [Michael de la Maza](/members/de-la-maza-michael/), [Prashant Gandhi](/members/gandhi-prashant/), [Zhan Li](/members/li-zhan/), [Murilo Loureiro](/members/loureiro-murilo/), [Sumit Paul-Choudhury](/members/paul-choudhury-sumit/), [Claire Peters](/members/peters-claire/), [Chris Reid](/members/reid-chris/), [Erik Sandberg](/members/sandberg-erik/), [Mike Wimsatt](/members/wimsatt-mike/)
-
-- **Additional Graphics:** [Hero Patterns](https://www.heropatterns.com/)
+SVG graphics provided by [Hero Patterns](https://www.heropatterns.com/).

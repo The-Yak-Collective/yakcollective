@@ -21,28 +21,29 @@ summary: |
   The Yak Collective's second report, _The New Old Home_, offers 22 perspectives built around Pamela Hobart's central thesis: as work returns to the home in the form of remote work opportunities (a trend now dramatically accelerated by pandemic circumstances), we can turn to historical modes of integrated living, reconsidered in light of newer technology, to guide our attempts at co-located life and work. 
 
   Many of our contributors are balancing the needs of our children, our parents and grandparents, our partners, and ourselves as we adapt to this _unprecedented_ situation. We offer our ideas freely in the hope that they might help us to design a better future for our homes and families.
-lead_editors:
-  - hobart-pamela
-  - schorno-drew
-collaborators:
-  - benny-sachin
-  - clark-chris
-  - colin-michael
-  - critchlow-tom
-  - garlinger-scott
-  - heimsath-benton
-  - hollands-thomas
-  - hume-ryan
-  - mcdougall-david
-  - peacock-jordan
-  - ramsamy-kannen
-  - rao-venkatesh
-  - reeves-amanda
-  - segan-shreeda
-  - shiel-drew
-  - shorin-toby
-  - taylor-benjamin
-  - verhagen-thomas
+credits:
+  lead_editors:
+    - hobart-pamela
+    - schorno-drew
+  collaborators:
+    - benny-sachin
+    - clark-chris
+    - colin-michael
+    - critchlow-tom
+    - garlinger-scott
+    - heimsath-benton
+    - hollands-thomas
+    - hume-ryan
+    - mcdougall-david
+    - peacock-jordan
+    - ramsamy-kannen
+    - rao-venkatesh
+    - reeves-amanda
+    - segan-shreeda
+    - shiel-drew
+    - shorin-toby
+    - taylor-benjamin
+    - verhagen-thomas
 ---
 
 {% include widget-project-header.html %}

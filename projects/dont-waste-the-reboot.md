@@ -21,30 +21,31 @@ summary: |
   The inaugural report by the Yak Collective, _Don't Waste the Reboot_ offers organizations a smorgasbord of 25 creative and unexpected provocations, ideas, and action frameworks to navigate the COVID-19 crisis.
   
   Authored by 21 diverse contributors from around the world -- most of whom are working together for the first time -- we believe this report will get you thinking about your reboot efforts in a bolder, more imaginative way. Let us know what you think!
-lead_editors:
-  - millerd-paul
-  - rao-venkatesh
-collaborators:
-  - allen-jordan
-  - balaile-martha
-  - baum-nita
-  - benny-sachin
-  - critchlow-tom
-  - debrou-vinay
-  - dobrenko-alex
-  - kong-darren
-  - le-cunff-anne-laure
-  - lubin-randy
-  - mcdougall-david
-  - mehakovic-vlad
-  - mosior-ben
-  - peacock-jordan
-  - pinto-rodrigo
-  - pottash-harry
-  - reeves-amanda
-  - tan-vaughn
-  - taylor-benjamin
-  - verhagen-thomas
+credits:
+  lead_editors:
+    - millerd-paul
+    - rao-venkatesh
+  collaborators:
+    - allen-jordan
+    - balaile-martha
+    - baum-nita
+    - benny-sachin
+    - critchlow-tom
+    - debrou-vinay
+    - dobrenko-alex
+    - kong-darren
+    - le-cunff-anne-laure
+    - lubin-randy
+    - mcdougall-david
+    - mehakovic-vlad
+    - mosior-ben
+    - peacock-jordan
+    - pinto-rodrigo
+    - pottash-harry
+    - reeves-amanda
+    - tan-vaughn
+    - taylor-benjamin
+    - verhagen-thomas
 ---
 
 {% include widget-project-header.html %}
