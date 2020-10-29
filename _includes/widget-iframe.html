@@ -1,0 +1,24 @@
+{% comment %}
+	A full-page `<iframe/>`, less website header and footer. If you use
+	this widget, it should be the *ONLY* thing on the page!
+
+	No text. No images. Nothing but this one widget. Use the `title`
+	property of the page YAML frontmatter to set the page title.
+
+	NOTE: This means that widget can *ONLY* be included in normal site
+	pages and project homepages right now. So this is *INCOMPATIBLE*
+	with the use of, say, project pages.
+
+	Why would you want such a thing as this? Well, Maier really thinks
+	we should have a tool like this. If you've made a fancy multimedia
+	project on another site, and want to embed it in the Yak Collective
+	website, then this is probably the widget for you. Otherwise, you're
+	probably further ahead just building a project homepage and any
+	associated project pages using Markdown + other, more well-behaved
+	widgets.
+
+	Expects a single parameter, `url`, which will determine what gets
+	embedded in the page `<iframe/>`.
+{% endcomment %}
+
+<div id="yak-iframe-widget"><iframe src="{{ include.url }}"></iframe></div>

@@ -35,6 +35,8 @@ a:hover {
 
 .fill-space {
 	flex: 1;
+	display: flex;
+	flex-direction: column;
 	z-index: -9;
 }
 
@@ -107,6 +109,21 @@ a.yak-logo .yak-logo-image {
 	background-color: rgba(0,0,0,0.85);
 	width: 2.5rem;
 	height: 2.5rem
+}
+
+#yak-iframe-widget {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	max-width: 100% !important;
+	height: calc(100% + 1rem); /* To cancel out the 1rem margin of the main <article/> */
+}
+
+#yak-iframe-widget iframe {
+	width: 100%;
+	height: 100%;
+	border: none;
 }
 
 .yak-content {

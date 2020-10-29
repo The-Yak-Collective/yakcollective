@@ -16,7 +16,7 @@
 		<div class="fill-space">
 			{% include nav.html %}
 			<div class="column-background-wrapper"><div class="column-background"></div></div>
-			<article id="{{ page.url | replace: '/', ' ' | strip | replace: ' ', '-' | default: 'index' }}" class="yak-content pb5 mb3 lh-copy">
+			<article id="{{ page.url | replace: '/', ' ' | strip | replace: ' ', '-' | default: 'index' }}" class="yak-content pb5 mb3 lh-copy flex-auto">
 				{{ content }}
 			</article>
 		</div>
