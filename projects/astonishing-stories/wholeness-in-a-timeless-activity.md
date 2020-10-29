@@ -1,6 +1,6 @@
 ---
 date: 2020-10-23 00:00:00
-hero_image: /assets/dynamic/astonishing-stories-wholeness-in-a-timeless-activity.jpg
+hero_image: /projects/astonishing-stories/wholeness-in-a-timeless-activity.jpg
 hero_attach_vertical: top
 hero_attach_horizontal: center
 author: chen-nathan
@@ -47,7 +47,7 @@ page_headers: |
       font-size: 1.1em
     }
     .fill-space {
-      background-image: url("/assets/dynamic/astonishing-stories-wholeness-in-a-timeless-activity-background-radius-50-medium.jpg");
+      background-image: url("/projects/astonishing-stories/wholeness-in-a-timeless-activity-bg.jpg");
       background-position: top center;
       background-size: cover;
     }

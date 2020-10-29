@@ -16,7 +16,7 @@
 <meta property="og:type" content="article" />
 <link rel="alternate" type="application/json" title="The Yak Collective's Latest Writings" href="/writings/feed.json">
 <link rel="alternate" type="application/rss+xml" title="The Yak Collective's Latest Writings" href="/writings/feed.xml">
-<link rel="icon" href="/assets/static/favicon.png" />
+<link rel="icon" href="/img/favicon.png" />
 
 {% comment %}
 	Set the page description. We do this in a single line to avoid any
@@ -52,13 +52,13 @@
 <meta property="og:title" content="{{ the_title }}" />
 <meta name="twitter:title" content="{{ the_title }}">
 
-<link rel="stylesheet" href="/assets/static/fonts.css">
-<link rel="stylesheet" href="/assets/static/font-awesome.min.css">
-<link rel="stylesheet" href="/assets/static/tachyons.min.css">
-<link rel="stylesheet" href="/assets/static/style.css">
-<link rel="stylesheet" href="/assets/static/style-40.css" media="(min-width: 40em)">
-<link rel="stylesheet" href="/assets/static/style-60.css" media="(min-width: 60em)">
-<link rel="stylesheet" href="/assets/static/style-80.css" media="(min-width: 80em)">
+<link rel="stylesheet" href="/css/fonts.css">
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+<link rel="stylesheet" href="/css/tachyons.min.css">
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/style-40.css" media="(min-width: 40em)">
+<link rel="stylesheet" href="/css/style-60.css" media="(min-width: 60em)">
+<link rel="stylesheet" href="/css/style-80.css" media="(min-width: 80em)">
 <style type="text/css">
 	{% comment %}
 		Include `page.css` file; currently used for per-project colors.
@@ -87,7 +87,7 @@
 	page image to that, regardless of what else is going on.
 {% endcomment %}
 {% assign page_author = "yak_collective" %}
-{% assign page_image = "/assets/static/yak-og.png" %}
+{% assign page_image = "/img/yak-og.png" %}
 {% if page.author %}
 	{% assign author_url = "/members/" | append: page.author | append: "/" %}
 	{% assign member = site.pages | find: "url", author_url %}

@@ -4,7 +4,7 @@ date: 2020-04-30 00:00:00
 tagline: Making the next normal better than the last one
 type: Report
 sequence: covid-19
-hero_image: /assets/dynamic/dont-waste-the-reboot-hero.svg
+hero_image: /projects/dont-waste-the-reboot/dont-waste-the-reboot.svg
 accent_color: "200,100,200"
 page_headers: |
   <style type="text/css">

@@ -4,7 +4,7 @@ date: 2020-06-10 00:00:00
 tagline: Rediscovering the home as a production frontier
 type: Report
 sequence: covid-19
-hero_image: /assets/dynamic/the-new-old-home-hero.jpg
+hero_image: /projects/the-new-old-home/the-new-old-home.jpg
 accent_color: "225,125,75"
 page_headers: |
   <style type="text/css">

@@ -4,7 +4,7 @@ date: 2020-04-30 00:00:00
 indie_status: 2+ years
 twitter: vinaydebrou
 previously: Data Analyst at a Fintech SaaS company
-avatar: /assets/dynamic/debrou-vinay.jpg
+avatar: /members/debrou-vinay.jpg
 links:
   - title: Consultant, Data & Brand Strategy
     url: https://vinaydebrou.com/

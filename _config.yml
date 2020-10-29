@@ -68,9 +68,9 @@ kramdown:
 include:
   - _redirects
 exclude:
-  - assets/static/fonts-src.css
-  - assets/static/member-placeholder.jpg
-  - assets/static/mkfonts.sh
+  - bin
+  - css/fonts.source.css
   - functions
   - package.json
   - README.md
+  - resources

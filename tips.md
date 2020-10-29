@@ -32,4 +32,4 @@ title: Yak Collective Consulting Tip
 
 <span id="yak-collective-consulting-tip">{{ the_words }}</span> &mdash; [{{ the_author.title }}]({{ the_author.url }}){: #yak-collective-consulting-tip-author}
 
-<script defer src="/assets/static/tips.js"></script>
+<script defer src="/js/tips.js"></script>

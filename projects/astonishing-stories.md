@@ -5,7 +5,7 @@ tagline: Weird is part of the job
 roam_page: https://roamresearch.com/#/app/Astonishing_Stories/page/5x1kRx_Fx
 type: Zine
 sequence: covid-19
-hero_image: /assets/dynamic/astonishing-stories-hero.svg
+hero_image: /projects/astonishing-stories/astonishing-stories.svg
 accent_color: "150,50,50"
 page_headers: |
   <style type="text/css">

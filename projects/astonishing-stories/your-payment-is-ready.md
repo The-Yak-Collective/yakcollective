@@ -1,6 +1,6 @@
 ---
 date: 2020-10-30 00:00:00
-hero_image: /assets/dynamic/astonishing-stories-your-payment-is-ready.jpg
+hero_image: /projects/astonishing-stories/your-payment-is-ready.jpg
 hero_attach_vertical: center
 hero_attach_horizontal: center
 author: smith-ben
@@ -47,7 +47,7 @@ page_headers: |
       font-size: 0.9em
     }
     .fill-space {
-      background-image: url("/assets/dynamic/astonishing-stories-your-payment-is-ready-background-radius-50-medium.jpg");
+      background-image: url("/projects/astonishing-stories/your-payment-is-ready-bg.jpg");
       background-position: top center;
       background-size: cover;
     }

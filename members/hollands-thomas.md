@@ -5,7 +5,7 @@ tagline: Writing and Strategy
 previously: Barclays & UCL
 currently: L.E.K. Consulting
 twitter: tdoggyholhol
-avatar: /assets/dynamic/hollands-thomas.jpg
+avatar: /members/hollands-thomas.jpg
 links:
   - title: blog
     url: https://www.xsrus.com/

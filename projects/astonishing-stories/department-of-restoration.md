@@ -1,6 +1,6 @@
 ---
 date: 2020-11-06 00:00:00
-hero_image: /assets/dynamic/astonishing-stories-department-of-restoration.jpg
+hero_image: /projects/astonishing-stories/department-of-restoration.jpg
 hero_attach_vertical: center
 hero_attach_horizontal: center
 author: garlinger-scott
@@ -47,7 +47,7 @@ page_headers: |
       font-size: 1.4em
     }
     .fill-space {
-      background-image: url("/assets/dynamic/astonishing-stories-department-of-restoration-background-radius-50-medium.jpg");
+      background-image: url("/projects/astonishing-stories/department-of-restoration-bg.jpg");
       background-position: top center;
       background-size: cover;
     }

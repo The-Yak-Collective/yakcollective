@@ -1,6 +1,6 @@
 ---
 date: 2020-11-20 00:00:00
-hero_image: /assets/dynamic/astonishing-stories-mechanical-turks-all-the-way-down.jpg
+hero_image: /projects/astonishing-stories/mechanical-turks-all-the-way-down.jpg
 hero_attach_vertical: center
 hero_attach_horizontal: center
 author: butler-chris
@@ -48,7 +48,7 @@ page_headers: |
       font-size: 1.1em
     }
     .fill-space {
-      background-image: url("/assets/dynamic/astonishing-stories-mechanical-turks-all-the-way-down-background-radius-50-medium.jpg");
+      background-image: url("/projects/astonishing-stories/mechanical-turks-all-the-way-down-bg.jpg");
       background-position: top center;
       background-size: cover;
     }

@@ -14,7 +14,7 @@ layout: none
   "description": "{{ site.description | jsonify }}",
   "home_page_url": "{{ site.url }}",
   "feed_url": "{{ site.url }}/writings/feed.json",
-  "favicon": "{{ site.url}}/assets/static/yak-logo.png",
+  "favicon": "{{ site.url}}/img/favicon.png",
   {% if site.author %}
     "author": {
       "name": {{ site.author | jsonify }}
