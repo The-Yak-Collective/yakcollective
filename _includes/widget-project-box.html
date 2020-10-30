@@ -16,27 +16,31 @@
 <div id="{{ include.project.url | replace: '/', ' ' | strip | split: ' ' | last }}-box" class="mv4">
 	<a href="{{ include.project.url }}" class="project-box ba relative">
 		<div class="w-50">
-			<div class="smaller lh-title fw9 mv0 pt1 bt bw1 ph2 sans-serif ttu silent-link">{{ include.project.type }}</div>
-			<h2 class="ph2 fw8 f3 lh-solid pt4 pb1 mb1 mt4 pseudo-link">{{ include.project.title }}</h2>
-			<p class="ph2 small lh-solid pv1 mt0 mb4 fw6 subhead pseudo-link">{{ include.project.tagline }}</p>
+			{% if include.project.type %}<div class="smaller lh-title fw9 mv0 pt1 bt bw1 ph2 sans-serif ttu silent-link">{{ include.project.type }}</div>{% endif %}
+			{% if include.project.title %}<h2 class="ph2 fw8 f3 lh-solid pt4 pb1 mb1 mt4 pseudo-link">{{ include.project.title }}</h2>{% endif %}
+			{% if include.project.tagline %}<p class="ph2 small lh-solid pv1 mt0 mb4 fw6 subhead pseudo-link">{{ include.project.tagline }}</p>{% endif %}
 
 			{% comment %}
 				Display list of lead editors.
 			{% endcomment %}
-			<p class="smaller ph2 mv2 silent-link">
-				<span class="ttu">Lead editors:</span>
-				{% include member-list.html member_list=include.project.lead_editors link_members=false %}
-			</p>
+			{% if include.project.credits.lead_editors %}
+				<p class="smaller ph2 mv2 silent-link">
+					<span class="ttu">Lead editors:</span>
+					{% include member-list.html member_list=include.project.credits.lead_editors link_members=false %}
+				</p>
+			{% endif %}
 
 			{% comment %}
 				Project date and sequence count (if applicable).
 			{% endcomment %}
-			<time class="smaller ph2 mt3 mb2 ttu tracked-tight">
-				Published: {{ include.project.date | date_to_long_string: "ordinal", "US" }} UTC
-				{% if include.project.sequence %}
-					/ {% include sequence.html current_date=include.project.date sequence_id=include.project.sequence %}
-				{% endif %}
-			</time>
+			{% if include.project.date %}
+				<time class="smaller ph2 mt3 mb2 ttu tracked-tight">
+					Published: {{ include.project.date | date_to_long_string: "ordinal", "US" }} UTC
+					{% if include.project.sequence %}
+						/ {% include sequence.txt current_date=include.project.date sequence_id=include.project.sequence %}
+					{% endif %}
+				</time>
+			{% endif %}
 
 		</div>
 		<div class="w-50 h-100 absolute top-0 right-0 bl hero"></div>

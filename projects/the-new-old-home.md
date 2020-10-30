@@ -45,7 +45,6 @@ credits:
     - taylor-benjamin
     - verhagen-thomas
 ---
-
 {% include widget-project-header.html %}
 
 {% include widget-google-slides.html gid="1Bgs4e6YIEydMot0VM4lf-onZM2z6Zei3n87f3JHCeSk" %}

@@ -1,7 +1,6 @@
 ---
 title: Yak Collective Members
 ---
-
 # Members
 
 Yak Collective members have contributed to one or more projects.

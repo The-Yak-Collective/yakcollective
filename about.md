@@ -1,9 +1,8 @@
 ---
 ---
-
 # About the Yak Collective
 
-{% include widget-toc.html %}
+{% include widget-toc.md %}
 
 ## Our Origin Story
 

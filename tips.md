@@ -1,7 +1,6 @@
 ---
 title: Yak Collective Consulting Tip
 ---
-
 {% comment %}
     "Tips" easter egg page. Pull a random tip, look up its author, and
     display both.

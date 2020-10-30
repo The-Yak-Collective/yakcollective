@@ -1,6 +1,5 @@
 ---
 ---
-
 # Welcome to the Yak Collective
 
 Thank you, and welcome to the Yak Collective. You can use this invite link to join our Discord server.

@@ -1,0 +1,77 @@
+{% comment %}
+  JSON feed for member blog posts ("writings"). See:
+  
+    https://jsonfeed.org/
+{% endcomment %}
+
+{% comment %}
+  Filter by current category and earliest project date.
+
+  Note that for some reason `site.categories[path_array[0]]` returns the
+  empty set, but assigning `path_array[0]` to a variable first
+  (`the_category`) works. ¯\_(ツ)_/¯
+{% endcomment %}
+{% assign path_array = page.url | replace: "/", " " | strip | split: " " %}
+{% assign the_category = path_array[0] %}
+{% if site.categories[the_category] %}
+  {% assign filtered_pages = site.categories[the_category] %}
+  {% assign the_subtitle = the_category | capitalize %}
+{% else %}
+  {% assign project_id = path_array[1] %}
+  {% assign project_url = "/projects/" | append: project_id | append: "/" %}
+  {% assign the_project = site.pages | find: "url", project_url %}
+  {% assign the_subtitle = the_project.title %}
+  {% assign filtered_pages = "" | split: "" %}
+  {% for the_page in site.pages %}
+    {% if the_page.layout == "page-project-page" %}
+      {% assign path_array = the_page.url | replace: "/", " " | strip | split: " " %}
+      {% if path_array[1] == project_id %}
+        {% if the_page.date <= site.time or site.future == true %}
+          {% unless the_page.hidden %}
+            {% assign filtered_pages = filtered_pages | push: the_page %}
+          {% endunless %}
+        {% endif %}
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+{% assign yak_start = site.time %}
+{% for page in site.pages %}
+  {% if page.date and page.layout == "page-project" %}
+    {% if page.date < yak_start %}
+      {% assign yak_start = page.date %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+{% assign filtered_pages = filtered_pages | where_exp: "the_page", "the_page.date >= yak_start"
+                                          | sort: "url"
+                                          | reverse
+                                          | sort: "date"
+                                          | reverse %}
+
+{
+  "version": "https://jsonfeed.org/version/1",
+  "title": {{ site.name | append: " - " | append: the_subtitle | jsonify }},
+  "description": {{ site.description | jsonify }},
+  "home_page_url": "{{ site.url }}",
+  "feed_url": "{{ site.url }}/{{ page.path }}",
+  "favicon": "{{ site.url}}/img/favicon.png",
+
+  {% comment %}
+    We do the "Daring Fireball" thing here and link to the original
+    (external) post whenever possible, so as to drive traffic to member
+    websites.
+  {% endcomment %}
+  "items": [
+    {% for the_page in filtered_pages %}
+      {% capture the_page_url %}{% if the_page.original_link %}{{ the_page.original_link }}{% else %}{{ site.url }}{{ the_page.url }}{% endif %}{% endcapture %}
+      {
+        "id": {{ the_page_url | jsonify }},
+        "url": {{ the_page_url | jsonify }},
+        "title": {{ the_page.title | jsonify }},
+        "content_html": {{ the_page.content | markdownify | strip | jsonify  }},
+        "date_published": "{{ the_page.date | date_to_rfc822 }}"
+      }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ]
+}

@@ -121,7 +121,6 @@ credits:
     - sandberg-erik
     - wimsatt-mike
 ---
-
 {% include widget-project-header.html %}
 
 {% include widget-project-page-list.html %}

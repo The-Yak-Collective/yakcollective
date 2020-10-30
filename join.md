@@ -1,6 +1,5 @@
 ---
 ---
-
 # Join the Yak Collective
 
 The Yak Collective is an online community/network for independent consultants, contractors, and gig economy types. We are focused on working together in larger teams, to produce collaborative work, both internally initiated, and for clients. As our main work platform, we use [Discord](https://discord.com/), a tool built around voice and text chat channels and originally meant for gamers, to do much of our work. Most of our working processes and chats are open to the public.

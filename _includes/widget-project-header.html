@@ -36,7 +36,7 @@
 					<time class="smaller db ttu mb3 tracked-tight">
 						{{ project.date | date_to_long_string: "ordinal", "US" }} UTC
 						{% if project.sequence %}
-							<br>{% include sequence.html current_date=project.date sequence_id=project.sequence %}
+							<br>{% include sequence.txt current_date=project.date sequence_id=project.sequence %}
 						{% endif %}
 					</time>
 				{% endif %}
