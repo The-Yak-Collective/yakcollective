@@ -98,4 +98,4 @@ Judd’s father’s eyes brightened in surprise. “Really?”
 
 “Judd, that’s wonderful.” His skepticism took a sudden backseat to the prospect of reduced tuition. Maybe Judd _wasn’t_ just fooling around out here.
 
-“I know! They said they’d send a check. All we have to do is deposit it in the bank, then wire half of it to a numbered account which they’ll provide separately. That will cover tuition and I can keep the other half for living expenses.”
+“I know! They said they’d send a cheque. All we have to do is deposit it in the bank, then wire half of it to a numbered account which they’ll provide separately. That will cover tuition and I can keep the other half for living expenses.”
