@@ -27,13 +27,29 @@ layout: default
 	on or (2) was a collaborator on.
 {% endcomment %}
 {% assign projects = site.pages | where: "layout", "page-project"
-                                | where_exp: "project", "project.date < site.time or site.future == true" %}
-{% assign projects_lead = projects | where_exp: "project", "project.lead_editors contains member_id"
-                                   | sort: "date"
-                                   | reverse %}
-{% assign projects_collaborated = projects | where_exp: "project", "project.collaborators contains member_id"
-                                           | sort: "date"
-                                           | reverse %}
+								| where_exp: "project", "project.date < site.time or site.future == true" %}
+{% assign projects_lead = "" | split: "" %}
+{% assign projects_collaborated = "" | split: "" %}
+{% for project in projects %}
+	{% if project.credits %}
+		{% if project.credits.lead_editors %}
+			{% if project.credits.lead_editors contains member_id %}
+				{% assign projects_lead = projects_lead | push: project %}
+			{% endif %}
+		{% endif %}
+		{% for credits_block in project.credits %}
+			{% if credits_block[1].size > 0 and credits_block[0] != "lead_editors" %}
+				{% if credits_block[1] contains member_id %}
+					{% unless projects_collaborated contains member_id %}
+						{% assign projects_collaborated = projects_collaborated | push: project %}
+					{% endunless %}
+				{% endif %}
+			{% endif %}
+		{% endfor %}
+	{% endif %}
+{% endfor %}
+{% assign projects_lead = projects_lead | sort: "date" | reverse %}
+{% assign projects_collaborated = projects_collaborated | sort: "date" | reverse %}
 
 {% comment %}
 	Output the `projects_lead` and `projects_collaborated` arrays.
