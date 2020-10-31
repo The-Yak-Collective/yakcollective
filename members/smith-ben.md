@@ -4,7 +4,7 @@ date: 2020-10-23 00:00:00
 tagline: Qualitative researcher
 current: RAND Corporation
 previously: US Navy
-avatar: /members/smith-ben.png
+avatar: /members/smith-ben.jpg
 links:
   - title: Substack
     url: http://bens.substack.com/
