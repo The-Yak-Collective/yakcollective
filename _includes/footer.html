@@ -9,6 +9,55 @@
 	{% endcomment %}
 	{% assign random_slogan = site.data.slogans | sample: 1 %}
 	<small class="db tc mt3"><a href="/tips/" id="footer-slogan">{{ random_slogan }}</a></small>
+
+	{% comment %}
+		If an RSS feed exists at `/the/current/path/feed.xml` or any
+		parent path (`/the/current/feed.xml`, `/the/feed.xml`), link it.
+		We don't link multiple feeds, just the first one we find.
+	{% endcomment %}
+	{% assign path_array = page.url | replace: "/", " " | strip | split: " " %}
+	{% assign path_max_index = path_array.size | minus: 1 %}
+	{% for path_index in (0..path_max_index) %}
+		{% assign new_path = "/" %}
+		{% assign new_path_max_index = path_max_index | minus: path_index %}
+		{% for new_path_index in (0..new_path_max_index) %}
+			{% assign new_path = new_path | append: path_array[new_path_index] | append: "/" %}
+		{% endfor %}
+		{% assign rss_path = new_path | append: "feed.xml" %}
+		{% assign rss_page = site.pages | find: "url", rss_path %}
+		{% if rss_page %}
+			{% assign rss_title = page.title %}
+			{% assign the_page = site.pages | find: "url", new_path %}
+			{% if the_page %}
+				{% assign rss_title = the_page.title %}
+			{% endif %}
+			{% assign rss_title = "RSS feed for " | append: rss_title %}
+			{% break %}
+		{% endif %}
+	{% endfor %}
+
+	{% comment %}
+		Catch any site-wide RSS feed.
+	{% endcomment %}
+	{% unless rss_title %}
+		{% assign rss_path = "/feed.xml" %}
+		{% assign rss_page = site.pages | find: "url", rss_path %}
+		{% if rss_page %}
+			{% assign rss_title = "RSS feed for " | append: site.name %}
+		{% endif %}
+	{% endunless %}
+
+	{% comment %}
+		Output an RSS feed link, if applicable.
+
+		We test on `rss_title` because this is only set if `rss_path`
+		exists in `site.pages`, whereas `rss_path` itself may be left
+		over from an earlier (failed) test.
+	{% endcomment %}
+	{% if rss_title %}
+		<a class="link dib f4 ma3" href="{{ rss_path }}" title="{{ rss_title }}"><i class="fas fa-rss-square"></i></a>
+	{% endif %}
+
 	<a class="link dib f4 ma3" href="https://www.facebook.com/theyakcollective/" title="Facebook"><i class="fab fa-facebook-square"></i></a>
 	<a class="link dib f4 ma3" href="https://www.linkedin.com/company/yak-collective/" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
 	<a class="link dib f4 ma3" href="https://twitter.com/yak_collective" title="Twitter"><i class="fab fa-twitter-square"></i></a>

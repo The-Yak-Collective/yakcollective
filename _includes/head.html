@@ -14,9 +14,75 @@
 <meta name="twitter:site" content="@yak_collective">
 <meta name="viewport" content="width=device-width">
 <meta property="og:type" content="article" />
-<link rel="alternate" type="application/json" title="The Yak Collective's Latest Writings" href="/writings/feed.json">
-<link rel="alternate" type="application/rss+xml" title="The Yak Collective's Latest Writings" href="/writings/feed.xml">
 <link rel="icon" href="/img/favicon.png" />
+
+{% comment %}
+	If an RSS feed exists at `/the/current/path/feed.xml` or any
+	parent path (`/the/current/feed.xml`, `/the/feed.xml`), link it.
+	We don't link multiple feeds, just the first one we find.
+
+	(We also interleave tests for the JSON feed page, though these
+	two pages *should* always be included together...)
+{% endcomment %}
+{% assign path_array = page.url | replace: "/", " " | strip | split: " " %}
+{% assign path_max_index = path_array.size | minus: 1 %}
+{% for path_index in (0..path_max_index) %}
+	{% assign new_path = "/" %}
+	{% assign new_path_max_index = path_max_index | minus: path_index %}
+	{% for new_path_index in (0..new_path_max_index) %}
+		{% assign new_path = new_path | append: path_array[new_path_index] | append: "/" %}
+	{% endfor %}
+	{% assign json_path = new_path | append: "feed.json" %}
+	{% assign json_page = site.pages | find: "url", json_path %}
+	{% assign rss_path = new_path | append: "feed.xml" %}
+	{% assign rss_page = site.pages | find: "url", rss_path %}
+	{% if rss_page or json_page %}
+		{% assign the_title = page.title %}
+		{% assign the_page = site.pages | find: "url", new_path %}
+		{% if the_page %}
+			{% assign the_title = the_page.title %}
+		{% endif %}
+		{% if json_page %}
+			{% assign json_title = "JSON feed for " | append: the_title %}
+		{% endif %}
+		{% if rss_page %}
+			{% assign rss_title = "RSS feed for " | append: the_title %}
+		{% endif %}
+		{% break %}
+	{% endif %}
+{% endfor %}
+
+{% comment %}
+	Catch any site-wide RSS/JSON feed.
+{% endcomment %}
+{% unless json_title %}
+	{% assign json_path = "/feed.xml" %}
+	{% assign json_page = site.pages | find: "url", json_path %}
+	{% if rss_page %}
+		{% assign json_title = "JSON feed for " | append: site.name %}
+	{% endif %}
+{% endunless %}
+{% unless rss_title %}
+	{% assign rss_path = "/feed.xml" %}
+	{% assign rss_page = site.pages | find: "url", rss_path %}
+	{% if rss_page %}
+		{% assign rss_title = "RSS feed for " | append: site.name %}
+	{% endif %}
+{% endunless %}
+
+{% comment %}
+	Output an RSS/JSON feed links, if applicable.
+
+	We test on `rss_title` and `json_title` because this is only set if
+	the corresponding path exists in `site.pages`, whereas the path
+	itself may be left over from an earlier (failed) test.
+{% endcomment %}
+{% if json_title %}
+	<link rel="alternate" type="application/json" title="{{ json_title }}" href="{{ json_path }}">
+{% endif %}
+{% if rss_title %}
+	<link rel="alternate" type="application/rss+xml" title="{{ rss_title }}" href="{{ rss_path }}">
+{% endif %}
 
 {% comment %}
 	Set the page description. We do this in a single line to avoid any
