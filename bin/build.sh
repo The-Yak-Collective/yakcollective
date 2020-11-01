@@ -42,5 +42,11 @@ fi
 #
 #     https://www.netlify.com/blog/2016/10/18/how-our-build-bots-build-sites/
 #
+# Note that sometimes `minify` will fail on a file, but when it does it
+# simply leaves it untouched. We therefore return "true" at the end of
+# the process in order to prevent Netlify from seeing this as a bad
+# build.
+#
 chmod +x bin/minify
 ./bin/minify --recursive --output _site _site
+true
