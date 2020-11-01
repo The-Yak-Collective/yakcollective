@@ -47,6 +47,10 @@ fi
 # the process in order to prevent Netlify from seeing this as a bad
 # build.
 #
+# WARNING! Running `minify` AND Netlify's built-in optimization tends to
+# result in invalid HTML/CSS/JS output! Netlify optimization should
+# therefore be turned off when "hand optimization" like this is used.
+#
 chmod +x bin/minify
 ./bin/minify --recursive --output _site _site
 true
