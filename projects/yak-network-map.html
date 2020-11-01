@@ -1,0 +1,109 @@
+---
+title: Yak Network Map
+date: 2020-11-20 00:00:00
+tagline: An experiment in unexpected connections
+upstream_repo: https://github.com/dataingestor/yakmap1
+roam_page: https://roamresearch.com/#/app/ArtOfGig/page/oCpN4ZqD_
+type: Visualization
+sequence: covid-19
+hero_image: /projects/yak-network-map/yak-network-map.svg
+accent_color: "75,150,75"
+page_headers: |
+  <!--[if IE]><script type="text/javascript" src="/projects/yak-network-map/js/excanvas.js"></script><![endif]-->
+  <script src="/projects/yak-network-map/js/jquery/jquery.min.js"></script>
+  <script src="/projects/yak-network-map/js/sigma/sigma.min.js"></script>
+  <script src="/projects/yak-network-map/js/sigma/sigma.parseJson.js"></script>
+  <script src="/projects/yak-network-map/js/fancybox/jquery.fancybox.pack.js"></script>
+  <script src="/projects/yak-network-map/js/main.js"></script>
+  <link rel="stylesheet" href="/projects/yak-network-map/js/fancybox/jquery.fancybox.css" />
+  <link rel="stylesheet" href="/projects/yak-network-map/css/style.css" />
+  <style type="text/css">
+    #yak-network-map-container {
+      margin: 0;
+    }
+    .sigma-expand { /* Why do I need to use .sigma-expand? here instead of #yak-network-map-container?*/
+      height: calc(100% + 1rem); /* To cancel out the 1rem margin of the main <article/> */
+    }
+  </style>
+summary: |
+  The _Yak Network Map_ is an internal experiment for active yaks who share common domain-interest(s). Learn more about this project in the [#yak-network-map](https://discord.com/channels/692111190851059762/722840198320357496) channel on the [Yak Collective Discord server](/join/).
+credits:
+  lead_editors:
+    - debrou-vinay
+---
+<div id="yak-network-map-container">
+  <div class="sigma-parent"><div class="sigma-expand" id="sigma-canvas"></div></div>
+  <div id="mainpanel">
+    <div class="col">
+      <div id="title"></div>
+      <div id="titletext"></div>
+      <div class="info cf">
+        <dl>
+          <dt class="moreinformation"></dt>
+          <dd class="line"><a href="#information" class="line fb">More about this visualisation</a></dd>
+        </dl>
+      </div>
+      <div id="legend">
+        <div class="box">
+          <h2>Legend:</h2>
+          <dl>
+            <dt class="node"></dt>
+            <dd></dd>
+            <dt class="edge"></dt>
+            <dd></dd>
+            <dt class="colours"></dt>
+            <dd></dd>    
+          </dl>
+        </div>
+      </div> 
+      <div class="b1">
+        <form>
+          <div id="search" class="cf">
+            <h2>Search:</h2>
+            <input type="text" name="search" value="Search by name" class="empty"/>
+            <div class="state"></div>
+            <div class="results"></div>
+          </div>
+          <div class="cf" id="attributeselect">
+            <h2>Group Selector:</h2>
+            <div class="select">Select Group</div>
+            <div class="list cf"></div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div id="information"></div>
+  </div>
+  <div id="zoom">
+    <div class="z" rel="in"></div>
+    <div class="z" rel="out"></div>
+    <div class="z" rel="center"></div>
+  </div>
+  <div id="copyright">
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="/projects/yak-network-map/images/CC.png" /></a></div>
+  </div>
+  <div id="attributepane">
+    <div class="text">
+      <div title="Close" class="left-close returntext">
+        <div class="c cf">
+          <span>Return to the full network</span>
+        </div>
+      </div>  
+      <div class="headertext">
+        <span>Information Pane</span>
+      </div>  
+      <div class="nodeattributes">
+        <div class="name"></div>
+        <div class="data"></div>
+        <div class="p">Connections:</div>
+        <div class="link">
+          <ul></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="developercontainer">
+    <a href="http://www.oii.ox.ac.uk" title="Oxford Internet Institute"><div id="oii"><span>OII</span></div></a>
+    <a href="http://jisc.ac.uk" title="JISC"><div id="jisc"><span>JISC</span></div></a>
+  </div>
+</div>
