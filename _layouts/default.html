@@ -8,18 +8,365 @@
 
 <html lang="en" class="h-100">
 	<head>
-		{% include head.html %}
-		{% include analytics.html %}
+		{% comment %}
+			Tom Critchlow memorial graffiti.
+		{% endcomment %}
+		<!-- 
+			Site build commissioned by Yak Collective member #12
+			YakCoin transaction ID: 0x18ehd76h
+		-->
+
+		{% comment %}
+			Static site header data.
+		{% endcomment %}
+		<meta charset="utf-8">
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:site" content="@yak_collective">
+		<meta name="viewport" content="width=device-width">
+		<meta property="og:type" content="article" />
+		<link rel="icon" href="/img/favicon.png" />
+
+		{% comment %}
+			If an RSS feed exists at `/the/current/path/feed.xml` or any
+			parent path (`/the/current/feed.xml`, `/the/feed.xml`), link
+			it. We don't link multiple feeds, just the first one we
+			find.
+
+			(We also interleave tests for the JSON feed page, though
+			these two pages *should* always be included together...)
+		{% endcomment %}
+		{% assign path_array = page.url | replace: "/", " " | strip | split: " " %}
+		{% assign path_max_index = path_array.size | minus: 1 %}
+		{% for path_index in (0..path_max_index) %}
+			{% assign new_path = "/" %}
+			{% assign new_path_max_index = path_max_index | minus: path_index %}
+			{% for new_path_index in (0..new_path_max_index) %}
+				{% assign new_path = new_path | append: path_array[new_path_index] | append: "/" %}
+			{% endfor %}
+			{% assign json_path = new_path | append: "feed.json" %}
+			{% assign json_page = site.pages | find: "url", json_path %}
+			{% assign rss_path = new_path | append: "feed.xml" %}
+			{% assign rss_page = site.pages | find: "url", rss_path %}
+			{% if rss_page or json_page %}
+				{% assign the_title = page.title %}
+				{% assign the_page = site.pages | find: "url", new_path %}
+				{% if the_page %}
+					{% assign the_title = the_page.title %}
+				{% endif %}
+				{% if json_page %}
+					{% assign json_title = "JSON feed for " | append: the_title %}
+				{% endif %}
+				{% if rss_page %}
+					{% assign rss_title = "RSS feed for " | append: the_title %}
+				{% endif %}
+				{% break %}
+			{% endif %}
+		{% endfor %}
+
+		{% comment %}
+			Catch any site-wide RSS/JSON feed.
+		{% endcomment %}
+		{% unless json_title %}
+			{% assign json_path = "/feed.xml" %}
+			{% assign json_page = site.pages | find: "url", json_path %}
+			{% if rss_page %}
+				{% assign json_title = "JSON feed for " | append: site.name %}
+			{% endif %}
+		{% endunless %}
+		{% unless rss_title %}
+			{% assign rss_path = "/feed.xml" %}
+			{% assign rss_page = site.pages | find: "url", rss_path %}
+			{% if rss_page %}
+				{% assign rss_title = "RSS feed for " | append: site.name %}
+			{% endif %}
+		{% endunless %}
+
+		{% comment %}
+			Output an RSS/JSON feed links, if applicable.
+
+			We test on `rss_title` and `json_title` because this is only
+			set if the corresponding path exists in `site.pages`,
+			whereas the path itself may be left over from an earlier
+			(failed) test.
+		{% endcomment %}
+		{% if json_title %}
+			<link rel="alternate" type="application/json" title="{{ json_title }}" href="{{ json_path }}">
+		{% endif %}
+		{% if rss_title %}
+			<link rel="alternate" type="application/rss+xml" title="{{ rss_title }}" href="{{ rss_path }}">
+		{% endif %}
+
+		{% comment %}
+			Set the page description. We do this in a single line to
+			avoid any weird whitespace in the tag. Pseudocode:
+
+			If page.description exists, then
+				Use page.description
+			Else page.summary exsits, then
+				Grab the first 20 words of page.summary and strip any
+				Markdown and HTML characters
+			Else if page.content is non-empty, then
+				Grab the first 20 words of page.content and strip any
+				Markdown and HTML characters
+			Else if page.subtitle exists, then
+				Use page.subtitle
+			Else if page.tagline exists, then
+				Use page.tagline
+			Else if site.description exists, then
+				Grab the first 20 words of site.description and strip
+				any Markdown and HTML characters
+			Else
+				Just use site.name
+
+			The final "else" is just belt-and-suspenders material, and
+			should never be reached during a (non-broken) build.
+		{% endcomment %}
+		{% capture the_description %}{% if page.description %}{{ page.description | markdownify | strip_html | strip }}{% elsif page.summary %}{{ page.summary | truncatewords: 20 | markdownify | strip_html | strip }}{% elsif page.content.length > 0 %}{{ page.content | truncatewords: 20 | strip_html | strip }}{% elsif page.subtitle %}{{ page.subtitle }}{% elsif page.tagline %}{{ page.tagline }}{% elsif site.description %}{{ site.description | truncatewords: 20 | strip }}{% else %}{{ site.name }}{% endif %}{% endcapture %}
+		<meta name="description" content="{{ the_description }}">
+		<meta name="twitter:description" content="{{ the_description }}">
+
+		{% comment %}
+			Use page.title, or else site.name, for the page title.
+		{% endcomment %}
+		{% capture the_title %}{% if page.title %}{{ page.title }}{% else %}{{ site.name }}{% endif %}{% endcapture %}
+		<title>{{ the_title }}</title>
+		<meta property="og:title" content="{{ the_title }}" />
+		<meta name="twitter:title" content="{{ the_title }}">
+
+		<link rel="stylesheet" href="/css/fonts.css">
+		<link rel="stylesheet" href="/css/font-awesome.min.css">
+		<link rel="stylesheet" href="/css/tachyons.min.css">
+		<link rel="stylesheet" href="/css/style.css">
+		<link rel="stylesheet" href="/css/style-40.css" media="(min-width: 40em)">
+		<link rel="stylesheet" href="/css/style-60.css" media="(min-width: 60em)">
+		<link rel="stylesheet" href="/css/style-80.css" media="(min-width: 80em)">
+		<style type="text/css">
+			{% comment %}
+				Accent colors can vary by page. This page-specific CSS
+				block controls this, as well as other per-page elements.
+			{% endcomment %}
+			{% if page.accent_color %}
+				{% assign accent_color = page.accent_color %}
+			{% elsif page.layout == "page-project-page" %}
+				{% assign path_array = page.url | replace: "/", " " | strip | split: " " %}
+				{% assign project_url = "/projects/" | append: path_array[1] | append: "/" %}
+				{% assign project = site.pages | find: "url", project_url %}
+				{% assign accent_color = project.accent_color %}
+			{% else %}
+				{% assign accent_color = site.accent_color %}
+			{% endif %}
+
+			a:hover,
+			.required {
+				color: rgba({{ accent_color }},1.00);
+			}
+
+			footer a:hover {
+				color: rgba({{ accent_color }},0.75);
+			}
+
+			a.yak-logo:hover .yak-logo-image {
+				background-color: rgba({{ accent_color }},1.00);
+			}
+
+			.yak-content a {
+				text-decoration-color: rgba({{ accent_color }},0.60);
+			}
+
+			.yak-content a:hover {
+				color: rgba({{ accent_color }},1.00);
+				text-decoration-color: rgba({{ accent_color }},1.00);
+			}
+
+			a.member-box:hover {
+				color: rgba({{ accent_color }},1.00);
+			}
+
+			.pseudo-link {
+				text-decoration-color: rgba({{ accent_color }},0.60);
+			}
+
+			{% comment %}
+				Generate project-specific styles.
+			{% endcomment %}
+			{% assign projects = site.pages | where: "layout", "page-project" %}
+			{% for project in projects %}
+				{% assign project_id = project.url | replace: "/", " " | strip | split: " " | last %}
+				{% if project.accent_color %}
+					{% assign accent_color = project.accent_color %}
+				{% else %}
+					{% assign accent_color = site.accent_color %}
+				{% endif %}
+				{% if project.hero_image %}
+					#{{ project_id }}-hero .hero {
+						content : "";
+						display: block;
+						position: absolute;
+						top: 0;
+						left: 0;
+						background-image: url("{{ project.hero_image }}");
+						background-size: cover;
+						width: 100%;
+						height: 100%;
+						opacity: 0.5;
+					}
+				{% else %}
+					#{{ project_id }}-hero .hero {
+						background-color: rgba({{ accent_color }},0.10);
+					}
+				{% endif %}
+				#{{ project_id }}-box a:hover {
+					color: rgba({{ accent_color }},1.00);
+				}
+				#{{ project_id }}-box .pseudo-link {
+					text-decoration-color: rgba({{ accent_color }},0.60);
+				}
+				#{{ project_id }}-box .hero {
+					background-color: rgba({{ accent_color }},0.60);
+					{% if project.hero_image %}
+						background-image: url("{{ project.hero_image }}");
+						background-size: cover;
+					{% endif %}
+				}
+			{% endfor%}
+		</style>
+
+		{% comment %}
+			Determine the image that should be associated with the page
+			(for Twitter and Facebook), as well as the page author (just
+			for Twitter).
+
+			We start by assigning some sensible defaults:
+			@yak_collective for the page author and the "wandering yak"
+			cartoon for the page image.
+
+			Then...
+
+			If `page.author` is set, pull the author from the
+			`site.pages` array and use their Twitter handle and avatar
+			(if set).
+
+			If the page is a member page, pull the member's Twitter
+			handle and avatar (if set). (The member isn't *really* the
+			page author in this case, but we still want to associate
+			this page with them.)
+
+			Finally, if the page has a "hero image" associated with it,
+			set the page image to that, regardless of what else is going
+			on.
+		{% endcomment %}
+		{% assign page_author = "yak_collective" %}
+		{% assign page_image = "/img/yak-og.jpg" %}
+		{% if page.author %}
+			{% assign author_url = "/members/" | append: page.author | append: "/" %}
+			{% assign member = site.pages | find: "url", author_url %}
+			{% if member %}
+				{% if member.twitter %}
+					{% assign page_author = member.twitter %}
+				{% endif %}
+				{% if member.avatar %}
+					{% assign page_image = member.avatar %}
+				{% endif %}
+			{% endif %}
+		{% elsif page.layout == "page-member" %}
+			{% if page.twitter %}
+				{% assign page_author = page.twitter %}
+			{% endif %}
+			{% if page.avatar %}
+				{% assign page_image = page.avatar %}
+			{% endif %}
+		{% endif %}
+		{% if page.hero_image %}
+			{% assign page_image = page.hero_image %}
+		{% endif %}
+		<meta name="twitter:creator" content="@{{ page_author }}">
+		<meta name="twitter:image" content="{{ site.url }}{{ page_image }}">
+		<meta property="og:image" content="{{ site.url }}{{ page_image }}" />
+
+		{% comment %}
+			Canonical page URL for Facebook.
+		{% endcomment %}
+		<meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+
+		{% comment %}
+			Google Analytics tag, added by Tom Critchlow for the initial
+			version of the site.
+		{% endcomment %}
+
+		<script defer src="https://www.googletagmanager.com/gtag/js?id=UA-164565897-1"></script>
+		<script defer src="/js/google-analytics.js"></script>
+
+		{% comment %}
+			Include per-page `page.page_headers` attribute. Currently
+			only used by project pages (but could also be used
+			elsewhere). Since any header elements can be included in
+			this block, we load it last so we can guarantee that CSS
+			overrides and script dependencies work correctly.
+		{% endcomment %}
+		{% if page.page_headers %}
+			{{ page.page_headers }}
+		{% endif %}
 	</head>
 
 	<body class="w-100 min-h-100 pa0 ma0 f4-l center relative flex flex-column">
+
 		<div class="fill-space flex flex-auto flex-column">
-			{% include nav.html %}
+
+			<nav class="yak-nav db dt-l w-100 border-box pa3 ph5-l mw9 center">
+				<a class="yak-logo db dtc-l v-mid w-100 w-10-l tc tl-l mb1 mb0-l" href="/" title="{{ site.name }}">
+					<div class="dib yak-logo-image"></div>
+				</a>
+				<div class="db dtc-l v-mid w-100 w-90-l tc tr-l">
+					<a class="dib mb1 mr3 mr4-l" href="/projects/">Projects</a>
+					<a class="dib mb1 mr3 mr4-l" href="/writings/">Writings</a>
+					<a class="dib mb1 mr3 mr4-l" href="/members/">Members</a>
+					<a class="dib mb1 mr3 mr4-l" href="https://yakcollective.substack.com/">Newsletter</a>
+					<a class="dib mb1 mr3 mr4-l" href="/about/">About</a>
+					<a class="dib mb1 mr3 mr4-l" href="/join/">Join</a>
+				</div>
+			</nav>
+
 			<div class="column-background-wrapper w-100 h-100 fixed top-0 left-0"><div class="column-background h-100"></div></div>
+
 			<article id="{{ page.url | replace: '/', ' ' | strip | replace: ' ', '-' | default: 'index' }}" class="yak-content pb5 mb3 lh-copy flex-auto">
 				{{ content }}
 			</article>
+
 		</div>
-		{% include footer.html %}
+
+		<footer class="bottom-0 ph3 ph5-l bt tc w-100">
+			<small class="db tc mt3">The Yak Collective</small>
+		
+			{% comment %}
+				Insert a random slogan into the footer. We do this
+				twice; once here, and once using JavaScript (the very
+				last line in this file). This ensures that nothing
+				breaks if JavaScript is disabled in the user agent.
+			{% endcomment %}
+			{% assign random_slogan = site.data.slogans | sample: 1 %}
+			<small class="db tc mt3"><a href="/tips/" id="footer-slogan">{{ random_slogan }}</a></small>
+				
+			{% comment %}
+				Output an RSS feed link, if applicable.
+		
+				We test on `rss_title` because this is only set if
+				`rss_path` exists in `site.pages`, whereas `rss_path`
+				itself may be left over from an earlier (failed) test.
+
+				Both `rss_path` and `rss_title` are computed above in
+				the `<head/>`.
+			{% endcomment %}
+			{% if rss_title %}
+				<a class="link dib f4 ma3" href="{{ rss_path }}" title="{{ rss_title }}"><i class="fas fa-rss-square"></i></a>
+			{% endif %}
+		
+			<a class="link dib f4 ma3" href="https://www.facebook.com/theyakcollective/" title="Facebook"><i class="fab fa-facebook-square"></i></a>
+			<a class="link dib f4 ma3" href="https://www.linkedin.com/company/yak-collective/" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+			<a class="link dib f4 ma3" href="https://twitter.com/yak_collective" title="Twitter"><i class="fab fa-twitter-square"></i></a>
+			</a>
+		</footer>
+
+		<script defer src="/js/slogans.js"></script>
+
 	</body>
 </html>

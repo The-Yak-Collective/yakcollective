@@ -47,7 +47,48 @@
 {% if project_pages.size > 0 %}
 	{% capture the_content %}<section class="project-pages w-100 flex flex-wrap items-start">
 		{% for pp in project_pages %}
-			{% include project-page-box.html pp=pp %}
+			<div id="{{ pp.url | replace: '/', ' ' | strip | split: ' ' | last }}" class="project-page-box-container w-100 dib">
+				{% if pp.date <= site.time or site.future == true %}<a href="{% if pp.original_link %}{{ pp.original_link }}{% else %}{{ pp.url }}{% endif %}"{% else %}<div{% endif %} class="project-page-box db ba {% if pp.date > site.time and site.future != true %}o-40 {% endif %}relative">
+				
+					{% comment %}
+						Hero image. Displayed portrait-ish, if present.
+					{% endcomment %}
+					<div class="hero bb" style="background: rgb({{ project.accent_color }}){% if pp.hero_image %} url('{{ pp.hero_image }}') {{ pp.hero_attach_vertical | default: "center" }} {{ pp.hero_attach_horizontal | default: "center" }}{% endif %}; background-size: cover;"></div>
+				
+					<div class="page-info mh4 mt1 mb3">
+						<h2 class="underline">{{ pp.title }}</h2>
+					
+						{% comment %}
+							Project page date.
+						{% endcomment %}
+						{% if pp.date %}
+							<time class="db small ttu tracked-tight">
+								{{ pp.date | date_to_long_string: "ordinal", "US" }}
+							</time>
+						{% endif %}
+						
+						{% comment %}
+							Project page author. Since the
+							`member-list.html` include expects an array
+							but `pp.author` is a string, we need to use
+							`split` (on a character not present in
+							`pp.author`) to turn it into a
+							single-element array.
+						{% endcomment %}
+						{% if pp.author %}
+							{% assign author = pp.author | split: " " %}
+							<p class="project-page-author small ttu tracked-tight">{% include member-list.html member_list=author link_members=false %}</p>
+						{% endif %}
+						
+						{% comment %}
+							Project page description.
+						{% endcomment %}
+						{% if pp.description %}
+							<p class="silent-link">{{ pp.description }}</p>
+						{% endif %}
+					</div>
+				</{% if pp.date <= site.time or site.future == true %}a{% else %}div{% endif %}>
+			</div>
 		{% endfor %}
 	</section>{% endcapture %}
 	{% include widget-breakout-box.html layout="full-bleed" extra_class="yak-project-page-list-wrapper" content=the_content %}
