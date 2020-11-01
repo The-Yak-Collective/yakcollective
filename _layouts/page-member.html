@@ -40,7 +40,7 @@ layout: default
 		{% for credits_block in project.credits %}
 			{% if credits_block[1].size > 0 and credits_block[0] != "lead_editors" %}
 				{% if credits_block[1] contains member_id %}
-					{% unless projects_collaborated contains member_id %}
+					{% unless projects_lead contains project %}
 						{% assign projects_collaborated = projects_collaborated | push: project %}
 					{% endunless %}
 				{% endif %}
