@@ -1,6 +1,6 @@
 :root {
 	--content-width: 36rem;
-	--content-width-l: 48rem; /* Switch to 46rem once new layout is finalized */
+	--content-width-l: 46rem;
 	--content-padding: 1.25rem;
 }
 
