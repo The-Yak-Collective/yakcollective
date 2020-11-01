@@ -11,5 +11,5 @@ Yak Collective members have contributed to one or more projects.
 {% assign members_randomized = members | sample: members.size %}
 
 {% for member in members_randomized %}
-    {% include widget-member-card.html member=member %}
+<div class="mv4">{% include widget-member-card.html member=member %}</div>
 {% endfor %}
