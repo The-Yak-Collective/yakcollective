@@ -5,7 +5,6 @@
 }
 
 html {
-	height: 100%;
 	z-index: -2;
 }
 
@@ -13,11 +12,6 @@ body {
 	font-family: "Noto Serif", Georgia, serif;
 	color: rgba(0,0,0,1.00);
 	background-color: rgba(255,255,255,1.0);
-	padding: 0;
-	margin: 0;
-	min-height: 100%;
-	display: flex;
-	flex-direction: column;
 	z-index: -10;
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
@@ -34,9 +28,6 @@ a:hover {
 }
 
 .fill-space {
-	flex: 1;
-	display: flex;
-	flex-direction: column;
 	z-index: -9;
 }
 
@@ -45,17 +36,11 @@ a:hover {
 }
 
 .column-background-wrapper {
-	width: 100%;
-	height: 100%;
-	position: fixed;
-	top: 0;
-	left: 0;
 	z-index: -8;
 }
 
 .column-background {
 	width: min(var(--content-width) + (2 * var(--content-padding)), 100%);
-	height: 100%;
 	margin-left: auto;
 	margin-right: auto;
 	background-color: rgba(255,255,255,1.0);
@@ -112,18 +97,8 @@ a.yak-logo .yak-logo-image {
 }
 
 #yak-iframe-widget {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
 	max-width: 100% !important;
 	height: calc(100% + 1rem); /* To cancel out the 1rem margin of the main <article/> */
-}
-
-#yak-iframe-widget iframe {
-	width: 100%;
-	height: 100%;
-	border: none;
 }
 
 .yak-content {
@@ -311,39 +286,18 @@ h6 a:hover {
 	text-decoration-line: underline !important;
 }
 
-.yak-project-header {
-	position: relative;
-}
-
-.yak-project-header aside {
-	box-sizing: border-box;
-}
-
 /* Copied from: https://css-tricks.com/scaled-proportional-blocks-with-css-and-javascript/ */
-.google-slideshow-outer {
+.google-slideshow {
 	height: 0;
 	padding-bottom: calc(56.25% + 29px); /* 16:9 + Google Slides controls */
-	position: relative;
-}
-
-.google-slideshow-inner {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
 }
 
 .project-pages {
-	display: flex;
-	flex-wrap: wrap;
-	align-items: flex-start;
 	padding-left: calc(var(--content-padding) / 2);
 	padding-right: calc(var(--content-padding) / 2);
 }
 
 .project-page-box-container {
-	width: 100%;
 	margin-top: var(--content-padding);
 	margin-left: calc(var(--content-padding) / 2);
 	margin-right: calc(var(--content-padding) / 2);
@@ -371,16 +325,6 @@ h6 a:hover {
 .project-page-box .silent-link,
 .project-page-box .silent-link:hover {
 	color: rgba(0,0,0,1.00);
-}
-
-.project-box,
-.project-page-box {
-	display: block;
-}
-
-.project-box time,
-.project-page-box time {
-	display: block;
 }
 
 .member-box {

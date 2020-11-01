@@ -45,7 +45,7 @@
 	against Jekyll interpreting this as a code block.
 {% endcomment %}
 {% if project_pages.size > 0 %}
-	{% capture the_content %}<section class="project-pages w-100">
+	{% capture the_content %}<section class="project-pages w-100 flex flex-wrap items-start">
 		{% for pp in project_pages %}
 			{% include project-page-box.html pp=pp %}
 		{% endfor %}

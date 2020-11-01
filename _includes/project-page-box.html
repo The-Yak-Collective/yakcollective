@@ -25,8 +25,8 @@
 {% assign project_url = "/projects/" | append: path_array[1] | append: "/" %}
 {% assign project = site.pages | find: "url", project_url %}
 
-<div id="{{ include.pp.url | replace: '/', ' ' | strip | split: ' ' | last }}" class="project-page-box-container dib">
-	{% if include.pp.date <= site.time or site.future == true %}<a href="{% if include.pp.original_link %}{{ include.pp.original_link }}{% else %}{{ include.pp.url }}{% endif %}"{% else %}<div{% endif %} class="project-page-box ba {% if include.pp.date > site.time and site.future != true %}o-40 {% endif %}relative">
+<div id="{{ include.pp.url | replace: '/', ' ' | strip | split: ' ' | last }}" class="project-page-box-container w-100 dib">
+	{% if include.pp.date <= site.time or site.future == true %}<a href="{% if include.pp.original_link %}{{ include.pp.original_link }}{% else %}{{ include.pp.url }}{% endif %}"{% else %}<div{% endif %} class="project-page-box db ba {% if include.pp.date > site.time and site.future != true %}o-40 {% endif %}relative">
 
 		{% comment %}
 			Hero image. Displayed portrait-ish, if present.
@@ -34,13 +34,13 @@
 		<div class="hero bb" style="background: rgb({{ project.accent_color }}){% if include.pp.hero_image %} url('{{ include.pp.hero_image }}') {{ include.pp.hero_attach_vertical | default: "center" }} {{ include.pp.hero_attach_horizontal | default: "center" }}{% endif %}; background-size: cover;"></div>
 
 		<div class="page-info mh4 mt1 mb3">
-			<h2 class="pseudo-link">{{ include.pp.title }}</h2>
+			<h2 class="underline">{{ include.pp.title }}</h2>
 
 			{% comment %}
 				Project page date.
 			{% endcomment %}
 			{% if include.pp.date %}
-				<time class="small ttu tracked-tight">
+				<time class="db small ttu tracked-tight">
 					{{ include.pp.date | date_to_long_string: "ordinal", "US" }}
 				</time>
 			{% endif %}

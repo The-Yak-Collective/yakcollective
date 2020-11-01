@@ -14,7 +14,7 @@
 {% endcomment %}
 
 <div id="{{ include.project.url | replace: '/', ' ' | strip | split: ' ' | last }}-box" class="mv4">
-	<a href="{{ include.project.url }}" class="project-box ba relative">
+	<a href="{{ include.project.url }}" class="project-box db ba relative">
 		<div class="w-50">
 			{% if include.project.type %}<div class="smaller lh-title fw9 mv0 pt1 bt bw1 ph2 sans-serif ttu silent-link">{{ include.project.type }}</div>{% endif %}
 			{% if include.project.title %}<h2 class="ph2 fw8 f3 lh-solid pt4 pb1 mb1 mt4 pseudo-link">{{ include.project.title }}</h2>{% endif %}
@@ -34,7 +34,7 @@
 				Project date and sequence count (if applicable).
 			{% endcomment %}
 			{% if include.project.date %}
-				<time class="smaller ph2 mt3 mb2 ttu tracked-tight">
+				<time class="db smaller ph2 mt3 mb2 ttu tracked-tight">
 					Published: {{ include.project.date | date_to_long_string: "ordinal", "US" }} UTC
 					{% if include.project.sequence %}
 						/ {% include sequence.txt current_date=include.project.date sequence_id=include.project.sequence %}

@@ -20,11 +20,11 @@
 	weirdness.
 {% endcomment %}
 {% capture the_content %}
-<header id="{{ project.url | replace: '/', ' ' | strip | split: ' ' | last }}-hero" class="yak-project-header">
+<header id="{{ project.url | replace: '/', ' ' | strip | split: ' ' | last }}-hero" class="yak-project-header relative">
 	<div class="hero"></div>
 	<div class="yak-content wide">
 		<div class="cf ph0 pv5-l pv4">
-			<aside class="fn fl-l w-third-l pl5-l pr4-l pb2 pb0-l">
+			<aside class="border-box fn fl-l w-third-l pl5-l pr4-l pb2 pb0-l">
 				{% if project.type %}
 					<div class="project-type small lh-title fw9 mb3 mt0 pt3 bt bw2 sans-serif ttu">{{ project.type }}</div>
 				{% endif %}
