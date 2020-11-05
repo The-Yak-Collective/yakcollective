@@ -31,7 +31,7 @@ credits:
     - colin-michael
     - critchlow-tom
     - garlinger-scott
-    - heimsath-benton
+    - Benton Heimsath
     - hollands-thomas
     - hume-ryan
     - mcdougall-david
