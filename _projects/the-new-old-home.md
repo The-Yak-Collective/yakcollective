@@ -70,7 +70,6 @@ collaborators:
   - colin-michael
   - critchlow-tom
   - garlinger-scott
-  - heimsath-benton
   - hollands-thomas
   - hume-ryan
   - mcdougall-david
