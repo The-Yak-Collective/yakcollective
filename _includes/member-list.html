@@ -18,22 +18,38 @@
 {% if total_members == 1 %}
 	{% assign member_url = "/members/" | append: include.member_list[0] | append: "/" %}
 	{% assign member = site.pages | find: "url", member_url %}
-	{% if include.link_members %}<a href="{{ member.url }}">{% endif %}{{ member.title | replace: " ", "&nbsp;" }}{% if include.link_members %}</a>{% endif %}
+	{% if member %}
+		{% if include.link_members %}<a href="{{ member.url }}">{% endif %}{{ member.title | replace: " ", "&nbsp;" }}{% if include.link_members %}</a>{% endif %}
+	{% else %}
+		{{ include.member_list[0] | replace: " ", "&nbsp;" }}
+	{% endif %}
 {% elsif total_members == 2 %}
 	{% assign first_member_url = "/members/" | append: include.member_list[0] | append: "/" %}
 	{% assign first_member = site.pages | find: "url", first_member_url %}
 	{% assign second_member_url = "/members/" | append: include.member_list[1] | append: "/" %}
 	{% assign second_member = site.pages | find: "url", second_member_url %}
 
-	{% if include.link_members %}<a href="{{ first_member.url }}">{% endif %}{{ first_member.title | replace: " ", "&nbsp;" }}{% if include.link_members %}</a>{% endif %}
+	{% if first_member %}
+		{% if include.link_members %}<a href="{{ first_member.url }}">{% endif %}{{ first_member.title | replace: " ", "&nbsp;" }}{% if include.link_members %}</a>{% endif %}
+	{% else %}
+		{{ include.member_list[0] | replace: " ", "&nbsp;" }}
+	{% endif %}
 	&amp;
-	{% if include.link_members %}<a href="{{ second_member.url }}">{% endif %}{{ second_member.title | replace: " ", "&nbsp;" }}{% if include.link_members %}</a>{% endif %}
+	{% if second_member %}
+		{% if include.link_members %}<a href="{{ second_member.url }}">{% endif %}{{ second_member.title | replace: " ", "&nbsp;" }}{% if include.link_members %}</a>{% endif %}
+	{% else %}
+		{{ include.member_list[1] | replace: " ", "&nbsp;" }}
+	{% endif %}
 {% else %}
 	{% assign last_member = include.member_list.last %}
 	{% for member_id in include.member_list %}
 		{% assign member_url = "/members/" | append: member_id | append: "/" %}
 		{% assign member = site.pages | find: "url", member_url %}
 
-		{% if include.link_members %}<a href="{{ member.url }}">{% endif %}{{ member.title | replace: " ", "&nbsp;" }}{% if include.link_members %}</a>{% endif %}{% if member_id != last_member %}, {% endif %}
+		{% if member %}
+			{% if include.link_members %}<a href="{{ member.url }}">{% endif %}{{ member.title | replace: " ", "&nbsp;" }}{% if include.link_members %}</a>{% endif %}{% if member_id != last_member %}, {% endif %}
+		{% else %}
+			{{ member_id | replace: " ", "&nbsp;" }}
+		{% endif %}
 	{% endfor %}
 {% endif %}
