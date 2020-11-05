@@ -5,7 +5,7 @@ hero_image: /projects/final-frontiers/01-overview-effect-3.jpg
 hero_attach_vertical: center
 hero_attach_horizontal: center
 author: hogan-ryan
-description: A library serves no purpose unless someone is using it.
+description: The cognitive shift astronauts report having from looking upon Earth from its orbit.
 ---
 # Overview Effect
 

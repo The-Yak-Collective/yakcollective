@@ -5,7 +5,7 @@ hero_image: /projects/final-frontiers/02-democratized-underwater-exploration-1.j
 hero_attach_vertical: center
 hero_attach_horizontal: center
 author: rao-venkatesh
-description: They used to say that if Man was meant to fly, he'd have wings. But he did fly. He discovered he had to.
+description: Consumer-priced ocean exploration products are just beginning to emerge, creating unprecedented opportunities for democratized participation in oceanic exploration.
 ---
 # Democratized Underwater Exploration
 

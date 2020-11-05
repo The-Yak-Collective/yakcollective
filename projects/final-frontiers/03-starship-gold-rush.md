@@ -5,7 +5,7 @@ hero_image: /projects/final-frontiers/03-starship-gold-rush-1.jpg
 hero_attach_vertical: top
 hero_attach_horizontal: center
 author: bilsland-charlie
-description: I haven't faced death. I've cheated death.
+description: Starship's success fuels a new space 'gold rush' in 2030.
 ---
 # Starship "Gold Rush"
 
