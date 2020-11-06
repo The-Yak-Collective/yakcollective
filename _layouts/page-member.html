@@ -48,8 +48,8 @@ layout: default
 		{% endfor %}
 	{% endif %}
 {% endfor %}
-{% assign projects_lead = projects_lead | sort: "date" | reverse %}
-{% assign projects_collaborated = projects_collaborated | sort: "date" | reverse %}
+{% assign projects_lead = projects_lead | uniq | sort: "date" | reverse %}
+{% assign projects_collaborated = projects_collaborated | uniq | sort: "date" | reverse %}
 
 {% comment %}
 	Output the `projects_lead` and `projects_collaborated` arrays.
