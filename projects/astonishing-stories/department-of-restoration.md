@@ -59,7 +59,7 @@ page_headers: |
 
 At a certain time, in a certain space, a person may speak or act and find himself under a recent form of judgment: cancellation.
 
-Indeed, this algorithmic tribunal stands watch over many, many occurrences and it decrees hold unforeseen consequences. Those people, those consequences, still navigate day-to-day life but haven’t the chance to go back or go forward.
+Indeed, this algorithmic tribunal stands watch over many, many occurrences and its decrees hold unforeseen consequences. Those people, those consequences, still navigate day-to-day life but haven’t the chance to go back or go forward.
 
 {%
   include widget-image.html
