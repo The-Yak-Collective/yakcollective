@@ -56,7 +56,7 @@
 					<div class="hero bb" style="background: {% if pp.hero_image %}url('{{ pp.hero_image }}') {{ pp.hero_attach_vertical | default: "center" }} {{ pp.hero_attach_horizontal | default: "center" }}{% else %}url('/img/yak-og.jpg') center right{% endif %}; background-size: cover;"></div>
 				
 					<div class="page-info mh4 mt1 mb3">
-						<h2 class="underline">{{ pp.title }}</h2>
+						<h2 class="{% if pp.date > site.time and site.future != true %}underline{% else %}pseudo-link{% endif %}">{{ pp.title }}</h2>
 					
 						{% comment %}
 							Project page date.

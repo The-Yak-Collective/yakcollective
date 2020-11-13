@@ -12,6 +12,15 @@ body {
 	z-index: -10;
 }
 
+a {
+	color: inherit;
+	opacity: 0.8;
+}
+
+a:hover {
+	opacity: 1.0;
+}
+
 .fill-space {
 	z-index: -9;
 }
@@ -26,8 +35,10 @@ body {
 	margin-right: auto;
 }
 
-#footer-slogan, #footer-slogan:hover {
+#footer-slogan,
+#footer-slogan:hover {
 	text-decoration: none;
+	opacity: 1.0
 }
 
 .small,
@@ -40,15 +51,6 @@ figcaption,
 .slide-author,
 #markdown-toc {
 	font-size: 80%;
-}
-
-a.yak-logo {
-	text-decoration: none;
-	opacity: 0.75;
-}
-
-a.yak-logo:hover {
-	opacity: 1.0;
 }
 
 a.yak-logo .yak-logo-image {
@@ -228,6 +230,7 @@ h5 a,
 h6 a {
 	color: inherit !important;
 	text-decoration-line: none !important;
+	opacity: 1.0 !important;
 }
 
 h1 a:hover,
@@ -267,12 +270,23 @@ h6 a:hover {
 
 a.member-box,
 a.project-box,
-a.project-page-box {
+a.project-page-box,
+.silent-link {
 	text-decoration: none;
+	opacity: 1.0;
 }
 
-.pseudo-link {
+a.member-box .pseudo-link,
+a.project-box .pseudo-link,
+a.project-page-box .pseudo-link {
 	text-decoration-line: underline;
+	opacity: 0.8;
+}
+
+a.member-box:hover .pseudo-link,
+a.project-box:hover .pseudo-link,
+a.project-page-box:hover .pseudo-link {
+	opacity: 1.0;
 }
 
 .required {
@@ -303,6 +317,12 @@ h2#featured-yak {
 .yak-page-project-slide {
 	padding-bottom: 0;
 	margin-bottom: 0;
+	display: flex;
+	flex-direction: column;
+}
+
+.yak-page-project-slide .yak-slide-wrapper {
+	flex: 1 1 auto;
 }
 
 .slide-image-left .slide-image,
@@ -310,6 +330,10 @@ h2#featured-yak {
 	width: min(var(--content-width), 100% - (2 * var(--content-padding)));
 	margin-left: auto;
 	margin-right: auto;
+}
+
+.slide-image-none .slide-image {
+	display: none;
 }
 
 .slide-content {

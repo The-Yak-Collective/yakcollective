@@ -6,18 +6,8 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 }
 
-a {
-	color: rgba(255,255,255,0.75);
-}
-
-a:hover {
-	color: rgba(255,255,255,1.0);
-}
-
-.yak-nav {
-	background-color: rgba(15,15,15,1.0);
-}
-
+.yak-nav,
+.box-interior,
 .column-background {
 	background-color: rgba(15,15,15,1.0);
 }
@@ -26,37 +16,37 @@ input,
 select {
 	color: rgba(255,255,255,1.0);
 	background-color: rgba(15,15,15,1.0);
-	border-color: rgba(255,255,255,0.15);
+	border-color: rgba(255,255,255,0.2);
 }
 
 footer {
-	color: rgba(255,255,255,0.60);
+	color: rgba(255,255,255,0.6);
 	background-color: rgba(15,15,15,1.0);
-	border-top-color: rgba(255,255,255,0.15);
+	border-top-color: rgba(255,255,255,0.2);
 }
 
-#footer-slogan,
-#footer-slogan:hover {
-	color: rgba(255,255,255,0.60);
+a.yak-footer-square-link {
+	color: rgba(255,255,255,0.8);
+}
+
+a.yak-footer-square-link:hover {
+	color: rgba(255,255,255,1.0);
 }
 
 time,
 details,
 .details,
+.yak-nav,
 figcaption,
 .author-bio,
 .slide-author,
 .collaborators,
 .project-page-author {
-	color: rgba(255,255,255,0.65);
+	color: rgba(255,255,255,0.8);
 }
 
 a.yak-logo .yak-logo-image {
 	content: url("/img/yak-logo-white.png");
-}
-
-.box-interior {
-	background-color: rgba(15,15,15,1.0);
 }
 
 .member-box,
@@ -65,47 +55,15 @@ a.yak-logo .yak-logo-image {
 .project-box .hero,
 .project-page-box,
 .project-page-box .hero {
-	border-color: rgba(255,255,255,0.15);
-}
-
-.member-box .silent-link,
-.member-box .silent-link:hover,
-.member-box .pseudo-link:hover,
-.project-box .silent-link,
-.project-box .silent-link:hover,
-.project-box .pseudo-link:hover,
-.project-page-box .silent-link,
-.project-page-box .silent-link:hover,
-.project-page-box .pseudo-link:hover {
-	color: rgba(255,255,255,1.0);
-}
-
-.member-box .pseudo-link,
-.project-box .pseudo-link,
-.project-page-box .pseudo-link {
-	color: rgba(255,255,255,0.75);
-}
-
-.member-box {
-	color: rgba(255,255,255,0.70);
-	background-color: rgba(15,15,15,1.0);
-}
-
-a.member-box {
-	color: rgba(255,255,255,0.70);
-}
-
-.member-box .silent-link,
-.member-box .silent-link:hover {
-	color: rgba(255,255,255,0.70);
+	border-color: rgba(255,255,255,0.2);
 }
 
 .lead-editors {
 	color: rgba(255,255,255,1.0);
 }
 
-#markdown-toc,
 .submit,
-.footnotes {
+.footnotes,
+#markdown-toc {
 	background-color: rgba(255,255,255,0.05);
 }
