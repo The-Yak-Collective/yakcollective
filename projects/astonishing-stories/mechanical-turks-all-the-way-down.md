@@ -62,6 +62,14 @@ There was a low din of my five-year-old arguing again about what xe would or wou
 
 This was my second job today. A basic anniversary gig like I’d seen in the training. There were a lot of notes and I quickly scanned them for any red flags, but accepted immediately. Taking jobs fast shows good teamwork which means my teamwork score goes up which, algo willing, will lead to more lucrative jobs.
 
+{%
+  include widget-image.html
+  layout="right"
+  image=page.hero_image
+  alt="Mechanical Turks All the Way Down"
+  caption="Illustration by [Justice](/members/thelot-justice/)."
+%}
+
 If I’m not in the algo’s top tier, we can’t afford the next level of healthcare we need. The raw number of medical claims sitting in my personal email could be felt through the unread count floating above it. Inhalers, lung rehabilitation treatments, microextracorporeal membrane oxygenation machines. The list doesn’t end.
 
 > _Next week is a special anniversary of working for my principal. He is middle-aged (36) and works at a mid-sized company. He has most recently purchased a new pair of shoes, some weekly groceries, and a measles-mumps-rubella-ebola-coronavirus home booster immunization kit. I want it to be really special. He tends to enjoy things like cold food, travelling alone — not sure if by design or low desirability — and collecting little AR-tagged stickers from his travels. More than anything he is striving to be more efficient in his life and get more out of it._
@@ -75,14 +83,6 @@ The final comment was unexpected:
 > _How do I know that you are a person or a machine?_
 
 That’s exactly what I was thinking.
-
-{%
-  include widget-image.html
-  layout="left"
-  image=page.hero_image
-  alt="Mechanical Turks All the Way Down"
-  caption="Illustration by [Justice](/members/thelot-justice/)."
-%}
 
 Was this a corp test? How did I know this requester was a real person? I’ve been warned by a friend who also works this gig that they will slip these in every now and then to make sure I’m not using personal algos to do my work.
 
