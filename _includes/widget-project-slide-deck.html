@@ -1,0 +1,44 @@
+{% comment %}
+	"Idle Words" style "infinity" slide deck.
+
+	Note that this widget outputs HTML in a safe way, and is thus
+	suitable for inclusion in both Markdown and HTML pages.
+{% endcomment %}
+
+{% comment %}
+	Set the current project.
+{% endcomment %}
+{% assign project = include.project | default: page %}
+
+{% comment %}
+	Figure out the current project ID.
+{% endcomment %}
+{% assign project_id = project.url | replace: "/", " " | strip | split: " " | last %}
+
+{% comment %}
+	Generate a list of project pages associated with the current
+	project.
+{% endcomment %}
+{% assign project_slides = "" | split: "" %}
+{% for the_page in site.pages %}
+	{% if the_page.layout == "page-project-slide" %}
+		{% assign path_array = the_page.url | replace: "/", " " | strip | split: " " %}
+		{% if path_array[1] == project_id %}
+			{% unless the_page.hidden %}
+				{% assign project_slides = project_slides | push: the_page %}
+			{% endunless %}
+		{% endif %}
+	{% endif %}
+{% endfor %}
+{% assign project_slides = project_slides | sort: "url" | sort: "date" %}
+
+{% comment %}
+	Output project slides (if they exist). We force the image layout to
+	be identical for all slides in order to assist formatting.
+{% endcomment %}
+{% if project_slides.size > 0 %}
+	{% assign ps_last = project_slides.last %}
+	{% for ps in project_slides %}
+		{% include widget-slide.html layout="left" slide=ps %}
+	{% endfor %}
+{% endif %}

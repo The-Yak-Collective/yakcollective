@@ -1,6 +1,5 @@
 :root {
 	--content-width: 36rem;
-	--content-width-l: 46rem;
 	--content-padding: 1.25rem;
 }
 
@@ -10,29 +9,11 @@ html {
 
 body {
 	font-family: "Noto Serif", Georgia, serif;
-	color: rgba(0,0,0,1.00);
-	background-color: rgba(255,255,255,1.0);
 	z-index: -10;
-	text-rendering: optimizeLegibility;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-}
-
-a {
-	color: rgba(0,0,0,0.75);
-	text-decoration-line: none;
-}
-
-a:hover {
-	text-decoration-line: underline;
 }
 
 .fill-space {
 	z-index: -9;
-}
-
-.yak-nav {
-	background-color: rgba(255,255,255,1.0);
 }
 
 .column-background-wrapper {
@@ -43,39 +24,10 @@ a:hover {
 	width: min(var(--content-width) + (2 * var(--content-padding)), 100%);
 	margin-left: auto;
 	margin-right: auto;
-	background-color: rgba(255,255,255,1.0);
-}
-
-input,
-select {
-	color: rgba(0,0,0,1.00);
-	background-color: rgba(255,255,255,1.0);
-	border-color: rgba(0,0,0,0.15);
-}
-
-footer {
-	color: rgba(0,0,0,0.60);
-	background-color: rgba(255,255,255,1.0);
-	border-top-color: rgba(0,0,0,0.15);
-}
-
-footer a {
-	color: rgba(0,0,0,0.85);
 }
 
 #footer-slogan, #footer-slogan:hover {
-	color: rgba(0,0,0,0.60);
 	text-decoration: none;
-}
-
-time,
-details,
-.details,
-figcaption,
-.author-bio,
-.collaborators,
-.project-page-author {
-	color: rgba(0,0,0,0.65);
 }
 
 .small,
@@ -85,13 +37,21 @@ figcaption,
 .footnotes,
 .page-info,
 .author-bio,
+.slide-author,
 #markdown-toc {
 	font-size: 80%;
 }
 
+a.yak-logo {
+	text-decoration: none;
+	opacity: 0.75;
+}
+
+a.yak-logo:hover {
+	opacity: 1.0;
+}
+
 a.yak-logo .yak-logo-image {
-	content: url("/img/yak-logo-cutout.png");
-	background-color: rgba(0,0,0,0.85);
 	width: 2.5rem;
 	height: 2.5rem
 }
@@ -118,11 +78,6 @@ a.yak-logo .yak-logo-image {
 	margin-bottom: 0;
 }
 
-.yak-content a {
-	color: inherit;
-	text-decoration-line: underline;
-}
-
 .yak-content ol,
 .yak-content ul {
 	padding-inline-start: 3rem;
@@ -131,10 +86,6 @@ a.yak-logo .yak-logo-image {
 .yak-content blockquote {
 	padding-inline-start: 3rem;
 	padding-inline-end: 3rem;
-}
-
-.box-interior {
-	background-color: rgba(255,255,255,1.0);
 }
 
 .yak-content .left-box,
@@ -225,6 +176,7 @@ a.yak-logo .yak-logo-image {
 
 .yak-content .yak-post img {
 	max-width: 100% !important;
+	height: auto !important;
 }
 
 .yak-content .yak-post div.tweet,
@@ -274,6 +226,7 @@ h3 a,
 h4 a,
 h5 a,
 h6 a {
+	color: inherit !important;
 	text-decoration-line: none !important;
 }
 
@@ -312,57 +265,22 @@ h6 a:hover {
 	overflow: auto;
 }
 
-.member-box,
-.project-box,
-.project-box .hero,
-.project-page-box,
-.project-page-box .hero {
-	border-color: rgba(0,0,0,0.15);
-}
-
-.project-box .silent-link,
-.project-box .silent-link:hover,
-.project-page-box .silent-link,
-.project-page-box .silent-link:hover {
-	color: rgba(0,0,0,1.00);
-}
-
-.member-box {
-	color: rgba(0,0,0,0.70);
-	background-color: rgba(255,255,255,1.0);
-}
-
 a.member-box,
 a.project-box,
 a.project-page-box {
 	text-decoration: none;
 }
 
-a.member-box {
-	color: rgba(0,0,0,0.70);
-}
-
-.member-box .silent-link,
-.member-box .silent-link:hover {
-	color: rgba(0,0,0,0.70);
-}
-
 .pseudo-link {
 	text-decoration-line: underline;
 }
 
-.lead-editors {
-	color: rgba(0,0,0,1.00);
+.required {
+	font-weight: bold;
 }
 
 h2#featured-yak {
 	margin-top: 2em;
-}
-
-#markdown-toc,
-.submit,
-.footnotes {
-	background-color: rgba(0,0,0,0.05);
 }
 
 #markdown-toc {
@@ -380,4 +298,22 @@ h2#featured-yak {
 
 .footnotes {
 	padding: 1em 2em 1em 0.5em;
+}
+
+.yak-page-project-slide {
+	padding-bottom: 0;
+	margin-bottom: 0;
+}
+
+.slide-image-left .slide-image,
+.slide-image-right .slide-image {
+	width: min(var(--content-width), 100% - (2 * var(--content-padding)));
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.slide-content {
+	width: min(var(--content-width), 100% - (2 * var(--content-padding)));
+	margin-left: auto;
+	margin-right: auto;
 }

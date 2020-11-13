@@ -5,7 +5,6 @@ tagline: Rediscovering the home as a production frontier
 type: Report
 sequence: covid-19
 hero_image: /projects/the-new-old-home/the-new-old-home.jpg
-accent_color: "225,125,75"
 page_headers: |
   <style type="text/css">
     .hero {

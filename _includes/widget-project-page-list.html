@@ -53,7 +53,7 @@
 					{% comment %}
 						Hero image. Displayed portrait-ish, if present.
 					{% endcomment %}
-					<div class="hero bb" style="background: rgb({{ project.accent_color }}){% if pp.hero_image %} url('{{ pp.hero_image }}') {{ pp.hero_attach_vertical | default: "center" }} {{ pp.hero_attach_horizontal | default: "center" }}{% endif %}; background-size: cover;"></div>
+					<div class="hero bb" style="background: {% if pp.hero_image %}url('{{ pp.hero_image }}') {{ pp.hero_attach_vertical | default: "center" }} {{ pp.hero_attach_horizontal | default: "center" }}{% else %}url('/img/yak-og.jpg') center right{% endif %}; background-size: cover;"></div>
 				
 					<div class="page-info mh4 mt1 mb3">
 						<h2 class="underline">{{ pp.title }}</h2>

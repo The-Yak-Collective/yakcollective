@@ -1,13 +1,12 @@
 ---
-title: Final Frontiers
+title: Final Frontiers (Pages)
 date: 2020-12-01 00:00:00
 tagline: Democratized exploration of space and oceans
 roam_page: https://roamresearch.com/#/app/ArtOfGig/page/O12GM-bXp
 google_doc: https://docs.google.com/presentation/d/1zNjdVUgTuU7Xne1xcGz6e-j3sAoKAnqjGM8HKmLEosg/edit
 type: Report
 sequence: covid-19
-hero_image: /projects/final-frontiers/final-frontiers.png
-accent_color: "0,151,167"
+hero_image: /projects/final-frontiers-pages/final-frontiers.png
 page_headers: |
   <style type="text/css">
     /* Custom CSS goes here. */

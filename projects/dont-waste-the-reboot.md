@@ -5,7 +5,6 @@ tagline: Making the next normal better than the last one
 type: Report
 sequence: covid-19
 hero_image: /projects/dont-waste-the-reboot/dont-waste-the-reboot.svg
-accent_color: "200,100,200"
 page_headers: |
   <style type="text/css">
     .hero {

@@ -1,0 +1,4 @@
+---
+layout: none
+---
+{% include feed.xml %}

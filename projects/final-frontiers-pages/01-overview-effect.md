@@ -1,7 +1,6 @@
 ---
-title: Overview Effect
 date: 2020-12-01 00:00:00
-hero_image: /projects/final-frontiers/01-overview-effect-3.jpg
+hero_image: /projects/final-frontiers-pages/01-overview-effect-3.jpg
 hero_attach_vertical: center
 hero_attach_horizontal: center
 author: hogan-ryan
@@ -12,7 +11,7 @@ description: The cognitive shift astronauts report having from looking upon Eart
 {%
   include widget-image.html
   layout="right"
-  image="/projects/final-frontiers/01-overview-effect-1.jpg"
+  image="/projects/final-frontiers-pages/01-overview-effect-1.jpg"
   alt="First recorded image of Earth from space."
   caption="First recorded image of Earth from space. [Cosmos Magazine](https://cosmosmagazine.com/space/the-first-photograph-of-earth-taken-from-space/)"
 %}
@@ -26,7 +25,7 @@ The cognitive shift astronauts report having from looking upon Earth from its or
 {%
   include widget-image.html
   layout="left"
-  image="/projects/final-frontiers/01-overview-effect-2.jpg"
+  image="/projects/final-frontiers-pages/01-overview-effect-2.jpg"
   alt="Earth from space."
   caption="[NASA](https://www.nasa.gov/topics/earth/images/index.html)"
 %}
@@ -36,7 +35,7 @@ By the year 2050, over 1 million humans had experienced some form of the Overvie
 {%
   include widget-image.html
   layout="full-bleed"
-  image="/projects/final-frontiers/01-overview-effect-3.jpg"
+  image="/projects/final-frontiers-pages/01-overview-effect-3.jpg"
   alt="Earth from near the Moon."
 %}
 
@@ -54,6 +53,6 @@ Current explorations/signals:
 {%
   include widget-image.html
   layout="center"
-  image="/projects/final-frontiers/01-overview-effect-4.png"
+  image="/projects/final-frontiers-pages/01-overview-effect-4.jpg"
   alt="Other potential sources of overview-like effects."
 %}

@@ -1,7 +1,6 @@
 ---
-title: Starship "Gold Rush"
 date: 2020-12-01 00:00:00
-hero_image: /projects/final-frontiers/03-starship-gold-rush-1.jpg
+hero_image: /projects/final-frontiers-pages/03-starship-gold-rush-1.jpg
 hero_attach_vertical: top
 hero_attach_horizontal: center
 author: bilsland-charlie
@@ -17,7 +16,7 @@ Starship’s success fuels a new space ‘gold rush’ in 2030.
 {%
   include widget-image.html
   layout="full-bleed"
-  image="/projects/final-frontiers/03-starship-gold-rush-1.jpg"
+  image="/projects/final-frontiers-pages/03-starship-gold-rush-1.jpg"
   alt="The SpaceX Starship."
 %}
 
@@ -44,6 +43,6 @@ Europe and Russia are working together to restrain the expansion of these superp
 {%
   include widget-image.html
   layout="center"
-  image="/projects/final-frontiers/03-starship-gold-rush-2.jpg"
+  image="/projects/final-frontiers-pages/03-starship-gold-rush-2.jpg"
   alt="A lunar colony."
 %}

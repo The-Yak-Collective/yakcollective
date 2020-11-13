@@ -18,7 +18,7 @@
 		`member`
 		An object containing the relevant member information (basically,
 		an element of `site.pages` that lives in the `/members/`
-		directory.).
+		directory).
 
 	Note that this widget outputs HTML in a safe way, and is thus
 	suitable for inclusion in both Markdown and HTML pages.
@@ -26,7 +26,7 @@
 
 <div class="w-100 mv3" id="{{ include.member.url | replace: '/', ' ' | strip | split: ' ' | last }}">
 	{% if include.standalone %}<div{% else %}<a href="{{ include.member.url }}"{% endif %} class="flex items-center lh-copy pa3 ba member-box">
-		<img class="w3 h3 br-100" src="{{ include.member.avatar }}" alt="{{ include.member.title }}" />
+		<img class="w3 h3 br-100 ba image-border" src="{{ include.member.avatar }}" alt="{{ include.member.title }}" />
 		<div class="pl3 pr2 flex-auto">
 
 			{% comment %}

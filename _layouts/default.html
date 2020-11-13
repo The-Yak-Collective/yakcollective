@@ -146,67 +146,40 @@
 		<link rel="stylesheet" href="/css/fonts.css">
 		<link rel="stylesheet" href="/css/font-awesome.min.css">
 		<link rel="stylesheet" href="/css/tachyons.min.css">
-		<link rel="stylesheet" href="/css/style.css">
-		<link rel="stylesheet" href="/css/style-40.css" media="(min-width: 40em)">
-		<link rel="stylesheet" href="/css/style-60.css" media="(min-width: 60em)">
-		<link rel="stylesheet" href="/css/style-80.css" media="(min-width: 80em)">
+		<link rel="stylesheet" href="/css/layout.css">
+		<link rel="stylesheet" href="/css/layout-40.css" media="(min-width: 40em)">
+		<link rel="stylesheet" href="/css/layout-60.css" media="(min-width: 60em)">
+		<link rel="stylesheet" href="/css/layout-80.css" media="(min-width: 80em)">
+		{% if page.page_text_color == "white" %}
+			<link rel="stylesheet" href="/css/color-black.css">
+		{% elsif page.page_text_color == "black" %}
+			<link rel="stylesheet" href="/css/color-white.css">
+		{% else %}
+			<link rel="stylesheet" href="/css/color-white.css" media="(prefers-color-scheme: light)">
+			<link rel="stylesheet" href="/css/color-black.css" media="(prefers-color-scheme: dark)">
+		{% endif %}
 		<style type="text/css">
 			{% comment %}
-				Accent colors can vary by page. This page-specific CSS
-				block controls this, as well as other per-page elements.
+				Override page background color, if specified.
 			{% endcomment %}
-			{% if page.accent_color %}
-				{% assign accent_color = page.accent_color %}
-			{% elsif page.layout == "page-project-page" %}
-				{% assign path_array = page.url | replace: "/", " " | strip | split: " " %}
-				{% assign project_url = "/projects/" | append: path_array[1] | append: "/" %}
-				{% assign project = site.pages | find: "url", project_url %}
-				{% assign accent_color = project.accent_color %}
-			{% else %}
-				{% assign accent_color = site.accent_color %}
+			{% if page.page_bg_color %}
+				body,
+				input,
+				select,
+				footer,
+				.yak-nav,
+				.member-box,
+				.box-interior,
+				.column-background {
+					background-color: rgba({{ page.page_bg_color }},1.0);
+				}
 			{% endif %}
-
-			a:hover,
-			.required {
-				color: rgba({{ accent_color }},1.00);
-			}
-
-			footer a:hover {
-				color: rgba({{ accent_color }},0.75);
-			}
-
-			a.yak-logo:hover .yak-logo-image {
-				background-color: rgba({{ accent_color }},1.00);
-			}
-
-			.yak-content a {
-				text-decoration-color: rgba({{ accent_color }},0.60);
-			}
-
-			.yak-content a:hover {
-				color: rgba({{ accent_color }},1.00);
-				text-decoration-color: rgba({{ accent_color }},1.00);
-			}
-
-			a.member-box:hover {
-				color: rgba({{ accent_color }},1.00);
-			}
-
-			.pseudo-link {
-				text-decoration-color: rgba({{ accent_color }},0.60);
-			}
-
 			{% comment %}
 				Generate project-specific styles.
 			{% endcomment %}
 			{% assign projects = site.pages | where: "layout", "page-project" %}
 			{% for project in projects %}
 				{% assign project_id = project.url | replace: "/", " " | strip | split: " " | last %}
-				{% if project.accent_color %}
-					{% assign accent_color = project.accent_color %}
-				{% else %}
-					{% assign accent_color = site.accent_color %}
-				{% endif %}
 				{% if project.hero_image %}
 					#{{ project_id }}-hero .hero {
 						content : "";
@@ -220,25 +193,45 @@
 						height: 100%;
 						opacity: 0.5;
 					}
-				{% else %}
-					#{{ project_id }}-hero .hero {
-						background-color: rgba({{ accent_color }},0.10);
-					}
 				{% endif %}
-				#{{ project_id }}-box a:hover {
-					color: rgba({{ accent_color }},1.00);
-				}
-				#{{ project_id }}-box .pseudo-link {
-					text-decoration-color: rgba({{ accent_color }},0.60);
-				}
 				#{{ project_id }}-box .hero {
-					background-color: rgba({{ accent_color }},0.60);
 					{% if project.hero_image %}
 						background-image: url("{{ project.hero_image }}");
-						background-size: cover;
+					{% else %}
+						background-image: url("/img/yak-og.jpg");
+						background-position: center right;
 					{% endif %}
+					background-size: cover;
 				}
 			{% endfor%}
+
+			{% comment %}
+				Generate slide-specific styles.
+			{% endcomment %}
+			{% assign slides = site.pages | where: "layout", "page-project-slide" %}
+			{% for slide in slides %}
+				{% assign slide_id = slide.url | replace: '/', ' ' | strip | replace: ' ', '-' %}
+				{% if slide.page_text_color or slide.page_bg_color %}
+					#{{ slide_id }} {
+						{% if slide.page_text_color == "white" %}
+							color: rgba(255,255,255,1.0);
+						{% else %}
+							color: rgba(15,15,15,1.0);
+						{% endif %}
+						{% if slide.page_text_color %}
+							background-color: rgba({{ slide.page_bg_color }},1.0);
+						{% endif %}
+					}
+					/*
+					{% if slide.page_text_color == "black" or slide.page_text_color == "white" %}
+						#{{ slide_id }} figcaption,
+						#{{ slide_id }} .slide-author{
+							color: rgba({% if slide.page_text_color == "white" %}255,255,255{% else %}15,15,15{% endif %},0.65);
+						}
+					{% endif %}
+					*/
+				{% endif %}
+			{% endfor %}
 		</style>
 
 		{% comment %}
@@ -338,7 +331,7 @@
 
 			<div class="column-background-wrapper w-100 h-100 fixed top-0 left-0"><div class="column-background h-100"></div></div>
 
-			<article id="{{ page.url | replace: '/', ' ' | strip | replace: ' ', '-' | default: 'index' }}" class="yak-content pb5 mb3 lh-copy flex-auto">
+			<article id="{{ page.url | replace: '/', ' ' | strip | replace: ' ', '-' | default: 'index' }}" class="yak-{{ page.layout }} yak-content pb5 mb3 lh-copy flex-auto">
 				{{ content }}
 			</article>
 

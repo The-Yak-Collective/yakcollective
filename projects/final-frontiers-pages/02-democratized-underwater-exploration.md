@@ -1,7 +1,6 @@
 ---
-title: Democratized Underwater Exploration
 date: 2020-12-01 00:00:00
-hero_image: /projects/final-frontiers/02-democratized-underwater-exploration-1.jpg
+hero_image: /projects/final-frontiers-pages/02-democratized-underwater-exploration-1.jpg
 hero_attach_vertical: center
 hero_attach_horizontal: center
 author: rao-venkatesh
@@ -12,7 +11,7 @@ description: Consumer-priced ocean exploration products are just beginning to em
 {%
   include widget-image.html
   layout="right"
-  image="/projects/final-frontiers/02-democratized-underwater-exploration-1.jpg"
+  image="/projects/final-frontiers-pages/02-democratized-underwater-exploration-1.jpg"
   alt="Trident consumer submersible."
   caption="_Trident_ ($1695), state of the art consumer class submersible."
 %}
@@ -28,8 +27,8 @@ Companies like Sofar (created via merger of OpenROV and Spoondrift) now offer co
 {%
   include widget-image.html
   layout="center"
-  image="/projects/final-frontiers/02-democratized-underwater-exploration-2.png"
-  alt="The capability gap."
+  image="/projects/final-frontiers-pages/02-democratized-underwater-exploration-2.jpg"
+  alt="The capability gap…"
 %}
 
 **Consumer-scale products** have limited range, endurance, depth limit, modest sensor payload, low autonomy capabilities, and a limited stack.
@@ -41,8 +40,8 @@ Companies like Sofar (created via merger of OpenROV and Spoondrift) now offer co
 {%
   include widget-image.html
   layout="center"
-  image="/projects/final-frontiers/02-democratized-underwater-exploration-3.png"
-  alt="Dimensions of the capability gap."
+  image="/projects/final-frontiers-pages/02-democratized-underwater-exploration-3.jpg"
+  alt="Dimensions of the capability gap…"
 %}
 
 - **Political:** How do amateurs enter the playground of militaries and commercial shipping?
@@ -62,6 +61,6 @@ Companies like Sofar (created via merger of OpenROV and Spoondrift) now offer co
 {%
   include widget-image.html
   layout="center"
-  image="/projects/final-frontiers/02-democratized-underwater-exploration-4.png"
-  alt="The stack."
+  image="/projects/final-frontiers-pages/02-democratized-underwater-exploration-4.jpg"
+  alt="The stack…"
 %}
