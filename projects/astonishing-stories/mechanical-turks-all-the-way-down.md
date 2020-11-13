@@ -60,8 +60,6 @@ I jabbed the accept button on one of the many touch surfaces that suddenly poppe
 
 There was a low din of my five-year-old arguing again about what xe would or would not eat for breakfast. Thank god for the AR distraction-canceling face mask. It was cranked up to 98% reality canceling. With it on I could safely ignore the mounting skirmish between little Tovio and my partner.
 
-This was my second job today. A basic anniversary gig like I’d seen in the training. There were a lot of notes and I quickly scanned them for any red flags, but accepted immediately. Taking jobs fast shows good teamwork which means my teamwork score goes up which, algo willing, will lead to more lucrative jobs.
-
 {%
   include widget-image.html
   layout="right"
@@ -69,6 +67,8 @@ This was my second job today. A basic anniversary gig like I’d seen in the tra
   alt="Mechanical Turks All the Way Down"
   caption="Illustration by [Justice](/members/thelot-justice/)."
 %}
+
+This was my second job today. A basic anniversary gig like I’d seen in the training. There were a lot of notes and I quickly scanned them for any red flags, but accepted immediately. Taking jobs fast shows good teamwork which means my teamwork score goes up which, algo willing, will lead to more lucrative jobs.
 
 If I’m not in the algo’s top tier, we can’t afford the next level of healthcare we need. The raw number of medical claims sitting in my personal email could be felt through the unread count floating above it. Inhalers, lung rehabilitation treatments, microextracorporeal membrane oxygenation machines. The list doesn’t end.
 
