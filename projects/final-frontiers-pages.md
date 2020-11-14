@@ -6,10 +6,12 @@ roam_page: https://roamresearch.com/#/app/ArtOfGig/page/O12GM-bXp
 google_doc: https://docs.google.com/presentation/d/1zNjdVUgTuU7Xne1xcGz6e-j3sAoKAnqjGM8HKmLEosg/edit
 type: Report
 sequence: covid-19
-hero_image: /projects/final-frontiers-pages/final-frontiers.png
+hero_image: /projects/final-frontiers-pages/final-frontiers.svg
 page_headers: |
   <style type="text/css">
-    /* Custom CSS goes here. */
+    .hero {
+      background-size: auto !important;
+    }
   </style>
 summary: |
   In the 14th century, around the time of the Black Death, citizen explorers like Ibn Batuta and Petrarch planted the earliest seeds of democratized exploration culture. The 15th and 16th centuries, commonly regarded as the Age of Exploration, witnessed the voyages of Zheng He, Columbus, Vasco de Gama, and other explorers who relied on elite resources and royal patronage. By the 20th century, exploration had become accessible to the educated bourgeoisie, and institutional and state support catalyzed a vast increase in exploratory activity, culminating in the space programs of the US and USSR, as well as efforts like the International Geophysical Year (1957-1958). 
@@ -28,3 +30,7 @@ credits:
 {% include widget-project-header.html %}
 
 {% include widget-project-page-list.html %}
+
+## Additional Credits
+
+SVG graphics provided by [Hero Patterns](https://www.heropatterns.com/).
