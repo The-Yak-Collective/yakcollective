@@ -168,12 +168,12 @@
 				select,
 				footer,
 				.yak-nav,
-				.member-box,
 				.box-interior,
 				.column-background {
 					background-color: rgba({{ page.page_bg_color }},1.0);
 				}
 			{% endif %}
+
 			{% comment %}
 				Generate project-specific styles.
 			{% endcomment %}
@@ -218,18 +218,38 @@
 						{% else %}
 							color: rgba(15,15,15,1.0);
 						{% endif %}
-						{% if slide.page_text_color %}
+						{% if slide.page_bg_color %}
 							background-color: rgba({{ slide.page_bg_color }},1.0);
 						{% endif %}
 					}
-					/*
-					{% if slide.page_text_color == "black" or slide.page_text_color == "white" %}
+					#{{ slide_id }} input,
+					#{{ slide_id }} select {
+						{% if slide.page_text_color == "white" %}
+							color: rgba(255,255,255,1.0);
+							border-color: rgba(255,255,255,0.2);
+						{% else %}
+							color: rgba(15,15,15,1.0);
+							border-color: rgba(15,15,15,0.2);
+						{% endif %}
+						{% if slide.page_bg_color %}
+							background-color: rgba({{ slide.page_bg_color }},1.0);
+						{% endif %}
+					}
+					{% if slide.page_text_color %}
+						#{{ slide_id }} time,
+						#{{ slide_id }} details,
 						#{{ slide_id }} figcaption,
-						#{{ slide_id }} .slide-author{
-							color: rgba({% if slide.page_text_color == "white" %}255,255,255{% else %}15,15,15{% endif %},0.65);
+						#{{ slide_id }} .slide-author {
+							color: rgba({% if slide.page_text_color == "white" %}255,255,255{% else %}15,15,15{% endif %},0.8);
+						}
+						#{{ slide_id }} .image-border {
+							border-color: rgba({% if slide.page_text_color == "white" %}255,255,255{% else %}15,15,15{% endif %},0.2);
+						}
+						#{{ slide_id }} .submit,
+						#{{ slide_id }} .footnotes {
+							background-color: rgba({% if slide.page_text_color == "white" %}255,255,255{% else %}15,15,15{% endif %},0.05);
 						}
 					{% endif %}
-					*/
 				{% endif %}
 			{% endfor %}
 		</style>
@@ -320,12 +340,12 @@
 					<div class="dib yak-logo-image"></div>
 				</a>
 				<div class="db dtc-l v-mid w-100 w-90-l tc tr-l">
-					<a class="link dib mv2 mr4" href="/projects/">Projects</a>
-					<a class="link dib mv2 mr4" href="/writings/">Writings</a>
-					<a class="link dib mv2 mr4" href="/members/">Members</a>
-					<a class="link dib mv2 mr4" href="https://yakcollective.substack.com/">Newsletter</a>
-					<a class="link dib mv2 mr4" href="/about/">About</a>
-					<a class="link dib mv2 mr4" href="/join/">Join</a>
+					<a class="link dib mv2 mh3" href="/projects/">Projects</a>
+					<a class="link dib mv2 mh3" href="/writings/">Writings</a>
+					<a class="link dib mv2 mh3" href="/members/">Members</a>
+					<a class="link dib mv2 mh3" href="https://yakcollective.substack.com/">Newsletter</a>
+					<a class="link dib mv2 mh3" href="/about/">About</a>
+					<a class="link dib mv2 mh3" href="/join/">Join</a>
 				</div>
 			</nav>
 

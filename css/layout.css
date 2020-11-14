@@ -9,6 +9,9 @@ html {
 
 body {
 	font-family: "Noto Serif", Georgia, serif;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 	z-index: -10;
 }
 
@@ -47,6 +50,7 @@ details,
 figcaption,
 .footnotes,
 .page-info,
+.slide-nav,
 .author-bio,
 .slide-author,
 #markdown-toc {
@@ -86,6 +90,8 @@ a.yak-logo .yak-logo-image {
 }
 
 .yak-content blockquote {
+	margin-inline-start: auto;
+	margin-inline-end: auto;
 	padding-inline-start: 3rem;
 	padding-inline-end: 3rem;
 }
@@ -149,15 +155,25 @@ a.yak-logo .yak-logo-image {
 	padding: var(--content-padding);
 }
 
-.yak-content .full-bleed-box {
+.yak-content .full-bleed-box,
+.yak-page-project-slide .yak-slide-wrapper.full-bleed-box {
 	display: block;
 	margin-top: calc(-1 * var(--content-padding));
 	margin-bottom: calc(-1 * var(--content-padding));
 	width: 100%;
 }
 
-.yak-content .full-bleed-box .box-interior {
+.yak-content .full-bleed-box .box-interior,
+.yak-page-project-slide .yak-slide-wrapper.full-bleed-box .box-interior {
 	padding: var(--content-padding) 0;
+}
+
+.yak-slide-wrapper.full-bleed-box {
+	margin: 0;
+}
+
+.yak-slide-wrapper.full-bleed-box .box-interior {
+	padding: 0;
 }
 
 .yak-content .box-interior .yak-content > * {
@@ -325,9 +341,25 @@ h2#featured-yak {
 	flex: 1 1 auto;
 }
 
+.slide-image-left,
+.slide-image-right {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.slide-image-left {
+	flex-direction: column;
+}
+
+.slide-image-right {
+	flex-direction: column-reverse;
+}
+
 .slide-image-left .slide-image,
 .slide-image-right .slide-image {
-	width: min(var(--content-width), 100% - (2 * var(--content-padding)));
+	width: min(var(--content-width), 100% - (3 * var(--content-padding)));
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -337,7 +369,11 @@ h2#featured-yak {
 }
 
 .slide-content {
-	width: min(var(--content-width), 100% - (2 * var(--content-padding)));
+	width: min(var(--content-width), 100% - (3 * var(--content-padding)));
 	margin-left: auto;
 	margin-right: auto;
+}
+
+.slide-author {
+	margin-bottom: 0;
 }

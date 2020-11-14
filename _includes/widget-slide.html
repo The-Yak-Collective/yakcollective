@@ -8,18 +8,6 @@
 		attribute instead (and fall back to `left` if nothing is
 		specified).
 
-		`standalone`
-		OPTIONAL truthy/falsy parameter that indicates whether slide
-		should be considered as being on its own page (truthy) or
-		whether it should be considered as embedded on another page
-		(falsy). Really should only be set to `true` in the
-		`page-project-slide.html` layout; I can't imagine another use
-		case. When truthy, a navigation bar for other slides for the
-		current project is displayed and an `<h1/>` header is used for
-		the slide title. When falsy, no navigation is displayed, an
-		`<h2/>` header is used for the title, and the title is linked to
-		the actual slide page.
-
 		`slide`
 		An object containing the relevant slide information (basically,
 		an element of `site.pages` that lives in the project-appropriate
@@ -33,10 +21,8 @@
 	Determine how we should position the slide "hero" image.
 {% endcomment %}
 {% assign image_position = "left" %}
-{% assign force_layout = false %}
 {% if include.image_position %}
 	{% assign image_position = include.image_position %}
-	{% assign force_layout = true %}
 {% elsif include.slide.hero_image %}
 	{% if include.slide.hero_position %}
 		{% assign image_position = include.slide.hero_position %}
@@ -47,14 +33,17 @@
 {% if image_position != "left" and image_position != "right" and image_position != "none" %}
 	{% assign image_position = "left" %}
 {% endif %}
+{% unless include.slide.hero_image %}
+	{% assign image_position = "none" %}
+{% endunless %}
 
 {% comment %}
 	Push out slide content. Weird indenting is necessary so as not to
 	mess with Kramdown's indentation expectations.
 {% endcomment %}
 {% capture the_content %}
-<div{% if page.layout != "page-project-slide" %} id="{{ include.slide.url | replace: '/', ' ' | strip | replace: ' ', '-' }}"{% endif %} class="slide-image-{{ image_position }}">
-	<div class="slide-image {% if page.layout != "page-project-slide" %}mv3{% else %}mb3{% endif %}">
+<div{% if page.layout != "page-project-slide" %} id="{{ include.slide.url | replace: '/', ' ' | strip | replace: ' ', '-' }}"{% endif %} class="slide-image-{{ image_position }} cf">
+	<div class="slide-image {% if image_position == 'left' %}mt5 mb0 mv5-l{% elsif image_position == 'right' %}mt0 mb5 mv5-l{% endif %}">
 		{% if include.slide.hero_image and image_position != "none" %}
 			<figure class="ma0">
 				<img src="{{ include.slide.hero_image }}"{% if include.slide.hero_description %} alt="{{ include.slide.hero.description | markdownify | strip_html | strip }}"{% endif %}{% if include.slide.hero_border %} class="image-border ba"{% endif %}>
@@ -66,8 +55,8 @@
 			</figure>
 		{% endif %}
 	</div>
-	<div class="slide-content {% if page.layout != "page-project-slide" %}mv3{% else %}mb3{% endif %}">
-		{% if include.standalone %}
+	<div class="slide-content mb5">
+		{% if page.layout == "page-project-slide" %}
 			<h1>{{ include.slide.title | markdownify }}</h1>
 		{% else %}
 			<h2><a href="{{ include.slide.url }}">{{ include.slide.title | markdownify }}</a></h2>
@@ -86,61 +75,3 @@
 </div>
 {% endcapture %}
 {% include widget-breakout-box.html layout="full-bleed" extra_class="yak-slide-wrapper" content=the_content %}
-
-{% comment %}
-	Slide navigation (only displayed on stand-alone pages).
-{% endcomment %}
-{% if include.standalone %}
-	{% comment %}
-		Figure out the current project ID and project page.
-	{% endcomment %}
-	{% assign path_array = page.url | replace: "/", " " | strip | split: " " %}
-	{% assign project_id = path_array[1] %}
-	{% assign project_url = "/projects/" | append: project_id | append: "/" %}
-	{% assign project = site.pages | find: "url", project_url %}
-
-	{% comment %}
-		Generate a list of project pages associated with the current
-		project.
-	{% endcomment %}
-	{% assign project_slides = "" | split: "" %}
-	{% for the_page in site.pages %}
-		{% if the_page.layout == "page-project-slide" %}
-			{% assign path_array = the_page.url | replace: "/", " " | strip | split: " " %}
-			{% if path_array[1] == project_id %}
-				{% assign project_slides = project_slides | push: the_page %}
-			{% endif %}
-		{% endif %}
-	{% endfor %}
-	{% assign project_slides = project_slides | sort: "url" | sort: "date" %}
-
-	{% comment %}
-		Find next and previous slides.
-	{% endcomment %}
-	{% assign current_slide_index = 0 %}
-	{% for the_slide in project_slides %}
-		{% if the_slide.url == page.url %}
-			{% break %}
-		{% else %}
-			{% assign current_slide_index = current_slide_index | plus: 1 %}
-		{% endif %}
-	{% endfor %}
-	{% for the_slide in project_slides limit: current_slide_index %}
-		{% unless the_slide.hidden %}
-			{% assign previous_slide = the_slide %}
-		{% endunless %}
-	{% endfor %}
-	{% assign next_slide_search_start = current_slide_index | plus: 1 %}
-	{% for the_slide in project_slides offset: next_slide_search_start %}
-		{% unless the_slide.hidden %}
-			{% assign next_slide = the_slide %}
-			{% break %}
-		{% endunless %}
-	{% endfor %}
-
-	<div class="slide-nav tc pb3">
-		{% if previous_slide %}<a href="{{ previous_slide.url }}">{% else %}<span class="o-40">{% endif %}&lt; Previous{% if previous_slide %}</a>{% else %}</span>{% endif %}
-		| <a href="{{ project.url }}">Project</a> |
-		{% if next_slide %}<a href="{{ next_slide.url }}">{% else %}<span class="o-40">{% endif %}Next &gt;{% if next_slide %}</a>{% else %}</span>{% endif %}
-	</div>
-{% endif %}

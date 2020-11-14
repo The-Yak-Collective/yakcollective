@@ -39,6 +39,6 @@
 {% if project_slides.size > 0 %}
 	{% assign ps_last = project_slides.last %}
 	{% for ps in project_slides %}
-		{% include widget-slide.html layout="left" slide=ps %}
+		{% include widget-slide.html image_position="left" slide=ps %}
 	{% endfor %}
 {% endif %}

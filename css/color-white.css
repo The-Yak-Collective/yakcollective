@@ -1,9 +1,6 @@
 body {
 	color: rgba(15,15,15,1.0);
 	background-color: rgba(255,255,255,1.0);
-	text-rendering: optimizeLegibility;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
 }
 
 .yak-nav,
