@@ -5,6 +5,7 @@ body {
 
 .yak-nav,
 .box-interior,
+.yak-nav-wrapper,
 .column-background {
 	background-color: rgba(15,15,15,1.0);
 }

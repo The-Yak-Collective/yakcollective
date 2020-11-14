@@ -14,7 +14,7 @@
 {% endcomment %}
 
 <div id="{{ include.project.url | replace: '/', ' ' | strip | split: ' ' | last }}-box" class="mv4">
-	<a href="{{ include.project.url }}" class="project-box db ba relative">
+	<{% if include.project.date <= site.time or site.future == true %}a href="{{ include.project.url }}"{% else %}div{% endif %} class="project-box db ba relative">
 		<div class="w-50">
 			{% if include.project.type %}<div class="smaller lh-title fw9 mv0 pt1 bt bw1 ph2 sans-serif ttu silent-link">{{ include.project.type }}</div>{% endif %}
 			{% if include.project.title %}<h2 class="ph2 fw8 f3 lh-solid pt4 pb1 mb1 mt4 pseudo-link">{{ include.project.title }}</h2>{% endif %}
@@ -44,5 +44,5 @@
 
 		</div>
 		<div class="w-50 h-100 absolute top-0 right-0 bl hero"></div>
-	</a>
+	</{% if include.project.date <= site.time or site.future == true %}a{% else %}div{% endif %}>
 </div>

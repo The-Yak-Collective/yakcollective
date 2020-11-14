@@ -169,6 +169,7 @@
 				footer,
 				.yak-nav,
 				.box-interior,
+				.yak-nav-wrapper,
 				.column-background {
 					background-color: rgba({{ page.page_bg_color }},1.0);
 				}
@@ -335,19 +336,22 @@
 
 		<div class="fill-space flex flex-auto flex-column">
 
-			<nav class="yak-nav db dt-l w-100 border-box pa3 ph5-l mw9 center">
-				<a class="yak-logo link db dtc-l v-mid w-100 w-10-l tc tl-l mb1 mb0-l" href="/" title="{{ site.name }}">
-					<div class="dib yak-logo-image"></div>
-				</a>
-				<div class="db dtc-l v-mid w-100 w-90-l tc tr-l">
-					<a class="link dib mv2 mh3" href="/projects/">Projects</a>
-					<a class="link dib mv2 mh3" href="/writings/">Writings</a>
-					<a class="link dib mv2 mh3" href="/members/">Members</a>
-					<a class="link dib mv2 mh3" href="https://yakcollective.substack.com/">Newsletter</a>
-					<a class="link dib mv2 mh3" href="/about/">About</a>
-					<a class="link dib mv2 mh3" href="/join/">Join</a>
-				</div>
-			</nav>
+			<div class="yak-nav-wrapper w-100">
+				<nav class="yak-nav db dt-l w-100 border-box pa3 ph5-l mw9 center">
+					<a class="yak-logo link db dtc-l v-mid w-100 w-10-l tc tl-l mb1 mb0-l" href="/" title="{{ site.name }}">
+						<div class="dib yak-logo-image"></div>
+					</a>
+					<div class="db dtc-l v-mid w-100 w-90-l tc tr-l">
+						<a class="link dib mv2 mh3" href="/members/">Members</a>
+						<a class="link dib mv2 mh3" href="/projects/">Projects</a>
+						<a class="link dib mv2 mh3" href="/writings/">Writings</a>
+						<a class="link dib mv2 mh3" href="https://yakcollective.substack.com/">Newsletter</a>
+						<a class="link dib mv2 mh3" href="/about/">About</a>
+						<a class="link dib mv2 mh3" href="/now/">Now</a>
+						<a class="link dib mv2 mh3" href="/join/">Join</a>
+					</div>
+				</nav>
+			</div>
 
 			<div class="column-background-wrapper w-100 h-100 fixed top-0 left-0"><div class="column-background h-100"></div></div>
 
