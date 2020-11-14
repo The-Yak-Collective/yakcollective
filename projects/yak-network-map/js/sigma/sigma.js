@@ -651,7 +651,7 @@ sigma.classes.EventDispatcher = function () {
             b.shadowOffsetY = 0;
             b.shadowBlur = 0;
             b.fillStyle = "node" == j.p.labelHoverColor ? a.color || j.p.defaultNodeColor : j.p.defaultLabelHoverColor;
-            b.fillText(a.label, h + 4, g + m - 3);//this is where the label is shown on the element (maier)
+            b.fillText(a.label, h + 4, g + m - 3);
             return j
         }
         function m(a) {
@@ -868,7 +868,7 @@ sigma.classes.EventDispatcher = function () {
             b.fill();
             b.fillStyle = "node" == j.p.labelActiveColor ? a.color || j.p.defaultNodeColor : j.p.defaultLabelActiveColor;
             b.fillText(a.label, Math.round(a.displayX + 1.5 * a.displaySize), Math.round(a.displayY + d / 2 - 3));
-            return j //note two lines above could change what text is shown. does not seem to work though. maybe whole function can be overloaded (maier)
+            return j
         };
         this.drawHoverNode = l;
         this.isOnScreen = m;

@@ -9,17 +9,17 @@
   },
   "text": {
     "title": "Yak Network Map",
-    "intro": "<p>The <em>Yak Network Map</em> is an internal experiment for active yaks who share common domain-interest(s). Learn more about this project in the <a href='https://discord.com/channels/692111190851059762/722840198320357496'>#yak-network-map</a> channel on the <a href='/join/'>Yak Collective Discord server</a>.</p>",
-    "more": "<p>Hover on a node to see its connections (visible nodes); the rest of the map will get hidden.</p><p>Node color signifies the openness of the yak for receiving DMs:</p><p>Green: DMs open for collaboration opportunities.<br>Yellow: DMs open for starting conversation.<br>Blue: Prefer to not receive unsolicited DMs.</p>Thick edge signifies multiple shared-interests between yaks.</p><p>Additional SVG graphics provided by <a href='https://www.heropatterns.com/'>Hero Patterns</a>.</p>"
+    "intro": "<p>The <em>Yak Network Map</em> displays shared domain-interests among active yaks, to encourage new 1:1 connections. Learn more about this project in the <a href='https://discord.com/channels/692111190851059762/722840198320357496'>#yak-network-map</a> channel on the <a href='/join/'>Yak Collective Discord server</a>.</p>",
+    "more": "<p>Hover on a node to see its connections (visible nodes); the rest of the map will get hidden.</p><p>Node color signifies the openness of the node (yak) for receiving DMs:</p><p>Green: DMs open for collaboration opportunities.<br>Yellow: DMs open for starting conversation.<br>Blue: Prefer to not receive unsolicited DMs.</p>Thick edge signifies multiple shared-interests between yaks.</p><p>Additional SVG graphics provided by <a href='https://www.heropatterns.com/'>Hero Patterns</a>.</p>"
   },
   "legend": {
     "edgeLabel": "connections",
-    "colorLabel": "DM-openness level",
+    "colorLabel": "Openness for DMs",
     "nodeLabel": "yaks"
   },
   "features": {
     "search": true,
-    "groupSelectorAttribute": "color",
+    "groupSelectorAttribute": "yakmap domain 1",
     "hoverBehavior": "dim"
   },
   "informationPanel": {
