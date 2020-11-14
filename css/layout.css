@@ -97,51 +97,7 @@ a.yak-logo .yak-logo-image {
 }
 
 .yak-content .left-box,
-.yak-content .right-box {
-	display: block;
-	width: calc(
-		(
-			100% - min(
-				var(--content-width),
-				100% - (2 * var(--content-padding))
-			) + min(
-				var(--content-width) / 2,
-				50% - (2 * var(--content-padding))
-			)
-		) / 2
-	);
-	min-width: min(
-		(var(--content-width) / 2) + (2 * var(--content-padding)),
-		100%
-	);
-	margin-top: calc(-0.75 * var(--content-padding));
-}
-
-.yak-content .left-box .box-interior,
-.yak-content .right-box .box-interior {
-	width: min(
-		(var(--content-width) / 2) + (2 * var(--content-padding)),
-		100%
-	);
-	padding: var(--content-padding);
-}
-
-.yak-content .left-box {
-	float: left;
-}
-
-.yak-content .left-box .box-interior {
-	float: right;
-}
-
-.yak-content .right-box {
-	float: right;
-}
-
-.yak-content .right-box .box-interior {
-	float: left;
-}
-
+.yak-content .right-box,
 .yak-content .center-box {
 	display: block;
 	width: min((1.5 * var(--content-width)) + (4 * var(--content-padding)), 100%);
@@ -151,6 +107,8 @@ a.yak-logo .yak-logo-image {
 	margin-right: auto;
 }
 
+.yak-content .left-box .box-interior,
+.yak-content .right-box .box-interior,
 .yak-content .center-box .box-interior {
 	padding: var(--content-padding);
 }
