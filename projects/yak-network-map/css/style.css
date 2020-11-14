@@ -21,7 +21,6 @@
 	height: 100%;
 	top: 0;
 	left: 0;
-	background-color: #eee;
 	background-position: center center;
 	background-repeat: no-repeat;
 	-webkit-touch-callout: none;
@@ -114,7 +113,6 @@ float: left;
 #attributepane .nodeattributes {
 	display:block;
 	height:85%;
-	overflow-y: scroll;
 	overflow-x: hidden;
 	border-bottom:1px solid #999;
 }
@@ -200,7 +198,7 @@ margin-right:10px;
 }
 
 #mainpanel {
-margin-top: 50px;
+margin-top: 25px;
 margin-left: 25px;
 background:#fff;
 background-color:rgba(255,255,255,0.8);
@@ -267,10 +265,7 @@ background-position: -11px -13px;
 
 #search .results {
 	display: none;
-/*	border: 1px solid #999;*/
 	margin: 6px;
-	/*height: 150px;*/
-	overflow-y: scroll;
 	overflow-x: hidden;
 }
 
@@ -323,12 +318,8 @@ background-position: 200px -8px;
 	padding: 6px;
 	height: 150px;
 	width: 226px;
-	overflow-y: scroll;
 	overflow-x: hidden;
 	background-color: #999;
-	/*position: relative;
-		left: 240px;
-		bottom: 164px;*/
 	position:absolute;
 	margin-left: 240px;
 	margin-top:-164px;
