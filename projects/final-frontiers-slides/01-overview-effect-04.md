@@ -7,8 +7,6 @@ hero_border: false
 hero_desciption: |
   Other potential sources of overview-like effects.
 hero_position: left
-page_text_color: black
-page_bg_color: "255,255,255"
 author: hogan-ryan
 description: Current explorations/signals…
 ---

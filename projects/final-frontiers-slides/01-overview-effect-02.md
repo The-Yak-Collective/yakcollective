@@ -9,8 +9,6 @@ hero_desciption: |
 hero_caption: |
   [NASA](https://www.nasa.gov/topics/earth/images/index.html)
 hero_position: right
-page_text_color: black
-page_bg_color: "255,255,255"
 author: hogan-ryan
 description: By the year 2050, over 1 million humans had experienced some form of the Overview Effect.
 ---

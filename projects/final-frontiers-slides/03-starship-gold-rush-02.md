@@ -7,8 +7,6 @@ hero_border: true
 hero_desciption: |
   A lunar colony.
 hero_position: right
-page_text_color: black
-page_bg_color: "255,255,255"
 author: bilsland-charlie
 description: In the first year of this new decade, the US has gained strategic control of the orbital environment, as well as tactical control of Shackleton Crater on the South Pole of the moon.
 ---

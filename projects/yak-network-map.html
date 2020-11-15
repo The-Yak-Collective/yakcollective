@@ -17,8 +17,40 @@ page_headers: |
   <link rel="stylesheet" href="/projects/yak-network-map/js/fancybox/jquery.fancybox.css" />
   <link rel="stylesheet" href="/projects/yak-network-map/css/style.css" />
   <style type="text/css">
+    #projects-yak-network-map {
+      margin-bottom: 0;
+      padding-bottom: 1rem;
+      line-height: 1.25;
+    }
     #yak-network-map-container {
       margin: 0;
+      font-size: calc(0.8 * 1rem);
+    }
+    #yak-network-map-container dl {
+      margin: 0;
+    }
+    #yak-network-map-container h1,
+    #yak-network-map-container h2,
+    #yak-network-map-container h3,
+    #yak-network-map-container h4,
+    #yak-network-map-container h5,
+    #yak-network-map-container h6 {
+      margin: initial;
+    }
+    #mainpanel {
+      position: absolute;
+      margin-top: 0;
+      margin-left: 1.5rem;
+    }
+    #zoom {
+      position: absolute;
+      left: auto;
+      right: 1.5rem;
+      bottom: 1.5rem;
+    }
+    #copyright,
+    #developercontainer {
+      display: none;
     }
     .sigma-expand { /* Why do I need to use .sigma-expand here instead of #yak-network-map-container?*/
       height: calc(100% + 1rem); /* To cancel out the 1rem margin of the main <article/> */

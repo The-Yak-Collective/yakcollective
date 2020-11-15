@@ -71,7 +71,7 @@ a.yak-logo .yak-logo-image {
 	position: relative;
 }
 
-.yak-content > *:not(.left-box):not(.right-box):not(.center-box):not(.full-bleed-box) {
+.yak-content > *:not(.left-box):not(.right-box):not(.center-box):not(.full-bleed-box):not(#yak-network-map-container) {
 	max-width: min(var(--content-width), 100% - (2 * var(--content-padding)));
 	margin-left: auto;
 	margin-right: auto;

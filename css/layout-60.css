@@ -16,7 +16,7 @@
 	width: min(var(--content-width-l) + (2 * var(--content-padding)), 100%);
 }
 
-.yak-content > *:not(.left-box):not(.right-box):not(.center-box):not(.full-bleed-box) {
+.yak-content > *:not(.left-box):not(.right-box):not(.center-box):not(.full-bleed-box):not(#yak-network-map-container) {
 	max-width: min(var(--content-width-l), 100% - (2 * var(--content-padding)));
 }
 
