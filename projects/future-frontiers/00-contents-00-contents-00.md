@@ -14,6 +14,7 @@ description: Contents…
 <h2 class="slide-deck-visible-anchor"><a href="#projects-future-frontiers-00-contents-00-contents-00">Contents</a></h2>
 
 - **[Philosophy](#philosophy)**
+  - [On Horizons](#projects-future-frontiers-01-philosophy-01-on-horizons-01)
   - [Overview Effect](#projects-future-frontiers-01-philosophy-02-overview-effect-01)
 - **[Trends](#trends)**
   - [Democratized Underwater Exploration](#projects-future-frontiers-02-trends-01-democratized-underwater-exploration-01)

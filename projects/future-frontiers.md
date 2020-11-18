@@ -24,6 +24,12 @@ page_headers: |
     #philosophy {
       margin-top: 0;
     }
+    #projects-future-frontiers-01-philosophy-01-on-horizons-02,
+    #projects-future-frontiers-01-philosophy-01-on-horizons-03 {
+      border-color: rgba(15,15,15,0.2);
+      border-top-style: solid;
+      border-top-width: 1px;
+    }
     #projects-future-frontiers-01-philosophy-02-overview-effect-02,
     #projects-future-frontiers-01-philosophy-02-overview-effect-03,
     #projects-future-frontiers-01-philosophy-02-overview-effect-04,
