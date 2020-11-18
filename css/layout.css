@@ -203,7 +203,7 @@ h4 a,
 h5 a,
 h6 a {
 	color: inherit !important;
-	text-decoration-line: none !important;
+	text-decoration-line: none;
 	opacity: 1.0 !important;
 }
 
@@ -213,7 +213,7 @@ h3 a:hover,
 h4 a:hover,
 h5 a:hover,
 h6 a:hover {
-	text-decoration-line: underline !important;
+	text-decoration-line: underline;
 }
 
 /* Copied from: https://css-tricks.com/scaled-proportional-blocks-with-css-and-javascript/ */
@@ -300,7 +300,6 @@ a.project-page-box:hover .pseudo-link {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	align-items: center;
 }
 
 .slide-image-left {
@@ -311,8 +310,10 @@ a.project-page-box:hover .pseudo-link {
 	flex-direction: column-reverse;
 }
 
+.slide-content,
 .slide-image-left .slide-image,
-.slide-image-right .slide-image {
+.slide-image-right .slide-image,
+.yak-slide-deck-section-header .slide-deck-visible-anchor {
 	width: min(var(--content-width), 100% - (3 * var(--content-padding)));
 	margin-left: auto;
 	margin-right: auto;
@@ -322,12 +323,52 @@ a.project-page-box:hover .pseudo-link {
 	display: none;
 }
 
-.slide-content {
-	width: min(var(--content-width), 100% - (3 * var(--content-padding)));
-	margin-left: auto;
-	margin-right: auto;
+.slide-content *:first-child {
+	margin-top: 0;
 }
 
-.slide-author {
-	margin-bottom: 0;
+.full-bleed-box.yak-slide-deck-section-header {
+	margin-top: 0;
+}
+
+.full-bleed-box.yak-slide-deck-section-header .box-interior {
+	padding-top: 0;
+}
+
+h1.slide-deck-visible-anchor a,
+h1.slide-deck-visible-anchor a:hover,
+h2.slide-deck-visible-anchor a,
+h2.slide-deck-visible-anchor a:hover,
+h3.slide-deck-visible-anchor a,
+h3.slide-deck-visible-anchor a:hover,
+h4.slide-deck-visible-anchor a,
+h4.slide-deck-visible-anchor a:hover,
+h5.slide-deck-visible-anchor a,
+h5.slide-deck-visible-anchor a:hover,
+h6.slide-deck-visible-anchor a,
+h6.slide-deck-visible-anchor a:hover {
+	text-decoration-line: none;
+}
+
+.slide-deck-visible-anchor {
+	width: 100%;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	padding-bottom: 0.25rem;
+}
+
+.slide-deck-visible-anchor a:after {
+	font-family: "Font Awesome 5 Free";
+	font-weight: 900;
+	content: " \f0c1";
+	white-space: pre;
+	opacity: 0;
+}
+
+.slide-deck-visible-anchor a:hover:after {
+	opacity: 0.4;
+}
+
+.slide-content .slide-deck-visible-anchor {
+	margin-top: -0.5rem;
 }

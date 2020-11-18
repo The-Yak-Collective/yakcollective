@@ -1,9 +1,70 @@
 {% comment %}
-	"Idle Words" style "infinity" slide deck.
+	"Idle Words" style "infinity" slide deck. Accepts a couple of
+	parameters that are passed to every slide as overrides (if present):
+
+		`hero_align`
+		Force the slide image to be aligned to the `top`, `bottom`, or
+		`center` of the slide.
+
+		`hero_position`
+		Force the slide image to be `left` or `right`.
+
+		`hide_title`
+		Truthy/Falsy Liquid value that causes the slide title to not be
+		displayed if set (useful if you want to use the deck layout, but
+		aren't *actually* creating a deck).
+
+		`hide_author`
+		Truthy/Falsy Liquid value that causes slide authors to be
+		hidden (again, useful if you want to use the deck layout to do
+		something that isn't actually a deck).
+
+	Finally, slides can be grouped into sections by passing in the
+	truthy/falsy Liquid variable `use_groupings`. When this is set,
+	the slide deck widget will group slides using a `section` attribute.
+	Whenever this attribute changes, a new `<h2/>` tag will be
+	generated. Slide `section` attributes that are set to `-` will be
+	ignored (treated as unset or identical to the previous value of that
+	attribute); this is primarily useful for creating an "introductory"
+	sequence without a special heading. When `use_groupings` is truthy,
+	both `hide_author` and `hide_title` will be automatically set; if
+	you want to display this information, you must do so manually within
+	the context of the deck itself.
 
 	Note that this widget outputs HTML in a safe way, and is thus
 	suitable for inclusion in both Markdown and HTML pages.
 {% endcomment %}
+
+{% comment %}
+	Since we can't pass unset variables along (what would that mean,
+	anyway), we set `hero_align`, `hero_position`, `hide_title`, and
+	`hide_author` to "-" if the corresponding `include` attribute is
+	unset.
+{% endcomment %}
+{% if include.hero_align %}
+	{% assign hero_align = include.hero_align %}
+{% else %}
+	{% assign hero_align = "-" %}
+{% endif %}
+{% if include.hero_position %}
+	{% assign hero_position = include.hero_position %}
+{% else %}
+	{% assign hero_position = "-" %}
+{% endif %}
+{% if include.hide_title %}
+	{% assign hide_title = include.hide_title %}
+{% elsif include.use_groupings %}
+	{% assign hide_title = true %}
+{% else %}
+	{% assign hide_title = "-" %}
+{% endif %}
+{% if include.hide_author %}
+	{% assign hide_author = include.hide_author %}
+{% elsif include.use_groupings %}
+	{% assign hide_author = true %}
+{% else %}
+	{% assign hide_author = "-" %}
+{% endif %}
 
 {% comment %}
 	Set the current project.
@@ -35,10 +96,24 @@
 {% comment %}
 	Output project slides (if they exist). We force the image layout to
 	be identical for all slides in order to assist formatting.
+
+	FIXME: The initial values of the `current_text_color` and
+	`current_bg_color` variables should follow the page dark/light
+	theme. They also shouldn't be hard-coded here.
 {% endcomment %}
 {% if project_slides.size > 0 %}
-	{% assign ps_last = project_slides.last %}
+	{% assign current_section = "-" %}
+	{% assign current_title = "-" %}
+	{% assign current_text_color = "-" %}
+	{% assign current_bg_color = "-" %}
 	{% for ps in project_slides %}
-		{% include widget-slide.html image_position="left" slide=ps %}
+		{% if ps.section %}
+			{% if ps.section != "-" and ps.section != current_section %}
+				{% assign current_section = ps.section %}
+				{% capture the_content %}<h2 id="{{ current_section | slugify }}" class="slide-deck-visible-anchor mv5"><a href="#{{ current_section | slugify }}">{{ current_section }}</a></h2>{% endcapture %}
+				{% include widget-breakout-box.html layout="full-bleed" extra_class="yak-slide-deck-section-header" content=the_content %}
+			{% endif %}
+		{% endif %}
+		{% include widget-slide.html hero_align=hero_align hero_position=hero_position hide_title=hide_title hide_author=hide_author slide=ps %}
 	{% endfor %}
 {% endif %}

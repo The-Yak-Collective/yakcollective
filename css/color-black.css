@@ -52,7 +52,8 @@ a.yak-logo .yak-logo-image {
 .project-box,
 .project-box .hero,
 .project-page-box,
-.project-page-box .hero {
+.project-page-box .hero,
+.slide-deck-visible-anchor {
 	border-color: rgba(255,255,255,0.2);
 }
 

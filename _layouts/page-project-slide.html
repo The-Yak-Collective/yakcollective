@@ -58,8 +58,8 @@ layout: default
 	{% endunless %}
 {% endfor %}
 
-<div class="slide-nav tc pb3">
-	{% if previous_slide %}<a href="{{ previous_slide.url }}">{% else %}<span class="o-40">{% endif %}&lt; Previous{% if previous_slide %}</a>{% else %}</span>{% endif %}
-	| <a href="{{ project.url }}">Project</a> |
-	{% if next_slide %}<a href="{{ next_slide.url }}">{% else %}<span class="o-40">{% endif %}Next &gt;{% if next_slide %}</a>{% else %}</span>{% endif %}
+<div class="slide-nav tc">
+	{% if previous_slide %}<a href="{{ previous_slide.url }}" class="link{% else %}<span class="o-40{% endif %} dib f4 pa3" title="Previous"><i class="fas fa-arrow-left"></i>{% if previous_slide %}</a>{% else %}</span>{% endif %}
+	<a href="{{ project.url }}" class="link dib f4 pa3" title="Project Page"><i class="fas fa-home"></i></a>
+	{% if next_slide %}<a href="{{ next_slide.url }}" class="link{% else %}<span class="o-40{% endif %} dib f4 pa3" title="Next"><i class="fas fa-arrow-right"></i>{% if next_slide %}</a>{% else %}</span>{% endif %}
 </div>

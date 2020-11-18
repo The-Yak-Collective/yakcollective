@@ -247,7 +247,9 @@
 						#{{ slide_id }} .slide-author {
 							color: rgba({% if slide.page_text_color == "white" %}255,255,255{% else %}15,15,15{% endif %},0.8);
 						}
-						#{{ slide_id }} .image-border {
+						#{{ slide_id }} .member-box,
+						#{{ slide_id }} .image-border,
+						#{{ slide_id }} .slide-deck-visible-anchor {
 							border-color: rgba({% if slide.page_text_color == "white" %}255,255,255{% else %}15,15,15{% endif %},0.2);
 						}
 						#{{ slide_id }} .submit,
