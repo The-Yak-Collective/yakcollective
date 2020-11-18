@@ -16,6 +16,7 @@ page_headers: |
       padding-top: 0.5rem;
       padding-bottom: 0.5rem;
     }
+    #projects-future-frontiers-01-philosophy-01-on-horizons-02 .slide-image,
     #projects-future-frontiers-01-philosophy-02-overview-effect-05 .slide-image,
     #projects-future-frontiers-02-trends-01-democratized-underwater-exploration-05 .slide-image,
     #projects-future-frontiers-03-exploitation-01-starship-gold-rush-03 .slide-image {
@@ -48,6 +49,7 @@ page_headers: |
         padding-top: 2rem;
         padding-bottom: 2rem;
       }
+      #projects-future-frontiers-01-philosophy-01-on-horizons-02 .slide-image,
       #projects-future-frontiers-01-philosophy-02-overview-effect-05 .slide-image,
       #projects-future-frontiers-02-trends-01-democratized-underwater-exploration-05 .slide-image,
       #projects-future-frontiers-03-exploitation-01-starship-gold-rush-03 .slide-image {
