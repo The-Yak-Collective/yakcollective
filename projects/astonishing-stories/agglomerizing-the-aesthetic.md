@@ -1,5 +1,5 @@
 ---
-date: 2020-11-20 00:00:00
+date: 2020-11-27 00:00:00
 hero_image: /projects/astonishing-stories/agglomerizing-the-aesthetic.jpg
 hero_attach_vertical: center
 hero_attach_horizontal: center
