@@ -4,7 +4,7 @@ hero_image: /projects/astonishing-stories/out-of-the-loop.jpg
 hero_attach_vertical: center
 hero_attach_horizontal: center
 author: benny-sachin
-google_doc: https://docs.google.com/document/d/1ypHVOPVaIv-XLi8RxXVM77XIdwEy266-viriWmlBNAg/edit
+google_doc: https://docs.google.com/document/d/1989Uffl2bLLia75bX9_EOFpUesuUZ7eZpcr56SA6Clg/edit
 description: He decided then that it was time for him to untangle this mess because no way he was getting laid without a neat graph of thoughts — manufactured or otherwise.
 hidden: false
 page_headers: |
@@ -103,13 +103,12 @@ Vijayan had spent most of the pandemic in his room, staring at the wall, imagini
 
 His father had said that Vijayan should stay in his room at all times, which now meant all the fucking time. That’s apparently what happens when you are just a B student in school. He knew something was wrong with where he was and what was happening to him, but he could never put his finger on exactly what. His father was a well-respected man at work and among family, so clearly something must be horribly wrong with himself, Vijayan thought. He tried to pray on it, thinking of the immigrant kids in cages on the border. If he tried hard, he could empathize with them and even cry. This ended up being a fairly useful disassociation technique although he doubted if he actually cared about any of those kids.
 
-In the evenings his parents would go for their daily walk, and Vijayan would emerge from his room, an old iPod in hand. His mom had secretly bought it for him when he was 11. He would grab it from a nook in the storeroom in the kitchen where he usually kept things that he wanted to hide from his father. And he headed to the second floor to stand by a window from which he could see the road along which his parents would return after their walk. He would watch the pinkish-red hues of the Houston sky and admire how the leaves of the trees rustled in the hot evening breeze. It was the quietest moment of his day. He did not like thinking back to those moments by the window anymore and now he hated the Texas evening sky.
+In the evenings his parents would go for their daily walk, and Vijayan would emerge from his room, an old iPod in hand. His mom had secretly bought it for him when he was 11. He would grab it from a nook in the storeroom in the kitchen where he usually kept things that he wanted to hide from his father. And he headed to the second floor to stand by a window from which he could see the road along which his parents would return after their walk. He would watch the pinkish-red hues of the Houston sky and admire how the leaves of the trees rustled in the hot evening breeze. It was the quietest moment of his day. He did not like thinking back to those moments by the window anymore and now he hated the Texas evening sky. Do people come to this purgatory to relive high school over and over? Vijayan thought to himself as he glanced at the crowd at the observatory in _Love the Land_. He looked for familiar faces, as he often did when he became anxious, and his eyes stopped at the only man who could pull off a tweed hat in the middle of the desert. The man, Reggie, was waving toward him to join the small group conversation he had going in the northeast corner of the observatory.
 
-“Do people come to this purgatory to relive high school over and over? Vijayan thought to himself as he glanced at the crowd at the observatory in _Love the Land_. He looked for familiar faces, as he often did when he became anxious, and his eyes stopped at the only man who could pull off a tweed hat in the middle of the desert. The man, Reggie, was waving toward him to join the small group conversation he had going in the northeast corner of the observatory.
-
-Vijayan never really understood why Reggie was her. He walked the earth like he had a divine purpose and he made sure to put everyone around at ease. If someone committed murder they would most likely feel comfortable confessing to Reggie. Vijayan found this attractive and envied it at the same time.
+Vijayan never really understood why Reggie was here. He walked the earth like he had a divine purpose and he made sure to put everyone around at ease. If someone committed murder they would most likely feel comfortable confessing to Reggie. Vijayan found this attractive and envied it at the same time.
 
 This was their 4th and final week at _Love the Land_ and Vijayan tried to muster the courage to ask Reggie why he was here. After making some lackadaisical conversation with the group, Vijayan turned to Reggie and went “So Reggie, why the fuck are you here?” and then mumbled the rest under his breath as he felt the energy of the group shifting “I mean… sorry for asking… but if you can talk about it,”
+
 Reggie paused for less than a second and replied, “I tried to change the world and went too far.” Vijayan was unimpressed but the rest of the group seemed to be lapping it up.
 
 “No, for real man,” Reggie focussed on Vijayan. “I sold my start-up about two years back and then started playing around with GPT-45, the autoregressive language model that uses deep learning to produce human-like text. I was particularly interested in its applications for therapy since it was related to what my previous startup did. So I used the API to design an AI therapist.”
@@ -134,7 +133,7 @@ He had heard of the app a couple of times before but had dismissed it as some dy
 
 Vijayan spent the next couple of days browsing profiles. They went into details from the relevant — has this person traumatized someone in the past — to the mundane such as did they share any annoying ticks as the user’s real parents. Vijayan eventually ended up matching with an older man with a slightly disappointed resting face to be his father. His profile simply read Mr. Vader and Vijayan knew right away this was the sadomasochistic experience he wanted to spend some government bucks on.
 
-On their first family dinner together, and one of Vijayan’s first family dinners period, Mr Vader asked, “what was your father like? I want to get a better understanding.”
+On their first family dinner together, and one of Vijayan’s first family dinners period, Mr. Vader asked, “what was your father like? I want to get a better understanding.”
 
 “Usually grumpy, bought a lot of books that he never read, cynical about the world, and… oh… never forgot to tell me what a disappointing fuckface I am!” Vijayan retorted, not missing the irony of his cynicism.
 
@@ -144,7 +143,7 @@ Vijayan scoffed and took a long moment to take a sip of whiskey, something he wo
 
 Vijayan used to have fantasies of impressing his father. One day he would write the great American novel and then his father would be impressed and they would finally have a moment where they reconcile, maybe even hug. He put his grand plan to test during his 8th-grade summer. He had spent the first months of the year building an email newsletter about soccer stats and games, devouring hours of football games on YouTube, creating four two-hundred-page binders worth of notes. Most went unnoticed, but then in the summer one of his posts on Leeds United coach Marcelo Bielsa took off. It gathered enough views that a popular YouTube channel got in touch with him to use his content.
 
-Soccer was the only thing he and his father connected on. One day while his father was having dinner, Vijayan gathered the courage to walk up to the table and showed his father the newsletter, the views, the email from the YouTube channel. His father took two minutes to read it and turned to him and in a stern voice said, “this is clearly not your writing, did you plagiarise this from somewhere?”
+Soccer was the only thing he and his father connected on. One day while his father was having dinner, Vijayan gathered the courage to walk up to the table and showed his father the newsletter, the views, the email from the YouTube channel. His father took two minutes to read it and turned to him and in a deadpan voice said, “this is clearly not your writing, did you plagiarise this from somewhere?”
 
 Vijayan did not write for the rest of the summer. He spent his days staring at the wall, noting the tiny imperfections and bumps, imagining them to be canyons in another white planet.
 
@@ -158,7 +157,7 @@ More family dinners followed and although Vijayan called him “Dad” with the 
 
 The fuck am I supposed to do with this feeling? Vijayan thought to himself and it probably reflected on his face too.
 
-In the following weeks, Mr. Vader introduced Vijayan to the concept of _reparenting_. The act of imagining being a parent to your younger self, the way you would have liked to be parented and coached. For Vijayan, the whole thing had a chaotic energy to it. On some days he would feel like he was on the cusp of a breakthrough of some kind, be euphoric about it, and then forget what made him euphoric. On other days he would feel fragile and burst out in tears at the random high note of a song. Vijayan was also scared that he was rewiring his brain in ways that he did not understand — what does he do with all these memories of events he had forgotten? What if Mr Vader]s incentive was to keep Vijayan as a client forever? Mr Vader had a stoic disposition about him. Vijayan distrusted stoics, pussies who just want to cope with life and not live it, he thought to himself.
+In the following weeks, Mr. Vader introduced Vijayan to the concept of _reparenting_. The act of imagining being a parent to your younger self, the way you would have liked to be parented and coached. For Vijayan, the whole thing had a chaotic energy to it. On some days he would feel like he was on the cusp of a breakthrough of some kind, be euphoric about it, and then forget what made him euphoric. On other days he would feel fragile and burst out in tears at the random high note of a song. Vijayan was also scared that he was rewiring his brain in ways that he did not understand — what does he do with all these memories of events he had forgotten? What if Mr. Vader’s incentive was to keep Vijayan as a client forever? Mr. Vader had a stoic disposition about him. Vijayan distrusted stoics, pussies who just want to cope with life and not live it, he thought to himself.
 
 At the end of a session over apple strudel and cappuccino in the same cafe that Vijayan had met his ex-girlfriend, Mr. Vader reminded Vijayan that he had missed his last payment.
 
@@ -166,7 +165,7 @@ At the end of a session over apple strudel and cappuccino in the same cafe that 
 
 Vijayan felt his body turn cold, like his body was not in the temperate fall of Austin anymore but somewhere in the Arctic Tundra. He realized he had not moved for about 20 seconds until Mr. Vader tapped on his shoulder as he usually did.
 
-Vijayan flinched and said, “This is not a real relationship is it? It’s just another grift to make money out of people like me.” He willed his body and voice to be calming and assertive but he was shivering and shaking.
+Vijayan flinched and said, “This is not a real relationship is it? It’s just another grand scam to make money out of people like me.” He willed his body and voice to be calming and assertive but he was shivering and shaking.
 
 Mr. Vader replied, “I know it must be hard for you to trust people and their intentions…”
 
@@ -174,7 +173,7 @@ Vijayan did not remember most of what happened next, somehow he was in his car, 
 
 Vijayan motioned to his head with his index and middle fingers stretched out to mimic a gun as he usually did when he broke down. He was aware of the irony that this was one way he connected with the rest of the world,  they always shot themselves in the head, it was always the fucking head.
 
-Such days were not uncommon, but Vijayan found something still pulled him towards their sessions.
+Bad days with Mr. Vader were not uncommon, but Vijayan found something still pulled him towards their sessions.
 
 Is it some kind of dependency… is it because I don’t have anyone to talk to, he thought to himself at the end of every month when a new invoice came in. But he showed up and it helped that Mr. Vader’s presence felt unconditional, like he actually wanted to be there with Vijayan and not elsewhere.
 
@@ -206,6 +205,6 @@ Vijayan flashed back to all the times this happened to him with his father, then
 
 Today, a year later, Vijayan is at the hipster coffee shop and finally able to make eye contact with his ex-girlfriend barista. For a split second, his mind momentarily leaves and he feels like he is inhabiting the body of his self from a year ago. Weirdly enough, Vijayan recognizes him.
 
-He pulled to refresh the top listings page on the app store. _GPT-51 Pre-Fab Dad_ had done well since their last update which gave users the option to add voice filters to their critical parent voice. The most popular filter these days was the high-pitched voice of Brian’s mother from Monty Python’s _Life of Brian_. The page updated and there it was — undeniable proof that they had hit a goldmine of first-world problems, GPT-51 PFD was the #1 paid app.
+He pulled to refresh the top listings page on the app store. _GPT-51 Pre-Fab Dad_ had done well since their last update which gave users the option to add voice filters to their critical parent voice. The most popular filter these days was the high-pitched voice of Brian’s mother from Monty Python’s _Life of Brian_. The page updated and there it was — undeniable proof that they had hit a goldmine of first-world problems, _GPT-51 Pre-Fab Dad_ was the #1 paid app.
 
 He looked down at his forearm tattoo which right now resembled the beautiful constellations he had observed on that dreadful _Love the Land_ escapade.
