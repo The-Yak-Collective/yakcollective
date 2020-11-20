@@ -7,7 +7,7 @@ google_doc: "https://docs.google.com/presentation/d/1oIziqtVM878uRG-JOfrQNvGFsQW
 hero_image: /projects/future-frontiers/01-philosophy-01-on-horizons-01.jpg
 hero_desciption: On Horizons
 hero_caption:  |
-  [Carse photo](https://www.simonandschuster.biz/authors/James-Carse/313085). Collage by Jenna Dixon. 
+  Carse photo from [Simon &amp; Schuster]](https://www.simonandschuster.biz/authors/James-Carse/313085). Collage by [Jenna Dixon](/members/dixon-jenna/).
 hero_border: true
 hero_position: left
 page_text_color: black

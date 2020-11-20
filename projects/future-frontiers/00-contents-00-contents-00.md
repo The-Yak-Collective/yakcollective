@@ -7,7 +7,7 @@ google_doc: "https://docs.google.com/presentation/d/1oIziqtVM878uRG-JOfrQNvGFsQW
 hero_image: /projects/future-frontiers/00-contents-00-contents-00.jpg
 hero_desciption: Contents
 hero_caption:  |
-  [Venkatesh Rao](https://venkateshrao.com/)
+  [Venkatesh Rao](/members/rao-venkatesh/)
 hero_border: true
 hero_position: left
 author: swaroop-siva
