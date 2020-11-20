@@ -1,5 +1,5 @@
 ---
-date: 2020-11-21 00:00:00
+date: 2020-11-20 00:00:00
 hero_image: /projects/astonishing-stories/out-of-the-loop.jpg
 hero_attach_vertical: center
 hero_attach_horizontal: center
