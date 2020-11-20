@@ -9,6 +9,10 @@ sequence: covid-19
 hero_image: /projects/future-frontiers/future-frontiers.jpg
 page_headers: |
   <style type="text/css">
+    #projects-future-frontiers {
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
     #future-frontiers-hero .hero {
       display: none;
     }
@@ -55,10 +59,14 @@ page_headers: |
       #projects-future-frontiers-03-exploitation-01-starship-gold-rush-03 .slide-image {
         display: block;
       }
+      .slide-image-left,
+      .slide-image-none,
+      .slide-image-right {
+        font-size: 80%;
+      }
       .slide-image-left .slide-content,
       .slide-image-right .slide-content {
         width: min(((1 / 3) * (2 * var(--content-width-l))) - (5 * var(--content-padding)), (100% * (1 / 3)) - (2.5 * var(--content-padding)));
-        font-size: 80%;
       }
       .slide-image-left .slide-image,
       .slide-image-right .slide-image {
@@ -84,4 +92,13 @@ credits:
 ---
 {% include widget-project-header.html %}
 
-{% include widget-project-slide-deck.html hero_align="top" hero_position="left" hide_title="true" use_groupings="true" %}
+{% include widget-project-slide-deck.html
+   hero_position="left"
+   slide_separator=true
+   slide_align="top"
+   title_links="internal"
+   show_dates=true
+   collapse_slides=true
+   table_of_contents=true
+   table_of_contents_hero="/projects/future-frontiers/00-contents-00-contents-00.jpg"
+%}

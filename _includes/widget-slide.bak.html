@@ -1,40 +1,24 @@
 {% comment %}
-	Generate an "Idle Words" style slide, based upon many, many
-	parameters...
-
-		`hero_image`
-		Left or right image. If unset, a full-width slide is produced
-		(images can still be embedded within that slide using Markdown
-		or HTML).
+	Generate a slideshow layout, similar to that used on "Idle Words".
+	Expects two parameters:
 
 		`hero_position`
-		Position the `hero_image` on the `left` or `right` of the
-		slide. If unset or invalid, use `left`.
+		OPTIONALLY force the slide "hero" image into a particular
+		position (`left` or `right`). If not present, then use the
+		`hero_position` attribute from the slide itself instead (and
+		fall back to `left` if nothing is specified).
 
-		`hero_description`
-		The alt text for the `hero_image`. If unset, use `slide_title`
-		(see below).
+		`hero_align`
+		OPTIONALLY force the slide "hero" image into a particular
+		vertical alignment (`top`, `bottom`, or `center`). If not
+		present, then use the `hero_align` attribute from the slide
+		itself instead (and fall back to `center` if nothing is
+		specified).
 
-		`hero_caption`
-		An optional caption to display below the `hero_image`. Most
-		commonly used for image credits.
-
-		`hero_border`
-		Liquid truthy/falsy parameter indicating whether or not to
-		display a thin border around the `hero_image`.
-
-		`slide_content`
-		Contents of the actual slide. Markdown or HTML (or mix)
-		accepted.
-
-		`slide_separator`
-		Liquid truthy/falsy parameter indicating whether or not to add a
-		border between slides. Ignored if the page `layout` is
-		`page-project-slide`.
-
-		`slide_align`
-		Should slide left/right image and content be `top`, `bottom`, or
-		`center` aligned? If unset or invalid, defaults to `center`.
+		`slide`
+		An object containing the relevant slide information (basically,
+		an element of `site.pages` that lives in the project-appropriate
+		`/projects/*/` directory and has a `page-project-slide` layout).
 
 	Note that this widget outputs HTML in a safe way, and is thus
 	suitable for inclusion in both Markdown and HTML pages.
@@ -43,17 +27,17 @@
 {% comment %}
 	Determine how we should align and position the slide "hero" image.
 {% endcomment %}
-{% assign slide_align = "center" %}
+{% assign hero_align = "center" %}
 {% assign hero_position = "left" %}
-{% if include.slide.slide_align %}
-	{% assign slide_align = include.slide.slide_align %}
+{% if include.slide.hero_align %}
+	{% assign hero_align = include.slide.hero_align %}
 {% endif %}
 {% if include.slide.hero_position %}
 	{% assign hero_position = include.slide.hero_position %}
 {% endif %}
-{% if include.slide_align %}
-	{% unless include.slide_align == "-" %}
-		{% assign slide_align = include.slide_align %}
+{% if include.hero_align %}
+	{% unless include.hero_align == "-" %}
+		{% assign hero_align = include.hero_align %}
 	{% endunless %}
 {% endif %}
 {% if include.hero_position %}
@@ -61,14 +45,14 @@
 		{% assign hero_position = include.hero_position %}
 	{% endunless %}
 {% endif %}
-{% if slide_align != "top" and slide_align != "center" and slide_align != "bottom" %}
-	{% assign slide_align = "center" %}
+{% if hero_align != "top" and hero_align != "center" and hero_align != "bottom" %}
+	{% assign hero_align = "center" %}
 {% endif %}
 {% if hero_position != "left" and hero_position != "right" %}
 	{% assign hero_position = "left" %}
 {% endif %}
 {% unless include.slide.hero_image %}
-	{% assign slide_align = "none" %}
+	{% assign hero_align = "none" %}
 	{% assign hero_position = "none" %}
 {% endunless %}
 
@@ -93,11 +77,11 @@
 	mess with Kramdown's indentation expectations.
 {% endcomment %}
 {% capture the_content %}
-<div{% if page.layout != "page-project-slide" %} id="{{ include.slide.url | replace: '/', ' ' | strip | replace: ' ', '-' }}"{% endif %} class="slide-image-{{ hero_position }} {% if slide_align == 'top' %}items-start{% elsif slide_align == 'bottom' %}items-end{% else %}items-center{% endif %} cf">
+<div{% if page.layout != "page-project-slide" %} id="{{ include.slide.url | replace: '/', ' ' | strip | replace: ' ', '-' }}"{% endif %} class="slide-image-{{ hero_position }} {% if hero_align == 'top' %}items-start{% elsif hero_align == 'bottom' %}items-end{% else %}items-center{% endif %} cf">
 	<div class="slide-image {% if hero_position == 'left' %}mt5 mb0 mv5-l{% elsif hero_position == 'right' %}mt0 mb5 mv5-l{% endif %}">
 		{% if include.slide.hero_image %}
 			<figure class="ma0">
-				<img src="{{ include.slide.hero_image }}"{% if include.slide.hero_description %} alt="{{ include.slide.hero_description | markdownify | strip_html | strip }}"{% endif %}{% if include.slide.hero_border %} class="image-border ba"{% endif %}>
+				<img src="{{ include.slide.hero_image }}"{% if include.slide.hero_description %} alt="{{ include.slide.hero.description | markdownify | strip_html | strip }}"{% endif %}{% if include.slide.hero_border %} class="image-border ba"{% endif %}>
 				{% if include.slide.hero_caption %}
 					<figcaption class="yak-content">
 						{{ include.slide.hero_caption | markdownify }}

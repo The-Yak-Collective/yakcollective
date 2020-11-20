@@ -1,35 +1,43 @@
 {% comment %}
-	"Idle Words" style "infinity" slide deck. Accepts a couple of
-	parameters that are passed to every slide as overrides (if present):
-
-		`hero_align`
-		Force the slide image to be aligned to the `top`, `bottom`, or
-		`center` of the slide.
+	"Idle Words" style "infinity" slide deck. Only designed to be called
+	from project pages. Accepts a number of parameters that map to
+	inputs in `widget-slide.html` (and a couple more general ones):
 
 		`hero_position`
-		Force the slide image to be `left` or `right`.
+		Position the `hero_image` on the `left` or `right` for all
+		slides. If unset or invalid, use the value specified by the
+		slide itself.
 
-		`hide_title`
-		Truthy/Falsy Liquid value that causes the slide title to not be
-		displayed if set (useful if you want to use the deck layout, but
-		aren't *actually* creating a deck).
+		`slide_separator`
+		Liquid truthy/falsy parameter indicating whether or not to add a
+		border between slides.
 
-		`hide_author`
-		Truthy/Falsy Liquid value that causes slide authors to be
-		hidden (again, useful if you want to use the deck layout to do
-		something that isn't actually a deck).
+		`slide_align`
+		Should slide left/right image and content be `top`, `bottom`, or
+		`center` aligned? If unset or invalid, defaults to `center`.
 
-	Finally, slides can be grouped into sections by passing in the
-	truthy/falsy Liquid variable `use_groupings`. When this is set,
-	the slide deck widget will group slides using a `section` attribute.
-	Whenever this attribute changes, a new `<h2/>` tag will be
-	generated. Slide `section` attributes that are set to `-` will be
-	ignored (treated as unset or identical to the previous value of that
-	attribute); this is primarily useful for creating an "introductory"
-	sequence without a special heading. When `use_groupings` is truthy,
-	both `hide_author` and `hide_title` will be automatically set; if
-	you want to display this information, you must do so manually within
-	the context of the deck itself.
+		`title_links`
+		Controls how slide titles should be linked. One of `internal`
+		(links to the anchor of the current slide), `external` (links
+		to the stand-alone slide page), or `none` (no link)). If unset
+		or invalid, defaults to `external`.
+
+		`show_dates`
+		Liquid truthy/falsy value indicating whether or not slide dates
+		should be displayed.
+
+		`collapse_slides`
+		Liquide truthy/falsy value indicating whether or not slide
+		titles and authors should be suppressed if identical between
+		sequential slides.
+
+		`table_of_contents`
+		Liquid truthy/falsy value indicating whether a table of contents
+		for the deck should be generated.
+
+		`table_of_contents_hero`
+		Image to use for the table of contents slide. If unset, defaults
+		to the project hero.
 
 	Note that this widget outputs HTML in a safe way, and is thus
 	suitable for inclusion in both Markdown and HTML pages.
@@ -37,14 +45,14 @@
 
 {% comment %}
 	Since we can't pass unset variables along (what would that mean,
-	anyway), we set `hero_align`, `hero_position`, `hide_title`, and
+	anyway), we set `slide_align`, `hero_position`, `hide_title`, and
 	`hide_author` to "-" if the corresponding `include` attribute is
 	unset.
 {% endcomment %}
-{% if include.hero_align %}
-	{% assign hero_align = include.hero_align %}
+{% if include.slide_align %}
+	{% assign slide_align = include.slide_align %}
 {% else %}
-	{% assign hero_align = "-" %}
+	{% assign slide_align = "-" %}
 {% endif %}
 {% if include.hero_position %}
 	{% assign hero_position = include.hero_position %}
@@ -114,6 +122,6 @@
 				{% include widget-breakout-box.html layout="full-bleed" extra_class="yak-slide-deck-section-header" content=the_content %}
 			{% endif %}
 		{% endif %}
-		{% include widget-slide.html hero_align=hero_align hero_position=hero_position hide_title=hide_title hide_author=hide_author slide=ps %}
+		{% include widget-slide.html slide_align=slide_align hero_position=hero_position hide_title=hide_title hide_author=hide_author slide=ps %}
 	{% endfor %}
 {% endif %}
