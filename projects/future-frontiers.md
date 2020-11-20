@@ -6,7 +6,7 @@ roam_page: https://roamresearch.com/#/app/ArtOfGig/page/O12GM-bXp
 google_doc: https://docs.google.com/presentation/d/1oIziqtVM878uRG-JOfrQNvGFsQWKP_S_W8cLkhQlXvA/edit
 type: Report
 sequence: covid-19
-hero_image: /projects/future-frontiers/future-frontiers.svg
+hero_image: /projects/future-frontiers/future-frontiers.jpg
 page_headers: |
   <style type="text/css">
     #future-frontiers-hero .hero {
@@ -85,7 +85,3 @@ credits:
 {% include widget-project-header.html %}
 
 {% include widget-project-slide-deck.html hero_align="top" hero_position="left" hide_title="true" use_groupings="true" %}
-
-## Additional Credits
-
-SVG graphics provided by [Hero Patterns](https://www.heropatterns.com/).

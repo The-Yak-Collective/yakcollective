@@ -1,4 +1,5 @@
 ---
+hidden: true
 section: Trends
 title: Democratized Underwater Exploration
 layout: page-project-slide

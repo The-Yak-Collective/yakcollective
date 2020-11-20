@@ -6,6 +6,8 @@ date: 2020-12-01 00:00:00
 google_doc: "https://docs.google.com/presentation/d/1oIziqtVM878uRG-JOfrQNvGFsQWKP_S_W8cLkhQlXvA/edit#slide=id.g8dc164a1ac_0_87"
 hero_image: /projects/future-frontiers/00-contents-00-contents-00.jpg
 hero_desciption: Contents
+hero_caption:  |
+  [Venkatesh Rao](https://venkateshrao.com/)
 hero_border: true
 hero_position: left
 author: swaroop-siva

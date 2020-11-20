@@ -323,6 +323,11 @@ a.project-page-box:hover .pseudo-link {
 	display: none;
 }
 
+.slide-content {
+	margin-top: 4rem !important;
+	margin-bottom: 4rem !important;
+}
+
 .slide-content *:first-child {
 	margin-top: 0;
 }

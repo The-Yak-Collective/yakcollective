@@ -7,6 +7,8 @@ google_doc: "https://docs.google.com/presentation/d/1oIziqtVM878uRG-JOfrQNvGFsQW
 hero_image: /projects/future-frontiers/01-philosophy-02-overview-effect-02.jpg
 hero_border: true
 hero_desciption: Ivory Tower Overview Effect
+hero_caption:  |
+  [NASA](https://www.nasa.gov/topics/earth/images/index.html)
 hero_position: left
 page_text_color: white
 page_bg_color: "0,0,0"

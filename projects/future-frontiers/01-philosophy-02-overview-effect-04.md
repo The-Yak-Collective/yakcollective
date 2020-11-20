@@ -7,6 +7,8 @@ google_doc: "https://docs.google.com/presentation/d/1oIziqtVM878uRG-JOfrQNvGFsQW
 hero_image: /projects/future-frontiers/01-philosophy-02-overview-effect-04.jpg
 hero_border: true
 hero_desciption: Minimum Viable Overview Effect
+hero_caption:  |
+  IMAGE CREDITS NEEDED
 hero_position: left
 page_text_color: white
 page_bg_color: "0,0,0"

@@ -1,4 +1,5 @@
 ---
+hidden: true
 section: Philosophy
 title: Overview Effect
 layout: page-project-slide

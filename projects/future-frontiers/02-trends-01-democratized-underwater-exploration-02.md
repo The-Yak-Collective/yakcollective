@@ -7,6 +7,8 @@ google_doc: "https://docs.google.com/presentation/d/1oIziqtVM878uRG-JOfrQNvGFsQW
 hero_image: /projects/future-frontiers/02-trends-01-democratized-underwater-exploration-02.jpg
 hero_border: true
 hero_desciption: Democratized Underwater Exploration
+hero_caption:  |
+  IMAGE CREDITS NEEDED
 hero_position: left
 page_text_color: white
 page_bg_color: "25,150,175"
