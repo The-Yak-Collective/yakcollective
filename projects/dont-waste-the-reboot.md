@@ -4,11 +4,11 @@ date: 2020-04-30 00:00:00
 tagline: Making the next normal better than the last one
 type: Report
 sequence: covid-19
-hero_image: /projects/dont-waste-the-reboot/dont-waste-the-reboot.svg
+hero_image: /projects/dont-waste-the-reboot/dont-waste-the-reboot.jpg
 page_headers: |
   <style type="text/css">
     .hero {
-      background-size: auto !important;
+      background-size: contain !important;
     }
     @media screen and (min-width: 60em) {
       .google-slideshow-wrapper {
