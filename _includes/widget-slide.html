@@ -12,8 +12,7 @@
 		slide. If unset or invalid, use `left`.
 
 		`hero_description`
-		The alt text for the `hero_image`. If unset, use `slide_title`
-		(see below).
+		The alt text for the `hero_image`.
 
 		`hero_caption`
 		An optional caption to display below the `hero_image`. Most
@@ -29,104 +28,78 @@
 
 		`slide_separator`
 		Liquid truthy/falsy parameter indicating whether or not to add a
-		border between slides. Ignored if the page `layout` is
-		`page-project-slide`.
+		border between slides.
 
 		`slide_align`
 		Should slide left/right image and content be `top`, `bottom`, or
-		`center` aligned? If unset or invalid, defaults to `center`.
+		`center` aligned? If unset or invalid, defaults to `top`.
+
+		`slide_id`
+		The element ID to use for the slide. Useful for linking.
 
 	Note that this widget outputs HTML in a safe way, and is thus
 	suitable for inclusion in both Markdown and HTML pages.
 {% endcomment %}
 
 {% comment %}
-	Determine how we should align and position the slide "hero" image.
+	Set defaults.
 {% endcomment %}
-{% assign slide_align = "center" %}
-{% assign hero_position = "left" %}
-{% if include.slide.slide_align %}
-	{% assign slide_align = include.slide.slide_align %}
-{% endif %}
-{% if include.slide.hero_position %}
-	{% assign hero_position = include.slide.hero_position %}
-{% endif %}
-{% if include.slide_align %}
-	{% unless include.slide_align == "-" %}
-		{% assign slide_align = include.slide_align %}
-	{% endunless %}
-{% endif %}
-{% if include.hero_position %}
-	{% unless include.hero_position == "-" %}
-		{% assign hero_position = include.hero_position %}
-	{% endunless %}
-{% endif %}
-{% if slide_align != "top" and slide_align != "center" and slide_align != "bottom" %}
-	{% assign slide_align = "center" %}
-{% endif %}
-{% if hero_position != "left" and hero_position != "right" %}
-	{% assign hero_position = "left" %}
-{% endif %}
-{% unless include.slide.hero_image %}
-	{% assign slide_align = "none" %}
+{% if include.hero_image and include.hero_image != "-" %}
+	{% assign hero_image = include.hero_image %}
+	{% if include.hero_position == "right" %}
+		{% assign hero_position = "right" %}
+	{% else %}
+		{% assign hero_position = "left" %}
+	{% endif %}
+{% else %}
+	{% assign hero_image = false %}
 	{% assign hero_position = "none" %}
-{% endunless %}
+{% endif %}
+{% if include.hero_description and include.hero_description != "-" %}
+	{% assign hero_description = include.hero_description | markdownify | strip_html | strip %}
+{% else %}
+	{% assign hero_description = false %}
+{% endif %}
+{% if include.hero_caption and include.hero_caption != "-" %}
+	{% assign hero_caption = include.hero_caption | markdownify %}
+{% else %}
+	{% assign hero_caption = false %}
+{% endif %}
+{% if include.hero_border %}
+	{% assign hero_border = true %}
+{% else %}
+	{% assign hero_border = false %}
+{% endif %}
+{% assign slide_content = include.slide_content | markdownify %}
+{% if include.slide_separator %}
+	{% assign slide_separator = true %}
+{% else %}
+	{% assign slide_separator = false %}
+{% endif %}
+{% if include.slide_align == "bottom" %}
+	{% assign slide_align = "bottom" %}
+{% elsif include.slide_align == "center" %}
+	{% assign slide_align = "center" %}
+{% else %}
+	{% assign slide_align = "top" %}
+{% endif %}
+{% assign slide_id = include.slide_id | slugify %}
 
 {% comment %}
-	Regularize `hide_title` and `hide_author`.
+	Push out slide content. No indenting is necessary so as not to mess
+	with Kramdown's indentation expectations.
 {% endcomment %}
-{% assign hide_title = false %}
-{% if include.hide_title %}
-	{% unless include.hide_title == "-" %}
-		{% assign hide_title = true %}
-	{% endunless %}
-{% endif %}
-{% assign hide_author = false %}
-{% if include.hide_author %}
-	{% unless include.hide_author == "-" %}
-		{% assign hide_author = true %}
-	{% endunless %}
-{% endif %}
-
-{% comment %}
-	Push out slide content. Weird indenting is necessary so as not to
-	mess with Kramdown's indentation expectations.
-{% endcomment %}
-{% capture the_content %}
-<div{% if page.layout != "page-project-slide" %} id="{{ include.slide.url | replace: '/', ' ' | strip | replace: ' ', '-' }}"{% endif %} class="slide-image-{{ hero_position }} {% if slide_align == 'top' %}items-start{% elsif slide_align == 'bottom' %}items-end{% else %}items-center{% endif %} cf">
-	<div class="slide-image {% if hero_position == 'left' %}mt5 mb0 mv5-l{% elsif hero_position == 'right' %}mt0 mb5 mv5-l{% endif %}">
-		{% if include.slide.hero_image %}
-			<figure class="ma0">
-				<img src="{{ include.slide.hero_image }}"{% if include.slide.hero_description %} alt="{{ include.slide.hero_description | markdownify | strip_html | strip }}"{% endif %}{% if include.slide.hero_border %} class="image-border ba"{% endif %}>
-				{% if include.slide.hero_caption %}
-					<figcaption class="yak-content">
-						{{ include.slide.hero_caption | markdownify }}
-					</figcaption>
-				{% endif %}
-			</figure>
-		{% endif %}
-	</div>
-	<div class="slide-content yak-content mv5">
-		{% unless hide_title %}
-			{% if page.layout == "page-project-slide" %}
-				<h1>{{ include.slide.title }}</h1>
-			{% else %}
-				<h2><a href="{{ include.slide.url }}">{{ include.slide.title }}</a></h2>
+{% capture the_content %}<div>
+	<div{% if page.layout != "page-project-slide" %} id="{{ slide_id }}"{% endif %} class="slide-image-{{ hero_position }}{%if slide_separator %} slide-border{% endif %} {% if slide_align == 'top' %}items-start{% elsif slide_align == 'bottom' %}items-end{% else %}items-center{% endif %} cf">
+		<div class="slide-image {% if hero_position == 'left' %}mt5 mb0 mv5-l{% elsif hero_position == 'right' %}mt0 mb5 mv5-l{% endif %}">
+			{% if hero_image != "-" %}
+				<figure class="ma0">
+					<img src="{{ hero_image }}"{% if hero_description %} alt="{{ hero_description }}"{% endif %}{% if hero_border %} class="image-border ba"{% endif %}>
+					{% if hero_caption %}<figcaption class="yak-content">{{ hero_caption }}</figcaption>{% endif %}
+				</figure>
 			{% endif %}
-		{% endunless %}
-
-		{{ include.slide.content | markdownify }}
-
-		{% unless hide_author %}
-			{% if include.slide.author %}
-				{% assign author_url = "/members/" | append: include.slide.author | append: "/" %}
-				{% assign author = site.pages | find: "url", author_url %}
-				{% if author %}
-					<p class="slide-author">(<a href="{{ author.url }}">{{ author.title }}</a>)</p>
-				{% endif %}
-			{% endif %}
-		{% endunless %}
+		</div>
+		<div class="slide-content yak-content mv5">{{ slide_content }}</div>
 	</div>
-</div>
-{% endcapture %}
+</div>{% endcapture %}
 {% include widget-breakout-box.html layout="full-bleed" extra_class="yak-slide-wrapper" content=the_content %}

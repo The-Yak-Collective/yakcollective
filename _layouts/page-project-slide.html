@@ -6,7 +6,42 @@ layout: default
 	"Idle Words" like slide layout.
 {% endcomment %}
 
-{% include widget-slide.html slide=page %}
+{% assign hero_image = page.hero_image %}
+{% assign hero_position = page.hero_position %}
+{% if page.hero_description %}
+	{% assign hero_description = page.hero_description %}
+{% else %}
+	{% assign hero_description = page.title %}
+{% endif %}
+{% assign hero_caption = page.hero_caption %}
+{% assign hero_border = page.hero_border %}
+{% assign slide_align = page.slide_align %}
+{% assign slide_id = page.url | replace: "/", " " | strip | replace: " ", "-" %}
+
+{% capture the_content %}<div>
+	<h1 class="slide-deck-visible-anchor">{{ page.title }}</h1>
+	{% if page.date %}
+		<time class="db small ttu tracked-tight">{{ page.date | date_to_long_string: "ordinal", "US" }}</time>
+	{% endif %}
+	{% if page.author %}
+		{% assign member_url = "/members/" | append: page.author | append: "/" %}
+		{% assign member = site.pages | find: "url", member_url %}
+		<p class="slide-author mt1 small ttu tracked-tight"><a href="{{ member.url }}">{{ member.title | replace: " ", "&nbsp;" }}</a></p>
+	{% endif %}
+	{{ page.content | markdownify }}
+</div>{% endcapture %}
+
+{% include widget-slide.html
+   hero_image=hero_image
+   hero_position=hero_position
+   hero_description=hero_description
+   hero_caption=hero_caption
+   hero_border=hero_border
+   slide_content=the_content
+   slide_separator=false
+   slide_align=slide_align
+   slide_id=slide_id
+ %}
 
 {% comment %}
 	Slide navigation.

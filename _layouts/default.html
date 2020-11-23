@@ -250,6 +250,7 @@
 							color: rgba({% if slide.page_text_color == "white" %}255,255,255{% else %}15,15,15{% endif %},0.8);
 						}
 						#{{ slide_id }} .member-box,
+						#{{ slide_id }}.slide-border, /* No space for this one! */
 						#{{ slide_id }} .image-border,
 						#{{ slide_id }} .slide-deck-visible-anchor {
 							border-color: rgba({% if slide.page_text_color == "white" %}255,255,255{% else %}15,15,15{% endif %},0.2);

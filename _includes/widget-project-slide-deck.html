@@ -14,7 +14,8 @@
 
 		`slide_align`
 		Should slide left/right image and content be `top`, `bottom`, or
-		`center` aligned? If unset or invalid, defaults to `center`.
+		`center` aligned? If unset or invalid, use the value specified
+		by the slide itself.
 
 		`title_links`
 		Controls how slide titles should be linked. One of `internal`
@@ -39,40 +40,16 @@
 		Image to use for the table of contents slide. If unset, defaults
 		to the project hero.
 
+		`table_of_contents_hero_description`
+		Image alt text for the table of contents slide. If unset, use
+		project title.
+
+		`table_of_contents_hero_caption`
+		Image caption for the table of contents slide.
+
 	Note that this widget outputs HTML in a safe way, and is thus
 	suitable for inclusion in both Markdown and HTML pages.
 {% endcomment %}
-
-{% comment %}
-	Since we can't pass unset variables along (what would that mean,
-	anyway), we set `slide_align`, `hero_position`, `hide_title`, and
-	`hide_author` to "-" if the corresponding `include` attribute is
-	unset.
-{% endcomment %}
-{% if include.slide_align %}
-	{% assign slide_align = include.slide_align %}
-{% else %}
-	{% assign slide_align = "-" %}
-{% endif %}
-{% if include.hero_position %}
-	{% assign hero_position = include.hero_position %}
-{% else %}
-	{% assign hero_position = "-" %}
-{% endif %}
-{% if include.hide_title %}
-	{% assign hide_title = include.hide_title %}
-{% elsif include.use_groupings %}
-	{% assign hide_title = true %}
-{% else %}
-	{% assign hide_title = "-" %}
-{% endif %}
-{% if include.hide_author %}
-	{% assign hide_author = include.hide_author %}
-{% elsif include.use_groupings %}
-	{% assign hide_author = true %}
-{% else %}
-	{% assign hide_author = "-" %}
-{% endif %}
 
 {% comment %}
 	Set the current project.
@@ -80,14 +57,83 @@
 {% assign project = include.project | default: page %}
 
 {% comment %}
-	Figure out the current project ID.
+	Set defaults.
 {% endcomment %}
-{% assign project_id = project.url | replace: "/", " " | strip | split: " " | last %}
+{% if include.hero_position == "left" %}
+	{% assign the_hero_position = "left" %}
+{% elsif include.hero_position == "right" %}
+	{% assign the_hero_position = "right" %}
+{% else %}
+	{% assign the_hero_position = "-" %}
+{% endif %}
+
+{% if include.slide_separator %}
+	{% assign the_slide_separator = true %}
+{% else %}
+	{% assign the_slide_separator = false %}
+{% endif %}
+
+{% if include.slide_align == "top" %}
+	{% assign the_slide_align = "top" %}
+{% elsif include.slide_align == "bottom" %}
+	{% assign the_slide_align = "bottom" %}
+{% elsif include.slide_align == "center" %}
+	{% assign the_slide_align = "center" %}
+{% else %}
+	{% assign the_slide_align = "-" %}
+{% endif %}
+
+{% if include.title_links == "none" %}
+	{% assign the_title_links = "none" %}
+{% elsif include.title_links == "internal" %}
+	{% assign the_title_links = "internal" %}
+{% else %}
+	{% assign the_title_links = "external" %}
+{% endif %}
+
+{% if include.show_dates %}
+	{% assign the_show_dates = true %}
+{% else %}
+	{% assign the_show_dates = false %}
+{% endif %}
+
+{% if include.collapse_slides %}
+	{% assign the_collapse_slides = true %}
+{% else %}
+	{% assign the_collapse_slides = false %}
+{% endif %}
+
+{% if include.table_of_contents %}
+	{% assign the_table_of_contents = true %}
+{% else %}
+	{% assign the_table_of_contents = false %}
+{% endif %}
+
+{% if include.table_of_contents_hero %}
+	{% assign the_table_of_contents_hero = include.table_of_contents_hero %}
+{% elsif project.hero_image %}
+	{% assign the_table_of_contents_hero = project.hero_image %}
+{% else %}
+	{% assign the_table_of_contents_hero = "/img/yak-og.jpg" %}
+{% endif %}
+
+{% if include.table_of_contents_hero_description %}
+	{% assign the_table_of_contents_hero_description = include.table_of_contents_hero_description | markdownify | strip_html | strip %}
+{% else %}
+	{% assign the_table_of_contents_hero_description = project.title | markdownify | strip_html | strip %}
+{% endif %}
+
+{% if include.table_of_contents_hero_caption %}
+	{% assign the_table_of_contents_hero_caption = include.table_of_contents_hero_caption | markdownify %}
+{% else %}
+	{% assign the_table_of_contents_hero_caption = false %}
+{% endif %}
 
 {% comment %}
 	Generate a list of project pages associated with the current
 	project.
 {% endcomment %}
+{% assign project_id = project.url | replace: "/", " " | strip | split: " " | last %}
 {% assign project_slides = "" | split: "" %}
 {% for the_page in site.pages %}
 	{% if the_page.layout == "page-project-slide" %}
@@ -99,29 +145,182 @@
 		{% endif %}
 	{% endif %}
 {% endfor %}
-{% assign project_slides = project_slides | sort: "url" | sort: "date" %}
+{% assign project_slides = project_slides | sort: "url" %}
 
 {% comment %}
-	Output project slides (if they exist). We force the image layout to
-	be identical for all slides in order to assist formatting.
-
-	FIXME: The initial values of the `current_text_color` and
-	`current_bg_color` variables should follow the page dark/light
-	theme. They also shouldn't be hard-coded here.
+	Output project slides (if they exist).
 {% endcomment %}
 {% if project_slides.size > 0 %}
+
+	{% comment %}
+		Generate a table of contents, if applicable.
+	{% endcomment %}
+	{% if the_table_of_contents %}
+		{% if the_hero_position == "-" %}
+			{% assign the_table_of_contents_hero_position = "left" %}
+		{% else %}
+			{% assign the_table_of_contents_hero_position = the_hero_position %}
+		{% endif %}
+		{% if the_slide_align == "-" %}
+			{% assign the_table_of_contents_slide_align = "center" %}
+		{% else %}
+			{% assign the_table_of_contents_slide_align = the_slide_align %}
+		{% endif %}
+		{% assign use_sections = false %}
+		{% for ps in project_slides %}
+			{% if ps.section %}
+				{% assign use_sections = true %}
+				{% break %}
+			{% endif %}
+		{% endfor %}
+		{% capture the_content %}<div>
+			<h2 class="slide-deck-visible-anchor"><a href="#table-of-contents">Table of Contents</a></h2>
+			<ul>
+				{% assign current_toc_section = "-" %}
+				{% assign current_toc_title = "-" %}
+				{% assign inside_section = false %}
+				{% for ps in project_slides %}
+					{% if ps.section %}
+						{% assign the_toc_section = ps.section %}
+					{% else %}
+						{% assign the_toc_section = "-" %}
+					{% endif %}
+					{% if current_toc_section != the_toc_section %}
+						{% if inside_section %}</ul></li>{% endif %}
+						<li><strong><a href="#{{ the_toc_section | slugify }}">{{ the_toc_section }}</a></strong><ul>
+						{% assign current_toc_section = the_toc_section %}
+						{% assign inside_section = true %}
+					{% endif %}
+					{% if current_toc_title != ps.title %}
+						<li><a href="#{{ ps.url | replace: '/', ' ' | strip | replace: ' ', '-' }}">{% if use_sections %}{% unless inside_section %}<strong>{% endunless %}{% endif %}{{ ps.title }}{% if use_sections %}{% unless inside_section %}</strong>{% endunless %}{% endif %}</a></li>
+						{% assign current_toc_title = ps.title %}
+					{% endif %}
+				{% endfor %}
+				{% if use_sections %}</ul></li>{% endif %}
+			</ul>
+		</div>{% endcapture %}
+		{% include widget-slide.html
+		   hero_image=the_table_of_contents_hero
+		   hero_position=the_table_of_contents_hero_position
+		   hero_description=the_table_of_contents_hero_description
+		   hero_caption=the_table_of_contents_hero_caption
+		   hero_border=true
+		   slide_content=the_content
+		   slide_separator=false
+		   slide_align=the_table_of_contents_slide_align
+		   slide_id="table-of-contents"
+		%}
+	{% endif %}
+
 	{% assign current_section = "-" %}
 	{% assign current_title = "-" %}
-	{% assign current_text_color = "-" %}
-	{% assign current_bg_color = "-" %}
+	{% assign current_date = "-" %}
+	{% assign current_author = "-" %}
+	{% assign current_page_bg_color = "-" %}
+	{% assign start_separators = false %}
 	{% for ps in project_slides %}
+
+		{% comment %}
+			Output a section header whenever a section header is (a)
+			present and (b) different from the previous section header.
+		{% endcomment %}
 		{% if ps.section %}
-			{% if ps.section != "-" and ps.section != current_section %}
-				{% assign current_section = ps.section %}
-				{% capture the_content %}<h2 id="{{ current_section | slugify }}" class="slide-deck-visible-anchor mv5"><a href="#{{ current_section | slugify }}">{{ current_section }}</a></h2>{% endcapture %}
-				{% include widget-breakout-box.html layout="full-bleed" extra_class="yak-slide-deck-section-header" content=the_content %}
-			{% endif %}
+			{% assign the_section = ps.section %}
+		{% else %}
+			{% assign the_section = "-" %}
 		{% endif %}
-		{% include widget-slide.html slide_align=slide_align hero_position=hero_position hide_title=hide_title hide_author=hide_author slide=ps %}
+		{% if the_section != "-" and the_section != current_section %}
+			{% capture the_content %}<div>
+				<h2 id="{{ the_section | slugify }}" class="slide-deck-visible-anchor mv5"><a href="#{{ the_section | slugify }}">{{ the_section }}</a></h2>
+			</div>{% endcapture %}
+			{% include widget-breakout-box.html layout="full-bleed" extra_class="yak-slide-deck-section-header" content=the_content %}
+		{% endif %}
+		{% assign current_section = the_section %}
+
+		{% comment %}
+			Construct slide content.
+		{% endcomment %}
+		{% assign the_title = ps.title %}
+		{% if ps.date %}
+			{% assign the_date = ps.date | date_to_long_string: "ordinal", "US" %}
+		{% else %}
+			{% assign the_date = "-" %}
+		{% endif %}
+		{% if ps.author %}
+			{% assign the_author = ps.author %}
+		{% else %}
+			{% assign the_author = "-" %}
+		{% endif %}
+		{% assign slide_id = ps.url | replace: "/", " " | strip | replace: " ", "-" %}
+		{% assign output_title_block = true %}
+		{% if the_collapse_slides and the_title == current_title and the_date == current_date and the_author == current_author%}
+			{% assign output_title_block = false %}
+		{% endif %}
+		{% capture the_content %}<div>
+			{% if output_title_block %}
+				<h3 class="slide-deck-visible-anchor">{% if the_title_links != "none" %}<a href="{% if the_title_links == 'internal' %}#{{ slide_id }}{% elsif the_title_links == 'external' %}{{ ps.url }}{% endif %}">{% endif %}{{ the_title }}{% if the_title_links != "none" %}</a>{% endif %}</h3>
+				{% if the_show_dates and the_date != "-" %}
+					<time class="db small ttu tracked-tight">{{ the_date }}</time>
+				{% endif %}
+				{% if the_author != "-" %}
+					{% assign member_url = "/members/" | append: the_author | append: "/" %}
+					{% assign member = site.pages | find: "url", member_url %}
+					<p class="slide-author mt1 small ttu tracked-tight"><a href="{{ member.url }}">{{ member.title | replace: " ", "&nbsp;" }}</a></p>
+				{% endif %}
+			{% endif %}
+			{{ ps.content | markdownify }}
+		</div>{% endcapture %}
+		{% assign current_title = the_title %}
+		{% assign current_date = the_date %}
+		{% assign current_author = the_author %}
+
+		{% comment %}
+			Construct and output slide.
+		{% endcomment %}
+		{% assign slide_hero_image = ps.hero_image %}
+		{% assign slide_hero_position = "-" %}
+		{% if the_hero_position == "-" %}
+			{% if ps.hero_position %}
+				{% assign slide_hero_position = ps.hero_position%}
+			{% endif %}
+		{% else %}
+			{% assign slide_hero_position = the_hero_position %}
+		{% endif %}
+		{% if ps.hero_description %}
+			{% assign slide_hero_description = ps.hero_description | markdownify | strip_html | strip %}
+		{% else %}
+			{% assign slide_hero_description = ps.title | markdownify | strip_html | strip %}
+		{% endif %}
+		{% assign slide_hero_caption = ps.hero_caption | markdownify %}
+		{% assign slide_hero_border = ps.hero_border %}
+		{% if the_slide_align == "-" %}
+			{% if ps.slide_align %}
+				{% assign current_slide_align = ps.slide_align%}
+			{% endif %}
+		{% else %}
+			{% assign current_slide_align = the_slide_align %}
+		{% endif %}
+		{% assign the_page_bg_color = "-" %}
+		{% if ps.page_bg_color %}
+			{% assign the_page_bg_color = ps.page_bg_color %}
+		{% endif %}
+		{% if start_separators and the_slide_separator and the_page_bg_color == current_page_bg_color %}
+			{% assign current_slide_separator = true %}
+		{% else %}
+			{% assign current_slide_separator = false %}
+		{% endif %}
+		{% assign current_page_bg_color = the_page_bg_color %}
+		{% include widget-slide.html
+		   hero_image=slide_hero_image
+		   hero_position=slide_hero_position
+		   hero_description=slide_hero_description
+		   hero_caption=slide_hero_caption
+		   hero_border=slide_hero_border
+		   slide_content=the_content
+		   slide_separator=current_slide_separator
+		   slide_align=current_slide_align
+		   slide_id=slide_id
+		%}
+		{% assign start_separators = true %}
 	{% endfor %}
 {% endif %}

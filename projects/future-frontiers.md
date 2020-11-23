@@ -20,44 +20,13 @@ page_headers: |
       padding-top: 0.5rem;
       padding-bottom: 0.5rem;
     }
-    #projects-future-frontiers-01-philosophy-01-on-horizons-02 .slide-image,
-    #projects-future-frontiers-01-philosophy-02-overview-effect-05 .slide-image,
-    #projects-future-frontiers-02-trends-01-democratized-underwater-exploration-05 .slide-image,
-    #projects-future-frontiers-03-exploitation-01-starship-gold-rush-03 .slide-image {
-      display: none;
-    }
     #philosophy {
       margin-top: 0;
-    }
-    #projects-future-frontiers-01-philosophy-01-on-horizons-02 {
-      border-color: rgba(15,15,15,0.2);
-      border-top-style: solid;
-      border-top-width: 1px;
-    }
-    #projects-future-frontiers-01-philosophy-02-overview-effect-02,
-    #projects-future-frontiers-01-philosophy-02-overview-effect-03,
-    #projects-future-frontiers-01-philosophy-02-overview-effect-04,
-    #projects-future-frontiers-01-philosophy-02-overview-effect-05,
-    #projects-future-frontiers-02-trends-01-democratized-underwater-exploration-02,
-    #projects-future-frontiers-02-trends-01-democratized-underwater-exploration-03,
-    #projects-future-frontiers-02-trends-01-democratized-underwater-exploration-04,
-    #projects-future-frontiers-02-trends-01-democratized-underwater-exploration-05,
-    #projects-future-frontiers-03-exploitation-01-starship-gold-rush-02,
-    #projects-future-frontiers-03-exploitation-01-starship-gold-rush-03 {
-      border-color: rgba(255,255,255,0.2);
-      border-top-style: solid;
-      border-top-width: 1px;
     }
     @media (min-width: 60em) {
       #future-frontiers-hero .pv5-l {
         padding-top: 2rem;
         padding-bottom: 2rem;
-      }
-      #projects-future-frontiers-01-philosophy-01-on-horizons-02 .slide-image,
-      #projects-future-frontiers-01-philosophy-02-overview-effect-05 .slide-image,
-      #projects-future-frontiers-02-trends-01-democratized-underwater-exploration-05 .slide-image,
-      #projects-future-frontiers-03-exploitation-01-starship-gold-rush-03 .slide-image {
-        display: block;
       }
       .slide-image-left,
       .slide-image-none,
@@ -96,9 +65,10 @@ credits:
    hero_position="left"
    slide_separator=true
    slide_align="top"
-   title_links="internal"
+   title_links="external"
    show_dates=true
    collapse_slides=true
    table_of_contents=true
-   table_of_contents_hero="/projects/future-frontiers/00-contents-00-contents-00.jpg"
+   table_of_contents_hero="/projects/future-frontiers/table-of-contents.jpg"
+   table_of_contents_hero_caption="[Venkatesh Rao](/members/rao-venkatesh)"
 %}

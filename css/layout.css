@@ -52,7 +52,6 @@ figcaption,
 .page-info,
 .slide-nav,
 .author-bio,
-.slide-author,
 #markdown-toc {
 	font-size: 80%;
 }
@@ -321,6 +320,11 @@ a.project-page-box:hover .pseudo-link {
 
 .slide-image-none .slide-image {
 	display: none;
+}
+
+.slide-border {
+	border-top-style: solid;
+	border-top-width: 1px;
 }
 
 .slide-content {

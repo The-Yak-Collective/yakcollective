@@ -73,8 +73,7 @@
 {% endif %}
 
 {% comment %}
-	Push out slide content. Weird indenting is necessary so as not to
-	mess with Kramdown's indentation expectations.
+	Push out slide content.
 {% endcomment %}
 {% capture the_content %}
 <div{% if page.layout != "page-project-slide" %} id="{{ include.slide.url | replace: '/', ' ' | strip | replace: ' ', '-' }}"{% endif %} class="slide-image-{{ hero_position }} {% if hero_align == 'top' %}items-start{% elsif hero_align == 'bottom' %}items-end{% else %}items-center{% endif %} cf">

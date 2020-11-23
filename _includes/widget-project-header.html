@@ -19,65 +19,65 @@
 	Project header/hero. No indentation to prevent Markdown conversion
 	weirdness.
 {% endcomment %}
-{% capture the_content %}
-<header id="{{ project.url | replace: '/', ' ' | strip | split: ' ' | last }}-hero" class="yak-project-header relative">
-	<div class="hero"></div>
-	<div class="yak-content wide">
-		<div class="cf ph0 pv5-l pv4">
-			<aside class="border-box fn fl-l w-third-l pl5-l pr4-l pb2 pb0-l">
-				{% if project.type %}
-					<div class="project-type small lh-title fw9 mb3 mt0 pt3 bt bw2 sans-serif ttu">{{ project.type }}</div>
-				{% endif %}
+{% capture the_content %}<div>
+	<header id="{{ project.url | replace: '/', ' ' | strip | split: ' ' | last }}-hero" class="yak-project-header relative">
+		<div class="hero"></div>
+		<div class="yak-content wide">
+			<div class="cf ph0 pv5-l pv4">
+				<aside class="border-box fn fl-l w-third-l pl5-l pr4-l pb2 pb0-l">
+					{% if project.type %}
+						<div class="project-type small lh-title fw9 mb3 mt0 pt3 bt bw2 sans-serif ttu">{{ project.type }}</div>
+					{% endif %}
 
-				{% comment %}
-					Project date and sequence count (if applicable).
-				{% endcomment %}
-				{% if project.date %}
-					<time class="smaller db ttu mb3 tracked-tight">
-						{{ project.date | date_to_long_string: "ordinal", "US" }} UTC
-						{% if project.sequence %}
-							<br>{% include sequence.txt current_date=project.date sequence_id=project.sequence %}
-						{% endif %}
-					</time>
-				{% endif %}
-
-				{% comment %}
-					Output project credits. Having a `lead_editors`
-					entry is HIGHLY recommended, but not strictly
-					required. Solution after:
-
-					https://stackoverflow.com/questions/8206869/iterate-over-hashes-in-liquid-templates
-				{% endcomment %}
-				{% if project.credits %}
-					{% for credits_block in project.credits %}
-						{% if credits_block[1].size > 0 %}
-							{% assign credits_class = credits_block[0] | replace: "_", "-" | downcase %}
-							{% if credits_class != "lead-editors" %}
-								{% assign credits_class = "collaborators" %}
+					{% comment %}
+						Project date and sequence count (if applicable).
+					{% endcomment %}
+					{% if project.date %}
+						<time class="smaller db ttu mb3 tracked-tight">
+							{{ project.date | date_to_long_string: "ordinal", "US" }} UTC
+							{% if project.sequence %}
+								<br>{% include sequence.txt current_date=project.date sequence_id=project.sequence %}
 							{% endif %}
-							{% assign credits_title = credits_block[0] | replace: "_", " " | capitalize %}
-							{% assign credits_list = credits_block[1] %}
-							<details class="smaller mb3 {{ credits_class }}" open>
-								<summary class="ttu lh-title">{{ credits_title }}</summary>
-								<p>{% include member-list.html member_list=credits_list link_members=true %}</p>
-							</details>
-						{% endif %}
-					{% endfor %}
-				{% endif %}
-			</aside>
+						</time>
+					{% endif %}
 
-			{% comment %}
-				Main hero banner content: The project title, tagline,
-				and above-the-fold summary.
-			{% endcomment %}
-			<div class="fn fl-l w-two-thirds-l pl4-l pr5-l">
-				{% if project.title %}<h1 class="ma0 pa0 fw8 f1">{{ project.title }}</h1>{% endif %}
-				{% if project.tagline %}<div class="subhead pt3 pb1 fw4 f3">{{ project.tagline }}</div>{% endif %}
-				{% if project.summary %}<div class="small lh-copy mb3">{{ project.summary | markdownify }}</div>{% endif %}
+					{% comment %}
+						Output project credits. Having a `lead_editors`
+						entry is HIGHLY recommended, but not strictly
+						required. Solution after:
+
+						https://stackoverflow.com/questions/8206869/iterate-over-hashes-in-liquid-templates
+					{% endcomment %}
+					{% if project.credits %}
+						{% for credits_block in project.credits %}
+							{% if credits_block[1].size > 0 %}
+								{% assign credits_class = credits_block[0] | replace: "_", "-" | downcase %}
+								{% if credits_class != "lead-editors" %}
+									{% assign credits_class = "collaborators" %}
+								{% endif %}
+								{% assign credits_title = credits_block[0] | replace: "_", " " | capitalize %}
+								{% assign credits_list = credits_block[1] %}
+								<details class="smaller mb3 {{ credits_class }}" open>
+									<summary class="ttu lh-title">{{ credits_title }}</summary>
+									<p>{% include member-list.html member_list=credits_list link_members=true %}</p>
+								</details>
+							{% endif %}
+						{% endfor %}
+					{% endif %}
+				</aside>
+
+				{% comment %}
+					Main hero banner content: The project title,
+					tagline, and above-the-fold summary.
+				{% endcomment %}
+				<div class="fn fl-l w-two-thirds-l pl4-l pr5-l">
+					{% if project.title %}<h1 class="ma0 pa0 fw8 f1">{{ project.title }}</h1>{% endif %}
+					{% if project.tagline %}<div class="subhead pt3 pb1 fw4 f3">{{ project.tagline }}</div>{% endif %}
+					{% if project.summary %}<div class="small lh-copy mb3">{{ project.summary | markdownify }}</div>{% endif %}
+				</div>
 			</div>
 		</div>
-	</div>
-</header>
-{% endcapture %}
+	</header>
+</div>{% endcapture %}
 
 {% include widget-breakout-box.html layout="full-bleed" extra_class="yak-project-header-wrapper" content=the_content %}

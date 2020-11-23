@@ -13,18 +13,18 @@
 	suitable for inclusion in both Markdown and HTML pages.
 {% endcomment %}
 
-{% capture slideshow %}
-<figure class="ma0">
-	<div class="google-slideshow relative">
-		<iframe src="https://docs.google.com/presentation/d/{{ include.gid }}/embed?start=false&loop=false&delayms=60000" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" class="w-100 h-100 absolute top-0 left-0 bn"></iframe>
-	</div>
+{% capture slideshow %}<div>
+	<figure class="ma0">
+		<div class="google-slideshow relative">
+			<iframe src="https://docs.google.com/presentation/d/{{ include.gid }}/embed?start=false&loop=false&delayms=60000" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" class="w-100 h-100 absolute top-0 left-0 bn"></iframe>
+		</div>
 
-	<figcaption class="yak-content"><p>
-		<a href="https://docs.google.com/presentation/d/{{ include.gid }}/edit"><img class="h1" src="/img/google-slides.png" alt="Open Google Slides"> Open Google Slides</a>
-		/
-		<a href="https://docs.google.com/presentation/d/{{ include.gid }}/export/pdf"><img class="h1" src="/img/pdf.png" alt="Download PDF"> Download PDF</a>
-	</p></figcaption>
-</figure>
-{% endcapture %}
+		<figcaption class="yak-content"><p>
+			<a href="https://docs.google.com/presentation/d/{{ include.gid }}/edit"><img class="h1" src="/img/google-slides.png" alt="Open Google Slides"> Open Google Slides</a>
+			/
+			<a href="https://docs.google.com/presentation/d/{{ include.gid }}/export/pdf"><img class="h1" src="/img/pdf.png" alt="Download PDF"> Download PDF</a>
+		</p></figcaption>
+	</figure>
+</div>{% endcapture %}
 
 {% include widget-breakout-box.html layout="center" extra_class="google-slideshow-wrapper" content=slideshow %}
