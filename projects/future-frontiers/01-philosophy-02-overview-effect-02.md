@@ -1,5 +1,6 @@
 ---
-section: Philosophy
+tags:
+  - philosophy
 title: Overview Effect
 layout: page-project-slide
 date: 2020-12-01 00:00:00

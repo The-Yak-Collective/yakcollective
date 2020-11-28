@@ -265,7 +265,15 @@
 				{% if the_author != "-" %}
 					{% assign member_url = "/members/" | append: the_author | append: "/" %}
 					{% assign member = site.pages | find: "url", member_url %}
-					<p class="slide-author mt1 small ttu tracked-tight"><a href="{{ member.url }}">{{ member.title | replace: " ", "&nbsp;" }}</a></p>
+					<p class="slide-author mv1 small ttu tracked-tight"><a href="{{ member.url }}">{{ member.title | replace: " ", "&nbsp;" }}</a></p>
+				{% endif %}
+				{% if ps.tags %}
+					{% assign last_tag = ps.tags.last %}
+					<p class="slide-tags mv1 small ttl tracked-tight">
+						{% for tag in ps.tags %}
+							#{{ tag | replace: " ", "&nbsp;" }}{% unless tag == last_tag %},{% endunless %}
+						{% endfor %}
+					</p>
 				{% endif %}
 			{% endif %}
 			{{ ps.content | markdownify }}

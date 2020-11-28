@@ -1,5 +1,6 @@
 ---
-section: Trends
+tags:
+  - trends
 title: Democratized Underwater Exploration
 layout: page-project-slide
 date: 2020-12-01 00:00:00

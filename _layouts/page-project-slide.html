@@ -26,7 +26,15 @@ layout: default
 	{% if page.author %}
 		{% assign member_url = "/members/" | append: page.author | append: "/" %}
 		{% assign member = site.pages | find: "url", member_url %}
-		<p class="slide-author mt1 small ttu tracked-tight"><a href="{{ member.url }}">{{ member.title | replace: " ", "&nbsp;" }}</a></p>
+		<p class="slide-author mv1 small ttu tracked-tight"><a href="{{ member.url }}">{{ member.title | replace: " ", "&nbsp;" }}</a></p>
+	{% endif %}
+	{% if page.tags %}
+		{% assign last_tag = page.tags.last %}
+		<p class="slide-tags mv1 small ttl tracked-tight">
+			{% for tag in page.tags %}
+				#{{ tag | replace: " ", "&nbsp;" }}{% unless tag == last_tag %},{% endunless %}
+			{% endfor %}
+		</p>
 	{% endif %}
 	{{ page.content | markdownify }}
 </div>{% endcapture %}
