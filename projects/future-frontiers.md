@@ -66,7 +66,7 @@ credits:
    hero_position="left"
    slide_separator=true
    slide_align="top"
-   title_links="external"
+   title_links="internal"
    show_dates=true
    collapse_slides=true
    table_of_contents=true
