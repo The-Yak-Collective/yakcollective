@@ -181,7 +181,7 @@ Then at one family dinner, Mr. Vader broke it to him “I can’t see you anymor
 
 “What?” said Vijayan, flicking some rice across the table with the chopsticks he was always struggling with.
 
-Vader paused and continued, “I’m kidding, I’m not dying, I mean we are all dying… but that’s not what I meant… I think we should reduce the number of sessions we do cause the Reparenting program was in beta and the company is pulling us out in the next couple of months.”
+Vader paused, then continued. “I’m kidding, I’m not dying, I mean we are all dying… but that’s not what I meant… I think we should reduce the number of sessions we do. The reparenting program was in beta and the company is pulling us out in the next couple of months.”
 
 Vijayan did not have any caustic retorts or sarcastic wit to respond with. He felt at peace, he also hoped he had not become an optimist. He ended that conversation with “you should probably try to stay off telling jokes, not your thing apparently.”
 
@@ -193,7 +193,7 @@ The idea was that crosswalk would say nice things to you while you waited for th
 
 Yelling and cursing at the Matthew McConaughey crosswalk became a tradition honored by pedestrians in Austin. On one of his walks where he was trying to defuse the anger at his dead father, it struck Vijayan, why not use GPT-51 to recreate his father’s voice? And why not let other people recreate the voice of people they are angry at? Kind of like an escape room for relationships. He knew the perfect man to help him out with this.
 
-Reggie and Vijayan set to work by feeding the memories from Vijayan and his father’s [iRemember](https://roamresearch.com/#/app/Astonishing_Stories/page/1uBQxh_pw), an account that collected artifacts from his life, and Vi]jayans Roam graph to GPT-51. The goal was to recreate his father’s voice. This proved almost close to impossible as the actual events of Vijayan and his father’s lives and their thoughts about them were so disconnected that their first prototype felt almost too real. Vijayan felt sympathetic to this version of his father.
+Reggie and Vijayan set to work by feeding the memories from Vijayan and his father’s [iRemember](https://roamresearch.com/#/app/Astonishing_Stories/page/1uBQxh_pw), an account that collected artifacts from his life, and Vijayan’s Roam graph to GPT-51. The goal was to recreate his father’s voice. This proved almost close to impossible as the actual events of Vijayan and his father’s lives and their thoughts about them were so disconnected that their first prototype felt almost too real. Vijayan felt sympathetic to this version of his father.
 
 They doubted their idea and punched walls over it. Getting angry at an almost actual person who was helpless physically and disabled cognitively relative to a human was not going to help anyone’s cause. They settled down on an 80/20 solution. They would use the memories specific to incidents from Vijayan’s past that he flashbacked to often to create his father’s critical voice. This critical voice would act as exposure therapy for Vijayan. Programmed to happen at planned intervals to start with and then  to happen at times when Vijayan is least suspecting it.
 
