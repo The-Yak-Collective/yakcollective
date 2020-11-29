@@ -8,7 +8,7 @@ google_doc: "https://docs.google.com/presentation/d/1oIziqtVM878uRG-JOfrQNvGFsQW
 hero_image: /projects/future-frontiers/02-trends-02-the-promise-of-nanosatellites-for-developing-nations-01.jpg
 hero_desciption: The Promise of Nanosatellites for Developing Nations
 hero_caption:  |
-  NEEDS IMAGE CREDITS
+  [Monch Publishing](https://www.monch.com/)
 hero_border: true
 hero_position: left
 page_text_color: white
