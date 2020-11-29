@@ -92,7 +92,7 @@
 {% capture the_content %}<div>
 	<div{% if page.layout != "page-project-slide" %} id="{{ slide_id }}"{% endif %} class="slide-image-{{ hero_position }}{%if slide_separator %} slide-border{% endif %} {% if slide_align == 'top' %}items-start{% elsif slide_align == 'bottom' %}items-end{% else %}items-center{% endif %} cf">
 		<div class="slide-image {% if hero_position == 'left' %}mt5 mb0 mv5-l{% elsif hero_position == 'right' %}mt0 mb5 mv5-l{% endif %}">
-			{% if hero_image != "-" %}
+			{% if hero_image and hero_image != "-" %}
 				<figure class="ma0">
 					<img src="{{ hero_image }}"{% if hero_description %} alt="{{ hero_description }}"{% endif %}{% if hero_border %} class="image-border ba"{% endif %}>
 					{% if hero_caption %}<figcaption class="yak-content">{{ hero_caption }}</figcaption>{% endif %}

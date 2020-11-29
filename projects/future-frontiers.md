@@ -1,7 +1,7 @@
 ---
 title: Future Frontiers
 date: 2020-12-01 00:00:00
-tagline: Democratized exploration of space and oceans
+tagline: An Era of Democratized Access to Frontiers?
 roam_page: https://roamresearch.com/#/app/ArtOfGig/page/O12GM-bXp
 google_doc: https://docs.google.com/presentation/d/1oIziqtVM878uRG-JOfrQNvGFsQWKP_S_W8cLkhQlXvA/edit
 type: Report
@@ -44,11 +44,12 @@ page_headers: |
     }
   </style>
 summary: |
-  In the 14th century, around the time of the Black Death, citizen explorers like Ibn Battuta and Petrarch planted the earliest seeds of democratized exploration culture. The Age of Exploration witnessed the voyages of explorers like Zheng He, Columbus, Vasco da Gama, and Ferdinand Magellan, who relied on royal patronage. By the 20th century, exploration had become accessible to the educated middle classes, and institutional and state support catalyzed a vast increase in exploratory activity, culminating in the space programs of the U.S. and USSR, as well as efforts like the International Geophysical Year (1957–1958). 
+  In the 14th century, around the time of the Black Death, citizen explorers like Ibn Battuta and Petrarch planted the earliest seeds of democratized exploration culture. The Age of Exploration witnessed the voyages of explorers like Zheng He, Columbus, Vasco da Gama, and Ferdinand Magellan, who relied on royal patronage. By the 20th century, exploration had become accessible to the educated middle classes, and institutional and state support catalyzed a vast increase in exploratory activity, culminating in the space programs of the U.S. and USSR, as well as efforts like the International Geophysical Year (1957–1958).
 
-  Mass participation in frontier exploratory activities, however, is still not a reality. 
+  While mass participation in frontier exploratory activities is still not a reality, more, and cheaper, enabling technologies are appearing  than at any time in history.
 
-  In the wake of Covid19, could an era of democratized access to frontiers be the key to a renewed sense of larger purpose in the universe for humanity?
+  In the wake of Covid19, could an era of democratized access to frontiers be the key to a renewed sense of larger purpose in the universe for humanity? In this continuously evolving project, members of the Yak Collective ponder our future as an exploratory species.
+
 credits:
   lead_editors:
     - rao-venkatesh
