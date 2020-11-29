@@ -8,10 +8,19 @@ google_doc: "https://docs.google.com/presentation/d/1oIziqtVM878uRG-JOfrQNvGFsQW
 hero_image: /projects/future-frontiers/02-trends-01-democratized-underwater-exploration-04.jpg
 hero_border: true
 hero_desciption: Democratized Underwater Exploration
+hero_caption:  |
+  [Sofar](https://www.sofarocean.com/)
 hero_position: left
 page_text_color: white
 page_bg_color: "25,150,175"
 author: rao-venkatesh
 description: The stack…
 ---
-Scelerisque eu ultrices vitae auctor eu augue ut lectus arcu. Erat velit scelerisque in dictum non consectetur. Vel orci porta non pulvinar neque laoreet. Adipiscing at in tellus integer feugiat scelerisque varius. Proin sed libero enim sed faucibus turpis in. Facilisis gravida neque convallis a. Morbi blandit cursus risus at ultrices. Ut consequat semper viverra nam libero justo laoreet sit. Non consectetur a erat nam at lectus urna. Nisl vel pretium lectus quam id leo. Amet porttitor eget dolor morbi non arcu. Ut tristique et egestas quis ipsum. Non consectetur a erat nam at lectus urna duis convallis. Lectus proin nibh nisl condimentum. Dis parturient montes nascetur ridiculus mus mauris vitae ultricies. Nec nam aliquam sem et tortor consequat. Adipiscing elit pellentesque habitant morbi tristique. Aliquet eget sit amet tellus cras adipiscing. Viverra orci sagittis eu volutpat. Sit amet justo donec enim diam vulputate.
+What might a solid stack for democratized underwater exploration look like?
+
+- **Grand challenges and missions:** Suited to democratized exploration
+- **Strong explorer community:** Comparable to open source, maker movement, astronomy
+- **Open-source software tools:** To process data from community oceanic infrastructure
+- **Infrastructure relations:** With research institutions, commercial shipping, military 
+- **Piggyback capabilities:** For opportunistic staging, deployment, communications, and telemetry
+- **Hardware foundation:** High-quality, low-cost, high-variety hardware with greater range, endurance, and sensor payloads

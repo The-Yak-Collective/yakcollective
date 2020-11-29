@@ -9,11 +9,16 @@ hero_image: /projects/future-frontiers/02-trends-01-democratized-underwater-expl
 hero_border: true
 hero_desciption: Democratized Underwater Exploration
 hero_caption:  |
-  IMAGE CREDITS NEEDED
+  [Sofar](https://www.sofarocean.com/) (left) and [MBARI](https://www.mbari.org/) (right)
 hero_position: left
 page_text_color: white
 page_bg_color: "25,150,175"
 author: rao-venkatesh
 description: Dimensions of the capability gap…
 ---
-Nunc lobortis mattis aliquam faucibus purus in. Condimentum mattis pellentesque id nibh tortor id. Nulla facilisi nullam vehicula ipsum a arcu cursus vitae. Tortor posuere ac ut consequat semper viverra. Nec dui nunc mattis enim. Placerat orci nulla pellentesque dignissim enim sit amet. Ipsum suspendisse ultrices gravida dictum fusce ut placerat orci nulla. Lectus quam id leo in vitae turpis massa sed elementum. Nibh tortor id aliquet lectus proin. Tempor id eu nisl nunc mi ipsum faucibus vitae. Tincidunt vitae semper quis lectus. Fusce ut placerat orci nulla pellentesque dignissim enim. Lectus vestibulum mattis ullamcorper velit. Quis imperdiet massa tincidunt nunc pulvinar sapien.
+- **Political:** How do amateurs enter the playground of militaries and commercial shipping?
+- **Economic:** How do amateurs meet the high costs of staging deep ocean exploration?
+- **Socio-cultural:** The oceans are a wilderness, how do you build a cultural foundation?
+- **Technological:** How to build the capabilities, which are much deeper than other amateur fields?
+- **Legal:** Can amateurs handle lawless international waters and regulation choked territorial waters?
+- **Ecological:** Will amateurs help protect threatened marine ecosystems or become part of the threat?

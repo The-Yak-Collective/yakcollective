@@ -44,11 +44,11 @@ page_headers: |
     }
   </style>
 summary: |
-  In the 14th century, around the time of the Black Death, citizen explorers like Ibn Battuta and Petrarch planted the earliest seeds of democratized exploration culture. The Age of Exploration witnessed the voyages of explorers like Zheng He, Columbus, Vasco da Gama, and Ferdinand Magellan, who relied on royal patronage. By the 20th century, exploration had become accessible to the educated middle classes, and institutional and state support catalyzed a vast increase in exploratory activity, culminating in the space programs of the U.S. and USSR, as well as efforts like the International Geophysical Year (1957–1958).
+  In the 14th century, around the time of the Black Death, citizen explorers like Ibn Battuta and Petrarch planted the earliest seeds of democratized exploration culture. The Age of Exploration witnessed the voyages of explorers like Zheng He, Columbus, Vasco da Gama, and Ferdinand Magellan, who relied on royal patronage. By the 20th century, exploration had become accessible to the educated middle classes, and institutional and state support catalyzed a vast increase in exploratory activity, culminating in the space programs of the U.S. and USSR, as well as efforts like the International Geophysical Year (1957–1958). 
 
   Mass participation in frontier exploratory activities, however, is still not a reality. 
 
-  In the wake of Covid19, could an era of democratized access to frontiers be the key to a renewed sense of larger purpose in the universe for humanity? 
+  In the wake of Covid19, could an era of democratized access to frontiers be the key to a renewed sense of larger purpose in the universe for humanity?
 credits:
   lead_editors:
     - rao-venkatesh
@@ -57,7 +57,7 @@ credits:
     - swaroop-siva
   collaborators:
     - bilsland-charlie
-    - hogan-ryan
+    - ramsamy-kannen
 ---
 {% include widget-project-header.html %}
 

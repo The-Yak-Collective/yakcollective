@@ -9,11 +9,11 @@ hero_image: /projects/future-frontiers/02-trends-01-democratized-underwater-expl
 hero_border: true
 hero_desciption: Democratized Underwater Exploration
 hero_caption:  |
-  IMAGE CREDITS NEEDED
+  [Sofar](https://www.sofarocean.com/) (left) and [MBARI](https://www.mbari.org/) (right)
 hero_position: left
 page_text_color: white
 page_bg_color: "25,150,175"
 author: rao-venkatesh
 description: The capability gap…
 ---
-Vitae turpis massa sed elementum tempus. Sed odio morbi quis commodo odio aenean sed adipiscing. Sed sed risus pretium quam vulputate dignissim suspendisse. Neque volutpat ac tincidunt vitae semper quis. Ullamcorper dignissim cras tincidunt lobortis feugiat vivamus at augue. Nec ultrices dui sapien eget. Sapien nec sagittis aliquam malesuada bibendum arcu vitae elementum curabitur. Urna condimentum mattis pellentesque id nibh tortor id aliquet. Tincidunt dui ut ornare lectus sit amet est. Et egestas quis ipsum suspendisse. Massa enim nec dui nunc mattis enim ut. Consectetur adipiscing elit ut aliquam. Arcu cursus euismod quis viverra nibh cras pulvinar mattis. Facilisi morbi tempus iaculis urna id. Egestas purus viverra accumsan in nisl. Quam id leo in vitae turpis massa sed elementum tempus. Morbi non arcu risus quis varius quam. A diam maecenas sed enim ut sem. Duis ultricies lacus sed turpis tincidunt. Purus in massa tempor nec feugiat.
+**Consumer-scale products** have limited range, endurance, depth limit, modest sensor payload, low autonomy capabilities, and a limited stack. **Bespoke research equipment** like the MBARI _Tethys_ above are capable of long range endurance missions and are supported by a deeper stack of support technologies.

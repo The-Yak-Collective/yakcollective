@@ -9,11 +9,11 @@ hero_image: /projects/future-frontiers/02-trends-01-democratized-underwater-expl
 hero_border: true
 hero_desciption: Democratized Underwater Exploration
 hero_caption:  |
-  IMAGE CREDITS NEEDED
+  [Sofar](https://www.sofarocean.com/)
 hero_position: left
 page_text_color: white
 page_bg_color: "25,150,175"
 author: rao-venkatesh
 description: Consumer-priced ocean exploration products are just beginning to emerge, creating unprecedented opportunities for democratized participation in oceanic exploration.
 ---
-Vulputate enim nulla aliquet porttitor lacus luctus accumsan tortor posuere. Scelerisque mauris pellentesque pulvinar pellentesque. Amet porttitor eget dolor morbi non arcu risus quis varius. Ipsum suspendisse ultrices gravida dictum fusce ut placerat orci nulla. Congue nisi vitae suscipit tellus mauris a diam maecenas. Consequat nisl vel pretium lectus quam. Nulla at volutpat diam ut. Nunc pulvinar sapien et ligula ullamcorper malesuada proin libero nunc. Quam nulla porttitor massa id neque aliquam vestibulum morbi. Mi proin sed libero enim sed faucibus turpis in. Tortor vitae purus faucibus ornare. Pellentesque dignissim enim sit amet. Sagittis id consectetur purus ut faucibus. Nunc lobortis mattis aliquam faucibus purus in massa. A cras semper auctor neque vitae tempus quam pellentesque. Ultrices neque ornare aenean euismod elementum nisi.
+Consumer-priced ocean exploration products are just beginning to emerge, creating unprecedented opportunities for democratized participation in oceanic exploration. Companies like Sofar (created via merger of OpenROV and Spoondrift) now offer consumer-priced oceanic exploration gear capable of serious research and exploration activities. The development is similar to the impact of low cost, high power amateur telescopes (such as large aperture Dobsonian telescopes) in amateur astronomy. But the stack required for true democratization remains incomplete.
