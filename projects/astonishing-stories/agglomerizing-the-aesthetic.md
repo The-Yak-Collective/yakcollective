@@ -1,5 +1,5 @@
 ---
-date: 2020-11-28 00:00:00
+date: 2020-11-29 00:00:00
 hero_image: /projects/astonishing-stories/agglomerizing-the-aesthetic.jpg
 hero_attach_vertical: center
 hero_attach_horizontal: center
@@ -57,8 +57,6 @@ page_headers: |
 
 Sometimes I just marvel at the world we live in. People always bitch about the global, remote workforce—_a race to the bottom, downward pressure on wages_, blah, blah, blah—but here I was getting ready to Virtual HouseGuest with my new girlfriend’s parents for dinner tomorrow, and I was about to get some niche expertise on styling my hair on a Sunday night. When you needed something, no matter how minor, someone, somewhere in the world could help you with it. It was amazing!
 
-“Hi, this is JoAnne, your Medium-Length Men’s Hair consultant. First, can I get your hair profile?” I turned my head from side to side so that the camera on my computer could capture all the angles of my head. “Thank you. While that’s processing, what can I help you with today?”
-
 {%
   include widget-image.html
   layout="right"
@@ -66,6 +64,8 @@ Sometimes I just marvel at the world we live in. People always bitch about the g
   alt="Agglomerizing the Aesthetic"
   caption="Illustration by [Justice](/members/thelot-justice/)."
 %}
+
+“Hi, this is JoAnne, your Medium-Length Men’s Hair consultant. First, can I get your hair profile?” I turned my head from side to side so that the camera on my computer could capture all the angles of my head. “Thank you. While that’s processing, what can I help you with today?”
 
 “Yeah, I’ve been growing my hair out for the first time since—well, I guess since the last pandemic. Ha! Time flies, right? Anyway, I’m virtually meeting my girlfriend’s parents for the first time tomorrow. I want to look relaxed but not flaky, amenable but not ambivalent. What should I do with my hair?”
 
@@ -75,7 +75,7 @@ Sometimes I just marvel at the world we live in. People always bitch about the g
 
 JoAnne smiled graciously. “Don’t worry. I’ve helped thousands of men with medium-length hair in hundreds of different situations. We’ll figure out exactly what you need.” The survey appeared on my screen. Twenty minutes later I clicked Send.  
 
-“Read it and weep, JoAnne.” I joked. “Don’t fall in love with m`https://fantasticanachronism.com/2020/09/11/whats-wrong-with-social-science-and-how-to-fix-it/`e now.”
+“Read it and weep, JoAnne.” I joked. “Don’t fall in love with m<code style="word-break: break-all;">https://fantasticanachronism.com/2020/09/11/whats-wrong-with-social-science-and-how-to-fix-it/</code>e now.”
 
 JoAnne smiled, “No, no, we’ll get right down to it. So first—” JoAnne paused as she read my survey answers. Her brow furrowed and she looked quickly to the screen with my hair profile.
 
