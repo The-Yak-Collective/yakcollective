@@ -75,7 +75,7 @@ Sometimes I just marvel at the world we live in. People always bitch about the g
 
 JoAnne smiled graciously. “Don’t worry. I’ve helped thousands of men with medium-length hair in hundreds of different situations. We’ll figure out exactly what you need.” The survey appeared on my screen. Twenty minutes later I clicked Send.  
 
-“Read it and weep, JoAnne.” I joked. “Don’t fall in love with m<code style="word-break: break-all;">https://fantasticanachronism.com/2020/09/11/whats-wrong-with-social-science-and-how-to-fix-it/</code>e now.”
+“Read it and weep, JoAnne.” I joked. “Don’t fall in love with me now.”
 
 JoAnne smiled, “No, no, we’ll get right down to it. So first—” JoAnne paused as she read my survey answers. Her brow furrowed and she looked quickly to the screen with my hair profile.
 
