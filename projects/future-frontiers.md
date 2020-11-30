@@ -1,7 +1,7 @@
 ---
 title: Future Frontiers
 date: 2020-12-01 00:00:00
-tagline: An Era of Democratized Access to Frontiers?
+tagline: An era of democratized access to frontiers?
 roam_page: https://roamresearch.com/#/app/ArtOfGig/page/O12GM-bXp
 google_doc: https://docs.google.com/presentation/d/1oIziqtVM878uRG-JOfrQNvGFsQWKP_S_W8cLkhQlXvA/edit
 type: Report
