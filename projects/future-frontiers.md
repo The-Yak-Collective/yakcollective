@@ -58,6 +58,7 @@ credits:
     - swaroop-siva
   collaborators:
     - bilsland-charlie
+    - kalawar-jay
     - ramsamy-kannen
 ---
 {% include widget-project-header.html %}
