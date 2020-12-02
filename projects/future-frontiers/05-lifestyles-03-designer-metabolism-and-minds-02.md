@@ -1,18 +1,18 @@
 ---
 tags:
   - lifestyles
-title: "Designer Minds 2100: When Body Melds with Neural Clone"
+title: "Designer Metabolism and Minds"
 layout: page-project-slide
 date: 2020-12-01 00:00:00
 google_doc: "https://docs.google.com/presentation/d/1oIziqtVM878uRG-JOfrQNvGFsQWKP_S_W8cLkhQlXvA/edit#slide=id.ga2ecfa2280_1_50"
-hero_image: /projects/future-frontiers/05-lifestyles-04-designer-minds-01.jpg
+hero_image: /projects/future-frontiers/05-lifestyles-03-designer-metabolism-and-minds-02.jpg
 hero_border: true
-hero_desciption: "Designer Minds 2100: When Body Melds with Neural Clone"
+hero_desciption: "Designer Metabolism and Minds"
 hero_caption:  |
   NASA / [Smithsonian National Air and Space Museum](https://airandspace.si.edu/multimedia-gallery/web12037-2011hjpg)
 hero_position: left
 page_text_color: white
-page_bg_color: "0,125,125"
+page_bg_color: "200,100,50"
 author: kalawar-jay
 description: Neural clones as human-ness without the metabolic systems may likely be the parallel science and tech that may evolve as humans begin to go beyond Mars to the outer reaches of the solar system.
 ---
