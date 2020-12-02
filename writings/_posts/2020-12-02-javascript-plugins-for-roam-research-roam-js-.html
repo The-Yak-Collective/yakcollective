@@ -1,0 +1,97 @@
+---
+layout: post-external
+title: |
+  JavaScript plugins for Roam Research [[roam/js]]
+date: 2020-12-02 01:37:00 +0000
+author: le-cunff-anne-laure
+original_link: https://nesslabs.com/roam-research-javascript-plugins?utm_source=rss&utm_medium=rss&utm_campaign=roam-research-javascript-plugins
+---
+
+<p>One of the reasons why advanced users enjoy <a href="https://nesslabs.com/roam-research">Roam Research</a> so much is metaprogramming—the ability to modify Roam&#8217;s behaviour inside Roam itself, without ever touching its source code. By using JavaScript blocks via the roam/js feature, you can add new customise your experience.</p>
+
+
+
+<p>The good news is: you don’t need to be a programmer yourself to enjoy some of the added benefits these little bits of extra code have to offer. Fellow Roam users have generously made many such improvements public. Akin to plugins, you can install these JavaScript “mods” in a few clicks.</p>
+
+
+
+<p>To use any of these, create a page called <code>roam/js</code>. Every time you want to install a new JavaScript plugin, create a parent block with the following: <code>&#x007b;{[[roam/js]]&#x007d;}</code> &#8211; this will add an important warning so you are reminded to be careful with any code (especially third-party code) you add to your Roam database.</p>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter size-large"><img loading="lazy" width="592" height="227" src="https://nesslabs.com/wp-content/uploads/2020/12/roamjs-javascript-warning-roam-research.png" alt="Roam Research: roam/js JavaScript plugins warning" class="wp-image-10462" srcset="https://nesslabs.com/wp-content/uploads/2020/12/roamjs-javascript-warning-roam-research.png 592w, https://nesslabs.com/wp-content/uploads/2020/12/roamjs-javascript-warning-roam-research-300x115.png 300w" sizes="(max-width: 592px) 100vw, 592px" /></figure></div>
+
+
+
+<p>Nested under the warning, add the JavaScript code for the plugin you wish to add. After reading the warning, click on “Yes, I know what I am doing”. Whenever you want to stop using a JavaScript plugin, click on “Stop this” in the corresponding parent block.</p>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter size-large"><img loading="lazy" width="753" height="271" src="https://nesslabs.com/wp-content/uploads/2020/12/roam-research-roamjs-javascript-warning-activated-stop-this.png" alt="Roam Research roam/js warning activated - Stop this button" class="wp-image-10468" srcset="https://nesslabs.com/wp-content/uploads/2020/12/roam-research-roamjs-javascript-warning-activated-stop-this.png 753w, https://nesslabs.com/wp-content/uploads/2020/12/roam-research-roamjs-javascript-warning-activated-stop-this-300x108.png 300w" sizes="(max-width: 753px) 100vw, 753px" /></figure></div>
+
+
+
+<p>Okay, now, let&#8217;s have a look at some of the most interesting plugins out there.</p>
+
+
+
+<h2>Roam42</h2>
+
+
+
+<figure class="wp-block-embed-youtube wp-block-embed is-type-video is-provider-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">
+<iframe title="Roam42 - New Name, New Features and Updates" width="1100" height="619" src="https://www.youtube.com/embed/UzKOi0LHxQU?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div></figure>
+
+
+
+<p>Live preview, jump to date, quick reference, and many useful shortcut keys such as opening the sidebar or moving to the top or bottom of a page—<a href="https://github.com/roamhacker/roam42">Roam42</a> adds many quality of life improvements to Roam.</p>
+
+
+
+<p align="center"><a href="https://roamresearch.com/#/app/roamhacker/page/UeoxCm8rm" target="_blank" class="button" rel="noopener noreferrer">INSTALL ROAM42</a></p>
+
+
+
+<h2>RoamJS</h2>
+
+
+
+<p>Ready for some more advanced features? <a href="https://roamjs.com/">RoamJS</a> got it all: import the list of events on a given day from Google Calendar into your daily notes page; extract the text from an image and output it into Roam; define page synonyms for easier referencing; easily insert emojis; render charts; automatically import tweets related to a specific Roam page&#8230; And the list goes on.</p>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter size-large"><img loading="lazy" width="746" height="414" src="https://nesslabs.com/wp-content/uploads/2020/12/roamjs-widget-roam-research-javascript-plugins.png" alt="RoamJS JavaScript plugins installation via widget" class="wp-image-10465" srcset="https://nesslabs.com/wp-content/uploads/2020/12/roamjs-widget-roam-research-javascript-plugins.png 746w, https://nesslabs.com/wp-content/uploads/2020/12/roamjs-widget-roam-research-javascript-plugins-300x166.png 300w" sizes="(max-width: 746px) 100vw, 746px" /></figure></div>
+
+
+
+<p>RoamJS is a treasure trove of JavaScript plugins to install in Roam. It’s easy to get lost, but fear not: you can use the handy widget to generate the code for all the plugins you want to install in a couple of clicks.</p>
+
+
+
+<p align="center"><a href="https://roamjs.com/docs" target="_blank" class="button" rel="noopener noreferrer">INSTALL ROAMJS</a></p>
+
+
+
+<h2>Other plugins</h2>
+
+
+
+<p>There are so many plugins out there, you are sure to find what you need. Here are a few more to try out.</p>
+
+
+
+<ul><li><a href="https://github.com/andreynocap/roamjs-finance">roamjs-finance</a> displays the latest price for different cryptocurrencies</li><li><a href="https://gist.github.com/brittlewis12/1b67a7557d1abe6e560948538b0f9bc6">roam-dark-tweets.js</a> renders embedded tweets using a dark theme.</li><li><a href="https://www.reddit.com/r/RoamResearch/comments/hbxooe/playing_with_the_new_roamjs_made_a_feature_to/">roam_breadcrumbs.js</a> displays breadcrumbs for recently visited pages along the top bar.</li><li><a href="https://github.com/palashkaria/roam-modifiers/blob/master/roam-live-preview.user.js">roam-live-preview.user.js</a> shows a live preview of page references on hover.</li><li><a href="https://gist.github.com/GitMurf/96d5904e171cacae4f4fd0e0d903fd02">filter-focus.js</a> lets you focus on the search box when opening a filter, so you don’t have to use your mouse.</li><li><a href="https://gist.github.com/shodty/e4f718108b401a830b272da62ba6cfc3">roam-sidebar-toggle.js</a> creates a toggle button for the right sidebar in Roam.</li><li><a href="https://roamresearch.com/#/app/CatoMinor-public/page/FhtBdGjOL">copyPageName</a> lets you press CTRL + Q when using the search bar. When you can select a page, the title will be copied into the search field.</li><li><a href="https://roam.davidvargas.me/extensions/sort-references/">sort-references</a> adds an icon button to the user&#8217;s page that could be used to sort linked references</li><li><a href="https://forum.roamresearch.com/t/open-random-page-from-anywhere-in-roam-shift-click/1415">roam-random-page.js</a> opens a random page from anywhere in Roam.</li></ul>
+
+
+
+<p>There are more JavaScript plugins for Roam being created every week. If you&#8217;re looking up more of them, be aware that they are sometimes called “extensions” or “addons”—I personally prefer to keep these terms for <a href="https://nesslabs.com/browser-extensions-roam-research">browser extensions</a>, but there’s no official name (yet?) for the <code>roam/js</code> snippets users add to customise their experience.</p>
+
+
+
+<p>As with everything, don’t overdo it: only install what’s useful to improve your personal workflow, and make sure you trust the developer. The <code>roam/js</code> feature is powerful, and you know what they say about great power. It can sometimes be prudent to try a plugin on a test database before installing it on your main database. Have fun!</p>
+
+
+
+<p>P.S. Interested in creating your own JavaScript plugins for Roam? <a href="https://davidvargas.me/blog/how-to-create-your-own-roam-extensions/">This</a> is a great tutorial.<br>P.P.S. Want more tips to make the most of Roam? <a href="https://nesslabs.com/tag/roam">Explore the archive</a>.</p>
+<p>The post <a rel="nofollow" href="https://nesslabs.com/roam-research-javascript-plugins">JavaScript plugins for Roam Research [[roam/js]]</a> appeared first on <a rel="nofollow" href="https://nesslabs.com">Ness Labs</a>.</p>
