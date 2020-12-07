@@ -34,13 +34,13 @@ case "$2" in
 esac
 case "$3" in
 	avatar)
-		SIZE="128"
+		SIZE="512"
 		;;
 	image)
-		SIZE="1440"
+		SIZE="2048"
 		;;
 	fullbleed)
-		SIZE="2880"
+		SIZE="4096"
 		;;
 	*)
 		NEED_HELP="yes"
