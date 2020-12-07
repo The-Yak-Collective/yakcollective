@@ -6,7 +6,7 @@ layout: page-project-slide
 date: 2020-12-01 00:00:00
 google_doc: "https://docs.google.com/presentation/d/1oIziqtVM878uRG-JOfrQNvGFsQWKP_S_W8cLkhQlXvA/edit#slide=id.gacefa92242_0_73"
 hero_image: /projects/future-frontiers/02-trends-02-the-promise-of-nanosatellites-for-developing-nations-02.jpg
-hero_desciption: The Promise of Nanosatellites for Developing Nations
+hero_desciption: The promise of nanosatellites for developing nations
 hero_caption:  |
   [Nanonsats Database](https://www.nanosats.eu/)
 hero_border: true
