@@ -7,7 +7,7 @@ date: 2020-12-01 00:00:00
 google_doc: "https://docs.google.com/presentation/d/1oIziqtVM878uRG-JOfrQNvGFsQWKP_S_W8cLkhQlXvA/edit#slide=id.g8f42444074_0_15"
 hero_image: /projects/future-frontiers/02-trends-01-democratized-underwater-exploration-02.jpg
 hero_border: true
-hero_desciption: Democratized underwater exploration
+hero_description: Democratized underwater exploration
 hero_caption:  |
   [MBARI](https://www.mbari.org/) (left) and [Sofar](https://www.sofarocean.com/products/trident) (right)
 hero_position: left

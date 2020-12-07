@@ -72,5 +72,6 @@ credits:
    collapse_slides=true
    table_of_contents=true
    table_of_contents_hero="/projects/future-frontiers/table-of-contents.jpg"
+   table_of_contents_hero_description="Table of contents"
    table_of_contents_hero_caption="[Venkatesh Rao](/members/rao-venkatesh)"
 %}
