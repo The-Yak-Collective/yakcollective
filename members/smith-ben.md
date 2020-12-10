@@ -2,7 +2,7 @@
 title: Ben Smith
 date: 2020-10-23 00:00:00
 tagline: Qualitative researcher
-current: RAND Corporation
+currently: RAND Corporation
 previously: US Navy
 avatar: /members/smith-ben.jpg
 links:

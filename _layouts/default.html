@@ -121,7 +121,7 @@
 			The final "else" is just belt-and-suspenders material, and
 			should never be reached during a (non-broken) build.
 		{% endcomment %}
-		{% capture the_description %}{% if page.description %}{{ page.description | markdownify | strip_html | strip }}{% elsif page.summary %}{{ page.summary | truncatewords: 20 | markdownify | strip_html | strip }}{% elsif page.content.length > 0 %}{{ page.content | truncatewords: 20 | strip_html | strip }}{% elsif page.subtitle %}{{ page.subtitle }}{% elsif page.tagline %}{{ page.tagline }}{% elsif site.description %}{{ site.description | truncatewords: 20 | strip }}{% else %}{{ site.name }}{% endif %}{% endcapture %}
+		{% capture the_description %}{% if page.description %}{{ page.description | markdownify | strip_html | strip }}{% elsif page.summary %}{{ page.summary | truncatewords: 20 | markdownify | strip_html | strip }}{% elsif page.bio_short %}{{ page.bio_short | markdownify | strip_html | strip }}{% elsif page.content.length > 0 %}{{ page.content | truncatewords: 20 | strip_html | strip }}{% elsif page.subtitle %}{{ page.subtitle }}{% elsif page.tagline %}{{ page.tagline }}{% elsif site.description %}{{ site.description | truncatewords: 20 | strip }}{% else %}{{ site.name }}{% endif %}{% endcapture %}
 		<meta name="description" content="{{ the_description }}">
 		<meta name="twitter:description" content="{{ the_description }}">
 

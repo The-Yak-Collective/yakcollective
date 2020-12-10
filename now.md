@@ -14,7 +14,8 @@ Yak Collective projects are collaborations and explorations from the community.
                                 | sort: "date" %}
 
 {% for project in projects %}
-    {% include widget-project-box.html project=project hide_published=true %}
+    {% assign project_id = project.name | replace: ".md", "" | replace: ".html", "" %}
+    {% include widget-project-box.html project=project_id hide_published=true %}
 {% endfor %}
 
 ## Get Involved

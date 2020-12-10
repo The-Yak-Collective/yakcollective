@@ -4,22 +4,21 @@
 
 	By default, this widget assumes that it is included in a project
 	homepage, and will use that page's information to determine which
-	project pages to display. This can be overridden by passing in
-	suitable page data as the `project` parameter.
+	project pages to display. This can be overridden by passing in a
+	project ID as the `project` parameter.
 
 	Note that this widget outputs HTML in a safe way, and is thus
 	suitable for inclusion in both Markdown and HTML pages.
 {% endcomment %}
 
 {% comment %}
-	Set the current project.
-{% endcomment %}
-{% assign project = include.project | default: page %}
-
-{% comment %}
 	Figure out the current project ID.
 {% endcomment %}
-{% assign project_id = project.url | replace: "/", " " | strip | split: " " | last %}
+{% if include.project %}
+	{% assign project_id = include.project %}
+{% else %}
+	{% assign project_id = page.url | replace: "/", " " | strip | split: " " | last %}
+{% endif %}
 
 {% comment %}
 	Generate a list of project pages associated with the current

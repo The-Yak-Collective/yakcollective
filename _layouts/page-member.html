@@ -18,7 +18,7 @@ layout: default
 	Pull in the member card (which functions as an information box
 	here, rather than a link).
 {% endcomment %}
-{% include widget-member-card.html standalone=true member=page %}
+{% include widget-member-card.html standalone=true member=member_id %}
 
 {{ content }}
 
@@ -57,13 +57,15 @@ layout: default
 {% if projects_lead.size > 0 %}
 	<h2 id="project-lead">Project Lead On</h2>
 	{% for project in projects_lead %}
-		{% include widget-project-box.html project=project %}
+		{% assign project_id = project.name | replace: ".md", "" | replace: ".html", "" %}
+		{% include widget-project-box.html project=project_id %}
 	{% endfor %}
 {% endif %}
 {% if projects_collaborated.size > 0 %}
 	<h2 id="collaborator">Collaborated On</h2>
 	{% for project in projects_collaborated %}
-		{% include widget-project-box.html project=project %}
+		{% assign project_id = project.name | replace: ".md", "" | replace: ".html", "" %}
+		{% include widget-project-box.html project=project_id %}
 	{% endfor %}
 {% endif %}
 

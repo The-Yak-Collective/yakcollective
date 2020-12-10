@@ -1,7 +1,9 @@
 {% comment %}
-	"Idle Words" style "infinity" slide deck. Only designed to be called
-	from project pages. Accepts a number of parameters that map to
-	inputs in `widget-slide.html` (and a couple more general ones):
+	"Idle Words" style "infinity" slide deck. Assumes that it has been
+	called from a project page unless a project ID is explicitly
+	specified using the `project` parameter. Accepts a number of
+	parameters that map to inputs in `widget-slide.html` (and a couple
+	more general ones):
 
 		`hero_position`
 		Position the `hero_image` on the `left` or `right` for all
@@ -20,8 +22,8 @@
 		`title_links`
 		Controls how slide titles should be linked. One of `internal`
 		(links to the anchor of the current slide), `external` (links
-		to the stand-alone slide page), or `none` (no link)). If unset
-		or invalid, defaults to `external`.
+		to the stand-alone slide page), or `none` (no link). If unset or
+		invalid, defaults to `external`.
 
 		`show_dates`
 		Liquid truthy/falsy value indicating whether or not slide dates
@@ -54,7 +56,14 @@
 {% comment %}
 	Set the current project.
 {% endcomment %}
-{% assign project = include.project | default: page %}
+{% if include.project %}
+	{% assign project_url = "/projects/" | append: include.project | append: "/" %}
+	{% assign project_data = site.pages | find: "url", project_url %}
+	{% assign project_id = include.project %}
+{% else %}
+	{% assign project_data = page %}
+	{% assign project_id = page.url | replace: "/", " " | strip | split: " " | last %}
+{% endif %}
 
 {% comment %}
 	Set defaults.
@@ -111,8 +120,8 @@
 
 {% if include.table_of_contents_hero %}
 	{% assign the_table_of_contents_hero = include.table_of_contents_hero %}
-{% elsif project.hero_image %}
-	{% assign the_table_of_contents_hero = project.hero_image %}
+{% elsif project_data.hero_image %}
+	{% assign the_table_of_contents_hero = project_data.hero_image %}
 {% else %}
 	{% assign the_table_of_contents_hero = "/img/yak-og.jpg" %}
 {% endif %}
@@ -120,7 +129,7 @@
 {% if include.table_of_contents_hero_description %}
 	{% assign the_table_of_contents_hero_description = include.table_of_contents_hero_description | markdownify | strip_html | strip %}
 {% else %}
-	{% assign the_table_of_contents_hero_description = project.title | markdownify | strip_html | strip %}
+	{% assign the_table_of_contents_hero_description = project_data.title | markdownify | strip_html | strip %}
 {% endif %}
 
 {% if include.table_of_contents_hero_caption %}
@@ -133,7 +142,6 @@
 	Generate a list of project pages associated with the current
 	project.
 {% endcomment %}
-{% assign project_id = project.url | replace: "/", " " | strip | split: " " | last %}
 {% assign project_slides = "" | split: "" %}
 {% for the_page in site.pages %}
 	{% if the_page.layout == "page-project-slide" %}

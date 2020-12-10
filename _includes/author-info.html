@@ -13,7 +13,7 @@
 {% assign author_url = "/members/" | append: include.author | append: "/" %}
 {% assign author = site.pages | find: "url", author_url %}
 {% if author %}
-	<div class="mt4">{% include widget-member-card.html member=author %}</div>
+	<div class="mt4">{% include widget-member-card.html member=include.author %}</div>
 	{% if author.bio_short %}
 		<div class="author-bio">
 			{{ author.bio_short | markdownify }}

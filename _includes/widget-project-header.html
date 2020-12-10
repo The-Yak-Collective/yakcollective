@@ -3,8 +3,8 @@
 
 	By default, this widget assumes that it is included in a project
 	homepage, and will use that page's information to determine which
-	project pages to display. This can be overridden by passing in
-	suitable page data as the `project` parameter.
+	project pages to display. This can be overridden by passing in a
+	project ID as the `project` parameter.
 
 	Note that this widget outputs HTML in a safe way, and is thus
 	suitable for inclusion in both Markdown and HTML pages.
@@ -13,30 +13,35 @@
 {% comment %}
 	Set the current project.
 {% endcomment %}
-{% assign project = include.project | default: page %}
+{% if include.project %}
+	{% assign project_url = "/projects/" | append: include.project | append: "/" %}
+	{% assign project_data = site.pages | find: "url", project_url %}
+{% else %}
+	{% assign project_data = page %}
+{% endif %}
 
 {% comment %}
 	Project header/hero. No indentation to prevent Markdown conversion
 	weirdness.
 {% endcomment %}
 {% capture the_content %}<div>
-	<header id="{{ project.url | replace: '/', ' ' | strip | split: ' ' | last }}-hero" class="yak-project-header relative">
+	<header id="{{ project_data.url | replace: '/', ' ' | strip | split: ' ' | last }}-hero" class="yak-project-header relative">
 		<div class="hero"></div>
 		<div class="yak-content wide">
 			<div class="cf ph0 pv5-l pv4">
 				<aside class="border-box fn fl-l w-third-l pl5-l pr4-l pb2 pb0-l">
-					{% if project.type %}
-						<div class="project-type small lh-title fw9 mb3 mt0 pt3 bt bw2 sans-serif ttu">{{ project.type }}</div>
+					{% if project_data.type %}
+						<div class="project-type small lh-title fw9 mb3 mt0 pt3 bt bw2 sans-serif ttu">{{ project_data.type }}</div>
 					{% endif %}
 
 					{% comment %}
 						Project date and sequence count (if applicable).
 					{% endcomment %}
-					{% if project.date %}
+					{% if project_data.date %}
 						<time class="smaller db ttu mb3 tracked-tight">
-							{{ project.date | date_to_long_string: "ordinal", "US" }} UTC
-							{% if project.sequence %}
-								<br>{% include sequence.txt current_date=project.date sequence_id=project.sequence %}
+							{{ project_data.date | date_to_long_string: "ordinal", "US" }} UTC
+							{% if project_data.sequence %}
+								<br>{% include sequence.txt current_date=project_data.date sequence_id=project_data.sequence %}
 							{% endif %}
 						</time>
 					{% endif %}
@@ -48,8 +53,8 @@
 
 						https://stackoverflow.com/questions/8206869/iterate-over-hashes-in-liquid-templates
 					{% endcomment %}
-					{% if project.credits %}
-						{% for credits_block in project.credits %}
+					{% if project_data.credits %}
+						{% for credits_block in project_data.credits %}
 							{% if credits_block[1].size > 0 %}
 								{% assign credits_class = credits_block[0] | replace: "_", "-" | downcase %}
 								{% if credits_class != "lead-editors" %}
@@ -71,9 +76,9 @@
 					tagline, and above-the-fold summary.
 				{% endcomment %}
 				<div class="fn fl-l w-two-thirds-l pl4-l pr5-l">
-					{% if project.title %}<h1 class="ma0 pa0 fw8 f1">{{ project.title }}</h1>{% endif %}
-					{% if project.tagline %}<div class="subhead pt3 pb1 fw4 f3">{{ project.tagline }}</div>{% endif %}
-					{% if project.summary %}<div class="small lh-copy mb3">{{ project.summary | markdownify }}</div>{% endif %}
+					{% if project_data.title %}<h1 class="ma0 pa0 fw8 f1">{{ project_data.title }}</h1>{% endif %}
+					{% if project_data.tagline %}<div class="subhead pt3 pb1 fw4 f3">{{ project_data.tagline }}</div>{% endif %}
+					{% if project_data.summary %}<div class="small lh-copy mb3">{{ project_data.summary | markdownify }}</div>{% endif %}
 				</div>
 			</div>
 		</div>

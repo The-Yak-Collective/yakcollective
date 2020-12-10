@@ -1,0 +1,124 @@
+---
+title: Project Slide Template
+layout: page-project-slide
+---
+This is the template file for project slides. It is used both as a data source for the `widget-project-slide-deck` and as a way to generate a stand-alone HTML slide deck. Check out [_Future Frontiers_](/projects/future-frontiers/) and the associated slide files (all of the `.md` files in the `projects/future-frontiers/` directory) to get a sense of how this works.
+
+Note that slide content should be _short_ -- think a paragraph or two, or a bullet list. These are slides, so less is more. You _cannot_ use any widgets as part of your slide content.
+
+Also, be aware that slides are ordered by `widget-project-slide-deck` by URL (basically, file name), and this ordering impacts both the formatting of the table of contents and the effect of `collapse_slides=true` -- only slides that are "adjacent" will have their sections and titles "rolled up". If you're using either of these features in `widget-project-slide-deck`, you'll want to make sure you adopt a slide naming convention that ensures that slides of a given section, and slides with the same title/author combination, always appear in sequence when sorted by name in your file manager.
+
+Project slides are plain Markdown files; in Jekyll, these files should conform to the [kramdown](https://kramdown.gettalong.org/) spec.
+
+## Required Front Matter
+
+The front matter (the bit between the two `---` lines at the top of the file) listed at the top of this file represents the _minimal_ frontmatter for a project main page.
+
+Be aware that if the _value_ of your front matter attribute contains a `:`, `&`, or `#`, then you _must_ either surround it in double quotes (`"`) _or_ use a `|` character, followed by a line break, and then with subsequent lines (until the next front matter attribute or the closing `---`) indented by _two_ spaces. So something like this
+
+```yaml
+title: "My #1 Page Title: Now With Two Unsafe Characters!"
+```
+
+is equivalent to
+
+```yaml
+title: |
+  My #1 Page Title: Now With Two Unsafe Characters!
+```
+
+In general, you should use quotes for shorter, single line values. Use the "`|` + indent" syntax for longer values, or when you need to use multiple lines.
+
+For more information about the ins-and-outs of page front matter, refer to [Jekyll's documentation](https://jekyllrb.com/docs/front-matter/) and the [YAML specification](https://yaml.org/spec/1.2/spec.html).
+
+_Required_ front matter attributes are described in the following sections.
+
+### `title`
+
+This is the slide's title. It's okay to give multiple slides the same title; in fact, if you're using `widget-project-slide-deck` with `collapse_slides=true`, then this will produce a nice effect where only the first slide in a sequence will have its title displayed.
+
+### `layout`
+
+This attribute _must_ be present, and it _must_ have the value `page-project-slide`.
+
+## Optional Front Matter
+
+The following _optional_ frontmatter attributes are supported for generic pages.
+
+```yaml
+date: 2020-12-01 00:00:00
+section: A Section
+tags:
+  - philosophy
+hero_image: /projects/future-frontiers/01-philosophy-01-on-horizons-01.jpg
+hero_position: left
+hero_border: true
+hero_description: On horizons
+hero_caption:  |
+  Carse photo from [Simon &amp; Schuster](https://www.simonandschuster.biz/authors/James-Carse/313085); collage by [Jenna Dixon](/members/dixon-jenna/)
+description: Frontiers are essential food for the psyche, for a species with the temporal imagination to see past the limits of individual mortality.
+author: rao-venkatesh
+page_text_color: black
+page_bg_color: "252,251,248"
+page_headers: |
+  <!-- HTML -->
+```
+
+Each of these header attributes is described in more detail in the following sections.
+
+### `date`
+
+This is the projectslide's publication date in ISO "YYYY-MM-DD". Because of limitations with how Jekyll handles date conversions, it's necessary to specify this as a full timestamp, though by convention the time part is always "00:00:00" (no timezone). Thus December 9, 2020 would be written as `2020-12-09 00:00:00`.
+
+Be aware that Netlify's build environment uses UTC for its timezone, so "publish on December 9th" may not _actually_ mean that the page goes live on _your_ December 9th.
+
+For consistency, it is recommended that your project either include the `date` on _all_ of your slides, or _none_ of your slides. However, unlike project sub-pages (`templates/template-project/template-page.md`), this is a purely cosmetic suggestion.
+
+<!--
+section: A Section
+tags:
+  - philosophy
+hero_image: /projects/future-frontiers/01-philosophy-01-on-horizons-01.jpg
+hero_position: left
+hero_border: true
+hero_description: On horizons
+hero_caption:  |
+  Carse photo from [Simon &amp; Schuster](https://www.simonandschuster.biz/authors/James-Carse/313085); collage by [Jenna Dixon](/members/dixon-jenna/)
+-->
+
+### `description`
+
+A short one-or-two sentence description that will be displayed on Twitter cards, Facebook shares, etc. If you don't include this attribute, then the first 20 words of the page content will be used instead. While you _can_ include Markdown or HTML formatting here, it will be stripped during the build process, so best to just use plain text.
+
+### `author`
+
+The page author. Ideally, this should be the filename (less the extension) of someone in the `members` directory: So, to specify Venkatesh Rao as a page author, you'd set this to `rao-venkatesh` (since the corresponding member file is `members/rao-venkatesh.md`). When use in this form, information about the specified Yak Collective member will be pulled into Twitter (and other services that support Twitter cards) when the page URL is shared.
+
+Alternately, you can just specify someone's name ("Venkatesh Rao"). This is still useful to do to attribute the page (`author` information gets used in a lot of places), but won't pull in _any_ additional information (so the page will be attributed simple to the Yak Collective on Twitter, _et al._).
+
+<!--
+page_text_color: black
+page_bg_color: "252,251,248"
+page_headers: |
+  <!-- HTML -->
+-->
+
+### `page_text_color`
+
+One of `black` (for black text on a default white background) or `white` (for white text on a default black background). If unset, defaults to `black`.
+
+### `page_bg_color`
+
+Use this to override the default page background color, as specified by `page_text_color` (above). This color _must_ be specified as an RGB tuple; for example, `255,255,0` is a bright yellow, and `128,128,128` is a medium gray.
+
+### `page_headers`
+
+An attribute for advanced users; anything included here will be inserted verbatim at the end of the page's HTML `<head/>`. Use this to specify additional CSS or JavaScript. Because this attribute expects raw HTML, you definitely want to use the "`|` + indent" syntax.
+
+Note that the Yak Collective website is based on the [Tachyons design framework](https://tachyons.io/docs/), so you can use any of the classes that Tachyons defines _without_ specifying `page_headers`.
+
+Be aware that it's very easy to break you page if you don't know what you're doing with this attribute. If anything in the above two paragraphs doesn't make sense to you, you should probably _not_ use this attribute!
+
+## Widgets
+
+You should _not_ use any widgets on project slides (the layout itself is actually already a single, giant widget).

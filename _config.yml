@@ -64,6 +64,11 @@ exclude:
   - bin
   - css/fonts.source.css
   - functions
+  - members/template-member.md
   - package.json
+  - projects/template-project.md
+  - projects/template-project/template-page.md
+  - projects/template-project/template-slide.md
   - README.md
   - resources
+  - template-page.md

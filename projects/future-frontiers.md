@@ -49,7 +49,6 @@ summary: |
   While mass participation in frontier exploratory activities is still not a reality, more, and cheaper, enabling technologies are appearing  than at any time in history.
 
   In the wake of Covid19, could an era of democratized access to frontiers be the key to a renewed sense of larger purpose in the universe for humanity? In this continuously evolving project, members of the Yak Collective ponder our future as an exploratory species.
-
 credits:
   lead_editors:
     - rao-venkatesh

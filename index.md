@@ -10,7 +10,8 @@ Follow us on [Twitter](https://twitter.com/yak_collective), [Facebook](https://w
 
 ## Featured Yak
 
-{% include widget-member-card.html member=site.data.featured_yak %}
+{% assign member_id = site.data.featured_yak.name | replace: ".md", "" | replace: ".html", "" %}
+{% include widget-member-card.html member=member_id %}
 
 ## Most Recent Project
 
@@ -19,5 +20,5 @@ Follow us on [Twitter](https://twitter.com/yak_collective), [Facebook](https://w
                                | sort: "date"
                                | reverse
                                | first %}
-
-{% include widget-project-box.html project=project %}
+{% assign project_id = project.name | replace: ".md", "" | replace: ".html", "" %}
+{% include widget-project-box.html project=project_id %}

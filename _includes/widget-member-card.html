@@ -16,17 +16,27 @@
 		setting `standalone = false`.
 
 		`member`
-		An object containing the relevant member information (basically,
-		an element of `site.pages` that lives in the `/members/`
-		directory).
+		The ID of a member -- basically, the name of the corresponding
+		file in `/members/`, less the `/.md` extension. For example,
+		Venkatesh Rao's member card would be called by passing in
+		`member="rao-venkatesh"`.
 
 	Note that this widget outputs HTML in a safe way, and is thus
 	suitable for inclusion in both Markdown and HTML pages.
 {% endcomment %}
 
-<div class="w-100 mv3" id="{{ include.member.url | replace: '/', ' ' | strip | split: ' ' | last }}">
-	{% if include.standalone %}<div{% else %}<a href="{{ include.member.url }}"{% endif %} class="flex items-center lh-copy pa3 ba member-box">
-		<img class="w3 h3 br-100 ba image-border" src="{% if include.member.avatar %}{{ include.member.avatar }}{% else %}/img/member.jpg{% endif %}" alt="{{ include.member.title }}" />
+{% comment %}
+	Find member data.
+{% endcomment %}
+{% assign member_url = "/members/" | append: include.member | append: "/" %}
+{% assign member_data = site.pages | find: "url", member_url %}
+
+{% comment %}
+	Output member card HTML.
+{% endcomment %}
+<div class="w-100 mv3" id="{{ member_data.url | replace: '/', ' ' | strip | split: ' ' | last }}">
+	{% if include.standalone %}<div{% else %}<a href="{{ member_data.url }}"{% endif %} class="flex items-center lh-copy pa3 ba member-box">
+		<img class="w3 h3 br-100 ba image-border" src="{% if member_data.avatar %}{{ member_data.avatar }}{% else %}/img/member.jpg{% endif %}" alt="{{ member_data.title }}" />
 		<div class="pl3 pr2 flex-auto">
 
 			{% comment %}
@@ -34,34 +44,34 @@
 				The `pseudo-link` class is used to make the card act a
 				bit more like an actual link when in "link mode".
 			{% endcomment %}
-			<small class="db b{% unless include.standalone %} pseudo-link{% endunless %}">{{ include.member.title }}</small>
+			<small class="db b{% unless include.standalone %} pseudo-link{% endunless %}">{{ member_data.title }}</small>
 
 			{% comment %}
 				Inset member tagline, if set.
 			{% endcomment %}
-			{% if include.member.tagline and include.member.tagline.size > 0 %}
-				<small class="db{% unless include.standalone %} silent-link{% endunless %}">{{ include.member.tagline }}</small>
+			{% if member_data.tagline and member_data.tagline.size > 0 %}
+				<small class="db{% unless include.standalone %} silent-link{% endunless %}">{{ member_data.tagline }}</small>
 			{% endif %}
 
 			{% comment %}
 				Inset member "indie status", if set.
 			{% endcomment %}
-			{% if include.member.indie_status and include.member.indie_status.size > 0 %}
-				<small class="db{% unless include.standalone %} silent-link{% endunless %}">Indie status: {{ include.member.indie_status }}</small>
+			{% if member_data.indie_status and member_data.indie_status.size > 0 %}
+				<small class="db{% unless include.standalone %} silent-link{% endunless %}">Indie status: {{ member_data.indie_status }}</small>
 			{% endif %}
 
 			{% comment %}
 				Inset member "currently" information, if set.
 			{% endcomment %}
-			{% if include.member.currently and include.member.currently.size > 0 %}
-				<small class="db{% unless include.standalone %} silent-link{% endunless %}">Currently: {{ include.member.currently }}</small>
+			{% if member_data.currently and member_data.currently.size > 0 %}
+				<small class="db{% unless include.standalone %} silent-link{% endunless %}">Currently: {{ member_data.currently }}</small>
 			{% endif %}
 
 			{% comment %}
 				Inset member "previously" information, if set.
 			{% endcomment %}
-			{% if include.member.previously and include.member.previously.size > 0 %}
-				<small class="db{% unless include.standalone %} silent-link{% endunless %}">Previously: {{ include.member.previously }}</small>
+			{% if member_data.previously and member_data.previously.size > 0 %}
+				<small class="db{% unless include.standalone %} silent-link{% endunless %}">Previously: {{ member_data.previously }}</small>
 			{% endif %}
 
 			{% comment %}
@@ -70,9 +80,9 @@
 				member card is in "data mode" (otherwise, they're just
 				for show).
 			{% endcomment %}
-			{% if include.member.links %}
+			{% if member_data.links %}
 				<small class="db{% unless include.standalone %} silent-link{% endunless %}">
-					{% for link in include.member.links %}
+					{% for link in member_data.links %}
 						{% if forloop.first == true %}{% else %} / {% endif %}
 						{% if include.standalone %}<a href="{{ link.url }}">{% endif %}{{ link.title }}{% if include.standalone %}</a>{% endif %}
 					{% endfor %}
@@ -87,9 +97,9 @@
 			card is in "data mode" (otherwise, this bit is also just for
 			show).
 		{% endcomment %}
-		{% if include.member.twitter and include.member.twitter.size > 0 %}
+		{% if member_data.twitter and member_data.twitter.size > 0 %}
 			<div class="small{% unless include.standalone %} silent-link{% endunless %}">
-				{% if include.standalone %}<a href="https://twitter.com/{{ include.member.twitter }}">{% endif %}@{{ include.member.twitter }}{% if include.standalone %}</a>{% endif %}
+				{% if include.standalone %}<a href="https://twitter.com/{{ member_data.twitter }}">{% endif %}@{{ member_data.twitter }}{% if include.standalone %}</a>{% endif %}
 			</div>
 		{% endif %}
 
