@@ -46,7 +46,7 @@ _Optional_ front matter attributes are listed in the next section.
 
 ## Optional Front Matter
 
-The following _optional_ frontmatter attributes are supported for generic pages.
+The following _optional_ front matter attributes are supported for generic pages.
 
 ```yaml
 title: "An Alternate Page Title"
@@ -280,7 +280,7 @@ You can technically call this without any parameters from a project's main page,
 
 - **`table_of_contents`** is a [truthy/falsy](https://shopify.github.io/liquid/basics/truthy-and-falsy/) parameter that specifies whether a table of contents for the deck should be generated.
 
-- **`table_of_contents_hero`** secifies the image to use for the table of contents slide. If unset, the project's `hero_image` attribute is used.
+- **`table_of_contents_hero`** specifies the image to use for the table of contents slide. If unset, the project's `hero_image` attribute is used.
 
 - **`table_of_contents_hero_description`** specifies the image alt text for the table of contents slide. If unset, the project's `title` attribute is used.
 
@@ -352,4 +352,4 @@ An _experimental_ widget that allows you to embed an external page in the Yak Co
 
 - **`url`** is the URL of the external webpage you want to embed.
 
-The viewport for the embedded page will extend from just below the standard Yak Collective header to just above the standard footer, and from the far left to far right of your browser window. Because of this, if you use `widget-iframe`, it must be the **_only_** content on your page (which implies that you _must_ use the `title` attribute in the frontmatter for pages including this widget).
+The viewport for the embedded page will extend from just below the standard Yak Collective header to just above the standard footer, and from the far left to far right of your browser window. Because of this, if you use `widget-iframe`, it must be the **_only_** content on your page (which implies that you _must_ use the `title` attribute in the front matter for pages including this widget).

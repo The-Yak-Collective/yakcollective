@@ -45,7 +45,7 @@ _Optional_ front matter attributes are listed in the next section.
 
 ## Optional Front Matter
 
-The following _optional_ frontmatter attributes are supported for generic pages.
+The following _optional_ front matter attributes are supported for generic pages.
 
 ```yaml
 title: The page title

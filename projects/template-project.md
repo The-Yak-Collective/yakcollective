@@ -11,13 +11,13 @@ This is the template file for a project main page. Every project requires a _min
 
 By convention, every project page is paired with a directory of the same name that contains the resource files for that project. Generally this will be at least the project's hero image, but can also include project sub-pages and project slides, and any other files and resources your project may need. For example, `projects/future-frontiers.md` is paired with the `projects/future-frontiers/` directory, which holds all of the files associated with that project.
 
-Projects will automatically go alive more-or-less on the `date` listed in the main page frontmatter. Unpublished, upcoming projects are listed on the [_Now_](/now/) page, while published projects are automatically moved to the [_Projects_](/projects/) page. If you are building the site locally, you can simulate this using `jekyll serve --future` (or an equivalent command).
+Projects will automatically go alive more-or-less on the `date` listed in the main page front matter. Unpublished, upcoming projects are listed on the [_Now_](/now/) page, while published projects are automatically moved to the [_Projects_](/projects/) page. If you are building the site locally, you can simulate this using `jekyll serve --future` (or an equivalent command).
 
 Project main pages are plain Markdown files; in Jekyll, these files should conform to the [kramdown](https://kramdown.gettalong.org/) spec. Generally, the first line of a project main page will be `{% include widget-project-header.html %}`, which will generate the project header. You are strongly encouraged to take a look at other project main pages (and the contents of their resource directories) in order to get a sense for how this looks in practice.
 
 ## Required Front Matter
 
-The front matter (the bit between the two `---` lines at the top of the file) listed at the top of this file represents the _minimal_ frontmatter for a project main page.
+The front matter (the bit between the two `---` lines at the top of the file) listed at the top of this file represents the _minimal_ front matter for a project main page.
 
 Be aware that if the _value_ of your front matter attribute contains a `:`, `&`, or `#`, then you _must_ either surround it in double quotes (`"`) _or_ use a `|` character, followed by a line break, and then with subsequent lines (until the next front matter attribute or the closing `---`) indented by _two_ spaces. So something like this
 
@@ -74,7 +74,7 @@ You'll generally use the "`|` + indent" convention for this attribute (see above
 
 ## Optional Front Matter
 
-The following _optional_ frontmatter attributes are supported for generic pages.
+The following _optional_ front matter attributes are supported for generic pages.
 
 ```yaml
 hero_image: /projects/astonishing-stories/astonishing-stories.jpg
@@ -397,4 +397,4 @@ An _experimental_ widget that allows you to embed an external page in the Yak Co
 
 - **`url`** is the URL of the external webpage you want to embed.
 
-The viewport for the embedded page will extend from just below the standard Yak Collective header to just above the standard footer, and from the far left to far right of your browser window. Because of this, if you use `widget-iframe`, it must be the **_only_** content on your page (which implies that you _must_ use the `title` attribute in the frontmatter for pages including this widget).
+The viewport for the embedded page will extend from just below the standard Yak Collective header to just above the standard footer, and from the far left to far right of your browser window. Because of this, if you use `widget-iframe`, it must be the **_only_** content on your page (which implies that you _must_ use the `title` attribute in the front matter for pages including this widget).

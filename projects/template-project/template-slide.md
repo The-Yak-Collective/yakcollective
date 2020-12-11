@@ -12,7 +12,7 @@ Project slides are plain Markdown files; in Jekyll, these files should conform t
 
 ## Required Front Matter
 
-The front matter (the bit between the two `---` lines at the top of the file) listed at the top of this file represents the _minimal_ frontmatter for a project main page.
+The front matter (the bit between the two `---` lines at the top of the file) listed at the top of this file represents the _minimal_ front matter for a project main page.
 
 Be aware that if the _value_ of your front matter attribute contains a `:`, `&`, or `#`, then you _must_ either surround it in double quotes (`"`) _or_ use a `|` character, followed by a line break, and then with subsequent lines (until the next front matter attribute or the closing `---`) indented by _two_ spaces. So something like this
 
@@ -43,7 +43,7 @@ This attribute _must_ be present, and it _must_ have the value `page-project-sli
 
 ## Optional Front Matter
 
-The following _optional_ frontmatter attributes are supported for generic pages.
+The following _optional_ front matter attributes are supported for generic pages.
 
 ```yaml
 date: 2020-12-01 00:00:00

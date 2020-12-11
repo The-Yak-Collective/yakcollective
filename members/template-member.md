@@ -12,7 +12,7 @@ Note that the functionality represented by the member data files will eventually
 
 ## Required Front Matter
 
-The front matter (the bit between the two `---` lines at the top of the file) listed at the top of this file represents the _minimal_ frontmatter for a project main page.
+The front matter (the bit between the two `---` lines at the top of the file) listed at the top of this file represents the _minimal_ front matter for a project main page.
 
 Be aware that if the _value_ of your front matter attribute contains a `:`, `&`, or `#`, then you _must_ either surround it in double quotes (`"`) _or_ use a `|` character, followed by a line break, and then with subsequent lines (until the next front matter attribute or the closing `---`) indented by _two_ spaces. So something like this
 
@@ -47,7 +47,7 @@ Members without a `date`, or whose `date` is in the future, will not be displaye
 
 ## Optional Front Matter
 
-The following _optional_ frontmatter attributes are supported for generic pages.
+The following _optional_ front matter attributes are supported for generic pages.
 
 ```yaml
 indie_status: 10 years
@@ -77,7 +77,7 @@ A short phrase indicating how long a member has been "independent". Generally so
 
 ### `tagline`
 
-A _short_ tagline for the member. If present, this will be dispplayed directly under their name. Most yaks use the `tagline` to describe what they specialize in. A few get whitty about it.
+A _short_ tagline for the member. If present, this will be displayed directly under their name. Most yaks use the `tagline` to describe what they specialize in. A few get witty about it.
 
 ### `previously`
 
