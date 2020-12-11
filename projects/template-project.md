@@ -257,12 +257,11 @@ There are also two optional parameters:
 Example usage:
 
 ```markdown
-{%
-  include widget-image.html
-  layout="left"
-  image="/projects/astonishing-stories/wholeness-in-a-timeless-activity.jpg"
-  alt="Wholeness in a Timeless Activity"
-  caption="Illustration by [Justice](/members/thelot-justice/)."
+{% include widget-image.html
+   layout="left"
+   image="/projects/astonishing-stories/wholeness-in-a-timeless-activity.jpg"
+   alt="Wholeness in a Timeless Activity"
+   caption="Illustration by [Justice](/members/thelot-justice/)."
 %}
 ```
 
