@@ -391,3 +391,11 @@ There are also two optional parameters:
 - **`extra_class`** specifies additional class(es) that will be added to the outer `<div/>` of the breakout box. Useful for controlling positioning for fancy formatting (either Tachyons classes or styling specified directly using the `page_headers` front matter attribute).
 
 Note that `widget-google-slides`, `widget-image`, `widget-post-list`, `widget-project-header`, `widget-project-page-list`, and `widget-slide` are all based off of `widget-breakout-box`.
+
+### `widget-iframe`
+
+An _experimental_ widget that allows you to embed an external page in the Yak Collective website. It _requires_ a single parameter:
+
+- **`url`** is the URL of the external webpage you want to embed.
+
+The viewport for the embedded page will extend from just below the standard Yak Collective header to just above the standard footer, and from the far left to far right of your browser window. Because of this, if you use `widget-iframe`, it must be the **_only_** content on your page (which implies that you _must_ use the `title` attribute in the frontmatter for pages including this widget).
