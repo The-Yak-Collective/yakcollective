@@ -71,21 +71,51 @@ page_headers: |
 
 Each of these header attributes is described in more detail in the following sections.
 
-<!--
-indie_status: 10 years
-tagline: Just a template, showing people how it's done
-previously: A todo item in Roam
-currently: A file in GitHub
-avatar: /members/template-member.jpg
-twitter: yak_collective
+### `indie_status`
+
+A short phrase indicating how long a member has been "independent". Generally something like "1 year", "5+ years", "10 years", or "Pre-leap".
+
+### `tagline`
+
+A _short_ tagline for the member. If present, this will be dispplayed directly under their name. Most yaks use the `tagline` to describe what they specialize in. A few get whitty about it.
+
+### `previously`
+
+A _short_ list of industries and/or companies and/or titles that the member has been associated with. Generally used to provide a sense of "credentials".
+
+### `currently`
+
+A _short_ list of industries and/or companies and/or titles that the member is _currently_ associated with. This is most commonly used by pre-leap yaks to describe their current employment.
+
+### `avatar`
+
+The path (relative to the final website) of the member's avatar. By convention avatar files have the same name as the member data file, and exist as a sibling of that file in the `members/` directory. So long as you stick to this convention, this means that the `avatar` front matter attribute of `dixon-jenna.md` will just be `/members/dixon-jenna.jpg` (or something similar).
+
+### `twitter`
+
+The member's Twitter handle, less the conventional `@`. For example, Venkatesh Rao has the Twitter handle `@vgr`, which corresponds to the Twitter user timeline URL <https://twitter.com/vgr>, and thus would use `vgr` for this attribute.
+
+### `links`
+
+This attribute specifies an array of links, each of which has a title (to be displayed) and a URL. If `links` is set, its contents are included as the final line of `widget-member-card`, with each link separated by a slash (`/`). For example, suppose that `links` was set as follows:
+
+```yaml
 links:
   - title: Website
     url: https://www.yakcollective.org/
   - title: Newsletter
     url: https://yakcollective.substack.com/
-bio_short: |
-  I'm a template file that exists to demonstrate how to construct a member data file.
--->
+```
+
+This would produce the following final line of `widget-member-card`:
+
+> [Website](https://www.yakcollective.org/) / [Newsletter](https://yakcollective.substack.com/)
+
+### `bio_short`
+
+A _short_ (1 - 5 sentence) bio (longer/expanded bios should simply be the post-front matter contents of the member data file). Right now this is only used on project sub-pages, where it is included along with an instance of `widget-member-card` at the bottom of pages for which the `author` attribute is set. Think of this like the short reporter bio sometimes included at the end of magazine articles.
+
+You'll generally use the "`|` + indent" convention for this attribute (see above) since you'll generally be writing a short paragraph. Markdown (and even HTML) is fine to use here.
 
 ### `page_text_color`
 

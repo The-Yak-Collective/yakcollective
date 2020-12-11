@@ -48,13 +48,29 @@ This is the project's publication date in ISO "YYYY-MM-DD". Because of limitatio
 
 Be aware that Netlify's build environment uses UTC for its timezone, so "publish on December 9th" may not _actually_ mean that the page goes live on _your_ December 9th.
 
-<!--
-sequence: covid-19
-type: Report
-tagline: Learn how to create project main pages!
-summary: |
-  This file will teach you the basics for creating project main pages.
--->
+### `sequence`
+
+The "sequence" in which a given project exists. Sequences are defined in `_data/sequences.yml`; currently the only valid value for this attribute is `covid-19`.
+
+### `type`
+
+A free-form string indicating what "kind" of project this is. While `type` _could_ be anything, we generally want to be conservative about adding new options.
+
+Currently recognized project types:
+
+- Report
+- Visualization
+- Zine
+
+### `tagline`
+
+A "tagline" for the project, which is used as a subtitle by `widget-project-hero` and `widget-project-box`. Should basically be a single _short_ sentence. By convention, periods (`.`) are not included in this line, but question marks (`?`) and exclamation marks (`!`) are.
+
+### `summary`
+
+A summary/introduction to the project. This will be used as the main text of `widget-project-hero`, and (_if_ the `description` attribute is _not_ set) the first 20 words will be used on Twitter cards, Facebook shares, etc.
+
+You'll generally use the "`|` + indent" convention for this attribute (see above) since you'll generally be writing a couple of paragraphs of text. Markdown (and even HTML) is fine to use here.
 
 ## Optional Front Matter
 
@@ -76,21 +92,39 @@ page_headers: |
 
 Each of these header attributes is described in more detail in the following sections.
 
-<!--
-hero_image: /projects/astonishing-stories/astonishing-stories.jpg
--->
+### `hero_image`
+
+An image used to represent the project. It is used in `widget-project-box` as is, and by default is also displayed as a background image at 50% opacity by `widget-project-hero` (this opacity level is one of the most common things to tweak using the `page_headers` front matter attribute). Also used for the project main page's Twitter card.
+
+Should generally be  a landscape image 2048px - 4096px on its largest side, at once both interesting enough to represent the project and non-descript enough to use as a background for text without being distracting, and ideally will be tilable.
 
 ### `description`
 
 A short one-or-two sentence description that will be displayed on Twitter cards, Facebook shares, etc. If you don't include this attribute, then the first 20 words of the summary will be used instead. While you _can_ include Markdown or HTML formatting here, it will be stripped during the build process, so best to just use plain text.
 
-<!--
+### `credits`
+
+The `credits` attribute is a flexible object of credits/collaborators for the project. It can have any number of sub-attributes, each of which represents a different type of credit, and under which is an array of member IDs (that will be linked to member pages) or plain names (that will be displayed as-is). sub-attributes should be lower-case, and underscores (`_`) will be replaced with spaces. By convention, collaborators in each section should be ordered alphabetically by family name, and then given name.
+
+How this works is easiest to see with an example. Suppose we have the following `credits` object in our project main page front matter:
+
+```yaml
 credits:
   lead_editors:
     - acks-nathan
+    - rao-venkatesh
   collaborators:
+    - "Jamie Chen"
+    - dixon-jenna
     - fenster-maier
--->
+```
+
+This will produce two credit sections:
+
+1. A section titled **Lead editors** listing "Nathan Acks" and "Venkatesh Rao", both of whose names are linked back to their respective member pages.
+2. A section titled **Collaborators** listing "Jamie Chen", "Jenna Dixon", and "Maier Fenster". Jenna and Maier's names will both be linked back to their respective member pages, but Jamie's name will appear as a simple, unlinked credit.
+
+While you don't technically _need_ the `credits` front matter attribute, you almost certainly want to include one, and it should include a `lead_editors` sub-attribute and _at least_ one other section (most projects just use `collaborators`, but see [_Astonishing Stories_](/projects/astonishing-stories/) for an example of a more creative use of this attribute).
 
 ### `page_text_color`
 
