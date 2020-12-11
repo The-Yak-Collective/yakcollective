@@ -4,6 +4,10 @@
 
 - [Website Architecture](https://roamresearch.com/#/app/ArtOfGig/page/mUmau331V)
 
+  - [Website Widgets](https://roamresearch.com/#/app/ArtOfGig/page/bVx9fym3h)
+
+  - [How to Add a New Project to the Website](https://roamresearch.com/#/app/ArtOfGig/page/fEkNSWNjy)
+
 - [Contributing to the Website](https://roamresearch.com/#/app/ArtOfGig/page/kF2y7vMtJ)
 
   - [Website Code Style Guide](https://roamresearch.com/#/app/ArtOfGig/page/U6R2P0hlB)
