@@ -2,7 +2,7 @@
 title: Project Slide Template
 layout: page-project-slide
 ---
-This is the template file for project slides. It is used both as a data source for the `widget-project-slide-deck` and as a way to generate a stand-alone HTML slide deck. Check out [_Future Frontiers_](/projects/future-frontiers/) and the associated slide files (all of the `.md` files in the `projects/future-frontiers/` directory) to get a sense of how this works.
+This is the template file for project slides. It is used both as a data source for `widget-project-slide-deck` and as a way to generate a stand-alone HTML slide deck. Check out [_Future Frontiers_](/projects/future-frontiers/) and the associated slide files (all of the `.md` files in the `projects/future-frontiers/` directory) to get a sense of how this works.
 
 Note that slide content should be _short_ -- think a paragraph or two, or a bullet list. These are slides, so less is more. You _cannot_ use any widgets as part of your slide content.
 
@@ -86,12 +86,12 @@ Be aware that, just as slides with the same title are only collapsed together in
 
 This will produce the following table of contents:
 
-- Important
-  - Slide 1 Title
-- Unimportant
-  - Slide 2 Title
-- Important
-  - Slide 3 Title
+> - Important
+>   - Slide 1 Title
+> - Unimportant
+>   - Slide 2 Title
+> - Important
+>   - Slide 3 Title
 
 On the other hand, considering the following slides, which are "grouped" by section:
 
@@ -101,11 +101,11 @@ On the other hand, considering the following slides, which are "grouped" by sect
 
 This will produce the following table of contents:
 
-- Important
-  - Slide 1 Title
-  - Slide 2 Title
-- Important
-  - Slide 3 Title
+> - Important
+>   - Slide 1 Title
+>   - Slide 2 Title
+> - Unimportant
+>   - Slide 3 Title
 
 This second case is almost certainly what you want, and illustrates the importance of thinking through the structure of your slide deck and using a file naming system for individual slides that reflects this structure.
 
@@ -150,7 +150,7 @@ The "alt text" to use for the `hero_image`. For accessibility reasons you should
 
 ### `hero_caption`
 
-The text to display immediately _below_ the slide hero image. This can be a larger block of text providing additional context for the image, but is generally used to provide image credit. Markdown-formatted text is accepted by this attribute, so if you have a link to the image source or artist, you're enouraged to include it here.
+The text to display immediately _below_ the slide hero image. This can be a larger block of text providing additional context for the image, but is generally used to provide image credit. Markdown-formatted text is accepted by this attribute, so if you have a link to the image source or artist, you're encouraged to include it here.
 
 ### `description`
 

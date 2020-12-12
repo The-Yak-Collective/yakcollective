@@ -3,6 +3,7 @@ title: Project Main Page Template
 date: 2020-12-09 00:00:00
 sequence: covid-19
 type: Report
+hero_image: /projects/astonishing-stories/astonishing-stories.jpg
 tagline: Learn how to create project main pages!
 summary: |
   This file will teach you the basics for creating project main pages.
@@ -62,6 +63,12 @@ Currently recognized project types:
 - Visualization
 - Zine
 
+### `hero_image`
+
+An image used to represent the project. It is used in `widget-project-box` as is, and by default is also displayed as a background image at 50% opacity by `widget-project-hero` (this opacity level is one of the most common things to tweak using the `page_headers` front matter attribute). Also used for the project main page's Twitter card.
+
+Should generally be  a landscape image 2048px - 4096px on its largest side, at once both interesting enough to represent the project and non-descript enough to use as a background for text without being distracting, and ideally will be tilable.
+
 ### `tagline`
 
 A "tagline" for the project, which is used as a subtitle by `widget-project-hero` and `widget-project-box`. Should basically be a single _short_ sentence. By convention, periods (`.`) are not included in this line, but question marks (`?`) and exclamation marks (`!`) are.
@@ -77,7 +84,6 @@ You'll generally use the "`|` + indent" convention for this attribute (see above
 The following _optional_ front matter attributes are supported for generic pages.
 
 ```yaml
-hero_image: /projects/astonishing-stories/astonishing-stories.jpg
 description: A shorter page description.
 credits:
   lead_editors:
@@ -91,12 +97,6 @@ page_headers: |
 ```
 
 Each of these header attributes is described in more detail in the following sections.
-
-### `hero_image`
-
-An image used to represent the project. It is used in `widget-project-box` as is, and by default is also displayed as a background image at 50% opacity by `widget-project-hero` (this opacity level is one of the most common things to tweak using the `page_headers` front matter attribute). Also used for the project main page's Twitter card.
-
-Should generally be  a landscape image 2048px - 4096px on its largest side, at once both interesting enough to represent the project and non-descript enough to use as a background for text without being distracting, and ideally will be tilable.
 
 ### `description`
 

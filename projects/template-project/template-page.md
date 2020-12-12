@@ -48,7 +48,7 @@ _Optional_ front matter attributes are listed in the next section.
 The following _optional_ front matter attributes are supported for generic pages.
 
 ```yaml
-title: The page title
+title: The Page Title
 date: 2020-12-09 00:00:00
 hero_image: /projects/astonishing-stories/agglomerizing-the-aesthetic.jpg
 hero_attach_vertical: center
