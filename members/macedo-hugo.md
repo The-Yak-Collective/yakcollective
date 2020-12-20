@@ -11,5 +11,5 @@ links:
   - title: Newsletter
     url: https://hugomacedo.substack.com/
 bio_short: |
-  Diverse career in FMCG, Telecom, Consulting and Startups. Marketing and Leadership. Fascinated by Humans and how they organize. 
+  Diverse career in FMCG, Telecom, Consulting and Startups. Marketing and Leadership. Fascinated by Humans and how they organize.
 ---
