@@ -10,4 +10,6 @@ links:
     url: https://think-boundless.com/
   - title: Strategy U
     url: https://strategyu.co/
+rss:
+  - https://think-boundless.com/feed/
 ---

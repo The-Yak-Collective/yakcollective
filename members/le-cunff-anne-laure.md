@@ -8,4 +8,6 @@ avatar: /members/le-cunff-anne-laure.jpg
 links:
   - title: Founder, Ness Labs
     url: https://nesslabs.com/
+rss:
+  - https://nesslabs.com/author/annelaure/feed/
 ---

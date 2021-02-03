@@ -10,4 +10,6 @@ links:
     url: http://www.redquadrant.com/
   - title: Systems Practice
     url: https://systemspractice.org/
+rss:
+  - https://medium.com/feed/@antlerboy
 ---

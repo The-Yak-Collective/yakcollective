@@ -10,4 +10,6 @@ links:
     url: https://vinaydebrou.com/
   - title: Substack
     url: https://daybrew.substack.com/about
+rss:
+  - https://vinaydebrou.com/feed.xml
 ---

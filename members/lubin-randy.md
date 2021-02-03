@@ -6,5 +6,7 @@ twitter: randylubin
 avatar: /members/lubin-randy.jpg
 links:
   - title: Consulting Entrepreneur
-    url: https://randylubin.com/ 
+    url: https://randylubin.com/
+rss:
+  - https://blog.randylubin.com/feed.xml
 ---

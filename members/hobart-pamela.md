@@ -11,4 +11,6 @@ links:
     url: https://www.pamelajhobart.com/
   - title: Substack
     url: https://pamelajhobart.substack.com/
+rss:
+  - https://www.pamelajhobart.com/blog?format=rss
 ---

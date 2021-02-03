@@ -8,4 +8,6 @@ avatar: /members/mcdougall-david.jpg
 links:
   - title: Innovation at Scale
     url: https://innovationatscale.substack.com/
+rss:
+  - https://innovationatscale.substack.com/feed/
 ---

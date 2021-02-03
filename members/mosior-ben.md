@@ -9,4 +9,6 @@ links:
     url: https://www.linkedin.com/in/benjaminmosior/
   - title: Hired Thought
     url: https://hiredthought.com/
+rss:
+  - https://hiredthought.com/feed/
 ---
