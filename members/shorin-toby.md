@@ -7,4 +7,6 @@ avatar: /members/shorin-toby.jpg
 links:
   - title: tobyshorin.com
     url: https://tobyshorin.com/
+rss:
+  - https://subpixel.space/feed.xml
 ---

@@ -9,4 +9,6 @@ links:
     url: https://shreeda.substack.com/
   - title: Portfolio
     url: https://www.shreedasegan.com/
+rss:
+  - https://shreeda.substack.com/feed/
 ---

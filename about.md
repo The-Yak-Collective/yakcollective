@@ -42,7 +42,7 @@ All of us went indie because we wanted to work on real, hard problems, as best a
 
 This means sometimes we try weird new ideas and untested methods, and wander from our zones of expertise into our zones of amateurishness. We are open to _really_ trying new things and owning the inevitable failures that can sometimes result, as well as the successes, because if we aren't _open_ in that way, we can't land gigs or make money.
 
-As independents, we do not have the luxury of hiding among dozens of interchangeable people just like us, or closing deals on the basis of ancient existing relationships among sclerotic institutions that have been enabling each other's dysfunctions for decades. We are nobodies from the internet, showing up in executive email inboxes or sliding into CEO DMs on Twitter, sometimes with nothing more than a tweet backing our play. And unbelievably, it works well enough that we can make a living out of it. Because as the saying goes, _real recognize real_.  **We make rent -- or not -- based purely on whether people find us credible enough to talk to.**
+As independents, we do not have the luxury of hiding among dozens of interchangeable people just like us, or closing deals on the basis of ancient existing relationships among sclerotic institutions that have been enabling each other's dysfunctions for decades. We are nobodies from the internet, showing up in executive email inboxes or sliding into CEO DMs on Twitter, sometimes with nothing more than a tweet backing our play. And unbelievably, it works well enough that we can make a living out of it. Because as the saying goes, _real recognizes real_.  **We make rent -- or not -- based purely on whether people find us credible enough to talk to.**
 
 ## Our Methods
 

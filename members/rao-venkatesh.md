@@ -8,4 +8,6 @@ avatar: /members/rao-venkatesh.jpg
 links:
   - title: VenkateshRao.com
     url: https://venkateshrao.com/
+rss:
+  - https://breakingsmart.substack.com/feed/
 ---

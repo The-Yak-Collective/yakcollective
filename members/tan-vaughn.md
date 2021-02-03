@@ -13,4 +13,6 @@ links:
     url: https://vaughntan.org/uncertainty
   - title: newsletter
     url: https://uncertaintymindset.substack.com/
+rss:
+  - https://uncertaintymindset.substack.com/feed/
 ---
