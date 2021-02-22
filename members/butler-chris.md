@@ -7,6 +7,8 @@ avatar: /members/butler-chris.jpg
 links:
   - title: LinkedIn
     url: https://www.linkedin.com/in/chrisbu/
+  - title: Medium
+    url: https://chrizbot.medium.com/
   - title: YouTube
     url: https://www.youtube.com/playlist?list=PLTR1CgetbclHfZvNAR8BTCpA5Hz9qFxqf
 rss:
