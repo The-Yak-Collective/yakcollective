@@ -9,4 +9,6 @@ links:
     url: https://www.linkedin.com/in/chrisbu/
   - title: YouTube
     url: https://www.youtube.com/playlist?list=PLTR1CgetbclHfZvNAR8BTCpA5Hz9qFxqf
+rss:
+  - https://medium.com/feed/@chrizbot
 ---
