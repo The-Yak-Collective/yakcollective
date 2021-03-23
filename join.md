@@ -16,11 +16,11 @@ To access the invitation link for our Discord server, please answer a couple of 
         </p>
         <p>
             <label class="db b mb2" for="entry.186322352">First name</label>
-            <input class="db ba pa2 w-100 w-75-l" type="email" name="entry.186322352" id="entry.186322352">
+            <input class="db ba pa2 w-100 w-75-l" type="text" name="entry.186322352" id="entry.186322352">
         </p>
         <p>
             <label class="db b mb2" for="entry.385365437">Last Name</label>
-            <input class="db ba pa2 w-100 w-75-l" type="email" name="entry.385365437" id="entry.385365437">
+            <input class="db ba pa2 w-100 w-75-l" type="text" name="entry.385365437" id="entry.385365437">
         </p>
         <p>
             <label class="db b mb2" for="entry.579811979">What city are you located in? <span class="required">*</span></label>
