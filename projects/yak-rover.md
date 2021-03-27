@@ -2,7 +2,7 @@
 title: Yak Rover
 date: 2021-03-28 00:00:00
 tagline: Mars rovers for everybody
-type: Report
+type: Program
 sequence: covid-19
 hero_image: /projects/yak-rover/yak-rover.jpg
 page_headers: |
