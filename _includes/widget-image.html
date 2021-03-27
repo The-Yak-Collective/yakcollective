@@ -7,7 +7,8 @@
 		`center`.
 
 		`image`
-		Path to the image to include (relative to the final site).
+		Path to the image to include. Should be either a full URL or an
+		absolute path to an image on <https://www.yakcollective.org/>.
 
 		`alt`
 		Optional (but recommended for accessibility reasons) image alt
@@ -26,7 +27,7 @@
 	<figure class="ma0">
 		<img src="{{ include.image }}"{% if include.alt %} alt="{{ include.alt | markdownify | strip_html | strip }}"{% endif %} class="w-100">
 		{% if include.caption %}
-			<figcaption class="yak-content{% if the_layout == "full-bleed" %} wide{% endif %}">
+			<figcaption class="yak-content{% if the_layout == 'full-bleed' %} wide{% endif %}">
 				{{ include.caption | markdownify }}
 			</figcaption>
 		{% endif %}
