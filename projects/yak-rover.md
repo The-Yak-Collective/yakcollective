@@ -31,5 +31,3 @@ credits:
     - milov-grigori
 ---
 {% include widget-project-header.html %}
-
-{% include widget-project-page-list.html %}
