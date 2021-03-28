@@ -7,7 +7,7 @@ sequence: covid-19
 hero_image: /projects/yak-rover/yak-rover.jpg
 page_headers: |
   <style type="text/css">
-    .hero {
+    #yak-rover-hero .hero {
       display: none !important;
     }
   </style>
