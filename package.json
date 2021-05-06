@@ -13,7 +13,7 @@
   "license": "MIT",
   "dependencies": {
     "moment": "^2.24.0",
-    "chrono-node": "^1.3.5",
+    "chrono-node": "^2.2.4",
     "remove-accents": "^0.4.2",
     "axios": "^0.21.1",
     "@octokit/rest": "^17.9.0"
