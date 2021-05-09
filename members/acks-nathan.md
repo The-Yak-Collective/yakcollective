@@ -3,9 +3,9 @@ title: Nathan Acks
 date: 2020-05-03 00:00:00
 twitter: nathan_acks
 indie_status: Pre-leap
-tagline: Armchair futurist. Reluctant anti-utopian. Defense against the dark arts.
+tagline: Armchair futurist. Defense against the dark arts.
 currently: IT and security for a major US non-profit
-previously: Digital organizing tech / Student in Applied Mathematics / Bookseller
+previously: Digital organizing tech / Applied Mathematics
 avatar: /members/acks-nathan.jpg
 links:
   - title: Writings

@@ -26,10 +26,10 @@ layout: none
 			<item>
 				{% assign member = site.data.featured_yak %}
 				<title>{{ member.title | xml_escape }}</title>
-				<description>{% if member.twitter and member.twitter.size > 0 %}(@{{ member.twitter }}){% endif %}{% if member.tagline and member.tagline.size > 0 %} - {{ member.tagline }}{% endif %}</description>
+				<description>{% if member.twitter and member.twitter.size > 0 %}(@{{ member.twitter }}){% endif %}{% if member.tagline and member.tagline.size > 0 %} - {{ member.tagline | xml_escape }}{% endif %}</description>
 				<pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
-				<link>{{ site.url }}{{ member.url }}</link>
-				<guid isPermaLink="false">{{ site.time | date: "%Y%m%d" }}</guid>
+				<link>{{ site.url }}{{ member.url }}#{{ site.time | date: "%Y%m%d" }}</link>
+				<guid>{{ site.url }}{{ member.url }}#{{ site.time | date: "%Y%m%d" }}</guid>
 			</item>
 	</channel>
 </rss>

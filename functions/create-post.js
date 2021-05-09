@@ -42,9 +42,8 @@ exports.handler = async function(event, context) {
 	//    7. Replace any double </p></p> with a single </p>
 	//    8. Replace { with &#x007b; to work around Jekyll parsing weirdness.
 	//    9. Replace } with &#x007d; to work around Jekyll parsing weirdness.
-	//   10. Replace % with &#x0023; to work around Jekyll parsing weirdness.
-	//   11. Replace the sequence .### with just . (since this implies that we don't need ###)
-	//   12. Finally, replace ### with ...
+	//   10. Replace the sequence .### with just . (since this implies that we don't need ###)
+	//   11. Finally, replace ### with ...
 	//
 	var postContent = (event.body).replace(/\|\|\|/g, "\n");
 	postContent = postContent.replace(/\|@/g, "|");
@@ -53,9 +52,8 @@ exports.handler = async function(event, context) {
 	postContent = postContent.replace(/, ?("")? \]/, " ]");
 	postContent = postContent.replace(/<p><p>/, "<p>");
 	postContent = postContent.replace(/<\/p><\/p>/, "</p>");
-	postContent = postContent.replace(/{/, "&#x007b;");
-	postContent = postContent.replace(/}/, "&#x007d;");
-	postContent = postContent.replace(/%/, "&#x0023;");
+	postContent = postContent.replace(/{/g, "&#x007b;");
+	postContent = postContent.replace(/}/g, "&#x007d;");
 	postContent = postContent.replace(/\. *###/, ".");
 	postContent = postContent.replace(/###/, "...");
 
