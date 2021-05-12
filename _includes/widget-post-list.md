@@ -94,8 +94,15 @@
 {% for post in filtered_posts %}
     {% assign this_year = post.date | date: "%Y" %}
     {% assign this_month = post.date | date: "%B" %}
-    {% assign next_year = post.previous.date | date: "%Y" %}
-    {% assign next_month = post.previous.date | date: "%B" %}
+    {% unless forloop.last %}
+        {% assign next_post_index = forloop.index0 | plus: 1 %}
+        {% assign next_post = filtered_posts[next_post_index] %}
+        {% assign next_year = next_post.date | date: "%Y" %}
+        {% assign next_month = next_post.date | date: "%B" %}
+    {% else %}
+        {% assign next_year = this_year %}
+        {% assign next_month = this_month %}
+    {% endunless %}
 
     {% if forloop.first %}
         {% assign post_list = post_list | append: header_year

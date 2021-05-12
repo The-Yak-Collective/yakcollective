@@ -31,6 +31,11 @@ defaults:
     values:
       layout: page-member
   - scope:
+      path: "newsletter/*"
+      type: posts
+    values:
+      layout: post-with-title
+  - scope:
       path: "projects/*/*"
       type: pages
     values:
