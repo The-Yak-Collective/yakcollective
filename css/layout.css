@@ -85,7 +85,7 @@ a.yak-logo .yak-logo-image {
 
 .yak-content ol,
 .yak-content ul {
-	padding-inline-start: 3rem;
+	padding-inline-start: 2rem;
 }
 
 .yak-content blockquote {
@@ -205,6 +205,21 @@ h5 + h6 {
 	margin-top: 0;
 }
 
+h1 + ol,
+h1 + ul,
+h2 + ol,
+h2 + ul,
+h3 + ol,
+h3 + ul,
+h4 + ol,
+h4 + ul,
+h5 + ol,
+h5 + ul,
+h6 + ol,
+h6 + ul {
+	margin-top: min(-0.9em, -0.5rem);
+}
+
 h1 a,
 h2 a,
 h3 a,
@@ -274,9 +289,11 @@ a.project-page-box:hover .pseudo-link {
 
 .required {
 	font-weight: bold;
+	color: red;
 }
 
 #markdown-toc {
+	margin-top: 1em;
 	padding: 1rem 2rem 1rem 3rem;
 }
 
@@ -286,7 +303,7 @@ a.project-page-box:hover .pseudo-link {
 }
 
 #markdown-toc li ul {
-	padding-inline-start: 2rem;
+	padding-inline-start: 1.5rem;
 }
 
 .footnotes {
@@ -390,4 +407,45 @@ h6.slide-deck-visible-anchor a:hover {
 
 .slide-content .slide-deck-visible-anchor {
 	margin-top: -0.5rem;
+}
+
+/* Knack form overrides */
+#knack-body,
+.kn-view {
+	font-family: "Noto Serif", Georgia, serif !important;
+}
+
+#kn-app-header {
+	display: none;
+}
+
+.kn-view {
+	margin-bottom: 0 !important;
+}
+
+.control:not(:last-child) {
+	margin-bottom: 1.5em !important;
+}
+
+.control.is-grouped > .control:not(:last-child) {
+	margin-bottom: 0 !important;
+}
+
+.kn-radio .control {
+	margin-bottom: 0.5em !important;
+}
+
+.kn-label:not(:last-child) {
+	margin-bottom: 0.5em !important;
+}
+
+.kn-submit {
+	margin-top: 1em !important;
+}
+
+.kn-button {
+	font-size: inherit !important;
+	font-weight: bold !important;
+	height: auto !important;
+	padding: 0.5em !important;
 }
