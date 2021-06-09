@@ -1,6 +1,7 @@
 ---
 title: Contribute to Future Frontiers
 layout: page-project-slide
+date: 2020-12-01 00:00:00
 google_doc: "https://docs.google.com/presentation/d/1oIziqtVM878uRG-JOfrQNvGFsQWKP_S_W8cLkhQlXvA/edit#slide=id.gadc2f788a3_0_0"
 description: Any member of the Yak Collective is welcome to contribute a module (subject to editorial approval) on any frontiers-related topic at any time.
 ---
