@@ -9,10 +9,10 @@ Be sure to take a moment to read our [code of conduct](https://roamresearch.com/
 To access the invitation link for our Discord server, please answer a couple of simple questions (all <span class="required">*</span> fields are required).
 
 <div>
-    <script type="text/javascript">
-	app_id="5f70876d8e7037001504bfe8";
-	distribution_key="dist_2";
-    </script>
-    <script type="text/javascript" src="https://loader.knack.com/5f70876d8e7037001504bfe8/dist_2/knack.js"></script>
-    <div id="knack-dist_2">Loading...</div>
+	<script type="text/javascript">
+		app_id="5f70876d8e7037001504bfe8";
+		distribution_key="dist_3";
+	</script>
+	<script type="text/javascript" src="https://loader.knack.com/5f70876d8e7037001504bfe8/dist_3/knack.js"></script>
+	<div id="knack-dist_3">Loading...</div>
 </div>
