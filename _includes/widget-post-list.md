@@ -9,6 +9,9 @@
         larger than "5" are treated as "5", since `<h7/>` tags don't
         exist in HTML.
 
+        `show_months`
+        If `true`, then show months in addition to years.
+
         `show_author`
         If `true`, then show post author.
 
@@ -113,16 +116,18 @@
                                         | append: this_year
                                         | append: "}"
                                         | append: two_newlines%}
-        {% assign post_list = post_list | append: header_month
-                                        | append: this_month
-                                        | append: one_newline %}
-        {% assign post_list = post_list | append: "{: #"
-                                        | append: id_prefix
-                                        | append: this_year
-                                        | append: "-"
-                                        | append: this_month
-                                        | append: "}"
-                                        | append: two_newlines %}
+        {% if include.show_months %}
+            {% assign post_list = post_list | append: header_month
+                                            | append: this_month
+                                            | append: one_newline %}
+            {% assign post_list = post_list | append: "{: #"
+                                            | append: id_prefix
+                                            | append: this_year
+                                            | append: "-"
+                                            | append: this_month
+                                            | append: "}"
+                                            | append: two_newlines %}
+        {% endif %}
     {% endif %}
 
     {% comment %}
@@ -182,18 +187,20 @@
                                             | append: next_year
                                             | append: "}"
                                             | append: two_newlines %}
-            {% assign post_list = post_list | append: header_month
-                                            | append: next_month
-                                            | append: one_newline %}
-            {% assign post_list = post_list | append: "{: #"
-                                            | append: id_prefix
-                                            | append: next_year
-                                            | append: "-"
-                                            | append: next_month
-                                            | append: "}"
-                                            | append: two_newlines %}
+            {% if include.show_months %}
+                {% assign post_list = post_list | append: header_month
+                                                | append: next_month
+                                                | append: one_newline %}
+                {% assign post_list = post_list | append: "{: #"
+                                                | append: id_prefix
+                                                | append: next_year
+                                                | append: "-"
+                                                | append: next_month
+                                                | append: "}"
+                                                | append: two_newlines %}
+            {% endif %}
         {% else %}
-            {% if this_month != next_month %}
+            {% if include.show_months and this_month != next_month %}
                 {% assign post_list = post_list | append: one_newline %}
                 {% assign post_list = post_list | append: header_month
                                                 | append: next_month
