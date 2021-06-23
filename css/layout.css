@@ -18,10 +18,21 @@ body {
 a {
 	color: inherit;
 	opacity: 0.8;
+	text-decoration: none;
 }
 
 a:hover {
 	opacity: 1.0;
+	text-decoration: underline;
+}
+
+a,
+a:link,
+a:focus,
+a:hover,
+a:active,
+a:visited {
+	transition: color .15s ease-in;
 }
 
 .fill-space {
@@ -81,6 +92,22 @@ a.yak-logo .yak-logo-image {
 .yak-content > *:last-child > *:last-child > *:last-child,
 .yak-content > *:last-child > *:last-child > *:last-child > *:last-child {
 	margin-bottom: 0;
+}
+
+.yak-content a {
+	opacity: 0.6;
+}
+
+.yak-content a:hover {
+	opacity: 0.8;
+}
+
+.yak-content .yak-content a {
+	opacity: 0.75; /* 0.8 x 0.75 = 0.6 */
+}
+
+.yak-content .yak-content a:hover {
+	opacity: 1.0; /* 0.8 x 1.0 = 0.8 */
 }
 
 .yak-content ol,
@@ -270,6 +297,14 @@ a.member-box,
 a.project-box,
 a.project-page-box,
 .silent-link {
+	text-decoration: none;
+	opacity: 1.0;
+}
+
+a.member-box:hover,
+a.project-box:hover,
+a.project-page-box:hover,
+.silent-link:hover {
 	text-decoration: none;
 	opacity: 1.0;
 }

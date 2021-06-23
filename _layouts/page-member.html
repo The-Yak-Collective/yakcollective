@@ -79,6 +79,6 @@ layout: default
 {% assign num_writings = site.categories["writings"] | where: "author", member_id | size %}
 {% if num_writings > 0 %}
 	<h2 id="writings">Writings</h2>
-	{% capture member_writings %}{% include widget-post-list.md init_header_level=3 show_author=false author=member_id category="writings" %}{% endcapture %}
+	{% capture member_writings %}{% include widget-post-list.md init_header_level=3 show_date=true show_author=false author=member_id category="writings" %}{% endcapture %}
 	{{ member_writings | markdownify }}
 {% endif %}

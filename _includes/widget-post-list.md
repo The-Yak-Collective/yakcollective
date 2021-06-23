@@ -1,6 +1,7 @@
 {% comment %}
-    Generate a list of posts, organized by month and year. Expects the
-    following parameters to be passed in:
+    Generate a list of posts, organized by month and year, formatted
+    after Wikipedia's reference style. Expects the following parameters
+    to be passed in:
 
         `init_header_level`
         The initial header level to use. If "2" is passed in, then `h2`
@@ -10,7 +11,10 @@
         exist in HTML.
 
         `show_months`
-        If `true`, then show months in addition to years.
+        If `true`, then show month headers in addition to years.
+
+        `show_date`
+        If `true`, then show post date.
 
         `show_author`
         If `true`, then show post author.
@@ -151,26 +155,38 @@
         {% assign show_post = false %}
     {% endif %}
     {% if show_post %}
-        {% assign post_list = post_list | append: "- [" %}
-        {% assign post_list = post_list | append: post.title %}
+        {% if include.show_author %}
+            {% assign post_list = post_list | append: "[" %}
+            {% assign post_list = post_list | append: author.title %}
+            {% assign post_list = post_list | append: "](" %}
+            {% assign post_list = post_list | append: author.url %}
+            {% assign post_list = post_list | append: "/)" %}
+        {% endif %}
+        {% if include.show_date %}
+            {% if include.show_author %}
+                {% assign post_list = post_list | append: ' ' %}
+            {% endif %}
+            {% assign post_list = post_list | append: '(<time class="fw1">' %}
+            {% assign formatted_date = post.date | date: "%B %e, %Y" %}
+            {% assign post_list = post_list | append: formatted_date %}
+            {% assign post_list = post_list | append: "</time>)" %}
+        {% endif %}
+        {% if include.show_author or include.show_date %}
+            {% assign post_list = post_list | append: '. ' %}
+        {% endif %}
+        {% assign post_list = post_list | append: "_[" %}
+        {% assign post_list = post_list | append: post.title | rstrip %}
+        {% assign last_character = post_list | slice: -1 %}
+        {% if last_character != "." and last_character != "!" and last_character != "?" %}
+            {% assign post_list = post_list | append: "." %}
+        {% endif %}
         {% assign post_list = post_list | append: "](" %}
         {% if post.original_link %}
             {% assign post_list = post_list | append: post.original_link %}
         {% else %}
             {% assign post_list = post_list | append: post.url %}
         {% endif %}
-        {% assign post_list = post_list | append: ")" %}
-        {% if include.show_author %}
-            {% assign post_list = post_list | append: " &middot; [" %}
-            {% assign post_list = post_list | append: author.title %}
-            {% assign post_list = post_list | append: "](" %}
-            {% assign post_list = post_list | append: author.url %}
-            {% assign post_list = post_list | append: "/)" %}
-        {% endif %}
-        {% assign post_list = post_list | append: ' &middot; <time class="i fw1">' %}
-        {% assign formatted_date = post.date | date: "%B %e, %Y" %}
-        {% assign post_list = post_list | append: formatted_date %}
-        {% assign post_list = post_list | append: "</time>" %}
+        {% assign post_list = post_list | append: ")_  " %}
         {% assign post_list = post_list | append: one_newline %}
     {% endif %}
 
