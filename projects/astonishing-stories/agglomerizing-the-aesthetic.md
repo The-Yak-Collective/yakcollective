@@ -54,6 +54,7 @@ page_headers: |
   </style>
 ---
 # Agglomerizing the Aesthetic
+<time class="db small ttu o-60">{{ page.date | date_to_long_string: "ordinal", "US" }}</time>
 
 Sometimes I just marvel at the world we live in. People always bitch about the global, remote workforce—_a race to the bottom, downward pressure on wages_, blah, blah, blah—but here I was getting ready to Virtual HouseGuest with my new girlfriend’s parents for dinner tomorrow, and I was about to get some niche expertise on styling my hair on a Sunday night. When you needed something, no matter how minor, someone, somewhere in the world could help you with it. It was amazing!
 

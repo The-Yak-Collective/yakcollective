@@ -54,6 +54,7 @@ page_headers: |
   </style>
 ---
 # Out of the Loop
+<time class="db small ttu o-60">{{ page.date | date_to_long_string: "ordinal", "US" }}</time>
 
 Vijayan looked down in pain at his [programmable forearm tattoo](https://roamresearch.com/#/app/Astonishing_Stories/page/6jX2RXOls) after finishing his last note. The microbots in his arm etched a new web of nodes, mirroring his notetaking system on a Roam graph. His mind had become a tangled graph since his father’s death, now reflected on his arm as a messy graph of interconnected lines for all to see. He gazed into his coffee and cursed under his breath while he thought about the decision to get the Roam microbots. He was now stuck living with nanotechnology that etched a continuously evolving tattoo on his arm.
 

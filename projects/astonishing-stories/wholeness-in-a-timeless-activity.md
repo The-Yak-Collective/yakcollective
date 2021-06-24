@@ -54,6 +54,7 @@ page_headers: |
   </style>
 ---
 # Wholeness in a Timeless Activity
+<time class="db small ttu o-60">{{ page.date | date_to_long_string: "ordinal", "US" }}</time>
 
 There are some activities the wealthy occasionally lust after. But there is one they will never stop avoiding.
 

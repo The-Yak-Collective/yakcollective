@@ -55,6 +55,7 @@ page_headers: |
   </style>
 ---
 # Mechanical Turks All the Way Down
+<time class="db small ttu o-60">{{ page.date | date_to_long_string: "ordinal", "US" }}</time>
 
 I jabbed the accept button on one of the many touch surfaces that suddenly popped into reality in my shared office, home, and daycare. Can’t be too eager on your first day of the job.
 

@@ -54,6 +54,7 @@ page_headers: |
   </style>
 ---
 # Department of Restoration
+<time class="db small ttu o-60">{{ page.date | date_to_long_string: "ordinal", "US" }}</time>
 
 +
 

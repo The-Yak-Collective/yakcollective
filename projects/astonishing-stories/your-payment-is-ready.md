@@ -54,6 +54,7 @@ page_headers: |
   </style>
 ---
 # Your Payment is Ready
+<time class="db small ttu o-60">{{ page.date | date_to_long_string: "ordinal", "US" }}</time>
 
 > _…my algorithm finds that you are currently at the 46th percentile amongst clarinetists in your peer competition group. Practice your arpeggios to improve your score before the final evaluation! 16-year-olds in your city with finely articulated arpeggios generally rank in the top quartile. Those with a strong swing-eighths style generally rank in the top decile. Say ‘practice arpeggios’ or ‘practice swing-eighths’ for a lesson._
 
