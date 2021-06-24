@@ -149,44 +149,44 @@
         implicitly assume that we're on a page with a single post
         author, and we don't want to risk displaying an empty list of
         posts if they haven't yet "officially" joined.
+
+        Note that we use HTML rather than markdown here, as otherwise
+        there's a weird bug where the time specification is parsed as if
+        it were on a seperate line.
     {% endcomment %}
     {% assign show_post = true %}
     {% if include.show_author and author.date > site.time and site.future != true %}
         {% assign show_post = false %}
     {% endif %}
     {% if show_post %}
-        {% if include.show_author %}
-            {% assign post_list = post_list | append: "[" %}
-            {% assign post_list = post_list | append: author.title %}
-            {% assign post_list = post_list | append: "](" %}
-            {% assign post_list = post_list | append: author.url %}
-            {% assign post_list = post_list | append: "/)" %}
-        {% endif %}
         {% if include.show_date %}
-            {% if include.show_author %}
+            {% assign post_list = post_list | append: '<div><time class="courier b">' %}
+            {% assign formatted_date = post.date | date: "%d %b" %}
+            {% assign post_list = post_list | append: formatted_date %}
+            {% assign post_list = post_list | append: "</time>" %}
+        {% endif %}
+        {% if include.show_author %}
+            {% if include.show_date %}
                 {% assign post_list = post_list | append: ' ' %}
             {% endif %}
-            {% assign post_list = post_list | append: '(<time class="fw1">' %}
-            {% assign formatted_date = post.date | date: "%B %e, %Y" %}
-            {% assign post_list = post_list | append: formatted_date %}
-            {% assign post_list = post_list | append: "</time>)" %}
+            {% assign post_list = post_list | append: '<a href="' %}
+            {% assign post_list = post_list | append: author.url %}
+            {% assign post_list = post_list | append: '">' %}
+            {% assign post_list = post_list | append: author.title %}
+            {% assign post_list = post_list | append: "</a>" %}
         {% endif %}
         {% if include.show_author or include.show_date %}
-            {% assign post_list = post_list | append: '. ' %}
+            {% assign post_list = post_list | append: ': ' %}
         {% endif %}
-        {% assign post_list = post_list | append: "_[" %}
-        {% assign post_list = post_list | append: post.title | rstrip %}
-        {% assign last_character = post_list | slice: -1 %}
-        {% if last_character != "." and last_character != "!" and last_character != "?" %}
-            {% assign post_list = post_list | append: "." %}
-        {% endif %}
-        {% assign post_list = post_list | append: "](" %}
+        {% assign post_list = post_list | append: '<em><a href="' %}
         {% if post.original_link %}
             {% assign post_list = post_list | append: post.original_link %}
         {% else %}
             {% assign post_list = post_list | append: post.url %}
         {% endif %}
-        {% assign post_list = post_list | append: ")_  " %}
+        {% assign post_list = post_list | append: '">' %}
+        {% assign post_list = post_list | append: post.title | rstrip %}
+        {% assign post_list = post_list | append: "</a></em></div>" %}
         {% assign post_list = post_list | append: one_newline %}
     {% endif %}
 
