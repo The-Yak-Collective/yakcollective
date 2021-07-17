@@ -5,7 +5,7 @@ title: Yak Collective Members
 
 Yak Collective members have contributed to one or more projects.
 
-Members: Update your profile anytime in the [Yak Member Portal](https://yak.knack.com/yaks#yak-profile/).
+_Members: Update your profile anytime in the [Yak Member Portal](https://yak.knack.com/yaks#yak-profile/)._
 
 {% assign members = site.pages | where: "layout", "page-member"
                                | where_exp: "member", "member.date <= site.time or site.future == true" %}

@@ -8,7 +8,7 @@ Be sure to take a moment to read our [code of conduct](https://roamresearch.com/
 
 To access the invitation link for our Discord server, please answer a couple of simple questions (all <span class="required">*</span> fields are required).
 
-(If you are already a member, you can update your profile anytime in the [Yak Member Portal](https://yak.knack.com/yaks#yak-profile/).)
+_If you are already a member, you can update your profile anytime in the [Yak Member Portal](https://yak.knack.com/yaks#yak-profile/)._
 
 <div>
 	<script type="text/javascript">
