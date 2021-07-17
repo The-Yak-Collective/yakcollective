@@ -49,7 +49,7 @@
 		{% if member %}
 			{% if include.link_members %}<a href="{{ member.url }}">{% endif %}{{ member.title | replace: " ", "&nbsp;" }}{% if include.link_members %}</a>{% endif %}{% if member_id != last_member %}, {% endif %}
 		{% else %}
-			{{ member_id | replace: " ", "&nbsp;" }}
+			{{ member_id | replace: " ", "&nbsp;" }}{% if member_id != last_member %}, {% endif %}
 		{% endif %}
 	{% endfor %}
 {% endif %}
