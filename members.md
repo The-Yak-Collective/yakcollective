@@ -5,6 +5,8 @@ title: Yak Collective Members
 
 Yak Collective members have contributed to one or more projects.
 
+[You can update your member information in Knack.](https://yak.knack.com/yaks#yak-profile/)
+
 {% assign members = site.pages | where: "layout", "page-member"
                                | where_exp: "member", "member.date <= site.time or site.future == true" %}
 
