@@ -1,5 +1,6 @@
 ---
 title: What is the Yak Collective working on now?
+draft: true
 ---
 # Now
 
