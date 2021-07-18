@@ -21,7 +21,7 @@
 	{% if member %}
 		{% if include.link_members %}<a href="{{ member.url }}">{% endif %}{{ member.title | replace: " ", "&nbsp;" }}{% if include.link_members %}</a>{% endif %}
 	{% else %}
-		{{ include.member_list[0] | replace: " ", "&nbsp;" }}
+		<span class="unlinked-member">{{ include.member_list[0] | replace: " ", "&nbsp;" }}</span>
 	{% endif %}
 {% elsif total_members == 2 %}
 	{% assign first_member_url = "/members/" | append: include.member_list[0] | append: "/" %}
@@ -32,13 +32,13 @@
 	{% if first_member %}
 		{% if include.link_members %}<a href="{{ first_member.url }}">{% endif %}{{ first_member.title | replace: " ", "&nbsp;" }}{% if include.link_members %}</a>{% endif %}
 	{% else %}
-		{{ include.member_list[0] | replace: " ", "&nbsp;" }}
+		<span class="unlinked-member">{{ include.member_list[0] | replace: " ", "&nbsp;" }}</span>
 	{% endif %}
 	&amp;
 	{% if second_member %}
 		{% if include.link_members %}<a href="{{ second_member.url }}">{% endif %}{{ second_member.title | replace: " ", "&nbsp;" }}{% if include.link_members %}</a>{% endif %}
 	{% else %}
-		{{ include.member_list[1] | replace: " ", "&nbsp;" }}
+		<span class="unlinked-member">{{ include.member_list[1] | replace: " ", "&nbsp;" }}</span>
 	{% endif %}
 {% else %}
 	{% assign last_member = include.member_list.last %}
@@ -49,7 +49,7 @@
 		{% if member %}
 			{% if include.link_members %}<a href="{{ member.url }}">{% endif %}{{ member.title | replace: " ", "&nbsp;" }}{% if include.link_members %}</a>{% endif %}{% if member_id != last_member %}, {% endif %}
 		{% else %}
-			{{ member_id | replace: " ", "&nbsp;" }}{% if member_id != last_member %}, {% endif %}
+			<span class="unlinked-member">{{ member_id | replace: " ", "&nbsp;" }}</span>{% if member_id != last_member %}, {% endif %}
 		{% endif %}
 	{% endfor %}
 {% endif %}

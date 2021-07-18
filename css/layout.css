@@ -94,7 +94,8 @@ a.yak-logo .yak-logo-image {
 	margin-bottom: 0;
 }
 
-.yak-content a {
+.yak-content a,
+.yak-content .unlinked-member {
 	opacity: 0.6;
 }
 
@@ -102,7 +103,8 @@ a.yak-logo .yak-logo-image {
 	opacity: 0.8;
 }
 
-.yak-content .yak-content a {
+.yak-content .yak-content a, 
+.yak-content .yak-content .unlinked-member {
 	opacity: 0.75; /* 0.8 x 0.75 = 0.6 */
 }
 
