@@ -40,7 +40,7 @@ credits:
     - reeves-amanda
     - segan-shreeda
     - shiel-drew
-    - shorin-toby
+    - Toby Shorin
     - taylor-benjamin
     - verhagen-thomas
 ---
