@@ -123,7 +123,3 @@ credits:
 {% include widget-project-header.html %}
 
 {% include widget-project-page-list.html %}
-
-## Additional Credits
-
-SVG graphics provided by [Hero Patterns](https://www.heropatterns.com/).
