@@ -460,10 +460,6 @@ h6.slide-deck-visible-anchor a:hover {
 	margin-bottom: 0 !important;
 }
 
-.control:not(:last-child) {
-	margin-bottom: 1.5em !important;
-}
-
 .control.is-grouped > .control:not(:last-child) {
 	margin-bottom: 0 !important;
 }
