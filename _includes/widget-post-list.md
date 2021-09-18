@@ -163,7 +163,7 @@
             {% assign post_list = post_list | append: '<div><time class="courier b">' %}
             {% assign formatted_date = post.date | date: "%d %b" %}
             {% assign post_list = post_list | append: formatted_date %}
-            {% assign post_list = post_list | append: "</time>" %}
+            {% assign post_list = post_list | append: "</time>:" %}
         {% endif %}
         {% if include.show_author %}
             {% if include.show_date %}
@@ -173,10 +173,7 @@
             {% assign post_list = post_list | append: author.url %}
             {% assign post_list = post_list | append: '">' %}
             {% assign post_list = post_list | append: author.title %}
-            {% assign post_list = post_list | append: "</a>" %}
-        {% endif %}
-        {% if include.show_author or include.show_date %}
-            {% assign post_list = post_list | append: ': ' %}
+            {% assign post_list = post_list | append: '</a><span class="pseudo-link">,</span>' %}
         {% endif %}
         {% assign post_list = post_list | append: '<em><a href="' %}
         {% if post.original_link %}
