@@ -15,7 +15,7 @@ body {
 	z-index: -10;
 }
 
-a, .pseudo-link {
+a {
 	color: inherit;
 	opacity: 0.8;
 	text-decoration: none;
@@ -33,6 +33,10 @@ a:hover,
 a:active,
 a:visited {
 	transition: color .15s ease-in;
+}
+
+.pseudo-link {
+	opacity: 0.64;
 }
 
 .fill-space {

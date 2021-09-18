@@ -170,7 +170,7 @@
             {% assign post_list = post_list | append: author.url %}
             {% assign post_list = post_list | append: '">' %}
             {% assign post_list = post_list | append: author.title %}
-            {% assign post_list = post_list | append: '</a><span class="pseudo-link"><span class="pseudo-link">,</span></span> ' %}
+            {% assign post_list = post_list | append: '</a><span class="pseudo-link">,</span> ' %}
         {% endif %}
         {% assign post_list = post_list | append: '<em><a href="' %}
         {% if post.original_link %}
