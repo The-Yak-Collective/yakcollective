@@ -1,9 +1,15 @@
+# Ignore standard *NIX graffiti
+.DS_Store
+._*
+*~
+*.swp
+
+# Ignore build files
 .bundle/*
 .jekyll-cache/*
 _site/*
 vendor/*
 
-.DS_Store
-._*
-*~
-*.swp
+# Ignore sensitive data from Knack
+bin/knack-yak-creds.sh
+_data/knack-yaks.json
