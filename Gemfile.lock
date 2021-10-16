@@ -29,6 +29,7 @@ GEM
       rouge (~> 3.0)
       safe_yaml (~> 1.0)
       terminal-table (~> 2.0)
+    jekyll-datapage-generator (1.4.0)
     jekyll-sass-converter (2.1.0)
       sassc (> 2.0.1, < 3.0)
     jekyll-titles-from-headings (0.5.3)
@@ -60,11 +61,13 @@ GEM
     unicode-display_width (1.7.0)
 
 PLATFORMS
+  aarch64-linux
   x86_64-linux
 
 DEPENDENCIES
   jekyll
+  jekyll-datapage-generator
   jekyll-titles-from-headings
 
 BUNDLED WITH
-   2.2.5
+   2.2.27

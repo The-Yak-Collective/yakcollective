@@ -1,0 +1,45 @@
+---
+layout: default
+---
+
+<img class="w3 h3 br-100 ba image-border"
+     src="{% if page.field_44_raw.url %}{{ page.field_44_raw.url
+                | remove: "https://s3-eu-west-1.amazonaws.com/assets.knack-eu.com/assets/5f70876d8e7037001504bfe8/"
+                | prepend: "https://res.cloudinary.com/yak-collective/image/upload/c_fill,g_face,h_180,w_180,e_sharpen:50/yak-barn-v1/" }}{% else %}/img/member.jpg{% endif %}"
+     alt="{{ page.field_97_raw | strip | smartify | normalize_whitespace }}" />
+<br />
+<pre>
+MEMBER ID
+{{ page.field_101_raw }}
+
+PROFESSIONAL NAME
+{% if page.field_97_raw %}{{ page.field_97_raw | strip | smartify | normalize_whitespace | xml_escape }}{% else %}-{% endif %}
+
+TAGLINE
+{% if page.field_97_raw %}{{ page.field_41_raw | strip | smartify | normalize_whitespace | xml_escape }}{% else %}-{% endif %}
+
+CURRENT
+{% if page.field_97_raw %}{{ page.field_23_raw | strip | smartify | normalize_whitespace | xml_escape }}{% else %}-{% endif %}
+
+PREVIOUSLY
+{% if page.field_97_raw %}{{ page.field_42_raw | strip | smartify | normalize_whitespace | xml_escape }}{% else %}-{% endif %}
+
+TWITTER
+{% if page.field_97_raw %}https://twitter.com/{{ page.field_43_raw | strip | remove: "http://twitter.com/"
+	| remove: "https://twitter.com/"
+	| remove: "http://www.twitter.com/"
+	| remove: "https://www.twitter.com/"
+	| remove: "@" | uri_escape }}{% else %}-{% endif %}
+
+URL 1
+{% if page.field_97_raw %}{{ page.field_65_raw.label | strip | smartify | normalize_whitespace | xml_escape }} - {{ page.field_65_raw.url | uri_escape }}{% else %}-{% endif %}
+
+URL 2
+{% if page.field_97_raw %}{{ page.field_66_raw.label | strip | smartify | normalize_whitespace | xml_escape }} - {{ page.field_66_raw.url | uri_escape }}{% else %}-{% endif %}
+
+URL 3
+{% if page.field_97_raw %}{{ page.field_67_raw.label | strip | smartify | normalize_whitespace | xml_escape }} - {{ page.field_67_raw.url | uri_escape }}{% else %}-{% endif %}
+
+BACKGROUND INFO
+{% if page.field_97_raw %}{{ page.field_32_raw | strip | smartify | normalize_whitespace | xml_escape }}{% else %}-{% endif %}
+</pre>

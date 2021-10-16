@@ -14,6 +14,11 @@ fi
 #
 [[ -d _site ]] && rm --recursive --force _site
 
+# Pull Knack data.
+#
+chmod +x bin/knack-pull-yaks.sh
+./bin/knack-pull-yaks.sh || exit 1
+
 # If we're running from Netlify, then all Ruby Gem setup has already
 # been done for us. We assume that this is the case if the `jekyll`
 # binary is in our path.
@@ -22,11 +27,11 @@ fi
 # and run the build.
 #
 if [[ -n "$(which jekyll)" ]]; then
-	jekyll build --profile $@
+	jekyll build --profile $@ || exit 4
 elif [[ -n "$(which bundle)" ]]; then
-	bundle config set path vendor/bundle
-	bundle install
-	bundle exec jekyll build --profile $@
+	bundle config set path vendor/bundle || exit 2
+	bundle install || exit 3
+	bundle exec jekyll build --profile $@ || exit 4
 else
 	echo "Cannot find Bundler, and Jekyll does not seem to be installed."
 	exit 1
@@ -52,5 +57,4 @@ fi
 # therefore be turned off when "hand optimization" like this is used.
 #
 chmod +x bin/minify
-./bin/minify --recursive --output _site _site
-true
+./bin/minify --recursive --output _site _site || true

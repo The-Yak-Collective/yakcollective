@@ -2,9 +2,16 @@
 #
 version: 2.4.0
 
+# Gemfile-based plugins
+#
+plugins:
+  - jekyll-titles-from-headings
+  - jekyll-datapage-generator
+
 # General site settings
 #
 permalink: pretty
+page_gen-dirs: true
 
 # RSS/JSON feed settings. See:
 #
@@ -17,10 +24,14 @@ name: The Yak Collective
 description: The Yak Collective is a network of over 300 independent consultants, coaches, and freelancers with varied technical and creative skills.
 url: https://www.yakcollective.org
 
-# Gemfile-based plugins
+# Generate member pages from _data/knack-yaks.json
 #
-plugins:
-  - jekyll-titles-from-headings
+page_gen:
+  - data: knack-yaks.records
+    template: page-member-knack
+    dir: members
+    name: field_101_raw
+    title: field_97_raw
 
 # Per-page defaults
 #
