@@ -13,33 +13,33 @@ MEMBER ID
 {{ page.field_101_raw }}
 
 PROFESSIONAL NAME
-{% if page.field_97_raw %}{{ page.field_97_raw | strip | smartify | normalize_whitespace | xml_escape }}{% else %}-{% endif %}
+{% if page.field_97_raw != "" %}{{ page.field_97_raw | strip | smartify | normalize_whitespace | xml_escape }}{% else %}-{% endif %}
 
 TAGLINE
-{% if page.field_41_raw %}{{ page.field_41_raw | strip | smartify | normalize_whitespace | xml_escape }}{% else %}-{% endif %}
+{% if page.field_41_raw != "" %}{{ page.field_41_raw | strip | smartify | normalize_whitespace | xml_escape }}{% else %}-{% endif %}
 
 CURRENT
-{% if page.field_23_raw %}{{ page.field_23_raw | strip | smartify | normalize_whitespace | xml_escape }}{% else %}-{% endif %}
+{% if page.field_23_raw != "" %}{{ page.field_23_raw | strip | smartify | normalize_whitespace | xml_escape }}{% else %}-{% endif %}
 
 PREVIOUSLY
-{% if page.field_42_raw %}{{ page.field_42_raw | strip | smartify | normalize_whitespace | xml_escape }}{% else %}-{% endif %}
+{% if page.field_42_raw != "" %}{{ page.field_42_raw | strip | smartify | normalize_whitespace | xml_escape }}{% else %}-{% endif %}
 
 TWITTER
-{% if page.field_43_raw %}https://twitter.com/{{ page.field_43_raw | strip | remove: "http://twitter.com/"
+{% if page.field_43_raw != "" %}https://twitter.com/{{ page.field_43_raw | strip | remove: "http://twitter.com/"
 	| remove: "https://twitter.com/"
 	| remove: "http://www.twitter.com/"
 	| remove: "https://www.twitter.com/"
 	| remove: "@" | uri_escape }}{% else %}-{% endif %}
 
 URL 1
-{% if page.field_65_raw %}{{ page.field_65_raw.label | strip | smartify | normalize_whitespace | xml_escape }} - {{ page.field_65_raw.url | uri_escape }}{% else %}-{% endif %}
+{% if page.field_65_raw.label != "" %}{{ page.field_65_raw.label | strip | smartify | normalize_whitespace | xml_escape }} - {{ page.field_65_raw.url | uri_escape }}{% else %}-{% endif %}
 
 URL 2
-{% if page.field_66_raw %}{{ page.field_66_raw.label | strip | smartify | normalize_whitespace | xml_escape }} - {{ page.field_66_raw.url | uri_escape }}{% else %}-{% endif %}
+{% if page.field_66_raw.label != "" %}{{ page.field_66_raw.label | strip | smartify | normalize_whitespace | xml_escape }} - {{ page.field_66_raw.url | uri_escape }}{% else %}-{% endif %}
 
 URL 3
-{% if page.field_67_raw %}{{ page.field_67_raw.label | strip | smartify | normalize_whitespace | xml_escape }} - {{ page.field_67_raw.url | uri_escape }}{% else %}-{% endif %}
+{% if page.field_67_raw.label != "" %}{{ page.field_67_raw.label | strip | smartify | normalize_whitespace | xml_escape }} - {{ page.field_67_raw.url | uri_escape }}{% else %}-{% endif %}
 
 BACKGROUND INFO
-{% if page.field_32_raw %}{{ page.field_32_raw | strip | smartify | normalize_whitespace | xml_escape }}{% else %}-{% endif %}
+{% if page.field_32_raw != "" %}{{ page.field_32_raw | strip | smartify | normalize_whitespace | xml_escape }}{% else %}-{% endif %}
 </pre>
