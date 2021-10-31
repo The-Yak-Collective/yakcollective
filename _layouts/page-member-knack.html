@@ -16,6 +16,7 @@ layout: default
 {% assign url_3_label = page.field_67_raw.label | strip %}
 {% assign url_3_url = page.field_67_raw.url | strip %}
 {% assign background_info = page.field_32_raw | strip %}
+{% assign madeyak = page.field_102_raw | strip %}
 
 {% assign url_temp = url_1_label | slice: 0, 4 %}
 {% if url_temp == "http" %}
@@ -47,6 +48,9 @@ layout: default
 <pre>
 MEMBER ID
 {{ member_id }}
+
+MADEYAK
+{{ madeyak }}
 
 PROFESSIONAL NAME
 {% if professional_name != "" %}{{ professional_name | smartify | normalize_whitespace | xml_escape }}{% else %}-{% endif %}
