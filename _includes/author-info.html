@@ -10,7 +10,7 @@
 	author.
 {% endcomment %}
 
-{% assign author = site.data.knack-yaks[include.author] %}
+{% assign author = site.data.knack_yaks.records | find: "field_101_raw", include.author %}
 {% if author %}
 	<div class="mt4">{% include widget-member-card.html member=include.author %}</div>
 	{% if author.field_32_raw %}
