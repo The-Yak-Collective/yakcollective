@@ -27,7 +27,7 @@ url: https://www.yakcollective.org
 # Generate member pages from _data/knack-yaks.json
 #
 page_gen:
-  - data: knack-yaks.records
+  - data: knack_yaks.records
     template: page-member-knack
     dir: members
     name: field_101_raw

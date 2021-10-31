@@ -12,4 +12,4 @@ vendor/*
 
 # Ignore sensitive data from Knack
 bin/knack-yak-creds.sh
-_data/knack-yaks.json
+_data/knack_yaks.json

@@ -67,7 +67,7 @@ fi
 #     https://stackoverflow.com/a/52730148
 #
 mkdir -p _data
-jq -n '{records: [inputs.records] | add}' $TEMP_DIR/knack-yaks-* > _data/knack-yaks.json
+jq -n '{records: [inputs.records] | add}' $TEMP_DIR/knack-yaks-* > _data/knack_yaks.json
 
 # Cleanup.
 #
