@@ -1,6 +1,6 @@
 {% comment %}
-	Given an author identifier (`100041`), generate a footer
-	suitable for a post or project page.
+	Given an author identifier (`100041`), generate a footer suitable
+	for a post or project page.
 
 	We break this functionality out as an include rather than a layout
 	because layout inheritance isn't flexible enough to otherwise
@@ -10,13 +10,12 @@
 	author.
 {% endcomment %}
 
-{% assign author_url = "/members/" | append: include.author | append: "/" %}
-{% assign author = site.pages | find: "url", author_url %}
+{% assign author = site.data.knack-yaks[include.author] %}
 {% if author %}
 	<div class="mt4">{% include widget-member-card.html member=include.author %}</div>
-	{% if author.bio_short %}
+	{% if author.field_32_raw %}
 		<div class="author-bio">
-			{{ author.bio_short | markdownify }}
+			{{ author.field_32_raw | strip | markdownify }}
 		</div>
 	{% endif %}
 {% endif %}
