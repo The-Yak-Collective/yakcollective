@@ -1,7 +1,5 @@
 {% comment %}
-  JSON feed for member blog posts ("writings"). See:
-  
-    https://jsonfeed.org/
+  JSON feed for member blog posts ("writings"). See: https://jsonfeed.org/
 {% endcomment %}
 
 {% comment %}
