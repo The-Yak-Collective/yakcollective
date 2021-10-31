@@ -3,7 +3,7 @@ date: 2020-10-23 00:00:00
 hero_image: /projects/astonishing-stories/wholeness-in-a-timeless-activity.jpg
 hero_attach_vertical: top
 hero_attach_horizontal: center
-author: chen-nathan
+author: 100015
 google_doc: https://docs.google.com/document/d/1Uke-4h8kYARpFZixBfa5Ht6H-UWa7PyJar9Iqq8-rCE/edit
 description: There are some activities the wealthy occasionally lust after. But there is one they will never stop avoiding.
 hidden: false
@@ -67,7 +67,7 @@ Each main ingredient was in a distinct pile; foie gras, unagi, avocado, and stur
   layout="left"
   image=page.hero_image
   alt="Wholeness in a Timeless Activity"
-  caption="Illustration by [Justice](/members/thelot-justice/)."
+  caption="Illustration by [Justice](/members/100048/)."
 %}
 
 Despite knowing no one was watching, Koichi nodded in approval. He was gazing at the final dish when colorful boxes popped into his vision, surrounding the sushi.[^1] They showed the source of several ingredients; the farm where the avocado was picked, the facility where the sturgeon was bred. Koichi angrily blinked thrice and the advertisements disappeared. He was annoyed — his new AR lenses meant everything was a QR code now. Let’s just get it over with, he thought.  

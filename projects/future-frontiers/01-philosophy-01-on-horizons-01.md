@@ -8,12 +8,12 @@ google_doc: "https://docs.google.com/presentation/d/1oIziqtVM878uRG-JOfrQNvGFsQW
 hero_image: /projects/future-frontiers/01-philosophy-01-on-horizons-01.jpg
 hero_description: On horizons
 hero_caption:  |
-  Carse photo from [Simon &amp; Schuster](https://www.simonandschuster.biz/authors/James-Carse/313085); collage by [Jenna Dixon](/members/dixon-jenna/)
+  Carse photo from [Simon &amp; Schuster](https://www.simonandschuster.biz/authors/James-Carse/313085); collage by [Jenna Dixon](/members/100018/)
 hero_border: true
 hero_position: left
 page_text_color: black
 page_bg_color: "252,251,248"
-author: rao-venkatesh
+author: 100041
 description: Frontiers are essential food for the psyche, for a species with the temporal imagination to see past the limits of individual mortality.
 ---
 _Because horizon is the end of vision, and because every move we make gives the field an aspect we couldn’t have noticed before, what lies beyond the horizon cannot be known. […] There are experiences and new information that will show the familiar as strange, the comforting as dangerous, the adjacent as distant. […] Moreover, not every shift of the viewer will reveal something significant. It can be just more of the same, or nothing worth reflecting on. And yet without that shift, we begin to lose our vision altogether: what is seen over and over again ceases to be seen._  

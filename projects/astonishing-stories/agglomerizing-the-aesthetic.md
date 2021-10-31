@@ -3,7 +3,7 @@ date: 2020-11-29 00:00:00
 hero_image: /projects/astonishing-stories/agglomerizing-the-aesthetic.jpg
 hero_attach_vertical: center
 hero_attach_horizontal: center
-author: smith-ben
+author: 100046
 google_doc: https://docs.google.com/document/d/15LRvkKeNMwRgr6Zf8dYLBBAqhpBxIyLP_WBE16H-PCg/edit
 description: When you needed something, no matter how minor, someone, somewhere in the world could help you with it.
 hidden: false
@@ -63,7 +63,7 @@ Sometimes I just marvel at the world we live in. People always bitch about the g
   layout="right"
   image=page.hero_image
   alt="Agglomerizing the Aesthetic"
-  caption="Illustration by [Justice](/members/thelot-justice/)."
+  caption="Illustration by [Justice](/members/100048/)."
 %}
 
 “Hi, this is JoAnne, your Medium-Length Men’s Hair consultant. First, can I get your hair profile?” I turned my head from side to side so that the camera on my computer could capture all the angles of my head. “Thank you. While that’s processing, what can I help you with today?”

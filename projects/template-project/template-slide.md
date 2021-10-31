@@ -55,9 +55,9 @@ hero_position: left
 hero_border: true
 hero_description: On horizons
 hero_caption:  |
-  Carse photo from [Simon &amp; Schuster](https://www.simonandschuster.biz/authors/James-Carse/313085); collage by [Jenna Dixon](/members/dixon-jenna/)
+  Carse photo from [Simon &amp; Schuster](https://www.simonandschuster.biz/authors/James-Carse/313085); collage by [Jenna Dixon](/members/100018/)
 description: Frontiers are essential food for the psyche, for a species with the temporal imagination to see past the limits of individual mortality.
-author: rao-venkatesh
+author: 100041
 page_text_color: black
 page_bg_color: "252,251,248"
 page_headers: |
@@ -115,7 +115,7 @@ A list of "tags" to attach to the slide. At the moment, these tags don't link an
 
 ```yaml
 title: The Music of the Freeways
-author: acks-nathan
+author: 100007
 tags:
   - cars
   - philosophy
@@ -125,7 +125,7 @@ tags:
 This will produce a title block that looks like the following:
 
 > **The Music of the Freeways**  
-> [Nathan Acks](/members/acks-nathan/)  
+> [Nathan Acks](/members/100007/)  
 > #cars #philosophy #xylophones
 
 ### `hero_image`
@@ -158,7 +158,7 @@ A short one-or-two sentence description that will be displayed on Twitter cards,
 
 ### `author`
 
-The page author. Ideally, this should be the filename (less the extension) of someone in the `members` directory: So, to specify Venkatesh Rao as a page author, you'd set this to `rao-venkatesh` (since the corresponding member file is `members/rao-venkatesh.md`). When use in this form, information about the specified Yak Collective member will be pulled into Twitter (and other services that support Twitter cards) when the page URL is shared.
+The page author. Ideally, this should be the filename (less the extension) of someone in the `members` directory: So, to specify Venkatesh Rao as a page author, you'd set this to `100041` (since the corresponding member file is `members/100041.md`). When use in this form, information about the specified Yak Collective member will be pulled into Twitter (and other services that support Twitter cards) when the page URL is shared.
 
 Alternately, you can just specify someone's name ("Venkatesh Rao"). This is still useful to do to attribute the page (`author` information gets used in a lot of places), but won't pull in _any_ additional information (so the page will be attributed simple to the Yak Collective on Twitter, _et al._).
 

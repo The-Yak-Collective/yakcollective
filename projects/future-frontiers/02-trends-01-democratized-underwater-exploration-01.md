@@ -13,7 +13,7 @@ hero_caption:  |
 hero_position: left
 page_text_color: white
 page_bg_color: "25,150,175"
-author: rao-venkatesh
+author: 100041
 description: Consumer-priced ocean exploration products are just beginning to emerge, creating unprecedented opportunities for democratized participation in oceanic exploration.
 ---
 Consumer-priced ocean exploration products are just beginning to emerge, creating unprecedented opportunities for democratized participation in ocean exploration. Companies like [Sofar](https://www.sofarocean.com/) (created via merger of OpenROV and Spoondrift) now offer consumer-priced ocean exploration gear capable of serious research and exploration activities. The development is similar to the impact of low-cost, high-power amateur telescopes such as large-aperture Dobsonian telescopes in amateur astronomy. But the stack required for true democratization remains incomplete.

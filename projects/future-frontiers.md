@@ -51,14 +51,14 @@ summary: |
   In the wake of Covid19, could an era of democratized access to frontiers be the key to a renewed sense of larger purpose in the universe for humanity? In this continuously evolving project, members of the Yak Collective ponder our future as an exploratory species.
 credits:
   lead_editors:
-    - rao-venkatesh
+    - 100041
   co-editors:
-    - dixon-jenna
-    - swaroop-siva
+    - 100018
+    - 100091
   collaborators:
-    - bilsland-charlie
-    - kalawar-jay
-    - ramsamy-kannen
+    - 100059
+    - 100070
+    - 100085
 ---
 {% include widget-project-header.html %}
 
@@ -72,5 +72,5 @@ credits:
    table_of_contents=true
    table_of_contents_hero="/projects/future-frontiers/table-of-contents.jpg"
    table_of_contents_hero_description="Table of contents"
-   table_of_contents_hero_caption="[Venkatesh Rao](/members/rao-venkatesh)"
+   table_of_contents_hero_caption="[Venkatesh Rao](/members/100041)"
 %}

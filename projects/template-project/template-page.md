@@ -54,7 +54,7 @@ hero_image: /projects/astonishing-stories/agglomerizing-the-aesthetic.jpg
 hero_attach_vertical: center
 hero_attach_horizontal: center
 description: A description of the page.
-author: acks-nathan
+author: 100007
 hidden: false
 page_text_color: black
 page_bg_color: 255,255,255
@@ -96,7 +96,7 @@ A short one-or-two sentence description that will be displayed on Twitter cards,
 
 ### `author`
 
-The page author. Ideally, this should be the filename (less the extension) of someone in the `members` directory: So, to specify Venkatesh Rao as a page author, you'd set this to `rao-venkatesh` (since the corresponding member file is `members/rao-venkatesh.md`). When use in this form, information about the specified Yak Collective member will be pulled into Twitter (and other services that support Twitter cards) when the page URL is shared.
+The page author. Ideally, this should be the filename (less the extension) of someone in the `members` directory: So, to specify Venkatesh Rao as a page author, you'd set this to `100041` (since the corresponding member file is `members/100041.md`). When use in this form, information about the specified Yak Collective member will be pulled into Twitter (and other services that support Twitter cards) when the page URL is shared.
 
 Alternately, you can just specify someone's name ("Venkatesh Rao"). This is still useful to do to attribute the page (`author` information gets used in a lot of places), but won't pull in _any_ additional information (so the page will be attributed simple to the Yak Collective on Twitter, _et al._).
 
@@ -163,7 +163,7 @@ Example usage:
    layout="left"
    image="/projects/astonishing-stories/wholeness-in-a-timeless-activity.jpg"
    alt="Wholeness in a Timeless Activity"
-   caption="Illustration by [Justice](/members/thelot-justice/)."
+   caption="Illustration by [Justice](/members/100048/)."
 %}
 ```
 
@@ -175,7 +175,7 @@ Member cards can be used either as links to the actual member page or as contain
 
 _Requires_ a single parameter:
 
-- **`member`** is the ID of a member -- basically, the name of the corresponding file in `/members/`, less the `/.md` extension. For example, Venkatesh Rao's member card would be called by passing in `member="rao-venkatesh"`.
+- **`member`** is the ID of a member -- basically, the name of the corresponding file in `/members/`, less the `/.md` extension. For example, Venkatesh Rao's member card would be called by passing in `member="100041"`.
 
 There is also an optional paramter:
 
@@ -185,7 +185,7 @@ Example usage:
 
 ```markdown
 {% include widget-member-card.html
-   member="rao-venkatesh"
+   member="100041"
 %}
 ```
 
@@ -237,7 +237,7 @@ This widget has no required parameters _per se_, but if you're using it you'll a
 
 - **`show_author`** is a [truthy/falsy](https://shopify.github.io/liquid/basics/truthy-and-falsy/) parameter that specifies whether to show post author (if it is set).
 
-- **`author`** allows you to filter posts by a given member ID (`rao-venkatesh`, etc.).
+- **`author`** allows you to filter posts by a given member ID (`100041`, etc.).
 
 - **`category`** allows you to filter posts by category. Currently only `newsletters` and `writings` are valid post categories.
 
@@ -329,7 +329,7 @@ Example usage:
    table_of_contents=true
    table_of_contents_hero="/projects/future-frontiers/table-of-contents.jpg"
    table_of_contents_hero_description="Table of contents"
-   table_of_contents_hero_caption="[Venkatesh Rao](/members/rao-venkatesh)"
+   table_of_contents_hero_caption="[Venkatesh Rao](/members/100041)"
 %}
 ```
 

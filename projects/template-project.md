@@ -87,9 +87,9 @@ The following _optional_ front matter attributes are supported for generic pages
 description: A shorter page description.
 credits:
   lead_editors:
-    - acks-nathan
+    - 100007
   collaborators:
-    - fenster-maier
+    - 100020
 page_text_color: black
 page_bg_color: 255,255,255
 page_headers: |
@@ -111,12 +111,12 @@ How this works is easiest to see with an example. Suppose we have the following 
 ```yaml
 credits:
   lead_editors:
-    - acks-nathan
-    - rao-venkatesh
+    - 100007
+    - 100041
   collaborators:
     - "Jamie Chen"
-    - dixon-jenna
-    - fenster-maier
+    - 100018
+    - 100020
 ```
 
 This will produce two credit sections:
@@ -216,7 +216,7 @@ Example usage:
    table_of_contents=true
    table_of_contents_hero="/projects/future-frontiers/table-of-contents.jpg"
    table_of_contents_hero_description="Table of contents"
-   table_of_contents_hero_caption="[Venkatesh Rao](/members/rao-venkatesh)"
+   table_of_contents_hero_caption="[Venkatesh Rao](/members/100041)"
 %}
 ```
 
@@ -261,7 +261,7 @@ Example usage:
    layout="left"
    image="/projects/astonishing-stories/wholeness-in-a-timeless-activity.jpg"
    alt="Wholeness in a Timeless Activity"
-   caption="Illustration by [Justice](/members/thelot-justice/)."
+   caption="Illustration by [Justice](/members/100048/)."
 %}
 ```
 
@@ -273,7 +273,7 @@ Member cards can be used either as links to the actual member page or as contain
 
 _Requires_ a single parameter:
 
-- **`member`** is the ID of a member -- basically, the name of the corresponding file in `/members/`, less the `/.md` extension. For example, Venkatesh Rao's member card would be called by passing in `member="rao-venkatesh"`.
+- **`member`** is the ID of a member -- basically, the name of the corresponding file in `/members/`, less the `/.md` extension. For example, Venkatesh Rao's member card would be called by passing in `member="100041"`.
 
 There is also an optional paramter:
 
@@ -283,7 +283,7 @@ Example usage:
 
 ```markdown
 {% include widget-member-card.html
-   member="rao-venkatesh"
+   member="100041"
 %}
 ```
 
@@ -335,7 +335,7 @@ This widget has no required parameters _per se_, but if you're using it you'll a
 
 - **`show_author`** is a [truthy/falsy](https://shopify.github.io/liquid/basics/truthy-and-falsy/) parameter that specifies whether to show post author (if it is set).
 
-- **`author`** allows you to filter posts by a given member ID (`rao-venkatesh`, etc.).
+- **`author`** allows you to filter posts by a given member ID (`100041`, etc.).
 
 - **`category`** allows you to filter posts by category. Currently only `newsletters` and `writings` are valid post categories.
 

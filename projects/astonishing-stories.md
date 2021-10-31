@@ -90,35 +90,35 @@ summary: |
   <a href="https://open.spotify.com/playlist/7o4hqg7Jo8rrz1p61V7037"><strong><i class="fab fa-spotify"></i> Listen to the accompanying Spotify playlist.</strong></a>
 credits:
   lead_editors:
-    - benny-sachin
-    - reeves-amanda
+    - 100013
+    - 100086
   co-editors:
-    - dixon-jenna
-    - garlinger-scott
-    - mathur-praful
-    - segan-shreeda
+    - 100018
+    - 100022
+    - 100075
+    - 100044
   writers:
-    - benny-sachin
-    - butler-chris
-    - chen-nathan
-    - garlinger-scott
-    - smith-ben
+    - 100013
+    - 100006
+    - 100015
+    - 100022
+    - 100046
   illustrations:
-    - thelot-justice
+    - 100048
   website_development:
-    - acks-nathan
+    - 100007
   additional_collaborators:
-    - appleton-maggie
-    - brinkerhoff-tracy
-    - de-la-maza-michael
-    - gandhi-prashant
-    - li-zhan
-    - loureiro-murilo
-    - paul-choudhury-sumit
-    - peters-claire
-    - reid-chris
-    - sandberg-erik
-    - wimsatt-mike
+    - 100056
+    - 100060
+    - 100064
+    - 100066
+    - 100072
+    - 100073
+    - 100081
+    - 100082
+    - 100087
+    - 100088
+    - 100093
 ---
 {% include widget-project-header.html %}
 

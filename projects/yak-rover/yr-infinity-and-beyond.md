@@ -2,7 +2,7 @@
 hero_image: /projects/yak-rover/yr-infinity-and-beyond.jpg
 hero_attach_vertical: center
 hero_attach_horizontal: center
-author: r-anuraj
+author: 100039
 hidden: false
 page_headers: |
   <style type="text/css">

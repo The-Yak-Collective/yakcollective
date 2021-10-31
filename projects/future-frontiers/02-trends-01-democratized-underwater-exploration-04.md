@@ -13,7 +13,7 @@ hero_caption:  |
 hero_position: left
 page_text_color: white
 page_bg_color: "25,150,175"
-author: rao-venkatesh
+author: 100041
 description: The stack…
 ---
 What might a solid stack for democratized underwater exploration look like?

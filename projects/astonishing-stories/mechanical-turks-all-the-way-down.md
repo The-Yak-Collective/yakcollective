@@ -3,7 +3,7 @@ date: 2020-11-13 00:00:00
 hero_image: /projects/astonishing-stories/mechanical-turks-all-the-way-down.jpg
 hero_attach_vertical: center
 hero_attach_horizontal: center
-author: butler-chris
+author: 100006
 roam_page: https://roamresearch.com/#/app/Astonishing_Stories/page/-u1nPZcZu
 google_doc: https://docs.google.com/document/d/1HpnU_k_Q3xulIfwiEtdpfMycZeTRvR-cPWDl8mA___E/edit
 description: Can't be too eager on your first day of the job.
@@ -66,7 +66,7 @@ There was a low din of my five-year-old arguing again about what xe would or wou
   layout="right"
   image=page.hero_image
   alt="Mechanical Turks All the Way Down"
-  caption="Illustration by [Justice](/members/thelot-justice/)."
+  caption="Illustration by [Justice](/members/100048/)."
 %}
 
 This was my second job today. A basic anniversary gig like I’d seen in the training. There were a lot of notes and I quickly scanned them for any red flags, but accepted immediately. Taking jobs fast shows good teamwork which means my teamwork score goes up which, algo willing, will lead to more lucrative jobs.

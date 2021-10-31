@@ -13,7 +13,7 @@ hero_border: true
 hero_position: left
 page_text_color: white
 page_bg_color: "75,100,125"
-author: ramsamy-kannen
+author: 100085
 description: The nanosatellite launch rate is expected to continue to grow, signaling a move away from the elitist and unrestrainedly expensive routes that have been the mainstay of the industry.
 ---
 In 2017 the Federal University of Technology in **Nigeria** launched the [Nigeria-Edusat-1](https://en.wikipedia.org/wiki/Nigeria_EduSat-1). The objectives for Nigeria were to increase their scope for space education, capture low- and high-res photographs of the country, and improve measurements of atmospheric density.

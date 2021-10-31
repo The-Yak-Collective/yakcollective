@@ -13,7 +13,7 @@ hero_border: true
 hero_position: left
 page_text_color: white
 page_bg_color: "75,100,125"
-author: ramsamy-kannen
+author: 100085
 description: Nanosatellites shift the power dynamics of space exploration by transforming it into a truly multi-actor field.
 ---
 Nanosatellites shift the power dynamics of space exploration by transforming it into a truly multi-actor field. Developing nations can partake in a variety of political alliances that form exclusively across the space industry in a similar way to existing economic/trade alliances.

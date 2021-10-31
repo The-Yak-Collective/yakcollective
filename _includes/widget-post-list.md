@@ -20,7 +20,7 @@
         If `true`, then show post author.
 
         `author`
-        Filter posts by author ID (`rao-venkatesh`, etc.). Note that
+        Filter posts by author ID (`100041`, etc.). Note that
         if this is non-nil/false, then posts without an author
         specified in their front matter will not be displayed.
 

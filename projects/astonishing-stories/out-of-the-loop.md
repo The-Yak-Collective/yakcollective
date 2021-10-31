@@ -3,7 +3,7 @@ date: 2020-11-20 00:00:00
 hero_image: /projects/astonishing-stories/out-of-the-loop.jpg
 hero_attach_vertical: center
 hero_attach_horizontal: center
-author: benny-sachin
+author: 100013
 google_doc: https://docs.google.com/document/d/1989Uffl2bLLia75bX9_EOFpUesuUZ7eZpcr56SA6Clg/edit
 description: He decided then that it was time for him to untangle this mess because no way he was getting laid without a neat graph of thoughts — manufactured or otherwise.
 hidden: false
@@ -63,7 +63,7 @@ Vijayan looked down in pain at his [programmable forearm tattoo](https://roamres
   layout="left"
   image=page.hero_image
   alt="Out of the Loop"
-  caption="Illustration by [Justice](/members/thelot-justice/)."
+  caption="Illustration by [Justice](/members/100048/)."
 %}
 
 It all goes back a few months. After five years of not asking anyone out, he finally asked out the barista at the local hipster cafe. On their first date, he quickly realized that they had nothing in common, but he liked her Roam microbot tattoo — a neat graph of interconnected lines, almost too neat for a natural note-taking system.

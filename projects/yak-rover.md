@@ -35,15 +35,15 @@ summary: |
   We meet every Monday night in the \#yak-rover Discord channel. We have plenty of ways you can contribute to the ongoing builds, or independently. We need you.
 credits:
   build_leaders:
-    - platon-eric
-    - r-anuraj
-    - fenster-maier
-    - hill-victor
-    - rao-venkatesh
+    - 100037
+    - 100039
+    - 100020
+    - 100067
+    - 100041
   technical_experts:
-    - wilcox-jascha
+    - 100005
   collaborators:
-    - benny-sachin
-    - milov-grigori
+    - 100013
+    - 100079
 ---
 {% include widget-project-header.html %}

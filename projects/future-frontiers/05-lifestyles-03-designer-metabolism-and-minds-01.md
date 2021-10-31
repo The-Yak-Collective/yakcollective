@@ -13,7 +13,7 @@ hero_caption:  |
 hero_position: left
 page_text_color: white
 page_bg_color: "200,100,50"
-author: kalawar-jay
+author: 100070
 description: Develop the science and tech of designing multiple viable human metabolisms for traveling to and living on Mars by 2040.
 ---
 [Human hibernation](https://link.springer.com/referenceworkentry/10.1007%2F978-3-319-09575-2_199-1) was required for humans to go beyond exploration into settling phase on Mars. Successful hibernation required hacking human metabolism. Impact: Increased longevity and well being for all. The key driver was to make human hibernation a large scale human metabolism R&D / hacking project, rather than a space project. Multiple viable designs of human metabolism generated new ways of being human that made neuroscience of 2020 a quaint specialization.

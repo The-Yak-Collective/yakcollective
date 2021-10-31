@@ -22,27 +22,27 @@ summary: |
   Many of our contributors are balancing the needs of our children, our parents and grandparents, our partners, and ourselves as we adapt to this _unprecedented_ situation. We offer our ideas freely in the hope that they might help us to design a better future for our homes and families.
 credits:
   lead_editors:
-    - hobart-pamela
-    - schorno-drew
+    - 100068
+    - 100089
   collaborators:
-    - benny-sachin
-    - clark-chris
-    - colin-michael
-    - critchlow-tom
-    - garlinger-scott
+    - 100013
+    - 100061
+    - 100062
+    - 100063
+    - 100022
     - Benton Heimsath
-    - hollands-thomas
-    - hume-ryan
-    - mcdougall-david
-    - peacock-jordan
-    - ramsamy-kannen
-    - rao-venkatesh
-    - reeves-amanda
-    - segan-shreeda
-    - shiel-drew
+    - 100023
+    - 100069
+    - 100076
+    - 100036
+    - 100085
+    - 100041
+    - 100086
+    - 100044
+    - 100090
     - Toby Shorin
-    - taylor-benjamin
-    - verhagen-thomas
+    - 100047
+    - 100051
 ---
 {% include widget-project-header.html %}
 
@@ -58,7 +58,7 @@ This deck is the **second** in a series of studies the Yak Collective is underta
 
 **Like bits and pieces of what you saw in this deck?** Feel free to contact one or more individual contributors directly! The Yak Collective is not an agency or intermediary. Our members collaborate because they want to, and each of us maintains their own independent consulting practice. We offer you a catalog of ideas and people to choose from, not a bundle.
 
-**Like a lot of what you see?** Contact [Pamela Hobart](/members/hobart-pamela/) to loop The Yak Collective into your reboot efforts. We will assemble the right small team and set of ideas to work with you, in whatever way is most effective. It might be a study or report. It might be facilitating a workshop or series of conversations for your executive team. Or it might just be an ongoing conversation with one or more of us.
+**Like a lot of what you see?** Contact [Pamela Hobart](/members/100068/) to loop The Yak Collective into your reboot efforts. We will assemble the right small team and set of ideas to work with you, in whatever way is most effective. It might be a study or report. It might be facilitating a workshop or series of conversations for your executive team. Or it might just be an ongoing conversation with one or more of us.
 
 **Want to hang out with us _live_ as we work on these problems?** [Join our Discord server.](/join/) Our working process is literally open. Any independent consultant from anywhere in the world who has ideas is welcome to join our efforts, contribute to and lead collaborative projects. Any prospective client is welcome to hang out as well.
 
