@@ -24,15 +24,12 @@ module MakeFeaturedYak
 			#
 			buildDate = Time.new(Time.now.year, Time.now.month, Time.now.day)
 
-			# Only members whose `date` property is on or after
-			# `buildDate` should be considered.
+			# Only "MadeYaks" should be considered.
 			#
 			currentMembers = Array.new
-			site.pages.each do |page|
-				if page.url =~ /^\/members\/[^\/]+\// and !page.data["date"].nil?
-					if page.data["date"] <= buildDate
-						currentMembers << page
-					end
+			site.data['knack_yaks']['records'].each do |member|
+				if member['field_102_raw']
+					currentMembers << member
 				end
 			end
 			currentMemberCount = currentMembers.length()
@@ -53,7 +50,7 @@ module MakeFeaturedYak
 			featuredYakIndex = buildDate.strftime("%s").to_i % currentMemberCount
 			featuredYak = currentMembers[featuredYakIndex]
 			site.data["featured_yak"] = featuredYak
-			puts "      Featured yak: #{featuredYak.data['title']}"
+			puts "      Featured yak: #{featuredYak['field_97_raw'].strip}"
 		end
 	end
 end

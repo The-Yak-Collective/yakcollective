@@ -25,11 +25,13 @@ layout: none
 			{% endcomment %}
 			<item>
 				{% assign member = site.data.featured_yak %}
-				<title>{{ member.title | xml_escape }}</title>
-				<description>{% if member.twitter and member.twitter.size > 0 %}(@{{ member.twitter }}){% endif %}{% if member.tagline and member.tagline.size > 0 %} - {{ member.tagline | xml_escape }}{% endif %}</description>
+				<title>{{ member.field_97_raw | strip | xml_escape }}</title>
+				{% assign member_twitter = member.field_43_raw | strip %}
+				{% assign member_tagline = member.field_41_raw | strip %}
+				<description>{% if member_twitter.size > 0 %}(@{{ member_twitter }}){% endif %}{% if member_tagline.size > 0 %} - {{ member_tagline | xml_escape }}{% endif %}</description>
 				<pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
-				<link>{{ site.url }}{{ member.url }}#{{ site.time | date: "%Y%m%d" }}</link>
-				<guid>{{ site.url }}{{ member.url }}#{{ site.time | date: "%Y%m%d" }}</guid>
+				<link>{{ site.url }}/members/{{ member.field_101_raw }}/#{{ site.time | date: "%Y%m%d" }}</link>
+				<guid>{{ site.url }}/members/{{ member.field_101_raw }}/#{{ site.time | date: "%Y%m%d" }}</guid>
 			</item>
 	</channel>
 </rss>
