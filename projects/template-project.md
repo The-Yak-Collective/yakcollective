@@ -273,7 +273,7 @@ Member cards can be used either as links to the actual member page or as contain
 
 _Requires_ a single parameter:
 
-- **`member`** is the ID of a member -- basically, the name of the corresponding file in `/members/`, less the `/.md` extension. For example, Venkatesh Rao's member card would be called by passing in `member="100041"`.
+- **`member`** is someone's Knack "Member ID". For example, Venkatesh Rao's member card would be called by passing in `member=100041`.
 
 There is also an optional paramter:
 
@@ -283,7 +283,7 @@ Example usage:
 
 ```markdown
 {% include widget-member-card.html
-   member="100041"
+   member=100041
 %}
 ```
 

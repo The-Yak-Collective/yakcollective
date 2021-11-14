@@ -16,10 +16,9 @@
 		setting `standalone = false`.
 
 		`member`
-		The ID of a member -- basically, the name of the corresponding
-		file in `/members/`, less the `/.md` extension. For example,
-		Venkatesh Rao's member card would be called by passing in
-		`member="100041"`.
+		The Knack "Member ID" of the person that should be displayed.
+		For example, Venkatesh Rao's member card would be called by
+		passing in `member=100041`.
 
 	Note that this widget outputs HTML in a safe way, and is thus
 	suitable for inclusion in both Markdown and HTML pages.
@@ -28,64 +27,119 @@
 {% comment %}
 	Find member data.
 {% endcomment %}
+{% assign member_data = site.data.knack_yaks.records | find: "field_101_raw", include.member %}
+
+{% assign member_id = member_data.field_101_raw %}
 {% assign member_url = "/members/" | append: include.member | append: "/" %}
-{% assign member_data = site.pages | find: "url", member_url %}
+{% assign avatar_url = member_data.field_44_raw.url | strip %}
+{% assign professional_name = member_data.field_97_raw | strip %}
+{% assign tagline = member_data.field_41_raw | strip %}
+{% assign currently = member_data.field_23_raw | strip %}
+{% assign previously = member_data.field_42_raw | strip %}
+{% assign url_1_label = member_data.field_65_raw.label | strip %}
+{% assign url_1_url = member_data.field_65_raw.url | strip %}
+{% assign url_2_label = member_data.field_66_raw.label | strip %}
+{% assign url_2_url = member_data.field_66_raw.url | strip %}
+{% assign url_3_label = member_data.field_67_raw.label | strip %}
+{% assign url_3_url = member_data.field_67_raw.url | strip %}
+{% assign twitter = member_data.field_43_raw | strip %}
+
+{% comment %}
+	Set "indie status". We bin this into ranges, calculated from the
+	provided "indie start year".
+{% endcomment %}
+{% if member_data.field_36_raw %}
+	{% assign current_year = site.time | date: "%Y" %}
+	{% assign years_indie = current_year | minus: member_data.field_36_raw %}
+	{% if years_indie <= 1 %}
+		{% assign indie_status = "1 year" %}
+	{% elsif years_indie <= 2 %}
+		{% assign indie_status = "2 years" %}
+	{% elsif years_indie < 5 %}
+		{% assign indie_status = "3+ years" %}
+	{% elsif years_indie < 10 %}
+		{% assign indie_status = "5+ years" %}
+	{% elsif years_indie < 15 %}
+		{% assign indie_status = "10+ years" %}
+	{% elsif years_indie < 20 %}
+		{% assign indie_status = "15+ years" %}
+	{% elsif years_indie < 30 %}
+		{% assign indie_status = "20+ years" %}
+	{% elsif years_indie < 40 %}
+		{% assign indie_status = "30+ years" %}
+	{% elsif years_indie < 50 %}
+		{% assign indie_status = "40+ years" %}
+	{% elsif years_indie < 75 %}
+		{% assign indie_status = "50+ years" %}
+	{% elsif years_indie < 100 %}
+		{% assign indie_status = "75+ years" %}
+	{% else %}
+		{% assign indie_status = "100+ years" %}
+	{% endif %}
+{% else %}
+	{% assign indie_status = "" %}
+{% endif %}
 
 {% comment %}
 	Output member card HTML.
 {% endcomment %}
-<div class="w-100 mv3" id="{{ member_data.url | replace: '/', ' ' | strip | split: ' ' | last }}">
-	{% if include.standalone %}<div{% else %}<a href="{{ member_data.url }}"{% endif %} class="flex items-center lh-copy pa3 ba member-box">
-		<img class="w3 h3 br-100 ba image-border" src="{% if member_data.avatar %}{{ member_data.avatar }}{% else %}/img/member.jpg{% endif %}" alt="{{ member_data.title }}" />
+<div class="w-100 mv3" id="{{ member_data.field_101_raw }}">
+	{% if include.standalone %}<div{% else %}<a href="{{ member_url }}"{% endif %} class="flex items-center lh-copy pa3 ba member-box">
+		<img class="w3 h3 br-100 ba image-border" src="{% if avatar_url != "" %}{{ avatar_url | remove: "https://s3-eu-west-1.amazonaws.com/assets.knack-eu.com/assets/5f70876d8e7037001504bfe8/" | prepend: "https://res.cloudinary.com/yak-collective/image/upload/c_fill,g_face,h_180,w_180,e_sharpen:50/yak-barn-v1/" }}{% else %}/img/member.jpg{% endif %}" alt="{{ professional_name }}" />
 		<div class="pl3 pr2 flex-auto">
 
 			{% comment %}
-				Member name (the "title" of the individual member page).
-				The `pseudo-link` class is used to make the card act a
-				bit more like an actual link when in "link mode".
+				Member "professional" name. The `pseudo-link` class is
+				used to make the card act a bit more like an actual
+				link when in "link mode".
 			{% endcomment %}
-			<small class="db b{% unless include.standalone %} pseudo-link{% endunless %}">{{ member_data.title }}</small>
+			<small class="db b{% unless include.standalone %} pseudo-link{% endunless %}">{{ professional_name }}</small>
 
 			{% comment %}
 				Inset member tagline, if set.
 			{% endcomment %}
-			{% if member_data.tagline and member_data.tagline.size > 0 %}
-				<small class="db{% unless include.standalone %} silent-link{% endunless %}">{{ member_data.tagline }}</small>
+			{% if tagline != "" %}
+				<small class="db{% unless include.standalone %} silent-link{% endunless %}">{{ tagline }}</small>
 			{% endif %}
 
 			{% comment %}
 				Inset member "indie status", if set.
 			{% endcomment %}
-			{% if member_data.indie_status and member_data.indie_status.size > 0 %}
-				<small class="db{% unless include.standalone %} silent-link{% endunless %}">Indie status: {{ member_data.indie_status }}</small>
+			{% if indie_status != "" %}
+				<small class="db{% unless include.standalone %} silent-link{% endunless %}">Indie status: {{ indie_status }}</small>
 			{% endif %}
 
 			{% comment %}
 				Inset member "currently" information, if set.
 			{% endcomment %}
-			{% if member_data.currently and member_data.currently.size > 0 %}
-				<small class="db{% unless include.standalone %} silent-link{% endunless %}">Currently: {{ member_data.currently }}</small>
+			{% if currently != "" %}
+				<small class="db{% unless include.standalone %} silent-link{% endunless %}">Currently: {{ currently }}</small>
 			{% endif %}
 
 			{% comment %}
 				Inset member "previously" information, if set.
 			{% endcomment %}
-			{% if member_data.previously and member_data.previously.size > 0 %}
-				<small class="db{% unless include.standalone %} silent-link{% endunless %}">Previously: {{ member_data.previously }}</small>
+			{% if previously != "" %}
+				<small class="db{% unless include.standalone %} silent-link{% endunless %}">Previously: {{ previously }}</small>
 			{% endif %}
 
 			{% comment %}
 				Inset member links, if set. Links are separated by " / "
 				sequences, and only contain *actual* links when the
 				member card is in "data mode" (otherwise, they're just
-				for show).
+				for show). Note that we assume that links are provided
+				IN ORDER, so a record with a gap in its links will show
+				nothing after that gap.
 			{% endcomment %}
-			{% if member_data.links %}
+			{% if url_1_label != "" %}
 				<small class="db{% unless include.standalone %} silent-link{% endunless %}">
-					{% for link in member_data.links %}
-						{% if forloop.first == true %}{% else %} / {% endif %}
-						{% if include.standalone %}<a href="{{ link.url }}">{% endif %}{{ link.title }}{% if include.standalone %}</a>{% endif %}
-					{% endfor %}
+					{% if include.standalone %}<a href="{{ url_1_url }}">{% endif %}{{ url_1_label }}{% if include.standalone %}</a>{% endif %}
+					{% if url_2_label != "" %}
+						/ {% if include.standalone %}<a href="{{ url_2_url }}">{% endif %}{{ url_2_label }}{% if include.standalone %}</a>{% endif %}
+						{% if url_3_label != "" %}
+							/ {% if include.standalone %}<a href="{{ url_3_url }}">{% endif %}{{ url_3_label }}{% if include.standalone %}</a>{% endif %}
+						{% endif %}
+					{% endif %}
 				</small>
 			{% endif %}
 
@@ -97,9 +151,9 @@
 			card is in "data mode" (otherwise, this bit is also just for
 			show).
 		{% endcomment %}
-		{% if member_data.twitter and member_data.twitter.size > 0 %}
+		{% if twitter != "" %}
 			<div class="small{% unless include.standalone %} silent-link{% endunless %}">
-				{% if include.standalone %}<a href="https://twitter.com/{{ member_data.twitter }}">{% endif %}@{{ member_data.twitter }}{% if include.standalone %}</a>{% endif %}
+				{% if include.standalone %}<a href="https://twitter.com/{{ twitter }}">{% endif %}@{{ twitter }}{% if include.standalone %}</a>{% endif %}
 			</div>
 		{% endif %}
 

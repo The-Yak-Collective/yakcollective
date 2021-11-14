@@ -10,7 +10,7 @@ Follow us on [Twitter](https://twitter.com/yak_collective), [Facebook](https://w
 
 ## Featured Yak
 
-{% assign member_id = site.data.featured_yak.name | replace: ".md", "" | replace: ".html", "" %}
+{% assign member_id = site.data.featured_yak.field_101_raw %}
 {% include widget-member-card.html member=member_id %}
 
 ## Most Recent Project
