@@ -39,7 +39,7 @@ fi
 
 # Minify: https://github.com/tdewolff/minify
 #
-# Current version: 2.9.10 (last checked 2020-10-31)
+# Current version: 2.9.22 (last checked 2021-11-14)
 #
 # It's too bad we need to cart this binary around as part of the repo,
 # but Netlify doesn't support installing our own tools (otherwise we'd
