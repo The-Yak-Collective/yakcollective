@@ -92,8 +92,8 @@
 {% comment %}
     Loop through the `filtered_posts` array. Output top-level headings
     for month and year, changing these as post month and year changes.
-    Only output actual post content if the post author is listed on the
-    `/members/` page (so as not to output posts from "pending" members).
+    Only output actual post content if the post author has "madeyak"
+    status.
 
     Adapted from: https://stackoverflow.com/a/19104574
 {% endcomment %}
@@ -135,16 +135,16 @@
     {% endif %}
 
     {% comment %}
-        Post authors are stored "symbolically". We use the `name`
-        attribute to look up the author's name (a.k.a. `title`), and
-        `date` (the member "join date") from the `site.pages` array.
+        Post authors are stored as Knack member IDs. Use this to look
+        up the corresponding member information from our Knack data.
     {% endcomment %}
     {% assign author_url = "/members/" | append: post.author | append: "/" %}
-    {% assign author = site.pages | find: "url", author_url %}
+    {% assign author = site.data.knack_yaks.records | find: "field_101_raw", post.author %}
+    {% assign author_name = author.field_97_raw | strip %}
 
     {% comment %}
-        We show posts when `show_author` is falsy OR when it's after the
-        join date of the member who made the post. The reason for the
+        We show posts when `show_author` is falsy OR when if the member
+        who made the post has a "madeyak" status. The reason for the
         "or" here is that is `show_author` is falsy, then we're going to
         implicitly assume that we're on a page with a single post
         author, and we don't want to risk displaying an empty list of
@@ -154,9 +154,12 @@
         there's a weird bug where the time specification is parsed as if
         it were on a seperate line.
     {% endcomment %}
-    {% assign show_post = true %}
-    {% if include.show_author and author.date > site.time and site.future != true %}
-        {% assign show_post = false %}
+    {% assign show_post = false %}
+    {% unless include.show_author %}
+        {% assign show_post = true %}
+    {% endunless %}
+    {% if author.field_102_raw %}
+        {% assign show_post = true %}
     {% endif %}
     {% if show_post %}
         {% if include.show_date %}
@@ -167,9 +170,9 @@
         {% endif %}
         {% if include.show_author %}
             {% assign post_list = post_list | append: '<a href="' %}
-            {% assign post_list = post_list | append: author.url %}
+            {% assign post_list = post_list | append: author_url %}
             {% assign post_list = post_list | append: '">' %}
-            {% assign post_list = post_list | append: author.title %}
+            {% assign post_list = post_list | append: author_name %}
             {% assign post_list = post_list | append: '</a><span class="pseudo-link">,</span> ' %}
         {% endif %}
         {% assign post_list = post_list | append: '<em><a href="' %}

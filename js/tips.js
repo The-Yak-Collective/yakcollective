@@ -13,11 +13,11 @@ layout: none
 {% endcomment %}
 
 var members = {
-	{% assign members = site.pages | where: "layout", "page-member" %}
+	{% assign members = site.data.knack_yaks.records %}
 	{% assign last_member = members.last %}
 	{% for member in members %}
-		{% assign member_id = member.url | replace: "/", " " | strip | split: " " | last %}
-		"{{ member_id }}": "{{ member.title }}"{% if member.url != last_member.url %},{% endif %}
+		{% assign member_id = member.field_101_raw %}
+		"{{ member_id }}": "{{ member.field_97_raw | strip }}"{% if member.field_101_raw != last_member.field_101_raw %},{% endif %}
 	{% endfor %} };
 var tips = {{ site.data.tips | jsonify }};
 var tips_total = tips.length;

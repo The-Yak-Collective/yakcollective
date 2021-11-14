@@ -28,7 +28,7 @@ url: https://www.yakcollective.org
 #
 page_gen:
   - data: knack_yaks.records
-    template: page-member-knack
+    template: page-member
     dir: members
     name: field_101_raw
     title: field_97_raw
@@ -36,11 +36,6 @@ page_gen:
 # Per-page defaults
 #
 defaults:
-  - scope:
-      path: "members/*"
-      type: pages
-    values:
-      layout: page-member
   - scope:
       path: "newsletter/*"
       type: posts

@@ -1,12 +1,12 @@
 {% comment %}
-	Given an array of member IDs (`name` attributes), return a list of
-	full names (member `title` attributes), optionally hyperlinked to
-	the correct member page.
+	Given an array of Knack member IDs, return a list of professional
+	names, optionally hyperlinked to the correct member page.
 
 	Expects two parameters:
 
 		`member_list`
-		An array of one or more member `name` attributes.
+		An array of one or more member IDs (or optionally full names,
+		but these aren't linked).
 
 		`link_members`
 		Truthy/Falsy directive (in the Liquid sense) indicating whether
@@ -16,40 +16,44 @@
 {% assign total_members = include.member_list.size %}
 
 {% if total_members == 1 %}
-	{% assign member_url = "/members/" | append: include.member_list[0] | append: "/" %}
-	{% assign member = site.pages | find: "url", member_url %}
+	{% assign member_id = include.member_list[0] %}
+	{% assign member_url = "/members/" | append: member_id | append: "/" %}
+	{% assign member = site.data.knack_yaks.records | find: "field_101_raw", member_id %}
+
 	{% if member %}
-		{% if include.link_members %}<a href="{{ member.url }}">{% endif %}{{ member.title | replace: " ", "&nbsp;" }}{% if include.link_members %}</a>{% endif %}
+		{% if include.link_members %}<a href="{{ member_url }}">{% endif %}{{ member.field_97_raw | strip | replace: " ", "&nbsp;" }}{% if include.link_members %}</a>{% endif %}
 	{% else %}
-		<span class="unlinked-member">{{ include.member_list[0] | replace: " ", "&nbsp;" }}</span>
+		<span class="unlinked-member">{{ member_id | replace: " ", "&nbsp;" }}</span>
 	{% endif %}
 {% elsif total_members == 2 %}
-	{% assign first_member_url = "/members/" | append: include.member_list[0] | append: "/" %}
-	{% assign first_member = site.pages | find: "url", first_member_url %}
-	{% assign second_member_url = "/members/" | append: include.member_list[1] | append: "/" %}
-	{% assign second_member = site.pages | find: "url", second_member_url %}
+	{% assign first_member_id = include.member_list[0] %}
+	{% assign first_member_url = "/members/" | append: first_member_id | append: "/" %}
+	{% assign first_member = site.data.knack_yaks.records | find: "field_101_raw", first_member_id %}
+	{% assign second_member_id = include.member_list[1] %}
+	{% assign second_member_url = "/members/" | append: second_member_id | append: "/" %}
+	{% assign second_member = site.data.knack_yaks.records | find: "field_101_raw", second_member_id %}
 
 	{% if first_member %}
-		{% if include.link_members %}<a href="{{ first_member.url }}">{% endif %}{{ first_member.title | replace: " ", "&nbsp;" }}{% if include.link_members %}</a>{% endif %}
+		{% if include.link_members %}<a href="{{ first_member_url }}">{% endif %}{{ first_member.field_97_raw | strip | replace: " ", "&nbsp;" }}{% if include.link_members %}</a>{% endif %}
 	{% else %}
-		<span class="unlinked-member">{{ include.member_list[0] | replace: " ", "&nbsp;" }}</span>
+		<span class="unlinked-member">{{ first_member_id | replace: " ", "&nbsp;" }}</span>
 	{% endif %}
 	&amp;
 	{% if second_member %}
-		{% if include.link_members %}<a href="{{ second_member.url }}">{% endif %}{{ second_member.title | replace: " ", "&nbsp;" }}{% if include.link_members %}</a>{% endif %}
+		{% if include.link_members %}<a href="{{ second_member_url }}">{% endif %}{{ second_member.field_97_raw | strip | replace: " ", "&nbsp;" }}{% if include.link_members %}</a>{% endif %}
 	{% else %}
-		<span class="unlinked-member">{{ include.member_list[1] | replace: " ", "&nbsp;" }}</span>
+		<span class="unlinked-member">{{ second_member_id | replace: " ", "&nbsp;" }}</span>
 	{% endif %}
 {% else %}
 	{% assign last_member = include.member_list.last %}
 	{% for member_id in include.member_list %}
 		{% assign member_url = "/members/" | append: member_id | append: "/" %}
-		{% assign member = site.pages | find: "url", member_url %}
+		{% assign member = site.data.knack_yaks.records | find: "field_101_raw", member_id %}
 
 		{% if member %}
-			{% if include.link_members %}<a href="{{ member.url }}">{% endif %}{{ member.title | replace: " ", "&nbsp;" }}{% if include.link_members %}</a>{% endif %}{% if member_id != last_member %}, {% endif %}
+			{% if include.link_members %}<a href="{{ member_url }}">{% endif %}{{ member.field_97_raw | strip | replace: " ", "&nbsp;" }}{% if include.link_members %}</a>{% endif %}{% unless member_id == last_member %}, {% endunless %}
 		{% else %}
-			<span class="unlinked-member">{{ member_id | replace: " ", "&nbsp;" }}</span>{% if member_id != last_member %}, {% endif %}
+			<span class="unlinked-member">{{ member_id | replace: " ", "&nbsp;" }}</span>{% unless member_id == last_member %}, {% endunless %}
 		{% endif %}
 	{% endfor %}
 {% endif %}

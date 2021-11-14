@@ -7,20 +7,24 @@ layout: default
 	template. Applied to data files from the `members` category.
 {% endcomment %}
 
-<h1>{{ page.title }}</h1>
-
 {% comment %}
-	Generate the `member_id`. We'll need it later.
+	Pull in relevant member information from page properties.
 {% endcomment %}
-{% assign member_id = page.url | replace: "/", " " | strip | split: " " | last %}
+{% assign page_member_id = page.field_101_raw %}
+{% assign professional_name = page.field_97_raw | strip %}
+{% assign background_info = page.field_32_raw | strip %}
+
+<h1>{{ professional_name }}</h1>
 
 {% comment %}
 	Pull in the member card (which functions as an information box
 	here, rather than a link).
 {% endcomment %}
-{% include widget-member-card.html standalone=true member=member_id %}
+{% include widget-member-card.html standalone=true member=page_member_id %}
 
-{{ content }}
+{% if background_info != "" %}
+	{{ background_info | markdownify }}
+{% endif %}
 
 {% comment %}
 	Generate a list of projects that the current member (1) was a lead
@@ -33,13 +37,13 @@ layout: default
 {% for project in projects %}
 	{% if project.credits %}
 		{% if project.credits.lead_editors %}
-			{% if project.credits.lead_editors contains member_id %}
+			{% if project.credits.lead_editors contains page_member_id %}
 				{% assign projects_lead = projects_lead | push: project %}
 			{% endif %}
 		{% endif %}
 		{% for credits_block in project.credits %}
 			{% if credits_block[1].size > 0 and credits_block[0] != "lead_editors" %}
-				{% if credits_block[1] contains member_id %}
+				{% if credits_block[1] contains page_member_id %}
 					{% unless projects_lead contains project %}
 						{% assign projects_collaborated = projects_collaborated | push: project %}
 					{% endunless %}
@@ -76,9 +80,9 @@ layout: default
 	can't include it directly. Instead, we capture its output and then
 	transform it into HTML using `markdownify`.
 {% endcomment %}
-{% assign num_writings = site.categories["writings"] | where: "author", member_id | size %}
+{% assign num_writings = site.categories["writings"] | where: "author", page_member_id | size %}
 {% if num_writings > 0 %}
 	<h2 id="writings">Writings</h2>
-	{% capture member_writings %}{% include widget-post-list.md init_header_level=3 show_date=true show_author=false author=member_id category="writings" %}{% endcapture %}
+	{% capture member_writings %}{% include widget-post-list.md init_header_level=3 show_date=true show_author=false author=page_member_id category="writings" %}{% endcapture %}
 	{{ member_writings | markdownify }}
 {% endif %}

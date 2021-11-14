@@ -25,8 +25,8 @@ layout: default
 	{% endif %}
 	{% if page.author %}
 		{% assign member_url = "/members/" | append: page.author | append: "/" %}
-		{% assign member = site.pages | find: "url", member_url %}
-		<p class="slide-author mv1 small ttu tracked-tight"><a href="{{ member.url }}">{{ member.title | replace: " ", "&nbsp;" }}</a></p>
+		{% assign member = site.data.knack_yaks.records | find: "field_101_raw", page.author %}
+		<p class="slide-author mv1 small ttu tracked-tight"><a href="{{ member_url }}">{{ member.field_97_raw | strip | replace: " ", "&nbsp;" }}</a></p>
 	{% endif %}
 	{% if page.tags %}
 		{% assign last_tag = page.tags.last %}

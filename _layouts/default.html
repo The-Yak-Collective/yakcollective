@@ -276,9 +276,9 @@
 
 			Then...
 
-			If `page.author` is set, pull the author from the
-			`site.pages` array and use their Twitter handle and avatar
-			(if set).
+			If `page.author` is set, pull the author from
+			`site.data.knack_yaks.records` and use their Twitter handle
+			and avatar (if set).
 
 			If the page is a member page, pull the member's Twitter
 			handle and avatar (if set). (The member isn't *really* the
@@ -290,32 +290,35 @@
 			on.
 		{% endcomment %}
 		{% assign page_author = "yak_collective" %}
-		{% assign page_image = "/img/yak-og.jpg" %}
+		{% assign page_image = site.url | append: "/img/yak-og.jpg" %}
 		{% if page.author %}
-			{% assign author_url = "/members/" | append: page.author | append: "/" %}
-			{% assign member = site.pages | find: "url", author_url %}
+			{% assign member = site.data.knack_yaks.records | find: "field_101_raw", page.author %} 
 			{% if member %}
-				{% if member.twitter %}
-					{% assign page_author = member.twitter %}
+				{% assign twitter = member.field_43_raw | strip %}
+				{% assign avatar_url = member.field_44_raw.url | strip %}
+				{% if twitter != "" %}
+					{% assign page_author = twitter %}
 				{% endif %}
-				{% if member.avatar %}
-					{% assign page_image = member.avatar %}
+				{% if avatar_url != "" %}
+					{% assign page_image = avatar_url | remove: "https://s3-eu-west-1.amazonaws.com/assets.knack-eu.com/assets/5f70876d8e7037001504bfe8/" | prepend: "https://res.cloudinary.com/yak-collective/image/upload/c_fill,g_face,h_800,w_800,e_sharpen:50/yak-barn-v1/" %}
 				{% endif %}
 			{% endif %}
-		{% elsif page.layout == "page-member" %}
-			{% if page.twitter %}
-				{% assign page_author = page.twitter %}
+		{% elsif page.field_101_raw %}
+			{% assign twitter = page.field_43_raw | strip %}
+			{% assign avatar_url = page.field_44_raw.url | strip %}
+			{% if twitter != "" %}
+				{% assign page_author = twitter %}
 			{% endif %}
-			{% if page.avatar %}
-				{% assign page_image = page.avatar %}
+			{% if avatar_url != "" %}
+				{% assign page_image = avatar_url | remove: "https://s3-eu-west-1.amazonaws.com/assets.knack-eu.com/assets/5f70876d8e7037001504bfe8/" | prepend: "https://res.cloudinary.com/yak-collective/image/upload/c_fill,g_face,h_800,w_800,e_sharpen:50/yak-barn-v1/" %}
 			{% endif %}
 		{% endif %}
 		{% if page.hero_image %}
-			{% assign page_image = page.hero_image %}
+			{% assign page_image = site.url | append: page.hero_image %}
 		{% endif %}
 		<meta name="twitter:creator" content="@{{ page_author }}">
-		<meta name="twitter:image" content="{{ site.url }}{{ page_image }}">
-		<meta property="og:image" content="{{ site.url }}{{ page_image }}" />
+		<meta name="twitter:image" content="{{ page_image }}">
+		<meta property="og:image" content="{{ page_image }}" />
 
 		{% comment %}
 			Canonical page URL for Facebook.
