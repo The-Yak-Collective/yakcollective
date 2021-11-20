@@ -8,10 +8,10 @@
  *
  * Last updated 2020-10-15
  *
- * 1. Make sure you're editing `fonts.source.css`.
+ * 1. Make sure you're editing `fonts-src.css`.
  * 2. Paste the CSS file generated using https://fonts.google.com/
  *    below.
- * 3. Run `./bin/mkfonts.sh`.
+ * 3. Run `mkfonts.sh`.
  *
  */
 
