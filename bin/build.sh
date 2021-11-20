@@ -39,10 +39,10 @@ fi
 
 # Make all URLs relative (required for most web3 hosting solutions).
 #
-(
-	cd _site
-	npx all-relative
-)
+#(
+#	cd _site
+#	npm exec --yes all-relative
+#)
 
 # Replace the __SITE_BASE_URL__ with one supplied on the command line
 # as $1, or https://yakcollective.org.
@@ -51,7 +51,7 @@ SITE_BASE_URL="https://yakcollective.org"
 if [[ -n "$1" ]]; then
 	SITE_BASE_URL="$1"
 fi
-find _site -type f \( -iname '*.html'  -o -iname '*.xml'  -o -iname '*.json' -o -iname '*.js' -o -iname '*.css' \) -exec sed -i -e 's|__SITE_BASE_URL__|$SITE_BASE_URL|g' "{}" \;
+find _site -type f \( -iname '*.html'  -o -iname '*.xml'  -o -iname '*.json' -o -iname '*.js' -o -iname '*.css' \) -exec sed -i -e "s|__SITE_BASE_URL__|$SITE_BASE_URL|g" "{}" \;
 
 # Minify: https://github.com/tdewolff/minify
 #
@@ -73,4 +73,9 @@ find _site -type f \( -iname '*.html'  -o -iname '*.xml'  -o -iname '*.json' -o 
 # therefore be turned off when "hand optimization" like this is used.
 #
 chmod +x bin/minify
-./bin/minify --recursive --output _site _site || true
+mv _site _site.original
+(
+	cd _site.original
+	../bin/minify --all --recursive --sync --output ../_site .
+)
+rm -rf _site.original

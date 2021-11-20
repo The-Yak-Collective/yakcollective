@@ -11,6 +11,6 @@ cat ./css/fonts.source.css | sed -e 's#url(https.*/#url(/fonts/google/#' > ./css
 (
 	cd ./fonts/google
 	for WOFF in $(cat ../../css/fonts.source.css | sed -e 's/^.*src:.*url(//;/^\s.*/d;/^[^h].*/d;s/).*//' | xargs); do
-		curl -L -O $WOFF
+		curl -sS -L -O $WOFF
 	done
 )

@@ -37,10 +37,10 @@ TEMP_DIR="$(mktemp -d)"
 #
 #    https://docs.knack.com/docs/retrieving-multiple-records
 #
-curl -X  GET \
-     -H "X-Knack-Application-Id: $KNACK_APP_ID" \
-     -H "X-Knack-REST-API-Key: $KNACK_API_KEY" \
-        "https://api.knack.com/v1/objects/${KNACK_OBJECT}/records?rows_per_page=${KNACK_ROWS_PER_PAGE}&page=1" > $TEMP_DIR/knack-yaks-1.json
+curl -sS -X  GET \
+         -H "X-Knack-Application-Id: $KNACK_APP_ID" \
+         -H "X-Knack-REST-API-Key: $KNACK_API_KEY" \
+            "https://api.knack.com/v1/objects/${KNACK_OBJECT}/records?rows_per_page=${KNACK_ROWS_PER_PAGE}&page=1" > $TEMP_DIR/knack-yaks-1.json
 
 # How many pages of data do we have?
 #
@@ -55,10 +55,10 @@ TOTAL_PAGES=$(jq .total_pages $TEMP_DIR/knack-yaks-1.json)
 #
 if [[ TOTAL_PAGES -gt 1 ]]; then
 	for (( CURRENT_PAGE=2; CURRENT_PAGE<=$TOTAL_PAGES; CURRENT_PAGE++ )); do
-		curl -X  GET \
-		     -H "X-Knack-Application-Id: $KNACK_APP_ID" \
-		     -H "X-Knack-REST-API-Key: $KNACK_API_KEY" \
-		        "https://api.knack.com/v1/objects/${KNACK_OBJECT}/records?rows_per_page=${KNACK_ROWS_PER_PAGE}&page=${CURRENT_PAGE}" > $TEMP_DIR/knack-yaks-${CURRENT_PAGE}.json
+		curl -sS -X  GET \
+		         -H "X-Knack-Application-Id: $KNACK_APP_ID" \
+		         -H "X-Knack-REST-API-Key: $KNACK_API_KEY" \
+		            "https://api.knack.com/v1/objects/${KNACK_OBJECT}/records?rows_per_page=${KNACK_ROWS_PER_PAGE}&page=${CURRENT_PAGE}" > $TEMP_DIR/knack-yaks-${CURRENT_PAGE}.json
 	done
 fi
 
