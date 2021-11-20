@@ -51,9 +51,9 @@
   "version": "https://jsonfeed.org/version/1",
   "title": {{ site.name | append: " - " | append: the_subtitle | jsonify }},
   "description": {{ site.description | jsonify }},
-  "home_page_url": "{{ site.url }}",
-  "feed_url": "{{ site.url }}/{{ page.path }}",
-  "favicon": "{{ site.url}}/img/favicon.png",
+  "home_page_url": "__SITE_BASE_URL__",
+  "feed_url": "__SITE_BASE_URL__/{{ page.path }}",
+  "favicon": "__SITE_BASE_URL__/img/favicon.png",
 
   {% comment %}
     We do the "Daring Fireball" thing here and link to the original
@@ -62,7 +62,7 @@
   {% endcomment %}
   "items": [
     {% for the_page in filtered_pages %}
-      {% capture the_page_url %}{% if the_page.original_link %}{{ the_page.original_link }}{% else %}{{ site.url }}{{ the_page.url }}{% endif %}{% endcapture %}
+      {% capture the_page_url %}{% if the_page.original_link %}{{ the_page.original_link }}{% else %}__SITE_BASE_URL__{{ the_page.url }}{% endif %}{% endcapture %}
       {
         "id": {{ the_page_url | jsonify }},
         "url": {{ the_page_url | jsonify }},

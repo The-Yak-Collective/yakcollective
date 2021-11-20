@@ -15,8 +15,8 @@ layout: none
 		<description>Today's featured member from the Yak Collective</description>
 		<sy:updatePeriod>daily</sy:updatePeriod>
 		<sy:updateFrequency>1</sy:updateFrequency>
-		<link>{{ site.url }}</link>
-		<atom:link href="{{ site.url }}/{{ page.path }}" rel="self" type="application/rss+xml" />
+		<link>__SITE_BASE_URL__</link>
+		<atom:link href="__SITE_BASE_URL__/{{ page.path }}" rel="self" type="application/rss+xml" />
 		<lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
 
 			{% comment %}
@@ -30,8 +30,8 @@ layout: none
 				{% assign member_tagline = member.field_41_raw | strip %}
 				<description>{% if member_twitter.size > 0 %}(@{{ member_twitter }}){% endif %}{% if member_tagline.size > 0 %} - {{ member_tagline | xml_escape }}{% endif %}</description>
 				<pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
-				<link>{{ site.url }}/members/{{ member.field_101_raw }}/#{{ site.time | date: "%Y%m%d" }}</link>
-				<guid>{{ site.url }}/members/{{ member.field_101_raw }}/#{{ site.time | date: "%Y%m%d" }}</guid>
+				<link>__SITE_BASE_URL__/members/{{ member.field_101_raw }}/#{{ site.time | date: "%Y%m%d" }}</link>
+				<guid>__SITE_BASE_URL__/members/{{ member.field_101_raw }}/#{{ site.time | date: "%Y%m%d" }}</guid>
 			</item>
 	</channel>
 </rss>

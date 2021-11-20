@@ -17,7 +17,7 @@ fi
 # Pull Knack data.
 #
 chmod +x bin/knack-pull-yaks.sh
-./bin/knack-pull-yaks.sh || exit 1
+./bin/knack-pull-yaks.sh || exit 2
 
 # If we're running from Netlify, then all Ruby Gem setup has already
 # been done for us. We assume that this is the case if the `jekyll`
@@ -27,15 +27,31 @@ chmod +x bin/knack-pull-yaks.sh
 # and run the build.
 #
 if [[ -n "$(which jekyll)" ]]; then
-	jekyll build --profile $@ || exit 4
+	jekyll build --profile || exit 4
 elif [[ -n "$(which bundle)" ]]; then
-	bundle config set path vendor/bundle || exit 2
+	bundle config set path vendor/bundle || exit 8
 	bundle install || exit 3
-	bundle exec jekyll build --profile $@ || exit 4
+	bundle exec jekyll build --profile || exit 16
 else
 	echo "Cannot find Bundler, and Jekyll does not seem to be installed."
-	exit 1
+	exit 32
 fi
+
+# Make all URLs relative (required for most web3 hosting solutions).
+#
+(
+	cd _site
+	npx all-relative
+)
+
+# Replace the __SITE_BASE_URL__ with one supplied on the command line
+# as $1, or https://yakcollective.org.
+#
+SITE_BASE_URL="https://yakcollective.org"
+if [[ -n "$1" ]]; then
+	SITE_BASE_URL="$1"
+fi
+find _site -type f \( -iname '*.html'  -o -iname '*.xml'  -o -iname '*.json' -o -iname '*.js' -o -iname '*.css' \) -exec sed -i -e 's|__SITE_BASE_URL__|$SITE_BASE_URL|g' "{}" \;
 
 # Minify: https://github.com/tdewolff/minify
 #

@@ -55,8 +55,8 @@
 		<description>{{ site.description | xml_escape }}</description>
 		<sy:updatePeriod>daily</sy:updatePeriod>
 		<sy:updateFrequency>1</sy:updateFrequency>
-		<link>{{ site.url }}</link>
-		<atom:link href="{{ site.url }}/{{ page.path }}" rel="self" type="application/rss+xml" />
+		<link>__SITE_BASE_URL__</link>
+		<atom:link href="__SITE_BASE_URL__/{{ page.path }}" rel="self" type="application/rss+xml" />
 
 		{% comment %}
 			Use the date of the most recent entry in
@@ -74,7 +74,7 @@
 				<title>{{ the_page.title | xml_escape }}</title>
 				<description>{{ the_page.content | markdownify | strip | xml_escape }}</description>
 				<pubDate>{{ the_page.date | date_to_rfc822 }}</pubDate>
-				{% capture the_page_url %}{% if the_page.original_link %}{{ the_page.original_link }}{% else %}{{ site.url }}{{ the_page.url }}{% endif %}{% endcapture %}
+				{% capture the_page_url %}{% if the_page.original_link %}{{ the_page.original_link }}{% else %}__SITE_BASE_URL__{{ the_page.url }}{% endif %}{% endcapture %}
 				<link>{{ the_page_url | xml_escape }}</link>
 				<guid isPermaLink="true">{{ the_page_url | xml_escape }}</guid>
 			</item>

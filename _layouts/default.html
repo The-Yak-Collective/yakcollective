@@ -290,7 +290,7 @@
 			on.
 		{% endcomment %}
 		{% assign page_author = "yak_collective" %}
-		{% assign page_image = site.url | append: "/img/yak-og.jpg" %}
+		{% assign page_image ="__SITE_BASE_URL__/img/yak-og.jpg" %}
 		{% if page.author %}
 			{% assign member = site.data.knack_yaks.records | find: "field_101_raw", page.author %} 
 			{% if member %}
@@ -314,7 +314,7 @@
 			{% endif %}
 		{% endif %}
 		{% if page.hero_image %}
-			{% assign page_image = site.url | append: page.hero_image %}
+			{% assign page_image = page.hero_image | prepend: "__SITE_BASE_URL__" %}
 		{% endif %}
 		<meta name="twitter:creator" content="@{{ page_author }}">
 		<meta name="twitter:image" content="{{ page_image }}">
@@ -323,7 +323,7 @@
 		{% comment %}
 			Canonical page URL for Facebook.
 		{% endcomment %}
-		<meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+		<meta property="og:url" content="__SITE_BASE_URL__{{ page.url }}" />
 
 		{% comment %}
 			Google Analytics tag, added by Tom Critchlow for the initial
