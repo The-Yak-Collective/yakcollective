@@ -7,51 +7,7 @@ author: 100013
 google_doc: https://docs.google.com/document/d/1989Uffl2bLLia75bX9_EOFpUesuUZ7eZpcr56SA6Clg/edit
 description: He decided then that it was time for him to untangle this mess because no way he was getting laid without a neat graph of thoughts — manufactured or otherwise.
 hidden: false
-page_headers: |
-  <style type="text/css">
-    body {
-      font-family: "Noto Sans", Verdana, sans-serif;
-    }
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    .subhead {
-      font-family: "Ceviche One", Impact, sans-serif;
-    }
-    h1 {
-      font-size: 2.8em;
-    }
-    h2 {
-      font-size: 2.1em;
-    }
-    h3 {
-      font-size: 1.638em;
-    }
-    h4 {
-      font-size: 1.4em;
-    }
-    h5 {
-      font-size: 1.162em;
-    }
-    h6 {
-      font-size: 0.938em;
-    }
-    .f1 {
-      font-size: 4.2rem
-    }
-    .subhead {
-      font-weight: normal;
-      font-size: 1.4em
-    }
-    .fill-space {
-      background-image: url("/projects/astonishing-stories/out-of-the-loop-bg.jpg");
-      background-position: center center;
-      background-size: cover;
-    }
-  </style>
+page_css: /projects/astonishing-stories/out-of-the-loop.css
 ---
 # Out of the Loop
 <time class="db small ttu o-60">{{ page.date | date_to_long_string: "ordinal", "US" }}</time>

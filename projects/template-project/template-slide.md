@@ -50,7 +50,7 @@ date: 2020-12-01 00:00:00
 section: A Section
 tags:
   - philosophy
-hero_image: /projects/future-frontiers/01-philosophy-01-on-horizons-01.jpg
+hero_image: /path/to/hero.jpg
 hero_position: left
 hero_border: true
 hero_description: On horizons
@@ -60,8 +60,7 @@ description: Frontiers are essential food for the psyche, for a species with the
 author: 100041
 page_text_color: black
 page_bg_color: "252,251,248"
-page_headers: |
-  <!-- HTML -->
+page_css: /path/to/custom.css
 ```
 
 Each of these header attributes is described in more detail in the following sections.
@@ -170,11 +169,11 @@ One of `black` (for black text on a default white background) or `white` (for wh
 
 Use this to override the default page background color, as specified by `page_text_color` (above). This color _must_ be specified as an RGB tuple; for example, `255,255,0` is a bright yellow, and `128,128,128` is a medium gray.
 
-### `page_headers`
+### `page_css`
 
-An attribute for advanced users; anything included here will be inserted verbatim at the end of the page's HTML `<head/>`. Use this to specify additional CSS or JavaScript. Because this attribute expects raw HTML, you definitely want to use the "`|` + indent" syntax.
+An attribute for advanced users; should contain the path to a custom CSS file that will be inserted for *only* this page.
 
-Note that the Yak Collective website is based on the [Tachyons design framework](https://tachyons.io/docs/), so you can use any of the classes that Tachyons defines _without_ specifying `page_headers`.
+Note that the Yak Collective website is based on the [Tachyons design framework](https://tachyons.io/docs/), so you can use any of the classes that Tachyons defines _without_ specifying a custom file in `page_css`.
 
 Be aware that it's very easy to break you page if you don't know what you're doing with this attribute. If anything in the above two paragraphs doesn't make sense to you, you should probably _not_ use this attribute!
 

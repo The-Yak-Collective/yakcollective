@@ -7,51 +7,7 @@ author: 100046
 google_doc: https://docs.google.com/document/d/15LRvkKeNMwRgr6Zf8dYLBBAqhpBxIyLP_WBE16H-PCg/edit
 description: In an age of pandemics and rolling lockdowns, his dad saw the youth orchestra as an opportunity for kids like his son to get out of the house.
 hidden: false
-page_headers: |
-  <style type="text/css">
-    body {
-      font-family: "Noto Sans", Verdana, sans-serif;
-    }
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    .subhead {
-      font-family: "Sonsie One", "Comic Sans MS", cursive, sans-serif;
-    }
-    h1 {
-      font-size: 1.8em;
-    }
-    h2 {
-      font-size: 1.35em;
-    }
-    h3 {
-      font-size: 1.053em;
-    }
-    h4 {
-      font-size: 0.9em;
-    }
-    h5 {
-      font-size: 0.747em;
-    }
-    h6 {
-      font-size: 0.603em;
-    }
-    .f1 {
-      font-size: 2.7rem
-    }
-    .subhead {
-      font-weight: normal;
-      font-size: 0.9em
-    }
-    .fill-space {
-      background-image: url("/projects/astonishing-stories/your-payment-is-ready-bg.jpg");
-      background-position: top center;
-      background-size: cover;
-    }
-  </style>
+page_css: /projects/astonishing-stories/your-payment-is-ready.css
 ---
 # Your Payment is Ready
 <time class="db small ttu o-60">{{ page.date | date_to_long_string: "ordinal", "US" }}</time>

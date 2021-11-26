@@ -5,17 +5,7 @@ tagline: Making the next normal better than the last one
 type: Report
 sequence: covid-19
 hero_image: /projects/dont-waste-the-reboot/dont-waste-the-reboot.jpg
-page_headers: |
-  <style type="text/css">
-    .hero {
-      background-size: contain !important;
-    }
-    @media screen and (min-width: 60em) {
-      .google-slideshow-wrapper {
-        margin-top: -4.5rem !important;
-      }
-    }
-  </style>
+page_css: /projects/dont-waste-the-reboot/dont-waste-the-reboot.css
 summary: |
   The inaugural report by the Yak Collective, _Don't Waste the Reboot_ offers organizations a smorgasbord of 25 creative and unexpected provocations, ideas, and action frameworks to navigate the COVID-19 crisis.
   

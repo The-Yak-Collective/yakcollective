@@ -162,11 +162,12 @@
 			<link rel="stylesheet" href="/css/color-black.css" media="(prefers-color-scheme: dark)">
 			-->
 		{% endif %}
-		<style type="text/css">
-			{% comment %}
-				Override page background color, if specified.
-			{% endcomment %}
-			{% if page.page_bg_color %}
+
+		{% comment %}
+			Override page background color, if specified.
+		{% endcomment %}
+		{% if page.page_bg_color %}
+			<style type="text/css">
 				body,
 				input,
 				select,
@@ -177,93 +178,19 @@
 				.column-background {
 					background-color: rgba({{ page.page_bg_color }},1.0);
 				}
-			{% endif %}
+			</style>
+		{% endif %}
+		<link rel="stylesheet" href="/css/per-project.css">
 
-			{% comment %}
-				Generate project-specific styles.
-			{% endcomment %}
-			{% assign projects = site.pages | where: "layout", "page-project" %}
-			{% for project in projects %}
-				{% assign project_id = project.url | replace: "/", " " | strip | split: " " | last %}
-				{% if project.hero_image %}
-					#{{ project_id }}-hero .hero {
-						content : "";
-						display: block;
-						position: absolute;
-						top: 0;
-						left: 0;
-						background-image: url("{{ project.hero_image }}");
-						background-size: cover;
-						width: 100%;
-						height: 100%;
-						opacity: 0.5;
-					}
-				{% endif %}
-				#{{ project_id }}-box .hero {
-					{% if project.hero_image %}
-						background-image: url("{{ project.hero_image }}");
-						background-position: center center;
-					{% else %}
-						background-image: url("/img/yak-og.jpg");
-						background-position: center right;
-					{% endif %}
-					background-size: cover;
-				}
-			{% endfor%}
-
-			{% comment %}
-				Generate slide-specific styles.
-			{% endcomment %}
-			{% assign slides = site.pages | where: "layout", "page-project-slide" %}
-			{% for slide in slides %}
-				{% assign slide_id = slide.url | replace: '/', ' ' | strip | replace: ' ', '-' %}
-				{% if slide.page_text_color or slide.page_bg_color %}
-					#{{ slide_id }} {
-						{% if slide.page_text_color == "white" %}
-							color: rgba(255,255,255,1.0);
-						{% else %}
-							color: rgba(15,15,15,1.0);
-						{% endif %}
-						{% if slide.page_bg_color %}
-							background-color: rgba({{ slide.page_bg_color }},1.0);
-						{% endif %}
-					}
-					#{{ slide_id }} input,
-					#{{ slide_id }} select {
-						{% if slide.page_text_color == "white" %}
-							color: rgba(255,255,255,1.0);
-							border-color: rgba(255,255,255,0.2);
-						{% else %}
-							color: rgba(15,15,15,1.0);
-							border-color: rgba(15,15,15,0.2);
-						{% endif %}
-						{% if slide.page_bg_color %}
-							background-color: rgba({{ slide.page_bg_color }},1.0);
-						{% endif %}
-					}
-					{% if slide.page_text_color %}
-						#{{ slide_id }} time,
-						#{{ slide_id }} details,
-						#{{ slide_id }} figcaption,
-						#{{ slide_id }} .slide-tags,
-						#{{ slide_id }} .slide-author,
-						#{{ slide_id }} .project-page-author {
-							color: rgba({% if slide.page_text_color == "white" %}255,255,255{% else %}15,15,15{% endif %},0.8);
-						}
-						#{{ slide_id }} .member-box,
-						#{{ slide_id }}.slide-border, /* No space for this one! */
-						#{{ slide_id }} .image-border,
-						#{{ slide_id }} .slide-deck-visible-anchor {
-							border-color: rgba({% if slide.page_text_color == "white" %}255,255,255{% else %}15,15,15{% endif %},0.2);
-						}
-						#{{ slide_id }} .submit,
-						#{{ slide_id }} .footnotes {
-							background-color: rgba({% if slide.page_text_color == "white" %}255,255,255{% else %}15,15,15{% endif %},0.05);
-						}
-					{% endif %}
-				{% endif %}
-			{% endfor %}
-		</style>
+		{% comment %}
+			Include per-page `page.page_css` attribute. Currently only
+			used by project pages (but could also be used elsewhere).
+			We load it last so we can guarantee that CSS overrides work
+			correctly.
+		{% endcomment %}
+		{% if page.page_css %}
+			<link rel="stylesheet" href="{{ page.page_css }}">
+		{% endif %}
 
 		{% comment %}
 			Determine the image that should be associated with the page
@@ -324,17 +251,6 @@
 			Canonical page URL for Facebook.
 		{% endcomment %}
 		<meta property="og:url" content="__SITE_BASE_URL__{{ page.url }}" />
-
-		{% comment %}
-			Include per-page `page.page_headers` attribute. Currently
-			only used by project pages (but could also be used
-			elsewhere). Since any header elements can be included in
-			this block, we load it last so we can guarantee that CSS
-			overrides and script dependencies work correctly.
-		{% endcomment %}
-		{% if page.page_headers %}
-			{{ page.page_headers }}
-		{% endif %}
 	</head>
 
 	<body class="w-100 min-h-100 pa0 ma0 f4-l center relative flex flex-column">

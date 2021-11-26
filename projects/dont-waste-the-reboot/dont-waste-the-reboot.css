@@ -1,0 +1,8 @@
+.hero {
+	background-size: contain !important;
+}
+@media screen and (min-width: 60em) {
+	.google-slideshow-wrapper {
+		margin-top: -4.5rem !important;
+	}
+}

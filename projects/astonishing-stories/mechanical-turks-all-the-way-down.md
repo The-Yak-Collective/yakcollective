@@ -8,51 +8,7 @@ roam_page: https://roamresearch.com/#/app/Astonishing_Stories/page/-u1nPZcZu
 google_doc: https://docs.google.com/document/d/1HpnU_k_Q3xulIfwiEtdpfMycZeTRvR-cPWDl8mA___E/edit
 description: Can't be too eager on your first day of the job.
 hidden: false
-page_headers: |
-  <style type="text/css">
-    body {
-      font-family: "Noto Sans", Verdana, sans-serif;
-    }
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    .subhead {
-      font-family: Bangers, Impact, sans-serif;
-    }
-    h1 {
-      font-size: 2.2em;
-    }
-    h2 {
-      font-size: 1.65em;
-    }
-    h3 {
-      font-size: 1.287em;
-    }
-    h4 {
-      font-size: 1.1em;
-    }
-    h5 {
-      font-size: 0.913em;
-    }
-    h6 {
-      font-size: 0.737em;
-    }
-    .f1 {
-      font-size: 3.3rem
-    }
-    .subhead {
-      font-weight: normal;
-      font-size: 1.1em
-    }
-    .fill-space {
-      background-image: url("/projects/astonishing-stories/mechanical-turks-all-the-way-down-bg.jpg");
-      background-position: top center;
-      background-size: cover;
-    }
-  </style>
+page_css: /projects/astonishing-stories/mechanical-turks-all-the-way-down.css
 ---
 # Mechanical Turks All the Way Down
 <time class="db small ttu o-60">{{ page.date | date_to_long_string: "ordinal", "US" }}</time>

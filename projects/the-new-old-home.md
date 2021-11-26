@@ -5,17 +5,7 @@ tagline: Rediscovering the home as a production frontier
 type: Report
 sequence: covid-19
 hero_image: /projects/the-new-old-home/the-new-old-home.jpg
-page_headers: |
-  <style type="text/css">
-    .hero {
-      opacity: 0.65 !important;
-    }
-    @media screen and (min-width: 60em) {
-      .google-slideshow-wrapper {
-        margin-top: -4.5rem !important;
-      }
-    }
-  </style>
+page_css: /projects/the-new-old-home/the-new-old-home.css
 summary: |
   The Yak Collective's second report, _The New Old Home_, offers 22 perspectives built around Pamela Hobart's central thesis: as work returns to the home in the form of remote work opportunities (a trend now dramatically accelerated by pandemic circumstances), we can turn to historical modes of integrated living, reconsidered in light of newer technology, to guide our attempts at co-located life and work. 
 

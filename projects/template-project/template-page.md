@@ -58,8 +58,7 @@ author: 100007
 hidden: false
 page_text_color: black
 page_bg_color: 255,255,255
-page_headers: |
-  <!-- HTML -->
+page_css: /path/to/custom.css
 ```
 
 Each of these header attributes is described in more detail in the following sections.
@@ -112,11 +111,11 @@ One of `black` (for black text on a default white background) or `white` (for wh
 
 Use this to override the default page background color, as specified by `page_text_color` (above). This color _must_ be specified as an RGB tuple; for example, `255,255,0` is a bright yellow, and `128,128,128` is a medium gray.
 
-### `page_headers`
+### `page_css`
 
-An attribute for advanced users; anything included here will be inserted verbatim at the end of the page's HTML `<head/>`. Use this to specify additional CSS or JavaScript. Because this attribute expects raw HTML, you definitely want to use the "`|` + indent" syntax.
+An attribute for advanced users; should contain the path to a custom CSS file that will be inserted for *only* this page.
 
-Note that the Yak Collective website is based on the [Tachyons design framework](https://tachyons.io/docs/), so you can use any of the classes that Tachyons defines _without_ specifying `page_headers`.
+Note that the Yak Collective website is based on the [Tachyons design framework](https://tachyons.io/docs/), so you can use any of the classes that Tachyons defines _without_ specifying a custom file in `page_css`.
 
 Be aware that it's very easy to break you page if you don't know what you're doing with this attribute. If anything in the above two paragraphs doesn't make sense to you, you should probably _not_ use this attribute!
 
@@ -357,7 +356,7 @@ There are a bevy of optional parameters:
 
 - **`slide_align`** specifies whether the `hero_image` and `slide_content` should be `top`, `bottom`, or `center` aligned. If unset, `top` will be used (which is probably what you want).
 
-- **`slide_id`** specifies an HTML element ID to be attached to the slide's containing `<div/>`. This is useful if you want to link to a slide or use the `page_headers` front matter attribute to specify per-slide CSS styling.
+- **`slide_id`** specifies an HTML element ID to be attached to the slide's containing `<div/>`. This is useful if you want to link to a slide or use the `page_css` front matter attribute to specify per-slide CSS styling.
 
 Most of the time you'll want to create project slides (see `projects/template-project/template-slide.md`) and then use `widget-project-slide-deck` to display them, rather than calling this widget directly. Check out [_Future Frontiers_](/projects/future-frontiers/) to get a sense of what `widget-slide` (along with a little CSS) can do.
 
@@ -371,6 +370,6 @@ There are also two optional parameters:
 
 - **`layout`** can be one of `left` (pop content out on the left), `right` (pop content out on the right), `center` (center content, but pop out slightly from the main text on _both_ the left and right), or `full-bleed` (span from the left side of the browser window all the way to the right; you probably only want to use this when passing HTML). If omitted, `center` will be used.
 
-- **`extra_class`** specifies additional class(es) that will be added to the outer `<div/>` of the breakout box. Useful for controlling positioning for fancy formatting (either Tachyons classes or styling specified directly using the `page_headers` front matter attribute).
+- **`extra_class`** specifies additional class(es) that will be added to the outer `<div/>` of the breakout box. Useful for controlling positioning for fancy formatting (either Tachyons classes or styling specified directly using the `page_css` front matter attribute).
 
 Note that `widget-google-slides`, `widget-image`, `widget-post-list`, `widget-project-header`, `widget-project-page-list`, and `widget-slide` are all based off of `widget-breakout-box`.

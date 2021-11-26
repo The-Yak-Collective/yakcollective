@@ -1,0 +1,42 @@
+body {
+	font-family: "Noto Sans", Verdana, sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.subhead {
+	font-family: Bangers, Impact, sans-serif;
+}
+h1 {
+	font-size: 2.2em;
+}
+h2 {
+	font-size: 1.65em;
+}
+h3 {
+	font-size: 1.287em;
+}
+h4 {
+	font-size: 1.1em;
+}
+h5 {
+	font-size: 0.913em;
+}
+h6 {
+	font-size: 0.737em;
+}
+.f1 {
+	font-size: 3.3rem
+}
+.subhead {
+	font-weight: normal;
+	font-size: 1.1em
+}
+.fill-space {
+	background-image: url("/projects/astonishing-stories/mechanical-turks-all-the-way-down-bg.jpg");
+	background-position: top center;
+	background-size: cover;
+}
