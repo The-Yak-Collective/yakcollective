@@ -1,0 +1,35 @@
+---
+layout: none
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+	{% for page in site.pages %}
+		{% assign page_extension = page.url | split: "." | last %}
+		{% assign page_path_array = page.url | split: "/" %}
+		{% unless page.draft == true or page.url == "/tips/" or page.url == "/welcome/" or page_extension == "css" or page_extension == "xml" or page_extension == "json" or page_extension == "js" %}
+			<url>
+				<loc>__SITE_BASE_URL__{{ page.url | remove: "index.html" }}</loc>
+				{% if page.date %}
+					<lastmod>{{ page.date | date_to_xmlschema }}</lastmod>
+				{% endif %}
+				{% if page.url == "/" or page.url == "/index.html" or page.url == "/about/" or page.url == "/join/" %}
+					<priority>1.0</priority>
+				{% elsif page_path_array[1] == "members" and page.url != "/members/" %}
+					<priority>0.1</priority>
+				{% endif %}
+			</url>
+		{% endunless %}
+	{% endfor %}
+	{% for post in site.posts %}
+		{% assign post_path_array = post.url | split: "/" %}
+		{% unless post.draft == true or post.published == false or post_path_array[1] == "writings" %}
+			<url>
+				<loc>__SITE_BASE_URL__{{ post.url }}</loc>
+				{% if post.date %}
+					<lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
+				{% endif %}
+				<priority>0.3</priority>
+			</url>
+		{% endunless %}
+	{% endfor %}
+</urlset>
