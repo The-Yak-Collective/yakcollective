@@ -12,11 +12,12 @@
   "author": "Nathan Acks <nathan.acks@delphi-strategy.com>",
   "license": "MIT",
   "dependencies": {
-    "moment": "^2.24.0",
-    "chrono-node": "^2.2.4",
-    "remove-accents": "^0.4.2",
+    "@octokit/rest": "^17.9.0",
+    "all-relative": "^2.0.0",
     "axios": "^0.21.1",
-    "@octokit/rest": "^17.9.0"
+    "chrono-node": "^2.2.4",
+    "moment": "^2.24.0",
+    "remove-accents": "^0.4.2"
   },
   "repository": {
     "url": "https://github.com/The-Yak-Collective/yakcollective"

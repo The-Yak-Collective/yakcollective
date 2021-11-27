@@ -39,9 +39,10 @@ fi
 
 # Make all URLs relative (required for most web3 hosting solutions).
 #
+npm install
 (
 	cd _site
-	npm exec --yes all-relative
+	../node_modules/.bin/all-relative
 )
 
 # Replace the __SITE_BASE_URL__ with one supplied on the command line

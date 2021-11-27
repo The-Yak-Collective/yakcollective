@@ -8,7 +8,9 @@
 .bundle/*
 .jekyll-cache/*
 _site/*
+node_modules/*
 vendor/*
+package-lock.json
 
 # Ignore sensitive data from Knack
 bin/knack-yak-creds.sh
