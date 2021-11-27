@@ -39,10 +39,10 @@ fi
 
 # Make all URLs relative (required for most web3 hosting solutions).
 #
-#(
-#	cd _site
-#	npm exec --yes all-relative
-#)
+(
+	cd _site
+	npm exec --yes all-relative
+)
 
 # Replace the __SITE_BASE_URL__ with one supplied on the command line
 # as $1, or https://yakcollective.org.
