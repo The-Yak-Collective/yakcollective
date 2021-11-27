@@ -2,11 +2,11 @@
 ---
 # The Yak Collective
 
-The Yak Collective is a network of over 300 independent consultants, coaches, and freelancers with varied technical and creative skills. You can learn more about us on the [About page](/about.html).
+The Yak Collective is an online space for collaborative tinkering toward life in a post-[Weirding](https://www.theatlantic.com/technology/archive/2016/09/harambe-the-perfect-meme/498743/) world — a world where anomalous and outlier events are an every day occurance.
 
-We are available both for individual projects on specific topics that match our skills, and for larger collaborative projects we can take on as a group, bringing together the mix of skills necessary. Check out our [members](/members.html) and [projects](/projects.html), read some of [our latest thoughts](/writings.html), and get in touch with any of us if you'd like to learn more.
+Here you can find an eclectic group of people working together on technology, research, writing, and art projects, and occasionally trying to make money together as well. Current experiments include: **building** open-source rovers, **crafting** experimental web infrastructures, **publishing** speculative fiction, and **studying** emerging decentralization. Learn more about us on the [About page](/about.html).
 
-Follow us on [Twitter](https://twitter.com/yak_collective), [Facebook](https://www.facebook.com/theyakcollective/), or [LinkedIn](https://www.linkedin.com/company/yak-collective/) to stay in the loop.
+Check out our [members](/members.html) and [projects](/projects.html), read some of [our latest thoughts](/writings.html), and get in touch with any of us if you’d like to learn more.
 
 ## Featured Yak
 
