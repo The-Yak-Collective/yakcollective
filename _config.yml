@@ -8,11 +8,6 @@ plugins:
   - jekyll-titles-from-headings
   - jekyll-datapage-generator
 
-# General site settings
-#
-#permalink: pretty
-#page_gen-dirs: true
-
 # RSS/JSON feed settings. See:
 #
 #   https://github.com/snaptortoise/jekyll-rss-feeds
