@@ -26,9 +26,6 @@
 **Current Plan:**
 
 - [X] Update documentation
-- [ ] Code review
-- [ ] Finish initial integration of [Vinay’s Yak network map](https://dataingestor.github.io/yakmap1/network/)
-- [ ] Integrate [Knack](https://roamresearch.com/#/app/ArtOfGig/page/FDjmLsCeR)
+- [X] Integrate [Knack](https://roamresearch.com/#/app/ArtOfGig/page/FDjmLsCeR)
 - [ ] Migrate from [IFTTT](https://ifttt.com/) to [ActionsFlow](https://github.com/actionsflow/actionsflow) ([associated ticket in GitHub](https://github.com/The-Yak-Collective/yakcollective/issues/19))
-- [ ] Research options for JAMstack CMSes
-- [ ] Migrate to [Gatsby](https://www.gatsbyjs.com/)
+- [ ] Code review
