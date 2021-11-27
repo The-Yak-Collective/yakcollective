@@ -22,4 +22,4 @@ Yak Collective projects are collaborations and explorations from the community.
 
 ## Get Involved
 
-Interested in getting involved? [Join us!](/join/)
+Interested in getting involved? [Join us!](/join.html)

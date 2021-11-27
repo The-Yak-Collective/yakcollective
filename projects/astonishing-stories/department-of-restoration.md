@@ -23,7 +23,7 @@ Indeed, this algorithmic tribunal stands watch over many, many occurrences and i
   layout="left"
   image=page.hero_image
   alt="Department of Restoration"
-  caption="Illustration by [Justice](/members/100048/)."
+  caption="Illustration by [Justice](/members/100048.html)."
 %}
 
 This growing body of consequences now finally sees a new option, an outlet for moving forward. A select team, carrying rites handed down by religious sects, futurists, and ancient literature, service a series of practices. They elucidate practicable ways: making amends, settling disputes, and beginning again for a new time and place.

@@ -10,8 +10,8 @@ plugins:
 
 # General site settings
 #
-permalink: pretty
-page_gen-dirs: true
+#permalink: pretty
+#page_gen-dirs: true
 
 # RSS/JSON feed settings. See:
 #
@@ -25,6 +25,8 @@ description: The Yak Collective is a network of over 300 independent consultants
 url: https://www.yakcollective.org
 
 # Generate member pages from _data/knack-yaks.json
+#
+#     https://github.com/avillafiorita/jekyll-datapage_gen
 #
 page_gen:
   - data: knack_yaks.records

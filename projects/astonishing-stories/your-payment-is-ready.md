@@ -23,7 +23,7 @@ page_css: /projects/astonishing-stories/your-payment-is-ready.css
   layout="right"
   image=page.hero_image
   alt="Your Payment Is Ready"
-  caption="Illustration by [Justice](/members/100048/)."
+  caption="Illustration by [Justice](/members/100048.html)."
 %}
 
 Listening, Judd’s dad pursed his lips and thought back to how lucky he’d felt to snag an early-model machine learning clarinet in the lottery his son’s public school ran last year. Judd had zero musical aptitude but he received one of the few instruments they had available for enhanced musical instruction. Even though the spit valve was rusted shut and the software was crude, he’d been happy to put down the hefty deposit. He looked over his son’s shoulder at the dismembered clarinet with, as the commercial advertisements claimed, “built-in machine learning software that provides personalized teaching and testing with no dangerous human interaction necessary!” He worried they might lose it if Judd was unable to put the thing back together.

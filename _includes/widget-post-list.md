@@ -138,7 +138,7 @@
         Post authors are stored as Knack member IDs. Use this to look
         up the corresponding member information from our Knack data.
     {% endcomment %}
-    {% assign author_url = "/members/" | append: post.author | append: "/" %}
+    {% assign author_url = "/members/" | append: post.author | append: ".html" %}
     {% assign author = site.data.knack_yaks.records | find: "field_101_raw", post.author %}
     {% assign author_name = author.field_97_raw | strip %}
 

@@ -17,9 +17,9 @@ layout: default
 {% comment %}
 	Figure out the current project ID and project page.
 {% endcomment %}
-{% assign path_array = page.url | replace: "/", " " | strip | split: " " %}
+{% assign path_array = page.url | replace: ".html", "" | replace: "/", " " | strip | split: " " %}
 {% assign project_id = path_array[1] %}
-{% assign project_url = "/projects/" | append: project_id | append: "/" %}
+{% assign project_url = "/projects/" | append: project_id | append: ".html" %}
 {% assign project = site.pages | find: "url", project_url %}
 	
 {% comment %}
@@ -29,7 +29,7 @@ layout: default
 {% assign project_pages = "" | split: "" %}
 {% for the_page in site.pages %}
 	{% if the_page.layout == "page-project-page" %}
-		{% assign path_array = the_page.url | replace: "/", " " | strip | split: " " %}
+		{% assign path_array = the_page.url | replace: ".html", "" | replace: "/", " " | strip | split: " " %}
 		{% if path_array[1] == project_id %}
 			{% unless the_page.hidden %}
 				{% assign project_pages = project_pages | push: the_page %}

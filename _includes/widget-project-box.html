@@ -24,13 +24,13 @@
 {% comment %}
 	Find project data.
 {% endcomment %}
-{% assign project_url = "/projects/" | append: include.project | append: "/" %}
+{% assign project_url = "/projects/" | append: include.project | append: ".html" %}
 {% assign project_data = site.pages | find: "url", project_url %}
 
 {% comment %}
 	Output project box HTML.
 {% endcomment %}
-<div id="{{ project_data.url | replace: '/', ' ' | strip | split: ' ' | last }}-box" class="mv4">
+<div id="{{ project_data.url | replace: '.html', '' | replace: '/', ' ' | strip | split: ' ' | last }}-box" class="mv4">
 	<{% if project_data.date <= site.time or site.future == true %}a href="{{ project_data.url }}"{% else %}div{% endif %} class="project-box db ba relative">
 		<div class="w-50">
 			{% if project_data.type %}<div class="smaller lh-title fw9 mv0 pt1 bt bw1 ph2 sans-serif ttu silent-link">{{ project_data.type }}</div>{% endif %}

@@ -14,7 +14,7 @@
 	Set the current project.
 {% endcomment %}
 {% if include.project %}
-	{% assign project_url = "/projects/" | append: include.project | append: "/" %}
+	{% assign project_url = "/projects/" | append: include.project | append: ".html" %}
 	{% assign project_data = site.pages | find: "url", project_url %}
 {% else %}
 	{% assign project_data = page %}
@@ -25,7 +25,7 @@
 	weirdness.
 {% endcomment %}
 {% capture the_content %}<div>
-	<header id="{{ project_data.url | replace: '/', ' ' | strip | split: ' ' | last }}-hero" class="yak-project-header relative">
+	<header id="{{ project_data.url | replace: '.html', '' | replace: '/', ' ' | strip | split: ' ' | last }}-hero" class="yak-project-header relative">
 		<div class="hero"></div>
 		<div class="yak-content wide">
 			<div class="cf ph0 pv5-l pv4">

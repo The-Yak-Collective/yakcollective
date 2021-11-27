@@ -17,7 +17,7 @@
 {% if include.project %}
 	{% assign project_id = include.project %}
 {% else %}
-	{% assign project_id = page.url | replace: "/", " " | strip | split: " " | last %}
+	{% assign project_id = page.url | replace: ".html", "" | replace: "/", " " | strip | split: " " | last %}
 {% endif %}
 
 {% comment %}
@@ -27,7 +27,7 @@
 {% assign project_pages = "" | split: "" %}
 {% for the_page in site.pages %}
 	{% if the_page.layout == "page-project-page" %}
-		{% assign path_array = the_page.url | replace: "/", " " | strip | split: " " %}
+		{% assign path_array = the_page.url | replace: ".html", "" | replace: "/", " " | strip | split: " " %}
 		{% if path_array[1] == project_id %}
 			{% unless the_page.hidden %}
 				{% assign project_pages = project_pages | push: the_page %}
@@ -47,7 +47,7 @@
 	{% capture the_content %}<div>
 		<section class="project-pages w-100 flex flex-wrap items-start">
 			{% for pp in project_pages %}
-				<div id="{{ pp.url | replace: '/', ' ' | strip | split: ' ' | last }}" class="project-page-box-container w-100 dib">
+				<div id="{{ pp.url | replace: '.html', '' | replace: '/', ' ' | strip | split: ' ' | last }}" class="project-page-box-container w-100 dib">
 					{% if pp.date <= site.time or site.future == true %}<a href="{% if pp.original_link %}{{ pp.original_link }}{% else %}{{ pp.url }}{% endif %}"{% else %}<div{% endif %} class="project-page-box db ba {% if pp.date > site.time and site.future != true %}o-40 {% endif %}relative">
 				
 						{% comment %}

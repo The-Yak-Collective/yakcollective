@@ -22,7 +22,7 @@ There was a low din of my five-year-old arguing again about what xe would or wou
   layout="right"
   image=page.hero_image
   alt="Mechanical Turks All the Way Down"
-  caption="Illustration by [Justice](/members/100048/)."
+  caption="Illustration by [Justice](/members/100048.html)."
 %}
 
 This was my second job today. A basic anniversary gig like I’d seen in the training. There were a lot of notes and I quickly scanned them for any red flags, but accepted immediately. Taking jobs fast shows good teamwork which means my teamwork score goes up which, algo willing, will lead to more lucrative jobs.

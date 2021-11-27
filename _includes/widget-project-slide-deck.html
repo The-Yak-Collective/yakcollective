@@ -57,12 +57,12 @@
 	Set the current project.
 {% endcomment %}
 {% if include.project %}
-	{% assign project_url = "/projects/" | append: include.project | append: "/" %}
+	{% assign project_url = "/projects/" | append: include.project | append: ".html" %}
 	{% assign project_data = site.pages | find: "url", project_url %}
 	{% assign project_id = include.project %}
 {% else %}
 	{% assign project_data = page %}
-	{% assign project_id = page.url | replace: "/", " " | strip | split: " " | last %}
+	{% assign project_id = page.url | replace: ".html", "" | replace: "/", " " | strip | split: " " | last %}
 {% endif %}
 
 {% comment %}
@@ -145,7 +145,7 @@
 {% assign project_slides = "" | split: "" %}
 {% for the_page in site.pages %}
 	{% if the_page.layout == "page-project-slide" %}
-		{% assign path_array = the_page.url | replace: "/", " " | strip | split: " " %}
+		{% assign path_array = the_page.url | replace: ".html", "" | replace: "/", " " | strip | split: " " %}
 		{% if path_array[1] == project_id %}
 			{% unless the_page.hidden %}
 				{% assign project_slides = project_slides | push: the_page %}
@@ -200,7 +200,7 @@
 						{% assign inside_section = true %}
 					{% endif %}
 					{% if current_toc_title != ps.title %}
-						<li><a href="#{{ ps.url | replace: '/', ' ' | strip | replace: ' ', '-' }}">{% if use_sections %}{% unless inside_section %}<strong>{% endunless %}{% endif %}{{ ps.title }}{% if use_sections %}{% unless inside_section %}</strong>{% endunless %}{% endif %}</a></li>
+						<li><a href="#{{ ps.url | replace: '.html', '' | replace: '/', ' ' | strip | replace: ' ', '-' }}">{% if use_sections %}{% unless inside_section %}<strong>{% endunless %}{% endif %}{{ ps.title }}{% if use_sections %}{% unless inside_section %}</strong>{% endunless %}{% endif %}</a></li>
 						{% assign current_toc_title = ps.title %}
 					{% endif %}
 				{% endfor %}
@@ -259,7 +259,7 @@
 		{% else %}
 			{% assign the_author = "-" %}
 		{% endif %}
-		{% assign slide_id = ps.url | replace: "/", " " | strip | replace: " ", "-" %}
+		{% assign slide_id = ps.url | replace: ".html", "" | replace: "/", " " | strip | replace: " ", "-" %}
 		{% assign output_title_block = true %}
 		{% if the_collapse_slides and the_title == current_title and the_date == current_date and the_author == current_author%}
 			{% assign output_title_block = false %}
@@ -271,7 +271,7 @@
 					<time class="db small ttu tracked-tight">{{ the_date }}</time>
 				{% endif %}
 				{% if the_author != "-" %}
-					{% assign member_url = "/members/" | append: the_author | append: "/" %}
+					{% assign member_url = "/members/" | append: the_author | append: ".html" %}
 					{% assign member = site.data.knack_yaks.records | find: "field_101_raw", the_author %}
 					<p class="slide-author mv1 small ttu tracked-tight"><a href="{{ member_url }}">{{ member.field_97_raw | strip | replace: " ", "&nbsp;" }}</a></p>
 				{% endif %}

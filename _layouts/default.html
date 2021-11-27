@@ -35,7 +35,7 @@
 			(We also interleave tests for the JSON feed page, though
 			these two pages *should* always be included together...)
 		{% endcomment %}
-		{% assign path_array = page.url | replace: "/", " " | strip | split: " " %}
+		{% assign path_array = page.url | replace: ".html", "" | replace: "/", " " | strip | split: " " %}
 		{% assign path_max_index = path_array.size | minus: 1 %}
 		{% for path_index in (0..path_max_index) %}
 			{% assign new_path = "/" %}
@@ -263,21 +263,21 @@
 						<div class="dib yak-logo-image"></div>
 					</a>
 					<div class="db dtc-l v-mid w-100 w-90-l tc tr-l">
-						<a class="link dib mv2 mh3" href="/members/">Members</a>
-						<a class="link dib mv2 mh3" href="/projects/">Projects</a>
-						<a class="link dib mv2 mh3" href="/writings/">Writings</a>
-						<a class="link dib mv2 mh3" href="/newsletter/">Newsletter</a>
-						<a class="link dib mv2 mh3" href="/about/">About</a>
-						<!-- <a class="link dib mv2 mh3" href="/now/">Now</a> -->
+						<a class="link dib mv2 mh3" href="/members.html">Members</a>
+						<a class="link dib mv2 mh3" href="/projects.html">Projects</a>
+						<a class="link dib mv2 mh3" href="/writings.html">Writings</a>
+						<a class="link dib mv2 mh3" href="/newsletter.html">Newsletter</a>
+						<a class="link dib mv2 mh3" href="/about.html">About</a>
+						<!-- <a class="link dib mv2 mh3" href="/now.html">Now</a> -->
 						<a class="link dib mv2 mh3" href="https://yak.knack.com/yaks#yak-profile/">Profile</a>
-						<a class="link dib mv2 mh3" href="/join/">Join</a>
+						<a class="link dib mv2 mh3" href="/join.html">Join</a>
 					</div>
 				</nav>
 			</div>
 
 			<div class="column-background-wrapper w-100 h-100 fixed top-0 left-0"><div class="column-background h-100"></div></div>
 
-			<article id="{{ page.url | replace: '/', ' ' | strip | replace: ' ', '-' | default: 'index' }}" class="yak-{{ page.layout }} yak-content pb5 mb3 lh-copy flex-auto">
+			<article id="{{ page.url | replace: '.html', '' | replace: '/', ' ' | strip | replace: ' ', '-' | default: 'index' }}" class="yak-{{ page.layout }} yak-content pb5 mb3 lh-copy flex-auto">
 				{{ content }}
 			</article>
 
@@ -293,7 +293,7 @@
 				breaks if JavaScript is disabled in the user agent.
 			{% endcomment %}
 			{% assign random_slogan = site.data.slogans | sample: 1 %}
-			<small class="db tc mt3"><a href="/tips/" id="footer-slogan">{{ random_slogan }}</a></small>
+			<small class="db tc mt3"><a href="/tips.html" id="footer-slogan">{{ random_slogan }}</a></small>
 				
 			{% comment %}
 				Output an RSS feed link, if applicable.

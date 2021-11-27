@@ -7,7 +7,7 @@ layout: none
 {% endcomment %}
 {% assign projects = site.pages | where: "layout", "page-project" %}
 {% for project in projects %}
-	{% assign project_id = project.url | replace: "/", " " | strip | split: " " | last %}
+	{% assign project_id = project.url | replace: ".html", "" | replace: "/", " " | strip | split: " " | last %}
 	{% if project.hero_image %}
 		#{{ project_id }}-hero .hero {
 			content : "";
@@ -39,7 +39,7 @@ layout: none
 {% endcomment %}
 {% assign slides = site.pages | where: "layout", "page-project-slide" %}
 {% for slide in slides %}
-	{% assign slide_id = slide.url | replace: '/', ' ' | strip | replace: ' ', '-' %}
+	{% assign slide_id = slide.url | replace: '.html', '' | replace: '/', ' ' | strip | replace: ' ', '-' %}
 	{% if slide.page_text_color or slide.page_bg_color %}
 		#{{ slide_id }} {
 			{% if slide.page_text_color == "white" %}

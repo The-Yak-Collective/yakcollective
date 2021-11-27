@@ -16,7 +16,7 @@ layout: default
 {% assign hero_caption = page.hero_caption %}
 {% assign hero_border = page.hero_border %}
 {% assign slide_align = page.slide_align %}
-{% assign slide_id = page.url | replace: "/", " " | strip | replace: " ", "-" %}
+{% assign slide_id = page.url | replace: ".html", "" | replace: "/", " " | strip | replace: " ", "-" %}
 
 {% capture the_content %}<div>
 	<h1 class="slide-deck-visible-anchor">{{ page.title }}</h1>
@@ -24,7 +24,7 @@ layout: default
 		<time class="db small ttu tracked-tight">{{ page.date | date_to_long_string: "ordinal", "US" }}</time>
 	{% endif %}
 	{% if page.author %}
-		{% assign member_url = "/members/" | append: page.author | append: "/" %}
+		{% assign member_url = "/members/" | append: page.author | append: ".html" %}
 		{% assign member = site.data.knack_yaks.records | find: "field_101_raw", page.author %}
 		<p class="slide-author mv1 small ttu tracked-tight"><a href="{{ member_url }}">{{ member.field_97_raw | strip | replace: " ", "&nbsp;" }}</a></p>
 	{% endif %}
@@ -57,9 +57,9 @@ layout: default
 {% comment %}
 	Figure out the current project ID and project page.
 {% endcomment %}
-{% assign path_array = page.url | replace: "/", " " | strip | split: " " %}
+{% assign path_array = page.url | replace: ".html", "" | replace: "/", " " | strip | split: " " %}
 {% assign project_id = path_array[1] %}
-{% assign project_url = "/projects/" | append: project_id | append: "/" %}
+{% assign project_url = "/projects/" | append: project_id | append: ".html" %}
 {% assign project = site.pages | find: "url", project_url %}
 
 {% comment %}
@@ -69,7 +69,7 @@ layout: default
 {% assign project_slides = "" | split: "" %}
 {% for the_page in site.pages %}
 	{% if the_page.layout == "page-project-slide" %}
-		{% assign path_array = the_page.url | replace: "/", " " | strip | split: " " %}
+		{% assign path_array = the_page.url | replace: ".html", "" | replace: "/", " " | strip | split: " " %}
 		{% if path_array[1] == project_id %}
 			{% assign project_slides = project_slides | push: the_page %}
 		{% endif %}

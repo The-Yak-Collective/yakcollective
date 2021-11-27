@@ -17,7 +17,7 @@
 
 {% if total_members == 1 %}
 	{% assign member_id = include.member_list[0] %}
-	{% assign member_url = "/members/" | append: member_id | append: "/" %}
+	{% assign member_url = "/members/" | append: member_id | append: ".html" %}
 	{% assign member = site.data.knack_yaks.records | find: "field_101_raw", member_id %}
 
 	{% if member %}
@@ -27,10 +27,10 @@
 	{% endif %}
 {% elsif total_members == 2 %}
 	{% assign first_member_id = include.member_list[0] %}
-	{% assign first_member_url = "/members/" | append: first_member_id | append: "/" %}
+	{% assign first_member_url = "/members/" | append: first_member_id | append: ".html" %}
 	{% assign first_member = site.data.knack_yaks.records | find: "field_101_raw", first_member_id %}
 	{% assign second_member_id = include.member_list[1] %}
-	{% assign second_member_url = "/members/" | append: second_member_id | append: "/" %}
+	{% assign second_member_url = "/members/" | append: second_member_id | append: ".html" %}
 	{% assign second_member = site.data.knack_yaks.records | find: "field_101_raw", second_member_id %}
 
 	{% if first_member %}
@@ -47,7 +47,7 @@
 {% else %}
 	{% assign last_member = include.member_list.last %}
 	{% for member_id in include.member_list %}
-		{% assign member_url = "/members/" | append: member_id | append: "/" %}
+		{% assign member_url = "/members/" | append: member_id | append: ".html" %}
 		{% assign member = site.data.knack_yaks.records | find: "field_101_raw", member_id %}
 
 		{% if member %}

@@ -9,20 +9,20 @@
   empty set, but assigning `path_array[0]` to a variable first
   (`the_category`) works. ¯\_(ツ)_/¯
 {% endcomment %}
-{% assign path_array = page.url | replace: "/", " " | strip | split: " " %}
+{% assign path_array = page.url | replace: ".html", "" | replace: "/", " " | strip | split: " " %}
 {% assign the_category = path_array[0] %}
 {% if site.categories[the_category] %}
   {% assign filtered_pages = site.categories[the_category] %}
   {% assign the_subtitle = the_category | capitalize %}
 {% else %}
   {% assign project_id = path_array[1] %}
-  {% assign project_url = "/projects/" | append: project_id | append: "/" %}
+  {% assign project_url = "/projects/" | append: project_id | append: ".html" %}
   {% assign the_project = site.pages | find: "url", project_url %}
   {% assign the_subtitle = the_project.title %}
   {% assign filtered_pages = "" | split: "" %}
   {% for the_page in site.pages %}
     {% if the_page.layout == "page-project-page" %}
-      {% assign path_array = the_page.url | replace: "/", " " | strip | split: " " %}
+      {% assign path_array = the_page.url | replace: ".html", "" | replace: "/", " " | strip | split: " " %}
       {% if path_array[1] == project_id %}
         {% if the_page.date <= site.time or site.future == true %}
           {% unless the_page.hidden %}

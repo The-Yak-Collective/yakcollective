@@ -3,18 +3,22 @@ layout: none
 ---
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+	<url>
+		<loc>__SITE_BASE_URL__/</loc>
+		<priority>1.0</priority>
+	</url>
 	{% for page in site.pages %}
 		{% assign page_extension = page.url | split: "." | last %}
 		{% assign page_path_array = page.url | split: "/" %}
-		{% unless page.draft == true or page.url == "/tips/" or page.url == "/welcome/" or page_extension == "css" or page_extension == "xml" or page_extension == "json" or page_extension == "js" %}
+		{% unless page.draft == true or page.url == "/tips.html" or page.url == "/welcome.html" or page_extension != "html" %}
 			<url>
-				<loc>__SITE_BASE_URL__{{ page.url | remove: "index.html" }}</loc>
+				<loc>__SITE_BASE_URL__{{ page.url }}</loc>
 				{% if page.date %}
 					<lastmod>{{ page.date | date_to_xmlschema }}</lastmod>
 				{% endif %}
-				{% if page.url == "/" or page.url == "/index.html" or page.url == "/about/" or page.url == "/join/" %}
+				{% if page.url == "/about.html" or page.url == "/join.html" %}
 					<priority>1.0</priority>
-				{% elsif page_path_array[1] == "members" and page.url != "/members/" %}
+				{% elsif page_path_array[1] == "members" %}
 					<priority>0.1</priority>
 				{% endif %}
 			</url>

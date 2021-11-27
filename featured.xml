@@ -30,8 +30,8 @@ layout: none
 				{% assign member_tagline = member.field_41_raw | strip %}
 				<description>{% if member_twitter.size > 0 %}(@{{ member_twitter }}){% endif %}{% if member_tagline.size > 0 %} - {{ member_tagline | xml_escape }}{% endif %}</description>
 				<pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
-				<link>__SITE_BASE_URL__/members/{{ member.field_101_raw }}/#{{ site.time | date: "%Y%m%d" }}</link>
-				<guid>__SITE_BASE_URL__/members/{{ member.field_101_raw }}/#{{ site.time | date: "%Y%m%d" }}</guid>
+				<link>__SITE_BASE_URL__/members/{{ member.field_101_raw }}.html#{{ site.time | date: "%Y%m%d" }}</link>
+				<guid>__SITE_BASE_URL__/members/{{ member.field_101_raw }}.html#{{ site.time | date: "%Y%m%d" }}</guid>
 			</item>
 	</channel>
 </rss>
