@@ -7,7 +7,9 @@
 # Ignore build files
 .bundle/*
 .jekyll-cache/*
+package-lock.json
 _site/*
+node_modules/*
 vendor/*
 
 # Ignore sensitive data from Knack
