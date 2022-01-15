@@ -12,10 +12,8 @@ page_headers: |
     }
   </style>
 summary: |
-
   <img src="/projects/yak-rover/yak-rover.jpg" alt="Yak Rover"/>
-  **Join us for our first DEMO DAY on Sunday December 12, 2021, 1500-2000 UTC (7 AM - 12 PM US Pacific). <a href="https://www.eventbrite.com/e/yak-rover-demo-day-tickets-210102992707">Check out details and register here!</a> The event is virtual and free, but capacity is limited.**
-  
+
   The Yak Rover project is an effort by the Yak Collective to create an open-source rover design capable of actually being deployed on Mars by 2031. We are betting that radically declining launch costs, and increasingly capable infrastructure on Mars and the Moon (such as shared communications relay or charging facilities) could open up the possibility of an open-source space program based on low-cost rovers. 
 
   Rover technology is also strongly aligned with terrestrial autonomous robot technology, in applications such as package delivery, search-and-rescue, and elder-care. The inputs required for these applications, such as efficient batteries, advanced motors, and robust software stacks, are increasingly becoming commoditized and low-cost, lowering barriers to entry. We believe open-source pursuit of the demanding engineering capabilities required for space applications will have significant spin-off benefits for these other applications, and allow independent makers and consultants to develop the kinds of skills that are currently limited to members of advanced corporate and government research laboratories.
@@ -31,9 +29,9 @@ summary: |
   - YR Wonderful Wandering Growth: Another spider-bot
 
   ## Interested?
-  
+
   Join us: <a href="https://YakCollective.org/join">YakCollective.org/join</a>.
-  
+
   We meet every Monday night in the \#yak-rover Discord channel. We have plenty of ways you can contribute to the ongoing builds, or independently. We need you.
 credits:
   build_leaders:
