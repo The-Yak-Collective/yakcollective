@@ -24,9 +24,9 @@ summary: |
   - YR Wonderful Wandering Growth: Another spider-bot
 
   ## Interested?
-  
+
   Join us: <a href="https://YakCollective.org/join">YakCollective.org/join</a>.
-  
+
   We meet every Monday night in the \#yak-rover Discord channel. We have plenty of ways you can contribute to the ongoing builds, or independently. We need you.
 credits:
   build_leaders:
