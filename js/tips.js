@@ -26,5 +26,5 @@ var tip_num = tip_to_show + 1;
 
 document.getElementById("yak-collective-consulting-tip-number").innerHTML = "Yak Collective Consulting Tip #" + tip_num;
 document.getElementById("yak-collective-consulting-tip").innerHTML = tips[tip_to_show].tip;
-document.getElementById("yak-collective-consulting-tip-author").href = "/members/" + tips[tip_to_show].author + "/";
+document.getElementById("yak-collective-consulting-tip-author").href = "members/" + tips[tip_to_show].author + ".html";
 document.getElementById("yak-collective-consulting-tip-author").innerHTML = members[tips[tip_to_show].author];

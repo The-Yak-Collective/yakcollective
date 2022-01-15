@@ -222,23 +222,17 @@
 			{% assign member = site.data.knack_yaks.records | find: "field_101_raw", page.author %} 
 			{% if member %}
 				{% assign twitter = member.field_43_raw | strip %}
-				{% assign avatar_url = member.field_44_raw.url | strip %}
 				{% if twitter != "" %}
 					{% assign page_author = twitter %}
 				{% endif %}
-				{% if avatar_url != "" %}
-					{% assign page_image = avatar_url | remove: "https://s3-eu-west-1.amazonaws.com/assets.knack-eu.com/assets/5f70876d8e7037001504bfe8/" | prepend: "https://res.cloudinary.com/yak-collective/image/upload/c_fill,g_face,h_800,w_800,e_sharpen:50/yak-barn-v1/" %}
-				{% endif %}
+				{% assign page_image = "__SITE_BASE_URL__/members/" | append: page.author | append: "-og.jpg" %}
 			{% endif %}
 		{% elsif page.field_101_raw %}
 			{% assign twitter = page.field_43_raw | strip %}
-			{% assign avatar_url = page.field_44_raw.url | strip %}
 			{% if twitter != "" %}
 				{% assign page_author = twitter %}
 			{% endif %}
-			{% if avatar_url != "" %}
-				{% assign page_image = avatar_url | remove: "https://s3-eu-west-1.amazonaws.com/assets.knack-eu.com/assets/5f70876d8e7037001504bfe8/" | prepend: "https://res.cloudinary.com/yak-collective/image/upload/c_fill,g_face,h_800,w_800,e_sharpen:50/yak-barn-v1/" %}
-			{% endif %}
+			{% assign page_image = "__SITE_BASE_URL__/members/" | append: page.author | append: "-og.jpg" %}
 		{% endif %}
 		{% if page.hero_image %}
 			{% assign page_image = page.hero_image | prepend: "__SITE_BASE_URL__" %}

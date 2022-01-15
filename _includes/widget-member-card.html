@@ -83,9 +83,9 @@
 {% comment %}
 	Output member card HTML.
 {% endcomment %}
-<div class="w-100 mv3" id="{{ member_data.field_101_raw }}">
+<div class="w-100 mv3" id="{{ member_id }}">
 	{% if include.standalone %}<div{% else %}<a href="{{ member_url }}"{% endif %} class="flex items-center lh-copy pa3 ba member-box">
-		<img class="w3 h3 br-100 ba image-border" src="{% if avatar_url != "" %}{{ avatar_url | remove: "https://s3-eu-west-1.amazonaws.com/assets.knack-eu.com/assets/5f70876d8e7037001504bfe8/" | prepend: "https://res.cloudinary.com/yak-collective/image/upload/c_fill,g_face,h_180,w_180,e_sharpen:50/yak-barn-v1/" }}{% else %}/img/member.jpg{% endif %}" alt="{{ professional_name }}" />
+		<img class="w3 h3 br-100 ba image-border" src="/members/{{ member_id }}.jpg" alt="{{ professional_name }}" />
 		<div class="pl3 pr2 flex-auto">
 
 			{% comment %}

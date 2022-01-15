@@ -37,6 +37,7 @@ TEMP_DIR="$(mktemp -d)"
 #
 #    https://docs.knack.com/docs/retrieving-multiple-records
 #
+echo "Pulling Knack member data..."
 curl -sS -X  GET \
          -H "X-Knack-Application-Id: $KNACK_APP_ID" \
          -H "X-Knack-REST-API-Key: $KNACK_API_KEY" \
@@ -55,6 +56,7 @@ TOTAL_PAGES=$(jq .total_pages $TEMP_DIR/knack-yaks-1.json)
 #
 if [[ TOTAL_PAGES -gt 1 ]]; then
 	for (( CURRENT_PAGE=2; CURRENT_PAGE<=$TOTAL_PAGES; CURRENT_PAGE++ )); do
+		echo "Pulling Knack member data ($CURRENT_PAGE/$TOTAL_PAGES)..."
 		curl -sS -X  GET \
 		         -H "X-Knack-Application-Id: $KNACK_APP_ID" \
 		         -H "X-Knack-REST-API-Key: $KNACK_API_KEY" \
@@ -66,8 +68,38 @@ fi
 #
 #     https://stackoverflow.com/a/52730148
 #
+echo "Processing Knack member data..."
 mkdir -p _data
 jq -n '{records: [inputs.records] | add}' $TEMP_DIR/knack-yaks-* > _data/knack_yaks.json
+
+# Download Knack avatars locally.
+#
+mkdir -p members
+
+while IFS= read -r RECORD; do
+	MEMBER_ID="$(echo "$RECORD" | sed -e 's/\t.*$//')"
+	echo "Processing avatar for member $MEMBER_ID..."
+	KNACK_PATH="$(echo "$RECORD" | sed -e "s/^$MEMBER_ID\t\?//;s#https://s3-eu-west-1.amazonaws.com/assets.knack-eu.com/assets/5f70876d8e7037001504bfe8/##")"
+	if [[ -n "$KNACK_PATH" ]]; then
+		USE_CURL="yes"
+		AVATAR_URL="https://res.cloudinary.com/yak-collective/image/upload/c_fill,g_face,w_400,h_400,e_sharpen:50/yak-barn-v1/${KNACK_PATH%.*}.jpg"
+		OG_URL="https://res.cloudinary.com/yak-collective/image/upload/c_fill,g_face,w_1200,h_630,e_sharpen:50/yak-barn-v1/${KNACK_PATH%.*}.jpg"
+	else
+		USE_CURL="no"
+		AVATAR_URL=""
+		OG_URL=""
+	fi
+	if [[ "$USE_CURL" == "yes" ]]; then
+		curl -sS -o "members/${MEMBER_ID}.jpg"    "$AVATAR_URL"
+		curl -sS -o "members/${MEMBER_ID}-og.jpg" "$OG_URL"
+	fi
+	if [[ ! -s "members/${MEMBER_ID}.jpg" ]]; then
+		cp "img/yak.jpg" "members/${MEMBER_ID}.jpg"
+	fi
+	if [[ ! -s "members/${MEMBER_ID}-og.jpg" ]]; then
+		cp "img/yak-og.jpg" "members/${MEMBER_ID}-og.jpg"
+	fi
+done <<< "$(jq -r '.records[] | [.field_101_raw, .field_44_raw.url?] | @tsv' _data/knack_yaks.json | sed -e 's/^\s*//;s/\s*$//')"
 
 # Cleanup.
 #
