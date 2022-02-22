@@ -37,6 +37,11 @@ else
 	exit 1
 fi
 
+# Revert escaped HTML characters that are needed to prevent Jekyll
+# from barfing, but then cause minify (below) to barf. Sheesh.
+#
+find _site -type f -iname '*.html' -exec sed -i -e 's/&#x007b;/{/g;s/&#x007d;/}/g' "{}" \;
+
 # Minify: https://github.com/tdewolff/minify
 #
 # Current version: 2.9.22 (last checked 2021-11-14)
