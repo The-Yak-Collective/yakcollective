@@ -54,6 +54,11 @@ if [[ -n "$1" ]]; then
 fi
 find _site -type f \( -iname '*.html'  -o -iname '*.xml'  -o -iname '*.json' -o -iname '*.js' -o -iname '*.css' \) -exec sed -i -e "s|__SITE_BASE_URL__|$SITE_BASE_URL|g" "{}" \;
 
+# Revert escaped HTML characters that are needed to prevent Jekyll
+# from barfing, but then cause minify (below) to barf. Sheesh.
+#
+find _site -type f -iname '*.html' -exec sed -i -e 's/&#x007b;/{/g;s/&#x007d;/}/g' "{}" \;
+
 # Minify: https://github.com/tdewolff/minify
 #
 # Current version: 2.9.22 (last checked 2021-11-14)

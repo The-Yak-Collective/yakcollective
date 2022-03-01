@@ -3,7 +3,7 @@
 const moment = require("moment");
 const chrono = require("chrono-node");
 const accents = require("remove-accents");
-const axios = require("axios");
+// const axios = require("axios");
 const { Octokit } = require("@octokit/rest");
 
 // Lambda function handler
@@ -130,6 +130,7 @@ exports.handler = async function(event, context) {
 	//
 	//   https://attacomsian.com/blog/node-http-post-request
 	//
+	/*
 	if (postCategory === "writings") {
 		const discordURL = "https://discordapp.com/api/webhooks/" + process.env.DISCORD_CHANNEL + "/" + process.env.DISCORD_WEBHOOK_TOKEN;
 		const discordContent = {
@@ -144,6 +145,7 @@ exports.handler = async function(event, context) {
 			};
 		}
 	}
+	*/
 
 	// Return success
 	//
