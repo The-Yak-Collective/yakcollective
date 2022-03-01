@@ -53,7 +53,7 @@ credits:
 
 # The Yak Online Governance Primer
 
-***How do you do online governance?** This primer is intended as a guided tour through a curated set of readings—based on a year of study by the [Yak Collective](https://www.yakcollective.org/)<a href="#00" id="00top">*</a>—that can help groups and organizations navigate this question. In selecting the readings we cast a wide net, but in our discussions we made an effort to consider them from the specific perspective of online governance challenges. We believe the ideas surveyed here are applicable to groups and organizations with widely varied purposes, levels of autonomy, degrees of decentralization, and technological sophistication.*
+***How do you do online governance?** This primer is intended as a guided tour through a curated set of readings—based on a year of study by the [Yak Collective](/index.html)<a href="#00" id="00top">*</a>—that can help groups and organizations navigate this question. In selecting the readings we cast a wide net, but in our discussions we made an effort to consider them from the specific perspective of online governance challenges. We believe the ideas surveyed here are applicable to groups and organizations with widely varied purposes, levels of autonomy, degrees of decentralization, and technological sophistication.*
 
 * [Collect this paper as an NFT](https://yakcollective.mirror.xyz/aJdO_SO3gw34cLtwBwNC2OD3s0YT3us9C-C2NNPQ_us)
 * [Download as a PDF](/projects/yak-online-governance-primer/yak-online-governance-primer.pdf)
@@ -271,7 +271,7 @@ The current broad mission of the Yak Collective is to create an online network a
 
 Our own studies and readings continue in our weekly online governance meetings which are free and open to all our members. You are welcome to join us. You are also welcome to reach out for help and consulting support for your own online governance challenges.
 
-You can join the Yak Collective [here](/join/). The online governance chats happen on our Discord server Fridays at 11 CST (UTC-6).
+You can join the Yak Collective [here](/join.html). The online governance chats happen on our Discord server Fridays at 11 CST (UTC-6).
 
 ---
 
@@ -427,4 +427,4 @@ We recommend the following lighthouse readings as being particularly valuable si
 
 ### The Yak Collective // Online Governance Study Group
 
-**Project editors** / [Sachin Benny](/members/100013/) and [Venkatesh Rao](/members/100041/) // **Project writers** / [Sachin Benny](/members/100013/), [Bryan King](/members/100024/), [Grigori Milov](/members/100079/), [Venkatesh Rao](/members/100041/) // **Illustrations** / Grace Witherell // **Members** / [Patrick Atwater](/members/100109/), [Jenna Dixon](/members/100018/), [Scott Garlinger](/members/100022/), Oliver King, [Phil Wolff](/members/100053/)
+**Project editors** / [Sachin Benny](/members/100013.html) and [Venkatesh Rao](/members/100041.html) // **Project writers** / [Sachin Benny](/members/100013.html), [Bryan King](/members/100024.html), [Grigori Milov](/members/100079.html), [Venkatesh Rao](/members/100041.html) // **Illustrations** / Grace Witherell // **Members** / [Patrick Atwater](/members/100109.html), [Jenna Dixon](/members/100018.html), [Scott Garlinger](/members/100022.html), Oliver King, [Phil Wolff](/members/100053.html)
