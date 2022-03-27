@@ -3,24 +3,144 @@ layout: default
 ---
 
 {% comment %}
-	Template for individual member pages; inherits from the "page"
-	template. Applied to data files from the `members` category.
+	Template for individual member pages. Applied to data files from
+	the `members` category.
 {% endcomment %}
 
 {% comment %}
 	Pull in relevant member information from page properties.
 {% endcomment %}
-{% assign page_member_id = page.field_101_raw %}
+{% assign member_id = page.field_101_raw %}
+{% assign member_url = "/members/" | append: member_id | append: ".html" %}
+{% assign avatar_url = page.field_44_raw.url | strip %}
 {% assign professional_name = page.field_97_raw | strip %}
+{% assign tagline = page.field_41_raw | strip %}
+{% assign currently = page.field_23_raw | strip %}
+{% assign previously = page.field_42_raw | strip %}
+{% assign url_1_label = page.field_65_raw.label | strip %}
+{% assign url_1_url = page.field_65_raw.url | strip %}
+{% assign url_2_label = page.field_66_raw.label | strip %}
+{% assign url_2_url = page.field_66_raw.url | strip %}
+{% assign url_3_label = page.field_67_raw.label | strip %}
+{% assign url_3_url = page.field_67_raw.url | strip %}
+{% assign twitter = page.field_43_raw | strip %}
 {% assign background_info = page.field_32_raw | strip %}
+
+{% comment %}
+	Set "indie status". We bin this into ranges, calculated from the
+	provided "indie start year".
+{% endcomment %}
+{% if page.field_36_raw %}
+	{% assign current_year = site.time | date: "%Y" %}
+	{% assign years_indie = current_year | minus: page.field_36_raw %}
+	{% if years_indie <= 1 %}
+		{% assign indie_status = "1 year" %}
+	{% elsif years_indie <= 2 %}
+		{% assign indie_status = "2 years" %}
+	{% elsif years_indie < 5 %}
+		{% assign indie_status = "3+ years" %}
+	{% elsif years_indie < 10 %}
+		{% assign indie_status = "5+ years" %}
+	{% elsif years_indie < 15 %}
+		{% assign indie_status = "10+ years" %}
+	{% elsif years_indie < 20 %}
+		{% assign indie_status = "15+ years" %}
+	{% elsif years_indie < 30 %}
+		{% assign indie_status = "20+ years" %}
+	{% elsif years_indie < 40 %}
+		{% assign indie_status = "30+ years" %}
+	{% elsif years_indie < 50 %}
+		{% assign indie_status = "40+ years" %}
+	{% elsif years_indie < 75 %}
+		{% assign indie_status = "50+ years" %}
+	{% elsif years_indie < 100 %}
+		{% assign indie_status = "75+ years" %}
+	{% else %}
+		{% assign indie_status = "100+ years" %}
+	{% endif %}
+{% else %}
+	{% assign indie_status = "" %}
+{% endif %}
 
 <h1>{{ professional_name }}</h1>
 
 {% comment %}
-	Pull in the member card (which functions as an information box
-	here, rather than a link).
+	Output member card HTML.
 {% endcomment %}
-{% include widget-member-card.html standalone=true member=page_member_id %}
+<div class="w-100 mv3" id="{{ member_id }}">
+	<div class="flex items-center lh-copy pa3 ba member-box">
+		<img class="w3 h3 br-100 ba image-border" src="/members/{{ member_id }}.jpg" alt="{{ professional_name }}" />
+		<div class="pl3 pr2 flex-auto">
+
+			{% comment %}
+				Member "professional" name. The `pseudo-link` class is
+				used to make the card act a bit more like an actual
+				link when in "link mode".
+			{% endcomment %}
+			<small class="db b">{{ professional_name }}</small>
+
+			{% comment %}
+				Inset member tagline, if set.
+			{% endcomment %}
+			{% if tagline != "" %}
+				<small class="db">{{ tagline }}</small>
+			{% endif %}
+
+			{% comment %}
+				Inset member "indie status", if set.
+			{% endcomment %}
+			{% if indie_status != "" %}
+				<small class="db">Indie status: {{ indie_status }}</small>
+			{% endif %}
+
+			{% comment %}
+				Inset member "currently" information, if set.
+			{% endcomment %}
+			{% if currently != "" %}
+				<small class="db">Currently: {{ currently }}</small>
+			{% endif %}
+
+			{% comment %}
+				Inset member "previously" information, if set.
+			{% endcomment %}
+			{% if previously != "" %}
+				<small class="db">Previously: {{ previously }}</small>
+			{% endif %}
+
+			{% comment %}
+				Inset member links, if set. Links are separated by " / "
+				sequences, and only contain *actual* links when the
+				member card is in "data mode" (otherwise, they're just
+				for show). Note that we assume that links are provided
+				IN ORDER, so a record with a gap in its links will show
+				nothing after that gap.
+			{% endcomment %}
+			{% if url_1_label != "" %}
+				<small class="db">
+					<a href="{{ url_1_url }}">{{ url_1_label }}</a>
+					{% if url_2_label != "" %}
+						/ <a href="{{ url_2_url }}">{{ url_2_label }}</a>
+						{% if url_3_label != "" %}
+							/ <a href="{{ url_3_url }}">{{ url_3_label }}</a>
+						{% endif %}
+					{% endif %}
+				</small>
+			{% endif %}
+		</div>
+
+		{% comment %}
+			Inset the member's Twitter handle, if set. As with member
+			links, we don't *actually* link anything unless the member
+			card is in "data mode" (otherwise, this bit is also just for
+			show).
+		{% endcomment %}
+		{% if twitter != "" %}
+			<div class="small">
+				<a href="https://twitter.com/{{ twitter }}">@{{ twitter }}</a>
+			</div>
+		{% endif %}
+	</div>
+</div>
 
 {% if background_info != "" %}
 	{{ background_info | markdownify }}
@@ -37,13 +157,13 @@ layout: default
 {% for project in projects %}
 	{% if project.credits %}
 		{% if project.credits.lead_editors %}
-			{% if project.credits.lead_editors contains page_member_id %}
+			{% if project.credits.lead_editors contains member_id %}
 				{% assign projects_lead = projects_lead | push: project %}
 			{% endif %}
 		{% endif %}
 		{% for credits_block in project.credits %}
 			{% if credits_block[1].size > 0 and credits_block[0] != "lead_editors" %}
-				{% if credits_block[1] contains page_member_id %}
+				{% if credits_block[1] contains member_id %}
 					{% unless projects_lead contains project %}
 						{% assign projects_collaborated = projects_collaborated | push: project %}
 					{% endunless %}
@@ -80,9 +200,9 @@ layout: default
 	can't include it directly. Instead, we capture its output and then
 	transform it into HTML using `markdownify`.
 {% endcomment %}
-{% assign num_writings = site.categories["writings"] | where: "author", page_member_id | size %}
+{% assign num_writings = site.categories["writings"] | where: "author", member_id | size %}
 {% if num_writings > 0 %}
 	<h2 id="writings">Writings</h2>
-	{% capture member_writings %}{% include widget-post-list.md init_header_level=3 show_date=true show_author=false author=page_member_id category="writings" %}{% endcapture %}
+	{% capture member_writings %}{% include widget-post-list.md init_header_level=3 show_date=true show_author=false author=member_id category="writings" %}{% endcapture %}
 	{{ member_writings | markdownify }}
 {% endif %}

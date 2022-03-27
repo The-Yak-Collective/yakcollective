@@ -12,7 +12,7 @@
 
 {% assign author = site.data.knack_yaks.records | find: "field_101_raw", include.author %}
 {% if author %}
-	<div class="mt4">{% include widget-member-card.html member=include.author %}</div>
+	<div class="mt4">{% include widget-member-bio.html member=include.author %}</div>
 	{% if author.field_32_raw %}
 		<div class="author-bio">
 			{{ author.field_32_raw | strip | markdownify }}

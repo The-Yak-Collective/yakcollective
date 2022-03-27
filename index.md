@@ -11,7 +11,7 @@ Check out our [members](/members.html) and [projects](/projects.html), read s
 ## Featured Yak
 
 {% assign member_id = site.data.featured_yak.field_101_raw %}
-{% include widget-member-card.html member=member_id %}
+{% include widget-member-bio.html member=member_id %}
 
 ## Most Recent Project
 

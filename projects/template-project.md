@@ -266,27 +266,21 @@ Example usage:
 
 See _Astonishing Stories_ project (sub)pages (such as ["Wholeness in a Timeless Activity"](/projects/astonishing-stories/wholeness-in-a-timeless-activity/)) for examples of this widget in action.
 
-### `widget-member-card`
+### `widget-member-bio`
 
-Member cards can be used either as links to the actual member page or as containers of member information. In general you should In the first case.
+Member bios pull in member biographical data and provide a link to the appropriate member page. Always outputs the member name using an `<h3/>` tag. You probably want to include these at the end of the page in their own (`<h2/>`) section.
 
 _Requires_ a single parameter:
 
-- **`member`** is someone's Knack "Member ID". For example, Venkatesh Rao's member card would be called by passing in `member=100041`.
-
-There is also an optional paramter:
-
-- **`standalone`** is a [truthy/falsy](https://shopify.github.io/liquid/basics/truthy-and-falsy/) parameter indicating whether the card should be presented as a fully-functional container of member information (true), or as a link to a member page (false). Treated as falsy if omitted, which is almost always what you want.
+- **`member`** is someone's Knack "Member ID". For example, Venkatesh Rao's member bio would be called by passing in `member=100041`.
 
 Example usage:
 
 ```markdown
-{% include widget-member-card.html
+{% include widget-member-bio.html
    member=100041
 %}
 ```
-
-Member cards can be found on many pages throughout the Yak Collective website; for example, start with the [_Members_](/members/) page itself to see cards in their "default" mode, and then click through to any member page to see a card in `standalone` mode.
 
 ### `widget-project-box`
 
