@@ -292,6 +292,7 @@ h6 a:hover {
 
 .project-page-box .hero {
 	height: 24rem;
+	background-size: cover;
 }
 
 .page-info {
