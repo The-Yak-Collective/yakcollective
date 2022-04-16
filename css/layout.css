@@ -273,6 +273,11 @@ h6 a:hover {
 	text-decoration-line: underline;
 }
 
+.h1-image {
+	font-size: 2em;
+	margin-top: max(1.2em, 1rem);
+}
+
 /* Copied from: https://css-tricks.com/scaled-proportional-blocks-with-css-and-javascript/ */
 .google-slideshow {
 	height: 0;

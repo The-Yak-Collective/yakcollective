@@ -27,6 +27,78 @@ layout: default
 {% assign background_info = page.field_32_raw | strip %}
 
 {% comment %}
+	People screw up their URLs all the time. Try to fix some common
+	mistakes.
+{% endcomment %}
+{% assign url_label_start = url_1_label | downcase | slice: 0, 4 %}
+{% assign url_start = url_1_url | downcase | slice: 0, 4 %}
+{% if url_start != "http" %}
+	{% if url_label_start == "http" %}
+		{% assign url_temp = url_1_url %}
+		{% assign url_1_url = url_1_label %}
+		{% assign url_1_label = url_temp %}
+	{% else %}
+		{% assign url_1_url = "" %}
+		{% assign url_1_label = "" %}
+	{% endif %}
+{% endif %}
+{% if url_1_url != "" %}
+	{% assign url_label_start = url_label | downcase | slice: 0, 4 %}
+	{% assign url_1_url = url_1_url | downcase %}
+	{% if url_label_start == "http" and url_1_label != url_1_url %}
+		{% assign url_1_label = url_1_url %}
+	{% elsif url_1_label == "" %}
+		{% assign url_1_label = url_1_url %}
+	{% endif %}
+{% endif %}
+{% assign url_label_start = url_2_label | downcase | slice: 0, 4 %}
+{% assign url_start = url_2_url | downcase | slice: 0, 4 %}
+{% if url_start != "http" %}
+	{% if url_label_start == "http" %}
+		{% assign url_temp = url_2_url %}
+		{% assign url_2_url = url_2_label %}
+		{% assign url_2_label = url_temp %}
+	{% else %}
+		{% assign url_2_url = "" %}
+		{% assign url_2_label = "" %}
+	{% endif %}
+{% endif %}
+{% if url_2_url != "" %}
+	{% assign url_label_start = url_label | downcase | slice: 0, 4 %}
+	{% assign url_2_url = url_2_url | downcase %}
+	{% if url_label_start == "http" and url_2_label != url_2_url %}
+		{% assign url_2_label = url_2_url %}
+	{% elsif url_2_label == "" %}
+		{% assign url_2_label = url_2_url %}
+	{% endif %}
+{% endif %}
+{% assign url_label_start = url_3_label | downcase | slice: 0, 4 %}
+{% assign url_start = url_3_url | downcase | slice: 0, 4 %}
+{% if url_start != "http" %}
+	{% if url_label_start == "http" %}
+		{% assign url_temp = url_3_url %}
+		{% assign url_3_url = url_3_label %}
+		{% assign url_3_label = url_temp %}
+	{% else %}
+		{% assign url_3_url = "" %}
+		{% assign url_3_label = "" %}
+	{% endif %}
+{% endif %}
+{% if url_3_url != "" %}
+	{% assign url_label_start = url_label | downcase | slice: 0, 4 %}
+	{% assign url_3_url = url_3_url | downcase %}
+	{% if url_label_start == "http" and url_3_label != url_3_url %}
+		{% assign url_3_label = url_3_url %}
+	{% elsif url_3_label == "" %}
+		{% assign url_3_label = url_3_url %}
+	{% endif %}
+{% endif %}
+{% assign twitter_start = twitter | slice: 0 %}
+{% if twitter_start == "@" %}
+	{% assign twitter = twitter | replace_first: "@", "" %}
+{% endif %}
+
+{% comment %}
 	Set "indie status". We bin this into ranges, calculated from the
 	provided "indie start year".
 {% endcomment %}
@@ -62,88 +134,51 @@ layout: default
 	{% assign indie_status = "" %}
 {% endif %}
 
-<h1>{{ professional_name }}</h1>
+<div class="flex items-top">
+	<div class="mr4 mb3 h1-image">
+		<img class="w4 h4 br-100 ba image-border" src="/members/{{ member_id }}.jpg" alt="{{ professional_name }}">
+	</div>
 
-{% comment %}
-	Output member card HTML.
-{% endcomment %}
-<div class="w-100 mv3" id="{{ member_id }}">
-	<div class="flex items-center lh-copy pa3 ba member-box">
-		<img class="w3 h3 br-100 ba image-border" src="/members/{{ member_id }}.jpg" alt="{{ professional_name }}" />
-		<div class="pl3 pr2 flex-auto">
+	<div>
+		<h1>{{ professional_name }}</h1>
 
-			{% comment %}
-				Member "professional" name. The `pseudo-link` class is
-				used to make the card act a bit more like an actual
-				link when in "link mode".
-			{% endcomment %}
-			<small class="db b">{{ professional_name }}</small>
+		{% if tagline != "" %}
+			<small class="db"><p>{{ tagline }}</p></small>
+		{% endif %}
 
-			{% comment %}
-				Inset member tagline, if set.
-			{% endcomment %}
-			{% if tagline != "" %}
-				<small class="db">{{ tagline }}</small>
-			{% endif %}
-
-			{% comment %}
-				Inset member "indie status", if set.
-			{% endcomment %}
+		{% if indie_status != "" or currently != "" or previously != "" %}
 			{% if indie_status != "" %}
-				<small class="db">Indie status: {{ indie_status }}</small>
+				<small class="db"><b>Indie status:</b> {{ indie_status }}</small>
 			{% endif %}
-
-			{% comment %}
-				Inset member "currently" information, if set.
-			{% endcomment %}
 			{% if currently != "" %}
-				<small class="db">Currently: {{ currently }}</small>
+				<small class="db"><b>Currently:</b> {{ currently }}</small>
 			{% endif %}
-
-			{% comment %}
-				Inset member "previously" information, if set.
-			{% endcomment %}
 			{% if previously != "" %}
-				<small class="db">Previously: {{ previously }}</small>
+				<small class="db"><b>Previously:</b> {{ previously }}</small>
 			{% endif %}
-
-			{% comment %}
-				Inset member links, if set. Links are separated by " / "
-				sequences, and only contain *actual* links when the
-				member card is in "data mode" (otherwise, they're just
-				for show). Note that we assume that links are provided
-				IN ORDER, so a record with a gap in its links will show
-				nothing after that gap.
-			{% endcomment %}
-			{% if url_1_label != "" %}
-				<small class="db">
-					<a href="{{ url_1_url }}">{{ url_1_label }}</a>
-					{% if url_2_label != "" %}
-						/ <a href="{{ url_2_url }}">{{ url_2_label }}</a>
-						{% if url_3_label != "" %}
-							/ <a href="{{ url_3_url }}">{{ url_3_label }}</a>
-						{% endif %}
-					{% endif %}
-				</small>
-			{% endif %}
-		</div>
-
-		{% comment %}
-			Inset the member's Twitter handle, if set. As with member
-			links, we don't *actually* link anything unless the member
-			card is in "data mode" (otherwise, this bit is also just for
-			show).
-		{% endcomment %}
-		{% if twitter != "" %}
-			<div class="small">
-				<a href="https://twitter.com/{{ twitter }}">@{{ twitter }}</a>
-			</div>
 		{% endif %}
 	</div>
 </div>
 
 {% if background_info != "" %}
 	{{ background_info | markdownify }}
+{% endif %}
+
+{% if url_1_url != "" or twitter != "" %}
+	<ul>
+		{% if url_1_url != "" %}
+			<li><a href="{{ url_1_url }}">{{ url_1_label }}</a></li>
+		{% endif %}
+		{% if url_2_url != "" %}
+			<li><a href="{{ url_2_url }}">{{ url_2_label }}</a></li>
+		{% endif %}
+		{% if url_3_url != "" %}
+			<li><a href="{{ url_3_url }}">{{ url_3_label }}</a></li>
+		{% endif %}
+		{% if twitter != "" %}
+			<li><a href="https://twitter.com/{{ twitter }}">@{{ twitter }} on Twitter</a></li>
+		{% endif %}
+	</ul>
 {% endif %}
 
 {% comment %}
