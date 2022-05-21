@@ -59,8 +59,8 @@ Check out our [members](/members.html) and [projects](/projects.html), read s
 {% comment %}
 	Output featured yak info.
 {% endcomment %}
-<div class="flex items-top no-top-margin">
-	<div class="w4 mr0 mr4-l h3-image">
+<div class="mt3 mb3 flex items-top no-top-margin">
+	<div class="w3 w4-l mr3 mr4-l h3-image">
 		<a href="{{ member_url }}"><img class="w3 w4-l h3 h4-l br-100 ba image-border" src="/members/{{ member_id }}.jpg" alt="{{ professional_name }}"></a>
 	</div>
 
