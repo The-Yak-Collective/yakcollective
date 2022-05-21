@@ -2,7 +2,7 @@
 ---
 # Join the Yak Collective
 
-The Yak Collective is an online space for collaborative tinkering towards a post-[Weirding](https://www.theatlantic.com/technology/archive/2016/09/harambe-the-perfect-meme/498743/) world with an emphasis on doing over talking. You can learn more about the what, why, and how on the [About page](/about/).
+The Yak Collective is an online space for collaborative tinkering. You can learn more about the what, why, and how on the [About page](/about/).
 
 If this interests you, take a moment to read our [code of conduct](https://roamresearch.com/#/app/ArtOfGig/page/CF_GEWrWq) before joining, and then answer a couple of simple questions (all <span class="required">*</span> fields are required) to access our Discord link.
 
