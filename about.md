@@ -6,13 +6,13 @@
 
 ## The What
 
-The Yak Collective is an online space for anyone interested in collaborative tinkering towards a post-[Weirding](https://www.theatlantic.com/technology/archive/2016/09/harambe-the-perfect-meme/498743/) world — a world where anomalous and outlier events are an every day occurance. We do this by creatively curating a slow-lane, long-term temporal orientation. If you want to muddle away slowly but steadily at a 10-year goal, this is a place for you. It is a space where you can work with others on gardening your indie or weekends-and-evenings life in collaboration with others who share some of your priorities/interests.
+The Yak Collective is an online space for collaborative tinkering. We do this by creatively curating a slow-lane, long-term temporal orientation. If you want to muddle away slowly but steadily at a 10-year goal, this is a place for you. It is a space where you can work with others on gardening your indie or weekends-and-evenings life in collaboration with others who share some of your priorities/interests.
 
 We don’t have a single overarching mission you can orient around or a formal onboarding process that will guide you to activities that might interest you. What we do have is an extremely strong emphasis on _doing_ things together over simply hanging out and chatting (though we do that too). This can be frustrating to people who are more used to primarily social or networking communities. While long-time members might occasionally help you get oriented a bit, **it’s mostly up to you to wander in, introduce yourself, look around, say hello to old friends, make new friends, find something interesting to do, and start doing it.** From that, you can grow into some sort of unique long-term role you basically make up for yourself. This requires patience, willingness to low-key lurk while you figure it out, and self-starter tendencies.
 
 ## The Why
 
-We feel there’s something valuable to doing this “tinkering towards a post-Weirding world,” aspiring to work in a decentralized, convivial, leaderless way, using more convivial tooling than is typical in the pre-Weirding world. We think this is better than either working alone or being in one of the more alienating corners of the pre-Weirding world. 
+We feel there’s something valuable to aspiring to work in a decentralized, convivial, leaderless way. We think this is better than either working alone or being in one of the more alienating corners of the modern world.
 
 ## The How
 

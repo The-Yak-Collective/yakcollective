@@ -16,7 +16,7 @@ plugins:
 # Also used in some other places now, so check around before changing!
 #
 name: The Yak Collective
-description: The Yak Collective is a network of over 300 independent consultants, coaches, and freelancers with varied technical and creative skills.
+description: The Yak Collective is an online space for collaborative tinkering.
 url: https://www.yakcollective.org
 
 # Generate member pages from _data/knack-yaks.json
