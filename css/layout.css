@@ -258,7 +258,9 @@ h2 a,
 h3 a,
 h4 a,
 h5 a,
-h6 a {
+h6 a,
+.h1-image a,
+.h3-image a {
 	color: inherit !important;
 	text-decoration-line: none;
 	opacity: 1.0 !important;
@@ -276,6 +278,47 @@ h6 a:hover {
 .h1-image {
 	font-size: 2em;
 	margin-top: max(1.2em, 1rem);
+}
+
+.h2-image {
+	font-size: 1.5em;
+	margin-top: max(1.8em, 1rem);
+}
+
+.h3-image {
+	font-size: 1.17em;
+	margin-top: max(1.8em, 1rem);
+}
+
+.h4-image {
+	font-size: 1em;
+	margin-top: max(1.8em, 1rem);
+}
+
+.h5-image {
+	font-size: 0.83em;
+	margin-top: max(1.8em, 1rem);
+}
+
+.h6-image {
+	font-size: 0.67em;
+	margin-top: max(1.8em, 1rem);
+}
+
+.no-top-margin .h1-image,
+.no-top-margin .h2-image,
+.no-top-margin .h3-image,
+.no-top-margin .h4-image,
+.no-top-margin .h5-image,
+.no-top-margin .h6-image,
+.no-top-margin *:first-child,
+.no-top-margin div *:first-child {
+	margin-top: 0;
+}
+
+.no-bottom-margin *:last-child,
+.no-bottom-margin div *:last-child {
+	margin-bottom: 0;
 }
 
 /* Copied from: https://css-tricks.com/scaled-proportional-blocks-with-css-and-javascript/ */
