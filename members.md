@@ -15,7 +15,6 @@ _Members: Update your profile anytime in the [Yak Member Portal](https://yak.kna
 	{% for member in members_randomized %}
 		{% assign member_id = member.field_101_raw %}
 		{% assign member_url = "/members/" | append: member_id | append: ".html" %}
-		{% assign avatar_url = member.field_44_raw.url | strip %}
 		{% assign professional_name = member.field_97_raw | strip %}
 
 		{% comment %}
