@@ -66,7 +66,6 @@ figcaption,
 .footnotes,
 .page-info,
 .slide-nav,
-.author-bio,
 #markdown-toc {
 	font-size: 80%;
 }
@@ -260,7 +259,11 @@ h4 a,
 h5 a,
 h6 a,
 .h1-image a,
-.h3-image a {
+.h2-image a,
+.h3-image a,
+.h4-image a,
+.h5-image a,
+.h6-image a {
 	color: inherit !important;
 	text-decoration-line: none;
 	opacity: 1.0 !important;
@@ -278,31 +281,43 @@ h6 a:hover {
 .h1-image {
 	font-size: 2em;
 	margin-top: max(1.2em, 1rem);
+	flex-grow: 0;
+	flex-shrink: 0;
 }
 
 .h2-image {
 	font-size: 1.5em;
 	margin-top: max(1.8em, 1rem);
+	flex-grow: 0;
+	flex-shrink: 0;
 }
 
 .h3-image {
 	font-size: 1.17em;
 	margin-top: max(1.8em, 1rem);
+	flex-grow: 0;
+	flex-shrink: 0;
 }
 
 .h4-image {
 	font-size: 1em;
 	margin-top: max(1.8em, 1rem);
+	flex-grow: 0;
+	flex-shrink: 0;
 }
 
 .h5-image {
 	font-size: 0.83em;
 	margin-top: max(1.8em, 1rem);
+	flex-grow: 0;
+	flex-shrink: 0;
 }
 
 .h6-image {
 	font-size: 0.67em;
 	margin-top: max(1.8em, 1rem);
+	flex-grow: 0;
+	flex-shrink: 0;
 }
 
 .no-top-margin .h1-image,
@@ -319,6 +334,10 @@ h6 a:hover {
 .no-bottom-margin *:last-child,
 .no-bottom-margin div *:last-child {
 	margin-bottom: 0;
+}
+
+hr {
+	border: none;
 }
 
 /* Copied from: https://css-tricks.com/scaled-proportional-blocks-with-css-and-javascript/ */

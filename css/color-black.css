@@ -36,7 +36,6 @@ details,
 .details,
 .yak-nav,
 figcaption,
-.author-bio,
 .slide-tags,
 .slide-author,
 .collaborators,
@@ -70,4 +69,8 @@ a.yak-logo .yak-logo-image {
 
 .slide-border {
 	border-color: rgba(255,255,255,0.2);
+}
+
+hr {
+	border-top: 1px solid rgba(255,255,255,0.2);
 }
