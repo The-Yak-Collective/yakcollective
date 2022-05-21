@@ -97,28 +97,28 @@
 			{% comment %}
 				Inset member tagline, if set.
 			{% endcomment %}
-			{% if tagline != "" %}
+			{% if tagline != empty %}
 				<small class="db{% unless include.standalone %} silent-link{% endunless %}">{{ tagline }}</small>
 			{% endif %}
 
 			{% comment %}
 				Inset member "indie status", if set.
 			{% endcomment %}
-			{% if indie_status != "" %}
+			{% if indie_status != empty %}
 				<small class="db{% unless include.standalone %} silent-link{% endunless %}">Indie status: {{ indie_status }}</small>
 			{% endif %}
 
 			{% comment %}
 				Inset member "currently" information, if set.
 			{% endcomment %}
-			{% if currently != "" %}
+			{% if currently != empty %}
 				<small class="db{% unless include.standalone %} silent-link{% endunless %}">Currently: {{ currently }}</small>
 			{% endif %}
 
 			{% comment %}
 				Inset member "previously" information, if set.
 			{% endcomment %}
-			{% if previously != "" %}
+			{% if previously != empty %}
 				<small class="db{% unless include.standalone %} silent-link{% endunless %}">Previously: {{ previously }}</small>
 			{% endif %}
 
@@ -130,12 +130,12 @@
 				IN ORDER, so a record with a gap in its links will show
 				nothing after that gap.
 			{% endcomment %}
-			{% if url_1_label != "" %}
+			{% if url_1_label != empty %}
 				<small class="db{% unless include.standalone %} silent-link{% endunless %}">
 					{% if include.standalone %}<a href="{{ url_1_url }}">{% endif %}{{ url_1_label }}{% if include.standalone %}</a>{% endif %}
-					{% if url_2_label != "" %}
+					{% if url_2_label != empty %}
 						/ {% if include.standalone %}<a href="{{ url_2_url }}">{% endif %}{{ url_2_label }}{% if include.standalone %}</a>{% endif %}
-						{% if url_3_label != "" %}
+						{% if url_3_label != empty %}
 							/ {% if include.standalone %}<a href="{{ url_3_url }}">{% endif %}{{ url_3_label }}{% if include.standalone %}</a>{% endif %}
 						{% endif %}
 					{% endif %}
@@ -150,7 +150,7 @@
 			card is in "data mode" (otherwise, this bit is also just for
 			show).
 		{% endcomment %}
-		{% if twitter != "" %}
+		{% if twitter != empty %}
 			<div class="small{% unless include.standalone %} silent-link{% endunless %}">
 				{% if include.standalone %}<a href="https://twitter.com/{{ twitter }}">{% endif %}@{{ twitter }}{% if include.standalone %}</a>{% endif %}
 			</div>

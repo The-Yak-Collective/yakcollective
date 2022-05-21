@@ -222,14 +222,14 @@
 			{% assign member = site.data.knack_yaks.records | find: "field_101_raw", page.author %} 
 			{% if member %}
 				{% assign twitter = member.field_43_raw | strip %}
-				{% if twitter != "" %}
+				{% if twitter != empty %}
 					{% assign page_author = twitter %}
 				{% endif %}
 				{% assign page_image = "__SITE_BASE_URL__/members/" | append: page.author | append: "-og.jpg" %}
 			{% endif %}
 		{% elsif page.field_101_raw %}
 			{% assign twitter = page.field_43_raw | strip %}
-			{% if twitter != "" %}
+			{% if twitter != empty %}
 				{% assign page_author = twitter %}
 			{% endif %}
 			{% assign page_image = "__SITE_BASE_URL__/members/" | append: page.author | append: "-og.jpg" %}

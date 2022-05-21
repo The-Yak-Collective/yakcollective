@@ -41,12 +41,12 @@ layout: default
 		{% assign url_1_label = "" %}
 	{% endif %}
 {% endif %}
-{% if url_1_url != "" %}
+{% if url_1_url != empty %}
 	{% assign url_label_start = url_label | downcase | slice: 0, 4 %}
 	{% assign url_1_url = url_1_url | downcase %}
 	{% if url_label_start == "http" and url_1_label != url_1_url %}
 		{% assign url_1_label = url_1_url %}
-	{% elsif url_1_label == "" %}
+	{% elsif url_1_label == empty %}
 		{% assign url_1_label = url_1_url %}
 	{% endif %}
 {% endif %}
@@ -62,12 +62,12 @@ layout: default
 		{% assign url_2_label = "" %}
 	{% endif %}
 {% endif %}
-{% if url_2_url != "" %}
+{% if url_2_url != empty %}
 	{% assign url_label_start = url_label | downcase | slice: 0, 4 %}
 	{% assign url_2_url = url_2_url | downcase %}
 	{% if url_label_start == "http" and url_2_label != url_2_url %}
 		{% assign url_2_label = url_2_url %}
-	{% elsif url_2_label == "" %}
+	{% elsif url_2_label == empty %}
 		{% assign url_2_label = url_2_url %}
 	{% endif %}
 {% endif %}
@@ -83,12 +83,12 @@ layout: default
 		{% assign url_3_label = "" %}
 	{% endif %}
 {% endif %}
-{% if url_3_url != "" %}
+{% if url_3_url != empty %}
 	{% assign url_label_start = url_label | downcase | slice: 0, 4 %}
 	{% assign url_3_url = url_3_url | downcase %}
 	{% if url_label_start == "http" and url_3_label != url_3_url %}
 		{% assign url_3_label = url_3_url %}
-	{% elsif url_3_label == "" %}
+	{% elsif url_3_label == empty %}
 		{% assign url_3_label = url_3_url %}
 	{% endif %}
 {% endif %}
@@ -134,47 +134,47 @@ layout: default
 {% endif %}
 
 <div class="flex items-top">
-	<div class="mr4 mb3 h1-image">
-		<img class="w4 h4 br-100 ba image-border" src="/members/{{ member_id }}.jpg" alt="{{ professional_name }}">
+	<div class="w4 mr0 mr4-l h1-image">
+		<img class="w3 w4-l h3 h4-l br-100 ba image-border" src="/members/{{ member_id }}.jpg" alt="{{ professional_name }}">
 	</div>
 
-	<div>
+	<div class="no-bottom-margin">
 		<h1>{{ professional_name }}</h1>
 
-		{% if tagline != "" %}
+		{% if tagline != empty %}
 			<small class="db"><p>{{ tagline }}</p></small>
 		{% endif %}
 
-		{% if indie_status != "" or currently != "" or previously != "" %}
-			{% if indie_status != "" %}
+		{% if indie_status != empty or currently != empty or previously != empty %}
+			{% if indie_status != empty %}
 				<small class="db"><b>Indie status:</b> {{ indie_status }}</small>
 			{% endif %}
-			{% if currently != "" %}
+			{% if currently != empty %}
 				<small class="db"><b>Currently:</b> {{ currently }}</small>
 			{% endif %}
-			{% if previously != "" %}
+			{% if previously != empty %}
 				<small class="db"><b>Previously:</b> {{ previously }}</small>
 			{% endif %}
 		{% endif %}
 	</div>
 </div>
 
-{% if background_info != "" %}
+{% if background_info != empty %}
 	{{ background_info | markdownify }}
 {% endif %}
 
-{% if url_1_url != "" or twitter != "" %}
+{% if url_1_url != empty or twitter != empty %}
 	<ul>
-		{% if url_1_url != "" %}
+		{% if url_1_url != empty %}
 			<li><a href="{{ url_1_url }}">{{ url_1_label }}</a></li>
 		{% endif %}
-		{% if url_2_url != "" %}
+		{% if url_2_url != empty %}
 			<li><a href="{{ url_2_url }}">{{ url_2_label }}</a></li>
 		{% endif %}
-		{% if url_3_url != "" %}
+		{% if url_3_url != empty %}
 			<li><a href="{{ url_3_url }}">{{ url_3_label }}</a></li>
 		{% endif %}
-		{% if twitter != "" %}
+		{% if twitter != empty %}
 			<li><a href="https://twitter.com/{{ twitter }}">@{{ twitter }} on Twitter</a></li>
 		{% endif %}
 	</ul>
