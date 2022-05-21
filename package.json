@@ -1,5 +1,5 @@
 {
-  "name": "functions",
+  "name": "Netlify Functions",
   "version": "2.0.0",
   "description": "Yak Collective webhooks",
   "private": true,

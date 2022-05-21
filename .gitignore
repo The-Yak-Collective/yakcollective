@@ -10,9 +10,8 @@
 _site/*
 node_modules/*
 vendor/*
-package-lock.json
 
 # Ignore sensitive data from Knack
-bin/knack-yak-creds.sh
+_bin/knack-yak-creds.sh
 _data/knack_yaks.json
 members/*

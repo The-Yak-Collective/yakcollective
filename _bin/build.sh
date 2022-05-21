@@ -16,8 +16,8 @@ fi
 
 # Pull Knack data.
 #
-chmod +x bin/knack-pull-yaks.sh
-./bin/knack-pull-yaks.sh || exit 2
+chmod +x _bin/knack-pull-yaks.sh
+./_bin/knack-pull-yaks.sh || exit 2
 
 # If we're running from Netlify, then all Ruby Gem setup has already
 # been done for us. We assume that this is the case if the `jekyll`
@@ -78,10 +78,10 @@ find _site -type f -iname '*.html' -exec sed -i -e 's/&#x007b;/{/g;s/&#x007d;/}/
 # result in invalid HTML/CSS/JS output! Netlify optimization should
 # therefore be turned off when "hand optimization" like this is used.
 #
-chmod +x bin/minify
+chmod +x _bin/minify
 mv _site _site.original
 (
 	cd _site.original
-	../bin/minify --all --recursive --sync --output ../_site .
+	../_bin/minify --all --recursive --sync --output ../_site .
 )
 rm -rf _site.original

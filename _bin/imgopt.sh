@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Image optimization helper script. Expects the following packages
 # (Ubuntu) or equivalents to be installed:
