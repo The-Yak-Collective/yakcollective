@@ -1,5 +1,5 @@
 {
-  "name": "yakcollective-netlify-functions",
+  "name": "yakcollective-webhooks",
   "version": "2.0.0",
   "description": "Yak Collective webhooks",
   "private": true,
@@ -12,12 +12,13 @@
   "author": "Nathan Acks <nathan.acks@cardboard-iguana.com>",
   "license": "MIT",
   "dependencies": {
-    "@octokit/rest": "^17.9.0",
-    "all-relative": "^2.0.0",
-    "axios": "^0.21.1",
-    "chrono-node": "^2.2.4",
-    "moment": "^2.24.0",
-    "remove-accents": "^0.4.2"
+    "@octokit/core": "*",
+    "@octokit/rest": "*",
+    "all-relative": "*",
+    "axios": "*",
+    "chrono-node": "*",
+    "moment": "*",
+    "remove-accents": "*"
   },
   "repository": {
     "url": "https://github.com/The-Yak-Collective/yakcollective"
