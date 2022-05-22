@@ -30,13 +30,13 @@ credits:
     - 100086
     - 100044
     - 100090
-    - Toby Shorin
+    - 100546
     - 100047
     - 100051
 ---
 {% include widget-project-header.html %}
 
-<div class="center-box pdf-slideshow-wrapper">
+<div id="pdf-slideshow" class="hidden center-box pdf-slideshow-wrapper">
 	<div class="box-interior"><div>
 		<figure class="ma0">
 			<div class="pdf-slideshow relative">
@@ -49,9 +49,22 @@ credits:
 	</div></div>
 </div>
 
+<script src="../js/pdfobject.min.js"></script>
+<script>
+	var slideshow = document.querySelector("#pdf-slideshow");
+	var fallback = document.querySelector("#pdf-slideshow-fallback");
+	if (PDFObject.supportsPDFs) {
+		slideshow.classList.remove("hidden");
+	} else {
+		fallback.classList.remove("hidden);
+	};
+</script>
+
 ## The Yak Wisdom Project
 
 This deck is the **second** in a series of studies the Yak Collective is undertaking over the coming months. If you find this report interesting, be sure to check out our first, [_Don't Waste the Reboot_](/projects/dont-waste-the-reboot.html). We aim to generate a body of Covid-19 reboot intelligence that is fundamentally different from anything you might see anywhere else, not just in terms of content, but in terms of the process of getting to it.
+
+<p id="pdf-slideshow-fallback" class="hidden"><a href="the-new-old-home/the-new-old-home-2020-10-28.pdf"><img class="h1" src="../img/pdf.png" alt="Download PDF"> Download PDF</a></p>
 
 ## Let the Yak Collective Guide Your Reboot
 

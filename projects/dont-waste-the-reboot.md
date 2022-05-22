@@ -38,7 +38,7 @@ credits:
 ---
 {% include widget-project-header.html %}
 
-<div class="center-box pdf-slideshow-wrapper">
+<div id="pdf-slideshow" class="hidden center-box pdf-slideshow-wrapper">
 	<div class="box-interior"><div>
 		<figure class="ma0">
 			<div class="pdf-slideshow relative">
@@ -51,9 +51,22 @@ credits:
 	</div></div>
 </div>
 
+<script src="../js/pdfobject.min.js"></script>
+<script>
+	var slideshow = document.querySelector("#pdf-slideshow");
+	var fallback = document.querySelector("#pdf-slideshow-fallback");
+	if (PDFObject.supportsPDFs) {
+		slideshow.classList.remove("hidden");
+	} else {
+		fallback.classList.remove("hidden);
+	};
+</script>
+
 ## The Yak Wisdom Project
 
 This deck is just the first of what we hope will be a series of studies the Yak Collective will be undertaking over the coming months. We aim to generate a body of Covid-19 reboot intelligence that is fundamentally different from anything you might see anywhere else, not just in terms of content, but in terms of the process of getting to it.
+
+<p id="pdf-slideshow-fallback" class="hidden"><a href="dont-waste-the-reboot/dont-waste-the-reboot-2020-10-28.pdf"><img class="h1" src="../img/pdf.png" alt="Download PDF"> Download PDF</a></p>
 
 ## Let the Yak Collective help guide your reboot
 
