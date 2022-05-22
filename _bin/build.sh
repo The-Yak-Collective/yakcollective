@@ -5,7 +5,7 @@
 
 # Check to make sure that we're running in the repository root.
 #
-if [[ ! -f _config.yml || ! -d bin ]]; then
+if [[ ! -f _config.yml || ! -d _bin ]]; then
 	echo "This script must be run from the repository root!"
 	exit 1
 fi
