@@ -205,6 +205,13 @@ a.yak-logo .yak-logo-image {
 	padding-inline-end: 0;
 }
 
+.yak-content.yak-post-external .yak-post figure,
+.yak-content.yak-post-external .yak-post figure iframe {
+	max-width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 h1,
 h2,
 h3,
