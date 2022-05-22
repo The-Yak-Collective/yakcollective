@@ -38,7 +38,7 @@ credits:
 ---
 {% include widget-project-header.html %}
 
-<div id="pdf-slideshow" class="hidden center-box pdf-slideshow-wrapper">
+<div id="pdf-slideshow" class="center-box pdf-slideshow-wrapper">
 	<div class="box-interior"><div>
 		<figure class="ma0">
 			<div class="pdf-slideshow relative">
@@ -51,33 +51,31 @@ credits:
 	</div></div>
 </div>
 
-<script src="../js/pdfobject.min.js"></script>
-<script>
-	var slideshow = document.querySelector("#pdf-slideshow");
-	var fallback = document.querySelector("#pdf-slideshow-fallback");
-	if (PDFObject.supportsPDFs) {
-		slideshow.classList.remove("hidden");
-	} else {
-		fallback.classList.remove("hidden");
-	};
-</script>
-
 ## The Yak Wisdom Project
 
 This deck is just the first of what we hope will be a series of studies the Yak Collective will be undertaking over the coming months. We aim to generate a body of Covid-19 reboot intelligence that is fundamentally different from anything you might see anywhere else, not just in terms of content, but in terms of the process of getting to it.
 
-<p id="pdf-slideshow-fallback" class="hidden"><a href="dont-waste-the-reboot/dont-waste-the-reboot-2020-10-28.pdf"><img class="h1" src="../img/pdf.png" alt="Download PDF"> Download PDF</a></p>
+<p id="pdf-slideshow-fallback"><a href="dont-waste-the-reboot/dont-waste-the-reboot-2020-10-28.pdf"><img class="h1" src="../img/pdf.png" alt="Download PDF"> Download PDF</a></p>
 
 ## Let the Yak Collective help guide your reboot
 
-Want to keep up with our efforts? Follow us on [Twitter](https://twitter.com/yak_collective) & [LinkedIn](https://www.linkedin.com/company/yak-collective/).
+**Want to keep up with our efforts?** Follow us on [Twitter](https://twitter.com/yak_collective) & [LinkedIn](https://www.linkedin.com/company/yak-collective/).
 
 **Like bits and pieces of what you saw in this deck?** Feel free to contact one or more individual contributors directly! The Yak Collective is not an agency or intermediary. Our members collaborate because they want to, and each of us maintains their own independent consulting practice. We offer you a catalog of ideas and people to choose from, not a bundle.
 
 **Like a lot of what you see?** Contact [Paul Millerd](/members/100078.html) to loop The Yak Collective into your reboot efforts. We will assemble the right small team and set of ideas to work with you, in whatever way is most effective. It might be a study or report. It might be facilitating a workshop or series of conversations for your executive team. Or it might just be an ongoing conversation with one or more of us.
 
-**Want to hang out with us LIVE as we work these problems?** [Join our Discord server](/join.html). Our working process is literally open. Any independent consultant from anywhere in the world who has ideas is welcome to join our efforts, contribute to and lead collaborative projects. Any prospective client is welcome to hang out as well.
+**Want to hang out with us _live_ as we work these problems?** [Join our Discord server](/join.html). Our working process is literally open. Any independent consultant from anywhere in the world who has ideas is welcome to join our efforts, contribute to and lead collaborative projects. Any prospective client is welcome to hang out as well.
 
 ## Additional Credits
 
 SVG graphics provided by [Hero Patterns](https://www.heropatterns.com/).
+
+<script src="../js/pdfobject.min.js"></script>
+<script>
+	if (PDFObject.supportsPDFs) {
+		document.querySelector("#pdf-slideshow-fallback").remove();
+	} else {
+		document.querySelector("#pdf-slideshow").remove();
+	};
+</script>

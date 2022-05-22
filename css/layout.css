@@ -357,10 +357,6 @@ hr {
 	display: block;
 }
 
-.hidden {
-	display: none;
-}
-
 .project-pages {
 	padding-left: calc(var(--content-padding) / 2);
 	padding-right: calc(var(--content-padding) / 2);
