@@ -49,3 +49,12 @@
 .yak-content .right-box .box-interior {
 	float: left;
 }
+
+/* Copied from: https://css-tricks.com/scaled-proportional-blocks-with-css-and-javascript/ */
+.pdf-slideshow {
+	padding-bottom: calc(56.25% + 50px); /* 16:9 + PDF controls */
+}
+
+.pdf-slideshow-wrapper figcaption {
+	display: none;
+}

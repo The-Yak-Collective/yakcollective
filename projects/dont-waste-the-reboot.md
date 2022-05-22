@@ -38,7 +38,18 @@ credits:
 ---
 {% include widget-project-header.html %}
 
-{% include widget-google-slides.html gid="1OfBuSq4SImE1Gq2EaAGCAlkwC8LZRCWx-7O_VOHJ5TI" %}
+<div class="center-box pdf-slideshow-wrapper">
+	<div class="box-interior"><div>
+		<figure class="ma0">
+			<div class="pdf-slideshow relative">
+				<iframe src="dont-waste-the-reboot/dont-waste-the-reboot-2020-10-28.pdf#view=fitH" class="w-100 h-100 absolute top-0 left-0 bn"></iframe>
+			</div>
+		</figure>
+		<figcaption class="yak-content">
+			<p><a href="dont-waste-the-reboot/dont-waste-the-reboot-2020-10-28.pdf"><img class="h1" src="../img/pdf.png" alt="Download PDF"> Download PDF</a></p>
+		</figcaption>
+	</div></div>
+</div>
 
 ## The Yak Wisdom Project
 

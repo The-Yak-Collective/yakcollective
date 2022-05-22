@@ -348,9 +348,13 @@ hr {
 }
 
 /* Copied from: https://css-tricks.com/scaled-proportional-blocks-with-css-and-javascript/ */
-.google-slideshow {
+.pdf-slideshow {
 	height: 0;
-	padding-bottom: calc(56.25% + 29px); /* 16:9 + Google Slides controls */
+	padding-bottom: calc(56.25% - 8px); /* 16:9 - a little bit of padding */
+}
+
+.pdf-slideshow-wrapper figcaption {
+	display: block;
 }
 
 .project-pages {

@@ -36,7 +36,18 @@ credits:
 ---
 {% include widget-project-header.html %}
 
-{% include widget-google-slides.html gid="1Bgs4e6YIEydMot0VM4lf-onZM2z6Zei3n87f3JHCeSk" %}
+<div class="center-box pdf-slideshow-wrapper">
+	<div class="box-interior"><div>
+		<figure class="ma0">
+			<div class="pdf-slideshow relative">
+				<iframe src="the-new-old-home/the-new-old-home-2020-10-28.pdf#view=fitH" class="w-100 h-100 absolute top-0 left-0 bn"></iframe>
+			</div>
+		</figure>
+		<figcaption class="yak-content">
+			<p><a href="the-new-old-home/the-new-old-home-2020-10-28.pdf"><img class="h1" src="../img/pdf.png" alt="Download PDF"> Download PDF</a></p>
+		</figcaption>
+	</div></div>
+</div>
 
 ## The Yak Wisdom Project
 
