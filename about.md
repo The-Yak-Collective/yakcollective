@@ -29,5 +29,5 @@ The Yak Collective didn’t start out in its current shape. In early 2020, it be
 <details>
     <summary>Website Colophon</summary>
     <p>Site version {{ site.version }}.</p>
-    <p>Built by <a href="/members/100063.html">Tom Critchlow</a>, <a href="/members/100007.html">Nathan Acks</a>, and <a href="/members/100020.html">Maier Fenster</a> using <a href="https://fontawesome.com/">Font Awesome</a>, <a href="https://jekyllrb.com/">Jekyll</a>, <a href="https://github.com/">GitHub</a>, <a href="https://ifttt.com/">IFTTT</a>, and <a href="https://www.netlify.com/">Netlify</a>.</p>
+    <p>Built by <a href="/members/100007.html">Nathan Acks</a> using <a href="https://fontawesome.com/">Font Awesome</a>, <a href="https://jekyllrb.com/">Jekyll</a>, <a href="https://github.com/">GitHub</a>, <a href="https://ifttt.com/">IFTTT</a>, and <a href="https://www.netlify.com/">Netlify</a>. Additional contributions by <a href="/members/100020.html">Maier Fenster</a> and <a href="/members/100063.html">Tom Critchlow</a>.</p>
 </details>
