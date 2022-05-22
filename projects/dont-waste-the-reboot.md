@@ -58,7 +58,7 @@ credits:
 	if (PDFObject.supportsPDFs) {
 		slideshow.classList.remove("hidden");
 	} else {
-		fallback.classList.remove("hidden);
+		fallback.classList.remove("hidden");
 	};
 </script>
 
