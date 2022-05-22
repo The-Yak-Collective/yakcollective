@@ -1,5 +1,5 @@
 {
-  "name": "Netlify Functions",
+  "name": "yakcollective-netlify-functions",
   "version": "2.0.0",
   "description": "Yak Collective webhooks",
   "private": true,
@@ -9,7 +9,7 @@
     "github",
     "yakcollective"
   ],
-  "author": "Nathan Acks <nathan.acks@delphi-strategy.com>",
+  "author": "Nathan Acks <nathan.acks@cardboard-iguana.com>",
   "license": "MIT",
   "dependencies": {
     "@octokit/rest": "^17.9.0",
