@@ -344,7 +344,11 @@ h6 a:hover {
 }
 
 hr {
-	border: none;
+	border-top-width: 0.125rem;
+	border-top-style: solid;
+	border-bottom: none;
+	border-left: none;
+	border-right: none;
 }
 
 /* Copied from: https://css-tricks.com/scaled-proportional-blocks-with-css-and-javascript/ */

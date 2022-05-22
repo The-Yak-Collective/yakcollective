@@ -55,7 +55,7 @@ credits:
 	<div class="box-interior"><div>
 		<figure class="ma0">
 			<div class="pdf-slideshow relative">
-				<a href="dont-waste-the-reboot/dont-waste-the-reboot-2020-10-28.pdf" class="silent-link"><img src="dont-waste-the-reboot/dont-waste-the-reboot-2020-10-28.jpg" title="Don't Waste the Reboot" class="w-100 h-100 absolute top-0 left-0 bn"></a>
+				<a href="dont-waste-the-reboot/dont-waste-the-reboot-2020-10-28.pdf" class="silent-link"><img src="dont-waste-the-reboot/dont-waste-the-reboot-2020-10-28.jpg" title="Don't Waste the Reboot" class="w-100 h-100 absolute top-0 left-0 ba bw2"></a>
 			</div>
 		</figure>
 		<figcaption class="yak-content">

@@ -53,7 +53,7 @@ credits:
 	<div class="box-interior"><div>
 		<figure class="ma0">
 			<div class="pdf-slideshow relative">
-				<a href="the-new-old-home/the-new-old-home-2020-10-28.pdf" class="silent-link"><img src="the-new-old-home/the-new-old-home-2020-10-28.jpg" title="The New Old Home" class="w-100 h-100 absolute top-0 left-0 bn"></a>
+				<a href="the-new-old-home/the-new-old-home-2020-10-28.pdf" class="silent-link"><img src="the-new-old-home/the-new-old-home-2020-10-28.jpg" title="The New Old Home" class="w-100 h-100 absolute top-0 left-0 ba bw2"></a>
 			</div>
 		</figure>
 		<figcaption class="yak-content">

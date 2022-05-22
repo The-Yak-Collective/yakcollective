@@ -47,12 +47,14 @@ a.yak-logo .yak-logo-image {
 	content: url("/img/yak-logo-white.png");
 }
 
-.member-box,
+hr,
 .image-border,
+.member-box,
 .project-box,
 .project-box .hero,
 .project-page-box,
 .project-page-box .hero,
+.slide-border,
 .slide-deck-visible-anchor {
 	border-color: rgba(255,255,255,0.2);
 }
@@ -67,14 +69,6 @@ a.yak-logo .yak-logo-image {
 	background-color: rgba(255,255,255,0.05);
 }
 
-.slide-border {
-	border-color: rgba(255,255,255,0.2);
-}
-
 .pdf-slideshow img {
-	border: 1px solide rgba(255.255.255,1.0);
-}
-
-hr {
-	border-top: 1px solid rgba(255,255,255,0.2);
+	border-color: rgba(255.255.255,1.0);
 }
