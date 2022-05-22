@@ -71,6 +71,10 @@ a.yak-logo .yak-logo-image {
 	border-color: rgba(15,15,15,0.2);
 }
 
+.pdf-slideshow img {
+	border: 1px solide rgba(15,15,15,1.0);
+}
+
 hr {
 	border-top: 1px solid rgba(15,15,15,0.2);
 }

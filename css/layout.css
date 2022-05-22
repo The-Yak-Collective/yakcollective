@@ -353,7 +353,12 @@ hr {
 	padding-bottom: calc(56.25% - 8px); /* 16:9 - a little bit of padding */
 }
 
-.pdf-slideshow-wrapper figcaption {
+.pdf-slideshow a,
+.pdf-slideshow a:hover {
+	opacity: 1.0;
+}
+
+#pdf-slideshow figcaption {
 	display: block;
 }
 

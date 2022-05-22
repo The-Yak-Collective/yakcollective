@@ -55,6 +55,6 @@
 	padding-bottom: calc(56.25% + 50px); /* 16:9 + PDF controls */
 }
 
-.pdf-slideshow-wrapper figcaption {
+#pdf-slideshow figcaption {
 	display: none;
 }

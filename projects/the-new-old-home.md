@@ -49,11 +49,22 @@ credits:
 	</div></div>
 </div>
 
+<div id="pdf-slideshow-fallback" class="center-box pdf-slideshow-wrapper">
+	<div class="box-interior"><div>
+		<figure class="ma0">
+			<div class="pdf-slideshow relative">
+				<a href="the-new-old-home/the-new-old-home-2020-10-28.pdf" class="silent-link"><img src="the-new-old-home/the-new-old-home-2020-10-28.jpg" title="The New Old Home" class="w-100 h-100 absolute top-0 left-0 bn"></a>
+			</div>
+		</figure>
+		<figcaption class="yak-content">
+			<p><a href="the-new-old-home/the-new-old-home-2020-10-28.pdf"><img class="h1" src="../img/pdf.png" alt="Download PDF"> Download PDF</a></p>
+		</figcaption>
+	</div></div>
+</div>
+
 ## The Yak Wisdom Project
 
 This deck is the **second** in a series of studies the Yak Collective is undertaking over the coming months. If you find this report interesting, be sure to check out our first, [_Don't Waste the Reboot_](/projects/dont-waste-the-reboot.html). We aim to generate a body of Covid-19 reboot intelligence that is fundamentally different from anything you might see anywhere else, not just in terms of content, but in terms of the process of getting to it.
-
-<p id="pdf-slideshow-fallback"><a href="the-new-old-home/the-new-old-home-2020-10-28.pdf"><img class="h1" src="../img/pdf.png" alt="Download PDF"> Download PDF</a></p>
 
 ## Let the Yak Collective Guide Your Reboot
 
