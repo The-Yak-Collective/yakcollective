@@ -1,4 +1,4 @@
-# Minify [![Join the chat at https://gitter.im/tdewolff/minify](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/tdewolff/minify?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+# Minify
 
 **[Download binaries](https://github.com/tdewolff/minify/releases) for Windows, Linux and macOS**
 
@@ -21,6 +21,8 @@ If you do not have `make`, instead run the following lines to install `minify` a
 
     go install ./cmd/minify
     source minify_bash_tab_completion
+
+Optionally, you can run `go install github.com/tdewolff/minify/cmd/minify@latest` to install the latest version.
 
 ### Arch Linux
 Using `yay`:
@@ -55,6 +57,26 @@ sudo apt-get update
 Install minify deb package:
 ```
 sudo apt-get install minify
+```
+
+### Docker
+Pull the image:
+
+```
+docker pull tdewolff/minify
+```
+
+and run the image, for example in interactive mode:
+
+```
+docker run -i tdewolff/minify
+echo "(function(){ if (a == false) { return 0; } else { return 1; } })();" | minify --type js
+```
+
+which will output
+
+```
+(function(){return a==!1?0:1})()
 ```
 
 ## Usage
