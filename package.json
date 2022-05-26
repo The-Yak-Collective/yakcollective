@@ -18,6 +18,7 @@
     "axios": "*",
     "chrono-node": "*",
     "moment": "*",
+    "netlify-cli": "*",
     "remove-accents": "*"
   },
   "repository": {
