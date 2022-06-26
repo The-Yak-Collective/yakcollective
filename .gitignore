@@ -11,6 +11,10 @@ _site/*
 node_modules/*
 vendor/*
 
+# Lock files cause more problems than they solve
+Gemfile.lock
+package-lock.json
+
 # Ignore sensitive data from Knack
 _bin/knack-yak-creds.sh
 _data/knack_yaks.json
