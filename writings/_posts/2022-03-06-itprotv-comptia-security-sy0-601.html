@@ -1,0 +1,557 @@
+---
+title: 'ITPro.TV: CompTIA Security+ (SY0-601)'
+date: 2022-03-06 06:00:00.000000000 Z
+layout: post-external
+original_link: https://cardboard-iguana.com/log/2022-03-06-itprotv-comptia-security-plus.html
+author: 100007
+---
+
+<h1 id="itprotv-comptia-security-sy0-601">ITPro.TV: CompTIA Security+ (SY0-601)</h1>
+<p><strong>author:</strong> Nathan Acks<br />
+<strong>date:</strong> 2022-03-06</p>
+<h2 id="comptia-security-exam-cram">CompTIA Security+ Exam Cram</h2>
+<p>Today I’m going to be reading through chapters 17 (Secure Protocols) and 25 (Public Key Infrastructure) of the CompTIA Security+ Exam Cram.</p>
+<h3 id="secure-web-protocols">Secure Web Protocols</h3>
+<p>Remember: SSL/TLS is a <em>transport layer</em> security protocol (sitting between HTTP and TCP).</p>
+<p>HTTPS was original developed by Netscape. TIL!</p>
+<p>Apparently there’s an alternate standard called S-HTTP which was developed specifically for banking transactions. Based on Wikipedia’s summary, it looks like S-HTTP sent encrypted data (including an additional/alternative set of headers) in the request body, rather than wrapping the entire protocol in an encrypted channel (like HTTPS).</p>
+<p>Exam Cram calls out Heartbleed explicitly, and notes that this vulnerability is closed in OpenSSL 1.0.1g and later.</p>
+<p>HTTPS operates over stateful SSL connections.</p>
+<p>TLSv1.0 succeeded SSLv3 in 1999. Note that TLS is <em>not</em> backwards-compatible with SSL.</p>
+<p>TLS has two sub-protocols:</p>
+<ul>
+<li>The TLS Record Protocol is what establishes an encrypted tunnel using an agreed-upon cipher (or the NULL cypher, in which case the “encrypted” tunnel is just plaintext).</li>
+<li>The TLS Handshake Protocol is used for authentication and key exchange.</li>
+</ul>
+<p>Types of DNS servers:</p>
+<ul>
+<li>Authoritative servers provide information about a specific domain.</li>
+<li>Caching/Recursive servers resolve queries and then cache them for additional speed. Recursive servers can point to other recursive servers, but ultimately will make queries to authoritative servers if needed.</li>
+</ul>
+<p>DNSSEC is designed to provide an authentication layer for DNS to prevent cache poisoning. DNS responses are signed in DNSSEC, and the keys used to sign those responses are themselves signed in a hierarchical fashion that parallels the arrangement for authoritative servers. For example, in DNSSEC, the response for <code class="language-plaintext highlighter-rouge">www.example.com</code> will be signed by <code class="language-plaintext highlighter-rouge">example.com</code>, the key used by <code class="language-plaintext highlighter-rouge">example.com</code> will in turn be signed by <code class="language-plaintext highlighter-rouge">.com</code>, and the key used by <code class="language-plaintext highlighter-rouge">.com</code> will in turn be signed by one of the root servers.</p>
+<p>One reason DNSSEC is important is because DNS is increasingly used as a PKI for example:</p>
+<ul>
+<li>DANE (DNS-based Authentication of Named Entities) enables X.509 certificates used in TLS to be validated using DNS.</li>
+<li>SSHFP (SSH fingerprint posting) puts host fingerprints in DNS (what a great idea!).</li>
+<li>DKIM</li>
+</ul>
+<p>References:</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Secure_Hypertext_Transfer_Protocol">Secure Hypertext Transfer Protocol (Wikipedia)</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Heartbleed">Heartbleed (Wikipedia)</a></li>
+</ul>
+<h3 id="internet-protocol-security-ipsec">Internet Protocol Security (IPsec)</h3>
+<p>IPsec is a <em>network layer</em> encryption protocol, and is commonly used as a VPN solution. IPsec uses the Internet Key Exchange (IKE) protocol for, well, key exchange.</p>
+<p>Two modes:</p>
+<ul>
+<li>Transport mode establishes point-to-point encrypted tunnels.</li>
+<li>Tunnel mode (IPsec’s default) is used to securely bridge two networks by establishing an encrypted tunnel between those networks’ gateways.</li>
+</ul>
+<p>IPsec in tunneling mode uses two headers:</p>
+<ul>
+<li>The Authentication Header (AH, protocol field 51) authenticates the packet’s sender and provides integrity and nonrepudiation. Note that integrity guarantees do <em>not</em> cover all the other header fields, as it is possible for some of these to be (legitimately) changed by intermediate servers.</li>
+<li>The Encapsulating Security Payload (ESP, protocol field 50) <em>also</em> provides authentication services, and encrypts the data being transferred. ESP is designed to provide confidentiality, authentication, integrity, and anti-replay services, but these can be configured in a piecemeal fashion. In particular, enabling confidentiality <em>without</em> integrity protection and either ESP authentication <em>or</em> a separate AH leaves the ESP data vulnerable to substitution attacks (not sure why you’d do this…).</li>
+</ul>
+<p>IPsec headers immediately follow the header fields in an IP datagram. ESP can be nested in AH, which simplifies firewall filtering if you only require confidentiality for <em>some</em> connections.</p>
+<p>The IKE protocol is part of the larger Internet Security Association and Key Management Protocol (ISAKMP).</p>
+<h3 id="secure-file-transfer-protocols">Secure File Transfer Protocols</h3>
+<p>FTPS is to FTP what HTTPS is to HTTP (though there are additional complications since FTP is a two-channel protocol). FTPS uses port 990 for commands in <em>implicit</em> mode, and good old port 21 for commands in <em>explicit</em> mode.</p>
+<p>SFTP is an entirely different beast — FTP-like functionality over SSH.</p>
+<p>Note that FTPS, like FTP, requires multiple ports to function. This makes SFTP (which operates of port 22, like SSH) much easier to handle when configuring firewalls.</p>
+<p>“Managed File Transfer” (MFT) services/applications allow FTP to be wrapped in a more secure protocol (HTTPS?) as well. These are popular in regulated industries.</p>
+<h3 id="secure-email-protocols">Secure Email Protocols</h3>
+<p>S/MIME leverages MIME to provide authentication, message confidentiality and integrity, and nonrepudiation. S/MIME uses the “Cryptographic Message Syntax” to ensure the security of the underlying keys. Best practices dictate that separate S/MIME certificates be used for signing vs. encryption so that the encryption key can be escrowed without damaging non-repudiation.</p>
+<p>Important ports:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left">Protocol</th>
+<th style="text-align: center">Port</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left">POP3</td>
+<td style="text-align: center">110</td>
+</tr>
+<tr>
+<td style="text-align: left">POP3S</td>
+<td style="text-align: center">995</td>
+</tr>
+<tr>
+<td style="text-align: left">IMAP</td>
+<td style="text-align: center">143</td>
+</tr>
+<tr>
+<td style="text-align: left">IMAPS</td>
+<td style="text-align: center">993</td>
+</tr>
+<tr>
+<td style="text-align: left">SMTP</td>
+<td style="text-align: center">25</td>
+</tr>
+<tr>
+<td style="text-align: left">SMTP+SSL</td>
+<td style="text-align: center">465</td>
+</tr>
+<tr>
+<td style="text-align: left">SMTP+STARTTLS</td>
+<td style="text-align: center">587</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/S/MIME">S/MIME (Wikipedia)</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Simple_Mail_Transfer_Protocol">Simple Mail Transfer Protocol (Wikipedia)</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Email_encryption">Email encryption (Wikipedia)</a></li>
+</ul>
+<h3 id="secure-internet-protocols">Secure Internet Protocols</h3>
+<p>By default SSH tunnels are actually encrypted using IDEA (the International Data Encryption Algorithm) with a 128-bit symmetric key cipher that is agreed upon during the initial authentication/negotiation. Blowfish (32- to 448-bit keys), DES, and 3DES are also available. (Note that DES, and I suppose by extension 3DES, is still export-controlled.)</p>
+<h3 id="lightweight-directory-access-protocol-ldap">Lightweight Directory Access Protocol (LDAP)</h3>
+<p>There’s also LDAP-over-SSL (LDAPS), which again riffs off of HTTPS. As a total set of asides…</p>
+<ul>
+<li>LDAP servers are generally called “Directory System Agents” (DSAs), and are typically accessed on port 636. There is also a “Global Catalog” that’s generally on port 3269.</li>
+<li>Information in LDAP is encoded using a scheme called the “Basic Encoding Rules” (BER) and X.500 directories; while LDAP is defined in RFC 4522, BER and X.500 are both ISO standards.</li>
+</ul>
+<p>At the very least, LDAPS should be used when authenticating with Active Directory Domain Services (AD DS).</p>
+<ul>
+<li><a href="https://datatracker.ietf.org/doc/html/rfc4522">Lightweight Directory Access Protocol (LDAP): The Binary Encoding Option (RFC 4522)</a></li>
+</ul>
+<h3 id="secure-real-time-transport-protocol-srtp">Secure Real-Time Transport Protocol (SRTP)</h3>
+<p>SRTP is <em>similar</em> to HTTPS in that keys must be exchanged before transmission begins, but is otherwise unlike HTTPS as it operates over UDP and applies the encryption to the protocol payload (rather than firing up an encrypted tunnel and then running an unencrypted protocol over it).</p>
+<h3 id="simple-network-management-protocol-snmp">Simple Network Management Protocol (SNMP)</h3>
+<p>SNMP is used to collect statistics from devices over TCP/IP, and is typically used for monitoring equipment health (finally, an explanation for <em>what</em> SNMP is actually <em>for</em>!).</p>
+<p>Individual devices run SNMP agents, which then send data to a “management station”. Data is sent via UDP 161 (polling) and UDP 162 (notifications). In SNMPv3 can alternately be run over TCP.</p>
+<p>The only security in SNMPv1 is the “community name” (which functions like a password). This is set to “public” by default, and is seldom changed.</p>
+<p>SNMPv2 introduced message integrity via MD5, but was still plaintext.</p>
+<p>SNMPv3 supports both AES and 3DES, and represents a major rearchitecting of SNMP. It is the first version of SNMP that supports all three legs of the CIA triad, and does not use the “community” string.</p>
+<p>SNMPv3 can be divided into the SNMP engine proper and a number of “applications” that run on top of the engine. Parts of the SNMP engine:</p>
+<ul>
+<li>The Dispatcher handles message routing and generally supports multiple versions of the SNMP protocol.</li>
+<li>The Message Processing Subsystem handles message construction and parsing.</li>
+<li>The Security Subsystem provides encryption and security services.</li>
+<li>The Access Control Subsystem handles authentication.</li>
+</ul>
+<p>Defined SNMP applications:</p>
+<ul>
+<li>The Command Generator initiates requests to devices and processes their responses.</li>
+<li>The Command Responder routes requests received by individual nodes.</li>
+<li>The Notification Receiver listens for notifications and generates responses if required</li>
+<li>The Notification Originator monitors the actual system and generates messages for other applications.</li>
+<li>The Proxy Forwarder forwards messages between systems.</li>
+</ul>
+<p>Other vendor and custom-built SNMP applications are also allowed.</p>
+<h3 id="using-network-address-allocation">Using Network Address Allocation</h3>
+<p>The most basic security aspect of network design is the use of subnetting.</p>
+<p>IP address classes:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left">Class</th>
+<th style="text-align: left">IP Range</th>
+<th style="text-align: left">Subnet Mask</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left">Class A</td>
+<td style="text-align: left">0.0.0.0 - 126.255.255.255</td>
+<td style="text-align: left">255.0.0.0</td>
+</tr>
+<tr>
+<td style="text-align: left">Class B</td>
+<td style="text-align: left">128.0.0.0 - 191.255.255.255</td>
+<td style="text-align: left">255.255.0.0</td>
+</tr>
+<tr>
+<td style="text-align: left">Class C</td>
+<td style="text-align: left">192.0.0.0 - 223.255.255.255</td>
+<td style="text-align: left">255.255.255.0</td>
+</tr>
+</tbody>
+</table>
+<p>Common reserved network blocks:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left">Class</th>
+<th style="text-align: left">IP Range</th>
+<th style="text-align: left">Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left">Class A</td>
+<td style="text-align: left">10.0.0.0/8</td>
+<td style="text-align: left"> </td>
+</tr>
+<tr>
+<td style="text-align: left">Class A</td>
+<td style="text-align: left">127.0.0.0/8</td>
+<td style="text-align: left">Reserved for localhost</td>
+</tr>
+<tr>
+<td style="text-align: left">Class B</td>
+<td style="text-align: left">172.16.0.0/12</td>
+<td style="text-align: left">a.k.a. 172.16.0.0 - 172.31.255.255</td>
+</tr>
+<tr>
+<td style="text-align: left">Class C</td>
+<td style="text-align: left">192.168.0.0/16</td>
+<td style="text-align: left"> </td>
+</tr>
+</tbody>
+</table>
+<p>Note that, except for the Class A reservations, all of these use larger subnet masks than you would typically suspect. There are actually far more reserved blocks than just these four; Wikipedia has a good list.</p>
+<p>CIDR (as in “CIDR subnet notation”) is “Classless InterDomain Routing”. This is the count of how many of the <em>most</em> significant bits are “masked” (held constant in the network).</p>
+<p>IPv6 is a 128-bit address space (as opposed to the 32-bit address space of IPv4). IPv6 addresses are represented as eight groups of four hexadecimal digits (so each block represents 16 bits, exactly twice the size of an IPv4 block). The <em>largest</em> block consisting only of zeros can be replaced with <code class="language-plaintext highlighter-rouge">::</code> (i.e., you can only use this trick <em>once</em>), and leading zeros in a block can also be dropped.</p>
+<p>IPv6 also introduces the concept of “variable length subnet masking” (VLSM), which specifies subnets as needed rather than for the entire network. However, CIDR notation continues to work as you’d expect, so 2001:db8::/32 represents the subnet 2001:0db8:0000:0000:0000:0000:0000:0000 – 2001:0db8:ffff:ffff:ffff:ffff:ffff:ffff.</p>
+<p>The IPv6 equivalent of 127.0.0.1 is ::1; the rest of the 127.0.0.0/8 block is replaced with the concept of “link-local” addresses, which are self-assigned per network interface addresses in the reserved fe80::/10 subnet (RFCs 7217 and 8064 defines how link-local addresses are assigned).</p>
+<p>In both IPv4 and IPv6, the first address in a subnet represents the network itself, and the last address is used to broadcast to all devices on the network. These two addresses are thus unavailable for hosts to use.</p>
+<p>Exam Cram notes that the Security+ exam will likely have questions related to identifying incorrectly configured subnets.</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Reserved_IP_addresses">Reserved IP addresses (Wikipedia)</a></li>
+<li><a href="https://en.wikipedia.org/wiki/IPv6">IPv6 (Wikipedia)</a></li>
+<li><a href="https://datatracker.ietf.org/doc/html/rfc8064">Recommendation on Stable IPv6 Interface Identifiers (RFC 8064)</a></li>
+<li><a href="https://datatracker.ietf.org/doc/html/rfc7217">A Method for Generating Semantically Opaque Interface Identifiers with IPv6 Stateless Address Autoconfiguration (SLAAC) (RFC 7217)</a></li>
+</ul>
+<h3 id="using-time-synchronization">Using Time Synchronization</h3>
+<p>NTP operates over UDP. Time servers operate on a DNS-like hierarchy. The secure version of NTP is NTS (Network Time Security), which uses TLS + a second standard called “Authenticated Encryption with Associated Data (AEAD, which is used to extend integrity and authenticity guarantees to unencrypted header data). NTS only recently was submitted for publication as a standard.</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Authenticated_encryption">Authenticated Encryption (Wikipedia)</a></li>
+</ul>
+<h3 id="using-subscription-services">Using Subscription Services</h3>
+<p>New acronym: “Anything” as a Service (XaaS, which probably <em>actually</em> stands for “X as a Service”). An umbrella term for all of the *aaS things.</p>
+<h3 id="pki-components">PKI Components</h3>
+<p>A PKI should ideally provide the following:</p>
+<ul>
+<li>Identity authentication</li>
+<li>Integrity verification</li>
+<li>Privacy assurance</li>
+<li>Access authorization</li>
+<li>Transaction authorization</li>
+<li>Nonrepudiation support</li>
+</ul>
+<h3 id="certificate-authorities-cas">Certificate Authorities (CAs)</h3>
+<p>A certificate authority (CA) is a trusted entity that issues certificates.</p>
+<p>A registration authority (RA) sits between users and the CA, handling identity verification step.</p>
+<p>Certificates issued by a CA are trusted in a transitive fashion, anchored in the CA’s “root certificate”. This allows CAs to themselves be arranged in a hierarchy.</p>
+<h3 id="certification-practice-statement">Certification Practice Statement</h3>
+<p>The certification practice statement (CPS) is the legal document outlining the identity of the CA, the types of certificates it issues, the requirements it has for issuing these certificates, the CA’s operating procedures (issuing, renewing, revoking), and the security controls used in the process.</p>
+<p>Not to be confused with certificate <em>policies</em>, which are the rules describing how a certificate may be used.</p>
+<h3 id="trust-models">Trust Models</h3>
+<p>You could, of course, just have a single CA. Probably fine for a small or medium organization, but not a great idea in the real world.</p>
+<p>More commonly, CAs are arranged in a hierarchy. CAs beneath the root CA in a hierarchy are called “intermediate CAs”. Because of their sensitivity, root CAs are normally entirely offline.</p>
+<p>A variation of this is the “bridge CA model”, which uses hierarchies that are connected by cross-certifications with one or more “bridge CAs”. While a diagram of this <em>looks</em> like a hierarchical model, the difference is that the root CAs of the various hierarchies are using the bridge to trust each other, rather than obtaining their trust from the bridge. Thus a compromise of the bridge, while it would disconnect the various hierarchies, would <em>not</em> invalidate certificates issued by the actual root.</p>
+<p>An alternative to a hierarchy is the “cross-certification model” — a.k.a., the “web of trust”. This model allows redundancy and a more realistic model of trust, but doesn’t scale well and is often difficult even for experts to work with.</p>
+<ul>
+<li><a href="http://pkiglobe.org/pki_models.html">Introduction to PKI Models</a></li>
+</ul>
+<h3 id="key-escrow">Key Escrow</h3>
+<p>This is when the private half of a public/private keypair is held by a third party (which may or may not be the issuing CA) in addition to the user the key is issued to.</p>
+<p>Escrow agents are not only able to read data encrypted by the public half of this key but also — because encryption capabilities are symmetric — are able to sign messages on behalf of the key user (harming nonrepudiation).</p>
+<p>Key escrow is common in corporate environments. This both enables corporate access to employee data and allows for new user certificates to be quickly regenerated in the event of a lost password.</p>
+<h3 id="digital-certificates">Digital Certificates</h3>
+<p>A “digital certificate” is a block of data used for identification purposes. Typically a certificate is signed by a CA’s private key, providing integrity and authenticity guarantees. Non-PGP certificates generally use the X.509v3 hierarchy, which contain the following (common) fields:</p>
+<ul>
+<li>Version Number: The X.509 version of the certificate.</li>
+<li>Serial Number: A unique serial number for the certificate, assigned by the CA.</li>
+<li>Signature Algorithm Identifier: The cryptographic algorithm used to sign the certificate.</li>
+<li>Issuer Name: The CA’s name.</li>
+<li>Period of Validity: Start and end dates for when the certificate should be considered valid, absent key compromises. Typically one year.</li>
+<li>Subject/Owner Name: The name of the entity being identified, typically either a domain name or an entity name in X.500 “distinguished name” (DN) format (which is basically a list of LDAP attributes).</li>
+<li>Subject/Owner Public Key: The public key of the entity being identified, along with associated cryptographic information (algorithm, etc.).</li>
+<li>Extensions: Additional requirements not supported by previous versions of the X.509 standard. Additional fields may restrict the use of the <em>private</em> key corresponding to the enclosed public key in certain ways or provide alternate domain names for servers.</li>
+<li>Signature Value: The actual signature of the (remainder of?) the certificate.</li>
+</ul>
+<p>The inclusion of a public key within the certificate allows for encrypted communications to be safely bootstrapped (so, for example, the initial Diffie-Hellman key exchange can be encrypted in both directions).</p>
+<p>Exam Cram indicates that it is likely the Security+ exam will require recognizing the parts of an X.509 certificate.</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Transport_Layer_Security">Transport Layer Security (Wikipedia)</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Public_key_certificate">Public key certificate (Wikipedia)</a></li>
+<li><a href="https://www.zwilnik.com/security-and-privacy/diffie-hellman-and-forward-secrecy/">Diffie-Hellman and Forward Secrecy</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange">Diffie-Hellman key exchange (Wikipedia)</a></li>
+<li><a href="https://en.m.wikipedia.org/wiki/X.500">X.500 (Wikipedia)</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Lightweight_Directory_Access_Protocol">Lightweight Directory Access Protocol (Wikipedia)</a></li>
+</ul>
+<h3 id="public-and-private-key-usage">Public and Private Key usage</h3>
+<p>The X.509 standard does not support multiple keys, so if different keys are used for different purposes then multiple certificates must be exchanged.</p>
+<h3 id="certificate-signing-requests">Certificate Signing Requests</h3>
+<p>A certificate signing request (CSR) is just a structured request to a CA to generate a digital certificate, including the information required for that certificate (as well as anything else the CA requires). CSRs are signed by the private half of the included public key.</p>
+<h3 id="certificate-policies">Certificate Policies</h3>
+<p>The rules indicating how a certificate may be used. While the certificate policies are distinct from the certification practice statement (above), there can also be a lot of overlap (for example, renewal policies). The key here is that the certification practice statement describes the CA’s practices <em>as a whole</em>, which the certificate policies apply only to the certificate being issued.</p>
+<h3 id="certificate-types">Certificate Types</h3>
+<p>For server TLS certificates:</p>
+<ul>
+<li>Domain Validation (DV): Only validate a domain and include no other information.</li>
+<li>Organizational Validation (OV): Verifies organizational details against government records.</li>
+<li>Extended Validation (EV): Requires a more comprehensive validation of the entity the certificate is issued to.</li>
+</ul>
+<p>Browser used to treat these three types of certificates differently (for example, by displaying the business name in the URL bar for EV certificates), but this is no longer commonly done.</p>
+<p>Other types of certificates:</p>
+<ul>
+<li>Wildcard: Applies to all subdomains of the registered domain (*.example.com).</li>
+<li>SAN: Applies to both the registered domain and a list of “subject alternate names” (SANs). SANs can include IP addresses. Sometimes called a “unified communications” (UC) certificate.</li>
+<li>Code Signing: Used to digitally sign software (I’m pretty sure this certificate is also embedded in the signed binary or otherwise associated with the code).</li>
+<li>Self-Signed: A certificate that has been signed by the private half of the embedded public key.</li>
+<li>Email: A certificate specifically flagged for use with S/MIME.</li>
+<li>Root Signing: The certificate for a CA itself, such as those included with web browsers.</li>
+<li>User/Client: Identifies an individual. Typically used for certificate-based authentication.</li>
+<li>Machine/Computer: Identifies a particular machine. Typically used for peer-to-peer communications</li>
+</ul>
+<p>References:</p>
+<ul>
+<li><a href="https://blog.trailofbits.com/2020/05/27/verifying-windows-binaries-without-windows/">Verifying Windows binaries, without Windows</a></li>
+</ul>
+<h3 id="certificate-formats">Certificate Formats</h3>
+<p>Certificates can be binary of base64 encoded. Common formats:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left">Format</th>
+<th style="text-align: left">Encoding</th>
+<th style="text-align: left">Used In</th>
+<th style="text-align: left">Extensions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left">DER</td>
+<td style="text-align: left">Binary</td>
+<td style="text-align: left">Java</td>
+<td style="text-align: left">.der, .cers, .crt</td>
+</tr>
+<tr>
+<td style="text-align: left">PEM</td>
+<td style="text-align: left">Base64</td>
+<td style="text-align: left">Linux, macOS</td>
+<td style="text-align: left">.pem, .cer, .crt</td>
+</tr>
+<tr>
+<td style="text-align: left">PFX (PKCS#12)</td>
+<td style="text-align: left">Binary</td>
+<td style="text-align: left">Windows</td>
+<td style="text-align: left">.pfx, .p12</td>
+</tr>
+<tr>
+<td style="text-align: left">P7B (PKCS#7)</td>
+<td style="text-align: left">Base64</td>
+<td style="text-align: left">Windows, Apache Tomcat</td>
+<td style="text-align: left">.p7b, .p7c</td>
+</tr>
+</tbody>
+</table>
+<p>PEM stands for “privacy enhanced mail”, and is the most common format. PEM files can actually contain multiple certificates and private keys, separated by BEGIN CERTIFICATE / END CERTIFICATE and BEGIN PRIVATE KEY / END PRIVATE KEY specifiers (each specifier is preceded and followed by <code class="language-plaintext highlighter-rouge">-----</code>). The .key extension is also sometimes used for PEM files, but only when the file contains a single private key.</p>
+<p>The PKCS#7 key format looks superficially similar to PEM, but uses the BEGIN PKCS7 / END PKCS7 specifier (again preceded and followed by <code class="language-plaintext highlighter-rouge">-----</code>).</p>
+<p>DER stands for “distinguished encoding rules”.</p>
+<p>PFX stands for “personal information exchange”. Like PEM, multiple certificates and private keys can be stored in a single .p12 file.</p>
+<h3 id="certificate-revocation">Certificate Revocation</h3>
+<p>Revocation occurs when a certificate is invalidated <em>before</em> its expiration date. Revocations can be communicated in one of two ways:</p>
+<ul>
+<li>A certificate revocation list (CRL) is basically a simple list of revoked certificates, and is used as part of client or server certificate validation. Because this is a simple file, it must be kept constantly updated.</li>
+<li>The Online Certificate Status Protocol (OCSP) allows certificate revocation to be checked against the CA in real time. However, clients generally fail OCSP open, which is why OCSP stapling (below) exists.</li>
+</ul>
+<p>Certificates can also be “suspended”, which is a state that indicates it is under investigation for revocation. While a suspended certificate may remain in place, it is not valid for any uses.</p>
+<h3 id="ocsp-stapling">OCSP Stapling</h3>
+<p>OCSP stapling involves the <em>web server</em> providing OCSP validity information as part of the TLS handshake. To perform stapling, the web server does the following:</p>
+<ul>
+<li>The web server more-or-less makes an OCSP request for its <em>own</em> certificate.</li>
+<li>The CA responds with a standard OCSP response, including the certificate identifier, the certificate status, and a timestamp indicating how long the returned information is valid. All of this is signed by the CA.</li>
+<li>The web server appends the CA’s OCSP response to its own certificate when presenting it to the client.</li>
+<li>The client verifies the OCSP response as if it came from the CA itself (after checking the signature). If an invalid response is presented, the client performs its own OCSP request.</li>
+</ul>
+<p>OCSP stapling tries to work around the problem of clients failing open when no OCSP response is returned, though the solution is incomplete (a malicious party that can potentially strip both the stapled OCSP response and block the client OCSP requests). It does resolve the privacy and load issues of the original OCSP implementation, however.</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/OCSP_stapling">OCSP stapling (Wikipedia)</a></li>
+<li><a href="https://datatracker.ietf.org/doc/html/rfc6066">Transport Layer Security (TLS) Extensions: Extension Definitions (RFC 6066)</a></li>
+<li><a href="https://datatracker.ietf.org/doc/html/rfc6960">X.509 Internet Public Key Infrastructure Online Certificate Status Protocol - OCSP (RFC 6960)</a></li>
+</ul>
+<h3 id="pinning">Pinning</h3>
+<p>While Exam Cram’s assertion that certificate pinning exists to thwart man-in-the-middle attacks is <em>technically</em> true, I think it misses the broader picture of how weak the CA system has turned out to be in practice (if the CA system worked correctly, man-in-the-middle attacks on SSL connections would be <em>much</em> harder).</p>
+<h2 id="itprotv-comptia-security-sy0-601-1">ITPro.TV: CompTIA Security+ (SY0-601)</h2>
+<h3 id="secure-protocols">Secure Protocols</h3>
+<p>The TLS handshake:</p>
+<ul>
+<li>The client sends a list of supported cipher suites + a random number.</li>
+<li>The server sends back the strongest cipher from the list the client provided that it supports, its own certificate, and a random number.</li>
+<li>The client uses the server’s public key to encrypt a shared secret derived from the exchanged random numbers and send it back to the server.</li>
+</ul>
+<p>This encrypted shared secret then becomes the basis of the shared session key(s). (There are really two keys — an HMAC key which verifies the validity of the session key, and the session key itself.)</p>
+<p>(When using ephemeral Diffie-Hellman to derive a rotating session key, we don’t actually encrypt anything with the server’s public key in the last step, nor do we use the two exchange random numbers. Instead, the server picks Diffie-Hellman parameters <code class="language-plaintext highlighter-rouge">p</code> and <code class="language-plaintext highlighter-rouge">g</code>, and sends those along with its own derived public key. Importantly, the server also <em>signs</em> this message, preventing it from being tampered with. The client then uses <code class="language-plaintext highlighter-rouge">p</code>, <code class="language-plaintext highlighter-rouge">g</code>, and its own secret to produce a public key, which it sends to the server. The encrypted connection established, the first thing that the client and server send are hashes of the initial handshake messages to verify the integrity of the initial negotiation… Though I think as of TLSv1.3 this hash exchange may be largely vestigial?)</p>
+<p>Important ports:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left">Protocol</th>
+<th style="text-align: right">Port</th>
+<th style="text-align: center">Encrypted?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left">SSH</td>
+<td style="text-align: right">22</td>
+<td style="text-align: center">Y</td>
+</tr>
+<tr>
+<td style="text-align: left">LDAP</td>
+<td style="text-align: right">389</td>
+<td style="text-align: center"> </td>
+</tr>
+<tr>
+<td style="text-align: left">LDAPS</td>
+<td style="text-align: right">636</td>
+<td style="text-align: center">Y</td>
+</tr>
+<tr>
+<td style="text-align: left">HTTP</td>
+<td style="text-align: right">80</td>
+<td style="text-align: center"> </td>
+</tr>
+<tr>
+<td style="text-align: left">HTTPS</td>
+<td style="text-align: right">443</td>
+<td style="text-align: center">Y</td>
+</tr>
+<tr>
+<td style="text-align: left">POP3</td>
+<td style="text-align: right">110</td>
+<td style="text-align: center"> </td>
+</tr>
+<tr>
+<td style="text-align: left">POP3S</td>
+<td style="text-align: right">995</td>
+<td style="text-align: center">Y</td>
+</tr>
+<tr>
+<td style="text-align: left">IMAP</td>
+<td style="text-align: right">143</td>
+<td style="text-align: center"> </td>
+</tr>
+<tr>
+<td style="text-align: left">IMAPS</td>
+<td style="text-align: right">993</td>
+<td style="text-align: center">Y</td>
+</tr>
+<tr>
+<td style="text-align: left">SMTP</td>
+<td style="text-align: right">25</td>
+<td style="text-align: center"> </td>
+</tr>
+<tr>
+<td style="text-align: left">SMTP+SSL</td>
+<td style="text-align: right">465</td>
+<td style="text-align: center">Y</td>
+</tr>
+<tr>
+<td style="text-align: left">SMTP+STARTTLS</td>
+<td style="text-align: right">587</td>
+<td style="text-align: center">Y</td>
+</tr>
+</tbody>
+</table>
+<p>(Dan Lowrie states that scp is considered deprecated now… Which surprisingly turns out to be true! Though there’s apparently a version of scp that’s actually sftp under the hood in development, so the end impact of this deprecation will probably be close to zero.)</p>
+<p>SRTP: Secure Realtime Transport Protocol.</p>
+<p>SNMP handles not just reporting, but also device configuration. Only SNMPv3 has encryption and authentication.</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange">Diffie–Hellman key exchange (Wikipedia)</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Transport_Layer_Security">Transport Layer Security (Wikipedia)</a></li>
+<li><a href="https://thecybersecurityman.com/2018/04/25/https-the-tls-handshake-using-diffie-hellman-ephemeral/">HTTPS: The TLS Handshake Using Diffie-Hellman Ephemeral</a></li>
+<li><a href="https://wiki.osdev.org/TLS_Handshake">TLS Handshake (OSDev.org)</a></li>
+<li><a href="https://lwn.net/Articles/835962/">Deprecating scp</a></li>
+</ul>
+<h3 id="keys">Keys</h3>
+<p>Cryptographic Service Provider: The algorithm used to generate an encryption key (AES, etc.).</p>
+<p>Note that RSA defines both a <em>type</em> of public/private keypair <em>and</em> a key exchange algorithm. In fact, that key exchange algorithm was the standard in SSL/TLS up until TLSv1.3 (when all key exchange methods except those based on ephemeral Diffie-Hellman were removed) — it’s the algorithm that uses the two random numbers exchanged during the initial negotiation to generate a (symmetric) session key!</p>
+<p>Key stretching is primarily used to increase the effective length of encryption passwords (that are then used to derive keys). Important key stretching algorithms:</p>
+<ul>
+<li>BCRYPT (uses Blowfish)</li>
+<li>PBKDF2</li>
+</ul>
+<p>Both of these are about using salts + multiple hashing rounds.</p>
+<p>The most popular key derivation protocol is probably ECDHE at this point, as it is both fast and secure (a seldom-seen combination!).</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/RSA_%28cryptosystem%29">RSA (cryptosystem) (Wikipedia)</a></li>
+</ul>
+<h3 id="pki-concepts">PKI Concepts</h3>
+<p>OCSP: Online Certificate Status Protocol.</p>
+<p>Active Directory’s PKI infrastructure is called “Active Directory Certificate Services”.</p>
+<p>The “Online Responder” role forAD Certificate Services handles OCSP requests.</p>
+<p>“Enterprise CAs” integrate with AD, while “Standard CAs” don’t.</p>
+<p>Typically, root CAs have longer keys than subordinate CAs, which have longer keys than user/entity keys. Root CA keys also generally have <em>much</em> longer validity periods than intermediate CA or user/entity keys.</p>
+<p>Root CA certificates are self-signed by default, though in a bridged PKI system they will also be signed by the bridge CA key.</p>
+<h3 id="certificates">Certificates</h3>
+<p>Important types:</p>
+<ul>
+<li>Self-signed</li>
+<li>Machine certificates</li>
+<li>User certificates (mostly for authentication)</li>
+<li>Code signing</li>
+<li>Wildcard</li>
+<li>Domain validation (DV — the lowest level of domain validation, only verifies control over the domain)</li>
+<li>Organization validation (OV — validates the organization itself)</li>
+<li>Extended validation (EV — more extension organizational validation, kind of a scam)</li>
+</ul>
+<p>Certificate formats:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left">Format</th>
+<th style="text-align: left">Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left">Distinguished Encoding Rules (.der)</td>
+<td style="text-align: left">Binary encoded, .cer if no private key</td>
+</tr>
+<tr>
+<td style="text-align: left">Privacy Enhanced Mail (PEM)</td>
+<td style="text-align: left">Base64 encoded, lots of extensions (.pem, .cer, .crt)</td>
+</tr>
+<tr>
+<td style="text-align: left">Public Key Cryptography Standard #7</td>
+<td style="text-align: left">Includes public key + certificate chain (.p7b)</td>
+</tr>
+<tr>
+<td style="text-align: left">Public Key Cryptography Standard #12</td>
+<td style="text-align: left">Everything in PKCS#7 + private key and additional certificate information (.p12)</td>
+</tr>
+</tbody>
+</table>
+<p>PKCS#12 is generally used for backing up CAs, while PKCS#7 is used for normal key exchange. Both of these are (almost exclusively) used by Windows.</p>
+<h3 id="ipsec">IPSec</h3>
+<p>IPSec: Internet Protocol Security. Not really a single protocol — more a family of inter-related protocols.</p>
+<p>IPSec is primarily used as a VPN solution (both site-to-site/gateway-to-gateway and client-to-gateway).</p>
+<p>IPSec is built on a number of components, the most basic of which is the ”Security Association” (SA) — trust relationships between endpoints (could be client-to-client, client-to-gateway, or gateway-to-gateway).</p>
+<p>(IKE) Phase 1 SA (“main mode”) doesn’t actually set up an IPSec connection, but instead negotiates a single encrypted <em>bidirectional</em> tunnel between the endpoints. The negotiation consists of:</p>
+<ul>
+<li>Diffie-Hellman exchange</li>
+<li>Client/Gateway authentication (PSK or certificates)</li>
+<li>Encryption method (DES, 3DES, or AES — probably only the last of these)</li>
+<li>Session duration</li>
+</ul>
+<p>The phase 1 tunnel is then used to set up the (IKE) Phase 2 SA (“quick mode”), which establishes two <em>unidirectional</em> encrypted tunnels between the endpoints. In phase 2, the negotiation consists of:</p>
+<ul>
+<li>IPSec protocol (AH or ESP)</li>
+<li>Encapsulation method</li>
+<li>Authentication via hash exchange (typically MD5 or SHA1)</li>
+<li>Session duration</li>
+<li>Additional Diffie-Hellman exchange (if perfect forward secrecy is desired)</li>
+</ul>
+<p>Note that the only data sent over the phase 1 connection is the configuration information necessary to set up phase 2 — all actually point-to-point communications happen via the phase 2 tunnels.</p>
+<p>Every security association has an identifier (which is invalidated after the session is over), and packets are sequenced as well. This provides two layers of protection against replay attacks.</p>
+<p>There are two IPSec ”protocols”:</p>
+<ul>
+<li>Authentication Header (AH, IP protocol identifier 51) provides authentication and integrity guarantees, but does <em>not</em> provide encryption.</li>
+<li>Encapsulating Security Payload (ESP, IP protocol identifier 50) provides authentication, integrity, <em>and</em> encryption.</li>
+</ul>
+<p>These protocols can be used independently or together. The main reason to mix-and-match is if you are using encryption (which requires ESP) for only <em>some</em> connections on your network. Since AH is partially duplicative of ESP, by using both (and turning off the overlapping capabilities in ESP) you can ensure that all IPSec packets use AH with only a small increase in the overhead of packets using ESP. This allows for (modestly) simpler firewall rules.</p>
+<p>There are also two IPSec encapsulation methods used by ESP:</p>
+<ul>
+<li>Transport mode is used for client-to-client and client-to-gateway connections. It preserves the original packet headers but encrypts the packet data.</li>
+<li>Tunnel mode is used between gateways. It encrypts the <em>entire</em> original packet, appending a <em>new</em> header.</li>
+</ul>
+<p>The distinction makes sense when you consider that tunnel mode is joining two existing networks, while transport mode is joining two individual machines on the “same” network. You could imaging using tunneling mode in place of transport mode, but then the new header would be (functionally) the same as the original header; thus, there is no security benefit to encrypting the original header in this situation. The extra “translation” step between the gateways is why encrypting the entire original packet makes sense.</p>
+<p>Additionally, IPSec tunnels are built using either PPTP (the point-to-point tunneling protocol) or L2TP (the layer 2 tunneling protocol). Note, however, that only L2TP is considered secure.</p>
+<p>IKE occurs over the Internet Security Association and Key Management Protocol (ISAKMP), which is how its tagged in Wireshark.</p>

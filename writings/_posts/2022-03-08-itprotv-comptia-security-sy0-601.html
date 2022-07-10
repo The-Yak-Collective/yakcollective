@@ -1,0 +1,67 @@
+---
+title: 'ITPro.TV: CompTIA Security+ (SY0-601)'
+date: 2022-03-08 06:00:00.000000000 Z
+layout: post-external
+original_link: https://cardboard-iguana.com/log/2022-03-08-itprotv-comptia-security-plus.html
+author: 100007
+---
+
+<h1 id="itprotv-comptia-security-sy0-601">ITPro.TV: CompTIA Security+ (SY0-601)</h1>
+<p><strong>author:</strong> Nathan Acks<br />
+<strong>date:</strong> 2022-03-08</p>
+<h2 id="comptia-security-exam-cram">CompTIA Security+ Exam Cram</h2>
+<p>Today I’ll be reading chapter 23 of the Exam Cram, “Identity and Account Management Controls”.</p>
+<p>I’m tempted to say that this chapter is largely “common sense”, but I suspect that’s more of a consequence of it speaking to a core function of my current job than anything else.</p>
+<h3 id="account-types">Account Types</h3>
+<p>Exam Cram notes that Windows includes sudo/su like “run as” functionality (beyond the usual Shift + Right Click “Run as Administrator”), but doesn’t elaborate on this potentially useful tool. Fortunately, it’s not hard to find out that the utility itself is called <code class="language-plaintext highlighter-rouge">runas</code>:</p>
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">runas</span><span class="w"> </span><span class="nx">/user:</span><span class="nv">$USERNAME</span><span class="w"> </span><span class="nv">$EXECUTABLE</span><span class="w">
+</span></code></pre></div></div>
+<p>Note that <code class="language-plaintext highlighter-rouge">$USERNAME</code> can also be specified as <code class="language-plaintext highlighter-rouge">$DOMAIN\$USERNAME</code> for domain-joined machines. The <code class="language-plaintext highlighter-rouge">$EXECUTABLE</code> is treated normally (as if not prefixed by the <code class="language-plaintext highlighter-rouge">runas</code> command); thus, a full or relative path is only necessary when <code class="language-plaintext highlighter-rouge">$EXECUTABLE</code> is not already in the Windows path.</p>
+<ul>
+<li><a href="https://www.shellhacks.com/windows-run-as-different-user/">Windows: Run as Different User</a></li>
+<li><a href="https://www.windows-commandline.com/windows-runas-command-prompt/">Windows runas command syntax and examples</a></li>
+</ul>
+<h3 id="onboarding-and-offboarding">Onboarding and Offboarding</h3>
+<p>And identity providers (IdP) is an organization or system responsible for managing and authenticating user identities.</p>
+<h3 id="access-auditing-and-reviews">Access Auditing and Reviews</h3>
+<p>“Access recertification” is just a formal access review that explicitly cross-references current corporate policies and relevant compliance requirements.</p>
+<p>Exam Cram recommends that access to high-risk applications be reviewed quarterly, and all applications/groups should have their access reviewed yearly. Part of this review should also include identifying a “single wringable neck” for each application, as well as data classification for the application.</p>
+<h3 id="time-of-day-and-location-restrictions">Time of Day and Location Restrictions</h3>
+<p>Time of day login restrictions are handled under Windows using the Kerberos group policy “Enforce User Login Restrictions”. In particular, “Automatically Log Off users” controls whether or not users can remain logged in “after hours”.</p>
+<p>Location-based restriction vocabulary:</p>
+<ul>
+<li>Geofencing: Triggering an action when a device enters or leaves a defined geographic area.</li>
+<li>Geolocation: Determining the geographic (coordinate-based) location of a device.</li>
+<li>Geotagging: Metadata added to something based on its geographic location.</li>
+</ul>
+<p>References:</p>
+<ul>
+<li><a href="https://cardboard-iguana.com/notes/kerberos.html">Kerberos</a></li>
+</ul>
+<h3 id="logical-access-controls">Logical Access Controls</h3>
+<p>USER-BASED ACCESS CONTROL assigns permissions directly to individual users. Fine-grained, but time-consuming to manage and doesn’t scale well.</p>
+<p>GROUP-BASED ACCESS CONTROL (also called role-based access control) assigns permissions based on groups which users are then assigned <em>to</em>. Coarse-grained, but <em>way</em> easier to managed.</p>
+<p>Exam Cram states that all systems handle permissions in groups cumulatively, but treat deny directives as absolute (such that a denial in one group cannot be overridden by access provided by another). The authors have clearly not used groups in Google Workspace (whose only concept of “deny” is to turn a feature off or set it to a more restricted value, <em>both</em> of which will be overridden if the user is in a group with more liberal permissions). That said, Exam Cram indicates that this convention for group-based access controls may be featured on the Security+ exam, so I guess exam-takers need to just forget about Google.</p>
+<h3 id="account-policy-enforcement">Account Policy Enforcement</h3>
+<p>Exam Cram emphasizes that ideally all accounts and credentials should be set to automatically expire and then explicitly renewed, rather than relying only on the deprovisioning process.</p>
+<p>In Active Directory, domain-level policies are always enforced, but OU-level policies are only enforced for local logins.</p>
+<h3 id="account-lockout">Account Lockout</h3>
+<p>Windows ”Account Lockout Policy” notes:</p>
+<ul>
+<li>The “Account lockout duration” setting determines how long an account is locked out after the the threshold number of incorrect attempts is reached. Can range from 1 - 99999 minutes; 0 means the account is locked until an administrator intervenes.</li>
+<li>The “Account lockout threshold” setting determined the number of incorrect login attempts before lockout occurs. Can range from 1 - 999; 0 disables account lockouts. Typically set in the 3 - 5 range.</li>
+<li>The “Reset account lockout counter after” setting determines how long after the last unsuccessful login the counter is reset to 0. Can range from 1 to the value of “Account lockout duration”. (IIRC, a successful login also resets the counter.)</li>
+</ul>
+<h3 id="password-age-and-history--password-length-and-rotation">Password Age and History / Password Length and Rotation</h3>
+<p>Windows “Password Policy” notes:</p>
+<ul>
+<li>The “Maximum password age” setting determines when a password expires. Can be set in the range of 1 - 999 days, or 0 to disable expiration. Typically set in the 30 - 90 day range</li>
+<li>The “Minimum password age” setting determines how often a password can be changed. Can be set in the range 0 to one day less than the “Maximum password age” (unless “Maximum password age” is 0).</li>
+<li>The “Enforce password history” setting controls how many previously used password hashes are stored. Passwords that match a stored hash cannot be used.</li>
+<li>The “Minimum password length” setting does exactly what you’d think it does. Can be 1 - 14 characters (I’m pretty sure that it’s 1 - 16 now, as Microsoft 365 supports 16 character passwords); setting this to 0 allows for empty passwords to be used (!!!).</li>
+</ul>
+<p>Exam Cram states that the “Minimum password age” setting is used to limit the amount of time that a breached password can be used, but I’m pretty sure they mean “Maximum password age” here. Even Microsoft’s own documentation states that the purpose of “Minimum password age” is to make password re-use impractical.</p>
+<p>If Exam Cram’s practice questions are any guide, the Security+ exam considers “passphrases” just to be really long passwords.</p>
+<ul>
+<li><a href="https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/minimum-password-age">Minimum password age (Microsoft Documentation)</a></li>
+</ul>

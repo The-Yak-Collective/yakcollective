@@ -1,0 +1,83 @@
+---
+title: 'TryHackMe: Jr. Penetration Tester (Supplements)'
+date: 2022-05-09 05:00:00.000000000 Z
+layout: post-external
+original_link: https://cardboard-iguana.com/log/2022-05-09-tryhackme-jr-penetration-tester-supplements.html
+author: 100007
+---
+
+<h1 id="tryhackme-jr-penetration-tester-supplements">TryHackMe: Jr. Penetration Tester (Supplements)</h1>
+<p><strong>author:</strong> Nathan Acks<br />
+<strong>date:</strong> 2022-05-09</p>
+<p>With the course work for the Security+ exam out of the way, it’s time to turn back to all of the “supplements” I picked up along the way while working through the TryHackMe Jr. Penetration Tester sequence. Today:</p>
+<ul>
+<li><a href="https://tryhackme.com/room/redteamengagements">TryHackMe: Red Team Engagements</a></li>
+<li><a href="https://tryhackme.com/room/redteamfirewalls">TryHackMe: Firewalls</a></li>
+</ul>
+<h3 id="defining-scope-and-objectives">Defining Scope and Objectives</h3>
+<p>New term:</p>
+<ul>
+<li>White Card: A simulated event during a penetration test; these are used when there’s a desire to determine the impact of the exploitation of a system without actually performing the initial exploitation (because the system is fragile, mission critical, etc.).</li>
+</ul>
+<p>Reference:</p>
+<ul>
+<li><a href="https://security.stackexchange.com/a/114788">Penetration Testing Vocabulary</a></li>
+</ul>
+<h3 id="rules-of-engagement">Rules of Engagement</h3>
+<p>The “rules of engagement” are basically the legally formalized (and binding) form of the test’s scope and objectives. <em>Not</em> a formal campaign plan.</p>
+<h3 id="mission-plan">Mission Plan</h3>
+<p>The difference between an “operation plan” and a “mission plan” is one of audience: The former is externally-facing (clients), while the latter is internally facing (red team members).</p>
+<h3 id="introduction-firewalls">Introduction: Firewalls</h3>
+<ul>
+<li><a href="https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml">Service Name and Transport Protocol Port Number Registry</a></li>
+</ul>
+<h3 id="types-of-firewalls">Types of Firewalls</h3>
+<p>Traditional firewalls cover OSI layers 2 – 4 (data link, network, and transport), while “next-gen” firewalls <em>additionally</em> cover layers 5 – 7 (session, presentation, and application).</p>
+<p>Types of firewalls:</p>
+<ul>
+<li>Packet-Filtering Firewall (a.k.a., “Stateless inspection Firewall”)</li>
+<li>Circuit-Level Gateway (adds awareness of the TCP handshake)</li>
+<li>Stateful Inpection Firewall (tracks sessions, so we’re getting into layer 5)</li>
+<li>Proxy Firewall (a.k.a., “Web Application Firewall”; inspects packet contents)</li>
+<li>Next-Generation Firewalls</li>
+<li>Cloud Firewall (a.k.a., “Firewall as a Service”; obviously used the protect cloud-based applications/networks)</li>
+</ul>
+<p>References:</p>
+<ul>
+<li><a href="https://cardboard-iguana.com/notes/osi-model.html">OSI Model</a></li>
+</ul>
+<h3 id="evasion-via-controlling-the-source-macipport">Evasion via Controlling the Source MAC/IP/Port</h3>
+<p>Nmap firewall evasion techniques:</p>
+<ul>
+<li>Decoy (<code class="language-plaintext highlighter-rouge">-D</code>) — mix in false source addresses in a round-robin fashion; use <code class="language-plaintext highlighter-rouge">ME</code> to fix the position of the actual scanner, and <code class="language-plaintext highlighter-rouge">RND</code> to inset a random IP.</li>
+<li>Proxy (<code class="language-plaintext highlighter-rouge">--proxies</code>) — use an HTTP or SOCKS4 proxy; specifying multiple proxies will create a chain.</li>
+<li>MAC address spoofing (<code class="language-plaintext highlighter-rouge">--spoof-mac</code>) — use a false MAC address; only works when on the same network segment as the target (so that Nmap can capture the results).</li>
+<li>IP address spoofing (<code class="language-plaintext highlighter-rouge">-S</code>) — same as the above, but for IP addresses.</li>
+<li>Fixed source port number (<code class="language-plaintext highlighter-rouge">-g</code>) — use the specified source port number, rather than a random source port.</li>
+</ul>
+<p>Nmap SYN scan packets are by default 44 bytes = 20 bytes IP header + 24 bytes TCP header + 0 bytes data.</p>
+<p>An Nmap SYN scan will send ~2x the number of packets as scanned ports, as all unresponsive ports are sent a second packet to verify that they’re actually closed (and, in general, most ports will be closed).</p>
+<ul>
+<li><a href="https://cardboard-iguana.com/notes/nmap.html">Nmap</a></li>
+</ul>
+<h3 id="evasion-via-forcing-fragmentation-mtu-and-data-length">Evasion via Forcing Fragmentation, MTU, and Data Length</h3>
+<p>Fragmenting packets in Nmap will generally let them get through a firewall <em>if</em> the firewall is not itself reassembling packets. Note this means that fragmenting packets to 8 bytes results in packets that are 28 bytes long. Use <code class="language-plaintext highlighter-rouge">-f</code> to fragment packets to 8 bytes, <code class="language-plaintext highlighter-rouge">-ff</code> to fragment packets to 16 bytes, or <code class="language-plaintext highlighter-rouge">--mtu</code> to fragment packets into a chosen multiple of 8.</p>
+<p>Fragmentation can lead to uneven packet sizes (in particular, the final fragment may be shorter than the others). Nmap will produce packets of a specified length (again, a multiple of 8) when called with <code class="language-plaintext highlighter-rouge">--data-length</code>; enough random bits will be added to the packet data field to ensure that the final packet is the same length as all the others. (You can also use this option to add random data to normal Nmap TCP packets by specifying a length greater than 24 bytes; note again that the IP header is uneffected.)</p>
+<h3 id="evasion-via-modifying-header-fields">Evasion via Modifying Header Fields</h3>
+<ul>
+<li><code class="language-plaintext highlighter-rouge">--ttl</code> — set a custom TTL.</li>
+<li><code class="language-plaintext highlighter-rouge">--ip-options</code> — specify the IP “Options” field as either a string of hex-encoded bytes (<code class="language-plaintext highlighter-rouge">\x00</code>, etc.) or <em>one</em> of the shortcut options <code class="language-plaintext highlighter-rouge">R</code> (record-route), <code class="language-plaintext highlighter-rouge">T</code> (record-timestamp), <code class="language-plaintext highlighter-rouge">U</code> (<code class="language-plaintext highlighter-rouge">R</code> <em>and</em> <code class="language-plaintext highlighter-rouge">T</code>), <code class="language-plaintext highlighter-rouge">L</code> (loose source routing), and <code class="language-plaintext highlighter-rouge">S</code> (strict source routing); both <code class="language-plaintext highlighter-rouge">L</code> and <code class="language-plaintext highlighter-rouge">S</code> must be followed by a space-separated list of IP addresses to route the packet through (the entire sting must be quoted), and are used to route around security appliances.</li>
+<li><code class="language-plaintext highlighter-rouge">--badsum</code> — send a packet with an intentionally bad checksum; whether or not the packet is dropped will depend on the system being scanned.</li>
+</ul>
+<h3 id="evasion-using-port-tunneling">Evasion Using Port Tunneling</h3>
+<p>Port forwarding with netcat (requires <code class="language-plaintext highlighter-rouge">-c</code> to be available):</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nc <span class="nt">-lvnp</span> <span class="nv">$INCOMING_PORT</span> <span class="nt">-c</span> <span class="s2">"nc </span><span class="nv">$TARGET_IP</span><span class="s2"> </span><span class="nv">$TARGET_PORT</span><span class="s2">"</span>
+</code></pre></div></div>
+<ul>
+<li><a href="https://cardboard-iguana.com/notes/netcat.html">Using “netcat”</a></li>
+</ul>
+<h3 id="evasion-using-non-standard-ports">Evasion Using Non-Standard Ports</h3>
+<p>Sometimes the netcat binary is named <code class="language-plaintext highlighter-rouge">ncat</code> instead of <code class="language-plaintext highlighter-rouge">nc</code>…</p>
+<ul>
+<li><a href="https://cardboard-iguana.com/notes/netcat.html">Using “netcat”</a></li>
+</ul>

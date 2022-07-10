@@ -1,0 +1,173 @@
+---
+title: 'ITPro.TV: CompTIA Security+ (SY0-601) &amp; TryHackMe: Jr. Penetration Tester'
+date: 2022-03-29 05:00:00.000000000 Z
+layout: post-external
+original_link: https://cardboard-iguana.com/log/2022-03-29-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.html
+author: 100007
+---
+
+<h1 id="itprotv-comptia-security-sy0-601--tryhackme-jr-penetration-tester">ITPro.TV: CompTIA Security+ (SY0-601) &amp; TryHackMe: Jr. Penetration Tester</h1>
+<p><strong>author:</strong> Nathan Acks<br />
+<strong>date:</strong> 2022-03-29</p>
+<h2 id="itprotv-comptia-security-sy0-601">ITPro.TV: CompTIA Security+ (SY0-601)</h2>
+<h3 id="network-security--segmentation">Network Security — Segmentation</h3>
+<p>A hub is a Layer 1 device — it’s just a multi-port repeater.</p>
+<p>VLAN logic is applied to Layer 2 — they’re basically a way of dividing up the ports on a switch (this makes me feel better about how I’ve been using them at work…). Data is routed between VLANs by the router (i.e., at Layer 3).</p>
+<p>While the canonical DMZ has a firewall on both the north and south side, in practice only a single firewall is generally used. Other terms for a DMZ:</p>
+<ul>
+<li>Perimeter network</li>
+<li>Screened subnet</li>
+<li>“Neutral Zone” (per Dan Lowerie 😜)</li>
+</ul>
+<p>Think of an extranet as a <em>purposeful</em> network of intranets. Normally this is achieved via VPN connections.</p>
+<p>North/South traffic can be thought of as traffic that crosses a security boundary (and thus should be touched by a router/firewall), while east/west traffic is traffic <em>within</em> the security perimeter.</p>
+<ul>
+<li><a href="https://cardboard-iguana.com/notes/osi-model.html">OSI Model</a></li>
+</ul>
+<h3 id="network-security--vpns">Network Security — VPNs</h3>
+<p>Broad types of VPNs:</p>
+<ul>
+<li>Remote Access VPN: Secures communications between individual clients and the home network.</li>
+<li>Site-to-Site VPN: Connects two routers, typically from remote networks (branch offices) to the home network (main office).</li>
+</ul>
+<p>VPN concentrators are falling by the wayside, as this functionality is typically built into next-generation firewalls.</p>
+<p>VPN tunneling protocols:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left">Protocol</th>
+<th style="text-align: left">Pros</th>
+<th style="text-align: left">Cons</th>
+<th style="text-align: left">Encryption</th>
+<th style="text-align: left">Ports</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left">PPTP</td>
+<td style="text-align: left">Widely supported</td>
+<td style="text-align: left">Weak encryption</td>
+<td style="text-align: left">Microsoft Point-to-Point Encryption (weak!)</td>
+<td style="text-align: left">TCP 1723</td>
+</tr>
+<tr>
+<td style="text-align: left">L2TP</td>
+<td style="text-align: left">Widely supported, strong security</td>
+<td style="text-align: left">Bad performance, problems traversing firewalls</td>
+<td style="text-align: left">IPSec (AES with certificates)</td>
+<td style="text-align: left">TCP 1701, UDP 500/4500</td>
+</tr>
+<tr>
+<td style="text-align: left">SSTP</td>
+<td style="text-align: left">Can traverse firewalls</td>
+<td style="text-align: left">Windows-only</td>
+<td style="text-align: left">SSL 3.0 only (ack!)</td>
+<td style="text-align: left">TCP 443</td>
+</tr>
+<tr>
+<td style="text-align: left">IKEv2</td>
+<td style="text-align: left">Good mobile/roaming support, strong security</td>
+<td style="text-align: left">Support is generally limited to mobile devices, problems traversing firewalls</td>
+<td style="text-align: left">IPSec (AES with certificates)</td>
+<td style="text-align: left">UDP 500/4500</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Point-to-Point_Tunneling_Protocol">Point-to-Point Tunneling Protocol (Wikipedia)</a></li>
+<li><a href="https://www.proofpoint.com/us/threat-reference/sstp">What Is SSTP?</a></li>
+</ul>
+<h3 id="network-security--proxies-and-load-balancing">Network Security — Proxies And Load Balancing</h3>
+<p>These days, proxies are mostly about controlling <em>access</em> to resources. They are particularly important for logging purposes.</p>
+<p>Forward proxies handle outbound traffic <em>to</em> external networks.</p>
+<p>Reverse proxies handle inbound traffic <em>from</em> external networks.</p>
+<p>Load balancers help distribute load, and in doing so help ensure availability. Types of load balancers:</p>
+<ul>
+<li>Active/Active: All interfaces are up. Mostly about performance.</li>
+<li>Active/Passive: Some interfaces are held in reserve and become active if an active interface fails. Mostly about ensuring availability.</li>
+</ul>
+<p>Servers behind a load balancer can also be set up in active/active or active/passive fashion. Additionally, active servers are typically accessed (“scheduled”) in one of two ways:</p>
+<ul>
+<li>Round Robin: Backend servers are accessed in sequence.</li>
+<li>Least Connection: Backend servers are accessed depending on current usage, so that as a server becomes less busy it becomes <em>more</em> likely to serve a request. Helps spread load out when dealing with a large number of heterogenous requests.</li>
+</ul>
+<p>Both of these access methods can be weighted in various ways.</p>
+<h3 id="network-security--port-security">Network Security — Port Security</h3>
+<p>This is about the security of <em>physical</em> switch ports.</p>
+<p>Spanning Tree Protocol (STP) is used to protect against looping and packet storms. Basically, in STP switches will communicate to elect a “root node”, and then build a tree of reachable switches from that node. Ports are dynamically disabled as necessary when loops are detected.</p>
+<p>STP operates using BPDU (Bridge Protocol Data Unit) frames. To stop malicious BPDU frames, BPDU guard marks certain ports as privileged (those connected to other, legitimate, switches), and rejects BPDU frames on all other ports.</p>
+<p>Another security measure implemented on switches (though it’s not really a Layer 2 security protocol) is DHCP snooping. This is similar to BPDU guard, in that a privilege port is identified where the legitimate DHCP server is connected, and makes sure that server packets to and from unauthorized ports are blocked.</p>
+<p>Switches can also do MAC address filtering (like wireless networks), and even restrict particular MAC addresses to particular ports.</p>
+<p>Some switches can also mirror ports (sometimes also called “port spanning”) for monitoring purposes.</p>
+<ul>
+<li><a href="https://cardboard-iguana.com/notes/osi-model.html">OSI Model</a></li>
+</ul>
+<h3 id="network-security--firewalls">Network Security — Firewalls</h3>
+<p>Stateless firewall = Packet filtering firewall (source, destination, port)</p>
+<p>Stateful firewall = Dynamic packet filtering firewall (monitors connection requests)</p>
+<p>Stateful firewalls keep track of connection state, and can block SYN flood attacks, etc.</p>
+<p>Next-gen firewalls can deal with more OSI layers than just 3 — all the way up to the application layer.</p>
+<ul>
+<li><a href="https://cardboard-iguana.com/notes/osi-model.html">OSI Model</a></li>
+</ul>
+<h3 id="network-security--nids-and-nips">Network Security — NIDS And NIPS</h3>
+<p>NIDS (Network Intrusion Detection Systems) and NIPS (Network Intrusion Prevention Systems) are generally built into next-gen firewalls.</p>
+<p>Detection methods:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left">Type</th>
+<th style="text-align: left">Characteristics</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left">Signatures</td>
+<td style="text-align: left">Database of known hashes, IoCs, etc.</td>
+</tr>
+<tr>
+<td style="text-align: left">Heuristics</td>
+<td style="text-align: left">Pattern matching</td>
+</tr>
+<tr>
+<td style="text-align: left">Behavioral</td>
+<td style="text-align: left">Looks for known malicious behaviors (basically plussed-up heuristics)</td>
+</tr>
+<tr>
+<td style="text-align: left">Anomalies</td>
+<td style="text-align: left">Detects changes relative to an observed baseline</td>
+</tr>
+</tbody>
+</table>
+<h2 id="tryhackme-jr-penetration-tester">TryHackMe: Jr. Penetration Tester</h2>
+<h3 id="passive-vs-active-recon">Passive vs. Active Recon</h3>
+<p>Passive recon concerns information we can gather <em>without</em> interacting with our target. This is generally publicly available information, such as DNS records, social media posts, etc.</p>
+<p>Active recon involved interacting with the target in some way. Connecting to systems, browsing their website, physical penetration of their facilities, etc.</p>
+<h3 id="whois">Whois</h3>
+<p>WHOIS responses include name server information (in the aptly-named “Name Server” field(s)).</p>
+<h3 id="nslookup-and-dig">nslookup and dig</h3>
+<p><code class="language-plaintext highlighter-rouge">nslookup</code> = Name Server Look Up</p>
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># nslookup command syntax; only $DOMAIN is required</span><span class="w">
+</span><span class="c">#</span><span class="w">
+</span><span class="n">nslookup</span><span class="w"> </span><span class="nt">-type</span><span class="o">=</span><span class="nv">$QUERY_TYPE</span><span class="w"> </span><span class="nv">$DOMAIN</span><span class="w"> </span><span class="nv">$NAME_SERVER</span><span class="w">
+</span><span class="c"># Examples</span><span class="w">
+</span><span class="c">#</span><span class="w">
+</span><span class="n">nslookup</span><span class="w"> </span><span class="nt">-type</span><span class="o">=</span><span class="n">A</span><span class="w"> </span><span class="nx">microsoft.com</span><span class="w"> </span><span class="nx">8.8.8.8</span><span class="w">
+</span><span class="n">nslookup</span><span class="w"> </span><span class="nx">tryhackme.com</span><span class="w"> </span><span class="nx">1.1.1.1</span><span class="w">
+</span><span class="n">nslookup</span><span class="w"> </span><span class="nt">-type</span><span class="o">=</span><span class="n">MX</span><span class="w"> </span><span class="nx">google.com</span><span class="w">
+</span></code></pre></div></div>
+<p><code class="language-plaintext highlighter-rouge">dig</code> = Domain Information Groper</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># dig command syntax; only $DOMAIN is required</span>
+<span class="c">#</span>
+dig @<span class="nv">$NAME_SERVER</span> <span class="nv">$DOMAIN</span> <span class="nv">$QUERY_TYPE</span>
+<span class="c"># Examples</span>
+<span class="c">#</span>
+dig @8.8.8.8 microsoft.com A
+dig @1.1.1.1 tryhackme.com
+dig google.com MX
+</code></pre></div></div>
+<h3 id="dnsdumpster">DNSdumpster</h3>
+<p>DNSdumpster is basically a search engine for domain data — type in a root domain, and get back (many of) its subdomains and other information. (In my testing DNSdumpster doesn’t always enumerate <em>every</em> subdomain, though it certainly does a better job than guessing.)</p>
+<ul>
+<li><a href="https://dnsdumpster.com/">DNSdumpster</a></li>
+</ul>

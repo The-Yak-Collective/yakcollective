@@ -1,0 +1,240 @@
+---
+title: 'ITPro.TV: CompTIA Security+ (SY0-601)'
+date: 2022-03-24 05:00:00.000000000 Z
+layout: post-external
+original_link: https://cardboard-iguana.com/log/2022-03-24-itprotv-comptia-security-plus.html
+author: 100007
+---
+
+<h1 id="itprotv-comptia-security-sy0-601">ITPro.TV: CompTIA Security+ (SY0-601)</h1>
+<p><strong>author:</strong> Nathan Acks<br />
+<strong>date:</strong> 2022-03-24</p>
+<h2 id="comptia-security-exam-cram">CompTIA Security+ Exam Cram</h2>
+<p>Today I’ll be reading chapter 18 of the Security+ Exam Cram, “Host and Application Security Solutions”.</p>
+<h3 id="firewalls-and-hipshids-solutions">Firewalls and HIPS/HIDS Solutions</h3>
+<p>Exam Cram recommends outbound connection filtering even for host-based firewalls.</p>
+<p>Vocab:</p>
+<ul>
+<li>HIDS = Host-based intrusion detection system</li>
+<li>HIPS = Host-based intrusion prevention system</li>
+<li>NIDS = Network-based intrusion detection system</li>
+<li>NIPS = Network-based intrusion prevention system</li>
+</ul>
+<p>The difference here is between detection/logging (HIDS/NIDS) and actively attempting to block attacks (HIPS/NIPS). Technically things like anti-virus and EDR are HIDS, though I feel like in practice detection/protection is often bundled. It is implied in the text that Windows’ UAC is also a species of HIDS</p>
+<p>AIDE = Advanced Intrusion Detection Environment</p>
+<p>AIDE is a Linux-based file integrity checker.</p>
+<h3 id="anti-malware-and-other-host-protections">Anti-Malware and Other Host Protections</h3>
+<p>Exam Cram defines heuristic-based scanning narrowly, as something that’s just looking for atypical instruction sets, and implies that it is inferior to signature-based methods. If I take this definition at face value, then the difference between heuristic-based and behavioral detection is quite stark.</p>
+<p>Exam Cram further defines anti-malware as a broader category than antivirus that incorporates behavior-based and context-based detection.</p>
+<h3 id="endpoint-detection-and-response-edr">Endpoint Detection and Response (EDR)</h3>
+<p>Boy, I wish I’d read this section last night!</p>
+<p>Exam Cram defines EDR solutions as a package that “rolls up” multiple types of system protections (anti-virus, anti-malware, anti-spyware, etc.), but with more of an emphasis on detection and response than prevention, and typically using behavioral analytics or machine learning for detection. Additionally, EDR solutions often come with application whitelists/blacklist functionality, DLP, host-based-firewalls, and various logging and analytic capabilities.</p>
+<h3 id="data-execution-prevention-dep">Data Execution Prevention (DEP)</h3>
+<p>DEP is a hardening method that prevents non-OS code from executing in a protected memory space reserved for system processes. modern CPUs have DEP features built in, and kernel-level DEP is available as well.</p>
+<h3 id="web-application-firewall">Web Application Firewall</h3>
+<p>Exam Cram points out that a WAF is actually a type of special-purpose deep packet inspection firewall — which isn’t something I’d thought about before, but totally makes sense.</p>
+<h3 id="application-security">Application Security</h3>
+<p>Basically, a cookie with the “secure cookie flag” is allowed to be transmitted over HTTPS only (which implies that it must be set over HTTPS).</p>
+<h3 id="code-analyzers">Code Analyzers</h3>
+<p>Just because I keep forgetting this acronym: SDLC = Software Development Life Cycle.</p>
+<h3 id="static-code-analyzers">Static Code Analyzers</h3>
+<p>Static code analyzers are often integrated into compilers.</p>
+<h3 id="dynamic-analysis">Dynamic Analysis</h3>
+<p>Fuzzing!</p>
+<ul>
+<li>Application</li>
+<li>Protocol</li>
+<li>File (Format)</li>
+</ul>
+<h3 id="application-sandboxing">Application Sandboxing</h3>
+<p>The Exam Cram focuses on the sandboxing of development environments.</p>
+<h3 id="fde-and-sed">FDE and SED</h3>
+<p>FDE = Full Disk Encryption</p>
+<p>Windows supports Bitlocker (FDE) and the “encrypted file system” (EFS), which can be used to encrypt particular files or directories trees on a per-file basis. Bitlocker uses AES under the hood.</p>
+<p>SED = Self-Encrypting Drive</p>
+<h3 id="tpm-and-hsm">TPM and HSM</h3>
+<p>TPM = Trusted Platform Module</p>
+<p>TPM components:</p>
+<ul>
+<li>The “endorsement key” is a 2048-bit asymmetric key pair that is burned in at manufacture time.</li>
+<li>The “attestation identity key” is a private key pair held entirely within the TPM that is used for attestation.</li>
+<li>The “storage root key” os a 2048-bit asymmetric key pair generated and stored by the TPM for use with encrypted storage.</li>
+<li>“Platform configuration registers” store data in the TPM.</li>
+<li>“Sealed storage” is information that the TPM encrypts and only discloses when the system is in a defined known state. Storage encryption keys are typically “sealed”.</li>
+<li>“Attestation” is the validation of the system by the TPM using information from sealed storage.</li>
+</ul>
+<p>HSM = Hardware Security Module</p>
+<h3 id="boot-integrity">Boot Integrity</h3>
+<p>Windows’ “measured boot” stores information about each step of the boot process in the system TPM and provides an interface for this information to be read out as a log to a remote endpoint. So, basically taking advantage of the TPM’s sealed storage and attestation functions.</p>
+<h3 id="hardware-root-of-trust">Hardware Root of Trust</h3>
+<p>Technically, a self-encrypting drive is a root of trust.</p>
+<h3 id="disabling-unnecessary-ports-and-services">Disabling Unnecessary Ports and Services</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center">Port Range</th>
+<th style="text-align: left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center">0 – 1023</td>
+<td style="text-align: left">Well-Known (Reserved) Ports</td>
+</tr>
+<tr>
+<td style="text-align: center">1024 – 49151</td>
+<td style="text-align: left">Registered Ports</td>
+</tr>
+<tr>
+<td style="text-align: center">49152 – 65535</td>
+<td style="text-align: left">Dynamic (Private) Ports</td>
+</tr>
+</tbody>
+</table>
+<p>Common ports:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right">Port</th>
+<th style="text-align: left">Protocol</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right">15</td>
+<td style="text-align: left">Netstat</td>
+</tr>
+<tr>
+<td style="text-align: right">19</td>
+<td style="text-align: left">Chargen</td>
+</tr>
+<tr>
+<td style="text-align: right">20 – 21</td>
+<td style="text-align: left">FTP (data/control)</td>
+</tr>
+<tr>
+<td style="text-align: right">22</td>
+<td style="text-align: left">SSH</td>
+</tr>
+<tr>
+<td style="text-align: right">23</td>
+<td style="text-align: left">Telnet</td>
+</tr>
+<tr>
+<td style="text-align: right">25</td>
+<td style="text-align: left">SMTP</td>
+</tr>
+<tr>
+<td style="text-align: right">53</td>
+<td style="text-align: left">DNS</td>
+</tr>
+<tr>
+<td style="text-align: right">67 – 68</td>
+<td style="text-align: left">DHCP</td>
+</tr>
+<tr>
+<td style="text-align: right">69</td>
+<td style="text-align: left">TFTP</td>
+</tr>
+<tr>
+<td style="text-align: right">79</td>
+<td style="text-align: left">Finger</td>
+</tr>
+<tr>
+<td style="text-align: right">80</td>
+<td style="text-align: left">HTTP</td>
+</tr>
+<tr>
+<td style="text-align: right">110</td>
+<td style="text-align: left">POP3</td>
+</tr>
+<tr>
+<td style="text-align: right">123</td>
+<td style="text-align: left">NTP</td>
+</tr>
+<tr>
+<td style="text-align: right">137 – 139</td>
+<td style="text-align: left">NetBIOS</td>
+</tr>
+<tr>
+<td style="text-align: right">143</td>
+<td style="text-align: left">IMAP</td>
+</tr>
+<tr>
+<td style="text-align: right">161 – 162</td>
+<td style="text-align: left">SNMP</td>
+</tr>
+<tr>
+<td style="text-align: right">389</td>
+<td style="text-align: left">LDAP</td>
+</tr>
+<tr>
+<td style="text-align: right">443</td>
+<td style="text-align: left">HTTPS</td>
+</tr>
+<tr>
+<td style="text-align: right">445</td>
+<td style="text-align: left">SMB</td>
+</tr>
+<tr>
+<td style="text-align: right">636</td>
+<td style="text-align: left">LDAPS</td>
+</tr>
+<tr>
+<td style="text-align: right">989 – 990</td>
+<td style="text-align: left">FTPS (data/control)</td>
+</tr>
+<tr>
+<td style="text-align: right">1812</td>
+<td style="text-align: left">RADIUS</td>
+</tr>
+<tr>
+<td style="text-align: right">3389</td>
+<td style="text-align: left">RDP</td>
+</tr>
+</tbody>
+</table>
+<p>Chargen = Character Generator. Does exactly what you think it does, for totally unclear reasons.</p>
+<h3 id="least-functionality">Least Functionality</h3>
+<p>“Least function” is the server version of “least privilege”, and is a fancy way of saying “use single purpose servers”. The term originates from NIST 800-53.</p>
+<h3 id="secure-configurations">Secure Configurations</h3>
+<p>Interesting: FAT doesn’t allow for file-level access controls. Which is weird, because even though FAT isn’t a forking filesystem, it <em>does</em> support limited extended attributes.</p>
+<h2 id="itprotv-comptia-security-sy0-601-1">ITPro.TV: CompTIA Security+ (SY0-601)</h2>
+<h3 id="host-security--endpoint-protection">Host Security — Endpoint Protection</h3>
+<p>“Antivirus” and “antimalware” are generally used interchangeably these days. Definition-based protection is still used, but behavioral monitoring is becoming more common.</p>
+<p>ITPro.TV uses “heuristics” to represent a <em>more</em> advanced form of behavioral monitoring, in contrast to the Exam Cram.</p>
+<p>ITPro.TV sees EDR solutions as basically just “enterprise antimalware” — antimalware/antivirus solutions that are designed to be centrally managed and scaled, and often includes more intense analysis and reporting options.</p>
+<p>Another way to think of the host-based intrusion detection/prevention distinction: Detection is <em>passive</em>, while prevention is <em>active</em>. Generally these systems are bundled together these days.</p>
+<p>NextGen Firewalls = UTM (Unified Threat Management)</p>
+<p>The key with NextGen firewalls is that they’re application-aware, basically operating over almost the entire OSI stack (network-to-application layers). They can also sometimes include DLP features and DNS/URL blocking.</p>
+<ul>
+<li><a href="https://cardboard-iguana.com/notes/osi-model.html">OSI Model</a></li>
+</ul>
+<h3 id="host-security--hardening">Host Security — Hardening</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left">Operating System</th>
+<th style="text-align: left">File-Level Encryption</th>
+<th style="text-align: left">Full Disk Encryption</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left">Windows</td>
+<td style="text-align: left">EFS</td>
+<td style="text-align: left">BitLocker</td>
+</tr>
+<tr>
+<td style="text-align: left">macOS</td>
+<td style="text-align: left">APFS Encryption</td>
+<td style="text-align: left">FileVault</td>
+</tr>
+<tr>
+<td style="text-align: left">Linux</td>
+<td style="text-align: left">fscrypt/GPG</td>
+<td style="text-align: left">dmcrypt/LUKS</td>
+</tr>
+</tbody>
+</table>
+<p>Check out the Microsoft Security Compliance Toolkit to generate automated suggestions for Windows hardening.</p>

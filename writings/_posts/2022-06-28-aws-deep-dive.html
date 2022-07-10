@@ -1,0 +1,113 @@
+---
+title: AWS Deep Dive
+date: 2022-06-28 05:00:00.000000000 Z
+layout: post-external
+original_link: https://cardboard-iguana.com/log/2022-06-28-aws-deep-dive.html
+author: 100007
+---
+
+<h1 id="aws-deep-dive">AWS Deep Dive</h1>
+<p><strong>author:</strong> Nathan Acks<br />
+<strong>date:</strong> 2022-06-28</p>
+<h2 id="amazon-s3-bucket-policies-and-user-policies">Amazon S3: Bucket Policies and User Policies</h2>
+<p>This is an exercise in setting up cross-account bucket permissions. The exercise itself is fairly straight-forward; below is just going to be some random-ish notes.</p>
+<ul>
+<li>The idea here is for Account A to grant Account B access to some resource (in this case, an S3 bucket), and then for Account B to delegate access to users within that account.</li>
+<li>For a user to access a cross-account resource, they must have permission to do so from <em>both</em> the resource owner (Account A) and their own account (Account B). <em>This is true even if Account B as a whole does not have access to the resources the user has been granted permission to.</em></li>
+<li>I eventually had to set up the AWS CLI on my Raspberry Pi, as iSH seems to be deeply broken right now (though everything seems to be fixed in git).</li>
+</ul>
+<p>REFERENCES:</p>
+<ul>
+<li><a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/example-walkthroughs-managing-access-example2.html">Amazon Simple Storage Service (S3) — Bucket policies and user policies: Bucket owner granting cross-account bucket permissions</a></li>
+<li><a href="https://cardboard-iguana.com/notes/use-a-raspberry-pi-4b-as-an-ipad-pro-hacking-accessory.html">Use a Raspberry Pi 4B as an iPad Pro Hacking Accessory</a></li>
+<li><a href="http://ish.app/">iSH</a></li>
+<li><a href="https://github.com/ish-app/ish">ish-app / ish</a></li>
+</ul>
+<h2 id="using-iam-roles">Using IAM Roles</h2>
+<p>Next up is reading through the section of the AWS IAM documentation about roles. I’m going to continue to use bullet-point lists here for notes.</p>
+<h3 id="using-iam-roles-1">Using IAM Roles</h3>
+<ul>
+<li>Interesting limitations: <code class="language-plaintext highlighter-rouge">RoleName</code> attributes are limited to 64 characters, but can have an prepended <code class="language-plaintext highlighter-rouge">Path</code> of up to 512 <em>additional</em> characters. However, roles where the length of <code class="language-plaintext highlighter-rouge">Path</code> + <code class="language-plaintext highlighter-rouge">RoleName</code> is greater than 64 characters cant’s be switched to via the Console — they’re essentially API-only. This is rooted in the combined <code class="language-plaintext highlighter-rouge">Path</code> + <code class="language-plaintext highlighter-rouge">RoleName</code> value being stored as a browser cookie.</li>
+<li>How long you can assume a role for varies a lot, and can be controlled via URL construction or API call <em>up to</em> the maximum session duration defined for that role (or to 12 hours for roles assumed via a URL, which happens to be the maximum value for the maximum session duration).</li>
+<li>There’s a hard limit of 1 hour, however, when you chain roles together (assuming one, and then using that role to assume another).</li>
+<li>If you try to assume a role for longer than the maximum duration allowed in a given context, the operation will fail. Which is unfortunate, as that means that before assuming a role on behalf of a user any process would need to call <code class="language-plaintext highlighter-rouge">aws iam get-role</code> / the <code class="language-plaintext highlighter-rouge">GetRole</code> API if the intention is to assume the role for as long as possible.</li>
+<li>Role time limits apply only to users — AWS services and applications running on EC2 instances are exempt.</li>
+</ul>
+<p>REFERENCES:</p>
+<ul>
+<li><a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use.html">Using IAM roles</a></li>
+</ul>
+<h3 id="granting-a-user-permissions-to-switch-roles">Granting a User Permissions to Switch Roles</h3>
+<ul>
+<li>As noted above, using cross-account roles (or services) requires the cooperation of both accounts: The account being granted permission to use the role must still <em>explicitly</em> make that role (or service) available to its users.</li>
+<li>Root users cannot switch roles.</li>
+<li>Roles that require an <code class="language-plaintext highlighter-rouge">ExternalId</code> can only be accessed over the API.</li>
+<li>Switching roles using the admin console does not appear to allow for role chaining.</li>
+<li>Successful <code class="language-plaintext highlighter-rouge">AssumeRole</code> events are tracked by CloudTrail.</li>
+</ul>
+<p>REFERENCES:</p>
+<ul>
+<li><a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_permissions-to-switch.html">Granting a User Permissions to Switch Roles</a></li>
+</ul>
+<h3 id="granting-a-user-permissions-to-pass-a-role-to-an-aws-service">Granting a User Permissions to Pass a Role to an AWS Service</h3>
+<ul>
+<li><code class="language-plaintext highlighter-rouge">PassRole</code> cannot be used with cross-account roles.</li>
+<li>Three things are required for a user to pass a role to a service: (1) The role itself, (2) a “trust policy” attached to the role that allows the service in question to call <code class="language-plaintext highlighter-rouge">sts:AssumeRole</code>, and (3) an IAM policy attached to the user passing the role that allows <code class="language-plaintext highlighter-rouge">iam:PassRole</code> for the role resource ARN.</li>
+<li>The user passing a role doesn’t need to have access to that role themselves — they just need permission to pass it.</li>
+<li>Role names cannot be changed. But surprisingly, role <code class="language-plaintext highlighter-rouge">Path</code> parameters <em>can</em> be changed.</li>
+</ul>
+<p>REFERENCES:</p>
+<ul>
+<li><a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_passrole.html">Granting a User Permissions to Pass a Role to an AWS Service</a></li>
+<li><a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-console.html">Switching to a Role (Console)</a></li>
+</ul>
+<h3 id="switching-to-an-iam-role-aws-cli">Switching to an IAM Role (AWS CLI)</h3>
+<ul>
+<li>You can create a profile for the AWS CLI that automatically assumes a role by specifying two parameters in the associated <code class="language-plaintext highlighter-rouge">profile</code> block: <code class="language-plaintext highlighter-rouge">role_arn</code> (obviously the ARN of the role to be assumed) and <code class="language-plaintext highlighter-rouge">source_profile</code> (the name of an <em>existing</em> profile that has permission to assume <code class="language-plaintext highlighter-rouge">role_arn</code>). When the AWS CLI is being used on an EC2 instance that has an existing role, <code class="language-plaintext highlighter-rouge">credential_source = Ec2InstanceMetadata</code> needs to be used instead of <code class="language-plaintext highlighter-rouge">source_profile</code>.</li>
+<li>The requirements to allow a service to assume a role are similar to those to allow a user to pass a role: (1) The role itself, (2) a “trust policy” attached to the role that allows the role that allows the role attached to the service (see next requirement) to call <code class="language-plaintext highlighter-rouge">sts:AssumeRole</code>, and (3) an role attached to the service itself that allows it to call <code class="language-plaintext highlighter-rouge">sts:AssumeRole</code> for the first role resource ARN. This is again the pattern where AWS requires that trust relationships be bidirectional.</li>
+</ul>
+<p>REFERENCES:</p>
+<ul>
+<li><a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-cli.html">Switching to an IAM Role (AWS CLI)</a></li>
+</ul>
+<h3 id="switching-to-an-iam-role-aws-api">Switching to an IAM Role (AWS API)</h3>
+<ul>
+<li>When calling the <code class="language-plaintext highlighter-rouge">AssumeRole</code> API, you can pass in a JSON <code class="language-plaintext highlighter-rouge">Policy</code> or up to 10 ARNs for pre-defined policies (using <code class="language-plaintext highlighter-rouge">PolicyArns</code>). The session that is returned will then have the <em>intersection</em> of the permissions of the role being assumed and the provided policies (so these can be thought of as additional limits). This mostly seems to be for when credentials need to be handed off to another user or service.</li>
+</ul>
+<p>REFERENCES:</p>
+<ul>
+<li><a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-api.html">Switching to an IAM Role (AWS API)</a></li>
+</ul>
+<h3 id="using-an-iam-role-to-grant-permissions-to-applications-running-on-amazon-ec2-instances">Using an IAM Role to Grant Permissions to Applications Running on Amazon EC2 Instances</h3>
+<ul>
+<li>Applications that run on an EC2 instance automatically inherit the role assigned to that instance.</li>
+<li>The role assigned to an EC2 instance is defined in the “instance profile”.</li>
+<li>EC2 is just a service, so the requirements for EC2 instances to use roles (and for developers to assign roles to EC2 instances) are identical to those for a user who wishes to pass a role to a (generic) service.</li>
+<li>That said, allowing an EC2 instance to use a role as part of its “instance profile” does require that the role assigned to the “instance profile” <em>also</em> has a trust policy specifying that EC2 is allowed to call <code class="language-plaintext highlighter-rouge">sts:AssumeRole</code>.</li>
+</ul>
+<p>REFERENCES:</p>
+<ul>
+<li><a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2.html">Using an IAM Role to Grant Permissions to Applications Running on Amazon EC2 Instances</a></li>
+</ul>
+<h3 id="using-instance-profiles">Using Instance Profiles</h3>
+<ul>
+<li>Instance profiles and roles are linked in the management console; instance profiles will be automatically created and deleted as needed, and are never directly exposed.</li>
+<li>Instance profiles created using the API can also be managed in the console <em>if and only if</em> they have they same name as they associated role.</li>
+<li>Tags can <em>only</em> be added to instance profiles using the API.</li>
+<li>Changes to instance profiles are not applied instantly, but are rather subject to <em>eventual consistency</em>.</li>
+</ul>
+<p>REFERENCES:</p>
+<ul>
+<li><a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2_instance-profiles.html">Using Instance Profiles</a></li>
+</ul>
+<h3 id="revoking-iam-role-temporary-security-credentials">Revoking IAM Role Temporary Security Credentials</h3>
+<ul>
+<li>Temporary credentials associated with a role can be revoked before a given point in time. They <em>cannot</em> be revoked per-user.</li>
+<li>Revocation is handled by attaching an inline policy to the role that denies all actions before the specified point in time (“now”).</li>
+<li>The inline policy will be refreshed automatically with a new point in time denial timestamp if sessions are revoked again at a later time.</li>
+<li>AWS CLI users who have their credentials revoked in this way will either need to wait until their session would have expired (which could be up the 12 hours, depending on the role configuration) or manually delete the AWS CLI credential cache (<code class="language-plaintext highlighter-rouge">~/.aws/cli/cache</code>).</li>
+</ul>
+<p>REFERENCES:</p>
+<ul>
+<li><a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_revoke-sessions.html">Revoking IAM Role Temporary Security Credentials</a></li>
+</ul>

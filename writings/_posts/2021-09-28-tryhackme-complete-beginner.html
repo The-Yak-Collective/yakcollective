@@ -1,0 +1,87 @@
+---
+title: 'TryHackMe: Complete Beginner'
+date: 2021-09-28 05:00:00.000000000 Z
+layout: post-external
+original_link: https://cardboard-iguana.com/log/2021-09-28-tryhackme-complete-beginner.html
+author: 100007
+---
+
+<h1 id="tryhackme-complete-beginner">TryHackMe: Complete Beginner</h1>
+<p><strong>author:</strong> Nathan Acks<br />
+<strong>date:</strong> 2021-09-28</p>
+<h2 id="nmap">NMAP</h2>
+<p>Interesting (but makes sense)… Each connection a web browser makes corresponds to a different local port (so, $RANDOM_PORT → 443).</p>
+<p>Something I know but am always forgetting: There are 65,535 (2¹⁶ - 1) available ports (port 0 is a special system port). The first 1023 of these (1024 counting port 0) are reserved as “well known” ports, but the remainder are accessible without special privileges.</p>
+<h3 id="nmap-switches">Nmap Switches</h3>
+<p>Typically nmap will need to be run with the -vv flag in order to produce suitably verbose output for pen testing.</p>
+<p>The -oA BASENAME flag will automatically save nmap’s output in “normal”, XML, and “grepable” formats.</p>
+<p>Higher timing templates are faster, but also more error-prone and more likely to get you noticed.</p>
+<p>The -p- switch will scan all ports. This is because the beginning/end of our port range can be left unspecified, so -p-80 will scan ports 1 - 80, while -p80- will scan ports 80 - 65535.</p>
+<h3 id="tcp-connect-scans">TCP Connect Scans</h3>
+<p>During a TCP connect scan (-sT), nmap attempts to make a full TCP connection (three way handshake) with each port on the target machine.</p>
+<p>RFC 793 establishes that a closed port should respond to any packet except a RST with a RST. Firewalls, however, typically <em>drop</em> incoming packets to protected ports (NMAP marks these as “filtered”).</p>
+<p>NOTE: Configuring a firewall to respond with TCP RST packets rather than just dropping incoming connections makes getting an accurate read on the target <em>very</em> hard!</p>
+<ul>
+<li><a href="https://tools.ietf.org/html/rfc793">RFC 793: Transmission Control Protocol</a></li>
+</ul>
+<h3 id="syn-scans">SYN Scans</h3>
+<p>A SYN scan (-sS) works similar to a TCP connect scan, except rather than completing the three-way handshake, nmap instead sends a RST after the target’s SYN/ACK.</p>
+<ul>
+<li>Older IDS solutions tended to look for fully complete connections, and thus miss these scans (not really true anymore).</li>
+<li>Most applications won’t log these scans (standard practice is to only log connections, and a SYN scan never completes a connection).</li>
+<li>They’re <em>a lot</em> faster than full TCP connect scans.</li>
+</ul>
+<p>Unfortunately, some applications become unstable when presented with SYN scans. This can be problematic when you want to remain undetected and/or not fuck up your client’s network.</p>
+<p>Overall, the benefits of SYN scans outweigh the risks, so nmap defaults to using them when run as root (necessary because ordinary users can’t craft raw packets).</p>
+<p>It’s also possible to use SELinux to give nmap sufficient permission without being root to run SYN scans, but this often doesn’t play nice with nmap’s script interface.</p>
+<h3 id="udp-scans">UDP Scans</h3>
+<p>UDP scans (-sU) are <em>extremely</em> slow, as sending a UDP packet to a port generally doesn’t trigger <em>anything</em>. Thus, most ports will be marked as <code class="language-plaintext highlighter-rouge">open|filtered</code>. On the off-chance that a response <em>does</em> come back, NMAP will mark the port as <code class="language-plaintext highlighter-rouge">open</code>. Closed UDP ports are <em>supposed</em> to send an ICMP ping “port unreachable” back; if nmap detects such a response, it will mark the port as <code class="language-plaintext highlighter-rouge">closed</code>.</p>
+<p>In general though, you’ll spend <em>a lot</em> of time doing a UDP scan without getting a lot of great information. Scanning only the 20 most common UDP ports (-sU –top-ports 20) can help with the time, but obviously isn’t as complete a scan.</p>
+<p>Mostly nmap just sends empty UDP packets, but when it reaches a port that hosts a common service, it does put <em>some</em> work into trying to craft a packet that’s more likely to elicit a response.</p>
+<h3 id="null-fin-and-xmas">NULL, FIN, and Xmas</h3>
+<p>These are “stealthier than stealth” scans.</p>
+<p>NULL scans (-sN) send TCP packets with no flags. Since there’s no SYN, nmap can’t tell when a port is open or filtered (so, lots of <code class="language-plaintext highlighter-rouge">open|filtered</code>), but these packets (should) still generate RST packets for closed ports.</p>
+<p>FIN scans (-sF) work the same as NULL scans, but send packets with the FIN flag set.</p>
+<p>Xmas scans (-sX) set the PSH, URG, and FIN flags, again looking for closed ports. This particular combination results in a multi-colored blinking line in Wireshark, hence the name.</p>
+<p>NOTE: Windows machines and Cisco appliances generally respond with a RST to all malformed packets. This is a violation of spec, and also makes these scans not particularly useful when on a network with many such devices.</p>
+<p>Modern firewalls and IDS solutions have gotten wise to these scans too, so maybe they’re not all that useful anymore?</p>
+<h3 id="icmp-network-scanning">ICMP Network Scanning</h3>
+<p>Ping sweeps (-sn) let us enumerate hosts by pinging an entire network range (nmap apparently uses ARP packets if run as root and scanning a private network). This obviously has its edge cases, but is still a good first pass.</p>
+<p>Nmap’s ping sweep also will send TCP SYN packets to port 443 and TCP ACK packets to port 80 (SYN if non-root) for whatever reason.</p>
+<p>NOTE: Nmap targets can be specified as individual (comma-separated) hosts, ranges, and with CIDR notation.</p>
+<h3 id="nse-scripts-overview">NSE Scripts Overview</h3>
+<p>NSE is the “Nmap Scripting Engine”; scripts are written in Lua. NSE scripts exist in one or more categories:</p>
+<ul>
+<li><code class="language-plaintext highlighter-rouge">safe</code> scripts shouldn’t affect the target.</li>
+<li><code class="language-plaintext highlighter-rouge">intrusive</code> scripts are, well, not safe.</li>
+<li><code class="language-plaintext highlighter-rouge">vuln</code> scripts look for vulnerabilities.</li>
+<li><code class="language-plaintext highlighter-rouge">exploit</code> scripts attempt to <em>exploit</em> vulnerabilities.</li>
+<li><code class="language-plaintext highlighter-rouge">auth</code> scripts try common authentication bypass techniques (anonymous logins, etc.).</li>
+<li><code class="language-plaintext highlighter-rouge">brute</code> scripts just try to log in using brute-force methods.</li>
+<li><code class="language-plaintext highlighter-rouge">discovery</code> scripts attempt to query additional information from discovered services.</li>
+</ul>
+<h3 id="working-with-the-nse">Working with the NSE</h3>
+<p>When calling nmap with –script=CATEGORY, nmap will try to run any <em>applicable</em> scripts in that category against the target.</p>
+<p>The –script flag can also be given one or more (comma separated) script names to run. The –script-args flag can be used to pass arguments to scripts (again, comma separated). Arguments passed in this way are specified using a SCRIPT.ARGUMENT format (e.g., http-put.url).</p>
+<p>Most scripts have (brief!) help messages accessible via –script-help. Nmap’s online documentation is generally <em>much</em> more complete, however.</p>
+<ul>
+<li><a href="https://nmap.org/nsedoc/">Nmap Scripting Engine Documentation</a></li>
+</ul>
+<h3 id="searching-for-scripts">Searching for Scripts</h3>
+<p>OPTIONS: Search the online Nmap documentation, take a look through /usr/share/nmap/scripts, search through /usr/share/nmap/scripts/script.db (which is really just a structured text file).</p>
+<p>If a script is added to /usr/share/nmap/scripts manually, then <code class="language-plaintext highlighter-rouge">nmap --script-updatedb</code> needs to be run to update the script.db file.</p>
+<ul>
+<li><a href="https://nmap.org/nsedoc/">Nmap Scripting Engine Documentation</a></li>
+</ul>
+<h3 id="firewall-evasion">Firewall Evasion</h3>
+<p>The Windows firewall blocks ICMP packets by default, which causes nmap to think that no host exists. The -Pn flag works around this by having nmap scan an IP even if no ping response is recorded (this makes scans hang for a <em>long</em> time when there really isn’t a host at the other end though!).</p>
+<p>On a local network, another work-around is to use ARP packets. Seems better to do this.</p>
+<p>Some useful flags for firewall avoidance:</p>
+<ul>
+<li>-f and –mtu work together to fragment packets to attempt to reduce the chance of detection (–mtu must be a multiple of 8).</li>
+<li>–scan-delay adds a delay (in milliseconds); longer scans often mean less chance of detection!</li>
+<li>–badsum produces packets with invalid checksums. These should be dropped by normal hosts, but often firewalls will respond immediately. This makes this flag useful for probing for the presence of a firewall or IDS.</li>
+</ul>
+<h3 id="practical">Practical</h3>
+<p>For whatever reason, Wireshark only works for me when run using <code class="language-plaintext highlighter-rouge">sudo -E wireshark</code> from the terminal (something seems to be broken with the GUI process elevation prompt, and Wireshark can’t see any interfaces).</p>
+<p>Nmap sends a RST after the three-way handshake in a TCP connect scan in order to quickly tear down the connection.</p>

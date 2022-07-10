@@ -1,0 +1,44 @@
+---
+title: 'TryHackMe: Complete Beginner'
+date: 2021-10-08 05:00:00.000000000 Z
+layout: post-external
+original_link: https://cardboard-iguana.com/log/2021-10-08-tryhackme-complete-beginner.html
+author: 100007
+---
+
+<h1 id="tryhackme-complete-beginner">TryHackMe: Complete Beginner</h1>
+<p><strong>author:</strong> Nathan Acks<br />
+<strong>date:</strong> 2021-10-08</p>
+<h2 id="upload-vulnerabilities">Upload Vulnerabilities</h2>
+<h3 id="overwriting-existing-files">Overwriting Existing Files</h3>
+<p>One reason to randomize upload names is to prevent file overwrites. If a webapp isn’t doing this (or using some other form of isolating upload files), then it’s possible to inject arbitrary files into it via its upload mechanism (of course, whether or not those do anything is a separate question…).</p>
+<h3 id="remote-code-execution">Remote Code Execution</h3>
+<p>The gobuster tool is fuzzing/enumeration tool that can be used to find upload directories. Example invocation:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gobuseter <span class="nb">dir</span> <span class="nt">-u</span> <span class="nv">$TARGET_URL</span> <span class="nt">-w</span> <span class="nv">$DIR_WORDLIST</span>
+</code></pre></div></div>
+<p>The /usr/share/wordlists/dirbuster directory holds lists of various common directory names.</p>
+<p>The simplest PHP web shell:</p>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?php</span>
+<span class="k">echo</span> <span class="nb">system</span><span class="p">(</span><span class="nv">$_GET</span><span class="p">[</span><span class="s2">"cmd"</span><span class="p">]);</span>
+<span class="cp">?&gt;</span>
+</code></pre></div></div>
+<p>This takes a GET variable <code class="language-plaintext highlighter-rouge">cmd</code> and executes it (semicolons, output redirection, and the like are allowed).</p>
+<p>[PHP system() command documentation.(https://www.php.net/manual/en/function.system.php)]</p>
+<p>Where web shells get the web server to execute commands for us, reverse shells actually fire up a true shell and connect back to the client machine; this is the trick we’ve used a couple of times now with <code class="language-plaintext highlighter-rouge">nc -lvnp $PORT</code>.</p>
+<p>The Kali Linux webshells package provides a variety of webshells, some of which are reverse shells. A common option is /usr/share/webshells/php/php-reverse-shell.php.</p>
+<h3 id="filtering">Filtering</h3>
+<p>Client-side filtering – obviously easy to bypass!</p>
+<p>Server-side filtering – take your best guess at a conforming upload.</p>
+<p>Common types of filtering:</p>
+<ul>
+<li>File extensions</li>
+<li>MIME types (pulled from HTTP headers)</li>
+<li>Magic number validation (checks the first 16 bytes of a file; much harder to bypass)</li>
+<li>File size</li>
+<li>File name (but typically files are renamed now, which can make finding an uploaded shell tricky)</li>
+<li>File content (the deep packet inspection of files!)</li>
+</ul>
+<p>Apparently PHPv5 and higher has a poison null byte resistant extension filter.</p>
+<ul>
+<li><a href="https://cardboard-iguana.com/notes/poison-null-byte.html">The Poison Null Byte</a></li>
+</ul>

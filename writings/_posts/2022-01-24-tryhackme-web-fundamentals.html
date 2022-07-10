@@ -1,0 +1,61 @@
+---
+title: 'TryHackMe: Web Fundamentals'
+date: 2022-01-24 06:00:00.000000000 Z
+layout: post-external
+original_link: https://cardboard-iguana.com/log/2022-01-24-tryhackme-web-fundamentals.html
+author: 100007
+---
+
+<h1 id="tryhackme-web-fundamentals">TryHackMe: Web Fundamentals</h1>
+<p><strong>author:</strong> Nathan Acks<br />
+<strong>date:</strong> 2022-01-24</p>
+<h2 id="ssrf">SSRF</h2>
+<h3 id="what-is-ssrf">What is SSRF?</h3>
+<p>SSRF = Server-side request forgery</p>
+<p>Basically, this is a vulnerability in an externally-facing server (typically a web server) that allows the attacker (that’s me!) to query additional servers “behind” the vulnerable server that they wouldn’t normally be able to see.</p>
+<h3 id="cause-of-the-vulnerability">Cause of the Vulnerability</h3>
+<p>SSRF can also involve using the a vulnerable server as a relay to attack other servers on the internet.</p>
+<p>Typically an SSRF attack requires that the application be passed a URL by the attacker and then acts on that URL without sufficient validation.</p>
+<h3 id="ssrf-payload">SSRF Payload</h3>
+<p>Example SSRF test: Will the application allow you to open a connection to an arbitrary port, such as a local MySQL server? For example, does https://127.0.0.1:3306 return a response?</p>
+<p>Other options:</p>
+<ul>
+<li><code class="language-plaintext highlighter-rouge">localhost</code></li>
+<li><code class="language-plaintext highlighter-rouge">[::]</code> or <code class="language-plaintext highlighter-rouge">::</code> (IPv6 localhost)</li>
+<li><code class="language-plaintext highlighter-rouge">2130706433</code> (localhost in decimal)</li>
+<li><code class="language-plaintext highlighter-rouge">0x7f000001</code> (loclahost in hexadecimal)</li>
+<li><code class="language-plaintext highlighter-rouge">file://</code> (sometimes works for local file inclusion)</li>
+</ul>
+<p>Note that different frameworks will, of course, munge inputs differently, and various filters may be in place. There’s no guaranteed path!</p>
+<p>Decimal/Hexidecimal conversion for IPv4 addresses is relatively simple if you remember that we break IPv4 addresses up into 4 <em>octets</em>, where each octet is 8 binary digits. Thus</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>127.0.0.1 = (127 × 2²⁴) + (0 × 2¹⁶) + (0 × 2⁸) + (1 × 2⁰)
+= 2130706432 + 0 + 0 + 1
+= 2130706433
+</code></pre></div></div>
+<p>Converting to hexadecimal is trivial using the excellent Qalculate tool.</p>
+<pre><code class="language-qalc">2130706433 to hex = 0x7F000001
+</code></pre>
+<p>As usual, PayloadsAllTheThings is a great resource.</p>
+<ul>
+<li><a href="https://qalculate.github.io/">Qalculate!</a></li>
+<li><a href="https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Server%20Side%20Request%20Forgery">PayloadsAllTheThings: Server-Side Request Forgery</a></li>
+</ul>
+<h3 id="exercise">Exercise</h3>
+<p>The target accepts <code class="language-plaintext highlighter-rouge">0x7f000001</code> as a valid (and unfiltered) representation for localhost, so we’re going to use this and the ZAP Fuzzer (which is annoyingly slow, but the free version of the Intruder is even slower…) to enumerate all of the ports from 1 - 65535. Successful vs. unsuccessful requests are pretty obvious in from their differing response body sizes (successful requests have a body size of 1041 bytes, or in one case 1035 bytes, while unsuccessful requests have a body size of 1045 bytes).</p>
+<p>The target is also vulnerable to local file inclusion, so <code class="language-plaintext highlighter-rouge">file:///etc/passwd</code> will get us a full user list.</p>
+<ul>
+<li><a href="https://cardboard-iguana.com/notes/owasp-zap.html">Using OWASP ZAP</a></li>
+<li><a href="https://cardboard-iguana.com/notes/burp-suite.html">Using Burp Suite</a></li>
+</ul>
+<h3 id="solution">Solution</h3>
+<p>TryHackMe uses a small shell script with a tight cURL loop instead of ZAP. Which would probably have been faster, but I didn’t feel like hunting through the cURL man page to figure out what flags I needed.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for </span>PORT <span class="k">in</span> <span class="o">&#x007b;</span>1..65535<span class="o">&#x007d;</span><span class="p">;</span> <span class="k">do
+</span><span class="nv">BODY_LENGTH</span><span class="o">=</span><span class="s2">"</span><span class="si">$(</span>curl <span class="nt">-so</span> /dev/null http://10.10.229.43:8000/attack?url<span class="o">=</span>http://0x7f000001:<span class="nv">$PORT</span> <span class="nt">-w</span> <span class="s1">'%&#x007b;size_download&#x007d;'</span><span class="si">)</span><span class="s2">"</span>
+<span class="k">if</span> <span class="o">[[</span> <span class="nv">$BODY_LENGTH</span> <span class="o">!=</span> 1045 <span class="o">]]</span><span class="p">;</span> <span class="k">then
+</span><span class="nb">echo</span> <span class="s2">"Open port: </span><span class="nv">$PORT</span><span class="s2">"</span>
+<span class="k">fi
+done</span>
+</code></pre></div></div>
+<ul>
+<li><a href="https://cardboard-iguana.com/notes/owasp-zap.html">Using OWASP ZAP</a></li>
+</ul>

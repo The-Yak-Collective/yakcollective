@@ -1,0 +1,69 @@
+---
+title: 'TryHackMe: Complete Beginner'
+date: 2021-10-20 05:00:00.000000000 Z
+layout: post-external
+original_link: https://cardboard-iguana.com/log/2021-10-20-tryhackme-complete-beginner.html
+author: 100007
+---
+
+<h1 id="tryhackme-complete-beginner">TryHackMe: Complete Beginner</h1>
+<p><strong>author:</strong> Nathan Acks<br />
+<strong>date:</strong> 2021-10-20</p>
+<h2 id="metasploit">Metasploit</h2>
+<h3 id="move-that-shell">Move That Shell!</h3>
+<p>Use <code class="language-plaintext highlighter-rouge">db_nmap $FLAGS $IP</code> to run nmap directly from Metasploit and dump the results into the Metasploit DB. All nmap $FLAGS are supported. If you choose a scan type where root access is required, Metasploit will automatically prompt you to elevate privileges. Dumping nmap output directly into the database removes (?) the need to save output files using -oA.</p>
+<p>Some useful Metasploit console commands:</p>
+<ul>
+<li><code class="language-plaintext highlighter-rouge">hosts</code> — known hosts</li>
+<li><code class="language-plaintext highlighter-rouge">services</code> — known services</li>
+<li><code class="language-plaintext highlighter-rouge">vulns</code> — known vulnerabilities</li>
+</ul>
+<p>The output of these three commands is updated as Metasploit gains more information through scans, etc.</p>
+<ul>
+<li><code class="language-plaintext highlighter-rouge">use</code> — select a Metasploit module/exploit</li>
+<li><code class="language-plaintext highlighter-rouge">show options</code> — show module/exploit options</li>
+<li><code class="language-plaintext highlighter-rouge">exploit</code>/<code class="language-plaintext highlighter-rouge">run</code> — run the selected exploit</li>
+<li><code class="language-plaintext highlighter-rouge">run -j</code> — run the selected exploit as a background job</li>
+<li><code class="language-plaintext highlighter-rouge">jobs</code> — check the status of background jobs</li>
+<li><code class="language-plaintext highlighter-rouge">sessions</code> — list open sessions (shells) on a box</li>
+<li><code class="language-plaintext highlighter-rouge">sessions -i $SESSION_NUMER</code> — connect to session $SESSION_NUMBER</li>
+</ul>
+<p>Note that you can also call regular shell commands (<code class="language-plaintext highlighter-rouge">ip</code>, <code class="language-plaintext highlighter-rouge">ls</code>, etc.) from msfconsole.</p>
+<p>REMEMBER: Open up the port Metasploit’s going to use in your firewall <em>before</em> running the exploit. Generally this is port 4444 by default (set with LPORT).</p>
+<ul>
+<li><a href="https://cardboard-iguana.com/notes/nmap.html">Using “nmap”</a></li>
+</ul>
+<h3 id="were-in-now-what">We’re In, Now What?</h3>
+<p>Meterpreter (Metasploit remote shell) commands:</p>
+<ul>
+<li><code class="language-plaintext highlighter-rouge">help</code> — help menu</li>
+<li><code class="language-plaintext highlighter-rouge">help $COMMAND</code> — help specifically for $COMMAND</li>
+<li><code class="language-plaintext highlighter-rouge">ps</code> — process list</li>
+<li><code class="language-plaintext highlighter-rouge">migrate</code> — migrate Meterpreter into a different process</li>
+<li><code class="language-plaintext highlighter-rouge">sysinfo</code> — display system information</li>
+<li><code class="language-plaintext highlighter-rouge">ipconfig</code>/<code class="language-plaintext highlighter-rouge">ifconfig</code> — display network information</li>
+<li><code class="language-plaintext highlighter-rouge">getuid</code> — display current user ID</li>
+<li><code class="language-plaintext highlighter-rouge">getprivs</code> — display current user privileges</li>
+<li><code class="language-plaintext highlighter-rouge">upload</code> — transfer file from the host to the target</li>
+<li><code class="language-plaintext highlighter-rouge">download</code> — transfer file from the target to the host</li>
+<li><code class="language-plaintext highlighter-rouge">run</code> — run a Metsploit module (see below)</li>
+<li><code class="language-plaintext highlighter-rouge">load kiwi</code> — load (newer) mimikatz module</li>
+<li><code class="language-plaintext highlighter-rouge">shell</code> — drop to system shell as the current user</li>
+<li><code class="language-plaintext highlighter-rouge">background</code> — background the current Meterpreter session and return to the Metasploit console</li>
+</ul>
+<p>I <em>think</em> that Meterpreter is being run directly from memory, and what <code class="language-plaintext highlighter-rouge">migrate</code> is doing is basically creating a new process using the memory of a different application, hopping to that process, and then shutting down the old process.</p>
+<ul>
+<li><a href="https://security.stackexchange.com/a/92893">How does process migration work in Meterpreter</a></li>
+</ul>
+<p>The main reason to migrate the Meterpreter process is to hide it in a service or application that is likely to be long-lived. (Also, the initial Meterpreter process often isn’t all that stable, and migration generally ensures that it won’t just die on us.)</p>
+<p>Potentially useful Metsploit modules to run from Meterpreter:</p>
+<ul>
+<li><code class="language-plaintext highlighter-rouge">post/windows/gather/checkvm</code> — try to determine if we’re in a VM</li>
+<li><code class="language-plaintext highlighter-rouge">post/multi/recon/local_exploit_suggester</code> — find possible privilege escalation exploits</li>
+<li><code class="language-plaintext highlighter-rouge">post/windows/manage/enable_rdp</code> — enable RDP access (requires admin privileges)</li>
+<li><code class="language-plaintext highlighter-rouge">post/multi/manage/autoroute</code> — manipulate target routing for pivoting</li>
+<li><code class="language-plaintext highlighter-rouge">auxiliary/server/socks_proxy</code> — start a SOCKS proxy</li>
+</ul>
+<h3 id="makin-cisco-proud">Makin’ Cisco Proud</h3>
+<p>There seem to be a lot of options for the <code class="language-plaintext highlighter-rouge">post/multi/manage/autoroute</code> and <code class="language-plaintext highlighter-rouge">auxiliary/server/socks_proxy</code> modules, but I don’t see a way to access them from Meterpreter (it looks like to get help you need to background Meterpreter and use the console).</p>
+<p>The advantage of setting up a SOCKS proxy on the target is that you can then use proxychains to route through the target; this can allow you to pivot more deeply into the network that you’re attacking. (You probably want to create a custom proxychains.conf file to do this. Fortunately, /etc/proxychains.conf is well documented.)</p>

@@ -1,0 +1,43 @@
+---
+title: 'TryHackMe: Complete Beginner (Supplements)'
+date: 2021-11-16 06:00:00.000000000 Z
+layout: post-external
+original_link: https://cardboard-iguana.com/log/2021-11-16-tryhackme-complete-beginner-supplements.html
+author: 100007
+---
+
+<h1 id="tryhackme-complete-beginner-supplements">TryHackMe: Complete Beginner (Supplements)</h1>
+<p><strong>author:</strong> Nathan Acks<br />
+<strong>date:</strong> 2021-11-16</p>
+<h2 id="volatility">Volatility</h2>
+<h3 id="examining-our-patient">Examining Our Patient</h3>
+<p>Volatility has been removed from Kali, but Volatility 3 is installable via pip. Unfortunately, the commands seem a bit different than what’s used in the TryHackMe: Volatility room.</p>
+<p>Also, the provided memory dump is a vmem file, rather than the raw files mentioned in the room.</p>
+<p>It looks like Volatility 3 no longer require “profiles”; instead, there are separate plugins for Windows, macOS, and Linux.</p>
+<p>Of the three <code class="language-plaintext highlighter-rouge">*.pslist.PsList</code> plugins, only windows.pslist.PsList doesn’t error out, and the resulting output looks sane.</p>
+<p>Unfortunately, this command doesn’t help us identify which Volatility 2 profile would have been used, which we need to know in order to answer the second question in this section. However, the <code class="language-plaintext highlighter-rouge">windows.info.Info</code> plugin lets us know that:</p>
+<ul>
+<li>The image is <em>not</em> running a 64-bit OS.</li>
+<li>The MajorOperatingSystemVersion is 5.</li>
+<li>The MinorOperatingSystemVersion is 1.</li>
+<li>The NTBuildLab(el) is 2600.xpsp.080413-2111</li>
+</ul>
+<p>Wikipedia’s Comparison of Microsoft Windows versions tells us that Windows 5.1.2600 is some version of XP, and googling the NTBuildLab pulls up a number of results that strongly suggest that this is Service Pack 3. However, The WinXPSP3x86 profile is <em>not</em> the right answer — this section seems to want WinXPSP2x86 instead.</p>
+<p>Another problem! Volatility 3 doesn’t include a psxview equivalent. I’m not sure how to replicate what the section wants me to do… I tried using the <code class="language-plaintext highlighter-rouge">windows.malfind.Malfind</code> plugin, and guessed that the process we want to look at is csrss.exe because its line is pretty different than the others (Tag, CommitCharge, and PrivateMemory all stand out). This turns out to be correct, but I’m unfortunately less sure about whether I’m picking up on real flag, or just made a lucky guess…</p>
+<p>We also seem to be missing the ldrmodules and apihooks plugins, and googling around doesn’t turn up any obvious alternatives.</p>
+<ul>
+<li><a href="https://tryhackme.com/room/bpvolatility">TryHackMe: Volatility</a></li>
+<li><a href="https://newtonpaul.com/malware-analysis-memory-forensics-with-volatility-3/">Malware Analysis: Memory Forensics with Volatility 3</a></li>
+<li><a href="https://github.com/volatilityfoundation/volatility/blob/master/README.txt">volatility / README.txt</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Comparison_of_Microsoft_Windows_versions">Comparison of Microsoft Windows versions (Wikipedia)</a></li>
+<li><a href="https://blog.onfvp.com/post/volatility-cheatsheet/">Volatility 3 Cheatsheet</a></li>
+</ul>
+<h3 id="post-actions">Post Actions</h3>
+<p>Striking out again.</p>
+<p>The right answer is “Cridex”, but neither the DLLs nor the process image of csrss.exe I extracted with Volatility 3 were flagged with this in VirusTotal or Hybrid Analysis (the best I got were Win32Evo-Gen and a whole bunch of heuristic matches). Digging in a bit deeper, it looks like none of these files match the extracted images pulled out by Volatility 2.</p>
+<p>This is probably the worst I’ve done on one of these rooms — I’ve failed to meet many of the objectives, and I’m failing to understand <em>why</em> I failed.</p>
+<p>Maybe something’s up with my install of Volatility 3?</p>
+<ul>
+<li><a href="https://www.virustotal.com">VirusTotal</a></li>
+<li><a href="https://www.hybrid-analysis.com">Hybrid Analysis</a></li>
+</ul>

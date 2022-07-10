@@ -1,0 +1,112 @@
+---
+title: 'ITPro.TV: CompTIA Security+ (SY0-601)'
+date: 2022-04-25 05:00:00.000000000 Z
+layout: post-external
+original_link: https://cardboard-iguana.com/log/2022-04-25-itprotv-comptia-security-plus.html
+author: 100007
+---
+
+<h1 id="itprotv-comptia-security-sy0-601">ITPro.TV: CompTIA Security+ (SY0-601)</h1>
+<p><strong>author:</strong> Nathan Acks<br />
+<strong>date:</strong> 2022-04-25</p>
+<h2 id="comptia-security-exam-cram">CompTIA Security+ Exam Cram</h2>
+<p>Today we’re going to read through three chapters of the Security+ Exam Cram:</p>
+<ul>
+<li>Chapter 9, “Enterprise Security Concepts”</li>
+<li>Chapter 31, “Control Types”</li>
+<li>Chapter 32, “Regulations, Standards, and Frameworks”</li>
+</ul>
+<h3 id="configuration-management">Configuration Management</h3>
+<p>Configuration Management: The process of identifying, controlling, and auditing the creation and modification of an IT baseline.</p>
+<p>Important pieces:</p>
+<ul>
+<li>The actual “baseline configuration” as either an automated process or a defined “recipe”</li>
+<li>Diagrams of networks, system relationships, etc.</li>
+<li>A standardized naming conventions</li>
+<li>IP space location standardization</li>
+</ul>
+<p>Security baselines can either be layered onto system baselines, or may be present from the beginning as part of the baseline for different system roles.</p>
+<p>The Exam Cram emphasizes the importance of guarding against both intentional and unintentional “attacks” as part of the hardening process.</p>
+<h3 id="data-loss-prevention">Data Loss Prevention</h3>
+<p>The Exam Cram emphasizes the role of not only the software controls that I’m more familiar with in service of DLP, but also hardware restrictions (for example, forbidding USB drive access).</p>
+<h3 id="cloud-access-security-brokers">Cloud Access Security Brokers</h3>
+<p>I’m mostly familiar with CASBs as a way of <em>discovering</em> and managing cloud usage. But Exam Cram explicitly situates them as primarily a DLP solution. More generally, they’re conceptualized as “extending on-prem security solutions to cloud systems”.</p>
+<h3 id="encryption-and-data-obfuscation">Encryption and Data Obfuscation</h3>
+<p>Apparently the term “data in processing” has come to supplant the notion of “data in use”, at least w.r.t. homomorphic encryption. This terminology difference appears to be an attempt to emphasize that humans can’t actually work directly with (“use”) encrypted data.</p>
+<p>Other approaches to data minimization during processing:</p>
+<ul>
+<li>Tokenization (using random strings with equivalent properties)</li>
+<li>Masking (using substituted, false data)</li>
+<li>Redaction (********)</li>
+</ul>
+<p>I’m mostly familiar with tokenization as “using references rather than data”, but this doesn’t seem to fit into any of the definitions Exam Cram provides. If anything, in the Exam Cram universe, the difference between tokenization and masking seems to boil down to whether the substitute data is “human meaningful”.</p>
+<p>Exam Cram situates masking as primarily a development strategy — no data reversing should be possible.</p>
+<p>Interesting: The first 4 – 6 digits of a credit card number identify the issuing bank, and are thus not particularly sensitive.</p>
+<ul>
+<li><a href="https://www.investopedia.com/terms/b/bank-identification-number.asp">Bank Identification Number (BIN)</a></li>
+</ul>
+<h3 id="rights-management">Rights Management</h3>
+<p>DRM and IRM (“digital” vs. “information” rights management); the former is generally consumer facing, while the latter is used within organization. While DRM is based around tightly controlled encryption keys, IRM functions a lot more like device management. To a certain extent, the sharing capabilities within Google Drive (being able to control who can access the document in a fine-grained fashion, being able to revoke this access, being able to restrict printing, etc.) can be thought of as a form of IRM.</p>
+<h3 id="encrypted-traffic-management">Encrypted Traffic Management</h3>
+<p>Basically, SSL intercept/MitM solutions.</p>
+<h3 id="data-integrity">Data Integrity</h3>
+<p>Hashing, signing, etc.</p>
+<p>Oddly, the Exam Cram states that “[r]enaming the file … will produce different [hash] output”, which is not actually true (only the file contents, not its name on disk, will influence its hash).</p>
+<h3 id="data-availability">Data Availability</h3>
+<p>Backups, disaster response/preparedness, etc.</p>
+<h3 id="site-resiliency">Site Resiliency</h3>
+<p>Warm (backup) sites are generally shared by multiple organizations.</p>
+<p>Cold (backup) sites are often just <em>contracts</em> for facilities.</p>
+<h3 id="deception-and-disruption">Deception and Disruption</h3>
+<ul>
+<li>Decoys (entirely fictitious networks)</li>
+<li>Lures (honeypots configured to look like laptops, workstations, servers, etc.)</li>
+<li>Honeytokens (the generic version of Canary Tokens)</li>
+</ul>
+<p>Exam Cram emphasizes that traditional honeypots are generally not used anymore, but all of their examples seem like they’re basically automated honeypot creation/maintenance.</p>
+<ul>
+<li><a href="https://www.canarytokens.org/">Canary Tokens</a></li>
+</ul>
+<h3 id="nature-of-controls">Nature of Controls</h3>
+<p>This is about “controls” in the risk mitigation sense of the word.</p>
+<p>Types:</p>
+<ul>
+<li>Technical (IT defenses)</li>
+<li>Managerial (a.k.a. “administrative controls”)</li>
+<li>Operational (physical controls and general organizational culture)</li>
+</ul>
+<h3 id="functional-use-of-controls">Functional Use of Controls</h3>
+<p>Controls can be <em>further</em> divided into:</p>
+<ul>
+<li>Deterrence (system banners, etc.)</li>
+<li>Prevention (firewalls, trainings, etc.)</li>
+<li>Detection (logs, anti-malware, regular audits, etc.)</li>
+<li>Corrective (mitigation/recovery)</li>
+</ul>
+<h3 id="compensating-controls">Compensating Controls</h3>
+<p>Basically, if you can’t (or won’t) implement a given control, what control(s) do you layer in instead to provide equivalent security guarantees?</p>
+<h3 id="industry-standard-frameworks-and-reference-architectures">Industry-Standard Frameworks and Reference Architectures</h3>
+<ul>
+<li>Standards: Descriptions of mandatory behavior/configurations/implementation</li>
+<li>Guides: Best practices for implementing standards</li>
+<li>Frameworks: Basically hyper-detailed guides</li>
+</ul>
+<h3 id="regulatory-and-non-regulatory-requirements">Regulatory and Non-Regulatory Requirements</h3>
+<p>The difference here boils down to: Which have teeth, and which are just fancy specifications?</p>
+<h3 id="industry-specific-frameworks">Industry-Specific Frameworks</h3>
+<ul>
+<li>ISO 27002 (information security best practices; most commonly used by cloud providers)</li>
+<li>ISO 27001 (information security certification)</li>
+<li>ISO 27701 (ISO 27001 + privacy)</li>
+<li>ISO 31000 (risk management)</li>
+<li>SOC 2 (standardized requirements around the CIA triad + privacy)</li>
+<li>Various NIST standards</li>
+<li>COBIT (Control Objectives for Information Technology; IT management best practices, most commonly used as part of Sarbanes-Oxley compliance)</li>
+<li>COSO (Committee of Sponsoring Organizations; for governance and risk management)</li>
+<li>HITRUST CSF (Health Information Trust Common Security Framework; healthcare information handling)</li>
+<li>CSA CCM (Cloud Security Alliance Cloud Controls Matrix; cloud-specific security best practices)</li>
+<li>OCTAVE (Operationally Critical Threat, Asset and Vulnerability Evaluation; most commonly used in the education sector)</li>
+</ul>
+<p>SOC = Service Organizational Control</p>
+<h3 id="benchmarks-and-secure-configuration-guides">Benchmarks and Secure Configuration Guides</h3>
+<p>CIS Critical Security Controls + related benchmarks and guides.</p>

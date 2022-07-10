@@ -14,32 +14,25 @@ fi
 #
 [[ -d _site ]] && rm --recursive --force _site
 
+# Install pre-requisits.
+#
+[[ -z "$(which bundle)" ]] && gem install bundler
+
+bundle config set path vendor/bundle
+bundle install
+npm install
+
 # Pull Knack data.
 #
 chmod +x _bin/knack-pull-yaks.sh
-./_bin/knack-pull-yaks.sh || exit 2
+./_bin/knack-pull-yaks.sh
 
-# If we're running from Netlify, then all Ruby Gem setup has already
-# been done for us. We assume that this is the case if the `jekyll`
-# binary is in our path.
+# Build site.
 #
-# Otherwise, use `bundle` to make sure that everything is installed
-# and run the build.
-#
-if [[ -n "$(which jekyll)" ]]; then
-	jekyll build --profile || exit 4
-elif [[ -n "$(which bundle)" ]]; then
-	bundle config set path vendor/bundle || exit 8
-	bundle install || exit 3
-	bundle exec jekyll build --profile || exit 16
-else
-	echo "Cannot find Bundler, and Jekyll does not seem to be installed."
-	exit 32
-fi
+bundle exec jekyll build --profile
 
 # Make all URLs relative (required for most web3 hosting solutions).
 #
-npm install
 (
 	cd _site
 	../node_modules/.bin/all-relative

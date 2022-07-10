@@ -10,3 +10,8 @@ gem "jekyll-titles-from-headings"
 
 # https://github.com/avillafiorita/jekyll-datapage_gen
 gem "jekyll-datapage-generator"
+
+# https://github.com/feedreader/pluto
+gem "activerecord", "~> 6.1.4.4" # https://github.com/feedreader/pluto/issues/42
+gem "rss"
+gem "pluto"

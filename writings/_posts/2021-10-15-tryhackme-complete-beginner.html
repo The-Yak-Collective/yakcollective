@@ -1,0 +1,22 @@
+---
+title: 'TryHackMe: Complete Beginner'
+date: 2021-10-15 05:00:00.000000000 Z
+layout: post-external
+original_link: https://cardboard-iguana.com/log/2021-10-15-tryhackme-complete-beginner.html
+author: 100007
+---
+
+<h1 id="tryhackme-complete-beginner">TryHackMe: Complete Beginner</h1>
+<p><strong>author:</strong> Nathan Acks<br />
+<strong>date:</strong> 2021-10-15</p>
+<h2 id="introduction-to-windows">Introduction to Windows</h2>
+<h3 id="users-and-groups-management">Users and Groups Management</h3>
+<p>AD user management can be started by opening up the Server Manager and going to Tools &gt; Active Directory Users and Computers (aka, dsa.msc).</p>
+<p>Users (and groups!) live in OUs in Active Directory. Feels very much like Google Workspace (though I’m not sure if Google is aping AD, or if both are aping LDAP). Note that not everything in the Active Directory tree is an OU though!</p>
+<p>There are a number of groups pre-populated under /Users in a fresh AD tree.</p>
+<h3 id="creating-your-first-gpo">Creating Your First GPO</h3>
+<p>The GPO snap-in can be started by opening up the Server Manager and going to Tools &gt; Group Policy Management (aka, gpmc.msc).</p>
+<p>OUs created in dsa.msc are also accessible here, though you can’t edit individual users or groups (just apply GPOs to OUs).</p>
+<p>To set GPO policies, right-click on the GPO and select “Edit” (it doesn’t look like there’s a way to get to this otherwise). Then, navigate to the policy category, find the setting you want to configure, and double-click to edit. Policies are always “affirmative”, in the sense that they must be defined to apply. Since there’s no explicit “deny” within a policy, most come in pairs; for example, “Allow log on through Remote Desktop Services” and “Deny log on through Remote Desktop Services”.</p>
+<p>Once created, GPOs must be linked to a domain or OU (or site) to apply. Linked GPOs will be listed underneath whatever they’re linked to.</p>
+<p>To force a linked GPO to be applied now, use <code class="language-plaintext highlighter-rouge">gpoupdate /force</code> on the command line.</p>

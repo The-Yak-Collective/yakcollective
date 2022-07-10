@@ -1,0 +1,53 @@
+---
+title: 'TryHackMe: Pre Security (Supplements)'
+date: 2021-09-26 05:00:00.000000000 Z
+layout: post-external
+original_link: https://cardboard-iguana.com/log/2021-09-26-tryhackme-pre-security-supplements.html
+author: 100007
+---
+
+<h1 id="tryhackme-pre-security-supplements">TryHackMe: Pre Security (Supplements)</h1>
+<p><strong>author:</strong> Nathan Acks<br />
+<strong>date:</strong> 2021-09-26</p>
+<h2 id="windows-event-logs">Windows Event Logs</h2>
+<h3 id="putting-theory-into-practice">Putting Theory Into Practice</h3>
+<p>Use XPaths with Get-WinEvent via the -FilterXPath switch. Unlike -FilterHashtable, -FilterXPath can be applied to files specified on the command line using -Path.</p>
+<p>From Windows Net command executed to enumerate administrators:</p>
+<blockquote>
+<p>GOAL<br />
+Detect when a user runs the net command to enumerate the Administrators group, which could be indicative of adversarial reconnaissance activity.</p>
+<p>STRATEGY<br />
+Monitoring of Windows event logs where @evt.id is 4799, @Event.EventData.Data.CallerProcessName is *net1.exe and @Event.EventData.Data.TargetUserName is Administrators.</p>
+</blockquote>
+<ul>
+<li><a href="https://docs.datadoghq.com/security_platform/default_rules/windows-event-net-cmd-local-admin-enumeration/">Windows Net command executed to enumerate administrators</a></li>
+</ul>
+<h2 id="mitre">MITRE</h2>
+<h3 id="basic-terminology">Basic Terminology</h3>
+<p>TTP stands for “Tactics, Techniques, and Procedures”, where:</p>
+<ul>
+<li>“Tactics” are goals.</li>
+<li>“Techniques” are the methods used by the adversary to achieve its goals.</li>
+<li>“Procedure” is the actual nitty-gritty of how a technique is executed.</li>
+</ul>
+<p>So, something like “obtain access to a domain controller, using exploit X, delivered via a malicious attachment.”</p>
+<p>(I mostly say all of this to remind myself that these terms are being used in a slightly different fashion than my current workplace, which would probably use “goals, tactics, techniques” to represent the same steps.)</p>
+<h3 id="attck-framework">ATT&amp;CK Framework</h3>
+<p>”ATT&amp;CK” stands for “Adversarial Tactics, Techniques, and Common Knowledge”.</p>
+<ul>
+<li><a href="https://attack.mitre.org">MITRE ATT&amp;CK</a></li>
+</ul>
+<h3 id="car-knowledge-base">CAR Knowledge Base</h3>
+<p>”CAR” stands for “Cyber Analytics Repository”.</p>
+<p>The ATT&amp;CK Navigator tool highlights analytics currently available in CAR using blue.</p>
+<ul>
+<li><a href="https://car.mitre.org/">MITRE Cyber Analytics Repository</a></li>
+</ul>
+<h3 id="attck-emulation-plans">ATT&amp;CK Emulation Plans</h3>
+<p>Also known as “AEP”.</p>
+<p>The MITRE AEPs are kinda hard to find:</p>
+<ul>
+<li><a href="https://attack.mitre.org/resources/adversary-emulation-plans/">APT3</a></li>
+<li><a href="https://github.com/center-for-threat-informed-defense/adversary_emulation_library/tree/master/apt29">APT29</a></li>
+<li><a href="https://github.com/center-for-threat-informed-defense/adversary_emulation_library/tree/master/fin6">FIN6</a></li>
+</ul>

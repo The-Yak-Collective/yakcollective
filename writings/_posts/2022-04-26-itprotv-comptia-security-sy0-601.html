@@ -1,0 +1,106 @@
+---
+title: 'ITPro.TV: CompTIA Security+ (SY0-601)'
+date: 2022-04-26 05:00:00.000000000 Z
+layout: post-external
+original_link: https://cardboard-iguana.com/log/2022-04-26-itprotv-comptia-security-plus.html
+author: 100007
+---
+
+<h1 id="itprotv-comptia-security-sy0-601">ITPro.TV: CompTIA Security+ (SY0-601)</h1>
+<p><strong>author:</strong> Nathan Acks<br />
+<strong>date:</strong> 2022-04-26</p>
+<h2 id="security-controls">Security Controls</h2>
+<p>“Countermeasures” are another commonly used term for “controls”.</p>
+<p>In either case, these are just whatever measures we’re taking to “avoid, detect, counteract, or minimize security risks”, in particular w.r.t. the CIA triad.</p>
+<p>Systems of controls become frameworks/standards.</p>
+<p>Security controls are classified into three categories:</p>
+<ul>
+<li>Administrative</li>
+<li>Logical</li>
+<li>Physical</li>
+</ul>
+<p>Categories are themselves divided functionally into “types”:</p>
+<ul>
+<li>Preventative</li>
+<li>Detective</li>
+<li>Corrective</li>
+<li>Deterrent</li>
+<li>Recovery</li>
+<li>Directive</li>
+<li>Compensating</li>
+</ul>
+<p>The key difference between “preventative” and “deterrent” control types is that “deterrents” make someone <em>not</em> want to do something, while “preventative” control types actually <em>stop</em> them from doing that thing.</p>
+<p>Recovery controls are basically extensions of corrective controls: Corrective controls simply return a system to normal functioning, while recovery controls work to re-harden the system.</p>
+<p>Preventative, detective, corrective, and recovery controls are <em>reactive</em>, while deterrence and directive controls are <em>proactive</em>; compensating controls can be either, depending on what missing (primary) control they’re acting instead of.</p>
+<p>Most administrative controls are directives.</p>
+<h2 id="regulations-standards-and-frameworks">Regulations, Standards And Frameworks</h2>
+<p>“Frameworks” are sets of guidelines and best practices covering a constellation of security controls.</p>
+<p>Regulations and standards are basically prescriptive frameworks, the difference being that the first has the force of law, while the second is generally accepted within an industry (either by consensus or coercion).</p>
+<p>PCI-DSS:</p>
+<ul>
+<li>Protect the cardholder data environment with a firewall.</li>
+<li>Change default passwords, etc.</li>
+<li>Protect cardholder data.</li>
+<li>Encrypt cardholder data in motion (across open networks).</li>
+<li>Use anti-malware.</li>
+<li>Keep your systems and applications secure/up-to-date.</li>
+<li>No shared accounts</li>
+<li>Restrict logical access to cardholder data.</li>
+<li>Restrict physical access to cardholder data.</li>
+<li>Monitor all access to networks and systems that contain/process/transmit cardholder data.</li>
+<li>Regularly test your security measures.</li>
+<li>Document all of this, and maintain applicable employee policies.</li>
+</ul>
+<p>CIS Top 20 Controls:</p>
+<ul>
+<li>Basic controls (1 – 6)</li>
+<li>Foundational controls (7 – 16; build on the basic controls)</li>
+<li>Organizational controls (17 – 20)</li>
+</ul>
+<p>NIST CSF (Cyber Security Framework):</p>
+<ul>
+<li>Describe the current posture.</li>
+<li>Describe the target posture.</li>
+<li>Identify areas for improvement and repeatable processes that ratchet the organization in that direction.</li>
+<li>Determine how to assess progress.</li>
+<li>Establish channels to communicate with stakeholders.</li>
+</ul>
+<p>The NIST CSF is divided into a “core framework” (cybersecurity controls), “profiles” (specifies how to apply core controls for a specific risk appetite), and “implementation tiers” (qualitative guides for assessing maturity).</p>
+<p>NIST RMF (Risk Management Framework):</p>
+<ul>
+<li>Prepare to use the RMF.</li>
+<li>Categorize the system, information, and associated assets based on an impact analysis.</li>
+<li>Select and tailor a set of baseline controls.</li>
+<li>Implement and document the selected baseline.</li>
+<li>Assess the state and effectiveness of the selected controls.</li>
+<li>Authorize the system for normal operations.</li>
+<li>Monitor the state of the system on an ongoing basis (may lead to starting over with “categorization” depending on this ongoing knowledge).</li>
+</ul>
+<p>The NIST RMF is about tying risk management into the SDLC, extending the CSF “profiles”.</p>
+<p>ISO standards:</p>
+<ul>
+<li>ISO 27001 — Requirements for information security management</li>
+<li>ISO 27002 — Controls necessary to enforce ISO 27001</li>
+<li>ISO 27701 — Extends ISO 27001 &amp; 27002 to include privacy management</li>
+<li>ISO 31000 — Risk management</li>
+</ul>
+<p>Adam Gordon recommends combining the NIST RMF (which is focused on IT risk management) and ISO 31000 (which is focused on organizational risk management) in order to obtain the most holistic possible risk management framework.</p>
+<p>SOC reports can be divided into two “types”:</p>
+<ul>
+<li>Type I reports involves review and documentation, but <em>not</em> testing, of controls.</li>
+<li>Type II reports cover a minimum period of 6 months and requires that controls be tested.</li>
+</ul>
+<p>There are three kinds of SOC reports:</p>
+<ul>
+<li>SOC 1 reports are financial controls.</li>
+<li>SOC 2 reports cover non-financial controls.</li>
+<li>SOC 3 reports are stripped-down SOC 1/2 reports.</li>
+</ul>
+<p>The CSA CCM (Cloud Security Alliance Cloud Controls Matrix) provides a list of almost 200 controls (!!!) focusing on the cloud supply chain risks.</p>
+<p>There’s also lots of vendor guides.</p>
+<h2 id="spotlight-on-general-data-protection-regulation">Spotlight On General Data Protection Regulation</h2>
+<p>Location data becomes “personal data” under the GDPR if it can be linked to a session, and thus a user.</p>
+<p>The GDPR requires that the data controller and data processor be separate roles. In generally, data processors are external to an organization.</p>
+<p>The fines for breaches and other security violations under the GDPR are the <em>greater</em> of €10 million or 2% global revenue. But the fines for <em>misrepresenting</em> how data will be used or handles are double this.</p>
+<p>The GDPR data protection officer may be an individual in either the data controller, the data processor, or a third-party.</p>
+<p>The data controller must notify the applicable governmental regulatory body within 72 hours of becoming aware of a breach. However, extensions can be requested.</p>

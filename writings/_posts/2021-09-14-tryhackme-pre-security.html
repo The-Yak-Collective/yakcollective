@@ -1,0 +1,167 @@
+---
+title: 'TryHackMe: Pre Security'
+date: 2021-09-14 05:00:00.000000000 Z
+layout: post-external
+original_link: https://cardboard-iguana.com/log/2021-09-14-tryhackme-pre-security.html
+author: 100007
+---
+
+<h1 id="tryhackme-pre-security">TryHackMe: Pre Security</h1>
+<p><strong>author:</strong> Nathan Acks<br />
+<strong>date:</strong> 2021-09-14</p>
+<h2 id="extending-your-network">Extending Your Network</h2>
+<h3 id="introduction-to-port-forwarding">Introduction to Port Forwarding</h3>
+<p>Technically, it’s routers that are in charge of port forwarding, not firewalls (the prevelance of devices that are <em>both</em> routers <em>and</em> firewalls does a lot to muddy this situation).</p>
+<h3 id="firewalls-101">Firewalls 101</h3>
+<p>Firewalls operate on layers 3 and 4 of the OSI Model.</p>
+<p>The difference between stateless firewalls (rule-based packet filtering) and stateful firewalls (connection tracking) is not 100% clear from this TryHackMe module, and most sources on the internet don’t help much. But two examples might make it clearer.</p>
+<ul>
+<li>A <em>stateful</em> firewall can be configured to block incoming <em>connections</em> but allow outgoing ones. The reason this works is because incoming connections are always denied by the block rule, but once an outgoing connection is made the firewall tracks it and allows data associated with that connection in <em>both</em> directions.</li>
+<li>A <em>stateless</em> firewall simply blocks all <em>packets</em> that match a given set of criteria, such as destination port, source or destination IP address, etc.</li>
+</ul>
+<p>What muddies the water here is that modern firewalls generally support <em>both</em> stateful and stateless rules. For example, you might block incoming connections but allow outgoing connections (stateful) for normal operations, but then block all outbound packets targeting ports associated with SMB (stateless).</p>
+<ul>
+<li><a href="https://cardboard-iguana.com/notes/osi-model.html">OSI Model</a></li>
+</ul>
+<h3 id="lan-networking-devices">LAN Networking Devices</h3>
+<p>“Dumb” switches are purely layer 2 devices, but VLAN-aware switches support limited layer 3 awareness (since virtual logic about the network lives on this layer).</p>
+<h2 id="dns-in-detail">DNS in Detail</h2>
+<h3 id="domain-hierarchy">Domain Hierarchy</h3>
+<p>When you’re “registering” a domain, what you’re actually doing is registering a “second-level domain” (as distinct from TLDs like .net, .co.uk, etc.).</p>
+<p>Second-level domains are limited to 63 characters composed of a-z, 0-9, and “-“. Hyphens cannot start or end a domain (the TryHackMe module states that consecutive hyphens are not allowed, but this doesn’t seem to be true anymore given how internationalized domains are represented with Punycode).</p>
+<p>Subdomains follow the same rules as second-level domains. While in theory an unlimited number of subdomains are allowed, the entire domain string must be 253 characters or less, which would seem to impose a hard cap of 124 subdomains (assuming that the shortest TLD is two characters; if there’s a one-character TLD out there, then the hard cap is at 125 subdomains).</p>
+<p>Technically TLDs are <em>not</em> actually the top of the domain hierarchy — that would be the root domain, which is simply “.”. FQDNs should contain this trailing dot, which is why you need to include it when setting up CNAME entries and the like in DNS. (The purpose of the final “.” Is similar to that of the leading “/“ in paths — /foo/bar/baz is an absolute path starting at the file system root, but foo/bar/baz is a path relative to the current directory. The domain baz.bar.foo. is the DNS equivalent of /foo/bar/baz.)</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Domain_name">Domain name (Wikipedia)</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Internationalized_domain_name">Internationalized domain name (Wikipedia)</a></li>
+</ul>
+<h3 id="making-a-request">Making a Request</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Client
+→ Recursive DNS server (local, LAN, ISP)
+→ (possibly other DNS servers)
+→ Root DNS server
+→ TLD server (.com, etc.)
+→ Authoritative DNS server (NS record)
+</code></pre></div></div>
+<p>What’s actually going on here is made a little bit clearer by Wikipedia’s DNS address resolution discussion. Basically, DNS records are resolve from right-to-left, with each level responsible for knowing the location of the next level’s authoritative server. So, the root DNS servers (“.”) know where to find the TLD servers, the TLD servers know where to find the (second-level) domain servers, and the (second-level) domain server knows all the DNS entries for a domain (including for its subdomains). In theory this means that all you actually need is:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Client
+→ Root DNS server
+→ TLD server
+→ Authoritative DNS server
+</code></pre></div></div>
+<p>Everything that happens first between the client and the root DNS server is just caching to make things happen faster (if the answer to a query hasn’t expired from the cache of a recursive server, it will be provided by that server directly without making subsequent queries further up the chain).</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Domain_Name_System">Domain Name System (Wikipedia)</a></li>
+</ul>
+<h2 id="http-in-detail">HTTP in Detail</h2>
+<h3 id="requests-and-responses">Requests and Responses</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center">Scheme</th>
+<th style="text-align: center"> </th>
+<th style="text-align: center">User</th>
+<th style="text-align: center"> </th>
+<th style="text-align: center">Password</th>
+<th style="text-align: center"> </th>
+<th style="text-align: center">Domain</th>
+<th style="text-align: center"> </th>
+<th style="text-align: center">Port</th>
+<th style="text-align: center"> </th>
+<th style="text-align: center">Path</th>
+<th style="text-align: center"> </th>
+<th style="text-align: center">Query</th>
+<th style="text-align: center"> </th>
+<th style="text-align: center">Fragment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center">http</td>
+<td style="text-align: center">://</td>
+<td style="text-align: center">foo</td>
+<td style="text-align: center">:</td>
+<td style="text-align: center">bar</td>
+<td style="text-align: center">@</td>
+<td style="text-align: center">example.tld</td>
+<td style="text-align: center">:</td>
+<td style="text-align: center">8080</td>
+<td style="text-align: center">/</td>
+<td style="text-align: center">this/is/a/path</td>
+<td style="text-align: center">?</td>
+<td style="text-align: center">id=1&amp;task=1</td>
+<td style="text-align: center">#</td>
+<td style="text-align: center">in_page_reference</td>
+</tr>
+</tbody>
+</table>
+<p>Obviously, not all parts are required.</p>
+<p>Example request:</p>
+<div class="language-http highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">GET</span> <span class="nn">/</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Host</span><span class="p">:</span> <span class="s">tryhackme.com</span>
+<span class="na">User-Agent</span><span class="p">:</span> <span class="s">Mozilla/5.0 Firefox/87.0</span>
+<span class="na">Referer</span><span class="p">:</span> <span class="s">https://tryhackme.com/</span>
+</code></pre></div></div>
+<p>Example response:</p>
+<div class="language-http highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
+<span class="na">Server</span><span class="p">:</span> <span class="s">nginx/1.15.8</span>
+<span class="na">Date</span><span class="p">:</span> <span class="s">Fri, 09 Apr 2021 13:34:03 GMT</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">text/html</span>
+<span class="na">Content-Length</span><span class="p">:</span> <span class="s">98</span>
+<span class="nt">&lt;html&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+<span class="nt">&lt;title&gt;</span>TryHackMe<span class="nt">&lt;/title&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+Welcome To TryHackMe.com
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+<p>Note that both requests and responses <em>end</em> with blank lines. If the web server returns any data, this data follows this blank line. This is why Content-Length is important — it’s how we know when to stop reading the data! (Note that Content-Length is in bytes.)</p>
+<p>Note that HTTP is a stateless protocol.</p>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Length">Content-Length (MDN Web Docs)</a></li>
+</ul>
+<h3 id="http-methods">HTTP Methods</h3>
+<p>In general, POST should be for record creation, PUT for record updates.</p>
+<h3 id="http-status-codes">HTTP Status Codes</h3>
+<p>HTTP status code blocks:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center">Block</th>
+<th style="text-align: left">Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center">100 - 199</td>
+<td style="text-align: left">Informational response (uncommon).</td>
+</tr>
+<tr>
+<td style="text-align: center">200 - 299</td>
+<td style="text-align: left">Success</td>
+</tr>
+<tr>
+<td style="text-align: center">300 - 399</td>
+<td style="text-align: left">Redirects</td>
+</tr>
+<tr>
+<td style="text-align: center">400 - 499</td>
+<td style="text-align: left">Client errors (problems with the request content)</td>
+</tr>
+<tr>
+<td style="text-align: center">500 - 599</td>
+<td style="text-align: left">Server errors (problems with processing the request)</td>
+</tr>
+</tbody>
+</table>
+<p>While some HTTP status codes are pre-defined, applications are free to make up their own as well (!).</p>
+<h3 id="cookies">Cookies</h3>
+<p>Cookies are key-value pairs (key=value) sent by the server using the Set-Cookie header (additional semi-colon separated parameters can determine when the cookie expires, whether it’s restricted to HTTPS connections, etc.). Once set, the client is expected to return the cookie with the Cookie header in subsequent requests (at least until the cookie expires).</p>
+<p>To set multiple cookies, the server just uses multiple Set-Cookie headers. However, clients only reply with a <em>single</em> Cookie header, with individual cookies returned in a semicolon-separated string of key=value pairs.</p>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Glossary/Response_header">Response header (MDN Web Docs)</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie">Set-Cookie (MDN Web Docs)</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cookie">Cookie (MDN Web Docs)</a></li>
+</ul>

@@ -1,0 +1,96 @@
+---
+title: 'TryHackMe: Pre Security'
+date: 2021-09-19 05:00:00.000000000 Z
+layout: post-external
+original_link: https://cardboard-iguana.com/log/2021-09-19-tryhackme-pre-security.html
+author: 100007
+---
+
+<h1 id="tryhackme-pre-security">TryHackMe: Pre Security</h1>
+<p><strong>author:</strong> Nathan Acks<br />
+<strong>date:</strong> 2021-09-19</p>
+<h2 id="windows-fundamentals">Windows Fundamentals</h2>
+<h3 id="windows-updates">Windows Updates</h3>
+<p>Quick access to Windows Update:</p>
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">control</span><span class="w"> </span><span class="nx">/name</span><span class="w"> </span><span class="nx">Microsoft.WindowsUpdate</span><span class="w">
+</span></code></pre></div></div>
+<h3 id="firewall--network-protection">Firewall &amp; Network Protection</h3>
+<p>Windows Firewall network classifications:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left">Network Type</th>
+<th style="text-align: left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left">Domain</td>
+<td style="text-align: left">The domain profile applies to networks where the host system can authenticate to a domain controller.</td>
+</tr>
+<tr>
+<td style="text-align: left">Private</td>
+<td style="text-align: left">The private profile is a user-assigned profile and is used to designate private or home networks.</td>
+</tr>
+<tr>
+<td style="text-align: left">Public</td>
+<td style="text-align: left">The default profile is the public profile, used to designate public networks such as Wi-Fi hotspots at coffee shops, airports, and other locations.</td>
+</tr>
+</tbody>
+</table>
+<p>The Windows Firewall snap-in is WF.msc.</p>
+<h3 id="volume-shadow-copy-service">Volume Shadow Copy Service</h3>
+<p>Shadow copies are stored in the System Volume Information folder, and managed by the Volume Shadow Copy Service (VSS).</p>
+<h2 id="the-find-command">The find Command</h2>
+<h3 id="start-finding">Start finding</h3>
+<p>You can use wildcards as an alternative to find’s path spec. For example:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>find file<span class="k">*</span>
+find <span class="k">*</span>.txt
+</code></pre></div></div>
+<p>This implicitly only searches the current working directory, however.</p>
+<h3 id="know-exactly-what-youre-looking-for">Know Exactly What You’re Looking For</h3>
+<p>The -user and -group flags match files owned by a particular user or group (both numeric and symbolic-readable names are allowed).</p>
+<p>The -size flag matches files of size 𝑛.</p>
+<p>Prefix 𝑛 with + or - to match files <em>strictly</em> greater than or less than 𝑛 in size. To specify useful sizes, use a suffix.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center">Suffix</th>
+<th style="text-align: left">Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center">c</td>
+<td style="text-align: left">Bytes</td>
+</tr>
+<tr>
+<td style="text-align: center">k</td>
+<td style="text-align: left">Kilobytes</td>
+</tr>
+<tr>
+<td style="text-align: center">M</td>
+<td style="text-align: left">Megabytes</td>
+</tr>
+<tr>
+<td style="text-align: center">G</td>
+<td style="text-align: left">Gigabytes</td>
+</tr>
+</tbody>
+</table>
+<p>For example, use <code class="language-plaintext highlighter-rouge">-size +4G</code> to find files over 4 GB (i.e., those that can’t be written to a FAT32 file system).</p>
+<p>The -perm flag matches files with a given permission. Both numeric and symbolic permissions are allowed.</p>
+<p>Use the / or - prefix to match files with <em>any</em> of the specified permissions or <em>at least</em> the specified permissions. For example, <code class="language-plaintext highlighter-rouge">-perm -644</code> will match any file where the current user has <em>at least</em> read + write access and any other user has <em>at least</em> read access. Likewise, <code class="language-plaintext highlighter-rouge">-perm /666</code> will match files where the current user has read + write access and/or the current group has read + write access and/or everyone has read + write access.</p>
+<p>The -Xmin and -Xtime flags match files accessed (a), had their <em>contents</em> modified (m), or had their <em>inode</em> changed (c) 𝑛 minutes (-Xmin) or days (-Xtime) ago.</p>
+<p>All mtime changes are ctime changes, but the reverse is not necessarily true.</p>
+<p>Prefix 𝑛 with + or - to match files <em>strictly</em> before or after the specified time in the <em>past</em>.</p>
+<p>For example:</p>
+<ul>
+<li><code class="language-plaintext highlighter-rouge">-amin +30</code> matches files accessed <em>more</em> than 30 minutes ago.</li>
+<li><code class="language-plaintext highlighter-rouge">-mtime -7</code> matches files modified <em>less</em> than 7 days ago.</li>
+<li><code class="language-plaintext highlighter-rouge">-mtime 0</code> matches files modified <em>today</em>.</li>
+</ul>
+<p>References:</p>
+<ul>
+<li><a href="https://cardboard-iguana.com/notes/symbolic-permissions.html">Symbolic Permissions</a></li>
+</ul>

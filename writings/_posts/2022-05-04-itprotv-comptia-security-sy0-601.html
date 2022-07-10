@@ -1,0 +1,173 @@
+---
+title: 'ITPro.TV: CompTIA Security+ (SY0-601)'
+date: 2022-05-04 05:00:00.000000000 Z
+layout: post-external
+original_link: https://cardboard-iguana.com/log/2022-05-04-itprotv-comptia-security-plus.html
+author: 100007
+---
+
+<h1 id="itprotv-comptia-security-sy0-601">ITPro.TV: CompTIA Security+ (SY0-601)</h1>
+<p><strong>author:</strong> Nathan Acks<br />
+<strong>date:</strong> 2022-05-04</p>
+<h2 id="comptia-security-exam-cram">CompTIA Security+ Exam Cram</h2>
+<p>Today I’ll be reading chapter 34 from the Security+ Exam Cram, “Risk Management”.</p>
+<h3 id="risk-analysis">Risk Analysis</h3>
+<p>Good definition!</p>
+<blockquote>
+<p><em>Risk</em> is the possibility of exposure to loss or danger.</p>
+</blockquote>
+<p>Normally we talk about “risk” as if it were synonymous with “the probability that bad thing X happens”, but the Exam Cram breaks it down more formally as “Threat × Vulnerability × Impact”. (Here “Threat × Vulnerability” is more-or-less the colloquial meaning of “risk”, which means that we can also think of this as impact weighted by probability of occurrence.)</p>
+<h3 id="risk-register">Risk Register</h3>
+<p>A “risk register” is a document/database documenting various risks. Typical elements:</p>
+<ul>
+<li>Categorizations/Groupings</li>
+<li>Name/Description</li>
+<li>Some kind of risk score</li>
+<li>Potential impact</li>
+<li>Likelihood of realization</li>
+<li>Mitigations</li>
+<li>Residual (the risk induced by the mitigations)</li>
+<li>Contingency plans</li>
+</ul>
+<h3 id="risk-response-techniques">Risk Response Techniques</h3>
+<ul>
+<li>Avoid (eliminate the risk entirely)</li>
+<li>Transfer (dump the risk on someone else; includes insurance)</li>
+<li>Accept (YOLO)</li>
+<li>Mitigate (reduce impact, likelihood, or both)</li>
+</ul>
+<p>Most risk management is really about mitigation.</p>
+<p>The Exam Cram has a good example for residual risk, likening it to how barred windows mitigates break-in risk but increases the risk of being trapped by a fire.</p>
+<h3 id="threat-assessment">Threat Assessment</h3>
+<p>Threat: The potential that a vulnerability will be exploited.</p>
+<p>Threat Vector: <em>How</em> a threat is realized.</p>
+<p>Threat source types:</p>
+<ul>
+<li>Adversaries</li>
+<li>Accidents</li>
+<li>Acts of God</li>
+</ul>
+<p>The Exam Cram breaks the last of these down into “structural” (i.e., infrastructure failures) and “environmental”.</p>
+<h3 id="risk-assessment">Risk Assessment</h3>
+<p>“Risk assessment” formalizes the “Risk = Threat × Vulnerability × Impact” relationship defined above.</p>
+<ul>
+<li>Identify threats</li>
+<li>Identify vulnerabilities</li>
+<li>Determine the likelihood the the threat will be realized (“threat × vulnerability”)</li>
+<li>Determine the impact of the threat being realized</li>
+<li>Determine the risk</li>
+</ul>
+<p>Most risk assessments bound risk by fiscal year.</p>
+<p>There are, frankly, a lot of arbitrary numbers being thrown around in this section. I suppose that the important thing here is that risks are ultimately <em>ranked</em> by an organization in the correct order, and that risk <em>tiers</em> are clearly defined. But this is all very hand-wavy.</p>
+<h3 id="single-loss-expectancy">Single Loss Expectancy</h3>
+<p>“Single loss expectancy” (SLE) is the expected <em>monetary</em> loss should a given risk be realized.</p>
+<h3 id="annual-rate-of-occurrence">Annual Rate of Occurrence</h3>
+<p>The “annual rate of occurrence” (ARO) is just the probability that the risk is realized within the given timeframe (typically a fiscal year, as mentioned above).</p>
+<h3 id="annual-loss-expectancy">Annual Loss Expectancy</h3>
+<p>The “annual loss expectancy” (ALE) is the actual <em>expected monetary impact</em> of the risk (Annual Loss Expectancy = Single Loss Expectancy × Annual Rate of Occurrence).</p>
+<p>This is used in exactly the way you’d normally use expected values.</p>
+<h3 id="business-impact-analysis">Business Impact Analysis</h3>
+<p>What “risk assessment” is to risk, “business impact analysis” is to impacts.</p>
+<h3 id="recovery-objectives">Recovery Objectives</h3>
+<p>Recovery Point Objective: References data storage/processing/generation capabilities; the time that can elapse before the quantity of data lost due to a risk being realized exceeds the maximum allowable threshold as established in a business continuity plan. (Basically, acceptable data loss.)</p>
+<p>Recovery Time Objective: The time within which a process must be restored as established in a business continuity plan. (Basically, how long a given application can be down.)</p>
+<h3 id="mttf-mtbf-and-mttr">MTTF, MTBF, and MTTR</h3>
+<p>MTTF: Mean time to failure. (Used for monolithic, non-repairable systems.)</p>
+<p>MTBF: Mean time between failures. (Used for <em>components</em> in modular, repairable systems.)</p>
+<p>MTTR: Mean time to recovery.</p>
+<h2 id="itprotv-comptia-security-sy0-601-1">ITPro.TV: CompTIA Security+ (SY0-601)</h2>
+<h3 id="risk-management-concepts--vocabulary">Risk Management Concepts — Vocabulary</h3>
+<p>Via NIST Special Publication 800-31r1:</p>
+<ul>
+<li>Vulnerability: A weakness of some kind.</li>
+<li>Threat: An event or situation that, via a vulnerability, would prevent normal organizational operations in some way.</li>
+<li>Risk: The probability that a given threat will realize (via a vulnerability) an impact on the organization.</li>
+<li>Likelihood: The probability that something may happen.</li>
+<li>Impact: What a threat would cost/cause should it be realized. (Often expressed qualitatively rather than quantitatively.)</li>
+<li>Control: A mechanism to minimize risk. (Also called a “countermeasure”.)</li>
+<li>Residual: The risk that remains after all controls are applied. (Based on the Exam Cram’s discussion, I <em>think</em> this should <em>also</em> include any risks <em>introduced</em> by the controls themselves.)</li>
+</ul>
+<p>Note that these definitions are much closer to the colloquial definition of “risk” than what is presented in the Exam Cram.</p>
+<h3 id="risk-management-concepts--types--strategies">Risk Management Concepts — Types &amp; Strategies</h3>
+<p>Steps in the risk assessment process:</p>
+<ul>
+<li>Prepare</li>
+<li>Conduct</li>
+<li>Communicate</li>
+<li>Maintain (keep it updated)</li>
+</ul>
+<p>Conducting the assessment (step 2) can itself be broken down into five stages:</p>
+<ul>
+<li>Identify threats</li>
+<li>Identify vulnerabilities</li>
+<li>Determine likelihoods</li>
+<li>Determine impacts</li>
+<li>Determine the actual risk (expected losses)</li>
+</ul>
+<p>Interestingly, Adam Gordon’s using “risk” within these substeps in a way that’s much closer to the Exam Cram than to the previous episode’s definitions.</p>
+<p>Key risk types:</p>
+<ul>
+<li>External</li>
+<li>Internal</li>
+<li>Legacy systems</li>
+<li>Multiparty (federation, supply chain)</li>
+<li>IP theft</li>
+<li>Software licensing compliance (particularly important w.r.t. shadow IT)</li>
+</ul>
+<p>Note that there’s a lot of overlap here between categories.</p>
+<p>Risk management strategies:</p>
+<ul>
+<li>Accept</li>
+<li>Avoid</li>
+<li>Transfer</li>
+<li>Mitigate</li>
+</ul>
+<p>Adam Gordon breaks cyberinsurance out as its own category, though it’s typically considered a type of risk transference. Cloud migration is also a type of (partial) risk transference.</p>
+<h3 id="risk-management-concepts--risk-analysis">Risk Management Concepts — Risk Analysis</h3>
+<ul>
+<li>Risk Register: The formal tracking system for all risks within an organization.</li>
+<li>Risk Matrix: A plot of risk in terms of probability of occurrence vs. impact.</li>
+<li>Risk Heat Map: A color-coded version of a risk matrix.</li>
+<li>Risk Control Assessment: A third party risk assessment.</li>
+<li>Self Assessment of Risk: An internal risk assessment.</li>
+<li>Risk Awareness: The subset of security awareness programs that focus on inoculating an understanding of risk.</li>
+<li>Risk Appetite: The amount of risk an organization is willing to tolerate.</li>
+<li>Inherent Risk: The native amount of risk that comes along with an activity, process, or system.</li>
+<li>Residual Risk: The amount of risk left over once appropriate controls have been applied to a given activity, process, or system.</li>
+</ul>
+<p>Adam Gordon defines “risk analysis” as the <em>examination</em> of risk, while “risk assessment” is the process of <em>defining</em> risks in a given context. <em>Definitions</em> occur before <em>examinations</em>, and thus risk assessments occur before a risk analysis.</p>
+<p>Formally, the “single loss expectancy” (SLE) is defined as the asset value (which may be the income generated by the asset) multiplied by the “exposure factor” (which is the expected percentage of value of the asset in the event of an attack). This formula honestly only makes sense to me in the “asset as income” case; in other situations, wouldn’t the SLE be the repair/recovery costs?</p>
+<p>In general, risk controls are implemented even when they cost as much as the ALE of the risk, since such controls still guard against less tangible qualitative losses. It’s only when the cost of the control begins to <em>exceed</em> the risk’s ALE that an organization will accept the risk.</p>
+<h3 id="risk-management-concepts--business-impact-analysis">Risk Management Concepts — Business Impact Analysis</h3>
+<p>“Business Continuity and Disaster Recovery” (BCDR) is the combination of two different types of plans:</p>
+<ul>
+<li>“Business Continuity” plans attempt to continue normal (or diminished) business operations in the event of an emergency/disaster.</li>
+<li>“Disaster Recovery” plans involve the prevention or minimization of data loss and operational disruption due to catastrophic events.</li>
+</ul>
+<p>The the “BC” part is about <em>alternate</em> operations during an emergency, while the “DR” part is about <em>recovering</em> operations during a completely disruptive event.</p>
+<p>The plans for each of these are known as BCPs, DRPs, or BCDRPs for the combined plans.</p>
+<p>The reason business continuity and disaster recovery are increasingly lumped together is because events that take an organization <em>immediately</em> to disaster are actually somewhat rare. It’s more common for an organization to instead suffer progressive (abd potentially rapid) deterioration from “normal operations” to complete disruption. This means that the business continuity plan is generally engaged <em>before</em> the disaster recovery plan, and thus functions as something of a “final off ramp” before a formal disaster is declared and the DRP goes into effect.</p>
+<p>“Business impact analysis” is basically about (1) identifying mission-critical functions/assets and (2) characterizing the consequence of a disruption to these functions/assets. Goals:</p>
+<ul>
+<li>Determine critical systems</li>
+<li>Determine maximum acceptable downtime for those systems</li>
+<li>Evaluate internal and external requirements to determine restoration ordering</li>
+</ul>
+<p>Note that it’s sometimes desirable to bring up <em>less</em> critical systems before <em>more</em> critical ones as “guinea pigs” to help probe the post-disaster operational environment.</p>
+<p>Steps:</p>
+<ul>
+<li>Gather requirements and information</li>
+<li>Assess vulnerabilities</li>
+<li>Risk analysis</li>
+<li>Result communication</li>
+</ul>
+<p>Acronyms:</p>
+<ul>
+<li>MAD: Maximum Allowable Downtime</li>
+<li>MTD: Maximum Tolerable Downtime (synonym for MAD)</li>
+<li>RPO: Recovery Point Objective (the maximum amount of data that can be acceptably lost in the event of a disaster)</li>
+<li>RTO: Recovery Time Objective (the amount of time required to restore a non-functional system)</li>
+<li>WRT: Work Recovery Time (the amount of time required to finish restoring a <em>functional</em> system, including data)</li>
+</ul>
+<p>Basically, the RPO determines our <em>maximum</em> backup interval.</p>
+<p>RTO is concerned <em>only</em> with infrastructure recovery, while WRT is the length of time that it takes to restore <em>working</em> infrastructure to full operational capacity. This MAD = RTO + WRT.</p>

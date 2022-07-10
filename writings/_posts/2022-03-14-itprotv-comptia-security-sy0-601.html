@@ -1,0 +1,52 @@
+---
+title: 'ITPro.TV: CompTIA Security+ (SY0-601)'
+date: 2022-03-14 05:00:00.000000000 Z
+layout: post-external
+original_link: https://cardboard-iguana.com/log/2022-03-14-itprotv-comptia-security-plus.html
+author: 100007
+---
+
+<h1 id="itprotv-comptia-security-sy0-601">ITPro.TV: CompTIA Security+ (SY0-601)</h1>
+<p><strong>author:</strong> Nathan Acks<br />
+<strong>date:</strong> 2022-03-14</p>
+<h2 id="itprotv-comptia-security-sy0-601-1">ITPro.TV: CompTIA Security+ (SY0-601)</h2>
+<h3 id="access-control-schemes">Access Control Schemes</h3>
+<p>Access control is about how authorization is actually <em>enforced</em>.</p>
+<p>Common access control models:</p>
+<ul>
+<li>MANDATORY ACCESS CONTROL (MAC): Subjects (users) are labeled with “access levels”, and objects are labeled with “sensitivity levels”. Subjects can then interact with objects <em>up to</em> the sensitivity level that matches their access level.</li>
+<li>DISCRETIONARY ACCESS CONTROL (DAC): Subjects are provided with access to an object by that object’s “owner” via an ACL (technically a “DACL”). The ACL also defines what actions the subject can take with that object. (Note that most discretionary access control systems operate using an “implicit deny” approach — subjects that are not listed in an ACL are denied by default.) Computer permissions are a simple type of discretionary access control.</li>
+<li>ROLE-BASED ACCESS CONTROL: Subjects are grouped into “roles” that define object access.</li>
+<li>RULE-BASED ACCESS CONTROL: Subjects access to an object is defined by a set of pre-defined criteria. Most commonly seen in network-related settings where access may be controlled based upon subnets, protocols, etc.</li>
+<li>ATTRIBUTE-BASED ACCESS CONTROL (ABAC): Like rule-based access control, except that access is based on attributes (inherent properties) of the subject or object.</li>
+</ul>
+<p>Confusingly, both rule-based access controls and role-based access controls us the acronym “RBAC”.</p>
+<p>The difference between rule-based access controls and attribute-based access controls is that the former generally refers to access that’s granted depending on the subject’s current state, rather than by properties <em>inherent</em> to the subject itself (it’s “attributes”). For example, allowing or denying access to a system based upon the user’s geographic location is an example of rule-based access control, while basing access on the user’s organizational unit is an example of rule-based access control.</p>
+<p>As if the difference between rule-based and attribute-based access control wasn’t muddy enough, people will also refer to “conditional access”. Conditional access controls (CACs) generally look at the state of the <em>client</em> the user is attempting to use to access the object in question, rather than attributes of the user themself (think: Google Workspace’s Context-Aware Access system). Conditional access controls generally define this state in both rule-like and attribute-like ways.</p>
+<p>Finally, there’s “Privilege Access Management” (PAM). PAM systems are concerned with managing and monitoring user access (particularly administrator access). Up until now we’ve been talking about <em>approaches</em> to managing access; PAM systems represent the class of software that actually <em>instantiates</em> these approaches.</p>
+<p>Examples: Thycotic, CyberArk, Arcon, One Identity Safeguard.</p>
+<ul>
+<li><a href="https://support.google.com/a/answer/9275380">Context Aware Access (Google Workspace admin documentation)</a></li>
+<li><a href="https://thycotic.com/">Thycotic</a></li>
+<li><a href="https://www.cyberark.com/">CyberArk</a></li>
+<li><a href="https://arconnet.com/">Arcon</a></li>
+<li><a href="https://www.oneidentity.com/one-identity-safeguard/">One Identity Safeguard</a></li>
+</ul>
+<h3 id="account-management--account-types">Account Management — Account Types</h3>
+<ul>
+<li>“Administrators” have full system access.</li>
+<li>“Standard users” are your everyday users. This user class is distinguished by its inability to make system-wide changes (for example, software installation).</li>
+<li>“Guest accounts” have access to the computer, but <em>not</em> to any resources on that computer (unless such access is <em>explicitly</em> permitted). Generally used in kiosks or shared machines. Generally considered dangerous.</li>
+<li>“Service accounts” are non-human users. Generally highly restricted. “Managed” service accounts are managed by the system itself and thus don’t require explicit passwords or other user setup.</li>
+<li>“Shared accounts” are shared between users. Breaks non-repudiation, and generally is a bad idea. Should be avoided whenever possible.</li>
+</ul>
+<h3 id="account-management--password-policies">Account Management — Password Policies</h3>
+<ul>
+<li>Complexity &amp; length (everything from simple character set &amp; length rules to more complicated measures of entropy)</li>
+<li>History (a.k.a., reuse)</li>
+<li>Maximum password age (a.k.a., expiration)</li>
+<li>Minimum password age (how long a user must wait before they can change their password again; used in conjunction with password history to force users to <em>actually</em> use different passwords)</li>
+</ul>
+<h3 id="account-management--account-policies">Account Management — Account Policies</h3>
+<p>This is more Windows-specific. In particular, account policies in Active Directory apply to all objects in the directory (users, computers, etc.)</p>
+<p>An account policy is generally a set of pre-applied configuration parameters that the user (or computer, or whatever) <em>cannot change</em>. However, in Active Directory you can also set some <em>access policies</em>, which determines under what conditions we have access to a particular system or object (RBACs/ABACs/CACs as we discussed above), through the same “User Properties” interface.</p>

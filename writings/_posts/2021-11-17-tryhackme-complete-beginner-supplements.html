@@ -1,0 +1,49 @@
+---
+title: 'TryHackMe: Complete Beginner (Supplements)'
+date: 2021-11-17 06:00:00.000000000 Z
+layout: post-external
+original_link: https://cardboard-iguana.com/log/2021-11-17-tryhackme-complete-beginner-supplements.html
+author: 100007
+---
+
+<h1 id="tryhackme-complete-beginner-supplements">TryHackMe: Complete Beginner (Supplements)</h1>
+<p><strong>author:</strong> Nathan Acks<br />
+<strong>date:</strong> 2021-11-17</p>
+<h2 id="mal-malware-introductory">MAL: Malware Introductory</h2>
+<h3 id="what-is-the-purpose-of-malware-analysis">What Is the Purpose of Malware Analysis?</h3>
+<p>Three objectives of malware analysis:</p>
+<ul>
+<li>How is it spread?</li>
+<li>What are its IOCs?</li>
+<li>What does it do?</li>
+</ul>
+<h3 id="identifying-if-a-malware-attack-has-happened">Identifying if a Malware Attack Has Happened</h3>
+<p>Malware lifecycle:</p>
+<ul>
+<li>Delivery</li>
+<li>Execution</li>
+<li>Persistence (sometimes)</li>
+<li>Propagation (sometimes)</li>
+</ul>
+<p>The last two of these stages are generally the noisiest. <em>Persistence</em> produces primarily (only?) <em>host-based</em> signatures, while <em>propagation</em> leads to more <em>network-based</em> signatures.</p>
+<p>Malware is generally classed by how it <em>executes</em> (i.e., what it does).</p>
+<h3 id="static-vs-dynamic-analysis">Static vs. Dynamic Analysis</h3>
+<p>The difference here basically boils down to: Did you run it?</p>
+<p>Seems like it’s probably best to do dynamic analysis in a cloud VM or something. Though a lot of malware tries to detect if it’s running in a VM these days, so…</p>
+<h3 id="discussion-of-provided-tools--their-uses">Discussion of Provided Tools &amp; Their Uses</h3>
+<p>Some malware can actually spread over RDP. Ack!</p>
+<h3 id="now-lets-see-if-the-md5-checksums-have-been-analyzed-before">Now Let’s See if the MD5 Checksums Have Been Analyzed Before</h3>
+<p>I hadn’t noticed this before, but you can submit a file hash to VirusTotal instead uploading a file or submitting a URL. Handy!</p>
+<ul>
+<li><a href="https://www.virustotal.com">VirusTotal</a></li>
+</ul>
+<h3 id="identifying-if-the-executables-are-obfuscated--packed">Identifying if the Executables are Obfuscated / Packed</h3>
+<p>It seems like Windows executables have a magic number of <code class="language-plaintext highlighter-rouge">4D 5A</code>.</p>
+<ul>
+<li><a href="https://cardboard-iguana.com/notes/magic-numbers.html">Magic Numbers</a></li>
+</ul>
+<h3 id="introduction-to-strings">Introduction to Strings</h3>
+<p>Microsoft Sysinternals has a <code class="language-plaintext highlighter-rouge">strings</code> command. Neat!</p>
+<ul>
+<li><a href="https://docs.microsoft.com/en-us/sysinternals/">Sysinternals</a></li>
+</ul>
