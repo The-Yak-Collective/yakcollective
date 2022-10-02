@@ -1,5 +1,3 @@
-- Eliminate trailing "-" characters from writings
-- Change "_" to "-" in writings files
 - Tweet out new RSS entries (avoid duplication)
 - Push new RSS entries to Discord (avoid duplication)
 - Figure out how to build Yak-of-the-Day tweets (but leave this deactivated for now)
