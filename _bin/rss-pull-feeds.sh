@@ -40,6 +40,10 @@ done <<< "$(jq -r '.records[] | [.field_101_raw, .field_68_raw.url?] | @tsv' _da
 	mv writings/* ../writings/_posts/
 )
 
+# One-off fixes.
+#
+sed -i 's#http://a9\.io/glue-comic/#https://a9.io/glue-comic/#g' newsletter/_posts/2020-09-04-podcasting-needs-cognitive-hooks.html
+
 # Set script timer.
 #
 date "+%s" > _timers/rss-pull-feeds
