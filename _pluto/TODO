@@ -1,8 +1,0 @@
-- Tweet out new RSS entries (avoid duplication)
-- Push new RSS entries to Discord (avoid duplication)
-- Figure out how to build Yak-of-the-Day tweets (but leave this deactivated for now)
-- Create GitHub Actions workflows
-	- Pull RSS feeds
-	- Tweet
-	- Discord Push
-	- Automatic site rebuild (daily? hourly?)
