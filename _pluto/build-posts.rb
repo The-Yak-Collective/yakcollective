@@ -103,6 +103,8 @@ private
 		end
 	end
 
+	# title_to_key() helper function.
+	#
 	def title_to_key(title)
 		key = title.downcase
 		key = key.gsub(/[^a-z0-9 :-]/, "")
