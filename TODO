@@ -9,16 +9,9 @@
 	* Discord Push
 	* Automatic site rebuild (daily? hourly?)
 
-# Formats
+# Twitter/Discord Post Handling
 
-## Twitter
-
-```
-Check out @{{TwitterHandle}}’s new post, “{{PostTitle}}” — {{PostURL}}
-```
-
-## Discord
-
-```
-{{PostTitle}} — {{PostURL}}
-```
+* [x] Create Twitter & Discord posts along with blog posts
+* [ ] Move Twitter & Discord posts into staging directory IFF timestamp is later than the most recent timestamp in the key/set sequence
+* [ ] Update Twitter posts to use Twitter handle or professional name
+* [ ] Script to push out the first (sorted) Twitter and Discord post

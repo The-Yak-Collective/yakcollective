@@ -49,6 +49,10 @@ class Planet
 		Pluto::Model::Item.latest.each_with_index do |item, i|
 			puts "[#{i+1}] #{item.title}"
 			generate_blog_post(item)
+			unless item.url.empty?
+				generate_twitter_post(item)
+				generate_discord_post(item)
+			end
 		end
 	end
 
@@ -99,6 +103,50 @@ private
 			post_content = post_content.gsub(/{/, "&#x007b;")
 			post_content = post_content.gsub(/}/, "&#x007d;")
 		
+			post_file.write post_content
+		end
+	end
+
+	# Generate post files for Twitter.
+	#
+	def generate_twitter_post(item)
+		posts_root = "./twitter"
+		
+		FileUtils.mkdir_p(posts_root)
+	
+		if $feed_set == "writings"
+			post_name = "#{posts_root}/#{item.published.strftime('%s')}-#{item.feed.key}.txt"
+		else
+			post_name = "#{posts_root}/#{item.published.strftime('%s')}-#{$feed_set}.txt"
+		end
+	
+		File.open(post_name, 'w:utf-8') do |post_file|
+			if $feed_set == "writings"
+				post_content = "Check out @#{item.feed.key}’s new post, “#{item.title}” — #{item.url}"
+			elsif $feed_set == "newsletter"
+				post_content = "Check out the latest edition of the Yak Talk newsletter, “#{item.title}” — #{item.url}"
+			end
+			
+			post_file.write post_content
+		end
+	end
+
+	# Generate post files for Discord.
+	#
+	def generate_discord_post(item)
+		posts_root = "./discord"
+		
+		FileUtils.mkdir_p(posts_root)
+	
+		if $feed_set == "writings"
+			post_name = "#{posts_root}/#{item.published.strftime('%s')}-#{item.feed.key}.txt"
+		else
+			post_name = "#{posts_root}/#{item.published.strftime('%s')}-#{$feed_set}.txt"
+		end
+	
+		File.open(post_name, 'w:utf-8') do |post_file|
+			post_content = "#{item.title} — #{item.url}"
+			
 			post_file.write post_content
 		end
 	end

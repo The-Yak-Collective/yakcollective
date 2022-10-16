@@ -33,19 +33,29 @@ done <<< "$(jq -r '.records[] | [.field_101_raw, .field_68_raw.url?] | @tsv' _da
 #
 (
 	cd _pluto
-	chmod +x *.rb
+	chmod +x build-posts.rb
+
 	bundle exec pluto update newsletter.ini
 	bundle exec build-posts.rb newsletter
-	mv newsletter/* ../newsletter/_posts/
+
 	bundle exec pluto update writings.ini
 	bundle exec build-posts.rb writings
-	mv writings/* ../writings/_posts/
 )
 
-# One-off fixes.
+# Integrate Discord posts.
 #
+mv _pluto/discord/* _discord/
+
+# Integrate newsletter posts.
+#
+mv _pluto/newsletter/* newsletter/_posts/
+
 sed -i 's#http://a9\.io/glue-comic/#https://a9.io/glue-comic/#g' newsletter/_posts/2020-09-04-podcasting-needs-cognitive-hooks.html
 
-# Set script timer.
+# Integrate Twitter posts.
 #
-date "+%s" > _timers/rss-pull-feeds
+mv _pluto/twitter/* _twitter/
+
+# Integrate writings.
+#
+mv _pluto/writings/* writings/_posts/
