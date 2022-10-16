@@ -10,22 +10,16 @@ if [[ ! -f _config.yml || ! -d _bin ]]; then
 	exit 1
 fi
 
+# Run init, if necessary.
+#
+if [[ ! -f .common-init ]]; then
+	chmod +x _bin/common-init.sh
+	./_bin/common-init.sh
+fi
+
 # Clean destination directory.
 #
 [[ -d _site ]] && rm --recursive --force _site
-
-# Install pre-requisits.
-#
-[[ -z "$(which bundle)" ]] && gem install bundler
-
-bundle config set path vendor/bundle
-bundle install
-npm install
-
-# Pull Knack data.
-#
-chmod +x _bin/knack-pull-yaks.sh
-./_bin/knack-pull-yaks.sh
 
 # Build site.
 #

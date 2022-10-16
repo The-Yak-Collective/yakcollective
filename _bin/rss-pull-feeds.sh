@@ -1,16 +1,18 @@
 #!/usr/bin/env bash
 
-# Install pre-requisits.
+# Check to make sure that we're running in the repository root.
 #
-[[ -z "$(which bundle)" ]] && gem install bundler
+if [[ ! -f _config.yml || ! -d _bin ]]; then
+	echo "This script must be run from the repository root!"
+	exit 1
+fi
 
-bundle config set path vendor/bundle
-bundle install
-
-# Pull Knack data.
+# Run init, if necessary.
 #
-chmod +x _bin/knack-pull-yaks.sh
-./_bin/knack-pull-yaks.sh
+if [[ ! -f .common-init ]]; then
+	chmod +x _bin/common-init.sh
+	./_bin/common-init.sh
+fi
 
 # Generate ini file for the "writings" page.
 #
