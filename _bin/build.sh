@@ -48,7 +48,7 @@ find _site -type f -iname '*.html' -exec sed -i -e 's/&#x007b;/{/g;s/&#x007d;/}/
 
 # Minify: https://github.com/tdewolff/minify
 #
-# Current version: 2.9.22 (last checked 2021-11-14)
+# Current version: 2.12.4 (last checked 2022-10-16)
 #
 # It's too bad we need to cart this binary around as part of the repo,
 # but Netlify doesn't support installing our own tools (otherwise we'd
@@ -65,10 +65,13 @@ find _site -type f -iname '*.html' -exec sed -i -e 's/&#x007b;/{/g;s/&#x007d;/}/
 # result in invalid HTML/CSS/JS output! Netlify optimization should
 # therefore be turned off when "hand optimization" like this is used.
 #
-chmod +x _bin/minify
-mv _site _site.original
-(
-	cd _site.original
-	../_bin/minify --all --recursive --sync --output ../_site .
-)
-rm -rf _site.original
+MINIFY_BINARY="minify-$(uname -s | tr "[:upper:]" "[:lower:]")-$(uname -m)"
+if [[ -f _bin/"$MINIFY_BINARY" ]]; then
+	chmod +x _bin/"$MINIFY_BINARY"
+	mv _site _site.original
+	(
+		cd _site.original
+		../_bin/"$MINIFY_BINARY" --all --recursive --sync --output ../_site .
+	)
+	rm -rf _site.original
+fi
