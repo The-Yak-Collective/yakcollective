@@ -1,0 +1,47 @@
+---
+title: AWS Deep Dive
+date: 2022-09-19 12:00:00.000000000 Z
+layout: post-external
+original_link: https://cardboard-iguana.com/log/2022-09-19-aws-deep-dive.html
+author: 100007
+---
+
+<h1 id="aws-deep-dive">AWS Deep Dive</h1>
+<p><strong>author:</strong> Nathan Acks<br />
+<strong>date:</strong> 2022-09-19</p>
+<p>The AWS deep dive reading notes return!</p>
+<h1 id="aws-iam-policies-in-a-nutshell">AWS IAM Policies in a Nutshell</h1>
+<p>IAM policy statements can include an <code class="language-plaintext highlighter-rouge">Sid</code> value (different than the policy-level <code class="language-plaintext highlighter-rouge">Id</code>). This is only required by a few services (SQS and SNS). It seems like it’s probably safe to just set both the <code class="language-plaintext highlighter-rouge">Id</code> and the <code class="language-plaintext highlighter-rouge">Sid</code> to some UUIDv4 value (though the two should <em>probably</em> use different UUIDs).</p>
+<p>(The reason there’s both an <code class="language-plaintext highlighter-rouge">Sid</code> and an <code class="language-plaintext highlighter-rouge">Id</code> is that the policy <code class="language-plaintext highlighter-rouge">Statement</code> can point <em>either</em> to a single object <em>or</em> an array of objects. <code class="language-plaintext highlighter-rouge">Sid</code> is redundant in the first case, but uniquely identifies each policy statement object in the second case.)</p>
+<p>Many (most?) IAM policy properties accept wild-carding. An <code class="language-plaintext highlighter-rouge">Action</code> of <code class="language-plaintext highlighter-rouge">s3:Get*</code> is equivalent to writing <code class="language-plaintext highlighter-rouge">s3:GetObject</code>, <code class="language-plaintext highlighter-rouge">s3:GetBucket</code>, …</p>
+<p>(The “?” string can also be used as a single-character wildcard.)</p>
+<p>There’s also “policy variables” which can be used anywhere a wildcard can be. These are things like <code class="language-plaintext highlighter-rouge">aws:username</code>, and when used they’re referenced as <code class="language-plaintext highlighter-rouge">$&#x007b;aws:username&#x007d;</code>.</p>
+<p>Statement properties (<code class="language-plaintext highlighter-rouge">Principal</code>, <code class="language-plaintext highlighter-rouge">Action</code>, and <code class="language-plaintext highlighter-rouge">Resource</code>) generally accept either a string or an array of strings.</p>
+<p>The IAM policy statement <code class="language-plaintext highlighter-rouge">Principal</code> isn’t needed for policies attached to users, groups, and roles. In all of these cases, the <code class="language-plaintext highlighter-rouge">Principal</code> defaults to the object the policy is attached to (makes sense). Thus, <code class="language-plaintext highlighter-rouge">Principal</code> is primarily used only for policies attached to resources like S3 buckets and SQS queues.</p>
+<p>(Policies attached to resources <em>sometimes</em> don’t need to include a <code class="language-plaintext highlighter-rouge">Resource</code> object in the policy statement. But sometimes they do. For example, “permissions policies” attached to roles - see below - don’t need a <code class="language-plaintext highlighter-rouge">Resource</code>, but policies attached to S3 buckets <em>do</em> need a <code class="language-plaintext highlighter-rouge">Resource</code>.)</p>
+<p>Group ARNs are <em>not</em> allowed to be principals.</p>
+<p>Roles require <em>two</em> policies to be attached - a “permissions policy” (which specifies what the role can do) and a “trust policy” (which specifies who can assume the role). In a sense, a role functions as both an actor (via the “permissions policy”) and a resource (via the “trust policy”).</p>
+<p>Trust policies are where the <code class="language-plaintext highlighter-rouge">sts:AssumeRole</code> action gets used.</p>
+<p>The ARN format:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>arn:aws:[service]:[region]:[account]:[resourceType]/[resourcePath]
+</code></pre></div></div>
+<p>The “service”, “region”, and “account” portions of an ARN can be collapsed if not relevant. Thus <code class="language-plaintext highlighter-rouge">arn:aws:s3:::bucket-name/*</code> is equivalent to <code class="language-plaintext highlighter-rouge">arn:aws:s3:*:*:bucket-name/*</code>.</p>
+<p>The statement <code class="language-plaintext highlighter-rouge">Condition</code> property is an object that contains one or more conditions of the following form:</p>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nl">"conditionOperator"</span><span class="p">:</span><span class="w"> </span><span class="p">&#x007b;</span><span class="w">
+</span><span class="nl">"conditionKey"</span><span class="p">:</span><span class="w"> </span><span class="s2">"conditionValue"</span><span class="w">
+</span><span class="p">&#x007d;</span><span class="w">
+</span></code></pre></div></div>
+<p>For example:</p>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nl">"DateGreaterThan"</span><span class="p">:</span><span class="w"> </span><span class="p">&#x007b;</span><span class="w">
+</span><span class="nl">"aws:CurrentTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-09-19T00:00:00Z"</span><span class="w">
+</span><span class="p">&#x007d;</span><span class="w">
+</span></code></pre></div></div>
+<p>Many (all?) available condition keys are also policy variables.</p>
+<p>Annoyingly, not every action supports every condition key.</p>
+<ul>
+<li><a href="https://start.jcolemorrison.com/aws-iam-policies-in-a-nutshell/">AWS IAM Policies in a Nutshell</a></li>
+<li><a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_variables.html">IAM policy elements: Variables and tags</a></li>
+<li><a href="https://docs.aws.amazon.com/service-authorization/latest/reference/reference_policies_actions-resources-contextkeys.html">Actions, resources, and condition keys for AWS services</a></li>
+<li><a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_condition_operators.html">IAM JSON policy elements: Condition operators</a></li>
+<li><a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html">AWS global condition context keys</a></li>
+</ul>

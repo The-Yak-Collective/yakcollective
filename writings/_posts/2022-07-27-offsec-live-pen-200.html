@@ -1,0 +1,30 @@
+---
+title: 'OffSec Live: PEN-200'
+date: 2022-07-27 12:00:00.000000000 Z
+layout: post-external
+original_link: https://cardboard-iguana.com/log/2022-07-27-offsec-live-pen-200.html
+author: 100007
+---
+
+<h1 id="offsec-live-pen-200">OffSec Live: PEN-200</h1>
+<p><strong>author:</strong> Nathan Acks<br />
+<strong>date:</strong> 2022-07-27</p>
+<p>OffSec Live has apparently moved to Zoom. 😕</p>
+<p>(It’s definitely a smoother experience as a viewer, but the chat is more limited and I miss being able to throw it up on the TV.)</p>
+<h1 id="local-file-inclusion-lfi">Local File Inclusion (LFI)</h1>
+<p>While you <em>can</em> try to estimate how many directories you need to ascend (<code class="language-plaintext highlighter-rouge">../</code> leaders), keep in mind that ascending at <code class="language-plaintext highlighter-rouge">/</code> <em>doesn’t</em> result in an error and instead just returns <code class="language-plaintext highlighter-rouge">/</code>. So the fastest strategy here is just to add a <em>bunch</em> of <code class="language-plaintext highlighter-rouge">../</code> leaders, since if we overshoot things will still work.</p>
+<p>Rather than <em>replacing</em> image uploads with PHP files we want to include, you can often get more mileage by <em>prepending</em> the code you want to execute to the image file. This will generally still work for LFI, but will also bypass some server-side filtering.</p>
+<p>Keep in mind that <code class="language-plaintext highlighter-rouge">-e</code> and <code class="language-plaintext highlighter-rouge">-c</code> are generally disabled in stock versions of netcat.</p>
+<h1 id="remote-file-inclusion-rfi">Remote File Inclusion (RFI)</h1>
+<p>RFI doesn’t work on newer versions of PHP (at least out-of-the-box), as the configuration directives <code class="language-plaintext highlighter-rouge">allow_url_open</code> and <code class="language-plaintext highlighter-rouge">allow_url_include</code> need to be enabled. But sometimes people still turn these on…</p>
+<p>If RFI is possible, it works basically like LFI (except that you’re pulling your code from a remote server, rather than something you upload).</p>
+<p>Remember to encode your URL variables!</p>
+<p>Be careful when serving up files for RFI so that your machine doesn’t process the file for you! (Otherwise, for example, you can try to serve up a PHP file, have it get processed by your <em>local</em> web server, and wind up with a reverse shell on your own box!) One way around this is to use a webserver that won’t process the file you’re trying to serve - Python to serve up PHP code, etc.</p>
+<p>A shout-out here to using ngrok to get a public IP.</p>
+<ul>
+<li><a href="https://www.offensive-security.com/offsec/offsec-live/">OffSec Live</a></li>
+<li><a href="https://learn.offensive-security.com/offsec-live-webinars">Join OffSec Live</a></li>
+<li><a href="https://www.revshells.com/">Reverse Shell Generator</a></li>
+<li><a href="https://cardboard-iguana.com/notes/netcat.html">Using “netcat”</a></li>
+<li><a href="https://ngrok.com/">ngrok</a></li>
+</ul>

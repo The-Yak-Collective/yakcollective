@@ -1,6 +1,6 @@
 ---
 title: 'TryHackMe: Jr. Penetration Tester'
-date: 2022-03-31 05:00:00.000000000 Z
+date: 2022-03-31 12:00:00.000000000 Z
 layout: post-external
 original_link: https://cardboard-iguana.com/log/2022-03-31-tryhackme-jr-penetration-tester.html
 author: 100007
@@ -9,65 +9,45 @@ author: 100007
 <h1 id="tryhackme-jr-penetration-tester">TryHackMe: Jr. Penetration Tester</h1>
 <p><strong>author:</strong> Nathan Acks<br />
 <strong>date:</strong> 2022-03-31</p>
-<h2 id="nmap-live-host-discovery">Nmap Live Host Discovery</h2>
-<h3 id="subnetworks">Subnetworks</h3>
+<h1 id="nmap-live-host-discovery">Nmap Live Host Discovery</h1>
+<h2 id="subnetworks">Subnetworks</h2>
 <p>NETWORK SEGMENT: A group of devices connected using a shared medium, such as a switch or wireless access port. A router controls one or more network segments.</p>
 <p>ARP packets are bound to a subnet.</p>
-<h3 id="enumerating-targets">Enumerating Targets</h3>
+<h2 id="enumerating-targets">Enumerating Targets</h2>
 <p>Handy nmap flags:</p>
 <ul>
-<li><code class="language-plaintext highlighter-rouge">-iL</code> — Use a file for nmap’s scan targets.</li>
-<li><code class="language-plaintext highlighter-rouge">-sL</code> — Show the hosts that would be scanned, but don’t actually do anything (except perhaps DNS resolution).</li>
-<li><code class="language-plaintext highlighter-rouge">-n</code> — Don’t resolve host names using DNS (or do reverse DNS resolution).</li>
+<li><code class="language-plaintext highlighter-rouge">-iL</code> - Use a file for nmap’s scan targets.</li>
+<li><code class="language-plaintext highlighter-rouge">-sL</code> - Show the hosts that would be scanned, but don’t actually do anything (except perhaps DNS resolution).</li>
+<li><code class="language-plaintext highlighter-rouge">-n</code> - Don’t resolve host names using DNS (or do reverse DNS resolution).</li>
 </ul>
-<p>Note that you can put ranges in any octet of an IP address; for example, 10.10.0-255.1-255 will scan 10.10.0.1 – 10.10.255.255.</p>
-<h3 id="nmap-host-discovery-using-arp">Nmap Host Discovery Using ARP</h3>
-<p>Nmap host discovery:</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: right"> </th>
-<th style="text-align: left">Superuser</th>
-<th style="text-align: left">Regular User</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: right">Local Hosts</td>
-<td style="text-align: left">ARP</td>
-<td style="text-align: left">TCP SYN to port 80 and 443</td>
-</tr>
-<tr>
-<td style="text-align: right">Remote Hosts</td>
-<td style="text-align: left">ICMP Echo, TCP SYN to 443, TCP ACK to 80, ICMP Timestamp</td>
-<td style="text-align: left">TCP SYN to port 80 and 443</td>
-</tr>
-</tbody>
-</table>
+<p>Note that you can put ranges in any octet of an IP address; for example, 10.10.0-255.1-255 will scan 10.10.0.1 - 10.10.255.255.</p>
+<h2 id="nmap-host-discovery-using-arp">Nmap Host Discovery Using ARP</h2>
+<p>When called as the superuser, Nmap uses ARP for local host discovery and a combination of ICMP Echo, TCP SYN to 443, TCP ACK to 80, and ICMP Timestamp requests for remote host discovery.</p>
+<p>When called as a normal user, Nmap has more limited options and uses TCP SYN packets sent for ports 80 and 443 for both local and remote host discovery.</p>
 <p>Note that even though this Nmap calls host discovery a “ping scan”, ping requests (ICMP echo) are only used in one particular case. Nmap does not perform host discovery when provided with a list of targets (<code class="language-plaintext highlighter-rouge">-iL</code>).</p>
 <ul>
-<li><code class="language-plaintext highlighter-rouge">-sn</code> — Host discovery only.</li>
-<li><code class="language-plaintext highlighter-rouge">-PR</code> — Use ARP packets only for host discovery.</li>
+<li><code class="language-plaintext highlighter-rouge">-sn</code> - Host discovery only.</li>
+<li><code class="language-plaintext highlighter-rouge">-PR</code> - Use ARP packets only for host discovery.</li>
 </ul>
 <p>A specialized tool for doing ARP scans is (appropriately enough) <code class="language-plaintext highlighter-rouge">arp-scan</code>. Use <code class="language-plaintext highlighter-rouge">arp-scan -l</code> to scan the entire local network, and <code class="language-plaintext highlighter-rouge">arp-scan -I $IFACE -l</code> to scan only the network available on interface <code class="language-plaintext highlighter-rouge">$IFACE</code>.</p>
 <ul>
 <li><a href="https://nmap.org/book/man-host-discovery.html">Host Discovery (Official Nmap Project Guide)</a></li>
 </ul>
-<h3 id="nmap-host-discovery-using-icmp">Nmap Host Discovery Using ICMP</h3>
+<h2 id="nmap-host-discovery-using-icmp">Nmap Host Discovery Using ICMP</h2>
 <ul>
-<li><code class="language-plaintext highlighter-rouge">-PE</code> — Use ICMP Echo for host discovery. (Note that Nmap will still not send the echo request if host existence can be verified using the initial ARP request.)</li>
-<li><code class="language-plaintext highlighter-rouge">-PP</code> — Use ICMP Timestamp for host discovery. (Less likely to be blocked by firewalls than <code class="language-plaintext highlighter-rouge">-PE</code>, but also a more unusual request that may stand out. Like <code class="language-plaintext highlighter-rouge">-PE</code>, Nmap will still not send the timestamp request if host existence can be verified using the initial ARP request.)</li>
-<li><code class="language-plaintext highlighter-rouge">-PM</code> — Use ICMP Address Mask for host discovery. (More-or-less the same as <code class="language-plaintext highlighter-rouge">-PP</code>, just a different ICMP request type.)</li>
+<li><code class="language-plaintext highlighter-rouge">-PE</code> - Use ICMP Echo for host discovery. (Note that Nmap will still not send the echo request if host existence can be verified using the initial ARP request.)</li>
+<li><code class="language-plaintext highlighter-rouge">-PP</code> - Use ICMP Timestamp for host discovery. (Less likely to be blocked by firewalls than <code class="language-plaintext highlighter-rouge">-PE</code>, but also a more unusual request that may stand out. Like <code class="language-plaintext highlighter-rouge">-PE</code>, Nmap will still not send the timestamp request if host existence can be verified using the initial ARP request.)</li>
+<li><code class="language-plaintext highlighter-rouge">-PM</code> - Use ICMP Address Mask for host discovery. (More-or-less the same as <code class="language-plaintext highlighter-rouge">-PP</code>, just a different ICMP request type.)</li>
 </ul>
-<h3 id="nmap-host-discovery-using-tcp-and-udp">Nmap Host Discovery Using TCP and UDP</h3>
+<h2 id="nmap-host-discovery-using-tcp-and-udp">Nmap Host Discovery Using TCP and UDP</h2>
 <ul>
-<li><code class="language-plaintext highlighter-rouge">-PS</code> — Use TCP SYN packets for host discovery. Uses port 80 by default, or you can specify a port list (e.g., <code class="language-plaintext highlighter-rouge">-PS80,8080,8888</code>) or range (e.g. <code class="language-plaintext highlighter-rouge">-PS20-30</code>). (Note that unprivileged users <em>must</em> complete a full TCP handshake.)</li>
-<li><code class="language-plaintext highlighter-rouge">-PA</code> — Use TCP ACK packets for host discovery; otherwise the same as <code class="language-plaintext highlighter-rouge">-PS</code>.</li>
-<li><code class="language-plaintext highlighter-rouge">-PU</code> — Use UDP packets for host discovery. Unlike other types of host discovery scans, UDP scans only generate a reply (ICMP Port Unreachable) if the target port is <em>closed</em>.</li>
+<li><code class="language-plaintext highlighter-rouge">-PS</code> - Use TCP SYN packets for host discovery. Uses port 80 by default, or you can specify a port list (e.g., <code class="language-plaintext highlighter-rouge">-PS80,8080,8888</code>) or range (e.g. <code class="language-plaintext highlighter-rouge">-PS20-30</code>). (Note that unprivileged users <em>must</em> complete a full TCP handshake.)</li>
+<li><code class="language-plaintext highlighter-rouge">-PA</code> - Use TCP ACK packets for host discovery; otherwise the same as <code class="language-plaintext highlighter-rouge">-PS</code>.</li>
+<li><code class="language-plaintext highlighter-rouge">-PU</code> - Use UDP packets for host discovery. Unlike other types of host discovery scans, UDP scans only generate a reply (ICMP Port Unreachable) if the target port is <em>closed</em>.</li>
 </ul>
 <p>The <code class="language-plaintext highlighter-rouge">masscan</code> utility is basically a <em>very</em> aggressive TCP/UDP scanner. Probably too noisy to use in practice.</p>
-<h3 id="using-reverse-dns-lookup">Using Reverse-DNS Lookup</h3>
+<h2 id="using-reverse-dns-lookup">Using Reverse-DNS Lookup</h2>
 <ul>
-<li><code class="language-plaintext highlighter-rouge">-R</code> —- Perform reverse DNS resolution even for offline hosts.</li>
-<li><code class="language-plaintext highlighter-rouge">--dns-servers</code> — Specify DNS server(s) to use for hostname resolution and reverse lookups.</li>
+<li><code class="language-plaintext highlighter-rouge">-R</code> – Perform reverse DNS resolution even for offline hosts.</li>
+<li><code class="language-plaintext highlighter-rouge">--dns-servers</code> - Specify DNS server(s) to use for hostname resolution and reverse lookups.</li>
 </ul>

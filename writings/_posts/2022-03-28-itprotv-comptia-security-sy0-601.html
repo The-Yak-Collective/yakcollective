@@ -1,6 +1,6 @@
 ---
 title: 'ITPro.TV: CompTIA Security+ (SY0-601)'
-date: 2022-03-28 05:00:00.000000000 Z
+date: 2022-03-28 12:00:00.000000000 Z
 layout: post-external
 original_link: https://cardboard-iguana.com/log/2022-03-28-itprotv-comptia-security-plus.html
 author: 100007
@@ -9,9 +9,9 @@ author: 100007
 <h1 id="itprotv-comptia-security-sy0-601">ITPro.TV: CompTIA Security+ (SY0-601)</h1>
 <p><strong>author:</strong> Nathan Acks<br />
 <strong>date:</strong> 2022-03-28</p>
-<h2 id="comptia-security-exam-cram">CompTIA Security+ Exam Cram</h2>
+<h1 id="comptia-security-exam-cram">CompTIA Security+ Exam Cram</h1>
 <p>Today I’ll be reading chapter 19 of the Security+ Exam Cram, “Secure Network Design”.</p>
-<h3 id="routers">Routers</h3>
+<h1 id="routers">Routers</h1>
 <p>Layer 3 device. Key protocols for manipulating routing tables:</p>
 <ul>
 <li>RIP (Routing Information Protocol)</li>
@@ -27,16 +27,16 @@ author: 100007
 <ul>
 <li><a href="https://cardboard-iguana.com/notes/osi-model.html">OSI Model</a></li>
 </ul>
-<h3 id="network-address-translation-nat">Network Address Translation (NAT)</h3>
+<h1 id="network-address-translation-nat">Network Address Translation (NAT)</h1>
 <p>I’ve always though of NAT’ing as a router/firewall function, but apparently independent “network address translation gateways” are a thing.</p>
 <p>Also, it seems that NAT breaks not only IPSec, but also DNSSEC. No TCP segment reassembly.</p>
-<h3 id="switches">Switches</h3>
+<h1 id="switches">Switches</h1>
 <p>Layer 2 devices; switching decisions are determined by MAC address rather than IP address (as with routers). That said, some “layer 3 switches” (basically fast, stripped-down routers) exist.</p>
 <p>An interesting way to think about VLANs here: As separate broadcast domains.</p>
 <ul>
 <li><a href="https://cardboard-iguana.com/notes/osi-model.html">OSI Model</a></li>
 </ul>
-<h3 id="port-security">Port Security</h3>
+<h1 id="port-security">Port Security</h1>
 <p>“Port security” isn’t about IP ports, but rather about switch ports. Basically per-port MAC address filtering. There are three modes that a port can enter when port security is violated:</p>
 <ul>
 <li>In “protected mode”, the port still functions but frames from non-allowed MAC addresses are silently dropped.</li>
@@ -55,12 +55,12 @@ author: 100007
 <li><a href="https://www.geeksforgeeks.org/what-is-bpdu-guard-and-how-to-configure-bpdu-guard/">What is BPDU Guard and How to Configure BPDU Guard?</a></li>
 <li><a href="https://www.geeksforgeeks.org/dhcp-snooping/">DHCP Snooping</a></li>
 </ul>
-<h3 id="virtual-local-area-network-vlan">Virtual Local Area Network (VLAN)</h3>
+<h1 id="virtual-local-area-network-vlan">Virtual Local Area Network (VLAN)</h1>
 <p>Inter-VLAN routing is handled by layer 3 devices (both routers and “layer 3 switches”).</p>
 <p>Each VLAN should be associated with a separate subnet, and subnets should be contiguous to improve memory efficiency.</p>
 <p>There’s actually a “VLAN trunking protocol”, which I’m going to guess is what works over trunk ports.</p>
 <p>Remember that VLANs are logical, so an attacker can forge packets for a VLAN they have access to.</p>
-<h3 id="bridges">Bridges</h3>
+<h1 id="bridges">Bridges</h1>
 <p>Bridges forward packets from one network to another. Types:</p>
 <ul>
 <li>Transparent Basic (basically just a repeater)</li>
@@ -70,17 +70,17 @@ author: 100007
 </ul>
 <p>Spanning Tree Protocol (STP) is the main method for detecting loops and coordinating the activity of layer 2 devices. The key idea here is that switch ports continually transmit BPDUs; by default when a port stops receiving BPDUs, it enters into a forwarding state. However, this can create a loop if BPDUs were disrupted for some reason, so “loop guard” moves ports into a “loop inconsistent” blocked state instead.</p>
 <p>Loop guard is the primary method used to protect STP.</p>
-<h3 id="security-devices-and-boundaries">Security Devices and Boundaries</h3>
+<h1 id="security-devices-and-boundaries">Security Devices and Boundaries</h1>
 <p>Stateless firewalls permit or deny packets based solely on their ACLs.</p>
 <p>Stateful firewalls watch entire connections and make decisions based on the connection state.</p>
 <p>For example, a stateless firewall might just forbid all inbound traffic except on certain ports. A stateful firewall, by contrast, might forbid all inbound traffic unless that traffic was initiated by a machine inside of its perimeter.</p>
 <p>Most firewalls stop processing packets on the first rule match, which means that more narrowly scoped rules should be placed before more broadly scoped ones.</p>
 <p>Most firewalls operate on an implicit deny model, for obvious reasons.</p>
-<p>Networks can — and should — be segmented and restricted across multiple OSI layers, and these restrictions (including internal restrictions) should be applies internally in addition to at the perimeter.</p>
+<p>Networks can - and should - be segmented and restricted across multiple OSI layers, and these restrictions (including internal restrictions) should be applies internally in addition to at the perimeter.</p>
 <ul>
 <li><a href="https://cardboard-iguana.com/notes/osi-model.html">OSI Model</a></li>
 </ul>
-<h3 id="screened-subnet">Screened Subnet</h3>
+<h1 id="screened-subnet">Screened Subnet</h1>
 <p>Apparently “screened subnets” is what we’re calling DMZs these days. Systems in a DMZ are accessible by both internal and external users, but only in a controlled fashion for both.</p>
 <p>“East/west” traffic within a DMZ refers to traffic <em>between</em> DMZ systems, while “north/south” traffic refers to traffic between a DMZ system and a system internal or external to the DMZ.</p>
 <p>The entire idea behind a “screened subnet” / DMZ is to make sure that access to servers on that subnet is tightly controlled (though the servers should still obviously be hardened, as they <em>are</em> more exposed).</p>
@@ -89,13 +89,13 @@ author: 100007
 <p>Typically there is a firewall on either side of screened subnet, rather than a single firewall handling all connections. Watch out for services that offer connections in <em>both</em> directions across a firewall, and thus can be used to breach its protections (Exam Cram indicates that network storage devices are a common offender here).</p>
 <p>Exam Cram recommends the use of <em>both</em> built-in network-level encryption <em>and</em> encrypted tunnels when using wireless networks.</p>
 <p>Jump server = Bastion server</p>
-<h3 id="web-application-firewalls">Web Application Firewalls</h3>
-<p>WAFs can be considered to be a special case of “next generation firewalls”, which are simply application-aware firewalls. Generally next-gen firewalls incorporate some kind of IDS and/or IPS. They generally straddle OSI layers 3 – 7.</p>
+<h1 id="web-application-firewalls">Web Application Firewalls</h1>
+<p>WAFs can be considered to be a special case of “next generation firewalls”, which are simply application-aware firewalls. Generally next-gen firewalls incorporate some kind of IDS and/or IPS. They generally straddle OSI layers 3 - 7.</p>
 <p>Certificates will need to be deployed to client systems if packet inspection of encrypted connections is desired (basically, having the next-gen firewall MitM all network traffic).</p>
 <ul>
 <li><a href="https://cardboard-iguana.com/notes/osi-model.html">OSI Model</a></li>
 </ul>
-<h3 id="proxies">Proxies</h3>
+<h1 id="proxies">Proxies</h1>
 <p>A proxy server is just a go-between from a network to the internet. Uses:</p>
 <ul>
 <li>Caching</li>
@@ -107,16 +107,16 @@ author: 100007
 <p>“Universal application-level gateways” are application proxies supporting multiple protocols. They often can handle IPv4-toIPv6 conversion as well.</p>
 <p>Forward proxies control data originating on internal networks destined for the internet, and are typically used for security, content filtering, or privacy purposes. Reverse proxies control data originating from the internet destined for internal systems, and are typically used for load balancing and to enforce content inspection.</p>
 <p>Sometimes proxies are placed in parallel with routers for load balancing purposes (HTTP/FTP through the proxy, all other traffic through the router).</p>
-<h3 id="unified-threat-management-utm">Unified Threat Management (UTM)</h3>
+<h1 id="unified-threat-management-utm">Unified Threat Management (UTM)</h1>
 <p>UTMs are basically next-gen firewalls with filters specifically geared towards spam, viruses, and malware. DLP and content filtering may also be provided by a UTM solution.</p>
-<h3 id="vpn-concentrators">VPN Concentrators</h3>
+<h1 id="vpn-concentrators">VPN Concentrators</h1>
 <p>Apparently, “VPN concentrator” is just a fancy way of saying “VPN server tuned to handle a large number of simultaneous tunnels”.</p>
 <p>Two VPN tunneling modes:</p>
 <ul>
 <li>Full: Everything is routed over the VPN.</li>
 <li>Split: Only some traffic is routed over the VPN.</li>
 </ul>
-<h3 id="nids-and-nips">NIDS and NIPS</h3>
+<h1 id="nids-and-nips">NIDS and NIPS</h1>
 <p>NIDS = Network Intrusion Detection System</p>
 <p>In general, IDS operation is either “knowledge based” (pre-programed IoCs) or “behavior based”. Network- and host-based IDSes should be used together.</p>
 <p>NIDS “sensors” are generally either network taps or log aggregators. IDS systems are by definition passive devices (a.k.a., “reactive” or “out-of-band”).</p>
@@ -126,11 +126,11 @@ author: 100007
 <ul>
 <li><a href="https://cardboard-iguana.com/notes/osi-model.html">OSI Model</a></li>
 </ul>
-<h3 id="detection-methods">Detection Methods</h3>
+<h1 id="detection-methods">Detection Methods</h1>
 <p>Signature/Knowledge-based detection look for pre-defined patterns of network behavior.</p>
 <p>Behavior-based detections require a profile of “normal” activity to work, and then looks for broad deviations that may indicate compromise. Anomaly-based detections look for “point” anomalies that might indicate an active <em>current</em> attack, but require much more information to do this effectively. (Typically, behavior-based detections are looking at basic protocol usage, data volume, and network usage patterns, while anomaly-based detections are examining actual protocol content). Both methods have the disadvantage of implicitly assuming that there is some period when the network is <em>not</em> compromised.</p>
 <p>Heuristic-based detections extend anomaly-based detection methods to all network traffic. Heuristic methods also work to generate their own rule sets, whereas anomaly-based methods are looking for any deviation from baseline.</p>
-<h3 id="network-access-control-nac">Network Access Control (NAC)</h3>
+<h1 id="network-access-control-nac">Network Access Control (NAC)</h1>
 <p>The idea behind a NAC is to profile computers joining a network and then provide (or deny) access to resources based on these results. Parts of a NAC:</p>
 <ul>
 <li>Access Requestor: The client requesting access to the network.</li>

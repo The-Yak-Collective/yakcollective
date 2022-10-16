@@ -1,6 +1,6 @@
 ---
 title: 'TryHackMe: Jr. Penetration Tester'
-date: 2022-04-14 05:00:00.000000000 Z
+date: 2022-04-14 12:00:00.000000000 Z
 layout: post-external
 original_link: https://cardboard-iguana.com/log/2022-04-14-tryhackme-jr-penetration-tester.html
 author: 100007
@@ -9,9 +9,9 @@ author: 100007
 <h1 id="tryhackme-jr-penetration-tester">TryHackMe: Jr. Penetration Tester</h1>
 <p><strong>author:</strong> Nathan Acks<br />
 <strong>date:</strong> 2022-04-14</p>
-<h2 id="exploitation-with-metasploit">Exploitation with Metasploit</h2>
-<h3 id="scanning">Scanning</h3>
-<p>Use <code class="language-plaintext highlighter-rouge">search portscan</code> to display built-in Metasploit port scanners. Note that <code class="language-plaintext highlighter-rouge">msfconsole</code> needs to be run as root for many scans to work — just like Nmap. That said, in my experience the fancier TCP scans (for example, SYN) don’t work over a VPN… So maybe best to stick with Nmap.</p>
+<h1 id="exploitation-with-metasploit">Exploitation with Metasploit</h1>
+<h2 id="scanning">Scanning</h2>
+<p>Use <code class="language-plaintext highlighter-rouge">search portscan</code> to display built-in Metasploit port scanners. Note that <code class="language-plaintext highlighter-rouge">msfconsole</code> needs to be run as root for many scans to work - just like Nmap. That said, in my experience the fancier TCP scans (for example, SYN) don’t work over a VPN… So maybe best to stick with Nmap.</p>
 <p>Speaking of which, Nmap can also be called internally (like other shell commands).</p>
 <p>The <code class="language-plaintext highlighter-rouge">auxiliary/scanner/discovery/udp_sweep</code> module will probe for common UDP services.</p>
 <p>Metasploit has a variety of Samba/CIFS scanners too; use <code class="language-plaintext highlighter-rouge">search scanner/smb</code> to list them.</p>
@@ -25,14 +25,13 @@ author: 100007
 <li><a href="https://cardboard-iguana.com/notes/samba.html">SAMBA (a.k.a. CIFS) Protocol</a></li>
 <li><a href="https://www.infosecmatter.com/metasploit-module-library/?mm=auxiliary/scanner/portscan/syn">TCP SYN Port Scanner - Metasploit</a></li>
 </ul>
-<h3 id="the-metasploit-database">The Metasploit Database</h3>
+<h2 id="the-metasploit-database">The Metasploit Database</h2>
 <p>Get basic database status using <code class="language-plaintext highlighter-rouge">db_status</code>.</p>
 <p>Create and delete workspaces (engagements) with <code class="language-plaintext highlighter-rouge">workspace</code>; use <code class="language-plaintext highlighter-rouge">-a</code> to add and <code class="language-plaintext highlighter-rouge">-d</code> to delete. Switch between workspaces using <code class="language-plaintext highlighter-rouge">workspace $NAME</code>.</p>
 <p>Use <code class="language-plaintext highlighter-rouge">db_nmap</code> to run Nmap (all of the regular options work) and dump the results into the Metasploit database.</p>
 <p>The <code class="language-plaintext highlighter-rouge">hosts</code> and <code class="language-plaintext highlighter-rouge">services</code> commands can then be used to display the, well, hosts and services logged by Metasploit during an engagement. Both commands support an <code class="language-plaintext highlighter-rouge">-S</code> search parameter, the results of which can then be added to <code class="language-plaintext highlighter-rouge">RHOSTS</code> using the <code class="language-plaintext highlighter-rouge">-R</code> parameter.</p>
-<h3 id="exploitation">Exploitation</h3>
+<h2 id="exploitation">Exploitation</h2>
 <p>Show the payloads available for a particular exploit using <code class="language-plaintext highlighter-rouge">show payloads</code>. Use <code class="language-plaintext highlighter-rouge">set payload</code> to set the payload for the exploit; re-run <code class="language-plaintext highlighter-rouge">show options</code> after this to check if the payload has added any additional options that will need to be set before exploitation.</p>
-<p>Use <code class="language-plaintext highlighter-rouge">sessions</code> to, well, manage your sessions (most useful when you’ve backgrounded a payload and/or are working with multiple targets).</p>
 <p>To dump NTLM hashes from Meterpreter, use the <code class="language-plaintext highlighter-rouge">hashdump</code> command. Normally only the first four fields are relevant:</p>
 <ul>
 <li>Username</li>
@@ -40,12 +39,12 @@ author: 100007
 <li>The user’s LM password hash</li>
 <li>The user’s NTLM password hash</li>
 </ul>
-<p>References:</p>
+<p>Use <code class="language-plaintext highlighter-rouge">sessions</code> to, well, manage your sessions (most useful when you’ve backgrounded a payload and/or are working with multiple targets).</p>
 <ul>
 <li><a href="https://www.utc.edu/sites/default/files/2021-04/4660-lab6.pdf">Dumping Windows Password Hashes Using Metasploit</a></li>
 <li><a href="https://cardboard-iguana.com/notes/windows-password-hashes.html">Windows Password Hashes</a></li>
 </ul>
-<h3 id="msfvenom">Msfvenom</h3>
+<h2 id="msfvenom">Msfvenom</h2>
 <p>Msfvenom is a tool to create custom versions of Metasploit payloads, encoded into a variety of different binary formats and scripts.</p>
 <p>Use <code class="language-plaintext highlighter-rouge">--list formats</code> to see available encoding formats.</p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 32-bit Linux ELF Meterpreter payload</span>

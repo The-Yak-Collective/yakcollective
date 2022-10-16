@@ -1,0 +1,34 @@
+---
+title: AWS Deep Dive
+date: 2022-10-08 12:00:00.000000000 Z
+layout: post-external
+original_link: https://cardboard-iguana.com/log/2022-10-08-aws-deep-dive.html
+author: 100007
+---
+
+<h1 id="aws-deep-dive">AWS Deep Dive</h1>
+<p><strong>author:</strong> Nathan Acks<br />
+<strong>date:</strong> 2022-10-08</p>
+<h1 id="amazon-api-gateway">Amazon API Gateway</h1>
+<p>Continued notes about the Amazon API Gateway.</p>
+<h2 id="working-with-rest-apis">Working with REST APIs</h2>
+<ul>
+<li><a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-rest-api.html">Amazon API Gateway: Working with REST APIs</a></li>
+</ul>
+<h3 id="controlling-and-managing-access-to-a-rest-api-in-api-gateway-continued">Controlling and Managing Access to a REST API in API Gateway (Continued…)</h3>
+<p>API Gateway policies are just another kind of resource policy. Which means that they look like S3 policies, which in turn just look like plain old IAM policies. As you would expect, API Gateway permissions can also be specified directly for IAM users.</p>
+<p>Lambda functions used for authorization take the caller’s identity (which can be defined using bearer tokens or some combination of headers + query parameters) and are expected to return a principle name (which can be generic) + IAM policy. This IAM policy is then combined with the existing API Gateway resource policy for evaluation (explicit denials in the API Gateway policy are handled <em>before</em> the Lambda authorization function is called, however). Policy evaluation results can be cached for up to 1 hour by the API Gateway in order to minimize calls to the Lambda authorizer, and the API Gateway can also do light pre-validation (checking token headers against a pre-defined regex, or verifying that all required parameters are present). Note that authorization requests that are denied by the API Gateway <em>before</em> being handed off to the authorizing Lambda function are <em>not</em> logged! Lambda authorizers can hand off authorization to external systems/entities.</p>
+<p>When IAM is used for authorization directly, the associated policy is also combined with the API Gateway resource policy before evaluation, but IAM authentication happens <em>first</em> (before <em>any</em> policy is evaluated).</p>
+<p>Cognito is handled similarly to IAM, but appears to be even more strict, as an <em>explicit</em> allow needs to be returned by Cognito <em>and</em> the API resource policy (if present).</p>
+<p>Policies can also be attached to VPC endpoints to provide an additional level of protection for private APIs.</p>
+<p>In all of these cases, authorization can be limited to only some APIs or users, allowing for fine-grained API access.</p>
+<p>APIs using <code class="language-plaintext highlighter-rouge">AWS_IAM</code> authentication <em>must</em> use <code class="language-plaintext highlighter-rouge">AWS</code> principals in their resource policies, and vice versa. All other authorization types must use the <code class="language-plaintext highlighter-rouge">*</code> principal.</p>
+<p>API Gateway policy actions are limited to execute-api:Invoke and execute-api:InvalidateCache, both of which do what they sound like. Access to specific API paths and methods can be controlled using their associated resource ARNs.</p>
+<p>API Gateway resource ARNs <em>can</em> be specified down to the deployment stage, method, and resource - <code class="language-plaintext highlighter-rouge">arn:aws:execute-api:&#x007b;region&#x007d;:&#x007b;account&#x007d;:&#x007b;api-id&#x007d;/&#x007b;stage-name&#x007d;/&#x007b;http-verb&#x007d;/&#x007b;api-path&#x007d;</code> (<code class="language-plaintext highlighter-rouge">&#x007b;api-id&#x007d;</code> here is the ID of the overall API Gateway project, <em>not</em> the ID for a particular request method). The <code class="language-plaintext highlighter-rouge">*</code> wildcard can be used on any part of this ARN (except the API project ID?). Resource ARNs are limited to 1600 bytes or 512 characters, whichever comes first.</p>
+<p>Note that API behavior does <em>not</em> immediately change if the associated resource policy is updated - it’s necessary to redeploy the API first.</p>
+<p>For the API Gateway to be able to call a backend AWS service, it needs to both be given the AssumeRole privilege (to allow it to call the service on behalf of the user calling it) and explicit access to the service it is integrating with. (Presumably only the second of these is required for APIs that aren’t restricted to AWS authentication.)</p>
+<p>(To be continued…)</p>
+<ul>
+<li><a href="https://cardboard-iguana.com/log/2022-10-04-aws-deep-dive.html">2022-10-04 - AWS Deep Dive (Controlling and Managing Access to a REST API in API Gateway, Part 1)</a></li>
+<li><a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-control-access-to-api.html">Controlling and managing access to a REST API in API Gateway</a></li>
+</ul>

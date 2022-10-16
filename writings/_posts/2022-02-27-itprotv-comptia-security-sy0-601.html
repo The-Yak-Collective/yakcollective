@@ -1,6 +1,6 @@
 ---
 title: 'ITPro.TV: CompTIA Security+ (SY0-601)'
-date: 2022-02-27 06:00:00.000000000 Z
+date: 2022-02-27 12:00:00.000000000 Z
 layout: post-external
 original_link: https://cardboard-iguana.com/log/2022-02-27-itprotv-comptia-security-plus.html
 author: 100007
@@ -9,31 +9,31 @@ author: 100007
 <h1 id="itprotv-comptia-security-sy0-601">ITPro.TV: CompTIA Security+ (SY0-601)</h1>
 <p><strong>author:</strong> Nathan Acks<br />
 <strong>date:</strong> 2022-02-27</p>
-<h2 id="comptia-security-exam-cram">CompTIA Security+ Exam Cram</h2>
-<h3 id="introduction-to-application-attacks">Introduction to Application Attacks</h3>
+<h1 id="comptia-security-exam-cram">CompTIA Security+ Exam Cram</h1>
+<h2 id="introduction-to-application-attacks">Introduction to Application Attacks</h2>
 <p>It looks like this section will cover attacks on both local and web-based applications.</p>
-<h3 id="race-conditions">Race Conditions</h3>
+<h2 id="race-conditions">Race Conditions</h2>
 <p>Example: Time-of-check to time-of-use (TOCTOU).</p>
 <p>Null pointer errors (when an application dereferences a pointer that it later expects to be valid) <em>can</em> be caused by race conditions. Race conditions can also by exploited in some cases for privilege escalation (for example, CVE 2021-3560).</p>
 <ul>
 <li><a href="https://cardboard-iguana.com/notes/exploiting-polkit.html">Exploiting Polkit</a></li>
 </ul>
-<h3 id="improper-software-handling">Improper Software Handling</h3>
+<h2 id="improper-software-handling">Improper Software Handling</h2>
 <p>This section lumps together oversights in input and error handling. These (sometimes in combination) are a <em>big</em> part of what I’ve studied so far w.r.t. penetration testing (SQL injection comes to mind here as an immediate example that can have aspects of both improper input <em>and</em> error handling).</p>
 <ul>
 <li><a href="https://cardboard-iguana.com/notes/sql-injection.html">SQL Injection</a></li>
 <li><a href="https://cardboard-iguana.com/notes/tryhackme-jurassic-park.html">TryHackMe: Jurassic Park</a></li>
 </ul>
-<h3 id="resource-exhaustion">Resource Exhaustion</h3>
+<h2 id="resource-exhaustion">Resource Exhaustion</h2>
 <p>Mostly about denial of service.</p>
 <p>Example: Memory leaks.</p>
-<h3 id="overflows">Overflows</h3>
+<h2 id="overflows">Overflows</h2>
 <p>Buffer overflows: When an application attempts to write more data into a space (normally a variable in memory) than has been allocated to it. For example, CVE 2021-4034.</p>
-<p>Integer overflow: Writing a larger integer into a variable than there are allocated (binary) digits. The ultimate impact of an integer overflow depends on whether the variable ultimately stores the first/high or last/low set of “good” bits. (I’ve almost always seen overflows result in the variable taking the low set of bits — typified by roll-overs to zero — but apparently in some cases the high bits are stored instead.)</p>
+<p>Integer overflow: Writing a larger integer into a variable than there are allocated (binary) digits. The ultimate impact of an integer overflow depends on whether the variable ultimately stores the first/high or last/low set of “good” bits. (I’ve almost always seen overflows result in the variable taking the low set of bits - typified by roll-overs to zero - but apparently in some cases the high bits are stored instead.)</p>
 <ul>
 <li><a href="https://cardboard-iguana.com/notes/exploiting-polkit.html">Exploiting Polkit</a></li>
 </ul>
-<h3 id="code-injections">Code Injections</h3>
+<h2 id="code-injections">Code Injections</h2>
 <p>RCE via buffer overflow typically results in code that’s executed <em>outside</em> of the context of the target application. Code injection, by contrast, is about running code <em>within</em> the context of the target application.</p>
 <p>Examples:</p>
 <ul>
@@ -47,37 +47,37 @@ author: 100007
 <p>The through-line for these attacks on the web is lack of proper input validation. Locally, it’s about manipulating otherwise legitimate features (dynamic library loading) once a toehold has already been established.</p>
 <p>Code signing is a guard against malicious dynamic libraries. As is compiling everything statically (which is not always possible, and has its own drawbacks).</p>
 <p>Cram Exam implies that the Security+ exam will generally ask about code injection attacks in the context of a particular system, which should clue you in to which kind of attack is being used.</p>
-<h3 id="driver-manipulation">Driver Manipulation</h3>
+<h2 id="driver-manipulation">Driver Manipulation</h2>
 <p>Examples:</p>
 <ul>
-<li>Shimming involves inserting an intermediate “driver“ between the kernel and the actual driver. The shim can then intercept, manipulate, and redirect information flowing from kernel-to-driver or drive-to-kernel.</li>
+<li>Shimming involves inserting an intermediate “driver” between the kernel and the actual driver. The shim can then intercept, manipulate, and redirect information flowing from kernel-to-driver or drive-to-kernel.</li>
 <li>Refactoring is manipulating the internals of the driver itself to change its behavior.</li>
 </ul>
 <p>As with dynamic library attacks, code signing is really the only way to guard against these attack. (Well, maybe also monolithic kernels, but then you can’t support devices you didn’t plan for from the get-go!)</p>
-<h3 id="request-forgeries">Request Forgeries</h3>
+<h2 id="request-forgeries">Request Forgeries</h2>
 <p>Cross-site request forgeries (CSRF/XSRF) is about using a malicious URL to cause an action to be taken on behalf of legitimately signed-in users. This URL might point to the target site directly, or might reflect through another (potentially attacker-controlled) site, exploiting improperly scoped authentication cookies.</p>
 <p>Server-side request forgeries (SSRF) are about using malicious URLs to trick a server into disclosing data or executing commands outside of its normal context. For example, this could be about tricking a web server to make a request to another server behind a firewall that the attacker doesn’t have direct access to. Local file inclusion (LFI) attacks are a species of SSRF.</p>
 <p>While CSRF is about exploiting the trust between a server and one of its users, SSRF is about exploiting the trust relationship <em>between</em> (or <em>within</em>) servers.</p>
 <ul>
 <li><a href="https://cardboard-iguana.com/notes/local-file-inclusion-attacks.html">Local File Inclusion Attacks</a></li>
 </ul>
-<h3 id="directory-traversal">Directory Traversal</h3>
+<h2 id="directory-traversal">Directory Traversal</h2>
 <p>Local file inclusion (and friends), again.</p>
 <p>Note that Exam Cram seems to imply that the Security+ test will make a distinction between the ability to access the server’s filesystem in unexpected ways (directory traversal) and the ability to access restricted portions of an application (privilege escalation).</p>
 <ul>
 <li><a href="https://cardboard-iguana.com/notes/local-file-inclusion-attacks.html">Local File Inclusion Attacks</a></li>
 </ul>
-<h3 id="replay-attack">Replay Attack</h3>
+<h2 id="replay-attack">Replay Attack</h2>
 <p>This is about <em>replaying</em> previous requests, possibly with altered data. Think Burp Suite’s “repeater” module.</p>
 <p>Session replay attacks are a variation of this where a session cookie is intercepted and presented again to a web server in order to gain the access of the authenticated user.</p>
-<p>Replay attacks can be guarded against by using nonces, timestamps (though I’d personally be wary of this — seems like asking for a race condition), or rapidly rotating identifiers (such as a session cookie that is replaced with every request).</p>
+<p>Replay attacks can be guarded against by using nonces, timestamps (though I’d personally be wary of this - seems like asking for a race condition), or rapidly rotating identifiers (such as a session cookie that is replaced with every request).</p>
 <p>Apparently, some web apps accept session ID GET parameters <em>before</em> a user is even logged in. This means that if a target is induced to click on a link containing such a parameter, then the attacker will be able to use the same link (with the attacker-supplied session parameter) to log in as if they were the user! ☠️</p>
 <ul>
 <li><a href="https://cardboard-iguana.com/notes/burp-suite.html">Burp Suite</a></li>
 </ul>
-<h3 id="secure-sockets-layer-ssl-stripping">Secure Sockets Layer (SSL) Stripping</h3>
+<h2 id="secure-sockets-layer-ssl-stripping">Secure Sockets Layer (SSL) Stripping</h2>
 <p>A species of man-in-the-middle attack where the attacker terminates the SSL connection on a server they control and then presents an unencrypted connection to the target user. Less common these days, what with HSTS and browsers making initial connections over HTTPS instead of HTTP.</p>
-<h3 id="application-programming-interface-api-attacks">Application Programming Interface (API) Attacks</h3>
+<h2 id="application-programming-interface-api-attacks">Application Programming Interface (API) Attacks</h2>
 <ul>
 <li>Broken object-level authorization (ACLs are often a mess, part 1)</li>
 <li>Broken user authentication</li>
@@ -90,27 +90,27 @@ author: 100007
 <li>Improper asset management (a.k.a. “lack of documentation leads to exposed debugging endpoints”)</li>
 <li>Insufficient logging and monitoring</li>
 </ul>
-<p>There isn’t really anything new here — this is all the same set of vulnerabilities we’ve always been working with, just over a much larger playing field (and with laxer development standards).</p>
+<p>There isn’t really anything new here - this is all the same set of vulnerabilities we’ve always been working with, just over a much larger playing field (and with laxer development standards).</p>
 <ul>
 <li><a href="https://owasp.org/www-project-api-security/">OWASP API Top 10</a></li>
 <li><a href="https://cardboard-iguana.com/notes/sql-injection.html">SQL Injection</a></li>
 </ul>
-<h3 id="pass-the-hash-attack">Pass-the-Hash Attack</h3>
+<h2 id="pass-the-hash-attack">Pass-the-Hash Attack</h2>
 <p>Kerberos! (I’m still floored that Active Directory uses hashes for actual authentication, rather than as a check that valid authentication credentials have been supplied.)</p>
-<p>Of course, other things can use hashes in this way. TL;DR is to just <em>not</em> compute password hashes client-side — these should always be a check that is performed <em>server</em> side!</p>
+<p>Of course, other things can use hashes in this way. TL;DR is to just <em>not</em> compute password hashes client-side - these should always be a check that is performed <em>server</em> side!</p>
 <ul>
 <li><a href="https://cardboard-iguana.com/notes/kerberos.html">Kerberos</a></li>
 <li><a href="https://cardboard-iguana.com/notes/windows-password-hashes.html">Windows Password Hashes</a></li>
 </ul>
-<h3 id="wireless">Wireless</h3>
+<h2 id="wireless">Wireless</h2>
 <p>Initialization Vector (IV) Attack: Gather encrypted packets, and then use statistical techniques to derive the initial encryption key (thus breaking the security of the connection being analyzed). Only works if the network’s cryptography is vulnerable to it (WEP).</p>
 <p>“Bluejacking” involves trying to trick the target into accepting incoming bluetooth messages (does anything actually accept unsolicited bluetooth connections these days?). This can lead to “bluesnarfing”, where the attacker actually tricks the target into <em>pairing</em> with the malicious bluetooth device, allowing for data exfiltration or manipulation.</p>
 <p>NFC is a species of RFID, but RFID is not NFC (much older, more broadly used, protocol). (NFC chips combine both the “reader” and “tag” functionality of RFIDs.) RFIDs come in “active” and “passive” varieties, distinguished by whether they contain their own power source (or are powered by the reader).</p>
-<h3 id="on-path-attack">On-Path Attack</h3>
+<h2 id="on-path-attack">On-Path Attack</h2>
 <p>A.k.a. the good old man-in-the-middle (MITM) attack. Best prevented with encryption, tight session and device management, and strict (physical) access controls.</p>
 <p>Proxies are legitimate man-in-the-middle boxes.</p>
 <p>A more common variation is “man-in-the-browser” (MITB), which involves compromising the target’s browser to act as the attacker’s proxy. Typically MITB attacks are delivered via trojans.</p>
-<h3 id="layer-2-attacks">Layer 2 Attacks</h3>
+<h2 id="layer-2-attacks">Layer 2 Attacks</h2>
 <p>As in, attacks that operate on the link layer. Examples:</p>
 <ul>
 <li>MAC address spoofing</li>
@@ -123,14 +123,14 @@ author: 100007
 <li><a href="https://cardboard-iguana.com/notes/osi-model.html">OSI Model</a></li>
 <li><a href="https://cardboard-iguana.com/notes/arp.html">ARP Protocol</a></li>
 </ul>
-<h3 id="domain-name-system-dns-attacks">Domain Name System (DNS) Attacks</h3>
+<h2 id="domain-name-system-dns-attacks">Domain Name System (DNS) Attacks</h2>
 <p>A URL Redirection Attack involves an attacker using legitimate (but poorly locked-down) redirect functionality to redirect a user from a (seemingly) legitimate URL to an attacker-controller URL. Basically another species of improper input handling.</p>
 <p>I found the explanation of DNS cache poisoning in Exam Cram somewhat confusing. Cloudflare’s is much clearer, and highlights that the underlying vulnerability is the lack of a full handshake with UDP packets. This means that all the attacker needs to do is respond to a DNS lookup from a recursive server using a forged reply <em>before</em> the legitimate authoritative server can respond. So this is both a species of MITM attack, and a race condition of sorts (in the sense that the attacker is racing the actual authoritative server, which I will acknowledge is not normally how “race condition” is used).</p>
 <p>The main defenses against DNS cache poisoning are DNSSEC and limiting which domains local DNS servers will resolve.</p>
 <ul>
 <li><a href="https://www.cloudflare.com/learning/dns/dns-cache-poisoning/">What is DNS cache poisoning?</a></li>
 </ul>
-<h3 id="denial-of-service">Denial of Service</h3>
+<h2 id="denial-of-service">Denial of Service</h2>
 <ul>
 <li>Smurf attacks (the attacker forges an ICMP ping to a network broadcast address but with the source address changed to that of the target)</li>
 <li>Fraggle attacks (same as a smurf attack, but uses UDP packets directed at ports 7 and 19)</li>
@@ -153,27 +153,29 @@ author: 100007
 <li><a href="https://en.wikipedia.org/wiki/LAND">LAND (Wikipedia)</a></li>
 <li><a href="https://cardboard-iguana.com/notes/osi-model.html">OSI Model</a></li>
 </ul>
-<h3 id="malicious-code-and-script-execution">Malicious Code and Script Execution</h3>
+<h2 id="malicious-code-and-script-execution">Malicious Code and Script Execution</h2>
 <p>Macro viruses and file-less malware, again.</p>
-<h2 id="itprotv-comptia-security-sy0-601-1">ITPro.TV: CompTIA Security+ (SY0-601)</h2>
-<h3 id="application-attacks--injections">Application Attacks — Injections</h3>
+<h1 id="itprotv-comptia-security-sy0-601-1">ITPro.TV: CompTIA Security+ (SY0-601)</h1>
+<h2 id="application-attacks---injections">Application Attacks - Injections</h2>
 <p>Injection: Supplying some type of untrusted input.</p>
 <ul>
 <li>SQL injection</li>
 <li>LDAP injection (this is <em>exactly</em> the same idea of SQL injection, but constructing LDAP queries; can sometimes be used against active directory servers)</li>
-<li>XML injection (ITPro.TV has confirmed what I only strongly suspected — this is just another name for an XML External Entity — XEE — Attack)</li>
+<li>XML injection (ITPro.TV has confirmed what I only strongly suspected - this is just another name for an XML External Entity - XEE - Attack)</li>
 <li>DLL injection</li>
 <li>Command injection (this is about <em>literal</em> command injection, so it depends on the application shelling out in some way so that additional commands can be chained to a legitimate command)</li>
 </ul>
 <blockquote>
 <p>Throw it [the target system] input, and see what happens. See if it breaks. And <em>how</em> does it break? That’s what’s important.</p>
-<p>— Dan Lowrie</p>
+<ul>
+<li>Dan Lowrie</li>
+</ul>
 </blockquote>
 <ul>
 <li><a href="https://cardboard-iguana.com/notes/sql-injection.html">SQL Injection</a></li>
 <li><a href="https://cardboard-iguana.com/notes/xml-external-entity-attacks.html">XML External Entity Attacks</a></li>
 </ul>
-<h3 id="application-attacks--system-resources">Application Attacks — System Resources</h3>
+<h2 id="application-attacks---system-resources">Application Attacks - System Resources</h2>
 <p>System resources:</p>
 <ul>
 <li>CPU</li>
@@ -185,14 +187,14 @@ author: 100007
 <ul>
 <li>Memory leak</li>
 <li>Shimming (drivers)</li>
-<li>Refactoring (drivers — a.k.a. binary modification)</li>
+<li>Refactoring (drivers - a.k.a. binary modification)</li>
 <li>Race conditions</li>
-<li>TOC/TOU (“tock-two” — time-of-access to time-of-use; a species of race condition)</li>
+<li>TOC/TOU (“tock-two” - time-of-access to time-of-use; a species of race condition)</li>
 <li>Pointer/Object dereferencing (a pointer or object is dereferenced without being cleared/garbage-collected; use-after-free is a species of this)</li>
 <li>Buffer overflow</li>
 <li>Integer overflow</li>
 </ul>
-<h3 id="application-attacks--xss-and-xsrf">Application Attacks — XSS And XSRF</h3>
+<h2 id="application-attacks---xss-and-xsrf">Application Attacks - XSS And XSRF</h2>
 <p>Types of cross-site scripting (XSS):</p>
 <ul>
 <li>Reflected (uses JavaScript embedded in a malicious URL)</li>
@@ -205,25 +207,25 @@ author: 100007
 <ul>
 <li><a href="https://cardboard-iguana.com/notes/xss-attacks.html">XSS Attacks</a></li>
 </ul>
-<h3 id="application-attacks--replay-attacks">Application Attacks — Replay Attacks</h3>
+<h2 id="application-attacks---replay-attacks">Application Attacks - Replay Attacks</h2>
 <p>Replay Attack: The retransmission (and potential modification) of a transmission of data.</p>
 <p>Pass-the-hash is a specific type of replay attack.</p>
 <p>Sequence numbers, nonces, and timestamps can help guard against replay attacks by making replayed packets easy to recognize. (Note that TCP already includes sequence numbers and timestamps, though only IPSEC seems to actually do things with these.)</p>
 <ul>
 <li><a href="https://cardboard-iguana.com/notes/kerberos.html">Kerberos</a></li>
 </ul>
-<h3 id="network-attacks--dns-attacks">Network Attacks — DNS Attacks</h3>
+<h2 id="network-attacks---dns-attacks">Network Attacks - DNS Attacks</h2>
 <p>Keep in mind that DNS cache poisoning can be applied to a machine’s local DNS cache by malware, in addition to intercepting/spoofing the conversation between the recursive and authoritative DNS servers.</p>
 <p>DNS Hijacking: An attacker manipulates the target’s preferred (local) DNS servers (perhaps via malware) to point to a malicious DNS server rather than a (legitimate) organizational or ISP server.</p>
 <p>Domain hijacking is then about actually compromising the domain record (via the registrar or, more likely, a compromised user account). So, the really bad one.</p>
 <p>Display current Windows DNS settings:</p>
-<div class="language-bat highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">ipconfig</span> <span class="na">/displaydns </span><span class="o">|</span> <span class="nb">more</span>
-</code></pre></div></div>
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">ipconfig</span><span class="w"> </span><span class="nx">/displaydns</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">more</span><span class="w">
+</span></code></pre></div></div>
 <p>(SIDE NOTE: So, it turns out that Windows has a <code class="language-plaintext highlighter-rouge">more</code> command, and you can pipe things to it!)</p>
 <p>Flush local DNS cache on Windows:</p>
-<div class="language-bat highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">ipconfig</span> <span class="na">/flushdns
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">ipconfig</span><span class="w"> </span><span class="nx">/flushdns</span><span class="w">
 </span></code></pre></div></div>
-<h3 id="network-attacks--layer-2-attacks">Network Attacks — Layer 2 Attacks</h3>
+<h2 id="network-attacks---layer-2-attacks">Network Attacks - Layer 2 Attacks</h2>
 <ul>
 <li>ARP poisoning (very similar to DNS cache poisoning, but at the MAC-to-IP translation layer)</li>
 <li>MAC cloning</li>
@@ -243,7 +245,7 @@ author: 100007
 <li><a href="https://cardboard-iguana.com/notes/osi-model.html">OSI Model</a></li>
 <li><a href="https://cardboard-iguana.com/notes/arp.html">ARP Protocol</a></li>
 </ul>
-<h3 id="network-attacks--dos-and-ddos">Network Attacks — DoS And DDoS</h3>
+<h2 id="network-attacks---dos-and-ddos">Network Attacks - DoS And DDoS</h2>
 <p>Physical denial of service attack: Block the heat exchangers in a data center.</p>
 <p>Types of D/DoS attacks:</p>
 <ul>
@@ -252,10 +254,10 @@ author: 100007
 <li>Coordinated: A D/DoS attack involving multiple attackers (not a DDoS using a botnet, but rather a DDoS attack involving multiple <em>individuals</em>).</li>
 </ul>
 <p>Hybrid attacks are also possible (technically an amplified attack is <em>already</em> a hybrid attack).</p>
-<h3 id="network-attacks--mitm-and-mitb">Network Attacks — MiTM And MiTB</h3>
+<h2 id="network-attacks---mitm-and-mitb">Network Attacks - MiTM And MiTB</h2>
 <p>The key to preventing MITM attacks is really just to use encrypted protocols. (The key to preventing MITB attacks is to… well… avoid getting infected.)</p>
 <p>SIDE NOTE: The “Follow” option in Wireshark’s right-click menu displays all of the packets related to a particular connection/session. This is particularly powerful when used against plain text protocols, as it allows the entire conversation to be easily reverse engineered.</p>
-<h3 id="network-attacks--wireless">Network Attacks — Wireless</h3>
+<h2 id="network-attacks---wireless">Network Attacks - Wireless</h2>
 <p>The “initialization vector” (IV) is basically a “salt” (sometimes also called a nonce) that’s added to data on a wireless network to help prevent cryptanalysis. IVs were easy to attack on WEP, but WPA lengthened the IV and added some other controls that make these attacks much less feasible.</p>
 <p>The most common attack against RFID is cloning. Typically used to gain access to secure sites (by cloning badges).</p>
 <p>One NFC attack that wasn’t mentioned in the Exam Cram (which seemed to treat NFC attacks as mostly theoretical) is a <em>relay</em> attack, in which the victim is tricked into starting an NFC transaction with a malicious device that then relays that transaction to a second device which <em>then</em> interacts with a second target. For example, kicking off a payment transaction between the target device and a terminal in another location. (That said, as far as I’m aware this is <em>still</em> all pretty theoretical, and this attack would seem to require some degree of target interaction given the NFC approval flow on most smartphones…)</p>

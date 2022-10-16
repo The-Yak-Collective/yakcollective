@@ -1,6 +1,6 @@
 ---
 title: 'OffSec Live: PEN-200'
-date: 2022-06-24 05:00:00.000000000 Z
+date: 2022-06-24 12:00:00.000000000 Z
 layout: post-external
 original_link: https://cardboard-iguana.com/log/2022-06-24-offsec-live-pen-200.html
 author: 100007
@@ -10,16 +10,15 @@ author: 100007
 <p><strong>author:</strong> Nathan Acks<br />
 <strong>date:</strong> 2022-06-24</p>
 <p>While I don’t think I’m quite ready yet to take a crack at the OSCP, Offensive Security’s free streaming classes (“OffSec Live”) seem like too good of a deal to pass up. I wasn’t able to catch the first because I was traveling, but I’ll be watching (and taking notes on) as many other sections as I can moving forward.</p>
-<p>REFERENCES:</p>
 <ul>
 <li><a href="https://www.offensive-security.com/pwk-oscp/">PEN-200</a></li>
 <li><a href="https://www.offensive-security.com/offsec/offsec-live/">OffSec Live</a></li>
 <li><a href="https://help.offensive-security.com/hc/en-us/articles/6702904332564-OffSec-Live-FAQ">OffSec Live FAQ</a></li>
 <li><a href="https://www.twitch.tv/offsecofficial">OffSecOfficial Twitch Channel</a></li>
 </ul>
-<h2 id="terminal-best-practices">Terminal Best Practices</h2>
+<h1 id="terminal-best-practices">Terminal Best Practices</h1>
 <p>(I hopped on a few minutes late, unfortunately…)</p>
-<h3 id="file-descriptors">File Descriptors</h3>
+<h2 id="file-descriptors">File Descriptors</h2>
 <ul>
 <li>STDIN = 0</li>
 <li>STDOUT = 1</li>
@@ -33,15 +32,15 @@ dmesg <span class="o">&gt;</span> boot.log
 <span class="c">#</span>
 <span class="nb">cat</span> <span class="nt">-n</span> &lt; boot.log
 </code></pre></div></div>
-<p>This, incidentally, makes the “heredoc” syntax a little more explicable — it’s basically “appending” text to the <code class="language-plaintext highlighter-rouge">&lt;</code> redirect.</p>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># “Heredoc”, which I always forget about.</span>
+<p>This, incidentally, makes the “heredoc” syntax a little more explicable - it’s basically “appending” text to the <code class="language-plaintext highlighter-rouge">&lt;</code> redirect.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># "Heredoc", which I always forget about.</span>
 <span class="c">#</span>
 <span class="nb">cat</span> <span class="nt">-n</span> <span class="o">&lt;&lt;</span> <span class="no">EOF</span><span class="sh">
 Line A
 Line B
 Line C
 </span><span class="no">EOF
-</span><span class="c"># Also, redirect “heredoc” into a file.</span>
+</span><span class="c"># Also, redirect "heredoc" into a file.</span>
 <span class="c">#</span>
 <span class="nb">cat</span> <span class="o">&lt;&lt;</span> <span class="no">EOF</span><span class="sh"> &gt; file.txt
 Line A

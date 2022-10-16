@@ -1,6 +1,6 @@
 ---
 title: 'TryHackMe: Complete Beginner (Supplements)'
-date: 2021-12-02 06:00:00.000000000 Z
+date: 2021-12-02 12:00:00.000000000 Z
 layout: post-external
 original_link: https://cardboard-iguana.com/log/2021-12-02-tryhackme-complete-beginner-supplements.html
 author: 100007
@@ -9,32 +9,27 @@ author: 100007
 <h1 id="tryhackme-complete-beginner-supplements">TryHackMe: Complete Beginner (Supplements)</h1>
 <p><strong>author:</strong> Nathan Acks<br />
 <strong>date:</strong> 2021-12-02</p>
-<h2 id="cc-pen-testing">CC: Pen Testing</h2>
-<h3 id="smbmap">smbmap</h3>
-<ul>
-<li><code class="language-plaintext highlighter-rouge">-h</code> — IP address or host to enumerate</li>
-<li><code class="language-plaintext highlighter-rouge">-u</code> — username to use during enumeration (attempts to use the NULL session if not supplied)</li>
-<li><code class="language-plaintext highlighter-rouge">-p</code> — password or NTLM hash to use during enumeration</li>
-<li><code class="language-plaintext highlighter-rouge">-d</code> — domain (or workgroup) to use during enumeration</li>
-<li><code class="language-plaintext highlighter-rouge">-s</code> — share to enumerate (defaults to <code class="language-plaintext highlighter-rouge">C$</code> if not supplied)</li>
-<li><code class="language-plaintext highlighter-rouge">-x</code> — attempt to execute the supplied command (!!!) on the server (if the user you’re connecting as has permission to do so)</li>
-<li><code class="language-plaintext highlighter-rouge">--download</code>/<code class="language-plaintext highlighter-rouge">--upload</code> — download or upload a file to specified share</li>
-</ul>
-<p>References:</p>
+<h1 id="cc-pen-testing">CC: Pen Testing</h1>
+<h2 id="smbmap">smbmap</h2>
+<p><code class="language-plaintext highlighter-rouge">-h</code> - IP address or host to enumerate</p>
+<p><code class="language-plaintext highlighter-rouge">-u</code> - username to use during enumeration (attempts to use the NULL session if not supplied)</p>
+<p><code class="language-plaintext highlighter-rouge">-p</code> - password or NTLM hash to use during enumeration</p>
+<p><code class="language-plaintext highlighter-rouge">-d</code> - domain (or workgroup) to use during enumeration</p>
+<p><code class="language-plaintext highlighter-rouge">-s</code> - share to enumerate (defaults to <code class="language-plaintext highlighter-rouge">C$</code> if not supplied)</p>
+<p><code class="language-plaintext highlighter-rouge">-x</code> - attempt to execute the supplied command (!!!) on the server (if the user you’re connecting as has permission to do so)</p>
+<p><code class="language-plaintext highlighter-rouge">--download</code>/<code class="language-plaintext highlighter-rouge">--upload</code> - download or upload a file to specified share</p>
 <ul>
 <li><a href="https://cardboard-iguana.com/notes/windows-password-hashes.html">Windows Password Hashes</a></li>
 </ul>
-<h3 id="smbclient">smbclient</h3>
-<ul>
-<li><code class="language-plaintext highlighter-rouge">-I</code> — IP address to connect to</li>
-<li><code class="language-plaintext highlighter-rouge">-U</code> — username to use for the connection</li>
-<li><code class="language-plaintext highlighter-rouge">-P</code> — password to use for the connection</li>
-<li><code class="language-plaintext highlighter-rouge">-N</code> — attempt to connect without a password</li>
-<li><code class="language-plaintext highlighter-rouge">-W</code> — domain (or workgroup) to use for the connection</li>
-<li><code class="language-plaintext highlighter-rouge">-c</code> — attempt to execute the supplied command (!!!) on the server (if the user you’re connecting as has permission to do so)</li>
-</ul>
+<h2 id="smbclient">smbclient</h2>
+<p><code class="language-plaintext highlighter-rouge">-I</code> - IP address to connect to</p>
+<p><code class="language-plaintext highlighter-rouge">-U</code> - username to use for the connection</p>
+<p><code class="language-plaintext highlighter-rouge">-P</code> - password to use for the connection</p>
+<p><code class="language-plaintext highlighter-rouge">-N</code> - attempt to connect without a password</p>
+<p><code class="language-plaintext highlighter-rouge">-W</code> - domain (or workgroup) to use for the connection</p>
+<p><code class="language-plaintext highlighter-rouge">-c</code> - attempt to execute the supplied command (!!!) on the server (if the user you’re connecting as has permission to do so)</p>
 <p>Once connected, <code class="language-plaintext highlighter-rouge">smbclient</code> provides an <code class="language-plaintext highlighter-rouge">ftp</code>-like interface.</p>
-<h3 id="final-exam">Final Exam</h3>
+<h2 id="final-exam">Final Exam</h2>
 <p>Not much context. The machine for this test is at 10.10.87.144 and we know that there are two flags in the files <code class="language-plaintext highlighter-rouge">user.txt</code> and <code class="language-plaintext highlighter-rouge">root.txt</code>.</p>
 <p>We begin by running a full nmap scan:</p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>nmap <span class="nt">-vv</span> <span class="nt">-oA</span> cc-pentesting <span class="nt">-A</span> <span class="nt">-sS</span> <span class="nt">--script</span> vuln <span class="se">\</span>

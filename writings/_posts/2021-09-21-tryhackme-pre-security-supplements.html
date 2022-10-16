@@ -1,6 +1,6 @@
 ---
 title: 'TryHackMe: Pre Security (Supplements)'
-date: 2021-09-21 05:00:00.000000000 Z
+date: 2021-09-21 12:00:00.000000000 Z
 layout: post-external
 original_link: https://cardboard-iguana.com/log/2021-09-21-tryhackme-pre-security-supplements.html
 author: 100007
@@ -9,40 +9,12 @@ author: 100007
 <h1 id="tryhackme-pre-security-supplements">TryHackMe: Pre Security (Supplements)</h1>
 <p><strong>author:</strong> Nathan Acks<br />
 <strong>date:</strong> 2021-09-21</p>
-<h2 id="regular-expressions">Regular Expressions</h2>
-<h3 id="metacharacters-and-repetitions">Metacharacters and Repetitions</h3>
-<table>
-<thead>
-<tr>
-<th style="text-align: center">Metacharacter</th>
-<th style="text-align: left">Meaning</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center"><code class="language-plaintext highlighter-rouge">\d</code></td>
-<td style="text-align: left"><code class="language-plaintext highlighter-rouge">[0-9]</code></td>
-</tr>
-<tr>
-<td style="text-align: center"><code class="language-plaintext highlighter-rouge">\D</code></td>
-<td style="text-align: left"><code class="language-plaintext highlighter-rouge">[^0-9]</code></td>
-</tr>
-<tr>
-<td style="text-align: center"><code class="language-plaintext highlighter-rouge">\w</code></td>
-<td style="text-align: left"><code class="language-plaintext highlighter-rouge">[0-9a-zA-Z_]</code></td>
-</tr>
-<tr>
-<td style="text-align: center"><code class="language-plaintext highlighter-rouge">\W</code></td>
-<td style="text-align: left"><code class="language-plaintext highlighter-rouge">[^0-9a-zA-Z_]</code></td>
-</tr>
-<tr>
-<td style="text-align: center"><code class="language-plaintext highlighter-rouge">\s</code></td>
-<td style="text-align: left">Whitespace characters (including line breaks)</td>
-</tr>
-<tr>
-<td style="text-align: center"><code class="language-plaintext highlighter-rouge">\S</code></td>
-<td style="text-align: left">Non-whitespace characters</td>
-</tr>
-</tbody>
-</table>
+<h1 id="regular-expressions">Regular Expressions</h1>
+<h2 id="metacharacters-and-repetitions">Metacharacters and Repetitions</h2>
+<p><code class="language-plaintext highlighter-rouge">\d</code> - <code class="language-plaintext highlighter-rouge">[0-9]</code>
+<code class="language-plaintext highlighter-rouge">\D</code> - <code class="language-plaintext highlighter-rouge">[^0-9]</code>
+<code class="language-plaintext highlighter-rouge">\w</code> - <code class="language-plaintext highlighter-rouge">[0-9a-zA-Z_]</code>
+<code class="language-plaintext highlighter-rouge">\W</code> - <code class="language-plaintext highlighter-rouge">[^0-9a-zA-Z_]</code>
+<code class="language-plaintext highlighter-rouge">\s</code> - Whitespace characters (including line breaks)
+<code class="language-plaintext highlighter-rouge">\S</code> - Non-whitespace characters</p>
 <p>NOTE: Be aware that <code class="language-plaintext highlighter-rouge">\w</code> <em>includes</em> <code class="language-plaintext highlighter-rouge">_</code> (but not <code class="language-plaintext highlighter-rouge">-</code>)!</p>

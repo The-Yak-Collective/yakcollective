@@ -1,6 +1,6 @@
 ---
 title: 'ITPro.TV: CompTIA Security+ (SY0-601) &amp; TryHackMe: Jr. Penetration Tester'
-date: 2022-03-30 05:00:00.000000000 Z
+date: 2022-03-30 12:00:00.000000000 Z
 layout: post-external
 original_link: https://cardboard-iguana.com/log/2022-03-30-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.html
 author: 100007
@@ -9,33 +9,33 @@ author: 100007
 <h1 id="itprotv-comptia-security-sy0-601--tryhackme-jr-penetration-tester">ITPro.TV: CompTIA Security+ (SY0-601) &amp; TryHackMe: Jr. Penetration Tester</h1>
 <p><strong>author:</strong> Nathan Acks<br />
 <strong>date:</strong> 2022-03-30</p>
-<h2 id="comptia-security-exam-cram">CompTIA Security+ Exam Cram</h2>
+<h1 id="comptia-security-exam-cram">CompTIA Security+ Exam Cram</h1>
 <p>Today I’ll be covering Chapter 10 of the Security+ Exam Cram, “Virtualization and Cloud Computing”. I won’t be doing any ITPro.TV lectures, however, as this is the first in another long stretch of readings I want to finish before starting the next sequence there.</p>
-<h3 id="virtualization">Virtualization</h3>
+<h2 id="virtualization">Virtualization</h2>
 <p>Exam Cram refers to virtualization as a solution for rising energy costs and environmental concerns… Neither of which actually seem right? Exam Cram also seems very concerned with VM escapes, which are a real worry, but still… Not exactly easy?</p>
-<h3 id="type-i-hypervisors">Type I Hypervisors</h3>
+<h2 id="type-i-hypervisors">Type I Hypervisors</h2>
 <p>Type I hypervisors are bare-metal, e.g., Xen.</p>
 <ul>
 <li><a href="https://xenproject.org/">Xen Project</a></li>
 </ul>
-<h3 id="type-ii-hypervisors">Type II Hypervisors</h3>
+<h2 id="type-ii-hypervisors">Type II Hypervisors</h2>
 <p>Type II hypervisors are applications that run on a host operating system, e.g., VirtualBox.</p>
 <ul>
 <li><a href="https://www.virtualbox.org/">VirtualBox</a></li>
 </ul>
-<h3 id="type-i-vs-type-ii-hypervisors">Type I vs. Type II Hypervisors</h3>
+<h2 id="type-i-vs-type-ii-hypervisors">Type I vs. Type II Hypervisors</h2>
 <p>Interesting… Hyper-V is actually a Type I hypervisor. I wonder if that means that Windows is actually virtualized in its entirety these days?</p>
-<h3 id="containers-and-microservices">Containers and Microservices</h3>
+<h2 id="containers-and-microservices">Containers and Microservices</h2>
 <p>Containers are basically application + dependency bundles that are partitioned from the host system using kernel-level controls (namespaces under Linux); they thus share the same kernel as the host system, even though they have a different userland.</p>
 <p>Microservices are a software development strategy in which monolithic applications are broken into smaller, special-purpose parts that communicate via a defined API. This allows for component services to be scaled and upgraded in a more dynamic fashion. Microservices are often (but not always) implemented using containers.</p>
 <p>Uh, Exam Cram… I do not think that the JVM is the same idea as a hypervisor…</p>
-<h3 id="virtual-desktop-infrastructure-vdi">Virtual Desktop Infrastructure (VDI)</h3>
+<h2 id="virtual-desktop-infrastructure-vdi">Virtual Desktop Infrastructure (VDI)</h2>
 <p>VDE = Virtual Desktop Environment = The actual virtualized desktop.</p>
 <p>VDI = Virtual Desktop Infrastructure = The software that manages VDEs.</p>
-<h3 id="virtual-machine-vm-sprawl-avoidance">Virtual Machine (VM) Sprawl Avoidance</h3>
+<h2 id="virtual-machine-vm-sprawl-avoidance">Virtual Machine (VM) Sprawl Avoidance</h2>
 <p>VM Sprawl = When an organization has multiple under-utilized VMs. Common after mergers, or when VMs don’t have a proper lifecycle management process.</p>
 <p>Preventing VM sprawl basically means applying the same standards to your VM fleet as you should apply to your physical fleet.</p>
-<h3 id="vm-escape-protection">VM Escape Protection</h3>
+<h2 id="vm-escape-protection">VM Escape Protection</h2>
 <blockquote>
 <p>VM escape does not affect bare-metal platforms; it affects only hosted platforms.</p>
 </blockquote>
@@ -43,21 +43,21 @@ author: 100007
 <ul>
 <li><a href="https://www.qubes-os.org/">Qubes OS</a></li>
 </ul>
-<h3 id="software-defined-networking-sdn">Software-Defined Networking (SDN)</h3>
+<h2 id="software-defined-networking-sdn">Software-Defined Networking (SDN)</h2>
 <p>Both Exam Cram and Wikipedia are entirely unclear about what exactly software-defined networking looks like in practice. Judging from the Wikipedia page on OpenFlow, it looks like this is just a method of centralizing both layer 2 and layer 3 decision making into one component (the “controller”), which then manages the routing/flow tables of component devices automatically. Packets that don’t conform to known rules are forwarded (either in full or in part, depending on implementation) to the controller, which then makes a decision about how to update routing/flow tables to handle the new packet. The goal is to keep packets from being forwarded to the controller.</p>
 <ul>
 <li><a href="https://en.wikipedia.org/wiki/Software-defined_networking">Software-defined networking (Wikipedia)</a></li>
 <li><a href="https://en.wikipedia.org/wiki/OpenFlow">OpenFlow (Wikipedia)</a></li>
 </ul>
-<h3 id="on-premises-vs-off-premises">On-Premises vs. Off-Premises</h3>
-<p>Exam Cram defines “managed service provider” quite broadly — I’ve only heard the term in relation to IT operations out-sourcing, but the definition here broadly includes any service offered under a subscription B2B model. This doesn’t include cloud infrastructure services like AWS and Google Cloud Platform, since the pricing for those is dynamic, but per-seat services like Google Workspace and Microsoft 365 do (I think) qualify.</p>
+<h2 id="on-premises-vs-off-premises">On-Premises vs. Off-Premises</h2>
+<p>Exam Cram defines “managed service provider” quite broadly - I’ve only heard the term in relation to IT operations out-sourcing, but the definition here broadly includes any service offered under a subscription B2B model. This doesn’t include cloud infrastructure services like AWS and Google Cloud Platform, since the pricing for those is dynamic, but per-seat services like Google Workspace and Microsoft 365 do (I think) qualify.</p>
 <p>Infrastructure models (feel free to mix-n-match):</p>
 <ul>
 <li>On-prem</li>
 <li>Hosted (third-party data center)</li>
 <li>Cloud</li>
 </ul>
-<h3 id="service-models">Service Models</h3>
+<h2 id="service-models">Service Models</h2>
 <ul>
 <li>IaaS (e.g., Amazon EC2)</li>
 <li>PaaS (e.g., Google App Engine)</li>
@@ -65,35 +65,35 @@ author: 100007
 <li>SaaS (e.g., Microsoft OneDrive)</li>
 </ul>
 <p>PaaS is distinguished by providing a managed environment on which code can be deployed. This means that many SaaS providers are also PaaS providers: Facebook apps, Google Workspace add-ons, etc.</p>
-<p>All of these are collectively known as XaaS — Anything as a Service. Because that’s the first thing you think of when you see that acronym.</p>
+<p>All of these are collectively known as XaaS - Anything as a Service. Because that’s the first thing you think of when you see that acronym.</p>
 <p>Exam Cram uses the term “fog computing” for strategies that distribute computing resources all the way from central cloud data centers to peripheral IoT devices. This is in contrast to “edge computing”, which favors computing on the consumer side only (think of “fog computing” as the “smear” between “edge computing” and “cloud computing”).</p>
-<h3 id="deployment-models">Deployment Models</h3>
+<h2 id="deployment-models">Deployment Models</h2>
 <ul>
 <li>PRIVATE: Cloud computing infrastructure restricted to a single organization.</li>
 <li>PUBLIC: Cloud computing hosted by a service provider. Data is generally only logically segmented between organizations. Most of what we commonly think of as “cloud computing” follows this model.</li>
 <li>HYBRID: Combined public/private cloud model</li>
 <li>COMMUNITY: Public or hybrid cloud model tuned to a specific industry (healthcare, defense, etc.).</li>
 </ul>
-<h2 id="tryhackme-jr-penetration-tester">TryHackMe: Jr. Penetration Tester</h2>
-<h3 id="web-browser">Web Browser</h3>
+<h1 id="tryhackme-jr-penetration-tester">TryHackMe: Jr. Penetration Tester</h1>
+<h2 id="web-browser">Web Browser</h2>
 <p>Wappalyzer is a potentially useful tool to automate the identification of website/server technologies. There’s a website and various browser extensions.</p>
 <ul>
 <li><a href="https://www.wappalyzer.com/">Wappalyzer</a></li>
 </ul>
-<h3 id="ping">Ping</h3>
+<h2 id="ping">Ping</h2>
 <p>Windows <code class="language-plaintext highlighter-rouge">ping</code> uses the <code class="language-plaintext highlighter-rouge">-n</code> flag to specify the number of packets sent (in contrast to *NIX’s <code class="language-plaintext highlighter-rouge">-c</code>).</p>
 <p>Remember that the Windows firewall blocks ICMP echo/reply requests by default!</p>
 <p>ICMP headers are 8 bytes; the first 4 bytes have a fixed meaning, while the meaning of the last 4 bytes varies depending on the type of request specified in the first 4 bytes.</p>
 <ul>
 <li><a href="https://en.wikipedia.org/wiki/Internet_Control_Message_Protocol">Internet Control Message Protocol (Wikipedia)</a></li>
 </ul>
-<h3 id="traceroute">Traceroute</h3>
+<h2 id="traceroute">Traceroute</h2>
 <p>The IP header’s TTL value is actually the number of network <em>hops</em> that it can transit, not a literal time. Every time a router hands off a packet, the TTL value is decremented by 1. Traceroute manipulates the TTL to purposefully cause “TTL exceeded” error, and uses the resulting ICMP response to map the logical network path being traced.</p>
 <p>When the expected ICMP error is not received, traceroute indicates this with a <code class="language-plaintext highlighter-rouge">*</code>. In general multiple packets are sent at a time (by default, 3); if the packets take different routes, then the routes are displayed in sequence.</p>
-<h3 id="telnet">Telnet</h3>
+<h2 id="telnet">Telnet</h2>
 <p>TELNET = Teletype Network</p>
 <p>From 1969! Uses port 23 by default.</p>
-<h3 id="netcat">Netcat</h3>
+<h2 id="netcat">Netcat</h2>
 <p>Useful flag I didn’t know before: <code class="language-plaintext highlighter-rouge">-k</code> keeps listening even after the initial client disconnection.</p>
 <p>Given the general usefulness of netcat (you can straight up use it as a telnet replacement), it’s hard to see why you’d use telnet these days.</p>
 <ul>

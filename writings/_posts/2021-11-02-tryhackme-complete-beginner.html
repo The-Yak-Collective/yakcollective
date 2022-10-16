@@ -1,6 +1,6 @@
 ---
 title: 'TryHackMe: Complete Beginner'
-date: 2021-11-02 05:00:00.000000000 Z
+date: 2021-11-02 12:00:00.000000000 Z
 layout: post-external
 original_link: https://cardboard-iguana.com/log/2021-11-02-tryhackme-complete-beginner.html
 author: 100007
@@ -9,8 +9,8 @@ author: 100007
 <h1 id="tryhackme-complete-beginner">TryHackMe: Complete Beginner</h1>
 <p><strong>author:</strong> Nathan Acks<br />
 <strong>date:</strong> 2021-11-02</p>
-<h2 id="linux-privesc">Linux PrivEsc</h2>
-<h3 id="cron-jobs">Cron Jobs</h3>
+<h1 id="linux-privesc">Linux PrivEsc</h1>
+<h2 id="cron-jobs">Cron Jobs</h2>
 <p>Remember the <code class="language-plaintext highlighter-rouge">locate</code> tool! It’s faster than <code class="language-plaintext highlighter-rouge">find</code> (assuming that it’s installed, and the database is up-to-date, and the file you’re looking for is accessible to <code class="language-plaintext highlighter-rouge">nobody</code>…).</p>
 <p>Also, the Bash reverse shell makes an appearance here!</p>
 <p>Remember that SUID Bash will drop privileges by default; execute with the <code class="language-plaintext highlighter-rouge">-p</code> option to avoid this.</p>
@@ -19,7 +19,7 @@ author: 100007
 <li><a href="https://cardboard-iguana.com/notes/exploiting-bash.html">Exploiting Bash</a></li>
 <li><a href="https://gtfobins.github.io/gtfobins/tar/">tar (GTFOBins)</a></li>
 </ul>
-<h3 id="suid--sgid-executables">SUID / SGID Executables</h3>
+<h2 id="suid--sgid-executables">SUID / SGID Executables</h2>
 <p>Quick-n-dirty command to find all SUID/SGID executables.</p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>find / <span class="nt">-type</span> f <span class="se">\</span>
 <span class="nt">-a</span> <span class="se">\(</span> <span class="nt">-perm</span> <span class="nt">-u</span>+s <span class="nt">-o</span> <span class="nt">-perm</span> <span class="nt">-g</span>+s <span class="se">\)</span> <span class="se">\</span>
@@ -34,7 +34,7 @@ author: 100007
 <ul>
 <li><a href="https://cardboard-iguana.com/notes/exploiting-ld-preload.html">Exploiting LD_PRELOAD</a></li>
 </ul>
-<h3 id="nfs">NFS</h3>
+<h2 id="nfs">NFS</h2>
 <p>Files created on NFS shares inherit the <em>remote</em> UID. By default, NFS enables “root squashing”, which maps UID 0 to the <code class="language-plaintext highlighter-rouge">nobody</code> user.</p>
 <p>Root squashing can be <em>disabled</em> in /etc/exports with the <code class="language-plaintext highlighter-rouge">no_root_squash</code> flag.</p>
 <p>Unrelatedly, msfvenom can be used to generate executables that immediately shell out, similar to the LD_PRELOAD trick.</p>
@@ -42,11 +42,11 @@ author: 100007
 <li><a href="https://cardboard-iguana.com/notes/metasploit.html">Using Metasploit</a></li>
 <li><a href="https://cardboard-iguana.com/notes/exploiting-ld-preload.html">Exploiting LD_PRELOAD</a></li>
 </ul>
-<h3 id="kernel-exploits">Kernel Exploits</h3>
+<h2 id="kernel-exploits">Kernel Exploits</h2>
 <ul>
 <li><a href="https://github.com/jondonas/linux-exploit-suggester-2">Linux Exploit Suggester 2</a></li>
 </ul>
-<h3 id="privilege-escalation-scripts">Privilege Escalation Scripts</h3>
+<h2 id="privilege-escalation-scripts">Privilege Escalation Scripts</h2>
 <ul>
 <li><a href="https://github.com/diego-treitos/linux-smart-enumeration">LinEnum</a></li>
 <li><a href="https://github.com/diego-treitos/linux-smart-enumeration">Linux Smart Enumeration (LSE)</a></li>

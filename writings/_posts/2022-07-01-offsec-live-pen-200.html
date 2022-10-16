@@ -1,6 +1,6 @@
 ---
 title: 'OffSec Live: PEN-200'
-date: 2022-07-01 05:00:00.000000000 Z
+date: 2022-07-01 12:00:00.000000000 Z
 layout: post-external
 original_link: https://cardboard-iguana.com/log/2022-07-01-offsec-live-pen-200.html
 author: 100007
@@ -9,14 +9,12 @@ author: 100007
 <h1 id="offsec-live-pen-200">OffSec Live: PEN-200</h1>
 <p><strong>author:</strong> Nathan Acks<br />
 <strong>date:</strong> 2022-07-01</p>
-<h2 id="offsec-live-basic-tools-part-2">OffSec Live: Basic Tools, Part 2</h2>
 <p>Today’s session is more interactive/follow-along, which I’m not able to do because I’m not actually a PEN-200 student. But they’re having <em>a lot</em> of technical problems, so many fewer notes than normal.</p>
-<h3 id="reverse-vs-bind-shells">Reverse vs. Bind Shells</h3>
-<p>Another way of thinking of reverse vs. bind shells — who’s serving the local shell? <em>That’s</em> the system that’s being attacked. Look at the <em>other</em> system: If that system is listening then it’s a reverse shell, and if it’s connecting out then it’s a bind shell.</p>
-<h3 id="burp-suite">Burp Suite</h3>
-<p>In the Burp Suite Intruder, you can use the “Recursive Grep” to extract the values from the <em>previous</em> request to use in the current request. Note that this is not compatible with using multiple threads.</p>
-<h3 id="references">References</h3>
 <ul>
 <li><a href="https://www.offensive-security.com/offsec/offsec-live/">OffSec Live</a></li>
 <li><a href="https://www.twitch.tv/offsecofficial">OffSecOfficial Twitch Channel</a></li>
 </ul>
+<h1 id="reverse-vs-bind-shells">Reverse vs. Bind Shells</h1>
+<p>Another way of thinking of reverse vs. bind shells - who’s serving the local shell? <em>That’s</em> the system that’s being attacked. Look at the <em>other</em> system: If that system is listening then it’s a reverse shell, and if it’s connecting out then it’s a bind shell.</p>
+<h1 id="burp-suite">Burp Suite</h1>
+<p>In the Burp Suite Intruder, you can use the “Recursive Grep” to extract the values from the <em>previous</em> request to use in the current request. Note that this is not compatible with using multiple threads.</p>

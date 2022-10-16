@@ -1,6 +1,6 @@
 ---
 title: AWS Deep Dive
-date: 2022-06-09 05:00:00.000000000 Z
+date: 2022-06-09 12:00:00.000000000 Z
 layout: post-external
 original_link: https://cardboard-iguana.com/log/2022-06-09-aws-deep-dive.html
 author: 100007
@@ -9,63 +9,41 @@ author: 100007
 <h1 id="aws-deep-dive">AWS Deep Dive</h1>
 <p><strong>author:</strong> Nathan Acks<br />
 <strong>date:</strong> 2022-06-09</p>
-<h2 id="aws-essentials">AWS Essentials</h2>
+<h1 id="aws-essentials">AWS Essentials</h1>
 <p>Today I’ll be finishing up the “AWS Essentials” YouTube playlist put together by the Linux Academy.</p>
-<p>REFERENCES:</p>
 <ul>
 <li><a href="https://youtube.com/playlist?list=PLv2a_5pNAko0Mijc6mnv04xeOut443Wnk">AWS Essentials (YouTube)</a></li>
 </ul>
-<h3 id="elastic-block-store-ebs">Elastic Block Store (EBS)</h3>
+<h2 id="elastic-block-store-ebs">Elastic Block Store (EBS)</h2>
+<p><a href="https://youtu.be/S0gzrxsVQHo">AWS Essentials: Elastic Block Store (EBS) (YouTube)</a></p>
 <p>IOPS is basically a measure of reads/writes (i.e., I/O) per unit time.</p>
 <p>EBS volumes <em>can</em> be used as the root volume of EC2 images, but other options are available.</p>
 <p>By default, root EBS volumes are set to be deleted on EC2 instance termination. However, other options are available, which can be useful in a variety of ways.</p>
 <p>EC2 instances can’t be booted from EBS snapshots directly. However, a snapshot can be used to populate the contents of a <em>new</em> EBS volume, which can then be used as the root drive of an EC2 instance, so this isn’t really a limitation in practice.</p>
 <p>Data stored as a snapshot is <em>a lot</em> less expensive than the same data stored on an EBS volume.</p>
-<p>REFERENCES:</p>
-<ul>
-<li><a href="https://youtu.be/S0gzrxsVQHo">AWS Essentials: Elastic Block Store (EBS) (YouTube)</a></li>
-</ul>
-<h3 id="security-groups">Security Groups</h3>
+<h2 id="security-groups">Security Groups</h2>
+<p><a href="https://youtu.be/-9j7BvAyb2w">AWS Essentials: Security Groups (YouTube)</a></p>
 <p>Security Groups are instance-level firewalls. In some ways they’re similar to NACLs, but allow/deny rules work a little differently: whereas traffic is processed by the first matching rule in a NACL (just as in a traditional stateless firewall), <em>all</em> rules in a Security Group are considered when evaluating traffic.</p>
 <p>By default, all inbound traffic is denied and all outbound traffic is allowed in new Security Groups. Somewhat confusingly, AWS also creates a “default” Security Group” for you as part of the provisioning process that allows <em>all</em> traffic, both inbound and outbound.</p>
 <p>There are no DENY rules for security groups, only ALLOW rules. Any traffic not matched by a rule will be dropped.</p>
-<p>REFERENCES:</p>
-<ul>
-<li><a href="https://youtu.be/-9j7BvAyb2w">AWS Essentials: Security Groups (YouTube)</a></li>
-</ul>
-<h3 id="ip-addressing">IP Addressing</h3>
+<h2 id="ip-addressing">IP Addressing</h2>
+<p><a href="https://youtu.be/U32bPhQyQ6I">AWS Essentials: IP Addressing (YouTube)</a></p>
 <p>EC2 instances can be launched with public IP addresses so long as the subnet its own is attached to a route that has an associated Internet Gateway.</p>
 <p>EC2 instances in the default VPC will launch with public IP addresses out-of-the-box.</p>
-<p>REFERENCES:</p>
-<ul>
-<li><a href="https://youtu.be/U32bPhQyQ6I">AWS Essentials: IP Addressing (YouTube)</a></li>
-</ul>
-<h3 id="launching-and-using-an-ec2-instance">Launching and Using an EC2 Instance</h3>
+<h2 id="launching-and-using-an-ec2-instance">Launching and Using an EC2 Instance</h2>
+<p><a href="https://youtu.be/BCM9aaaWvR0">AWS Essentials: Launching and Using an EC2 Instance (YouTube)</a></p>
 <p>When setting up an EC2 instance, you have the ability to specify a script that will be run on first boot. This is generally used to install and configure software.</p>
-<p>REFERENCES:</p>
-<ul>
-<li><a href="https://youtu.be/BCM9aaaWvR0">AWS Essentials: Launching and Using an EC2 Instance (YouTube)</a></li>
-</ul>
-<h3 id="rds-and-dynamodb-basics">RDS and DynamoDB Basics</h3>
+<h2 id="rds-and-dynamodb-basics">RDS and DynamoDB Basics</h2>
+<p><a href="https://youtu.be/KcJ8-I7kD_w">AWS Essentials: RDS and DynamoDB Basics (YouTube)</a></p>
 <p>RDS provides relational database services and supports a variety of database engines under the hood: MySQL/MariaDB, PostgreSQL, Oracle, SQL Server, and Amazon’s own fork of MySQL, Aurora. Note that Aurora is <em>not</em> available in the AWS free tier.</p>
 <p>DynamoDB is Amazon’s NoSQL option; there’s no choice of backends here, though DynamoDB itself is similar to MongoDB.</p>
 <p>Pricing for RDS parallels that for EC2 (which makes sense), while DynamoDB pricing is looks more like S3 (if you squint).</p>
-<p>REFERENCES:</p>
-<ul>
-<li><a href="https://youtu.be/KcJ8-I7kD_w">AWS Essentials: RDS and DynamoDB Basics (YouTube)</a></li>
-</ul>
-<h3 id="provisioning-and-rds-mysql-database">Provisioning and RDS MySQL Database</h3>
+<h2 id="provisioning-and-rds-mysql-database">Provisioning and RDS MySQL Database</h2>
+<p><a href="https://youtu.be/OE25Sni15vo">AWS Essentials: Provisioning and RDS MySQL Database (YouTube)</a></p>
 <p>Not only can’t RDS use Aurora on the free tier, but it’s limited to running MySQL in “developer” mode (though it’s unclear what that means).</p>
 <p>RDS instances aren’t provisioned directly into subnets like EC2 instances. Instead, you define a “subnet group” (which might contain only a single subnet). This determines which EC2 instances the RDS instance can communicate with. Note that the RDS instance will be automatically deployed to an availability zone matching one of the subnets in its subnet group, though you can override this (though you are similarly restricted) if you wish.</p>
-<p>REFERENCES:</p>
-<ul>
-<li><a href="https://youtu.be/OE25Sni15vo">AWS Essentials: Provisioning and RDS MySQL Database (YouTube)</a></li>
-</ul>
-<h3 id="sns-basics">SNS Basics</h3>
+<h2 id="sns-basics">SNS Basics</h2>
+<p><a href="https://youtu.be/M4gQ8MLlgiY">AWS Essentials: SNS Basics (YouTube)</a></p>
 <p>SNS = Simple Notification Service</p>
 <p>SNS allows notifications from AWS to be pushed out to “subscribed” clients. These can be internal to AWS (SQS, Lambda) or external (HTTP push, SMS, email). Queues in SNS are called “topics”; sending a message to a topic will cause it to be pushed out to any “subscribed” endpoints (what this means in practice will vary depending on <em>how</em> the endpoints are subscribed).</p>
 <p>SNS and CloudWatch are often used together as a server event/alarm notification system.</p>
-<p>REFERENCES:</p>
-<ul>
-<li><a href="https://youtu.be/M4gQ8MLlgiY">AWS Essentials: SNS Basics (YouTube)</a></li>
-</ul>

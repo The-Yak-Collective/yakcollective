@@ -1,6 +1,6 @@
 ---
 title: 'TryHackMe: Complete Beginner (Supplements)'
-date: 2021-11-11 06:00:00.000000000 Z
+date: 2021-11-11 12:00:00.000000000 Z
 layout: post-external
 original_link: https://cardboard-iguana.com/log/2021-11-11-tryhackme-complete-beginner-supplements.html
 author: 100007
@@ -9,8 +9,8 @@ author: 100007
 <h1 id="tryhackme-complete-beginner-supplements">TryHackMe: Complete Beginner (Supplements)</h1>
 <p><strong>author:</strong> Nathan Acks<br />
 <strong>date:</strong> 2021-11-11</p>
-<h2 id="splunk">Splunk</h2>
-<h3 id="ransomware">Ransomware</h3>
+<h1 id="splunk">Splunk</h1>
+<h2 id="ransomware">Ransomware</h2>
 <p>There are three different event source fields in Splunk:</p>
 <ul>
 <li><code class="language-plaintext highlighter-rouge">src_ip</code> contains source IP addresses <em>only</em> (if known).</li>
@@ -32,8 +32,8 @@ author: 100007
 <ul>
 <li><a href="https://twitter.com/GossiTheDog">Kevin Beaumont (Twitter)</a></li>
 </ul>
-<h2 id="volatility">Volatility</h2>
-<h3 id="obtaining-memory-samples">Obtaining Memory Samples</h3>
+<h1 id="volatility">Volatility</h1>
+<h2 id="obtaining-memory-samples">Obtaining Memory Samples</h2>
 <p>Tools for obtaining memory dumps from running systems:</p>
 <ul>
 <li>FTK Imager</li>
@@ -45,9 +45,9 @@ author: 100007
 <p>For powered off or hibernating Windows systems, grab %SystemDrive%/hiberfil.sys, which is a compressed copy of the system’s memory. Linux systems that are hibernating also contain hibernation files or write memory contents to their swap partitions (though it’s not clear how to deal with those).</p>
 <p>For virtual machines:</p>
 <ul>
-<li>VMware — .vmem</li>
-<li>Hyper-V — .bin</li>
-<li>Parallels — .mem</li>
-<li>VirtualBox — .sav</li>
+<li>VMware - .vmem</li>
+<li>Hyper-V - .bin</li>
+<li>Parallels - .mem</li>
+<li>VirtualBox - .sav</li>
 </ul>
 <p>In all cases <em>except</em> VirtualBox, these files are maintained during run-time, and thus can provide a memory image without shutting the VM off (though I presume that it’s desirable to suspend it temporarily when copying). VirtualBox .sav files are kind of useless though, as they’re only partial; treat these VMs as if they were running on bare metal (for the purpose of memory dumps).</p>

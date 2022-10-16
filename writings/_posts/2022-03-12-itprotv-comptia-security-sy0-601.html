@@ -1,6 +1,6 @@
 ---
 title: 'ITPro.TV: CompTIA Security+ (SY0-601)'
-date: 2022-03-12 06:00:00.000000000 Z
+date: 2022-03-12 12:00:00.000000000 Z
 layout: post-external
 original_link: https://cardboard-iguana.com/log/2022-03-12-itprotv-comptia-security-plus.html
 author: 100007
@@ -9,17 +9,17 @@ author: 100007
 <h1 id="itprotv-comptia-security-sy0-601">ITPro.TV: CompTIA Security+ (SY0-601)</h1>
 <p><strong>author:</strong> Nathan Acks<br />
 <strong>date:</strong> 2022-03-12</p>
-<h2 id="comptia-security-exam-cram">CompTIA Security+ Exam Cram</h2>
+<h1 id="comptia-security-exam-cram">CompTIA Security+ Exam Cram</h1>
 <p>It actually took me a couple of days to work through chapter 24 of the Exam Cram, “Authentication and Authorization Solutions”. Lots of little details here.</p>
-<h3 id="authentication">Authentication</h3>
+<h2 id="authentication">Authentication</h2>
 <p>AUTHENTICATION MANAGEMENT: The management of user credentials across the entire user lifecycle.</p>
-<h3 id="unencrypted-plaintext-credentials">Unencrypted Plaintext Credentials</h3>
+<h2 id="unencrypted-plaintext-credentials">Unencrypted Plaintext Credentials</h2>
 <p>Wait, wut?!?</p>
 <blockquote>
 <p>In a Windows environment, failed logins record the plaintext password in the Security log.</p>
 </blockquote>
 <p>I guess people must forget their <em>usernames</em> with relative frequency, as Exam Cram is suggesting that a failed login attempt followed by a successful one has a high probability of revealing the user’s password (at least in smaller/less busy environments).</p>
-<h3 id="filesystem-permissions">Filesystem Permissions</h3>
+<h2 id="filesystem-permissions">Filesystem Permissions</h2>
 <p>Exam Cram notes that the Security+ test’s main concern with insecure permissions is the violation of the principle of least access.</p>
 <p>When enabling access audit logs:</p>
 <ul>
@@ -27,181 +27,40 @@ author: 100007
 <li>Successful access attempts help identify improperly elevated/broad permissions.</li>
 </ul>
 <p>The Windows <code class="language-plaintext highlighter-rouge">gpresult</code> utility calculates the effective group policy of a user or computer (essentially calculating the “sum” of the active group policies). The <code class="language-plaintext highlighter-rouge">accesschk</code> tool is similar, which shows the effective permissions a user or computer has to a particular object (these permissions are determined <em>in part</em> by the applied group policies).</p>
-<p>Windows permissions:</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left">Permission</th>
-<th style="text-align: left">Meaning for Folders</th>
-<th style="text-align: left">Meaning for Files</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left">Read</td>
-<td style="text-align: left">Permits viewing and listing of files and subfolders</td>
-<td style="text-align: left">Permits viewing or accessing of the file’s contents</td>
-</tr>
-<tr>
-<td style="text-align: left">Write</td>
-<td style="text-align: left">Permits adding of files and subfolders</td>
-<td style="text-align: left">Permits writing to a file</td>
-</tr>
-<tr>
-<td style="text-align: left">Read &amp; Execute</td>
-<td style="text-align: left">Permits viewing and listing of files and subfolders as well as executing of files; inherited by files and folders</td>
-<td style="text-align: left">Permits viewing and accessing of the file’s contents as well as executing of the file</td>
-</tr>
-<tr>
-<td style="text-align: left">List Folder Contents</td>
-<td style="text-align: left">Permits viewing and listing of files and subfolders as well as executing of files; inherited by folders only</td>
-<td style="text-align: left">N/A</td>
-</tr>
-<tr>
-<td style="text-align: left">Modify</td>
-<td style="text-align: left">Permits reading and writing of files and subfolders as well as executing of files; allows deletion of the folder</td>
-<td style="text-align: left">Permits reading and writing of the file as well as executing of the file; allows deletion of the file</td>
-</tr>
-<tr>
-<td style="text-align: left">Full Control</td>
-<td style="text-align: left">Permits reading, writing, changing, and deleting of files and subfolders</td>
-<td style="text-align: left">Permits reading, writing, changing and deleting of the file</td>
-</tr>
-</tbody>
-</table>
+<p>Windows permissions for folders:</p>
+<ul>
+<li>Read - Permits viewing and listing of files and subfolders</li>
+<li>Write - Permits adding of files and subfolders</li>
+<li>Read &amp; Execute - Permits viewing and listing of files and subfolders as well as executing of files; inherited by files and folders</li>
+<li>List Folder Contents - Permits viewing and listing of files and subfolders as well as executing of files; inherited by folders only</li>
+<li>Modify - Permits reading and writing of files and subfolders as well as executing of files; allows deletion of the folder</li>
+<li>Full Control - Permits reading, writing, changing, and deleting of files and subfolders</li>
+</ul>
+<p>Windows permissions for files:</p>
+<ul>
+<li>Read - Permits viewing or accessing of the file’s contents</li>
+<li>Write - Permits writing to a file</li>
+<li>Read &amp; Execute - Permits viewing and accessing of the file’s contents as well as executing of the file</li>
+<li>List Folder Contents - N/A</li>
+<li>Modify - Permits reading and writing of the file as well as executing of the file; allows deletion of the file</li>
+<li>Full Control - Permits reading, writing, changing and deleting of the file</li>
+</ul>
 <p>Windows “advanced permissions” are just bundles of the above.</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left">Advanced Permission</th>
-<th style="text-align: center">Full Control</th>
-<th style="text-align: center">Modify</th>
-<th style="text-align: center">List Folder Contents</th>
-<th style="text-align: center">Read &amp; Execute</th>
-<th style="text-align: center">Write</th>
-<th style="text-align: center">Read</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left">Traverse folder / execute file</td>
-<td style="text-align: center">X</td>
-<td style="text-align: center">X</td>
-<td style="text-align: center">X</td>
-<td style="text-align: center">X</td>
-<td style="text-align: center"> </td>
-<td style="text-align: center"> </td>
-</tr>
-<tr>
-<td style="text-align: left">List folder / read data</td>
-<td style="text-align: center">X</td>
-<td style="text-align: center">X</td>
-<td style="text-align: center">X</td>
-<td style="text-align: center">X</td>
-<td style="text-align: center"> </td>
-<td style="text-align: center"> </td>
-</tr>
-<tr>
-<td style="text-align: left">Read attributes</td>
-<td style="text-align: center">X</td>
-<td style="text-align: center">X</td>
-<td style="text-align: center">X</td>
-<td style="text-align: center">X</td>
-<td style="text-align: center"> </td>
-<td style="text-align: center"> </td>
-</tr>
-<tr>
-<td style="text-align: left">Read extended attributes</td>
-<td style="text-align: center">X</td>
-<td style="text-align: center">X</td>
-<td style="text-align: center">X</td>
-<td style="text-align: center">X</td>
-<td style="text-align: center"> </td>
-<td style="text-align: center"> </td>
-</tr>
-<tr>
-<td style="text-align: left">Create files / write data</td>
-<td style="text-align: center">X</td>
-<td style="text-align: center">X</td>
-<td style="text-align: center"> </td>
-<td style="text-align: center"> </td>
-<td style="text-align: center"> </td>
-<td style="text-align: center">X</td>
-</tr>
-<tr>
-<td style="text-align: left">Create folders / append data</td>
-<td style="text-align: center">X</td>
-<td style="text-align: center">X</td>
-<td style="text-align: center"> </td>
-<td style="text-align: center"> </td>
-<td style="text-align: center"> </td>
-<td style="text-align: center">X</td>
-</tr>
-<tr>
-<td style="text-align: left">Write attributes</td>
-<td style="text-align: center">X</td>
-<td style="text-align: center">X</td>
-<td style="text-align: center"> </td>
-<td style="text-align: center"> </td>
-<td style="text-align: center"> </td>
-<td style="text-align: center">X</td>
-</tr>
-<tr>
-<td style="text-align: left">Write extended attributes</td>
-<td style="text-align: center">X</td>
-<td style="text-align: center">X</td>
-<td style="text-align: center"> </td>
-<td style="text-align: center"> </td>
-<td style="text-align: center"> </td>
-<td style="text-align: center">X</td>
-</tr>
-<tr>
-<td style="text-align: left">Delete subfolders and files</td>
-<td style="text-align: center">X</td>
-<td style="text-align: center"> </td>
-<td style="text-align: center"> </td>
-<td style="text-align: center"> </td>
-<td style="text-align: center"> </td>
-<td style="text-align: center"> </td>
-</tr>
-<tr>
-<td style="text-align: left">Delete</td>
-<td style="text-align: center">X</td>
-<td style="text-align: center">X</td>
-<td style="text-align: center"> </td>
-<td style="text-align: center"> </td>
-<td style="text-align: center"> </td>
-<td style="text-align: center"> </td>
-</tr>
-<tr>
-<td style="text-align: left">Read permissions</td>
-<td style="text-align: center">X</td>
-<td style="text-align: center">X</td>
-<td style="text-align: center">X</td>
-<td style="text-align: center">X</td>
-<td style="text-align: center">X</td>
-<td style="text-align: center">X</td>
-</tr>
-<tr>
-<td style="text-align: left">Change permissions</td>
-<td style="text-align: center">X</td>
-<td style="text-align: center"> </td>
-<td style="text-align: center"> </td>
-<td style="text-align: center"> </td>
-<td style="text-align: center"> </td>
-<td style="text-align: center"> </td>
-</tr>
-<tr>
-<td style="text-align: left">Take ownership</td>
-<td style="text-align: center">X</td>
-<td style="text-align: center"> </td>
-<td style="text-align: center"> </td>
-<td style="text-align: center"> </td>
-<td style="text-align: center"> </td>
-<td style="text-align: center"> </td>
-</tr>
-</tbody>
-</table>
+<ul>
+<li>Traverse folder / execute file = Full Control + Modify + List Folder Contents + Read &amp; Execute</li>
+<li>List folder / read data = Full Control + Modify + List Folder Contents + Read &amp; Execute</li>
+<li>Read attributes = Full Control + Modify + List Folder Contents + Read &amp; Execute</li>
+<li>Read extended attributes = Full Control + Modify + List Folder Contents + Read &amp; Execute</li>
+<li>Create files / write data = Full Control + Modify + Read</li>
+<li>Create folders / append data = Full Control + Modify + Read</li>
+<li>Write attributes = Full Control + Modify + Read</li>
+<li>Write extended attributes = Full Control + Modify + Read</li>
+<li>Delete subfolders and files = Full Control</li>
+<li>Delete = Full Control + Modify</li>
+<li>Read permissions = Full Control + Modify + List Folder Contents + Read &amp; Execute + Write + Read</li>
+<li>Change permissions = Full Control</li>
+<li>Take ownership = Full Control</li>
+</ul>
 <p>I suspect that there must be a bit more to advanced permissions than this, as otherwise there’s a lot of duplication here (either that, or Windows is supporting a lot of legacy permission bundles, which also wouldn’t surprise me). Also, all of these advanced permissions <em>include</em> the “full control” permission, which would seem to make them all equivalent to… “full control”?</p>
 <p>When a user is part of two groups with different permissions to an object, the allow permission will only override inherited deny permissions (explicitly set deny permissions cannot be overridden; remember that Windows access handling is default-deny).</p>
 <p>Okay, learned something new about Linux permissions I wasn’t expecting: If a user has <em>write</em> access to a directory, then they can write to any file they have at least <em>read</em> access to (!!!).</p>
@@ -210,13 +69,13 @@ author: 100007
 <li><a href="https://docs.microsoft.com/sysinternals/downloads/accesschk">AccessChk v6.14</a></li>
 <li><a href="https://cardboard-iguana.com/notes/windows-permissions.html">Windows Permissions</a></li>
 </ul>
-<h3 id="access-violations">Access Violations</h3>
+<h2 id="access-violations">Access Violations</h2>
 <p>The Windows “Microsoft Operations Manager” (MOM) includes an “Audit Collection Service” (ACS) that collects various audit events into a single database. There are two preconfigured reports:</p>
 <ul>
 <li>The “Access Violation Account Locked” report</li>
 <li>The “Access Violation Unsuccessful Login Attempts” report</li>
 </ul>
-<h3 id="authentication-protocols">Authentication Protocols</h3>
+<h2 id="authentication-protocols">Authentication Protocols</h2>
 <p>PASSWORD AUTHENTICATION PROTOCOL (PAP): Username and password are sent to the server in plaintext. That’s it. Was used for PPP connections.</p>
 <p>CHALLENGE HANDSHAKE AUTHENTICATION PROTOCOL (CHAP): Is a (slightly) more secure authentication protocol, again used in PPP connections. In a CHAP authentication handshake, the server (authenticator) sends the client a (random?) challenge to the client. The client then combined this with the user password and hashes the result (typically with MD5). The server can then compare this using the same process to determine is the client knows the correct user password. Reauthentication is randomly re-requested with new challenges. Requires both the client and server to know the user’s password in plaintext.</p>
 <p>MICROSOFT CHAP (MS-CHAP): Is a Microsoft variant of CHAP. Both Exam Cram and Wikipedia are a bit light on details, but authentication (at least in MS-CHAPv2) is bidirectional and the algorithm appears to use NTLM hashes encrypted with DES. Both the v1 and v2 versions of this algorithm are considered broken, but v1 is <em>very</em> broken. The security of MS-CHAP can be improved by using the “extensible authentication protocol” (EAP) or the “protected extensible authentication protocol” (PEAP); the latter of these actually fires up an encrypted tunnel between the client and server before exchanging the authentication handshake.</p>
@@ -225,22 +84,22 @@ author: 100007
 <li><a href="https://en.m.wikipedia.org/wiki/MS-CHAP">MS-CHAP (Wikipedia)</a></li>
 <li><a href="https://cardboard-iguana.com/notes/windows-password-hashes.html">Windows Password Hashes</a></li>
 </ul>
-<h3 id="8021x">802.1X</h3>
+<h2 id="8021x">802.1X</h2>
 <p>802.1X is an IEEE standard for port-based access control on a network. It works by encapsulating EAP with some IEEE network protocol, and relies on a dedicated authentication server rather than having the system the client is connecting to handle the authentication.</p>
-<h3 id="aaa-protocols-and-services">AAA Protocols and Services</h3>
+<h2 id="aaa-protocols-and-services">AAA Protocols and Services</h2>
 <p>Recall that “AAA” stands for “authentication, authorization, and accounting”.</p>
 <p>RADIUS stands for “Remote Authentication Dial-In User Service”, which should give you a sense of when it was designed. RADIUS works primarily over UDP (though TCP implementations are possible); users present their credentials directly to a resource, which then passes them to the RADIUS server (passwords are transformed using MD5 + a salt shared by the resource and RADIUS server). (Note that Exam Cram implies that credentials are presented directly to the RADIUS server, but all of the other resources I can find indicate that this is <em>not</em> the case.) The RADIUS server may authenticate and authorize the user immediately, reject them immediately, or request an additional challenge (which will be handled directly by the RADIUS server, and <em>not</em> the requesting resource). Once the user is authenticated and authorized, the resource may send periodic accounting messages to the RADIUS server to indicate the user’s usage.</p>
 <p>RADIUS servers can forward credentials to other servers for verification. The users that a given RADIUS server is responsible for are its “realm”, and the realm of a login request can be prepended to the username using <code class="language-plaintext highlighter-rouge">\</code> (“prefix notation”, which then looks like AD domains) or appended using <code class="language-plaintext highlighter-rouge">@</code> (“postfix notation”, which looks like an email address). Both notations can be combined to allow for user accounts in two realms.</p>
 <p>TACACS+ is the “Terminal Access Controller Access Control System Plus” is a Cisco standard dating from 1993. It uses TCP 49; while the design details differ (in particular, TACACS+ completely encrypts user information, while RADIUS only protects the password), the general authentication/authorization/auditing flow is similar to RADIUS.</p>
-<p>TACACS+ cleanly separates out the authentication and authorization stages, which allows alternate authentication mechanisms to be more easily used than RADIUS (Exam Cram implies that authentication could be handled entirely by the resource). Because of this, it can also be used to authorize actions at a much finer level — typically individual commands, rather than RADIUS’s coarser resource-based approach.</p>
+<p>TACACS+ cleanly separates out the authentication and authorization stages, which allows alternate authentication mechanisms to be more easily used than RADIUS (Exam Cram implies that authentication could be handled entirely by the resource). Because of this, it can also be used to authorize actions at a much finer level - typically individual commands, rather than RADIUS’s coarser resource-based approach.</p>
 <ul>
 <li><a href="https://en.wikipedia.org/wiki/RADIUS">RADIUS (Wikipedia)</a></li>
 <li><a href="https://docs.microsoft.com/windows/win32/nps/ias-radius-authentication-and-accounting">RADIUS Authentication, Authorization, and Accounting (Microsoft Documentation)</a></li>
 <li><a href="https://en.wikipedia.org/wiki/TACACS">TACACS+ (Wikipedia)</a></li>
 </ul>
-<h3 id="federated-services">Federated Services</h3>
+<h2 id="federated-services">Federated Services</h2>
 <p>Federated services typically use token-based authentication, where the user authenticates with with a central server once and then receives a token that can provide access to further resources. Tokens can be scoped in time, space (which resources they’re valid for), or both.</p>
-<h3 id="saml">SAML</h3>
+<h2 id="saml">SAML</h2>
 <p>SAML (“Security Assertion Markup Language”) provides authentication (user identity), attribute (user metadata), and authorization (user permissions) attestation in a single XML bundle. SAML terminology:</p>
 <ul>
 <li>PRINCIPAL: The user seeking authentication.</li>
@@ -258,7 +117,7 @@ author: 100007
 <p>Note that (single) sign-on is <em>initiated</em> by the service provider; the IdP is only used for authentication.</p>
 <p>SAML authentication responses assert the validity of a user’s identity, rather than confirming successful authentication directly. SAML requests need to be scoped in time to prevent replay attacks.</p>
 <p>Note that both OAuth 2.0 and OpenID Connect (below) <em>can</em> use SAML for user authentication/authorization.</p>
-<h3 id="oauth-20">OAuth 2.0</h3>
+<h2 id="oauth-20">OAuth 2.0</h2>
 <p>OAuth (“Open Authorization”) is primarily used for API-level authorization. Terminology:</p>
 <ul>
 <li>RESOURCE OWNER: The entity that has permission to access a particular resource; typically the user.</li>
@@ -280,7 +139,7 @@ author: 100007
 <ul>
 <li><a href="https://en.wikipedia.org/wiki/OAuth">OAuth (Wikipedia)</a></li>
 </ul>
-<h3 id="openid-connect">OpenID Connect</h3>
+<h2 id="openid-connect">OpenID Connect</h2>
 <p>Besides an explicit login, authentication can also be layered on to OAuth 2.0 using OpenID Connect, which extends the OAuth 2.0 authorization process to include an authentication step. Generic OpenID Connect flow:</p>
 <ul>
 <li>The user client requests authentication from the OpenID provider.</li>
@@ -312,9 +171,9 @@ author: 100007
 <li><a href="https://developers.onelogin.com/openid-connect/api/authorization-code-grant">Auth Code Flow pt. 2 (OneLogin OpenID Connect API Reference)</a></li>
 <li><a href="https://www.scottbrady91.com/openid-connect/identity-tokens">Understanding identity tokens</a></li>
 </ul>
-<h3 id="shibboleth">Shibboleth</h3>
+<h2 id="shibboleth">Shibboleth</h2>
 <p>Shibboleth is an open source federated SAML implementation. It layers on the concept of a (optional) “discovery service” that is used to determine a user’s IdP across organizational boundaries. Apparently tricky to configure.</p>
-<h3 id="kerberos">Kerberos</h3>
+<h2 id="kerberos">Kerberos</h2>
 <p>Kerberos uses symmetric keys for protocol encryption. Kerberos uses TCP/UDP 88, though UDP is preferred except for large tickets; UDP (?) 749 is used for administrative access.</p>
 <p>Kerberos differs from protocols previously discussed in that the client initially sends authentication information directly to the KDC (“key distribution center”) server, rather than working through the actual resource server. A quick sketch of the Kerberos authentication process:</p>
 <ul>
@@ -335,7 +194,7 @@ author: 100007
 <li><a href="https://cardboard-iguana.com/notes/rubeus.html">Using Rubeus</a></li>
 <li><a href="https://cardboard-iguana.com/notes/mimikatz.html">Using Mimikatz</a></li>
 </ul>
-<h3 id="access-control">Access Control</h3>
+<h2 id="access-control">Access Control</h2>
 <p>ACCESS CONTROL: The process by which resources are made available only to those entities that should have access (and access is denied to all others).</p>
 <p>Types of access controls:</p>
 <ul>
@@ -350,7 +209,7 @@ author: 100007
 <ul>
 <li><a href="https://support.google.com/a/answer/9275380">Control access to apps based on user &amp; device context (Google Workspace Admin Documentation)</a></li>
 </ul>
-<h3 id="privileged-access-management">Privileged Access Management</h3>
+<h2 id="privileged-access-management">Privileged Access Management</h2>
 <p>PAM systems are access control systems with the following properties:</p>
 <ul>
 <li>Privileged account discovery</li>

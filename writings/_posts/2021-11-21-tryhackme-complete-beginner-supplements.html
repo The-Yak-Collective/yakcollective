@@ -1,6 +1,6 @@
 ---
 title: 'TryHackMe: Complete Beginner (Supplements)'
-date: 2021-11-21 06:00:00.000000000 Z
+date: 2021-11-21 12:00:00.000000000 Z
 layout: post-external
 original_link: https://cardboard-iguana.com/log/2021-11-21-tryhackme-complete-beginner-supplements.html
 author: 100007
@@ -9,14 +9,14 @@ author: 100007
 <h1 id="tryhackme-complete-beginner-supplements">TryHackMe: Complete Beginner (Supplements)</h1>
 <p><strong>author:</strong> Nathan Acks<br />
 <strong>date:</strong> 2021-11-21</p>
-<h2 id="mal-researching">MAL: Researching</h2>
-<h3 id="online-sandboxing">Online Sandboxing</h3>
+<h1 id="mal-researching">MAL: Researching</h1>
+<h2 id="online-sandboxing">Online Sandboxing</h2>
 <p>Online automated malware analysis sandboxes:</p>
 <ul>
 <li><a href="https://any.run/">any.run</a></li>
 <li><a href="https://hybrid-analysis.com/">hybrid-analysis</a></li>
 </ul>
-<h3 id="practical-calculating--reporting-checksums">Practical: Calculating &amp; Reporting Checksums</h3>
+<h2 id="practical-calculating--reporting-checksums">Practical: Calculating &amp; Reporting Checksums</h2>
 <p>Calculating file hashes with PowerShell!</p>
 <div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Using CertUtil</span><span class="w">
 </span><span class="c">#</span><span class="w">
@@ -25,62 +25,39 @@ author: 100007
 </span><span class="c">#</span><span class="w">
 </span><span class="n">Get-FileHash</span><span class="w"> </span><span class="nt">-Algorithm</span><span class="w"> </span><span class="nv">$ALGORITHM</span><span class="w"> </span><span class="nv">$FILE_PATH</span><span class="w">
 </span></code></pre></div></div>
-<p>In both cases, the algorithm can be excluded (in which case SHA1 is used for CertUtil and SHA-256 is used for Get-FileHash). <em>Lots</em> of different hashing algorithms are supported — run <code class="language-plaintext highlighter-rouge">help Get-FileHash</code>, etc. to see a list.</p>
-<h2 id="mal-strings">MAL: Strings</h2>
-<h3 id="practical-finding-bitcoin-addresses-in-ransomware">Practical: Finding Bitcoin Addresses in Ransomware</h3>
+<p>In both cases, the algorithm can be excluded (in which case SHA1 is used for CertUtil and SHA-256 is used for Get-FileHash). <em>Lots</em> of different hashing algorithms are supported - run <code class="language-plaintext highlighter-rouge">help Get-FileHash</code>, etc. to see a list.</p>
+<h1 id="mal-strings">MAL: Strings</h1>
+<h2 id="practical-finding-bitcoin-addresses-in-ransomware">Practical: Finding Bitcoin Addresses in Ransomware</h2>
 <p>Blockchain exploration tool (search for hashes):</p>
 <ul>
 <li><a href="https://live.blockcypher.com/">BlockCypher</a></li>
 </ul>
 <p>(Not a lot of supported blockchains though…)</p>
 <p>Fun side-note: PowerShell can use Linux-style redirects (<code class="language-plaintext highlighter-rouge">&gt;</code>)!</p>
-<h2 id="google-dorking">Google Dorking</h2>
-<h3 id="enter-search-engine-optimization">Enter: Search Engine Optimization</h3>
+<h1 id="google-dorking">Google Dorking</h1>
+<h2 id="enter-search-engine-optimization">Enter: Search Engine Optimization</h2>
 <p>It looks like all of Google’s optimization tests live at web.dev now.</p>
 <ul>
 <li><a href="https://web.dev/measure/">web.dev: Measure page quality</a></li>
 </ul>
-<h3 id="beepboop--robotstxt">BeepBoop — Robots.txt</h3>
+<h2 id="beepboop---robotstxt">BeepBoop - Robots.txt</h2>
 <p>I always forget that the <code class="language-plaintext highlighter-rouge">Sitemap</code> directive lives in <code class="language-plaintext highlighter-rouge">robots.txt</code>.</p>
 <p>It turns out that most web crawlers support regexes in the <code class="language-plaintext highlighter-rouge">Allow</code>/<code class="language-plaintext highlighter-rouge">Disallow</code> statements. Also, directives for different crawlers can be given by using multiple <code class="language-plaintext highlighter-rouge">User-agent</code> directives (apparently a crawler will only use the first block that it matches up until a new <code class="language-plaintext highlighter-rouge">User-agent</code> directive).</p>
-<h3 id="what-is-google-dorking">What is Google Dorking?</h3>
+<h2 id="what-is-google-dorking">What is Google Dorking?</h2>
 <p>Useful Google search modifiers:</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left">Directive</th>
-<th style="text-align: left">Effect</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left"><code class="language-plaintext highlighter-rouge">site:</code></td>
-<td style="text-align: left">Limit results to the provided domain</td>
-</tr>
-<tr>
-<td style="text-align: left"><code class="language-plaintext highlighter-rouge">filetype:</code></td>
-<td style="text-align: left">Limit results to the provided file type (PDF, etc.)</td>
-</tr>
-<tr>
-<td style="text-align: left"><code class="language-plaintext highlighter-rouge">intitle:</code></td>
-<td style="text-align: left">Require that the page title contain particular keywords</td>
-</tr>
-<tr>
-<td style="text-align: left"><code class="language-plaintext highlighter-rouge">cache:</code></td>
-<td style="text-align: left">View the most recent cached version of a particular URL</td>
-</tr>
-</tbody>
-</table>
-<h2 id="wireshark-101">Wireshark 101</h2>
-<h3 id="collection-methods">Collection Methods</h3>
-<p>Ways to gather packets:</p>
 <ul>
-<li>Just listen to the packets that you can see normally (really only works on very simple/insecure networks).</li>
-<li>Physical taps (Packet Squirrel, LAN Turtle, etc.)</li>
-<li>MAC flooding (fill up a switch’s CAM table with bogus requests until it is forced to fall back to acting like a dum hub; somewhat dangerous).</li>
-<li>ARP poisoning (falsely advertise yourself as the router or another machine; less dangerous than MAC flooding but harder to successfully pull off).</li>
+<li><code class="language-plaintext highlighter-rouge">site:</code> - Limit results to the provided domain</li>
+<li><code class="language-plaintext highlighter-rouge">filetype:</code> - Limit results to the provided file type (PDF, etc.)</li>
+<li><code class="language-plaintext highlighter-rouge">intitle:</code> - Require that the page title contain particular keywords</li>
+<li><code class="language-plaintext highlighter-rouge">cache:</code> - View the most recent cached version of a particular URL</li>
 </ul>
-<p>References:</p>
+<h1 id="wireshark-101">Wireshark 101</h1>
+<h2 id="collection-methods">Collection Methods</h2>
+<p>Ways to gather packets:</p>
+<p>(1) Just listen to the packets that you can see normally (really only works on very simple/insecure networks).</p>
+<p>(2) Physical taps (Packet Squirrel, LAN Turtle, etc.)</p>
+<p>(3) MAC flooding (fill up a switch’s CAM table with bogus requests until it is forced to fall back to acting like a dum hub; somewhat dangerous).</p>
+<p>(4) ARP poisoning (falsely advertise yourself as the router or another machine; less dangerous than MAC flooding but harder to successfully pull off).</p>
 <ul>
 <li><a href="https://hak5.org/products/packet-squirrel">Packet Squirrel</a></li>
 <li><a href="https://hak5.org/products/lan-turtle">LAN Turtle</a></li>

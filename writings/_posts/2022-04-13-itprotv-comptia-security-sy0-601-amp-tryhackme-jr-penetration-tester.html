@@ -1,6 +1,6 @@
 ---
 title: 'ITPro.TV: CompTIA Security+ (SY0-601) &amp; TryHackMe: Jr. Penetration Tester'
-date: 2022-04-13 05:00:00.000000000 Z
+date: 2022-04-13 12:00:00.000000000 Z
 layout: post-external
 original_link: https://cardboard-iguana.com/log/2022-04-13-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.html
 author: 100007
@@ -9,8 +9,8 @@ author: 100007
 <h1 id="itprotv-comptia-security-sy0-601--tryhackme-jr-penetration-tester">ITPro.TV: CompTIA Security+ (SY0-601) &amp; TryHackMe: Jr. Penetration Tester</h1>
 <p><strong>author:</strong> Nathan Acks<br />
 <strong>date:</strong> 2022-04-13</p>
-<h2 id="itprotv-comptia-security-sy0-601">ITPro.TV: CompTIA Security+ (SY0-601)</h2>
-<h3 id="digital-forensics-concepts">Digital Forensics Concepts</h3>
+<h1 id="itprotv-comptia-security-sy0-601">ITPro.TV: CompTIA Security+ (SY0-601)</h1>
+<h2 id="digital-forensics-concepts">Digital Forensics Concepts</h2>
 <p>Order of volatility:</p>
 <ul>
 <li>CPU cache &amp; registers (good luck!)</li>
@@ -37,8 +37,8 @@ author: 100007
 <li>EnCase Forensic</li>
 <li><code class="language-plaintext highlighter-rouge">dd</code></li>
 </ul>
-<h2 id="tryhackme-jr-penetration-tester">TryHackMe: Jr. Penetration Tester</h2>
-<h3 id="vulnerability-capstone">Vulnerability Capstone</h3>
+<h1 id="tryhackme-jr-penetration-tester">TryHackMe: Jr. Penetration Tester</h1>
+<h2 id="vulnerability-capstone">Vulnerability Capstone</h2>
 <p>I couldn’t get any of the exploits from Exploit DB to work for me, so I wound up doing a web search that landed me on a write-up for this room in GitHub; the provided exploit code is a little rough, but can be cleaned up to produce nice output without too much work:</p>
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#!/usr/bin/python3
 </span>
@@ -82,7 +82,7 @@ author: 100007
 <li><a href="https://www.w3schools.com/python/ref_string_split.asp">Python String split() Method</a></li>
 <li><a href="https://stackoverflow.com/questions/54760850/replace-all-newline-characters-using-python">Replace all newline characters using python</a></li>
 </ul>
-<h3 id="main-components-of-metasploit">Main Components of Metasploit</h3>
+<h2 id="main-components-of-metasploit">Main Components of Metasploit</h2>
 <p>Module categories:</p>
 <ul>
 <li>Auxiliary (odds-n-ends)</li>
@@ -99,7 +99,7 @@ author: 100007
 <li>Stagers (small applications that establish a connection back to the attacker to download a larger, more complex payload)</li>
 <li>Stages (payloads designed to be downloaded by a stager; also indicated by the use of a <code class="language-plaintext highlighter-rouge">/</code> separating “shell” from the rest of the payload name, as in <code class="language-plaintext highlighter-rouge">shell/reverse_tcp</code>)</li>
 </ul>
-<h3 id="msfconsole">Msfconsole</h3>
+<h2 id="msfconsole">Msfconsole</h2>
 <p>You can use msfconsole as a shell, but there’s no redirect functionality.</p>
 <p>Use <code class="language-plaintext highlighter-rouge">history</code> to display a command history.</p>
 <p>All settings are scoped to the current module unless explicitly scoped globally (<code class="language-plaintext highlighter-rouge">set -g</code>).</p>
@@ -107,7 +107,7 @@ author: 100007
 <p>The <code class="language-plaintext highlighter-rouge">back</code> command leaves the context of the current module.</p>
 <p>Use <code class="language-plaintext highlighter-rouge">info</code> to get module information (which is not generally the same as “help”, though it often does contain useful informaiton).</p>
 <p>We can limit the <code class="language-plaintext highlighter-rouge">search</code> query to a particular type of module using the <code class="language-plaintext highlighter-rouge">type:</code> parameter (e.g., <code class="language-plaintext highlighter-rouge">search type:exploit wordpress</code>).</p>
-<h3 id="working-with-modules">Working with Modules</h3>
+<h2 id="working-with-modules">Working with Modules</h2>
 <p>The common <code class="language-plaintext highlighter-rouge">RHOSTS</code> module option accepts IP addresses, ranges, CIDR networks, and even a file with one target per line (specify as <code class="language-plaintext highlighter-rouge">file:/path/to/file.txt</code>).</p>
 <p>Note that the <code class="language-plaintext highlighter-rouge">PAYLOAD</code> and <code class="language-plaintext highlighter-rouge">SESSION</code> parameters are not generally listed by <code class="language-plaintext highlighter-rouge">show options</code>, but can still be set if desired.</p>
 <p>You can reset individual parameters using <code class="language-plaintext highlighter-rouge">unset</code>, and reset the entire module using <code class="language-plaintext highlighter-rouge">unset all</code>.</p>

@@ -1,6 +1,6 @@
 ---
 title: 'TryHackMe: Complete Beginner (Supplements)'
-date: 2021-11-28 06:00:00.000000000 Z
+date: 2021-11-28 12:00:00.000000000 Z
 layout: post-external
 original_link: https://cardboard-iguana.com/log/2021-11-28-tryhackme-complete-beginner-supplements.html
 author: 100007
@@ -9,8 +9,8 @@ author: 100007
 <h1 id="tryhackme-complete-beginner-supplements">TryHackMe: Complete Beginner (Supplements)</h1>
 <p><strong>author:</strong> Nathan Acks<br />
 <strong>date:</strong> 2021-11-28</p>
-<h2 id="cross-site-scripting">Cross-Site Scripting</h2>
-<h3 id="introduction">Introduction</h3>
+<h1 id="cross-site-scripting">Cross-Site Scripting</h1>
+<h2 id="introduction">Introduction</h2>
 <p>Two basic types:</p>
 <ul>
 <li>Reflected XSS attacks occur when a page incorporates (but does not store) user content submitted via GET variables (for example, when searching). These attacks are not persistent, and because they must (generally? always?) be encoded in a URL they require some degree of target “cooperation”.</li>
@@ -21,25 +21,25 @@ author: 100007
 <ul>
 <li><a href="https://cardboard-iguana.com/notes/xss-attacks.html">XSS (Cross Site Scripting) Attacks</a></li>
 </ul>
-<h3 id="stored-xss">Stored XSS</h3>
+<h2 id="stored-xss">Stored XSS</h2>
 <p>Cookies can be accessed in JavaScript via document.cookie.</p>
 <p>It’s worth noting that <code class="language-plaintext highlighter-rouge">&lt;script/&gt;</code> tags are automatically interpreted as JavaScript these days, so there’s no need to add <code class="language-plaintext highlighter-rouge">type="application/javascript"</code> anymore.</p>
 <p>NOTE: I just looked up the flag for the third question here, as I wasn’t able to change the title with either <code class="language-plaintext highlighter-rouge">document.getElementById("thm-title").innerHTML = "I am a hacker"</code> or <code class="language-plaintext highlighter-rouge">document.querySelector("#thm-title").textContent = "I am a hacker"</code> (both of which should work, both of which <em>do</em> work on the console, and both of which are used in different walk-throughs). While there might be something in particular about my browser setup, I’ve also tried multiple browsers and haven’t been able to get this to work. I’m kind of stumped.</p>
 <p>I <em>also</em> can’t get <code class="language-plaintext highlighter-rouge">fetch()</code> or <code class="language-plaintext highlighter-rouge">window.location</code> directives to query a local Python web server. Using the playground’s built-in <code class="language-plaintext highlighter-rouge">/log/</code> facility (per the hint) <em>does</em> work… But running <code class="language-plaintext highlighter-rouge">document.cookie</code> directly produces output like <code class="language-plaintext highlighter-rouge">connect.sid=...</code>, but the line that appears in <code class="language-plaintext highlighter-rouge">/logs</code> is <code class="language-plaintext highlighter-rouge">connect.sid ...</code> (note the presence of a space rather than a <code class="language-plaintext highlighter-rouge">=</code>). This makes me think that there’s something funky and automated going on with this box, rather than me missing something.</p>
-<p>In any event, you can change the value of the cookies associated with a site in Firefox using the ”Storage” tab in the Web Developer Tools.</p>
+<p>In any event, you can change the value of the cookies associated with a site in Firefox using the “Storage” tab in the Web Developer Tools.</p>
 <ul>
 <li><a href="https://developer.mozilla.org/docs/Web/API/Document/cookie">Document.cookie (MDN Web Docs)</a></li>
 <li><a href="https://cardboard-iguana.com/notes/quick-n-dirty-python-web-server.html">Quick-n-Dirty Python Web Server</a></li>
 </ul>
-<h3 id="reflected-xss">Reflected XSS</h3>
+<h2 id="reflected-xss">Reflected XSS</h2>
 <p>This is the most common type of XSS attack.</p>
 <p>Note that CORS will generally prevent the use of online services for fetching data…</p>
-<h3 id="dom-based-xss">DOM-Based XSS</h3>
+<h2 id="dom-based-xss">DOM-Based XSS</h2>
 <p>So, this is basically SQL injection, but with HTML. The main trick here is that I’m finding that browsers (or at least all of <em>my</em> browsers) don’t seem to reliably execute JavaScript in <code class="language-plaintext highlighter-rouge">&lt;script/&gt;</code> tags that’s been inserted after the page load anymore. Using the <code class="language-plaintext highlighter-rouge">onmouseover</code> or <code class="language-plaintext highlighter-rouge">onclick</code> attribute seems to work reliably (the <code class="language-plaintext highlighter-rouge">onload</code> attribute does not, however).</p>
 <p>This may explain all of the trouble I had above.</p>
-<h3 id="using-xss-for-ip-and-port-scanning">Using XSS for IP and Port Scanning</h3>
+<h2 id="using-xss-for-ip-and-port-scanning">Using XSS for IP and Port Scanning</h2>
 <p><a href="https://github.com/aabeling/portscan">An example JavaScript port scanner (possibly broken).</a></p>
-<h3 id="xss-keylogger">XSS Keylogger</h3>
+<h2 id="xss-keylogger">XSS Keylogger</h2>
 <p>A simple JavaScript keylogger:</p>
 <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;</span>
 <span class="kd">let</span> <span class="nx">l</span> <span class="o">=</span> <span class="dl">""</span><span class="p">;</span>
@@ -50,9 +50,9 @@ author: 100007
 <span class="nt">&lt;/script&gt;</span>
 </code></pre></div></div>
 <p>This only logs to the browser console though; a real keylogger would send this information to an external server or some-such.</p>
-<h3 id="filter-evasion-bypass-script-tag-removal">Filter Evasion: Bypass <code class="language-plaintext highlighter-rouge">&lt;script/&gt;</code> Tag Removal</h3>
+<h2 id="filter-evasion-bypass-script-tag-removal">Filter Evasion: Bypass <code class="language-plaintext highlighter-rouge">&lt;script/&gt;</code> Tag Removal</h2>
 <p>Use <code class="language-plaintext highlighter-rouge">onmouseover</code>, <code class="language-plaintext highlighter-rouge">onclick</code>, etc.</p>
-<h3 id="filter-evasion-bypass-simple-word-filtering">Filter Evasion: Bypass Simple Word Filtering</h3>
+<h2 id="filter-evasion-bypass-simple-word-filtering">Filter Evasion: Bypass Simple Word Filtering</h2>
 <p>In general, you can break up strings to get around this.</p>
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">alert</span><span class="p">(</span><span class="dl">"</span><span class="s2">H</span><span class="dl">"</span> <span class="o">+</span> <span class="dl">"</span><span class="s2">ello</span><span class="dl">"</span><span class="p">)</span>
 </code></pre></div></div>
@@ -67,27 +67,27 @@ author: 100007
 </code></pre></div></div>
 <p>(Note that things like the JavaScript Obfuscator Tool won’t always remove functions and strings, as they tend to be geared more towards thwarting script analysis than bypassing filters.)</p>
 <p>Remember that JavaScript recognizes single quote, double quotes, <em>and</em> back ticks all as valid string quoting characters!</p>
-<p>(Mind you, none of these methods provided flags for the two questions in this part of the task. And when I went looking for other write-ups, the alternate solutions that do work — which involve using alternate functions like <code class="language-plaintext highlighter-rouge">prompt()</code> or <code class="language-plaintext highlighter-rouge">confirm()</code> and abusing the filtering of “Hello” to reconstruct the word being filtered — don’t strike me as particularly generalizable. So I like the ideas above — which all work! — better, even if the XSS Playground doesn’t recognize them as “valid” solutions.)</p>
+<p>(Mind you, none of these methods provided flags for the two questions in this part of the task. And when I went looking for other write-ups, the alternate solutions that do work - which involve using alternate functions like <code class="language-plaintext highlighter-rouge">prompt()</code> or <code class="language-plaintext highlighter-rouge">confirm()</code> and abusing the filtering of “Hello” to reconstruct the word being filtered - don’t strike me as particularly generalizable. So I like the ideas above - which all work! - better, even if the XSS Playground doesn’t recognize them as “valid” solutions.)</p>
 <ul>
 <li><a href="http://www.jsfuck.com/">JSFuck</a></li>
 <li><a href="https://obfuscator.io/">JavaScript Obfuscator Tool</a></li>
 </ul>
-<h3 id="filter-evasion-bypass-attribute-and-tag-and-word-filtering">Filter Evasion: Bypass Attribute AND Tag AND Word Filtering</h3>
+<h2 id="filter-evasion-bypass-attribute-and-tag-and-word-filtering">Filter Evasion: Bypass Attribute AND Tag AND Word Filtering</h2>
 <p>Remember that it’s possible to embed JavaScript in an iframe, at least so long as you don’t mind losing access to the parent page’s DOM.</p>
 <p>Also remember that browsers treat URI schemes, HTML tag names, and HTML tag attributes in a case-insensitive fashion (so, <code class="language-plaintext highlighter-rouge">javascript:</code> is treated the same as <code class="language-plaintext highlighter-rouge">javaSCRIPT:</code>, <code class="language-plaintext highlighter-rouge">onclick</code> is treated the same as <code class="language-plaintext highlighter-rouge">ONCLICK</code>, etc.).</p>
 <ul>
 <li><a href="https://cardboard-iguana.com/notes/xss-attacks.html">XSS (Cross Site Scripting) Attacks</a></li>
 </ul>
-<h2 id="cc-pen-testing">CC: Pen Testing</h2>
-<h3 id="netcat">Netcat</h3>
+<h1 id="cc-pen-testing">CC: Pen Testing</h1>
+<h2 id="netcat">Netcat</h2>
 <p>Netcat can connect over UDP instead of TCP by providing the <code class="language-plaintext highlighter-rouge">-u</code> flag. I suspect that this may be less than reliable though for anything other than connections on the local network.</p>
 <ul>
 <li><a href="https://cardboard-iguana.com/notes/netcat.html">Using “netcat”</a></li>
 </ul>
-<h3 id="gobuster">GoBuster</h3>
+<h2 id="gobuster">GoBuster</h2>
 <p>Gobuster can also attempt to brute-force subdomains (the <code class="language-plaintext highlighter-rouge">dns</code> command).</p>
 <p>Increasing threads (<code class="language-plaintext highlighter-rouge">-t</code>) in gobuster makes a <em>big</em> difference in performance. (Probably makes you noisier too…)</p>
-<h3 id="nikto">Nikto</h3>
+<h2 id="nikto">Nikto</h2>
 <p>Nikto is a web application vulnerability scanner.</p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nikto <span class="nt">-h</span> <span class="c"># Short help</span>
 nikto <span class="nt">-H</span> <span class="c"># Long help (all commands)</span>

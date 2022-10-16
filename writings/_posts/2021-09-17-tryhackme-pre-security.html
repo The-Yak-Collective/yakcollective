@@ -1,6 +1,6 @@
 ---
 title: 'TryHackMe: Pre Security'
-date: 2021-09-17 05:00:00.000000000 Z
+date: 2021-09-17 12:00:00.000000000 Z
 layout: post-external
 original_link: https://cardboard-iguana.com/log/2021-09-17-tryhackme-pre-security.html
 author: 100007
@@ -9,59 +9,35 @@ author: 100007
 <h1 id="tryhackme-pre-security">TryHackMe: Pre Security</h1>
 <p><strong>author:</strong> Nathan Acks<br />
 <strong>date:</strong> 2021-09-17</p>
-<h2 id="the-file-system">The File System</h2>
+<h1 id="the-file-system">The File System</h1>
 <p>NTFS stands for the “New Technology File System”. <em>Very</em> old versions of Windows NT (<em>before</em> FAT32) used HPFS (the “High Performance File System”).</p>
 <p>NTFS actually natively supports file-level encryption via EFS (“Encryption File System”).</p>
 <p>NTFS is actually a forking file system like HFS. Microsoft calls these forks “alternate data streams” (ADS), and there is always at least one stream (called $DATA) that holds the actual file contents. (ADS is, for example, used to store the “mark of the web”.) While the File Explorer doesn’t display ADS stream information, it can be accessed from Powershell.</p>
-<p>Windows permissions:</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left">Permission</th>
-<th style="text-align: left">Meaning for Folders.</th>
-<th style="text-align: left">Meaning for Files</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left">Read</td>
-<td style="text-align: left">Permits viewing and listing of files and subfolders</td>
-<td style="text-align: left">Permits viewing or accessing of the file’s contents</td>
-</tr>
-<tr>
-<td style="text-align: left">Write</td>
-<td style="text-align: left">Permits adding of files and subfolders</td>
-<td style="text-align: left">Permits writing to a file.</td>
-</tr>
-<tr>
-<td style="text-align: left">Read &amp; Execute</td>
-<td style="text-align: left">Permits viewing and listing of files and subfolders as well as executing of files; inherited by files and folders</td>
-<td style="text-align: left">Permits viewing and accessing of the file’s contents as well as executing of the file</td>
-</tr>
-<tr>
-<td style="text-align: left">List Folder Contents</td>
-<td style="text-align: left">Permits viewing and listing of files and subfolders as well as executing of files; inherited by folders only</td>
-<td style="text-align: left">N/A</td>
-</tr>
-<tr>
-<td style="text-align: left">Modify</td>
-<td style="text-align: left">Permits reading and writing of files and subfolders; allows deletion of the folder</td>
-<td style="text-align: left">Permits reading and writing of the file; allows deletion of the file.</td>
-</tr>
-<tr>
-<td style="text-align: left">Full Control</td>
-<td style="text-align: left">Permits reading, writing, changing, and deleting of files and subfolders</td>
-<td style="text-align: left">Permits reading, writing, changing and deleting of the file.</td>
-</tr>
-</tbody>
-</table>
+<p>Windows permissions for folders:</p>
+<ul>
+<li>Read - Permits viewing and listing of files and subfolders</li>
+<li>Write - Permits adding of files and subfolders</li>
+<li>Read &amp; Execute - Permits viewing and listing of files and subfolders as well as executing of files; inherited by files and folders</li>
+<li>List Folder Contents - Permits viewing and listing of files and subfolders as well as executing of files; inherited by folders only</li>
+<li>Modify - Permits reading and writing of files and subfolders; allows deletion of the folder</li>
+<li>Full Control - Permits reading, writing, changing, and deleting of files and subfolders</li>
+</ul>
+<p>Windows permissions for files:</p>
+<ul>
+<li>Read - Permits viewing or accessing of the file’s contents</li>
+<li>Write - Permits writing to a file</li>
+<li>Read &amp; Execute - Permits viewing and accessing of the file’s contents as well as executing of the file</li>
+<li>List Folder Contents - N/A</li>
+<li>Modify - Permits reading and writing of the file; allows deletion of the file</li>
+<li>Full Control - Permits reading, writing, changing and deleting of the file</li>
+</ul>
 <p>Windows access is default-deny.</p>
-<h2 id="the-windowssystem32-folder">The Windows/System32 Folder</h2>
+<h1 id="the-windowssystem32-folder">The Windows/System32 Folder</h1>
 <p>Variable that stores the path to the (“central”) Windows installation directory: %WINDIR%.</p>
-<h2 id="user-accounts-profiles-and-permissions">User Accounts, Profiles, and Permissions</h2>
+<h1 id="user-accounts-profiles-and-permissions">User Accounts, Profiles, and Permissions</h1>
 <p>“Profiles” are the Windows equivalent of UNIX home directories. Profile directories aren’t created on Windows until a user’s first login.</p>
 <p>Windows users and groups can be more directly manipulated through the “Local User and Group Management” snap-in, lusrmgr.msc.</p>
-<h2 id="user-account-control">User Account Control</h2>
-<p>a.k.a ”UAC”</p>
-<h2 id="task-manager">Task Manager</h2>
+<h1 id="user-account-control">User Account Control</h1>
+<p>a.k.a “UAC”</p>
+<h1 id="task-manager">Task Manager</h1>
 <p>Task Manager shortcut: Ctrl+Shift+Esc</p>

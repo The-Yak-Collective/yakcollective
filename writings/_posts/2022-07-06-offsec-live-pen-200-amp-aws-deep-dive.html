@@ -1,6 +1,6 @@
 ---
 title: 'OffSec Live: PEN-200 &amp; AWS Deep Dive'
-date: 2022-07-06 05:00:00.000000000 Z
+date: 2022-07-06 12:00:00.000000000 Z
 layout: post-external
 original_link: https://cardboard-iguana.com/log/2022-07-06-offsec-live-pen-200-and-aws-deep-dive.html
 author: 100007
@@ -10,224 +10,38 @@ author: 100007
 <p><strong>author:</strong> Nathan Acks<br />
 <strong>date:</strong> 2022-07-06</p>
 <p>Another entry written in two parts. As before, the OffSec Live class notes were in the morning and the “AWS Cloud Practitioner Essentials” notes are from the evening.</p>
-<p>REFERENCES:</p>
 <ul>
 <li><a href="https://www.offensive-security.com/offsec/offsec-live/">OffSec Live</a></li>
 <li><a href="https://www.twitch.tv/offsecofficial">OffSecOfficial Twitch Channel</a></li>
 <li><a href="https://www.aws.training/learningobject/curriculum?id=27076">AWS Cloud Practitioner Essentials</a></li>
 </ul>
-<h2 id="offsec-live-basic-tools-part-2">OffSec Live: Basic Tools, Part 2</h2>
+<h1 id="offsec-live-basic-tools-part-2">OffSec Live: Basic Tools, Part 2</h1>
 <p>(As is becoming normal, I missed some of the beginning of this. Though this time I was late because of technical difficulties, rather than poor planning.)</p>
-<h3 id="nmap--wireshark">NMAP &amp; Wireshark</h3>
-<ul>
-<li>Nmap host discovery scans use the following tests (in order) for host discovery: ICMP ping, port 443, port 80, ICMP timestamp. Note that ICMP packets can only be sent when nmap is run with root privileges.</li>
-<li>Even nmap’s host discovery scan (when run as root) can miss windows hosts. OffSec recommends supplementing this with a full scan of the top 10 most common ports with host discovery disabled (<code class="language-plaintext highlighter-rouge">--top-ports 10 -Pn</code>), as well as perhaps using a tool like <code class="language-plaintext highlighter-rouge">arping</code> (if you’re on the same network, of course).</li>
-<li>Windows will respond to connections to closed ports with a RST packet <em>if</em> the firewall is down. (If the firewall is up, it will simply <em>not</em> respond.)</li>
-</ul>
-<p>REFERENCES:</p>
+<h2 id="nmap--wireshark">NMAP &amp; Wireshark</h2>
+<p>Nmap host discovery scans use the following tests (in order) for host discovery: ICMP ping, port 443, port 80, ICMP timestamp. Note that ICMP packets can only be sent when nmap is run with root privileges.</p>
+<p>Even nmap’s host discovery scan (when run as root) can miss windows hosts. OffSec recommends supplementing this with a full scan of the top 10 most common ports with host discovery disabled (<code class="language-plaintext highlighter-rouge">--top-ports 10 -Pn</code>), as well as perhaps using a tool like <code class="language-plaintext highlighter-rouge">arping</code> (if you’re on the same network, of course).</p>
+<p>Windows will respond to connections to closed ports with a RST packet <em>if</em> the firewall is down. (If the firewall is up, it will simply <em>not</em> respond.)</p>
 <ul>
 <li><a href="https://cardboard-iguana.com/notes/nmap.html">Using “nmap”</a></li>
 </ul>
-<h2 id="global-infrastructure-and-reliability">Global Infrastructure and Reliability</h2>
+<h1 id="global-infrastructure-and-reliability">Global Infrastructure and Reliability</h1>
 <p>AWS controls (owns?) the fiber connections between data centers and regions.</p>
 <p>Features are sometimes deployed on a region-by-region basis (generally if they’re hardware-dependent).</p>
 <p>“Availability zones” are comprised on one or more data centers that act together as a unit. Regions contain multiple availability zones (<em>at least</em> two), which are distributed geographically to make local disasters unlikely (but still close enough so that latency is negligable).</p>
 <p>AWS recommends running across at least two availability zones in a region.</p>
-<h3 id="edge-locations">Edge Locations</h3>
-<p>“Edge locations” are data centers that run services <em>apart</em> from regions — CloudFront, Route 53, and Outposts (on-prem AWS data centers). These are more distributed than actual availability zones, as the point is to get these services as close to the actual customers/users as possible.</p>
-<h3 id="provisioning-aws-resources">Provisioning AWS Resources</h3>
+<h2 id="edge-locations">Edge Locations</h2>
+<p>“Edge locations” are data centers that run services <em>apart</em> from regions - CloudFront, Route 53, and Outposts (on-prem AWS data centers). These are more distributed than actual availability zones, as the point is to get these services as close to the actual customers/users as possible.</p>
+<h2 id="provisioning-aws-resources">Provisioning AWS Resources</h2>
 <p>“Elastic Beanstalk” and “CloudFormation” are similar in purpose. The difference is that Beanstalk functions as an EC2-centric abstraction layer (think: Heroku), while CloudFormation supports more services and is a full “infrastructure as code” offering. (In fact, formally Beanstalk is an application that runs <em>on top of</em> CloudFormation!)</p>
-<p>REFERENCES:</p>
 <ul>
 <li><a href="https://stackoverflow.com/a/14429767">What is the difference between Elastic Beanstalk and CloudFormation for a .NET project?</a></li>
 <li><a href="https://aws.amazon.com/cloudformation/faqs/">AWS CloudFormation FAQs</a></li>
 </ul>
-<h2 id="networking">Networking</h2>
+<h1 id="networking">Networking</h1>
 <p>While “Internet Gateways” route public traffic into a VPC, “Virtual Private Gateways” take care of routing traffic from <em>private</em> networks (via a VPN).</p>
 <p>A third option for connecting a VPC is “Direct Connect”, which is a dedicated fiber line from an on-prem data center to AWS (and from there the appropriate VPC).</p>
 <p>VPCs can contain multiple Internet Gateways, Virtual Private Gateways, and Direct Connect lines, though each must be attached to its own distinct subnet (note, however, that a subnet does <em>not</em> need to have <em>any</em> of these features).</p>
-<h3 id="subnets-and-nacls">Subnets and NACLs</h3>
+<h2 id="subnets-and-nacls">Subnets and NACLs</h2>
 <p>All packets in AWS transiting between VPC subnets are checked using NACLs. Security groups provide EC2 instance level packet filtering. NACLs are stateless, while security groups are stateful (and always allow packets for established connections).</p>
-<h3 id="global-networking">Global Networking</h3>
+<h2 id="global-networking">Global Networking</h2>
 <p>Route 53 can provide geographically-dependent and load balanced DNS responses.</p>
-<!--
-## Storage and Databases
-==xxx==
-### EBS
-==xxx==
-### S3
-==xxx==
-### EFS
-==xxx==
-### RDS
-==xxx==
-### DynamoDB
-==xxx==
-### Redshift
-==xxx==
-### Database Migration Service
-==xxx==
-### Other AWS Database Services
-==xxx==
-## Security
-==xxx==
-### Shared Responsibility
-==xxx==
-### User Permissions
-==xxx==
-### AWS Organizations
-==xxx==
-### Compliance
-==xxx==
-### DoS Attacks
-==xxx==
-### Additional Security Services
-==xxx==
-## Monitoring and Analytics
-==xxx==
-### CloudWatch
-==xxx==
-### CloudTrail
-==xxx==
-### Trusted Advisor
-==xxx==
-## Pricing and Support
-==xxx==
-### Free Tier
-==xxx==
-### Pricing Concepts
-==xxx==
-### Billing Dashboard
-==xxx==
-### Consolidated Billing
-==xxx==
-### Budgets
-==xxx==
-### Cost Explorer
-==xxx==
-### Support Plans
-==xxx==
-### Marketplace
-==xxx==
-## Migration and Innovation
-==xxx==
-### Cloud Adoption Framework
-==xxx==
-### Migration Strategies
-==xxx==
-### The AWS Snow Family
-==xxx==
-### Innovate with AWS
-==xxx==
-## The Cloud Journey
-==xxx==
-### The AWS Well-Architected Framework
-==xxx==
-### Benefits of the AWS Cloud
-==xxx==
-## AWS Certified Cloud Practitioner Basics
-==xxx==
-## Course Final Assessment
-==xxx==
-## Feedback
-==xxx==
--->
-<!--
-## Amazon VPC: Security at the Speed of Light
-REFERENCES:
-* [AWS re:Invent 2018: Amazon VPC — Security at the Speed of Light (YouTube)](https://youtu.be/uhXalpNzPU4)
-## Amazon API Gateway
-REFERENCES:
-* [Amazon API Gateway: Developer Guide](https://aws.amazon.com/api-gateway/getting-started/)
-## AWS IAM Policies in a Nutshell
-REFERENCES:
-* [AWS IAM Policies in a Nutshell](https://start.jcolemorrison.com/aws-iam-policies-in-a-nutshell/)
-## DNS Demystified: Amazon Route 53
-REFERENCES:
-* [AWS re:Invent 2016: DNS Demystified — Amazon Route 53 (YouTube)](https://youtu.be/UP7wDBjZ37o)
-## Deep Dive on New Amazon EC2 Instances and Virtualization Technologies
-REFERENCES:
-* [Deep Dive on New Amazon EC2 Instances and Virtualization Technologies (YouTube)](https://youtu.be/AAq-DDbFiIE)
-## Another Day, Another Billion Packets
-REFERENCES:
-* [AWS re:Invent 2015: Another Day, Another Billion Packets (YouTube)](https://youtu.be/R-n4dDGfQd4)
-## A Serverless Journey: AWS Lambda Under the Hood
-REFERENCES:
-* [AWS re:Invent 2018: A Serverless Journey — AWS Lambda Under the Hood (YouTube)](https://youtu.be/3qln2u1Vr2E)
-## AWS IAM Privilege Escalation: Methods and Mitigation
-REFERENCES:
-* [AWS IAM Privilege Escalation — Methods and Mitigation](https://rhinosecuritylabs.com/aws/aws-privilege-escalation-methods-mitigation/)
-## AWS KMS Cryptographic Details
-REFERENCES:
-* [AWS KMS Cryptographic Details](https://docs.aws.amazon.com/kms/latest/cryptographic-details/intro.html)
-## AWS Well-Architected Framework
-REFERENCES:
-* [AWS Well-Architected Framework](https://docs.aws.amazon.com/wellarchitected/latest/framework/welcome.html)
-## AWS Networking Example
-REFERENCES:
-* [AWS — Networking Example](https://ardsec.blogspot.com/2018/09/networking-in-aws.html)
-## AWS Developer Tools
-REFERENCES:
-* [AWS — Developer Tools](https://ardsec.blogspot.com/2018/09/devops-in-aws.html)
-## Signature Version 4 Signing Process
-REFERENCES:
-* [Signature Version 4 signing process](https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html)
-## Introduction to the AWS CLI
-REFERENCES:
-* [AWS re:Invent 2017: Introduction to the AWS CLI (YouTube)](https://youtu.be/QdzV04T_kec)
--->
-<!-- (Walk through Learning Path 2 on the internal wiki.) -->
-<!--
-## AWS Compute Services
-REFERENCES:
-* [AWS — Compute Services](https://ardsec.blogspot.com/2019/05/aws-compute-services.html)
-## AWS Container Services
-REFERENCES:
-* [AWS — Container Services](https://ardsec.blogspot.com/2019/05/aws-compute-container-services.html)
-## AWS Storage Services
-REFERENCES:
-* [AWS — Storage Services](https://ardsec.blogspot.com/2019/05/aws-storage-services.html)
-## AWS Database Services
-REFERENCES:
-* [AWS — Database Services](https://ardsec.blogspot.com/2019/05/aws-database-services.html)
-## AWS Migration Services
-REFERENCES:
-* [AWS — Migration Services](https://ardsec.blogspot.com/2019/05/aws-migration-service.html)
-## AWS Networking Services
-REFERENCES:
-* [AWS — Networking Services](https://ardsec.blogspot.com/2019/05/aws-networking-services.html)
-## AWS Security, Identity, and Compliance
-REFERENCES:
-* [AWS — Security, Identity, and Compliance](https://ardsec.blogspot.com/2019/06/aws-security-identity-and-compliance.html)
--->
-<!-- Finish up the TryHackMe: Jr. Penetration Tester “Supplements” -->
-<!--
-## PortSwigger Web Security Academy
-(There are 210 total labs. I should try to do them all.)
-(Maybe I should just get the Burp Suite Certified Practitioner at this point? See: <https://portswigger.net/web-security/certification>.)
-REFERENCES:
-* [PortSwigger: Web Security Academy](https://portswigger.net/web-security/learning-path)
-### SQL Injection
-### Authentication
-### Directory Traversal
-### Command Injection
-### Business Logic Vulnerabilities
-### Information Disclosure
-### Access Control
-### File Upload Vulnerabilities
-### Server-Side Request Forgery (SSRF)
-### XXE Injection
-### Cross-Site Scripting (XSS)
-### Cross-Site Request Forgery (CSRF)
-### Cross-Origin Resource Sharing (CORS)
-### Clickjacking
-### DOM-Based Vulnerabilites
-### WebSockets
-### Insecure Deserialization
-### Server-Side Template Injection
-### Web Cache Poisoning
-### HTTP Host Header Attacks
-### HTTP Request Smuggling
-### OAuth Authentication
--->
-<!-- Resume my normally planned learning path. -->

@@ -1,0 +1,62 @@
+---
+title: AWS Deep Dive
+date: 2022-10-04 12:00:00.000000000 Z
+layout: post-external
+original_link: https://cardboard-iguana.com/log/2022-10-04-aws-deep-dive.html
+author: 100007
+---
+
+<h1 id="aws-deep-dive">AWS Deep Dive</h1>
+<p><strong>author:</strong> Nathan Acks<br />
+<strong>date:</strong> 2022-10-04</p>
+<h1 id="amazon-api-gateway">Amazon API Gateway</h1>
+<p>Notes about the Amazon API Gateway continue.</p>
+<h2 id="working-with-rest-apis">Working with REST APIs</h2>
+<ul>
+<li><a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-rest-api.html">Amazon API Gateway: Working with REST APIs</a></li>
+</ul>
+<h3 id="creating-a-rest-api-in-amazon-api-gateway-continued">Creating a REST API in Amazon API Gateway (Continued…)</h3>
+<p>In the API Gateway documentation, “request parameters” always means URL parameters (either GET variables or dynamic portions of the URL) or HTTP headers, while “request body” refers to JSON blobs that compose the, well, request body.</p>
+<p>For non-GET requests, JSON payloads can be defined as “models” using the JSON Schema specification. These are specified with the AWS CLI using the <code class="language-plaintext highlighter-rouge">--request-models</code> flag with the JSON blob <code class="language-plaintext highlighter-rouge">&#x007b;"media/type":"modelName"&#x007d;</code> (for example, <code class="language-plaintext highlighter-rouge">&#x007b;"application/json":"apiInputModel"&#x007d;</code>).</p>
+<p>Dynamic resource substrings can be specified using the <code class="language-plaintext highlighter-rouge">&#x007b;proxy+&#x007d;</code> notation (“proxy” can actually be any word). This functions like a wildcard, so <code class="language-plaintext highlighter-rouge">/foo/&#x007b;proxy+&#x007d;</code> functions like <code class="language-plaintext highlighter-rouge">/foo/*</code>. Proxy resources are passed as full strings, and can contain additional URL sub-paths (for example, <code class="language-plaintext highlighter-rouge">/foo/bar/baz/1000</code> will be passed as <code class="language-plaintext highlighter-rouge">bar/baz/1000</code>); it’s the backend’s responsibility to decompose the proxy string and respond appropriately. Proxy strings can’t have children (so <code class="language-plaintext highlighter-rouge">/foo/&#x007b;proxy+&#x007d;/&#x007b;itemId&#x007d;</code> is <em>not</em> permitted), but can have siblings (if <code class="language-plaintext highlighter-rouge">/foo/bar</code> is defined, then <code class="language-plaintext highlighter-rouge">&#x007b;proxy+&#x007d;</code> will <em>not</em> match <code class="language-plaintext highlighter-rouge">bar</code> and its children).</p>
+<p>Request parameter specs:</p>
+<ul>
+<li>method.request.path.foo - path parameter “foo”</li>
+<li>method.request.querystring.bar - GET variable “bar”</li>
+<li>method.request.header.baz - HTTP header “baz”</li>
+</ul>
+<p>Setting a request parameter to “true” when defining it marks it as required, while using “false” marks it as optional. Example AWS CLI call:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>aws apigateway put-method <span class="se">\</span>
+<span class="nt">--rest-api-id</span> vaz7da96z6 <span class="se">\</span>
+<span class="nt">--resource-id</span> 6sxz2j <span class="se">\</span>
+<span class="nt">--http-method</span> GET <span class="se">\</span>
+<span class="nt">--authorization-type</span> <span class="s2">"NONE"</span> <span class="se">\</span>
+<span class="nt">--region</span> us-west-2 <span class="se">\</span>
+<span class="nt">--request-parameters</span> <span class="s1">'&#x007b;
+"method.request.path.foo": true,
+"method.request.querystring.bar": false,
+"method.request.header.baz": false
+&#x007d;'</span>
+</code></pre></div></div>
+<p>If a request model is supplied, then a “validator” can also be set up in the API Gateway and then applied to incoming parameters, though only parameters marked as required can be validated.</p>
+<p>API Gateway supports the DELETE, GET, HEAD, OPTIONS, PATCH, POST, and PUT methods, as well as the special ANY method which will pass <em>all</em> methods to the same backend handler (like <code class="language-plaintext highlighter-rouge">&#x007b;proxy+&#x007d;</code>, in this case the backend becomes responsible for decomposing and properly handling the different verbs).</p>
+<p>The API Gateway can handle <em>some</em> authorization methods as well:</p>
+<ul>
+<li><code class="language-plaintext highlighter-rouge">NONE</code> - no authorization</li>
+<li><code class="language-plaintext highlighter-rouge">AWS_IAM</code> - use IAM</li>
+<li><code class="language-plaintext highlighter-rouge">CUSTOM</code> - use a Lambda function for authorization</li>
+<li><code class="language-plaintext highlighter-rouge">COGNITO_USER_POOLS</code> - use Amazon Cognito</li>
+</ul>
+<p>IAM authentication uses Sigv4; cross-account access to call APIs can only be granted indirectly via AssumerRole.</p>
+<p>Method responses can either be pre-configured mappings from the backend to the client (HTTP status code, response parameters, and a response model), or just directly proxy the backend response to the client. Defined method responses are chosen by matching the HTTP status code returned by the backend, with 500 returned for any unmapped backend responses. Note that response parameters are only necessary if the API Gateway is to map the backend responses - if not defined, then the backend response will simply be proxied. Response models are only necessary for automatic SDK generation.</p>
+<ul>
+<li><a href="https://cardboard-iguana.com/log/2022-10-02-aws-deep-dive.html">2022-10-02 - AWS Deep Dive (Creating a REST API in Amazon API Gateway, Part 1)</a></li>
+<li><a href="https://datatracker.ietf.org/doc/html/draft-zyp-json-schema-04">JSON Schema</a></li>
+<li><a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-create-api.html">Creating a REST API in Amazon API Gateway</a></li>
+</ul>
+<h3 id="controlling-and-managing-access-to-a-rest-api-in-api-gateway">Controlling and Managing Access to a REST API in API Gateway</h3>
+<p>Resource policies can be attached to APIs defined in the API Gateway in a similar fashion to S3.</p>
+<p>(To be continued…)</p>
+<ul>
+<li><a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-control-access-to-api.html">Controlling and managing access to a REST API in API Gateway</a></li>
+</ul>

@@ -1,6 +1,6 @@
 ---
 title: 'TryHackMe: Pre Security (Supplements)'
-date: 2021-09-23 05:00:00.000000000 Z
+date: 2021-09-23 12:00:00.000000000 Z
 layout: post-external
 original_link: https://cardboard-iguana.com/log/2021-09-23-tryhackme-pre-security-supplements.html
 author: 100007
@@ -9,22 +9,22 @@ author: 100007
 <h1 id="tryhackme-pre-security-supplements">TryHackMe: Pre Security (Supplements)</h1>
 <p><strong>author:</strong> Nathan Acks<br />
 <strong>date:</strong> 2021-09-23</p>
-<h2 id="core-windows-processes">Core Windows Processes</h2>
-<h3 id="task-manager">Task Manager</h3>
+<h1 id="core-windows-processes">Core Windows Processes</h1>
+<h2 id="task-manager">Task Manager</h2>
 <p>Windows categorizes all running programs into three broad buckets: Apps, Background processes, and Windows processes.</p>
 <p>In the “Processes” tab, the “Process name” column will give you the file name for the running process; “Image path name” provides similar information in the “Details” tab. In both tabs, the “Command line” column provides the full command used to launch the process.</p>
 <p>Task Manager doesn’t show parent process information; to get this (and more) requires third-party tools. This TryHackMe tutorial will be using “Process Hacker” and “Process Explorer” for this.</p>
 <p>In the Command Prompt, <code class="language-plaintext highlighter-rouge">tasklist.exe</code> is roughly equivalent to the Task Manager. In PowerShell, the <code class="language-plaintext highlighter-rouge">Get-Process</code> command (aliased to <code class="language-plaintext highlighter-rouge">ps</code>) will display a similar list of processes.</p>
-<h3 id="system">System</h3>
+<h2 id="system">System</h2>
 <p>The “System” process <em>always</em> has a PID of 4, and is where system (kernel) threads live (in effect, it <em>is</em> the kernel). Kernel-mode processes in Windows share a common address space and are not isolated from each other; if a thread in System crashes, it takes <em>everything</em> down with it. It used to be that all drivers lived in kernel-mode, though that’s (rightly!) been moved away from in recent years.</p>
 <p>Depending on how the Windows process hierarchy is defined, System either has no parent, or has the parent of the “System Idle Process” (which always has PID 0).</p>
 <ul>
 <li><a href="https://docs.microsoft.com/en-us/windows-hardware/drivers/gettingstarted/user-mode-and-kernel-mode">User mode and kernel mode</a></li>
 </ul>
-<h3 id="system--smssexe">System &gt; smss.exe</h3>
+<h2 id="system--smssexe">System &gt; smss.exe</h2>
 <p>This is the “Session Manager Subsystem”; it’s the first user-mode process created during startup. It manages the Win32 environment (which is most of what people interact with these days), starting both kernel-mode (win32k.sys) and user-mode (winsrv.dll) components. It also starts csrss.exe and wininit.exe in session 0.</p>
 <p>Only system processes live in session 0. New sessions (including user sessions) are created by smss.exe basically forking off to create a new session, starting csrss.exe and winlogon.exe for that session (wininit.exe <em>only</em> lives in session 0).</p>
 <p>The session manager also starts any required subsystems defined in the Required value of HKLM/System/CurrentControlSet/Control/Session Manager/Subsystems and sets all environment variables.</p>
 <p>The session manager is <em>always</em> a child process of System. Forks of smss.exe that start new sessions terminate almost immediately, though their children remain. Note that csrss.exe and wininit.exe are <em>also</em> started by a forked child of smss.exe that then terminates, rather than by the master smss.exe process itself.</p>
-<h3 id="csrssexe">csrss.exe</h3>
+<h2 id="csrssexe">csrss.exe</h2>
 <p>This is the “Client Server Runtime Process”. It manages the user-mode side of the Win32 subsystem, brokering API calls, mapping drives, and handling the session shutdown process. It is <em>only</em> ever a child of smss.exe.</p>

@@ -1,6 +1,6 @@
 ---
 title: 'TryHackMe: Complete Beginner'
-date: 2021-10-03 05:00:00.000000000 Z
+date: 2021-10-03 12:00:00.000000000 Z
 layout: post-external
 original_link: https://cardboard-iguana.com/log/2021-10-03-tryhackme-complete-beginner.html
 author: 100007
@@ -9,8 +9,8 @@ author: 100007
 <h1 id="tryhackme-complete-beginner">TryHackMe: Complete Beginner</h1>
 <p><strong>author:</strong> Nathan Acks<br />
 <strong>date:</strong> 2021-10-03</p>
-<h2 id="network-services">Network Services</h2>
-<h3 id="understanding-nfs">Understanding NFS</h3>
+<h1 id="network-services">Network Services</h1>
+<h2 id="understanding-nfs">Understanding NFS</h2>
 <p>NFS is part of the large family of local and network protocols that can be classified as “remote procedure calls” (RPCs).</p>
 <p>NFS file calls always include:</p>
 <ul>
@@ -24,7 +24,7 @@ author: 100007
 <ul>
 <li><a href="https://en.wikipedia.org/wiki/Remote_procedure_call">Remote procedure call (Wikipedia)</a></li>
 </ul>
-<h3 id="enumerating-nfs">Enumerating NFS</h3>
+<h2 id="enumerating-nfs">Enumerating NFS</h2>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># List NFS shares.</span>
 <span class="c">#</span>
 showmount <span class="nt">-e</span> <span class="nv">$SERVER_IP</span>
@@ -37,8 +37,8 @@ mount <span class="nt">-t</span> nfs <span class="k">$&#x007b;</span><span class
 <ul>
 <li><a href="https://racinpaper.com/auto-racing/what-is-nfs-port-number-in-linux.html">What is NFS port number in Linux?</a></li>
 </ul>
-<h3 id="exploiting-nfs">Exploiting NFS</h3>
-<p>By default NFS shares have “root squashing” turned on — attempts to connect as root are assigned to the least-privileged user nfsnobody. But if this is turned off, then it’s possible to set the SUID bit on a file.</p>
+<h2 id="exploiting-nfs">Exploiting NFS</h2>
+<p>By default NFS shares have “root squashing” turned on - attempts to connect as root are assigned to the least-privileged user nfsnobody. But if this is turned off, then it’s possible to set the SUID bit on a file.</p>
 <p>NOTE: I don’t see any way to identify that root squashing is disabled from the NMAP scan, so I think we’re just having to take it on faith that it is here. Either that, or this is just one of those “throw spaghetti against the wall and see what happens” times that I’ve run into before in online training CTFs (<em>cough</em> Bandit <em>cough</em>).</p>
 <p>So the idea here is:</p>
 <ul>
@@ -56,7 +56,7 @@ mount <span class="nt">-t</span> nfs <span class="k">$&#x007b;</span><span class
 <ul>
 <li><a href="https://cardboard-iguana.com/notes/overthewire-bandit.html">OverTheWire: Bandit</a></li>
 </ul>
-<h3 id="enumerating-smtp">Enumerating SMTP</h3>
+<h2 id="enumerating-smtp">Enumerating SMTP</h2>
 <p>SMTP user enumeration uses a combination of the VRFY (verify user/list), EXPN (expand user/list aliases), and RCPT TO (receipt destination).</p>
 <p>Instead of (just) using nmap this time, we’re going to layer in the Metasploit smtp_version and smtp_enum modules!</p>
 <p>Basic Metasploit flow:</p>
@@ -65,7 +65,7 @@ mount <span class="nt">-t</span> nfs <span class="k">$&#x007b;</span><span class
 <li><code class="language-plaintext highlighter-rouge">set $OPTIONS</code></li>
 <li><code class="language-plaintext highlighter-rouge">run</code></li>
 </ul>
-<h3 id="exploiting-smtp">Exploiting SMTP</h3>
+<h2 id="exploiting-smtp">Exploiting SMTP</h2>
 <p>Now we’re going to use Hydra to try to brute-force an SSH password. This looks a lot like using Hydra to brute-force an FTP password.</p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>hydra <span class="nt">-t</span> 4 <span class="nt">-l</span> <span class="nv">$USER_NAME</span> <span class="nt">-P</span> <span class="nv">$WORDLIST</span> <span class="se">\</span>
 <span class="nt">-vV</span> <span class="nv">$TARGET_IP_ADDRESS</span> ssh
@@ -74,11 +74,11 @@ mount <span class="nt">-t</span> nfs <span class="k">$&#x007b;</span><span class
 <ul>
 <li><a href="https://cardboard-iguana.com/log/2021-10-02-tryhackme-complete-beginner.html">2021-10-02 - TryHackMe: Complete Beginner</a></li>
 </ul>
-<h3 id="understanding-mysql">Understanding MySQL</h3>
+<h2 id="understanding-mysql">Understanding MySQL</h2>
 <p>Interesting. According to TryHackMe (and a quick search seems to confirm), Facebook uses MySQL as its backend.</p>
-<h3 id="enumerating-mysql">Enumerating MySQL</h3>
-<p>The Metasploit package for ”enumerating” MySQL data is mysql_sql, but this looks like it’s just a thin wrapper around the mysql client.</p>
-<h3 id="exploiting-mysql">Exploiting MySQL</h3>
+<h2 id="enumerating-mysql">Enumerating MySQL</h2>
+<p>The Metasploit package for “enumerating” MySQL data is mysql_sql, but this looks like it’s just a thin wrapper around the mysql client.</p>
+<h2 id="exploiting-mysql">Exploiting MySQL</h2>
 <p>In PL/SQL, “schema” represents only those parts of a database that are owned (writable?) by a particular user.</p>
 <p>The output of the mysql_hashdump Metasploit module is username:password tuples that are suitable for pushing straight into John the Ripper (simply save one or more hashes to a file and then run <code class="language-plaintext highlighter-rouge">john $FILE</code>).</p>
 <p>That said, basically this was all the same as running:</p>
@@ -90,51 +90,29 @@ account_locked
 FROM mysql.user\G
 </code></pre>
 <p>NOTE: John the Ripper records cracked hash:password tuples in ~/.john/john.pot, and then references this file to avoid cracking known hashes. It <em>doesn’t</em> output these passwords again (instead simply declaring “[n]o password hashes left to crack”), so if you get no output then you’ll want to just grep for your hash in john.pot.</p>
-<h2 id="web-fundamentals">Web Fundamentals</h2>
-<h3 id="how-do-we-load-websites">How Do We Load Websites?</h3>
+<h1 id="web-fundamentals">Web Fundamentals</h1>
+<h2 id="how-do-we-load-websites">How Do We Load Websites?</h2>
 <p>Different request types in HTTP are called “verbs”.</p>
-<h3 id="more-http-verbs-and-request-formats">More HTTP: Verbs and Request Formats</h3>
+<h2 id="more-http-verbs-and-request-formats">More HTTP: Verbs and Request Formats</h2>
 <p>HTTP “verbs” are also called “methods”, which is a term I’m more familiar with. There are 9 total methods, but the most common are GET (retrieve data) and POST (send data).</p>
 <p>All HTTP requests begin with a line of the form <code class="language-plaintext highlighter-rouge">$METHOD $SERVER_PATH $OPTIONAL_PROTOCOL VERSION</code> (for example, <code class="language-plaintext highlighter-rouge">GET /index.html HTTP/1.1</code>). Request bodies are permitted for all methods, but are normally ignored for GET (really only the headers matter for GET).</p>
 <p>HTTP responses start out with the line <code class="language-plaintext highlighter-rouge">$PROTOCOL_VERSION $RESPONSE_CODE $OPTIONAL_SERVER_DEFINED_MESSAGE</code> (for example, <code class="language-plaintext highlighter-rouge">HTTP/1.1 200 OK</code>).</p>
 <p>HTTP response codes:</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: center">Block</th>
-<th style="text-align: left">Purpose</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center">100 - 199</td>
-<td style="text-align: left">Informational response (uncommon).</td>
-</tr>
-<tr>
-<td style="text-align: center">200 - 299</td>
-<td style="text-align: left">Success</td>
-</tr>
-<tr>
-<td style="text-align: center">300 - 399</td>
-<td style="text-align: left">Redirects</td>
-</tr>
-<tr>
-<td style="text-align: center">400 - 499</td>
-<td style="text-align: left">Client errors (problems with the request content)</td>
-</tr>
-<tr>
-<td style="text-align: center">500 - 599</td>
-<td style="text-align: left">Server errors (problems with processing the request)</td>
-</tr>
-</tbody>
-</table>
+<ul>
+<li>100 - 199 - Informational response (uncommon)</li>
+<li>200 - 299 - Success</li>
+<li>300 - 399 - Redirects</li>
+<li>400 - 499 - Client errors (problems with the request content)</li>
+<li>500 - 599 - Server errors (problems with processing the request)</li>
+</ul>
+<p>Note that the server-defined message cannot include any line breaks.</p>
 <ul>
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status">HTTP response status codes</a></li>
 </ul>
-<h3 id="mini-ctf">Mini CTF</h3>
+<h2 id="mini-ctf">Mini CTF</h2>
 <p>Useful cURL flags:</p>
 <ul>
-<li><code class="language-plaintext highlighter-rouge">-v</code> — show full transaction, including headers (not just response bodies).</li>
-<li><code class="language-plaintext highlighter-rouge">--data "$DATA"</code> — send $DATA as the request body.</li>
-<li><code class="language-plaintext highlighter-rouge">--cookie "$&#x007b;COOKIE_NAME&#x007d;=$&#x007b;COOKIE_VALUE&#x007d;"</code> — send a cookie.</li>
+<li><code class="language-plaintext highlighter-rouge">-v</code> - show full transaction, including headers (not just response bodies).</li>
+<li><code class="language-plaintext highlighter-rouge">--data "$DATA"</code> - send $DATA as the request body.</li>
+<li><code class="language-plaintext highlighter-rouge">--cookie "$&#x007b;COOKIE_NAME&#x007d;=$&#x007b;COOKIE_VALUE&#x007d;"</code> - send a cookie.</li>
 </ul>

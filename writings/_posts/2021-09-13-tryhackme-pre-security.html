@@ -1,6 +1,6 @@
 ---
 title: 'TryHackMe: Pre Security'
-date: 2021-09-13 05:00:00.000000000 Z
+date: 2021-09-13 12:00:00.000000000 Z
 layout: post-external
 original_link: https://cardboard-iguana.com/log/2021-09-13-tryhackme-pre-security.html
 author: 100007
@@ -9,28 +9,28 @@ author: 100007
 <h1 id="tryhackme-pre-security">TryHackMe: Pre Security</h1>
 <p><strong>author:</strong> Nathan Acks<br />
 <strong>date:</strong> 2021-09-13</p>
-<h2 id="intro-to-lan">Intro to LAN</h2>
-<h3 id="introducing-lan-topologies">Introducing LAN Topologies</h3>
+<h1 id="intro-to-lan">Intro to LAN</h1>
+<h2 id="introducing-lan-topologies">Introducing LAN Topologies</h2>
 <p>Some common network topologies:</p>
 <ul>
-<li>”Star” topologies comprise the hierarchical branching networks most commonly seen today. It’s actually quite expensive relative to other topologies (because of the specialized hardware), and switches become a central point of failure, but its hierarchical nature makes it very scalable.</li>
-<li>“Bus” topologies hang all machines off of a single “backbone” cable. Data travels in both directions down the cable, and machines listen for packets meant for them — a design prone to contention. But they <em>are</em> cheap.</li>
+<li>“Star” topologies comprise the hierarchical branching networks most commonly seen today. It’s actually quite expensive relative to other topologies (because of the specialized hardware), and switches become a central point of failure, but its hierarchical nature makes it very scalable.</li>
+<li>“Bus” topologies hang all machines off of a single “backbone” cable. Data travels in both directions down the cable, and machines listen for packets meant for them - a design prone to contention. But they <em>are</em> cheap.</li>
 <li>“(Token) Ring” topologies are, well, big rings. Data flows in only one direction, which makes them very efficient, but any break severs the <em>two</em>-way connectivity of <em>every</em> machine. (I know that the phone networks are designed similarly to this, but use two rings running in opposite directions to work around this flaw.)</li>
 </ul>
 <p>Key hardware terminology:</p>
 <ul>
 <li>“Hubs” are dumb devices that just repeat every packet they see in one port on every other port.</li>
 <li>“Switches” are a bit smarter, keeping track of which machines are connected to which port and making sure that packets get routed only to those ports where destination machines are reachable.</li>
-<li>“Routers” are switches that understand larger topologies — not just “which machine is connected to me?”, but also “which networks are connected to me?”</li>
+<li>“Routers” are switches that understand larger topologies - not just “which machine is connected to me?”, but also “which networks are connected to me?”</li>
 </ul>
 <p>While switches don’t (necessarily) know about IP addresses, the correspondence here is fairly clear: Switches generally handle devices on the same subnet (since each device expects to be able to directly communicate with all subnet IPs), while routers bridge (provide the “gateway” to) different subnets. This starts to get a little muddled when dealing with things like VLANs, though if you think of a VLAN-aware switch as a stack of “virtual switches” it helps.</p>
-<h3 id="a-primer-on-subnetting">A Primer on Subnetting</h3>
+<h2 id="a-primer-on-subnetting">A Primer on Subnetting</h2>
 <p>Subnetting is typically used to segment networks by function.</p>
 <p>The “network address” of a subnet is the first IP address available in the subnet, and is used to identify the network.</p>
-<h3 id="the-arp-protocol">The ARP Protocol</h3>
+<h2 id="the-arp-protocol">The ARP Protocol</h2>
 <p>The ARP (Address Resolution Protocol) protocol is used to associate IP addresses with MAC addresses. Devices use ARP to determine the machine that responds to a particular IP address. Doing this every time a packet needs to be sent would get costly both in terms of network bandwidth and compute power, so devices will cache MAC-to-IP relationships (physical-to-logical identifiers) for some time after initial discovery.</p>
 <p>ARP uses a two-step exchange: The device looking for an IP address will broadcast an ARP request to the entire network looking for a machine that responds to a given IP address. Then <em>only</em> the machine with that IP address will send an ARP reply, however.</p>
-<h3 id="the-dhcp-protocol">The DHCP Protocol</h3>
+<h2 id="the-dhcp-protocol">The DHCP Protocol</h2>
 <p>“DHCP” stands for “Dynamic Host Configuration Protocol”.</p>
 <p>DHCP uses a four-step exchange:</p>
 <ul>
@@ -39,8 +39,8 @@ author: 100007
 <li>The device accepts this IP address by replying with a DHCP request.</li>
 <li>The server then acknowledges the request with a DHCP ACK, which includes how long the device may use the offered IP address before repeating this process.</li>
 </ul>
-<h2 id="osi-model">OSI Model</h2>
-<h3 id="what-is-the-osi-model">What is the OSI Model?</h3>
+<h1 id="osi-model">OSI Model</h1>
+<h2 id="what-is-the-osi-model">What is the OSI Model?</h2>
 <p>OSI stands for “Open Systems Interconnection”; it is a seven-layer model that describes all parts of the network stack (though sometimes I’ve heard the user referred to as “layer 8”). The idea is that segmenting responsibilities by layer allows for more uniform network and device behavior.</p>
 <ul>
 <li>Layer 7: Application (highest)</li>
@@ -52,20 +52,20 @@ author: 100007
 <li>Layer 1: Physical (lowest)</li>
 </ul>
 <p>Higher layers extend (“encapsulate”) lower layers.</p>
-<h3 id="layer-7-application">Layer 7: Application</h3>
+<h2 id="layer-7-application">Layer 7: Application</h2>
 <p>The application layer determines how the user interacts with data. This is where, well, user-facing applications live.</p>
 <p>More or less anything goes at the application layer.</p>
-<h3 id="layer-6-presentation">Layer 6: Presentation</h3>
+<h2 id="layer-6-presentation">Layer 6: Presentation</h2>
 <p>The presentation layer is where data standards live. What does an email look like? How is HTTP structured? Etc.</p>
 <p>In general, this is the layer where security features like SSL are layered on.</p>
-<h3 id="layer-5-session">Layer 5: Session</h3>
-<p>The session layer is responsible for actually connecting two machines and transmitting the data between them. Data is transmitted in a “session” — a successful connection between two systems.</p>
+<h2 id="layer-5-session">Layer 5: Session</h2>
+<p>The session layer is responsible for actually connecting two machines and transmitting the data between them. Data is transmitted in a “session” - a successful connection between two systems.</p>
 <p>This is the layer where packets live.</p>
-<h3 id="layer-4-transport">Layer 4: Transport</h3>
+<h2 id="layer-4-transport">Layer 4: Transport</h2>
 <p>The transport layer determines <em>how</em> data is sent in a session. This is where TCP and UDP (as protocols) live.</p>
 <p>TCP stands for “Transmission Control Protocol”.</p>
 <p>UDP stands for “User Datagram Protocol”. One of the key aspects of UDP is that the <em>application</em> layer gets to decide how quickly packets are sent in a given session. ARP and DHCP both operate over UDP.</p>
-<h3 id="layer-3-network">Layer 3: Network</h3>
+<h2 id="layer-3-network">Layer 3: Network</h2>
 <p>This is the layer routers live at, and is where packets of data are assembled and disassembled.</p>
 <p>Two key routing protocols:</p>
 <ul>
@@ -73,17 +73,17 @@ author: 100007
 <li>RIP (Routing Information Protocol)</li>
 </ul>
 <p>The network layer is (mostly) the one that uses IP addresses; typically it is in this layer that data is handed off from the computer to the larger network.</p>
-<h3 id="layer-2-data-link">Layer 2: Data Link</h3>
+<h2 id="layer-2-data-link">Layer 2: Data Link</h2>
 <p>The data link layer translates the logical (IP) addresses of the network layer into physical (MAC) addresses. If data needs to be re-arranged to deal with physical limitations of the network, it happens here (so this is where things like MTUs come into play).</p>
 <p>Because switches (generally) only care about MAC addresses, they live in this layer.</p>
-<h3 id="layer-1-physical">Layer 1: Physical</h3>
-<p>This is where actual physical cabling lives — the layer of atoms and electricity.</p>
+<h2 id="layer-1-physical">Layer 1: Physical</h2>
+<p>This is where actual physical cabling lives - the layer of atoms and electricity.</p>
 <p>I suppose that a hub would be a layer 1 device, since it’s just shuffling actual (electrical) packets.</p>
-<h2 id="packets--frames">Packets &amp; Frames</h2>
-<h3 id="what-are-packets-and-frames">What are Packets and Frames?</h3>
+<h1 id="packets--frames">Packets &amp; Frames</h1>
+<h2 id="what-are-packets-and-frames">What are Packets and Frames?</h2>
 <p>Packet and frames are more-or-less the same idea, but at two different layers (transport and data link, respectively) of the OSI model. To expand upon the definition above, the network is the OSI layer with the responsibility of turning packets into frames (and vice versa). Alternately, packets <em>encapsulate</em> frames.</p>
 <p>In general, we can think of a <em>frame</em> as the actual data, which is encapsulated by IP addressing information.</p>
-<h3 id="tcpip">TCP/IP</h3>
+<h2 id="tcpip">TCP/IP</h2>
 <p>A four-layer alternative to OSI!</p>
 <ul>
 <li>Layer 4: Application (highest)</li>
@@ -93,56 +93,18 @@ author: 100007
 </ul>
 <p>Same approach to encapsulation as OSI.</p>
 <p>Key TCP headers:</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left">Header</th>
-<th style="text-align: left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left">Time to Live (TTL)</td>
-<td style="text-align: left">How long a packet should live on the network before being discarded.</td>
-</tr>
-<tr>
-<td style="text-align: left">Source port</td>
-<td style="text-align: left">A random (unused) port chosen by the sender.</td>
-</tr>
-<tr>
-<td style="text-align: left">Destination port</td>
-<td style="text-align: left">The port on the receiving end, which normally is determined by the application being used.</td>
-</tr>
-<tr>
-<td style="text-align: left">Source address</td>
-<td style="text-align: left">“From” IP address.</td>
-</tr>
-<tr>
-<td style="text-align: left">Destination address</td>
-<td style="text-align: left">“To” IP address.</td>
-</tr>
-<tr>
-<td style="text-align: left">Sequence number</td>
-<td style="text-align: left">A random number that identifies a given connection.</td>
-</tr>
-<tr>
-<td style="text-align: left">Acknowledgement number</td>
-<td style="text-align: left">Starts at the sequence number and then increases by one for each packet sent. Used to ensure that no data is lost, and that packets are reassembled in the right order.</td>
-</tr>
-<tr>
-<td style="text-align: left">Checksum</td>
-<td style="text-align: left">Integrity check.</td>
-</tr>
-<tr>
-<td style="text-align: left">Data</td>
-<td style="text-align: left">The, well, data.</td>
-</tr>
-<tr>
-<td style="text-align: left">Flag(s)</td>
-<td style="text-align: left">How the packet should be handled (SYN, ACK, FIN, RST, etc.).</td>
-</tr>
-</tbody>
-</table>
+<ul>
+<li>Time to Live (TTL) - How long a packet should live on the network before being discarded.</li>
+<li>Source port - A random (unused) port chosen by the sender.</li>
+<li>Destination port - The port on the receiving end, which normally is determined by the application being used.</li>
+<li>Source address - “From” IP address.</li>
+<li>Destination address - “To” IP address.</li>
+<li>Sequence number - A random number that identifies a given connection.</li>
+<li>Acknowledgement number - Starts at the sequence number and then increases by one for each packet sent. Used to ensure that no data is lost, and that packets are reassembled in the right order.</li>
+<li>Checksum - Integrity check.</li>
+<li>Data - The, well, data.</li>
+<li>Flag(s) - How the packet should be handled (SYN, ACK, FIN, RST, etc.).</li>
+</ul>
 <p>Key TCP flags:</p>
 <ul>
 <li>SYN: Initialize connection.</li>
@@ -155,64 +117,31 @@ author: 100007
 <p>TCP’s “three way handshake” opens a connection by establishing a random sequence number.</p>
 <ul>
 <li>Client sends SYN with an initial sequence number (ISN).</li>
-<li>Server sends a SYN/ACK — its own ISN as well as the client ISN + 1.</li>
+<li>Server sends a SYN/ACK - its own ISN as well as the client ISN + 1.</li>
 <li>The client sends an ACK of the server ISN + 1.</li>
 </ul>
 <p>(Unfortunately, it’s still a little unclear to me how to think about the progression of sequence and acknowledgement numbers over the course of an entire connection. I did a little more searching around, but the other examples I’ve found are even more abbreviated and/or obtuse.)</p>
-<p>Closing the connection uses a “four way handshake”:</p>
-<ul>
-<li>Client FIN</li>
-<li>Server ACK</li>
-<li>Server FIN</li>
-<li>Client ACK</li>
-</ul>
-<p>References:</p>
+<p>Closing the connection uses a “four way handshake”: Client FIN &gt; Server ACK &gt; Server FIN &gt; Client ACK</p>
 <ul>
 <li><a href="https://en.wikipedia.org/wiki/Transmission_Control_Protocol">Transmission Control Protocol (Wikipedia)</a></li>
 </ul>
-<h3 id="udpip">UDP/IP</h3>
+<h2 id="udpip">UDP/IP</h2>
 <p>UDP is <em>stateless</em>. It shares a few headers with TCP:</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left">Header</th>
-<th style="text-align: left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left">Time to Live (TTL)</td>
-<td style="text-align: left">How long a packet should live on the network before being discarded.</td>
-</tr>
-<tr>
-<td style="text-align: left">Source port</td>
-<td style="text-align: left">A random (unused) port chosen by the sender.</td>
-</tr>
-<tr>
-<td style="text-align: left">Destination port</td>
-<td style="text-align: left">The port on the receiving end, which normally is determined by the application being used.</td>
-</tr>
-<tr>
-<td style="text-align: left">Source address</td>
-<td style="text-align: left">“From” IP address.</td>
-</tr>
-<tr>
-<td style="text-align: left">Destination address</td>
-<td style="text-align: left">“To” IP address.</td>
-</tr>
-<tr>
-<td style="text-align: left">Data</td>
-<td style="text-align: left">The, well, data.</td>
-</tr>
-</tbody>
-</table>
+<ul>
+<li>Time to Live (TTL) - How long a packet should live on the network before being discarded.</li>
+<li>Source port - A random (unused) port chosen by the sender.</li>
+<li>Destination port - The port on the receiving end, which normally is determined by the application being used.</li>
+<li>Source address - “From” IP address.</li>
+<li>Destination address - “To” IP address.</li>
+<li>Data - The, well, data.</li>
+</ul>
 <p>Since there are no handshakes in UDP, data transmission is fairly simple:</p>
 <ul>
 <li>Client request</li>
 <li>Server response (and response and response and…)</li>
 </ul>
 <p>The connection ends when the server stops sending data or the client stops listening. In practice this means that the application layer does need to layer on <em>some</em> kind of client/server messaging system, but UDP does not concern itself with these details.</p>
-<h3 id="ports-101">Ports 101</h3>
+<h2 id="ports-101">Ports 101</h2>
 <p>Ports identify applications (or services provided by an application). There are 2¹⁶ possible ports numbered 0 - 65535.</p>
 <p>Ports 0 - 1023 are “common ports” (I’ve typically heard this block called “reserved” or “system”; Wikipedia calls them “well-known”).</p>
 <ul>

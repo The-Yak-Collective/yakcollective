@@ -1,6 +1,6 @@
 ---
 title: 'TryHackMe: Complete Beginner (Supplements)'
-date: 2021-11-30 06:00:00.000000000 Z
+date: 2021-11-30 12:00:00.000000000 Z
 layout: post-external
 original_link: https://cardboard-iguana.com/log/2021-11-30-tryhackme-complete-beginner-supplements.html
 author: 100007
@@ -9,19 +9,15 @@ author: 100007
 <h1 id="tryhackme-complete-beginner-supplements">TryHackMe: Complete Beginner (Supplements)</h1>
 <p><strong>author:</strong> Nathan Acks<br />
 <strong>date:</strong> 2021-11-30</p>
-<h2 id="cc-pen-testing">CC: Pen Testing</h2>
-<h3 id="metasploit-modules">Metasploit Modules</h3>
-<p>I’ve already noted most of the commands mentioned here in my Using Metasploit note. A few additional things:</p>
-<ul>
-<li>Search for modules using <code class="language-plaintext highlighter-rouge">search</code>.</li>
-<li>Module options can be displayed with the <code class="language-plaintext highlighter-rouge">options</code> command (once a module is loaded). Use <code class="language-plaintext highlighter-rouge">advanced</code> for “advanced” options.</li>
-<li>Most modules support the ARCH and PAYLOAD options (for specifying target architecture and the payload to deliver). These options can also be set by directly calling a fully-specified payload.</li>
-</ul>
-<p>References:</p>
+<h1 id="cc-pen-testing">CC: Pen Testing</h1>
+<h2 id="metasploit-modules">Metasploit Modules</h2>
+<p>Search for modules using <code class="language-plaintext highlighter-rouge">search</code>.</p>
+<p>Module options can be displayed with the <code class="language-plaintext highlighter-rouge">options</code> command (once a module is loaded). Use <code class="language-plaintext highlighter-rouge">advanced</code> for “advanced” options.</p>
+<p>Most modules support the ARCH and PAYLOAD options (for specifying target architecture and the payload to deliver). These options can also be set by directly calling a fully-specified payload.</p>
 <ul>
 <li><a href="https://cardboard-iguana.com/notes/metasploit.html">Using Metasploit</a></li>
 </ul>
-<h3 id="meterpreter">Meterpreter</h3>
+<h2 id="meterpreter">Meterpreter</h2>
 <p>Sometimes the <code class="language-plaintext highlighter-rouge">migrate</code> process will allow you to move laterally or even escalate privileges within a system.</p>
 <p>Some more commands:</p>
 <ul>
@@ -29,26 +25,23 @@ author: 100007
 <li>The <code class="language-plaintext highlighter-rouge">search</code> command acts similarly to the NIX “find” command.</li>
 <li>Use <code class="language-plaintext highlighter-rouge">cat</code> to dump a file’s contents.</li>
 </ul>
-<h3 id="hashcat">Hashcat</h3>
+<h2 id="hashcat">Hashcat</h2>
 <p>Hashcat mode 100 corresponds to SHA1; 900 is MD4.</p>
-<h3 id="sqlmap">SQLMap</h3>
-<ul>
-<li><code class="language-plaintext highlighter-rouge">-u URL</code>/<code class="language-plaintext highlighter-rouge">--url=URL</code> — process URL (this <em>must</em> include the query parameters <em>with values</em> to test <em>or</em> you must specify POST parameters <em>with values</em> using <code class="language-plaintext highlighter-rouge">--data</code>)</li>
-<li><code class="language-plaintext highlighter-rouge">-p</code> — which URL parameter(s) (variables) to test</li>
-<li><code class="language-plaintext highlighter-rouge">--dbms=DB_TYPE</code> — only use injections for a given type of backend database (MySQL, PostgreSQL, etc.)</li>
-<li><code class="language-plaintext highlighter-rouge">-D</code>/<code class="language-plaintext highlighter-rouge">-T</code>/<code class="language-plaintext highlighter-rouge">-C</code> — select a specific database/table/column to dump</li>
-<li><code class="language-plaintext highlighter-rouge">--dump</code> — dump data</li>
-<li><code class="language-plaintext highlighter-rouge">--os-shell</code> — attempt to spawn an interactive shell</li>
-<li><code class="language-plaintext highlighter-rouge">--os-pwn</code> — attempt to spawn a Meterpreter shell or VNC session</li>
-</ul>
-<p>References:</p>
+<h2 id="sqlmap">SQLMap</h2>
+<p><code class="language-plaintext highlighter-rouge">-u URL</code>/<code class="language-plaintext highlighter-rouge">--url=URL</code> - process URL (this <em>must</em> include the query parameters <em>with values</em> to test <em>or</em> you must specify POST parameters <em>with values</em> using <code class="language-plaintext highlighter-rouge">--data</code>)</p>
+<p><code class="language-plaintext highlighter-rouge">-p</code> - which URL parameter(s) (variables) to test</p>
+<p><code class="language-plaintext highlighter-rouge">--dbms=DB_TYPE</code> - only use injections for a given type of backend database (MySQL, PostgreSQL, etc.)</p>
+<p><code class="language-plaintext highlighter-rouge">-D</code>/<code class="language-plaintext highlighter-rouge">-T</code>/<code class="language-plaintext highlighter-rouge">-C</code> - select a specific database/table/column to dump</p>
+<p><code class="language-plaintext highlighter-rouge">--dump</code> - dump data</p>
+<p><code class="language-plaintext highlighter-rouge">--os-shell</code> - attempt to spawn an interactive shell</p>
+<p><code class="language-plaintext highlighter-rouge">--os-pwn</code> - attempt to spawn a Meterpreter shell or VNC session</p>
 <ul>
 <li><a href="https://cardboard-iguana.com/notes/metasploit.html">Using Metasploit</a></li>
 </ul>
-<h3 id="a-note-on-manual-sql-injection">A Note on Manual SQL Injection</h3>
+<h2 id="a-note-on-manual-sql-injection">A Note on Manual SQL Injection</h2>
 <p><a href="https://owasp.org/www-community/attacks/SQL_Injection">OWASP actually has a good tutorial for SQL injection attacks.</a></p>
-<h3 id="web-application-sql-injection-vulnerabilities">Web Application SQL Injection Vulnerabilities</h3>
+<h2 id="web-application-sql-injection-vulnerabilities">Web Application SQL Injection Vulnerabilities</h2>
 <ul>
-<li><code class="language-plaintext highlighter-rouge">--forms</code> — parse target URL for forms, and use these</li>
-<li><code class="language-plaintext highlighter-rouge">--dbs</code> — enumerate DBs</li>
+<li><code class="language-plaintext highlighter-rouge">--forms</code> - parse target URL for forms, and use these</li>
+<li><code class="language-plaintext highlighter-rouge">--dbs</code> - enumerate DBs</li>
 </ul>

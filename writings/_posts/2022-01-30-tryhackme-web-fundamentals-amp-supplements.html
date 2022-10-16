@@ -1,6 +1,6 @@
 ---
 title: 'TryHackMe: Web Fundamentals &amp; Supplements'
-date: 2022-01-30 06:00:00.000000000 Z
+date: 2022-01-30 12:00:00.000000000 Z
 layout: post-external
 original_link: https://cardboard-iguana.com/log/2022-01-30-tryhackme-web-fundamentals-and-supplements.html
 author: 100007
@@ -9,29 +9,29 @@ author: 100007
 <h1 id="tryhackme-web-fundamentals--supplements">TryHackMe: Web Fundamentals &amp; Supplements</h1>
 <p><strong>author:</strong> Nathan Acks<br />
 <strong>date:</strong> 2022-01-30</p>
-<h2 id="toolsrus">Tools’R’us</h2>
+<h1 id="toolsrus">Tools’R’us</h1>
 <p><a href="https://cardboard-iguana.com/notes/tryhackme-tools-r-us.html">See my Tools’R’us CTF write-up.</a></p>
-<h2 id="python-basics">Python Basics</h2>
-<h3 id="mathematical-operators">Mathematical Operators</h3>
+<h1 id="python-basics">Python Basics</h1>
+<h2 id="mathematical-operators">Mathematical Operators</h2>
 <p>I always forget that <code class="language-plaintext highlighter-rouge">**</code> is exponentiation in Python (so weird!).</p>
-<h3 id="loops">Loops</h3>
+<h2 id="loops">Loops</h2>
 <p>Remember that in Python, <code class="language-plaintext highlighter-rouge">for</code> loops are used to iterate over arrays. Use <code class="language-plaintext highlighter-rouge">range()</code> to create an array of sequential integers (note, however, that Python is zero-indexed, so <code class="language-plaintext highlighter-rouge">range(10)</code> wil produce the array <code class="language-plaintext highlighter-rouge">[0, 1, ..., 8, 9]</code>).</p>
-<h3 id="introduction-to-functions">Introduction to Functions</h3>
+<h2 id="introduction-to-functions">Introduction to Functions</h2>
 <p>Use the <code class="language-plaintext highlighter-rouge">str()</code> function to coerce variables to strings (Python doesn’t do this for you automatically).</p>
-<h3 id="files">Files</h3>
+<h2 id="files">Files</h2>
 <p>Note that <code class="language-plaintext highlighter-rouge">read()</code>, <code class="language-plaintext highlighter-rouge">write()</code>, and <code class="language-plaintext highlighter-rouge">close()</code> are methods of the file object class, and <em>not</em> globally accessible functions! (So, <code class="language-plaintext highlighter-rouge">file_handle.read()</code>, <em>not</em> <code class="language-plaintext highlighter-rouge">read(file_handle)</code>!)</p>
 <p>The <code class="language-plaintext highlighter-rouge">readlines()</code> <em>method</em> takes a previously opened file handle and converts it to an array (where each element is a newline-separated string from the file).</p>
-<h2 id="sql-injection">SQL Injection</h2>
-<h3 id="how-to-detect-sqli">How to Detect SQLi?</h3>
+<h1 id="sql-injection">SQL Injection</h1>
+<h2 id="how-to-detect-sqli">How to Detect SQLi?</h2>
 <p>SQLi is most common in PHP-based apps.</p>
 <p>If inputting a single quote (though remember that there are <em>three</em> kinds you need to test!) into an input causes an error, then you <em>probably</em> have SQLi (though be aware that in some cases you will need to inject into multiple fields).</p>
 <ul>
 <li><a href="https://cardboard-iguana.com/notes/tryhackme-web-fundamentals.html">TryHackMe: Web Fundamentals</a></li>
 </ul>
-<h3 id="error-based-sqli">Error Based SQLi</h3>
+<h2 id="error-based-sqli">Error Based SQLi</h2>
 <p>Error-based SQLi retrieves data from the backend by abusing error messages. This obviously requires that error messages are shown to the end user, and is limited to information gathering.</p>
 <p>Note that when inputting SQL statements as GET variables, it will often be necessary to end them with “<code class="language-plaintext highlighter-rouge"> --+</code>” rather than “<code class="language-plaintext highlighter-rouge"> -- </code>”, as browsers tend to eat the trailing space rather than encoding it as <code class="language-plaintext highlighter-rouge">%20</code>.</p>
-<h3 id="boolean-based-sqli">Boolean Based SQLi</h3>
+<h2 id="boolean-based-sqli">Boolean Based SQLi</h2>
 <p>Boolean-based SQLi involves monitoring changes in responses to see if a query has executed or failed. The only reason you’d generally do this is if you’re doing SQLi blind (where you don’t get any output, or the output you do get isn’t strongly coupled with the input query).</p>
 <p>Obviously, this requires that either the HTTP response code or payload changes depending on the results of the injection… (Some frameworks try to make blind SQLi difficult by using redirects, but it’s possible – though a pain – to get around this with Burp Suite).</p>
 <p>One way this can be useful more generally is by using something like <code class="language-plaintext highlighter-rouge">AND (SELECT COUNT(*) FROM table_name) &gt; 0</code> to probe for the existence/use of <code class="language-plaintext highlighter-rouge">table_name</code> (see this tutorial for a non-malicious use case of this construction).</p>
@@ -39,7 +39,7 @@ author: 100007
 <li><a href="https://cardboard-iguana.com/notes/burp-suite.html">Using Burp Suite</a></li>
 <li><a href="https://www.mysqltutorial.org/mysql-subquery/">MySQL Subquery</a></li>
 </ul>
-<h3 id="union-based-sqli">Union Based SQLi</h3>
+<h2 id="union-based-sqli">Union Based SQLi</h2>
 <p>Union-based SQLi is basically just abusing the SQL UNION keyword. This is made slightly easier by the fact that (at least in MySQL) you can SELECT based on a column’s name <em>or</em> position.</p>
 <p>Note, however, that referencing columns by positions is deprecated now in the SQL standard, and is gradually being removed from various server implementations.</p>
 <p>This means that to determine the number of columns in a table, you’ll need to use a sequence of UNION clauses until you run into and error.</p>
@@ -69,7 +69,7 @@ author: 100007
 <li>Various column names…</li>
 </ul>
 <p>There’s really just <em>a lot</em> of educated guessing that goes on in SQLi…</p>
-<h3 id="automating-exploitation">Automating Exploitation</h3>
+<h2 id="automating-exploitation">Automating Exploitation</h2>
 <p>Apparently sqlmap isn’t allowed on the OSCP…</p>
 <p>Useful commands:</p>
 <ul>

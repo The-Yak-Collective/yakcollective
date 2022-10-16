@@ -1,6 +1,6 @@
 ---
 title: 'TryHackMe: Web Fundamentals'
-date: 2022-01-03 06:00:00.000000000 Z
+date: 2022-01-03 12:00:00.000000000 Z
 layout: post-external
 original_link: https://cardboard-iguana.com/log/2022-01-03-tryhackme-web-fundamentals.html
 author: 100007
@@ -9,8 +9,8 @@ author: 100007
 <h1 id="tryhackme-web-fundamentals">TryHackMe: Web Fundamentals</h1>
 <p><strong>author:</strong> Nathan Acks<br />
 <strong>date:</strong> 2022-01-03</p>
-<h2 id="introduction-to-django">Introduction to Django</h2>
-<h3 id="introduction">Introduction</h3>
+<h1 id="introduction-to-django">Introduction to Django</h1>
+<h2 id="introduction">Introduction</h2>
 <blockquote>
 <p>“Additionally, Django is arguably one of the most secure developing frameworks, which in the right configuration, can strongly resist against SQL injections and XSS.”</p>
 <p>– Swafox in the “Introduction to Django” room</p>
@@ -20,12 +20,12 @@ author: 100007
 <li><a href="https://tryhackme.com/p/Swafox">Swafox (TryHackMe user profile)</a></li>
 <li><a href="https://tryhackme.com/room/django">TryHackMe: Introduction to Django</a></li>
 </ul>
-<h3 id="getting-started">Getting Started</h3>
+<h2 id="getting-started">Getting Started</h2>
 <p>Kali Linux comes with Django 3.2.10 pre-installed. I’m going to use that and hope it’s not <em>too</em> different from 2.2.12.</p>
-<h3 id="creating-a-website">Creating a Website</h3>
+<h2 id="creating-a-website">Creating a Website</h2>
 <p>Okay, one difference between Django 2.2 and 3.2 is that the import of <code class="language-plaintext highlighter-rouge">django.urls</code> in <code class="language-plaintext highlighter-rouge">urls.py</code> does <em>not</em> pull in <code class="language-plaintext highlighter-rouge">include()</code> in 3.2. So this needs to be added manually before inserting additional <code class="language-plaintext highlighter-rouge">urlpattern</code> elements.</p>
 <p>The app created with <code class="language-plaintext highlighter-rouge">python3 manage.py startapp articles</code> also doesn’t include a <code class="language-plaintext highlighter-rouge">urls.py</code> file (though this seems to be by design; I checked a few other tutorials, and it isn’t listed there either). This meant that I had to construct <em>both</em> a basic <code class="language-plaintext highlighter-rouge">urls.py</code> and <code class="language-plaintext highlighter-rouge">views.py</code> file in <code class="language-plaintext highlighter-rouge">articles/</code> before <code class="language-plaintext highlighter-rouge">python3 manage.py migrate</code> could successfully set up the new app.</p>
-<h3 id="ctf">CTF</h3>
+<h2 id="ctf">CTF</h2>
 <p>This CTF involves a Django site. The target is at 10.10.219.71.</p>
 <p>Going to http://10.10.219.71:8000/ reveals an error page stating that the target IP needs to be added to the <code class="language-plaintext highlighter-rouge">ALLOWED_HOSTS</code> array.</p>
 <p>The provided username and password gets us into the target via SSH; we can see a Django project called <code class="language-plaintext highlighter-rouge">messagebox</code> here. Adding <code class="language-plaintext highlighter-rouge">10.10.219.71</code> to the <code class="language-plaintext highlighter-rouge">ALLOWED_HOSTS</code> array in <code class="language-plaintext highlighter-rouge">~/messagebox/messagebox/settings.py</code> resolves the initial error, though it takes a few minutes to reload.</p>

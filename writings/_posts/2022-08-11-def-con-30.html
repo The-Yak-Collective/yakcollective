@@ -1,0 +1,127 @@
+---
+title: DEF CON 30
+date: 2022-08-11 12:00:00.000000000 Z
+layout: post-external
+original_link: https://cardboard-iguana.com/log/2022-08-11-def-con-30.html
+author: 100007
+---
+
+<h1 id="def-con-30">DEF CON 30</h1>
+<p><strong>author:</strong> Nathan Acks<br />
+<strong>date:</strong> 2022-08-11</p>
+<p>I’m attending DEF CON for the first time this year. Not much is happening on Thursday (except for LineCon), but I am attending the “TCP Deep Dive with Wireshark” workshop in an attempt to improve my packet-analysis chops (so far I’ve only done a single “room” about packet analysis and Wireshark on TryHackMe).</p>
+<ul>
+<li><a href="https://defcon.org/html/defcon-30/dc-30-index.html">DEF CON 30</a></li>
+<li><a href="https://cardboard-iguana.com/notes/tryhackme-wireshark-101.html">TryHackMe: Wireshark 101</a></li>
+<li><a href="https://tryhackme.com/">TryHackMe</a></li>
+</ul>
+<h1 id="tcp-deep-dive-with-wireshark">TCP Deep Dive with Wireshark</h1>
+<ul>
+<li><a href="https://forum.defcon.org/node/241764">Hands-On TCP/IP Deep Dive with Wireshark</a></li>
+<li><a href="https://github.com/packetpioneer/defcon30">packetpioneer / defcon30</a></li>
+</ul>
+<h2 id="agenda">Agenda</h2>
+<ul>
+<li>How does TCP work? (<em>Beyond</em> the three-way handshake!)</li>
+<li>How do we analyze scan activity?</li>
+<li>How do we manually perform TCP stack and OS fingerprinting?</li>
+</ul>
+<h2 id="what-is-tcp">What is TCP?</h2>
+<p>TCP = Transmission Control Protocol</p>
+<p>It operates at OSI layer 4 and is an IEEE standard.</p>
+<p>RFC793: “[A] [h]ighly reliable host-to-host protocol. [It] [p]rovides connection, reliability, and flow control.</p>
+<p>TCP/IP was formalized in September 1981.</p>
+<ul>
+<li><a href="https://cardboard-iguana.com/notes/osi-model.html">OSI Model</a></li>
+<li><a href="https://cardboard-iguana.com/notes/tcp.html">TCP Protocol</a></li>
+</ul>
+<h2 id="demo-the-tcp-handshake">Demo: The TCP Handshake</h2>
+<p>Wireshark supports “profiles” (accessible in the lower right in the status bar) that are just collections of settings, filters, layouts, etc.</p>
+<p>Wireshark allows filters to be saved for quick access; use the “+” button to the right of the filter bar. Drop-down menus can be created by separating menu components with <code class="language-plaintext highlighter-rouge">//</code> (for example, <code class="language-plaintext highlighter-rouge">Menu//Submenu//Filter Name</code>).</p>
+<p>By default, the “Time” column is in seconds and starts at zero (0) for the first packet captured. PCAP files actually include the full packet timestamp, so the format of the “Time” column can be changed using “View &gt; Time Display Format”.</p>
+<p>If you click on a field for a packet, the filter name is displayed in the lower left. (For example, TCP SYN packets are <code class="language-plaintext highlighter-rouge">tcp.flags.syn</code>.) You can automatically apply a filter (or “prepare” a filter, which lets you see the filter before it’s applied) by right-clicking on it and choosing “Apply as Filter” (or “Prepare as Filter”).</p>
+<p>Color rules are just filters; they’re matched in order (from top down), with the first matched coloring rule applying. Note that Wireshark is not really consistent about applying new coloring rules - it’s best to reload the file after creating/modifying rules.</p>
+<p>TCP “conversations” (related packets) can be automatically filtered by right-clicking on a packet and selecting “Conversation Filter &gt; TCP” (this matches all packets with the same source/destination IP/port). This really just automatically applies a filter.</p>
+<p>TCP client source ports are random <em>client</em> ports chosen from the pool of available (high) ports. <em>Destination</em> ports are generally reserved.</p>
+<p>Wireshark adds some additional packet information, designated as <code class="language-plaintext highlighter-rouge">[Wireshark Data]</code>. Some examples: “Stream index” is an index of the streams/conversations displayed in the current filter, starting from 0. “TCP Segment Len” is the packet data length (this is useful for figuring out weird things, like SYN packets with data). “Conversation completeness” tries to measure how much of the current conversation/stream is present in the packet capture (for TCP conversations, Wireshark expects a handshake, some data, and then a FIN or RST).</p>
+<p>The reason the first packet of the three-way handshake is a SYN because it’s <em>synchronizing</em> sequence numbers. Note that each host in a TCP connection uses its own series of sequence numbers.</p>
+<p>The first sequence number is random, and is called the ISN (“initial sequence number”).</p>
+<p>The “acknowledgement number” is set by the receiving host, and is equal to the current sequence number for the requesting system + the number of bytes of data returned (or 1 if the segment length is zero - this is called a “ghost byte”).</p>
+<p>The vast majority of pure SYN packets use 0 for their acknowledgement number - using non-zero acknowledgement numbers in the initial SYN packets and observing system behavior is one way that nmap fingerprints operating systems.</p>
+<p>When you select an ACK packet in Wireshark, a checkmark will be displayed next to the packet that is being acknowledged.</p>
+<p>The “initial round trip time” (IRTT) is the time taken for the initial SYN packet in the TCP handshake to the final ACK packet in the initial three-way handshake. Most TCP implementations will <em>initially</em> wait for up to 0.5 seconds until retransmitting a packet, but will dynamically adjust this to 3x - 4x the IRTT after the initial handshake. Wireshark will report this in the final ACK packet of the three-way handshake.</p>
+<p>The TCP “Window” is the maximum number of bits that the sending system expects to receive from a request (it represents the current buffer size for that connection on that system). This was originally a 2-byte value, though this has since been extended using the “Window scale” option (which sets a <em>multiplier</em> for the “Window” size as as a power of two - such that a “Window scale” of 7 is a multiplier of 2⁷ = 128). Window scales can be up to 14, which allows (once multiplied with the maximum window size) <em>up to</em> 1 GB of data to be transmitted before an ACK on modern systems. Differences in <em>how</em> the window and window scale numbers changes in a conversation, and what they are set to initially, can be used to fingerprint TCP stacks and OSes.</p>
+<p>It’s common to see a window scale of 2 for web servers (clients tend use larger scales).</p>
+<p>The “Maximum segment size” (MSS) TCP option represents the maximum data segment size that a system can receive. This is different than the window size, which is the amount of data that a system expects before it gets an ACK (it’s basically the buffer for this connection).</p>
+<p>Note that nmap SYN scans have a larger MSS than window size (TCP scans, as they use the operating system to construct packets, have a value for MSS that works in a saner fashion). This is one way that nmap scans can be recognized in packet scans.</p>
+<p>The SACK (“selective acknowledgement”) TCP option allows for receiving systems to acknowledge packets as they’re received, rather than only at the end of a transmission; without SACK, only packets up to the first dropped packet are acknowledged, which can require more data retransmission if only a few packets are dropped. SACK is generally not supported by low-power IoT systems, as it requires more system resources to track every successfully received packet.</p>
+<h2 id="qa">Q&amp;A</h2>
+<p>Recommended resource: “TCP/IP Illustrated, 2nd Edition”.</p>
+<h2 id="lab-1-the-tcp-handshake">Lab 1: The TCP Handshake</h2>
+<p>Use “Statistics &gt; Conversations” to get a quick overview of the conversations in a packet capture.</p>
+<p>Use “Statistics &gt; Capture File Properties” to see information about capture files (you can also include/save comments here!).</p>
+<p>TCP “options” are set in the initial handshake (the initiating host will propose in the SYN packet, and the receiving host will reply with what it supports in the SYN/ACK packet). Note that each system sets its own window scale and MSS values, however.</p>
+<p>The “no op” (NOP, <code class="language-plaintext highlighter-rouge">01</code>) option is just a blank option value used to pad things out, since header size must be a power of two <em>bytes</em> but (1) options need to fall on a byte boundary and (2) we may not have enough options to fill out this space. How NOPs are used is highly implementation-dependent. NOPs can also be used by middle-boxes (firewalls, routers, etc.) to <em>strip</em> options.</p>
+<p>The window scale and MSS options, despite being system-specific, can only be used if set on <em>both</em> ends of the conversation!</p>
+<p>TCP allows for header sizes up to 60 bytes, which caps the number of TCP options.</p>
+<p>One motivation for QUIC is to work around the lack of header space. It’s thus better to think of QUIC as a replacement for TCP, rather than just a replacement for HTTP.</p>
+<p>The amount of delay between the SYN and SYN/ACK packet will be <em>very</em> low if capturing server-side.</p>
+<p>To see (suspected) retransmissions in Wireshark, filter for the <code class="language-plaintext highlighter-rouge">tcp.analysis.retransmission</code> flag. Some retransmissions may be “fast”, in that the packet is transmitted before the TCP timer would have expired. This happens when SACK is used, typically after a packet isn’t acknowledged in after three consecutive SACK blocks.</p>
+<p>SACK numbers live in the TCP options block.</p>
+<p>Clients typically initiate handshakes. What is the client IP?</p>
+<ul>
+<li>192.168.10.184</li>
+</ul>
+<p>What is the network roundtrip time between these two endpoints?</p>
+<ul>
+<li>0.105449 seconds</li>
+</ul>
+<p>What port is the client trying to connect to on the server?</p>
+<ul>
+<li>5201</li>
+</ul>
+<p>What TCP Options are being used?</p>
+<ul>
+<li>MSS: 1460 bytes</li>
+<li>Window scale: 6 (client), 2 (server)</li>
+<li>SACK</li>
+</ul>
+<p>What is the MSS size of the client? The server?</p>
+<ul>
+<li>Both use 1460 bytes.</li>
+</ul>
+<p>How many TCP retransmissions are in this pcap?</p>
+<ul>
+<li>1</li>
+</ul>
+<h2 id="lab-2-nmap-port-scan">Lab 2: NMAP Port Scan</h2>
+<p>You can filter on a negation using <code class="language-plaintext highlighter-rouge">!</code>. (For example, <code class="language-plaintext highlighter-rouge">!arp</code> filters out ARP packets.)</p>
+<p>To see SYN/ACK packets, filter with <code class="language-plaintext highlighter-rouge">tcp.flags.syn == 1 &amp;&amp; tcp.flags.ack == 1</code>.</p>
+<p>You can limit conversation statistics to the current filter view using the “Limit to display filter” checkbox.</p>
+<p>Protocol names can be resolved in the Wireshark preferences by checking the “Name Resolution &gt; Resolve transport names” option.</p>
+<p>Wireshark can resolve IP addresses using “Name Resolution &gt; Resolve network (IP) addresses”. It can pull from either DNS querier in the packet capture itself, or from the resolver itself. Using an external resolver can get pretty noisy though.</p>
+<p>Filter for the very first TCP SYN in the pcap. Is there anything in this header that looks strange? Maybe not usual for a regular TCP SYN?</p>
+<ul>
+<li>The window size (1024 bytes) is smaller than the MSS (1460 bytes). Also, MSS is the only option (typically you see MSS, window scale, SACK, and <em>sometimes</em> timestamp).</li>
+</ul>
+<p>What ports is the attacker trying to scan?</p>
+<ul>
+<li>This looks like a top 1000 port scan.</li>
+</ul>
+<p>What ports are open on the server?</p>
+<ul>
+<li>192.168.56.102 has TCP ports 21, 22, 23, 25, 53, 80, 111, 139, 445, 512, 513, 514, 1099, 1524, 2049, 2121, 3306, 5432, 5900, 6000, 6667, 8009, and 8180.</li>
+</ul>
+<p>Look at the first TCP SYN in the pcap. Look at the options and TCP window size. Does this look normal to you? Why or why not?</p>
+<ul>
+<li>The window size is 1024 (with <em>no</em> scaling factor), which is unusually small.</li>
+</ul>
+<p>Nmap typically uses a window size of 1024.</p>
+<ul>
+<li><a href="https://cardboard-iguana.com/notes/arp.html">ARP Protocol</a></li>
+<li><a href="https://cardboard-iguana.com/notes/nmap.html">Using “nmap”</a></li>
+</ul>
+<h2 id="lab-3-os-fingerprinting">Lab 3: OS Fingerprinting</h2>
+<p>A host can set a window scale of 0 (which multiplies the window by 1) to allow the other half of the TCP conversation to use a window scale without using one itself.</p>
+<p>The <em>order</em> of the TCP options is also useful for OS fingerprinting.</p>
+<p>Wireshark will also helpfully note some unusual TCP packet behaviors (such as the lack of an MSS option).</p>

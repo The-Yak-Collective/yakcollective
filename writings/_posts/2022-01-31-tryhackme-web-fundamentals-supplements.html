@@ -1,6 +1,6 @@
 ---
 title: 'TryHackMe: Web Fundamentals (Supplements)'
-date: 2022-01-31 06:00:00.000000000 Z
+date: 2022-01-31 12:00:00.000000000 Z
 layout: post-external
 original_link: https://cardboard-iguana.com/log/2022-01-31-tryhackme-web-fundamentals-supplements.html
 author: 100007
@@ -9,8 +9,8 @@ author: 100007
 <h1 id="tryhackme-web-fundamentals-supplements">TryHackMe: Web Fundamentals (Supplements)</h1>
 <p><strong>author:</strong> Nathan Acks<br />
 <strong>date:</strong> 2022-01-31</p>
-<h2 id="hackernote">hackernote</h2>
-<h3 id="reconnaissance">Reconnaissance</h3>
+<h1 id="hackernote">hackernote</h1>
+<h2 id="reconnaissance">Reconnaissance</h2>
 <p>The target is 10.10.156.141. As usual, it looks like we’re starting off with an nmap scan.</p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>nmap <span class="nt">-v</span> <span class="nt">-oA</span> hackernote <span class="nt">-Pn</span> <span class="nt">-A</span> <span class="nt">-T4</span> <span class="nt">-sS</span> <span class="se">\</span>
 <span class="nt">--script</span> vuln <span class="nt">-p-</span> 10.10.156.141
@@ -148,7 +148,7 @@ OS and Service detection performed. Please report any incorrect results at https
 <ul>
 <li><a href="https://cardboard-iguana.com/notes/nmap.html">Using “nmap”</a></li>
 </ul>
-<h3 id="exploit">Exploit</h3>
+<h2 id="exploit">Exploit</h2>
 <p>The point of this exercise is to write a Python script to take advantage of the timing difference between trying to log in using a valid vs. invalid username.</p>
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#!/usr/bin/python3
 </span>
@@ -167,7 +167,6 @@ OS and Service detection performed. Please report any incorrect results at https
 <span class="k">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">endTime</span> <span class="o">-</span> <span class="n">startTime</span><span class="p">)</span> <span class="o">+</span> <span class="s">" "</span> <span class="o">+</span> <span class="n">username</span><span class="p">.</span><span class="n">strip</span><span class="p">())</span>
 <span class="n">usernames</span><span class="p">.</span><span class="n">close</span><span class="p">()</span>
 </code></pre></div></div>
-<p>References used while writing this:</p>
 <ul>
 <li><a href="https://www.tutorialspoint.com/opening-and-closing-files-in-python">Opening and Closing Files in Python</a></li>
 <li><a href="https://www.tutorialspoint.com/python/python_command_line_arguments.htm">Python - Command Line Arguments</a></li>
@@ -191,7 +190,7 @@ names.txt | <span class="se">\</span>
 <li><a href="https://github.com/danielmiessler/SecLists/blob/master/Usernames/Names/names.txt">SecLists / Usernames / Names / names.txt</a></li>
 <li><a href="https://stackoverflow.com/questions/11337041/force-line-buffering-of-stdout-in-a-pipeline#comment111940075_11337310">Force line-buffering of stdout in a pipeline</a></li>
 </ul>
-<h3 id="attack-passwords">Attack Passwords</h3>
+<h2 id="attack-passwords">Attack Passwords</h2>
 <p>The Hashcat <code class="language-plaintext highlighter-rouge">combinator.bin</code> utility combines two wordlists such that every entry of the first list is concatenated with every entry from the second list.</p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/usr/lib/hashcat-utils/combinator.bin <span class="se">\</span>
 <span class="nv">$WORDLIST1</span> <span class="nv">$WORDLIST2</span> <span class="o">&gt;</span> <span class="nv">$COMBINED_WORDLIST</span>
@@ -213,6 +212,6 @@ names.txt | <span class="se">\</span>
 <li><a href="https://security.stackexchange.com/questions/57839/hydra-bruteforce-and-json">Hydra bruteforce and JSON</a></li>
 <li><a href="https://security.stackexchange.com/questions/203501/bruteforce-using-hydra-with-json">Bruteforce - Using Hydra with JSON</a></li>
 </ul>
-<h3 id="escalate">Escalate</h3>
+<h2 id="escalate">Escalate</h2>
 <p><a href="https://www.sudo.ws/security/advisories/pwfeedback/">Details about the sudo “pwfeedback” bug (CVE-2019-18634).</a></p>
 <p><a href="https://github.com/saleemrashid/sudo-cve-2019-18634">Exploit code for CVE-2019-18634.</a></p>

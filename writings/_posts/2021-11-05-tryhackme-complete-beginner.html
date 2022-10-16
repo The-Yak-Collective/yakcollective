@@ -1,6 +1,6 @@
 ---
 title: 'TryHackMe: Complete Beginner'
-date: 2021-11-05 05:00:00.000000000 Z
+date: 2021-11-05 12:00:00.000000000 Z
 layout: post-external
 original_link: https://cardboard-iguana.com/log/2021-11-05-tryhackme-complete-beginner.html
 author: 100007
@@ -9,8 +9,8 @@ author: 100007
 <h1 id="tryhackme-complete-beginner">TryHackMe: Complete Beginner</h1>
 <p><strong>author:</strong> Nathan Acks<br />
 <strong>date:</strong> 2021-11-05</p>
-<h2 id="kenobi">Kenobi</h2>
-<h3 id="deploy-the-vulnerable-machine">Deploy the Vulnerable Machine</h3>
+<h1 id="kenobi">Kenobi</h1>
+<h2 id="deploy-the-vulnerable-machine">Deploy the Vulnerable Machine</h2>
 <p>The machine’s IP address is 10.10.179.107. Let’s run an initial scan.</p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>nmap <span class="nt">-v</span> <span class="nt">-oA</span> kenobi <span class="nt">-A</span> <span class="nt">-sS</span> <span class="nt">--script</span> vuln <span class="se">\</span>
 <span class="nt">-p-</span> 10.10.179.107
@@ -334,7 +334,7 @@ Read data files from: /usr/bin/../share/nmap
 OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
 # Nmap done at Fri Nov 5 22:07:27 2021 -- 1 IP address (1 host up) scanned in 1058.49 seconds
 </code></pre></div></div>
-<h3 id="enumerating-samba-for-shares">Enumerating Samba for Shares</h3>
+<h2 id="enumerating-samba-for-shares">Enumerating Samba for Shares</h2>
 <p>Apparently port 139 is left over from Window’s NetBIOS days.</p>
 <p>Also, apparently the smb-enum-shares.nse and smb-enum-users.nse scripts work on this machine. I wonder why they produced null results in the Basic Pentesting CTF?</p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nmap <span class="nt">-v</span> <span class="nt">-oA</span> kenobi-smb-enumeration <span class="nt">-sT</span> <span class="se">\</span>

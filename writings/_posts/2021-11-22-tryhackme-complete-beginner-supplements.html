@@ -1,6 +1,6 @@
 ---
 title: 'TryHackMe: Complete Beginner (Supplements)'
-date: 2021-11-22 06:00:00.000000000 Z
+date: 2021-11-22 12:00:00.000000000 Z
 layout: post-external
 original_link: https://cardboard-iguana.com/log/2021-11-22-tryhackme-complete-beginner-supplements.html
 author: 100007
@@ -9,12 +9,12 @@ author: 100007
 <h1 id="tryhackme-complete-beginner-supplements">TryHackMe: Complete Beginner (Supplements)</h1>
 <p><strong>author:</strong> Nathan Acks<br />
 <strong>date:</strong> 2021-11-22</p>
-<h2 id="wireshark-101">Wireshark 101</h2>
-<h3 id="filtering-captures">Filtering Captures</h3>
+<h1 id="wireshark-101">Wireshark 101</h1>
+<h2 id="filtering-captures">Filtering Captures</h2>
 <p>Wireshark filters are generally pretty straight forward boolean operations (<code class="language-plaintext highlighter-rouge">and</code> / <code class="language-plaintext highlighter-rouge">&amp;&amp;</code>, <code class="language-plaintext highlighter-rouge">ne</code> / <code class="language-plaintext highlighter-rouge">!=</code>, etc.). These operate on objects that are generally written as protocol.property. For example: <code class="language-plaintext highlighter-rouge">ip.src</code>, <code class="language-plaintext highlighter-rouge">ip.dst</code>, and <code class="language-plaintext highlighter-rouge">ip.addr</code> (where <code class="language-plaintext highlighter-rouge">ip.addr = ip.src ∪ ip.dst</code> for a given IP address).</p>
 <p>Protocol filters an also use a service name as shorthand. For example, <code class="language-plaintext highlighter-rouge">tcp.port == 22</code> and <code class="language-plaintext highlighter-rouge">ssh</code> have the same filter meaning, as do <code class="language-plaintext highlighter-rouge">udp.port == 53</code> and <code class="language-plaintext highlighter-rouge">dns</code>.</p>
 <p>NOTE: Wireshark is very picky about everything being <em>lower</em> case, but will also helpfully offer to auto-complete your input and will indicate a correctly formed query by highlighting the search bar green.</p>
-<h3 id="packet-dissection">Packet Dissection</h3>
+<h2 id="packet-dissection">Packet Dissection</h2>
 <p>Wireshark breaks down packets into 5 - 7 layers that kinda-sorta-not-exactly correspond to the OSI Model.</p>
 <ul>
 <li>Frame (OSI physical layer)</li>
@@ -25,11 +25,11 @@ author: 100007
 <li>Application (OSI session, presentation, and application layers)</li>
 <li>Application data (optional, breaks down the actual application data in some cases)</li>
 </ul>
-<p>References</p>
+<p>IMHO, this is actually a much clearer way to think about things though.</p>
 <ul>
 <li><a href="https://cardboard-iguana.com/notes/osi-model.html">OSI Model</a></li>
 </ul>
-<h3 id="arp-traffic">ARP Traffic</h3>
+<h2 id="arp-traffic">ARP Traffic</h2>
 <p>The ARP protocol links OSI layers 2 and 3 by mapping IP addresses to MAC addresses. ARP packet message headers contain two operation codes: REQUEST (1) and REPLY (2).</p>
 <p>Basically, an ARP request will broadcast “to” a particular IP address but using the “broadcast” MAC address (00:00:00:00:00:00), and the computer with that IP address will then reply in a non-broadcast fashion (since this requires that both the MAC address and IP address be filled in, such a direct reply provides the desired information by way of its very existence).</p>
 <ul>

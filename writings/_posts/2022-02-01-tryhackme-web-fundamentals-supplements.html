@@ -1,6 +1,6 @@
 ---
 title: 'TryHackMe: Web Fundamentals (Supplements)'
-date: 2022-02-01 06:00:00.000000000 Z
+date: 2022-02-01 12:00:00.000000000 Z
 layout: post-external
 original_link: https://cardboard-iguana.com/log/2022-02-01-tryhackme-web-fundamentals-supplements.html
 author: 100007
@@ -9,12 +9,12 @@ author: 100007
 <h1 id="tryhackme-web-fundamentals-supplements">TryHackMe: Web Fundamentals (Supplements)</h1>
 <p><strong>author:</strong> Nathan Acks<br />
 <strong>date:</strong> 2022-02-01</p>
-<h2 id="inclusion">Inclusion</h2>
+<h1 id="inclusion">Inclusion</h1>
 <p><a href="https://cardboard-iguana.com/notes/tryhackme-inclusion.html">See my Inclusion CTF write-up.</a></p>
-<h2 id="python-for-pentesters">Python for Pentesters</h2>
-<h3 id="introduction">Introduction</h3>
+<h1 id="python-for-pentesters">Python for Pentesters</h1>
+<h2 id="introduction">Introduction</h2>
 <p>Two Python packages to bundle up a script as a Windows EXE: <code class="language-plaintext highlighter-rouge">pyinstaller</code> (which is the one everyone uses) and <code class="language-plaintext highlighter-rouge">Py2exe</code>.</p>
-<h3 id="subdomain-enumeration">Subdomain Enumeration</h3>
+<h2 id="subdomain-enumeration">Subdomain Enumeration</h2>
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#!/usr/bin/env python3
 </span>
 <span class="c1"># The script will use a list of potential subdomains and
@@ -41,7 +41,7 @@ author: 100007
 <ul>
 <li><a href="https://whatisanything.com/how-do-you-write-an-f-string-in-python/">Quick Answer: How Do You Write An F String In Python</a></li>
 </ul>
-<h3 id="directory-enumeration">Directory Enumeration</h3>
+<h2 id="directory-enumeration">Directory Enumeration</h2>
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#!/usr/bin/env python3
 </span>
 <span class="c1"># A simple directory enumeration tool.
@@ -63,7 +63,7 @@ author: 100007
 <span class="k">print</span><span class="p">(</span><span class="s">"Valid directory:"</span><span class="p">,</span> <span class="n">dir_enum</span><span class="p">)</span>
 </code></pre></div></div>
 <p>This requires Python 3.6+.</p>
-<h3 id="network-scanner">Network Scanner</h3>
+<h2 id="network-scanner">Network Scanner</h2>
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#!/usr/bin/env python3
 </span>
 <span class="c1"># Scans the given IP range on the given network using ARP
@@ -82,7 +82,7 @@ author: 100007
 <ul>
 <li><a href="https://whatisanything.com/how-do-you-write-an-f-string-in-python/">Quick Answer: How Do You Write An F String In Python</a></li>
 </ul>
-<h3 id="port-scanner">Port Scanner</h3>
+<h2 id="port-scanner">Port Scanner</h2>
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#!/usr/bin/env python3
 </span>
 <span class="c1"># Look for open ports on the specified IP address.
@@ -122,7 +122,7 @@ author: 100007
 <p>Note that this is making a full TCP handshake, so it’s going to be slooooooow. There’s no output in this script until the end, so if you want to check on progress you’ll need to try something like:</p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>netstat | <span class="nb">grep</span> <span class="nv">$IP</span>
 </code></pre></div></div>
-<h3 id="file-downloader">File Downloader</h3>
+<h2 id="file-downloader">File Downloader</h2>
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#!/usr/bin/env python3
 </span>
 <span class="c1"># Download a file with Python.
@@ -133,7 +133,7 @@ author: 100007
 <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">allow_redirects</span> <span class="o">=</span> <span class="bp">True</span><span class="p">)</span>
 <span class="nb">open</span><span class="p">(</span><span class="n">outfile</span><span class="p">,</span> <span class="s">'wb'</span><span class="p">).</span><span class="n">write</span><span class="p">(</span><span class="n">r</span><span class="p">.</span><span class="n">content</span><span class="p">)</span>
 </code></pre></div></div>
-<h3 id="hash-cracker">Hash Cracker</h3>
+<h2 id="hash-cracker">Hash Cracker</h2>
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#!/usr/bin/env python3
 </span>
 <span class="c1"># Given a wordlist, crack a (MD5) hash.
@@ -152,7 +152,7 @@ author: 100007
 <span class="k">print</span><span class="p">(</span><span class="s">'Found cleartext password: '</span> <span class="o">+</span> <span class="n">line</span><span class="p">.</span><span class="n">strip</span><span class="p">())</span>
 <span class="nb">exit</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 </code></pre></div></div>
-<h3 id="keyloggers">Keyloggers</h3>
+<h2 id="keyloggers">Keyloggers</h2>
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#!/usr/bin/env python3
 </span>
 <span class="c1"># Records all keystrokes up until "Enter", then replays
@@ -164,7 +164,7 @@ author: 100007
 <span class="n">keys</span> <span class="o">=</span> <span class="n">keyboard</span><span class="p">.</span><span class="n">record</span><span class="p">(</span><span class="n">until</span> <span class="o">=</span> <span class="s">'ENTER'</span><span class="p">)</span>
 <span class="n">keyboard</span><span class="p">.</span><span class="n">play</span><span class="p">(</span><span class="n">keys</span><span class="p">)</span>
 </code></pre></div></div>
-<h3 id="ssh-brute-forcing">SSH Brute Forcing</h3>
+<h2 id="ssh-brute-forcing">SSH Brute Forcing</h2>
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#!/usr/bin/env python3
 </span>
 <span class="c1"># Attempt to brute force an SSH login given a (cleartext)

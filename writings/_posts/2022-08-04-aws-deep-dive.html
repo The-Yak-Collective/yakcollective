@@ -1,0 +1,30 @@
+---
+title: AWS Deep Dive
+date: 2022-08-04 12:00:00.000000000 Z
+layout: post-external
+original_link: https://cardboard-iguana.com/log/2022-08-04-aws-deep-dive.html
+author: 100007
+---
+
+<h1 id="aws-deep-dive">AWS Deep Dive</h1>
+<p><strong>author:</strong> Nathan Acks<br />
+<strong>date:</strong> 2022-08-04</p>
+<p>Today I’ll be covering the “Pricing and Support” module from the “AWS Cloud Practitioner Essentials” course.</p>
+<ul>
+<li><a href="https://www.aws.training/learningobject/curriculum?id=27076">AWS Cloud Practitioner Essentials</a></li>
+</ul>
+<h1 id="free-tier">Free Tier</h1>
+<p>There are ~60 services in AWS with a free tier of some sort.</p>
+<p>AWS has three classes of free tier: “Always free” (Lambda up to 1 million calls per month, etc.), 12 months free (EC2, within limits; note that the clock on services in this category starts ticking <em>as soon as you sign up for an AWS account</em>), and free trials of various lengths.</p>
+<h1 id="consolidated-billing">Consolidated Billing</h1>
+<p>Organizations can include at most 4 accounts by default; adding more requires reaching out to AWS support.</p>
+<p>When billing is consolidated within Organizations, <em>bulk usage</em> is also consolidated. This means that discounts can become available for <em>all</em> accounts if the organization’s <em>total</em> usage qualifies. (It’s left unsaid, but the implication here is that free tier quotas will also be consolidated.)</p>
+<p>When an organization qualifies for a bulk discount, the benefits of that discount are distributed to the component accounts in proportion to their usage.</p>
+<h1 id="budgets">Budgets</h1>
+<p>AWS budget information updates every 8 hours.</p>
+<h1 id="cost-explorer">Cost Explorer</h1>
+<p>This is basically an application that allows billing data to be aggregated and displayed in various ways, as well as compared across time.</p>
+<h1 id="support-plans">Support Plans</h1>
+<p>Support tiers: Basic, Developer, Business, and Enterprise.</p>
+<p>Only Enterprise gets an account manager.</p>
+<p>Only Business and Enterprise get full access to all Trusted Advisor checks.</p>

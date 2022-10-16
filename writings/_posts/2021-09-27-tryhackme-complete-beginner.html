@@ -1,6 +1,6 @@
 ---
 title: 'TryHackMe: Complete Beginner'
-date: 2021-09-27 05:00:00.000000000 Z
+date: 2021-09-27 12:00:00.000000000 Z
 layout: post-external
 original_link: https://cardboard-iguana.com/log/2021-09-27-tryhackme-complete-beginner.html
 author: 100007
@@ -9,8 +9,8 @@ author: 100007
 <h1 id="tryhackme-complete-beginner">TryHackMe: Complete Beginner</h1>
 <p><strong>author:</strong> Nathan Acks<br />
 <strong>date:</strong> 2021-09-27</p>
-<h2 id="introductory-researching">Introductory Researching</h2>
-<h3 id="vulnerability-searching">Vulnerability Searching</h3>
+<h1 id="introductory-researching">Introductory Researching</h1>
+<h2 id="vulnerability-searching">Vulnerability Searching</h2>
 <p>TryHackMe highlights three places to check for vulnerabilities:</p>
 <ul>
 <li><a href="https://www.exploit-db.com/">ExploitDB</a> (often contains <em>actual</em> exploit code!)</li>
@@ -18,12 +18,12 @@ author: 100007
 <li><a href="https://cve.mitre.org/">CVE Mitre</a></li>
 </ul>
 <p>Kali Linux contains a <code class="language-plaintext highlighter-rouge">searchsploit</code> tool that works over an offline copy of ExploitDB. So, probably not as up-to-date, but should work anywhere.</p>
-<h3 id="manual-pages">Manual Pages</h3>
+<h2 id="manual-pages">Manual Pages</h2>
 <p>Apparently <code class="language-plaintext highlighter-rouge">man</code> will recognize when it’s being piped, so you can do things like this:</p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>man ssh | <span class="nb">grep</span> <span class="nt">-e</span> <span class="s2">"version number"</span>
 </code></pre></div></div>
-<h2 id="introductory-networking">Introductory Networking</h2>
-<h3 id="the-osi-model">The OSI Model</h3>
+<h1 id="introductory-networking">Introductory Networking</h1>
+<h2 id="the-osi-model">The OSI Model</h2>
 <p>OSI stands for “Open Systems Interconnection”; it is a seven-layer model that describes all parts of the network stack (though sometimes I’ve heard the user referred to as “layer 8”). The idea is that segmenting responsibilities by layer allows for more uniform network and device behavior.</p>
 <ul>
 <li>Layer 7: Application (highest)</li>
@@ -41,13 +41,13 @@ author: 100007
 <p>More or less anything goes at the application layer.</p>
 <p>The PRESENTATION layer (6) is where data standards live. What does an email look like? How is HTTP structured? Etc.</p>
 <p>In general, this is the layer where security features like SSL are layered on.</p>
-<p>The SESSION layer (5) is responsible for actually connecting two machines and transmitting the data between them. Data is transmitted in a “session” — a successful connection between two systems.</p>
+<p>The SESSION layer (5) is responsible for actually connecting two machines and transmitting the data between them. Data is transmitted in a “session” - a successful connection between two systems.</p>
 <p>This is the layer where packets live.</p>
 <p>The TRANSPORT layer (4) determines <em>how</em> data is sent in a session. This is where TCP and UDP (as protocols) live.</p>
 <p>TCP stands for “Transmission Control Protocol”.</p>
 <p>UDP stands for “User Datagram Protocol”. One of the key aspects of UDP is that the <em>application</em> layer gets to decide how quickly packets are sent in a given session. ARP and DHCP both operate over UDP.</p>
 <p>The TCP transmission unit is the <em>segment</em>, while the UDP transmission unit is the <em>datagram</em>.</p>
-<p>IMPORTANT NOTE: Sessions ≠ connections! One session (a browser tab) may contain multiple connections (pipelined data).</p>
+<p>IMPORTANT NOTE: Sessions != connections! One session (a browser tab) may contain multiple connections (pipelined data).</p>
 <p>The NETWORK layer (3) is where routers live at, and is where packets of data are assembled and disassembled.</p>
 <p>Two key routing protocols:</p>
 <ul>
@@ -59,37 +59,37 @@ author: 100007
 <p>The DATA LINK layer (2) translates the logical (IP) addresses of the network layer into physical (MAC) addresses. If data needs to be re-arranged to deal with physical limitations of the network, it happens here (so this is where things like MTUs come into play). Layer 2 is also where (theoretically) data integrity checking occurs.</p>
 <p>Because switches (generally) only care about MAC addresses, they live in this layer.</p>
 <p>Physical addressing = MAC addresses.</p>
-<p>The PHYSICAL layer (1) is where actual physical cabling lives — the layer of atoms and electricity.</p>
+<p>The PHYSICAL layer (1) is where actual physical cabling lives - the layer of atoms and electricity.</p>
 <p>I suppose that a hub would be a layer 1 device, since it’s just shuffling actual (electrical) packets.</p>
-<h3 id="encapsulation">Encapsulation</h3>
+<h2 id="encapsulation">Encapsulation</h2>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> +-----------+-------------+
-Application → Presentation | L7 Header | (User) Data |
+Application -&gt; Presentation | L7 Header | (User) Data |
 +-----------+-------------+
 +-----------+-------------------------+
-Presentation → Session | L6 Header | (Application) Data |
+Presentation -&gt; Session | L6 Header | (Application) Data |
 +-----------+-------------------------+
 +-----------+-------------------------------------+
-Session → Transport | L5 Header | (Presentation) Data |
+Session -&gt; Transport | L5 Header | (Presentation) Data |
 +-----------+-------------------------------------+
 +-----------+-------------------------------------------------+
-Transport → Network | L4 Header | Segment/Datagram |
+Transport -&gt; Network | L4 Header | Segment/Datagram |
 +-----------+-------------------------------------------------+
 +-----------+-------------------------------------------------------------+
-Network → Data Link | L3 Header | Packet |
+Network -&gt; Data Link | L3 Header | Packet |
 +-----------+-------------------------------------------------------------+
 +-----------+-------------------------------------------------------------------------+------------+
-Data Link → Physical | L2 Header | Frame | L2 Trailer |
+Data Link -&gt; Physical | L2 Header | Frame | L2 Trailer |
 +-----------+-------------------------------------------------------------------------+------------+
 +--------------------------------------------------------------------------------------------------+
 Physical | Data Stream (Bits) |
 +--------------------------------------------------------------------------------------------------+
 +-----------+-----------+-----------+-----------+-----------+-----------+-------------+------------+
-Layer 1 “X-Ray View” | L2 Header | L3 Header | L4 Header | L5 Header | L6 Header | L7 Header | (User) Data | L2 Trailer |
+Layer 1 "X-Ray View" | L2 Header | L3 Header | L4 Header | L5 Header | L6 Header | L7 Header | (User) Data | L2 Trailer |
 +-----------+-----------+-----------+-----------+-----------+-----------+-------------+------------+
 </code></pre></div></div>
 <p><em>Packets</em> live in layer 3 (network). <em>Frames</em> live in layer 2 (data link).</p>
 <p>While most layers simply add a header, be aware that the data link layer <em>also</em> adds a trailer (more integrity checking).</p>
-<h3 id="the-tcpip-model">The TCP/IP Model</h3>
+<h2 id="the-tcpip-model">The TCP/IP Model</h2>
 <p>A four-layer alternative to OSI!</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>+--------------+-------------------+
 | OSI LAYER | TCP/IP LAYER |
@@ -110,96 +110,51 @@ Layer 1 “X-Ray View” | L2 Header | L3 Header | L4 Header | L5 Header | L6 He
 +--------------+-------------------+
 </code></pre></div></div>
 <p>As with OSI, each layer adds its own headers, though obviously there are fewer of these with TCP/IP (i.e., in the real world).</p>
-<p>The TCP/IP model (which comes out of the DOD’s work on ARPANET) actually pre-dates the OSI Model (an ISO standard, and it feels that way) by a few years. The TCP/IP application layer subsumes OSI layers 5 - 7, while the network interface layer includes OSI layers 1 and 2 (though some — unofficial! — versions of the TCP/IP model forgo the network interface layer in favor of OSI’s data link and physical layers).</p>
+<p>The TCP/IP model (which comes out of the DOD’s work on ARPANET) actually pre-dates the OSI Model (an ISO standard, and it feels that way) by a few years. The TCP/IP application layer subsumes OSI layers 5 - 7, while the network interface layer includes OSI layers 1 and 2 (though some - unofficial! - versions of the TCP/IP model forgo the network interface layer in favor of OSI’s data link and physical layers).</p>
 <p>Key TCP headers:</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left">Header</th>
-<th style="text-align: left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left">Time to Live (TTL)</td>
-<td style="text-align: left">How long a packet should live on the network before being discarded.</td>
-</tr>
-<tr>
-<td style="text-align: left">Source port</td>
-<td style="text-align: left">A random (unused) port chosen by the sender.</td>
-</tr>
-<tr>
-<td style="text-align: left">Destination port</td>
-<td style="text-align: left">The port on the receiving end, which normally is determined by the application being used.</td>
-</tr>
-<tr>
-<td style="text-align: left">Source address</td>
-<td style="text-align: left">“From” IP address.</td>
-</tr>
-<tr>
-<td style="text-align: left">Destination address</td>
-<td style="text-align: left">“To” IP address.</td>
-</tr>
-<tr>
-<td style="text-align: left">Sequence number</td>
-<td style="text-align: left">A random number that identifies a given connection.</td>
-</tr>
-<tr>
-<td style="text-align: left">Acknowledgement number</td>
-<td style="text-align: left">Starts at the sequence number and then increases by one for each packet sent. Used to ensure that no data is lost, and that packets are reassembled in the right order.</td>
-</tr>
-<tr>
-<td style="text-align: left">Checksum</td>
-<td style="text-align: left">Integrity check.</td>
-</tr>
-<tr>
-<td style="text-align: left">Data</td>
-<td style="text-align: left">The, well, data.</td>
-</tr>
-<tr>
-<td style="text-align: left">Flag(s)</td>
-<td style="text-align: left">How the packet should be handled (SYN, ACK, FIN, RST, etc.).</td>
-</tr>
-</tbody>
-</table>
+<ul>
+<li>Time to Live (TTL) - How long a packet should live on the network before being discarded.</li>
+<li>Source port - A random (unused) port chosen by the sender.</li>
+<li>Destination port - The port on the receiving end, which normally is determined by the application being used.</li>
+<li>Source address - “From” IP address.</li>
+<li>Destination address - “To” IP address.</li>
+<li>Sequence number - A random number that identifies a given connection.</li>
+<li>Acknowledgement number - Starts at the sequence number and then increases by one for each packet sent. Used to ensure that no data is lost, and that packets are reassembled in the right order.</li>
+<li>Checksum - Integrity check.</li>
+<li>Data - The, well, data.</li>
+<li>Flag(s) - How the packet should be handled (SYN, ACK, FIN, RST, etc.).</li>
+</ul>
 <p>Key TCP flags:</p>
 <ul>
-<li>SYN: Initialize connection.</li>
-<li>SYN/ACK: Acknowledge connection initialization (not an <em>actual</em> flag, but rather a SYN flag + an ACK flag).</li>
-<li>ACK: Acknowledge packet receipt.</li>
-<li>DATA: Actual connection data (not sure if this is <em>actually</em> a flag).</li>
-<li>FIN: End connection.</li>
-<li>RST: Error.</li>
+<li>SYN - Initialize connection.</li>
+<li>SYN/ACK - Acknowledge connection initialization (not an <em>actual</em> flag, but rather a SYN flag + an ACK flag).</li>
+<li>ACK - Acknowledge packet receipt.</li>
+<li>DATA - Actual connection data (not sure if this is <em>actually</em> a flag).</li>
+<li>FIN - End connection.</li>
+<li>RST - Error.</li>
 </ul>
 <p>TCP’s “three way handshake” opens a connection by establishing a random sequence number.</p>
 <ul>
 <li>Client sends SYN with an initial sequence number (ISN).</li>
-<li>Server sends a SYN/ACK — its own ISN as well as the client ISN + 1.</li>
+<li>Server sends a SYN/ACK - its own ISN as well as the client ISN + 1.</li>
 <li>The client sends an ACK of the server ISN + 1.</li>
 </ul>
 <p>(Unfortunately, it’s still a little unclear to me how to think about the progression of sequence and acknowledgement numbers over the course of an entire connection. I did a little more searching around, but the other examples I’ve found are even more abbreviated and/or obtuse.)</p>
-<p>Closing the connection uses a “four way handshake”:</p>
-<ul>
-<li>Client FIN</li>
-<li>Server ACK</li>
-<li>Server FIN</li>
-<li>Client ACK</li>
-</ul>
-<p>References:</p>
+<p>Closing the connection uses a “four way handshake”: Client FIN &gt; Server ACK &gt; Server FIN &gt; Client ACK</p>
 <ul>
 <li><a href="https://en.wikipedia.org/wiki/Transmission_Control_Protocol">Transmission Control Protocol (Wikipedia)</a></li>
 </ul>
-<h3 id="ping">Ping</h3>
+<h2 id="ping">Ping</h2>
 <p>ICMP is actually a TCP/IP protocol that works on the internet layer.</p>
-<h3 id="traceroute">Traceroute</h3>
+<h2 id="traceroute">Traceroute</h2>
 <p>Windows uses <code class="language-plaintext highlighter-rouge">tracert.exe</code> (over ICMP) instead of <code class="language-plaintext highlighter-rouge">traceroute</code> (over UDP) on UNIX; the default protocol on both operating systems can be switched on the command line, however.</p>
 <p>It’s also possible to have traceroute use TCP SYN flags for probing (-T).</p>
-<h3 id="dig">Dig</h3>
+<h2 id="dig">Dig</h2>
 <p>13 root domain server (IP addresses) to rule them all.</p>
 <p>When you’re “registering” a domain, what you’re actually doing is registering a “second-level domain” (as distinct from TLDs like .net, .co.uk, etc.).</p>
 <p>Second-level domains are limited to 63 characters composed of a-z, 0-9, and “-“. Hyphens cannot start or end a domain (the TryHackMe module states that consecutive hyphens are not allowed, but this doesn’t seem to be true anymore given how internationalized domains are represented with Punycode).</p>
 <p>Subdomains follow the same rules as second-level domains. While in theory an unlimited number of subdomains are allowed, the entire domain string must be 253 characters or less, which would seem to impose a hard cap of 124 subdomains (assuming that the shortest TLD is two characters; if there’s a one-character TLD out there, then the hard cap is at 125 subdomains).</p>
-<p>Technically TLDs are <em>not</em> actually the top of the domain hierarchy — that would be the root domain, which is simply “.”. FQDNs should contain this trailing dot, which is why you need to include it when setting up CNAME entries and the like in DNS. (The purpose of the final “.” Is similar to that of the leading “/“ in paths — /foo/bar/baz is an absolute path starting at the file system root, but foo/bar/baz is a path relative to the current directory. The domain baz.bar.foo. is the DNS equivalent of /foo/bar/baz.)</p>
+<p>Technically TLDs are <em>not</em> actually the top of the domain hierarchy - that would be the root domain, which is simply “.”. FQDNs should contain this trailing dot, which is why you need to include it when setting up CNAME entries and the like in DNS. (The purpose of the final “.” Is similar to that of the leading “/” in paths - /foo/bar/baz is an absolute path starting at the file system root, but foo/bar/baz is a path relative to the current directory. The domain baz.bar.foo. is the DNS equivalent of /foo/bar/baz.)</p>
 <p>The second column of dig’s ANSWER section (so, right after the domain part, and before the IN) provides the current <em>remaining</em> TTL in seconds (so this counts down from the actual TTL).</p>
 <ul>
 <li><a href="https://en.wikipedia.org/wiki/Domain_name">Domain name (Wikipedia)</a></li>

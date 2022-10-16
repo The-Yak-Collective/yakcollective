@@ -1,6 +1,6 @@
 ---
 title: 'ITPro.TV: CompTIA Security+ (SY0-601) &amp; TryHackMe: Jr. Penetration Tester'
-date: 2022-04-20 05:00:00.000000000 Z
+date: 2022-04-20 12:00:00.000000000 Z
 layout: post-external
 original_link: https://cardboard-iguana.com/log/2022-04-20-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.html
 author: 100007
@@ -9,8 +9,8 @@ author: 100007
 <h1 id="itprotv-comptia-security-sy0-601--tryhackme-jr-penetration-tester">ITPro.TV: CompTIA Security+ (SY0-601) &amp; TryHackMe: Jr. Penetration Tester</h1>
 <p><strong>author:</strong> Nathan Acks<br />
 <strong>date:</strong> 2022-04-20</p>
-<h2 id="itprotv-comptia-security-sy0-601">ITPro.TV: CompTIA Security+ (SY0-601)</h2>
-<h3 id="incident-response-process">Incident Response Process</h3>
+<h1 id="itprotv-comptia-security-sy0-601">ITPro.TV: CompTIA Security+ (SY0-601)</h1>
+<h2 id="incident-response-process">Incident Response Process</h2>
 <p>Event = Something that raises a potential security flag.</p>
 <p>Incident = A violation of some security process or policy.</p>
 <p>Phases:</p>
@@ -33,7 +33,7 @@ author: 100007
 <li>How was the attack accomplished?</li>
 <li>How can existing systems be improved?</li>
 </ul>
-<h3 id="incident-response-plans">Incident Response Plans</h3>
+<h2 id="incident-response-plans">Incident Response Plans</h2>
 <ul>
 <li>Who are you reporting to? Who approves your actions? Who initiates the incidence response process?</li>
 <li>Who’s on your team? (IT, experts, consultants, LEOs, etc.)</li>
@@ -52,7 +52,7 @@ author: 100007
 <ul>
 <li><a href="https://www.blackhillsinfosec.com/projects/backdoorsandbreaches/">Backdoors &amp; Breaches</a></li>
 </ul>
-<h3 id="attack-frameworks">Attack Frameworks</h3>
+<h2 id="attack-frameworks">Attack Frameworks</h2>
 <p>An “attack framework” is just a way to describe an attack in a standardized fashion.</p>
 <ul>
 <li>MITRE ATT&amp;CK (Adversarial Tactics, Techniques &amp; Common Knowledge)</li>
@@ -64,8 +64,8 @@ author: 100007
 <ul>
 <li><a href="https://attack.mitre.org/">MITRE ATT&amp;CK</a></li>
 </ul>
-<h2 id="tryhackme-jr-penetration-tester">TryHackMe: Jr. Penetration Tester</h2>
-<h3 id="enumeration">Enumeration</h3>
+<h1 id="tryhackme-jr-penetration-tester">TryHackMe: Jr. Penetration Tester</h1>
+<h2 id="enumeration">Enumeration</h2>
 <p>Useful Linux post-exploit enumeration commands</p>
 <ul>
 <li><code class="language-plaintext highlighter-rouge">hostname</code></li>
@@ -93,7 +93,7 @@ author: 100007
 </ul>
 <p>Instead of <code class="language-plaintext highlighter-rouge">u</code>, <code class="language-plaintext highlighter-rouge">j</code> can be used with <code class="language-plaintext highlighter-rouge">ps</code> to get a slightly different column output format. This is mostly useful for finding out numeric user IDs and <em>parent</em> process IDs.</p>
 <p>The <code class="language-plaintext highlighter-rouge">netstat</code> command supports the <code class="language-plaintext highlighter-rouge">-t</code> and <code class="language-plaintext highlighter-rouge">-u</code> flags to limit returned ports to TCP and UDP, respectively. Note that by default <code class="language-plaintext highlighter-rouge">netstat</code> will try to resolve hostnames, which can cause hangs; use <code class="language-plaintext highlighter-rouge">-n</code> to skip this (and only display IP addresses).</p>
-<h3 id="automated-enumeration-tools">Automated Enumeration Tools</h3>
+<h2 id="automated-enumeration-tools">Automated Enumeration Tools</h2>
 <ul>
 <li><a href="https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite/tree/master/linPEAS">LinPeas</a></li>
 <li><a href="https://github.com/rebootuser/LinEnum">LinEnum</a></li>
@@ -102,7 +102,7 @@ author: 100007
 <li><a href="https://github.com/linted/linuxprivchecker">Linux Priv Checker</a></li>
 </ul>
 <p>Of these, only LES is available in the Kali Linux repos (<code class="language-plaintext highlighter-rouge">sudo apt install linux-exploit-suggester</code>).</p>
-<h3 id="privilege-escalation-sudo">Privilege Escalation: Sudo</h3>
+<h2 id="privilege-escalation-sudo">Privilege Escalation: Sudo</h2>
 <p>Basically: GTFOBins!</p>
 <p>Sometimes, you can also get applications to leak information about sensitive files (such as <code class="language-plaintext highlighter-rouge">/etc/shadow</code> by passing these as if they were configuration files. Apache is one app that does this.</p>
 <p>Also, exploiting <code class="language-plaintext highlighter-rouge">LD_PRELOAD</code>.</p>
@@ -118,7 +118,7 @@ author: 100007
 <li><a href="https://gtfobins.github.io">GTFOBins</a></li>
 <li><a href="https://cardboard-iguana.com/notes/exploiting-ld-preload.html">Exploiting LD_PRELOAD</a></li>
 </ul>
-<h3 id="privilege-escalation-suid">Privilege Escalation: SUID</h3>
+<h2 id="privilege-escalation-suid">Privilege Escalation: SUID</h2>
 <p>Find (not always so quickly) SUID and SGID files:</p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>find / <span class="nt">-type</span> f <span class="nt">-perm</span> <span class="nt">-04000</span> <span class="nt">-ls</span> 2&gt;/dev/null
 </code></pre></div></div>
@@ -126,12 +126,12 @@ author: 100007
 <p>To generate a password acceptable for inclusion in <code class="language-plaintext highlighter-rouge">/etc/passwd</code>:</p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>openssl passwd <span class="nt">-1</span> <span class="nt">-salt</span> <span class="nv">$SALT</span> <span class="nv">$PASSWORD</span>
 </code></pre></div></div>
-<h3 id="privilege-escalation-capabilities">Privilege Escalation: Capabilities</h3>
+<h2 id="privilege-escalation-capabilities">Privilege Escalation: Capabilities</h2>
 <p>“Capabilities” are finer-grained permissions that can be assigned to a binary. Think of them as a kind of granular SUID/SGID.</p>
 <p>The <code class="language-plaintext highlighter-rouge">getcap</code> command displays a binary’s capabilities (if there are any), and can even be used to perform a search for such binaries using <code class="language-plaintext highlighter-rouge">getcap -r $PATH 2&gt; /dev/null</code>.</p>
-<h3 id="privilege-escalation-cron-jobs">Privilege Escalation: Cron Jobs</h3>
+<h2 id="privilege-escalation-cron-jobs">Privilege Escalation: Cron Jobs</h2>
 <p>Basically, check to see if any scripts run by a privileged user can be written to by an unprivileged user.</p>
 <p>Also look for “zombie” cron jobs that are still running but refer to a non-existent file in a writable location.</p>
 <p>Bash as a reverse proxy makes an appearance again here.</p>
-<h3 id="privilege-escalation-nfs">Privilege Escalation: NFS</h3>
+<h2 id="privilege-escalation-nfs">Privilege Escalation: NFS</h2>
 <p>NFS exports are listed in <code class="language-plaintext highlighter-rouge">/etc/exports</code>; if an export is configured with <code class="language-plaintext highlighter-rouge">no_root_squash</code>, then root permissions won’t be stripped from created files and it’s possible to create root-owned SUID/SGID binaries on the mount. (Remember that files on NFS mounts are created using the UID/GID values of the <em>local</em> user!)</p>

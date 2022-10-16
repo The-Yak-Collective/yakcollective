@@ -1,6 +1,6 @@
 ---
 title: 'ITPro.TV: CompTIA Security+ (SY0-601)'
-date: 2022-04-10 05:00:00.000000000 Z
+date: 2022-04-10 12:00:00.000000000 Z
 layout: post-external
 original_link: https://cardboard-iguana.com/log/2022-04-10-itprotv-comptia-security-plus.html
 author: 100007
@@ -9,9 +9,9 @@ author: 100007
 <h1 id="itprotv-comptia-security-sy0-601">ITPro.TV: CompTIA Security+ (SY0-601)</h1>
 <p><strong>author:</strong> Nathan Acks<br />
 <strong>date:</strong> 2022-04-10</p>
-<h2 id="comptia-security-exam-cram">CompTIA Security+ Exam Cram</h2>
+<h1 id="comptia-security-exam-cram">CompTIA Security+ Exam Cram</h1>
 <p>Today I’ll be covering Chapters 7 and 8 of the Security+ Exam Cram, “Security Assessment Techniques” and “Penetration Testing Techniques”.</p>
-<h3 id="vulnerability-scans">Vulnerability Scans</h3>
+<h2 id="vulnerability-scans">Vulnerability Scans</h2>
 <p>Types of scanners:</p>
 <ul>
 <li>Network Scanners: Nessus, Nmap, etc.</li>
@@ -29,12 +29,12 @@ author: 100007
 <li>CVE: Common Vulnerabilities and Exposures</li>
 <li>CVSS: Common Vulnerability Scoring System</li>
 </ul>
-<p>Note that the US government uses OVAL — the “Open Vulnerability Assessment Language”, an XML-based vulnerability description language — instead of the CVE numbers used in private industry. That said, OVAL vulnerability representations are often based off of CVE data.</p>
-<h3 id="intrusive-vs-non-intrusive-scans">Intrusive vs. Non-Intrusive Scans</h3>
+<p>Note that the US government uses OVAL - the “Open Vulnerability Assessment Language”, an XML-based vulnerability description language - instead of the CVE numbers used in private industry. That said, OVAL vulnerability representations are often based off of CVE data.</p>
+<h2 id="intrusive-vs-non-intrusive-scans">Intrusive vs. Non-Intrusive Scans</h2>
 <p>“Intrusive” scans actually try to exploit potentially vulnerable systems.</p>
-<h3 id="credentialed-vs-non-credentialed-scans">Credentialed vs. Non-Credentialed Scans</h3>
+<h2 id="credentialed-vs-non-credentialed-scans">Credentialed vs. Non-Credentialed Scans</h2>
 <p>Credentialed scans: More invasive, but also more accurate.</p>
-<h3 id="security-information-and-event-management-siem">Security Information and Event Management (SIEM)</h3>
+<h2 id="security-information-and-event-management-siem">Security Information and Event Management (SIEM)</h2>
 <p>Strategies for identifying “events of interest”:</p>
 <ul>
 <li>Pattern matching</li>
@@ -44,9 +44,9 @@ author: 100007
 <p>WORM drives are commonly used as part of SIEMs in a regulatory context, or when conducting investigations into IT and security staff.</p>
 <p>Exam Cram notes that SIEMs only become cost-effective when ingesting a million+ events/day.</p>
 <p>Some SIEMs are now beginning to include sentiment analysis functionality, often leveraging external data sources.</p>
-<h3 id="security-orchestration-automation-and-response-soar">Security Orchestration, Automation, and Response (SOAR)</h3>
+<h2 id="security-orchestration-automation-and-response-soar">Security Orchestration, Automation, and Response (SOAR)</h2>
 <p>SOAR is to SIEM as broader threat intelligence it to log aggregation. It also layers on incident response automation. Seems to be a bit of a marketing term.</p>
-<h3 id="testing-methodology">Testing Methodology</h3>
+<h2 id="testing-methodology">Testing Methodology</h2>
 <p>Phases:</p>
 <ul>
 <li>Planning: Define the rules of engagement.</li>
@@ -55,22 +55,22 @@ author: 100007
 <li>Reporting</li>
 </ul>
 <p>Exam Cram refers to passive recon as “footprinting”.</p>
-<h3 id="team-exercises">Team Exercises</h3>
+<h2 id="team-exercises">Team Exercises</h2>
 <p>Exam Cram specifically defines red teaming as more focused than a regular penetration test, with specific operational objectives. These days, I’d imagine that most red teams focus on APT emulation.</p>
-<p>I have not heard of “white teams” — which apparently set the rules of engagement for red/blue teams and are the keepers of business GRC policies — before. Exam Cram refers to them as the “referees”.</p>
-<h2 id="itprotv-comptia-security-sy0-601-1">ITPro.TV: CompTIA Security+ (SY0-601)</h2>
-<h3 id="network-reconnaissance-and-discovery">Network Reconnaissance And Discovery</h3>
+<p>I have not heard of “white teams” - which apparently set the rules of engagement for red/blue teams and are the keepers of business GRC policies - before. Exam Cram refers to them as the “referees”.</p>
+<h1 id="itprotv-comptia-security-sy0-601-1">ITPro.TV: CompTIA Security+ (SY0-601)</h1>
+<h2 id="network-reconnaissance-and-discovery">Network Reconnaissance And Discovery</h2>
 <p>Interesting tools:</p>
 <ul>
-<li><code class="language-plaintext highlighter-rouge">pathping</code> — Combines <code class="language-plaintext highlighter-rouge">ping</code> + <code class="language-plaintext highlighter-rouge">traceroute</code>.</li>
-<li><code class="language-plaintext highlighter-rouge">route</code> — Display (local) routing table.</li>
-<li><code class="language-plaintext highlighter-rouge">arp</code> — Display (local) arp cache.</li>
-<li><code class="language-plaintext highlighter-rouge">netstat</code> — Current (local) network connections.</li>
-<li><code class="language-plaintext highlighter-rouge">hping</code> — Packet construction tool.</li>
-<li><code class="language-plaintext highlighter-rouge">scanless</code> — Port scanning via third-party services.</li>
-<li><code class="language-plaintext highlighter-rouge">dnsenum</code> — DNS enumeration tool; uses third-party services.</li>
+<li><code class="language-plaintext highlighter-rouge">pathping</code> - Combines <code class="language-plaintext highlighter-rouge">ping</code> + <code class="language-plaintext highlighter-rouge">traceroute</code>.</li>
+<li><code class="language-plaintext highlighter-rouge">route</code> - Display (local) routing table.</li>
+<li><code class="language-plaintext highlighter-rouge">arp</code> - Display (local) arp cache.</li>
+<li><code class="language-plaintext highlighter-rouge">netstat</code> - Current (local) network connections.</li>
+<li><code class="language-plaintext highlighter-rouge">hping</code> - Packet construction tool.</li>
+<li><code class="language-plaintext highlighter-rouge">scanless</code> - Port scanning via third-party services.</li>
+<li><code class="language-plaintext highlighter-rouge">dnsenum</code> - DNS enumeration tool; uses third-party services.</li>
 </ul>
-<h3 id="packet-capture-and-replay">Packet Capture And Replay</h3>
+<h2 id="packet-capture-and-replay">Packet Capture And Replay</h2>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Start dumping packets observed on interface $IFACE.</span>
 <span class="c">#</span>
 tcpdump <span class="nt">-i</span> <span class="nv">$IFACE</span>

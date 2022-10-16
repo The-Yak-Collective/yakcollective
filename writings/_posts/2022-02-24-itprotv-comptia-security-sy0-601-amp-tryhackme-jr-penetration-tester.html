@@ -1,6 +1,6 @@
 ---
 title: 'ITPro.TV: CompTIA Security+ (SY0-601) &amp; TryHackMe: Jr. Penetration Tester'
-date: 2022-02-24 06:00:00.000000000 Z
+date: 2022-02-24 12:00:00.000000000 Z
 layout: post-external
 original_link: https://cardboard-iguana.com/log/2022-02-24-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.html
 author: 100007
@@ -9,8 +9,8 @@ author: 100007
 <h1 id="itprotv-comptia-security-sy0-601--tryhackme-jr-penetration-tester">ITPro.TV: CompTIA Security+ (SY0-601) &amp; TryHackMe: Jr. Penetration Tester</h1>
 <p><strong>author:</strong> Nathan Acks<br />
 <strong>date:</strong> 2022-02-24</p>
-<h2 id="comptia-security-exam-cram">CompTIA Security+ Exam Cram</h2>
-<h3 id="password-attacks">Password Attacks</h3>
+<h1 id="comptia-security-exam-cram">CompTIA Security+ Exam Cram</h1>
+<h2 id="password-attacks">Password Attacks</h2>
 <p>Common password attacks:</p>
 <ul>
 <li>Dictionary attacks</li>
@@ -28,16 +28,16 @@ author: 100007
 <li><a href="https://cardboard-iguana.com/notes/burp-suite.html">Burp Suite</a></li>
 <li><a href="https://cardboard-iguana.com/notes/owasp-zap.html">OWASP Zap</a></li>
 </ul>
-<h3 id="birthday-attacks">Birthday Attacks</h3>
+<h2 id="birthday-attacks">Birthday Attacks</h2>
 <p>Birthday Attacks: Exploiting hash collisions to crack passwords.</p>
 <p>Note that this doesn’t really work when trying to crack a single password, as the probability of any particular hash collision is low. But when the password set it large, the probability that such a collision occurs for <em>some</em> password can grow much larger.</p>
 <ul>
 <li><a href="https://en.wikipedia.org/wiki/Birthday_problem">Birthday problem (Wikipedia)</a></li>
 </ul>
-<h3 id="downgrade-attacks">Downgrade Attacks</h3>
+<h2 id="downgrade-attacks">Downgrade Attacks</h2>
 <p>A species of man-in-the-middle attack. Keep yo’ shit up-to-date!</p>
-<h2 id="itprotv-comptia-security-sy0-601">ITPro.TV: CompTIA Security+ (SY0-601)</h2>
-<h3 id="password-attacks--types">Password Attacks — Types</h3>
+<h1 id="itprotv-comptia-security-sy0-601">ITPro.TV: CompTIA Security+ (SY0-601)</h1>
+<h2 id="password-attacks---types">Password Attacks - Types</h2>
 <p>Password attacks are a type of automated attack against authentication systems.</p>
 <p>Types:</p>
 <ul>
@@ -47,7 +47,7 @@ author: 100007
 <li>Password spraying (trying a single password on multiple accounts simultaneously; slow but stealthy)</li>
 </ul>
 <p>If you <em>can</em> use rainbow tables, they are the fastest method… But they’re also easily defeated (by salting).</p>
-<h3 id="password-attacks--tools">Password Attacks — Tools</h3>
+<h2 id="password-attacks---tools">Password Attacks - Tools</h2>
 <p>Online Attacks: Require interacting directly with the target system (generally a remote login of some kind). Concerns:</p>
 <ul>
 <li>How many attempts are available before a lockout?</li>
@@ -70,23 +70,23 @@ author: 100007
 <li><a href="https://cardboard-iguana.com/notes/burp-suite.html">Burp Suite</a></li>
 </ul>
 <p>PACK and CeWL, for example, are tools for generating and ordering password lists.</p>
-<h2 id="tryhackme-jr-penetration-tester">TryHackMe: Jr. Penetration Tester</h2>
-<h3 id="the-cia-triad">The CIA Triad</h3>
+<h1 id="tryhackme-jr-penetration-tester">TryHackMe: Jr. Penetration Tester</h1>
+<h2 id="the-cia-triad">The CIA Triad</h2>
 <ul>
 <li>Confidentiality (only authorized parties have access)</li>
-<li>Integrity (only authorized changes are made — and changes are correct)</li>
+<li>Integrity (only authorized changes are made - and changes are correct)</li>
 <li>Availability (authorized users <em>have</em> access!)</li>
 </ul>
 <p>The point of the CIA triad is for a security policy to address <em>all three</em> aspects simultaneously. However, the <em>extent</em> to which a given system leans on one or more parts of the triad will be determined by its role and the data it holds.</p>
-<h3 id="principles-of-privileges">Principles of Privileges</h3>
+<h2 id="principles-of-privileges">Principles of Privileges</h2>
 <p>Privileged Identity Management (PIM): The translation of a user’s role in an organization to an access role on a system.</p>
 <p>Privileged Access Management (PAM): The management of privileges on a system (including how they are tied to access roles, and how access is authenticated).</p>
 <p>So, PIM is a species of <em>identity</em> management, while PAM is about <em>access</em> management.</p>
-<h3 id="security-models">Security Models</h3>
+<h2 id="security-models">Security Models</h2>
 <p>The Bell-La Padula Model is used to manage confidentiality. It depends on an organization having well defined job rules and a hierarchical structure, and can be summarized as “no write down, no read up” (i.e., information from higher confidentiality layers cannot be written to lower layers, and users in lower layers cannot read information from higher layers). Note, however, that the <em>existence</em> of higher level data is not necessarily concealed.</p>
-<p>The Biba Model is more concerned with integrity, and is basically the reverse of the Bell-La Padula Model — “no write up, no read down” (information can be read from higher levels, but only written to lower levels).</p>
+<p>The Biba Model is more concerned with integrity, and is basically the reverse of the Bell-La Padula Model - “no write up, no read down” (information can be read from higher levels, but only written to lower levels).</p>
 <p>The Bell-La Padula Model is more common in the government, military, and other high-trust, high structure organizations, while the Biba Model is more common in corporate and medical settings.</p>
-<h3 id="threat-modeling--incident-response">Threat Modeling &amp; Incident Response</h3>
+<h2 id="threat-modeling--incident-response">Threat Modeling &amp; Incident Response</h2>
 <p>Principles:</p>
 <ul>
 <li>Identification (of threats and assets)</li>

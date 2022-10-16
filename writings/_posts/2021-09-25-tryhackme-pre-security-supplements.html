@@ -1,6 +1,6 @@
 ---
 title: 'TryHackMe: Pre Security (Supplements)'
-date: 2021-09-25 05:00:00.000000000 Z
+date: 2021-09-25 12:00:00.000000000 Z
 layout: post-external
 original_link: https://cardboard-iguana.com/log/2021-09-25-tryhackme-pre-security-supplements.html
 author: 100007
@@ -9,8 +9,8 @@ author: 100007
 <h1 id="tryhackme-pre-security-supplements">TryHackMe: Pre Security (Supplements)</h1>
 <p><strong>author:</strong> Nathan Acks<br />
 <strong>date:</strong> 2021-09-25</p>
-<h2 id="windows-event-logs">Windows Event Logs</h2>
-<h3 id="event-viewer">Event Viewer</h3>
+<h1 id="windows-event-logs">Windows Event Logs</h1>
+<h2 id="event-viewer">Event Viewer</h2>
 <p>Windows Event logs are stored in a proprietary binary format with extension .evt or .evtx. Most reside in C:/Windows/System32/Winevt/Logs.</p>
 <p>Three tools for viewing event logs:</p>
 <ul>
@@ -19,167 +19,70 @@ author: 100007
 <li>Get-WinEvent (PowerShell)</li>
 </ul>
 <p>Event types:</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left">Event Type</th>
-<th style="text-align: left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left">Error</td>
-<td style="text-align: left">An event that indicates a significant problem such as loss of data or loss of functionality. For example, if a service fails to load during startup, an Error event is logged.</td>
-</tr>
-<tr>
-<td style="text-align: left">Warning</td>
-<td style="text-align: left">An event that is not necessarily significant, but may indicate a possible future problem. For example, when disk space is low, a Warning event is logged. If an application can recover from an event without loss of functionality or data, it can generally classify the event as a Warning event.</td>
-</tr>
-<tr>
-<td style="text-align: left">Information</td>
-<td style="text-align: left">An event that describes the successful operation of an application, driver, or service. For example, when a network driver loads successfully, it may be appropriate to log an Information event. Note that it is generally inappropriate for a desktop application to log an event each time it starts.</td>
-</tr>
-<tr>
-<td style="text-align: left">Success Audit</td>
-<td style="text-align: left">An event that records an audited security access attempt that is successful. For example, a user’s successful attempt to log on to the system is logged as a Success Audit event.</td>
-</tr>
-<tr>
-<td style="text-align: left">Failure Audit</td>
-<td style="text-align: left">An event that records an audited security access attempt that fails. For example, if a user tries to access a network drive and fails, the attempt is logged as a Failure Audit event.</td>
-</tr>
-</tbody>
-</table>
+<ul>
+<li>Error - An event that indicates a significant problem such as loss of data or loss of functionality. For example, if a service fails to load during startup, an Error event is logged.</li>
+<li>Warning - An event that is not necessarily significant, but may indicate a possible future problem. For example, when disk space is low, a Warning event is logged. If an application can recover from an event without loss of functionality or data, it can generally classify the event as a Warning event.</li>
+<li>Information - An event that describes the successful operation of an application, driver, or service. For example, when a network driver loads successfully, it may be appropriate to log an Information event. Note that it is generally inappropriate for a desktop application to log an event each time it starts.</li>
+<li>Success Audit - An event that records an audited security access attempt that is successful. For example, a user’s successful attempt to log on to the system is logged as a Success Audit event.</li>
+<li>Failure Audit - An event that records an audited security access attempt that fails. For example, if a user tries to access a network drive and fails, the attempt is logged as a Failure Audit event.</li>
+</ul>
 <p>Common logs:</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left">Log</th>
-<th style="text-align: left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left">Application</td>
-<td style="text-align: left">Contains events logged by applications. For example, a database application might record a file error. The application developer decides which events to record.</td>
-</tr>
-<tr>
-<td style="text-align: left">Security</td>
-<td style="text-align: left">Contains events such as valid and invalid logon attempts, as well as events related to resource use such as creating, opening, or deleting files or other objects. An administrator can start auditing to record events in the security log.</td>
-</tr>
-<tr>
-<td style="text-align: left">System</td>
-<td style="text-align: left">Contains events logged by system components, such as the failure of a driver or other system component to load during startup.</td>
-</tr>
-<tr>
-<td style="text-align: left">[CustomLog]</td>
-<td style="text-align: left">Contains events logged by applications that create a custom log. Using a custom log enables an application to control the size of the log or attach ACLs for security purposes without affecting other applications.</td>
-</tr>
-</tbody>
-</table>
+<ul>
+<li>Application - Contains events logged by applications. For example, a database application might record a file error. The application developer decides which events to record.</li>
+<li>Security - Contains events such as valid and invalid logon attempts, as well as events related to resource use such as creating, opening, or deleting files or other objects. An administrator can start auditing to record events in the security log.</li>
+<li>System - Contains events logged by system components, such as the failure of a driver or other system component to load during startup.</li>
+<li>[CustomLog] - Contains events logged by applications that create a custom log. Using a custom log enables an application to control the size of the log or attach ACLs for security purposes without affecting other applications.</li>
+</ul>
 <p>Windows log entry event IDs are not unique, but rather correspond to a “Task Category”. These values are set by the logging application, and are used to help filter log events. By default, the Event Viewer lists log entries in reverse chronological order (most recent first).</p>
 <p>You can control log rotation for each log file through its “Properties”.</p>
 <p>The Event Viewer can view logs on other computers (I assume this only applies to domain-joined machines that the current user has access to).</p>
 <p>Filtering for events can be achieved using the “Create Custom View” (across all logs) or “Filter Current Log” (for the current log) options on the right.</p>
 <p>NOTE: PowerShell produces a couple of different logs which, by default, log almost everything it does.</p>
-<h3 id="get-winevent">Get-WinEvent</h3>
+<h2 id="get-winevent">Get-WinEvent</h2>
 <div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Get help on Get-WinEvent (calls out to Microsoft).</span><span class="w">
 </span><span class="c">#</span><span class="w">
 </span><span class="n">Get-Help</span><span class="w"> </span><span class="nx">Get-WinEvent</span><span class="w">
-</span><span class="c"># Filter event log output using the Where-Object command.</span><span class="w">
-</span><span class="c"># This apparently pipes the entire output to the</span><span class="w">
-</span><span class="c"># Where-Object command, which then scans for the</span><span class="w">
-</span><span class="c"># appropriate field. So a bit inefficient for large logs.</span><span class="w">
+</span><span class="c"># Filter event log output using the Where-Object command. This</span><span class="w">
+</span><span class="c"># apparently pipes the entire output to the Where-Object command, which</span><span class="w">
+</span><span class="c"># then scans for the appropriate field. So a bit inefficient for large</span><span class="w">
+</span><span class="c"># logs.</span><span class="w">
 </span><span class="c">#</span><span class="w">
 </span><span class="n">Get-WinEvent</span><span class="w"> </span><span class="nt">-LogName</span><span class="w"> </span><span class="nx">Application</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Where-Object</span><span class="w"> </span><span class="p">&#x007b;</span><span class="w">
 </span><span class="bp">$_</span><span class="o">.</span><span class="nf">ProviderName</span><span class="w"> </span><span class="o">-Match</span><span class="w"> </span><span class="s1">'WLMS'</span><span class="w">
 </span><span class="p">&#x007d;</span><span class="w">
-</span><span class="c"># To match event IDs with Where-Object, use the slightly</span><span class="w">
-</span><span class="c"># different form `Where-Object Id -eq 100`, etc.</span><span class="w">
-</span><span class="c"># Use the -FilterHashtable flag. This causes the</span><span class="w">
-</span><span class="c"># filtering to be done during the call made by</span><span class="w">
-</span><span class="c"># Get-WinEvent, and has a more straight-forward syntax</span><span class="w">
-</span><span class="c"># too. However, it only works when called against the</span><span class="w">
-</span><span class="c"># system event log; Where-Object needs to be used when</span><span class="w">
-</span><span class="c"># specifying an archived log via -Path.</span><span class="w">
+</span><span class="c"># To match event IDs with Where-Object, use the slightly different form</span><span class="w">
+</span><span class="c"># `Where-Object Id -eq 100`, etc.</span><span class="w">
+</span><span class="c"># Use the -FilterHashtable flag. This causes the filtering to be done</span><span class="w">
+</span><span class="c"># during the call made by Get-WinEvent, and has a more straight-forward</span><span class="w">
+</span><span class="c"># syntax too. However, it only works when called against the system</span><span class="w">
+</span><span class="c"># event log; Where-Object needs to be used when specifying an archived</span><span class="w">
+</span><span class="c"># log via -Path.</span><span class="w">
 </span><span class="c">#</span><span class="w">
-</span><span class="c"># Note that hashes can be specified with newlines instead</span><span class="w">
-</span><span class="c"># of semicolons as well, which can make scripts A LOT</span><span class="w">
-</span><span class="c"># more readable!</span><span class="w">
+</span><span class="c"># Note that hashes can be specified with newlines instead of semicolons</span><span class="w">
+</span><span class="c"># as well, which can make scripts A LOT more readable!</span><span class="w">
 </span><span class="c">#</span><span class="w">
 </span><span class="n">Get-WinEvent</span><span class="w"> </span><span class="nt">-FilterHashtable</span><span class="w"> </span><span class="p">@&#x007b;</span><span class="w">
 </span><span class="nx">LogName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'Application'</span><span class="p">;</span><span class="w"> </span><span class="nx">ProviderName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'WLMS'</span><span class="w">
 </span><span class="p">&#x007d;</span><span class="w">
-</span><span class="c"># To display all information about an event, pipe the</span><span class="w">
-</span><span class="c"># output of Get-WinEvent to `Format-List -Property *`</span><span class="w">
+</span><span class="c"># To display all information about an event, pipe the output of</span><span class="w">
+</span><span class="c"># Get-WinEvent to `Format-List -Property *`</span><span class="w">
 </span></code></pre></div></div>
 <p>Keys for -FilterHashtable:</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left">Key Name</th>
-<th style="text-align: left">Value Data Type</th>
-<th style="text-align: center">Wildcards Allowed?</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left">LogName</td>
-<td style="text-align: left">String</td>
-<td style="text-align: center">✅</td>
-</tr>
-<tr>
-<td style="text-align: left">ProviderName</td>
-<td style="text-align: left">String</td>
-<td style="text-align: center">✅</td>
-</tr>
-<tr>
-<td style="text-align: left">Path</td>
-<td style="text-align: left">String</td>
-<td style="text-align: center">❌</td>
-</tr>
-<tr>
-<td style="text-align: left">Keywords</td>
-<td style="text-align: left">Long</td>
-<td style="text-align: center">❌</td>
-</tr>
-<tr>
-<td style="text-align: left">ID</td>
-<td style="text-align: left">Int32</td>
-<td style="text-align: center">❌</td>
-</tr>
-<tr>
-<td style="text-align: left">Level</td>
-<td style="text-align: left">Int32</td>
-<td style="text-align: center">❌</td>
-</tr>
-<tr>
-<td style="text-align: left">StartTime</td>
-<td style="text-align: left">DateTime</td>
-<td style="text-align: center">❌</td>
-</tr>
-<tr>
-<td style="text-align: left">EndTime</td>
-<td style="text-align: left">DateTime</td>
-<td style="text-align: center">❌</td>
-</tr>
-<tr>
-<td style="text-align: left">UserID</td>
-<td style="text-align: left">SID</td>
-<td style="text-align: center">❌</td>
-</tr>
-<tr>
-<td style="text-align: left">Data</td>
-<td style="text-align: left">String</td>
-<td style="text-align: center">❌</td>
-</tr>
-<tr>
-<td style="text-align: left">[NamedData]</td>
-<td style="text-align: left">String</td>
-<td style="text-align: center">❌</td>
-</tr>
-</tbody>
-</table>
-<h3 id="xpath-queries">XPath Queries</h3>
+<ul>
+<li>LogName (String)</li>
+<li>ProviderName (String)</li>
+<li>Path (String)</li>
+<li>Keywords (Long)</li>
+<li>ID (Int32)</li>
+<li>Level (Int32)</li>
+<li>StartTime (DateTime)</li>
+<li>EndTime (DateTime)</li>
+<li>UserID (SID)</li>
+<li>Data (String)</li>
+<li>[NamedData] (String)</li>
+</ul>
+<p>Wildcards can be used with LogName and ProviderName, but not with other keys.</p>
+<h2 id="xpath-queries">XPath Queries</h2>
 <p>XPath is a W3C spec for identifying elements in an XML document. Microsoft supports a subset of this spec for querying event logs. Consider:</p>
 <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;Event</span> <span class="na">xmls=</span><span class="s">"http://schemas.microsoft.com/win/2004/08/events/event"</span><span class="nt">&gt;</span>
 <span class="nt">&lt;System&gt;</span>
@@ -198,5 +101,5 @@ author: 100007
 <span class="nt">&lt;/Event&gt;</span>
 </code></pre></div></div>
 <p>To find events with an Event ID of 100, we could use <code class="language-plaintext highlighter-rouge">Event/System/EventID=100</code>. To find events from the WLMS provide, we could use <code class="language-plaintext highlighter-rouge">Event/System/Provider[@Name="WLMS"]</code>. We could combine these to over-specify the first path as <code class="language-plaintext highlighter-rouge">Event/System/EventID[@Qualifiers="0"]=100</code>. Path elements can be replaced with wildcards (<code class="language-plaintext highlighter-rouge">*</code>), and pathspecs can be joined using <code class="language-plaintext highlighter-rouge">and</code> and <code class="language-plaintext highlighter-rouge">or</code>. Quoting is (obviously) required for strings containing spaces, but is otherwise optional.</p>
-<h3 id="putting-theory-into-practice">Putting Theory Into Practice</h3>
+<h2 id="putting-theory-into-practice">Putting Theory Into Practice</h2>
 <p>Event IDs refer to specific <em>types</em> of events, while Event Record IDs provide a unique ID for a particular event. Neither is unique <em>between</em> logs, however: Different applications may use the same Event ID to indicate different events, while Event Record IDs are only unique <em>within</em> a particular log.</p>

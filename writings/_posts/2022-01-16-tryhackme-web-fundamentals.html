@@ -1,6 +1,6 @@
 ---
 title: 'TryHackMe: Web Fundamentals'
-date: 2022-01-16 06:00:00.000000000 Z
+date: 2022-01-16 12:00:00.000000000 Z
 layout: post-external
 original_link: https://cardboard-iguana.com/log/2022-01-16-tryhackme-web-fundamentals.html
 author: 100007
@@ -9,28 +9,28 @@ author: 100007
 <h1 id="tryhackme-web-fundamentals">TryHackMe: Web Fundamentals</h1>
 <p><strong>author:</strong> Nathan Acks<br />
 <strong>date:</strong> 2022-01-16</p>
-<h2 id="lfi">LFI</h2>
-<h3 id="deploy">Deploy</h3>
+<h1 id="lfi">LFI</h1>
+<h2 id="deploy">Deploy</h2>
 <p>LFI = Local File Inclusion</p>
 <p>Basically, this is when user input can cause a server to include the contents of a local (server-side) file that user wouldn’t / shouldn’t normally have access to.</p>
 <p>Most common in PHP-based websites.</p>
-<h3 id="getting-user-access-via-lfi">Getting User Access via LFI</h3>
+<h2 id="getting-user-access-via-lfi">Getting User Access via LFI</h2>
 <p>The effects of this can range from basic information disclosure issues (including the source of PHP files) that are most useful during reconnaissance to things like including the contents of <code class="language-plaintext highlighter-rouge">/etc/passwd</code>, <em>et al.</em> (which can be <em>really</em> bad).</p>
 <p>NOTE: Typically web servers are serving content from <code class="language-plaintext highlighter-rouge">/var/www</code>, <code class="language-plaintext highlighter-rouge">/var/www/srv</code>, or an immediate subdirectory for virtual hosts. Thus to get to <code class="language-plaintext highlighter-rouge">/</code> generally requires <code class="language-plaintext highlighter-rouge">../../</code>, <code class="language-plaintext highlighter-rouge">../../../</code>, or <code class="language-plaintext highlighter-rouge">../../../../</code>.</p>
-<h3 id="escalating-your-privileges-to-root">Escalating Your Privileges to Root</h3>
+<h2 id="escalating-your-privileges-to-root">Escalating Your Privileges to Root</h2>
 <p>A reminder that GTFOBins is your friend.</p>
 <ul>
 <li><a href="https://gtfobins.github.io/">GTFOBins</a></li>
 </ul>
-<h2 id="authenticate">Authenticate</h2>
-<h3 id="dictionary-attack">Dictionary Attack</h3>
+<h1 id="authenticate">Authenticate</h1>
+<h2 id="dictionary-attack">Dictionary Attack</h2>
 <p>NOTE: It doesn’t look like Burp Suite can effectively run an attack using the entire <code class="language-plaintext highlighter-rouge">rockyou.txt</code> data set.</p>
 <ul>
 <li><a href="https://cardboard-iguana.com/notes/burp-suite.html">Using Burp Suite</a></li>
 </ul>
-<h3 id="re-registration">Re-Registration</h3>
+<h2 id="re-registration">Re-Registration</h2>
 <p>The idea here is to register a username with leading or trailing whitespace, since that can be eaten by SQL parsers when querying for permissions. If the username isn’t properly sanitized before registration, this means that we can register accounts like “<code class="language-plaintext highlighter-rouge"> admin</code>” and get the same permissions as the “real” <code class="language-plaintext highlighter-rouge">admin</code> account.</p>
-<h3 id="json-web-token">JSON Web Token</h3>
+<h2 id="json-web-token">JSON Web Token</h2>
 <p>JSON web token format: <code class="language-plaintext highlighter-rouge">$HEADER.$PAYLOAD.$SIGNATURE</code>, where each substring is base64 encoded.</p>
 <p><code class="language-plaintext highlighter-rouge">$HEADER</code> and <code class="language-plaintext highlighter-rouge">$PAYLOAD</code> are both JSON blobs, but <code class="language-plaintext highlighter-rouge">$SIGNATURE</code> can be binary data.</p>
 <ul>
@@ -39,28 +39,28 @@ author: 100007
 <li><code class="language-plaintext highlighter-rouge">$SIGNATURE</code> is the signature (using <code class="language-plaintext highlighter-rouge">alg</code> from the <code class="language-plaintext highlighter-rouge">$HEADER</code>) of <code class="language-plaintext highlighter-rouge">$HEADER.$PAYLOAD</code> (both parts base64 encoded) using a server-side secret (often an SSL key… but sometimes just a string!).</li>
 </ul>
 <p>See jwt.io for a detailed breakdown. These are typically passed around as a user cookie, HTTP header, or queried from local storage.</p>
-<p>Sometimes it’s possible to brute-force a weak secret from the <code class="language-plaintext highlighter-rouge">$SIGNATURE</code> (which will allow tokens to be forged as desired), but sometimes servers will also support the <code class="language-plaintext highlighter-rouge">NONE</code> signature type, which indicates that no signing is used (so the JWT is then just <code class="language-plaintext highlighter-rouge">$HEADER.$PAYLOAD.</code> — note the trailing dot!). If the server allows the <code class="language-plaintext highlighter-rouge">NONE</code> signing method, then it’s often possible to just arbitrarily edit the <code class="language-plaintext highlighter-rouge">$PAYLOAD</code> to gain access to other users.</p>
+<p>Sometimes it’s possible to brute-force a weak secret from the <code class="language-plaintext highlighter-rouge">$SIGNATURE</code> (which will allow tokens to be forged as desired), but sometimes servers will also support the <code class="language-plaintext highlighter-rouge">NONE</code> signature type, which indicates that no signing is used (so the JWT is then just <code class="language-plaintext highlighter-rouge">$HEADER.$PAYLOAD.</code> - note the trailing dot!). If the server allows the <code class="language-plaintext highlighter-rouge">NONE</code> signing method, then it’s often possible to just arbitrarily edit the <code class="language-plaintext highlighter-rouge">$PAYLOAD</code> to gain access to other users.</p>
 <ul>
 <li><a href="https://jwt.io">JSON Web Tokens</a></li>
 </ul>
-<h3 id="no-auth">No Auth</h3>
+<h2 id="no-auth">No Auth</h2>
 <p>This is basically just an enumeration attack (the application is generating easily-guessed URLs and isn’t checking that the user actually has permission to view a particular URL).</p>
-<h2 id="zth-obscure-web-vulnerabilities">ZTH: Obscure Web Vulnerabilities</h2>
-<h3 id="what-is-ssti">What is SSTI?</h3>
+<h1 id="zth-obscure-web-vulnerabilities">ZTH: Obscure Web Vulnerabilities</h1>
+<h2 id="what-is-ssti">What is SSTI?</h2>
 <p>SSTI = Server-side template injection.</p>
 <p>This is where the server is building web pages using a template system and, because of inadequate input sanitization, the user can pass a parameter that can control the templating engine (beyond its intended limits).</p>
-<h3 id="manual-exploitation-of-ssti">Manual Exploitation of SSTI</h3>
+<h2 id="manual-exploitation-of-ssti">Manual Exploitation of SSTI</h2>
 <p>Typically you’d test for SSTI by passing something simple like “2 + 2” and seeing what the template splits out. <em>How</em> you pass “2 + 2” is going to depend heavily on the template system being used, however.</p>
 <p>The “PayloadsAllTheThings: Server Side Template Injection” document is a useful resource.</p>
 <ul>
 <li><a href="https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Server%20Side%20Template%20Injection">PayloadsAllTheThings: Template Injection</a></li>
 </ul>
-<h3 id="what-is-csrf">What is CSRF?</h3>
+<h2 id="what-is-csrf">What is CSRF?</h2>
 <p>CSRF = Cross Site Request Forgery</p>
 <p>This is when a user interacting with one website causes an action to be performed on another website <em>as that user</em> (in an unintended fashion). Basically, malicious URLs or JavaScript is causing the user’s browser to make requests to another site as the user but performing the actions specified by the attacker.</p>
-<h3 id="what-is-jwt">What is JWT?</h3>
+<h2 id="what-is-jwt">What is JWT?</h2>
 <p>JWT algorithms can sometimes use a server’s <em>public</em> key (for example, <code class="language-plaintext highlighter-rouge">HS256</code> generates a signature using the public half of a keypair, while <code class="language-plaintext highlighter-rouge">RS256</code> uses the private half of a keypair). If the public half of the keypair used to sign the JWT is available somehow (for example, if it’s been re-used as the server’s HTTPS certificate), then we can harvest it and use it to forge new JWTs.</p>
-<h3 id="jwt-challenge">JWT Challenge</h3>
+<h2 id="jwt-challenge">JWT Challenge</h2>
 <p>The base64-encoded version of <code class="language-plaintext highlighter-rouge">&#x007b;"typ":"JWT","alg":"HS256"&#x007d;</code> is <code class="language-plaintext highlighter-rouge">eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9Cg</code>.</p>
 <p>Use <code class="language-plaintext highlighter-rouge">basenc --base64url</code> and <code class="language-plaintext highlighter-rouge">basenc -d --base64url</code> to encode/decode URL-safe base64 (which is what JWT uses), rather than the <code class="language-plaintext highlighter-rouge">base64</code> binary. Be sure to strip the trailing <code class="language-plaintext highlighter-rouge">=</code> signs!</p>
 <p>Putting this all together, we can encode an <code class="language-plaintext highlighter-rouge">HS256</code> signature (assuming that there is no secret) using:</p>
@@ -75,13 +75,13 @@ basenc <span class="nt">--base64url</span> | <span class="se">\</span>
 <span class="nb">sed</span> <span class="nt">-e</span> <span class="s1">'s/=*$//'</span>
 </code></pre></div></div>
 <p>Here <code class="language-plaintext highlighter-rouge">$HEADER</code> is our base64-encoded header (see above), <code class="language-plaintext highlighter-rouge">$PAYLOAD</code> is our base64-encoded payload, and <code class="language-plaintext highlighter-rouge">$PUBLIC_KEY_FILE</code> is the PEM-formatted server public key (that we’ve obviously obtained using another method).</p>
-<h3 id="automatic-exploitation-of-the-jwt-none-vulnerability">Automatic Exploitation of the JWT “None Vulnerability”</h3>
+<h2 id="automatic-exploitation-of-the-jwt-none-vulnerability">Automatic Exploitation of the JWT “None Vulnerability”</h2>
 <p>The base64-encoded version of <code class="language-plaintext highlighter-rouge">&#x007b;"typ":"JWT","alg":"none"&#x007d;</code> is <code class="language-plaintext highlighter-rouge">eyJ0eXAiOiJKV1QiLCJhbGciOiJub25lIn0</code>.</p>
-<h3 id="manual-exploitation-of-xxe">Manual Exploitation of XXE</h3>
+<h2 id="manual-exploitation-of-xxe">Manual Exploitation of XXE</h2>
 <p><a href="https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/XXE%20Injection">PayloasAllTheThings on XXE.</a></p>
 <p><em>If</em> you’re dealing with PHP, and <em>if</em> the PHP expect module is loaded, and <em>if</em> XML inputs aren’t properly sanitized, then defining a SYSTEM entity with the value of <code class="language-plaintext highlighter-rouge">expect://$COMMAND</code> will get you RCE!</p>
 <p>NOTE: From the examples, it appears that while you need to add a DOCTYPE declaration with an ELEMENT to define an ENTITY, this DOCTYPE/ELEMENT can just be garbage.</p>
-<h3 id="xxe-challenge">XXE Challenge</h3>
+<h2 id="xxe-challenge">XXE Challenge</h2>
 <p>Confirming that a garbage DOCTYPE/ELEMENT definition are fine, the following appears to get me access to <code class="language-plaintext highlighter-rouge">/etc/passwd</code> on a vulnerable box:</p>
 <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE test [
 &lt;!ELEMENT test ANY&gt;</span>

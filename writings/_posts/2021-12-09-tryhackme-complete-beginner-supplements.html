@@ -1,6 +1,6 @@
 ---
 title: 'TryHackMe: Complete Beginner (Supplements)'
-date: 2021-12-09 06:00:00.000000000 Z
+date: 2021-12-09 12:00:00.000000000 Z
 layout: post-external
 original_link: https://cardboard-iguana.com/log/2021-12-09-tryhackme-complete-beginner-supplements.html
 author: 100007
@@ -9,22 +9,22 @@ author: 100007
 <h1 id="tryhackme-complete-beginner-supplements">TryHackMe: Complete Beginner (Supplements)</h1>
 <p><strong>author:</strong> Nathan Acks<br />
 <strong>date:</strong> 2021-12-09</p>
-<h2 id="xxe">XXE</h2>
-<h3 id="deploy-the-vm">Deploy the VM</h3>
+<h1 id="xxe">XXE</h1>
+<h2 id="deploy-the-vm">Deploy the VM</h2>
 <p>I think I’ve basically done a different version of this room…</p>
 <p>Anyways, two types of XML External Entity (XXE) attacks:</p>
 <ul>
 <li>IN-BAND attacks are where the attacker receives an immediate response.</li>
 <li>OUT-OF-BAND (“blind”) attacks are when there is no immediate response and instead the attacker must receive the data indirectly (such as through a request to a second server under the attacker’s control).</li>
 </ul>
-<h3 id="extensible-markup-language">eXtensible Markup Language</h3>
+<h2 id="extensible-markup-language">eXtensible Markup Language</h2>
 <p>Some things to remember about XML documents:</p>
 <ul>
 <li>Start with the standard prolog: <code class="language-plaintext highlighter-rouge">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</code>. This is not <em>technically</em> compulsory, but some parsers will barf if it’s missing.</li>
 <li>Every XML document has one and <em>only</em> one root element.</li>
 <li>XML is case sensitive.</li>
 </ul>
-<h3 id="dtd">DTD</h3>
+<h2 id="dtd">DTD</h2>
 <p>The Document Type Definition defines/validates an XML document. For example, the DTD defined as</p>
 <pre><code class="language-dtd">&lt;!DOCTYPE note [
 &lt;!ELEMENT note (to,from,heading,body)&gt;
@@ -45,7 +45,7 @@ author: 100007
 <span class="nt">&lt;/note&gt;</span>
 </code></pre></div></div>
 <p>The root node is defined immediately after the DOCTYPE declaration, with each ELEMENT declaration taking the form <code class="language-plaintext highlighter-rouge">element_name (contained_data)</code>. <code class="language-plaintext highlighter-rouge">#PCDATA</code> stands for “printable character data.</p>
-<p>The DTD can also define multiple ENTITY types — <code class="language-plaintext highlighter-rouge">&amp;amp;</code> and similar.</p>
+<p>The DTD can also define multiple ENTITY types - <code class="language-plaintext highlighter-rouge">&amp;amp;</code> and similar.</p>
 <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE userInfo [
 &lt;!ENTITY name "feast"&gt;</span>
 ]&gt;
@@ -56,7 +56,7 @@ author: 100007
 </code></pre></div></div>
 <p>Conveniently, DTD can be defined <em>in line</em>, and not just by included files.</p>
 <p>These last two features are what we will leverage to attack applications that accept XML inputs.</p>
-<h3 id="xxe-payload">XXE Payload</h3>
+<h2 id="xxe-payload">XXE Payload</h2>
 <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?xml version="1.0"?&gt;</span>
 <span class="cp">&lt;!DOCTYPE root [
 &lt;!ENTITY read SYSTEM 'file:///etc/passwd'&gt;</span>

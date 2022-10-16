@@ -1,6 +1,6 @@
 ---
 title: 'TryHackMe: Complete Beginner (Supplements)'
-date: 2021-12-05 06:00:00.000000000 Z
+date: 2021-12-05 12:00:00.000000000 Z
 layout: post-external
 original_link: https://cardboard-iguana.com/log/2021-12-05-tryhackme-complete-beginner-supplements.html
 author: 100007
@@ -9,8 +9,8 @@ author: 100007
 <h1 id="tryhackme-complete-beginner-supplements">TryHackMe: Complete Beginner (Supplements)</h1>
 <p><strong>author:</strong> Nathan Acks<br />
 <strong>date:</strong> 2021-12-05</p>
-<h2 id="attacking-kerberos">Attacking Kerberos</h2>
-<h3 id="introduction">Introduction</h3>
+<h1 id="attacking-kerberos">Attacking Kerberos</h1>
+<h2 id="introduction">Introduction</h2>
 <p>Kerberos: The default authentication method for Windows domains. Intended to be the successor to NTLM.</p>
 <ul>
 <li>TICKET GRANTING TICKET (TGT): An authentication ticket that can be used to request service tickets for specific domain services from the ticket granting service.</li>
@@ -60,37 +60,36 @@ author: 100007
 <p>The above process explains why it’s sometimes said that “a hash is as good as a password” for a Window’s domain.</p>
 <ul>
 <li><a href="https://cardboard-iguana.com/notes/windows-password-hashes.html">Windows Password Hashes</a></li>
-<li><a href="https://blog.quest.com/golden-ticket-attacks-how-they-work-and-how-to-defend-against-them/">Golden ticket attacks: How they work — and how to defend against them</a></li>
+<li><a href="https://blog.quest.com/golden-ticket-attacks-how-they-work-and-how-to-defend-against-them/">Golden ticket attacks: How they work - and how to defend against them</a></li>
 <li><a href="https://tryhackme.com/room/attackingkerberos">TryHackMe: Attacking Kerberos</a></li>
 <li><a href="https://en.wikipedia.org/wiki/Kerberos_%28protocol%29#Description">Kerberos (protocol) (Wikipedia)</a></li>
 </ul>
-<h3 id="enumerating-with-kerbrute">Enumerating with Kerbrute</h3>
+<h2 id="enumerating-with-kerbrute">Enumerating with Kerbrute</h2>
 <p>Kerbrute works by sending a single UDP packet to the authentication service to begin the authentication process, but then doesn’t complete the transaction as to avoid an actual login failure (and the associated logging). While this doesn’t grant access to anything, it does allow domain users to be enumerated using a wordlist.</p>
 <p>NOTE: To use kerbrute you need to already be on the domain you are attacking, or alternately need to have mapped the domain controller (which normally hosts the KDC) IP address properly in your /etc/hosts file.</p>
-<h3 id="harvesting--brute-forcing-tickets-with-rubeus">Harvesting &amp; Brute-Forcing Tickets with Rubeus</h3>
+<h2 id="harvesting--brute-forcing-tickets-with-rubeus">Harvesting &amp; Brute-Forcing Tickets with Rubeus</h2>
 <p>Rubeus is a Windows-only post-exploitation tool for attacking Kerberos. No compiled binaries are available (either through the GitHub repo or Kali Linux’s <code class="language-plaintext highlighter-rouge">windows-binaries</code> package).</p>
 <p>NOTE: To use Rebueus you need to already be on the domain you are attacking, or alternately need to have mapped the domain controller (which normally hosts the KDC) IP address properly in C:/Windows/System32/drivers/etc/hosts.</p>
-<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Harvest ticket granting tickets observed by the current</span><span class="w">
-</span><span class="c"># machine. Probably works best when run on a domain</span><span class="w">
-</span><span class="c"># controller.</span><span class="w">
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Harvest ticket granting tickets observed by the current machine.</span><span class="w">
+</span><span class="c"># Probably works best when run on a domain controller.</span><span class="w">
 </span><span class="c">#</span><span class="w">
 </span><span class="n">Rubeus.exe</span><span class="w"> </span><span class="nx">harvest</span><span class="w"> </span><span class="nx">/interval:30</span><span class="w">
-</span><span class="c"># Spray the specified password across all known users and</span><span class="w">
-</span><span class="c"># generate a ticket giving ticket for successful</span><span class="w">
-</span><span class="c"># authentications. (Can trigger account lockouts!)</span><span class="w">
+</span><span class="c"># Spray the specified password across all known users and generate a</span><span class="w">
+</span><span class="c"># ticket giving ticket for successful authentications. (Can trigger</span><span class="w">
+</span><span class="c"># account lockouts!)</span><span class="w">
 </span><span class="c">#</span><span class="w">
 </span><span class="n">Rubeus.exe</span><span class="w"> </span><span class="nx">brute</span><span class="w"> </span><span class="nx">/password:ThePasswordToSpray</span><span class="w"> </span><span class="nx">/noticket</span><span class="w">
 </span></code></pre></div></div>
 <ul>
 <li><a href="https://github.com/GhostPack/Rubeus">Rubeus</a></li>
 </ul>
-<h3 id="kerberoasting">Kerberoasting</h3>
+<h2 id="kerberoasting">Kerberoasting</h2>
 <p>Kerberoasting is where a service ticket is used to brute force a service password. This password can then be used to either move laterally or (if the service runs with elevated privileges) to elevate your privileges.</p>
 <p>Note that not every account is kerberoastable, though it’s not 100% obvious from this walk-through why that is. The Kali Linux tool <code class="language-plaintext highlighter-rouge">bloodhound</code> can be used to identify potentially kerberoastable accounts.</p>
 <p>The main defenses against kerberoasting are (1) strong passwords and (2) making sure you’re not running any services as domain admin (which you shouldn’t need to do in this day and age anyway).</p>
-<h3 id="rubeus">Rubeus</h3>
-<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Extract password hashes for all known kerberoastable</span><span class="w">
-</span><span class="c"># accounts using Rubeus.</span><span class="w">
+<h2 id="rubeus">Rubeus</h2>
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Extract password hashes for all known kerberoastable accounts using</span><span class="w">
+</span><span class="c"># Rubeus.</span><span class="w">
 </span><span class="c">#</span><span class="w">
 </span><span class="n">Rubeus.exe</span><span class="w"> </span><span class="nx">kerberoast</span><span class="w">
 </span></code></pre></div></div>
@@ -98,7 +97,7 @@ author: 100007
 <ul>
 <li><a href="https://cardboard-iguana.com/notes/hashcat.html">Using Hashcat</a></li>
 </ul>
-<h3 id="impacket">Impacket</h3>
+<h2 id="impacket">Impacket</h2>
 <p>Impacket can identify kerberoastable accounts and dump packets remotely. It comes standard with Kali Linux.</p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>python3 <span class="se">\</span>
 /usr/share/doc/python3-impacket/examples/GetUserSPNs.py <span class="se">\</span>
@@ -109,7 +108,7 @@ author: 100007
 <ul>
 <li><a href="https://cardboard-iguana.com/notes/hashcat.html">Using Hashcat</a></li>
 </ul>
-<h3 id="as-rep-roasting-with-rubeus">AS-REP Roasting with Rubeus</h3>
+<h2 id="as-rep-roasting-with-rubeus">AS-REP Roasting with Rubeus</h2>
 <p>AS-REP roasting is basically kerberoasting for regular user accounts. The only requirement to roast a user account is that Kerberos pre-authentication is disable.</p>
 <p>(When pre-authentication is disabled, the authentication server will supply a ticket granting ticket and a session key automatically when requested, <em>without first verifying the user</em>. This data is then stored offline by the Windows machine for later decryption when the user with pre-authentication disabled logs in. But this means that all we need to do is to break the user’s NT hash!)</p>
 <p>Both Rubeus and Impacket (via GetNPUsers.py) support AS-REP roasting; however, Rubeus can auto-discover roastable users, while GetNPUsers.py requires that user accounts already be enumerated and roastable accounts identified.</p>
@@ -117,31 +116,31 @@ author: 100007
 </span><span class="c">#</span><span class="w">
 </span><span class="n">Rubeus.exe</span><span class="w"> </span><span class="nx">asreproast</span><span class="w">
 </span></code></pre></div></div>
-<p>To use Hashcat to crack the hashes obtained in this fashin, first insert <code class="language-plaintext highlighter-rouge">23$</code> after the leading <code class="language-plaintext highlighter-rouge">$kerb5asrep$</code> (so <code class="language-plaintext highlighter-rouge">$kerb5asrep$</code> → <code class="language-plaintext highlighter-rouge">$kerb5asrep$23$</code>) and then use mode 18200.</p>
+<p>To use Hashcat to crack the hashes obtained in this fashin, first insert <code class="language-plaintext highlighter-rouge">23$</code> after the leading <code class="language-plaintext highlighter-rouge">$kerb5asrep$</code> (so <code class="language-plaintext highlighter-rouge">$kerb5asrep$</code> -&gt; <code class="language-plaintext highlighter-rouge">$kerb5asrep$23$</code>) and then use mode 18200.</p>
 <p>Basically the only mitigation for this attack is to keep pre-authentication enabled, though strong password policies can help.</p>
 <ul>
 <li><a href="https://cardboard-iguana.com/notes/windows-password-hashes.html">Windows Password Hashes</a></li>
 <li><a href="https://cardboard-iguana.com/notes/hashcat.html">Using Hashcat</a></li>
 </ul>
-<h3 id="pass-the-ticket-with-mimikatz">Pass the Ticket with Mimikatz</h3>
+<h2 id="pass-the-ticket-with-mimikatz">Pass the Ticket with Mimikatz</h2>
 <p>Mimikatz can dump ticket granting tickets (and session keys?) from the memory of Windows’ Local Security Authority Subsystem Service (LSASS); these can then be used to for privilege elevation or lateral movement (depending on which users are active on that machine).</p>
-<p>NOTE: There’s a bit of terminology creep in these discussions. Mimikatz and Rubeus are actually dumping Kerberos data structures (as .kirbi files), which contain <em>both</em> a ticket <em>and</em> the corresponding session key. People tend to call these .kirbi files “tickets”, but it’s worth keeping in mind that they contain <em>both</em> pieces of data (as a “ticket” in the Kerberos sense, not the hacker’s sense, isn’t useful without the corresponding session key). See “Rubeus — Now With More Kekeo” for a good discussion of this.</p>
+<p>NOTE: There’s a bit of terminology creep in these discussions. Mimikatz and Rubeus are actually dumping Kerberos data structures (as .kirbi files), which contain <em>both</em> a ticket <em>and</em> the corresponding session key. People tend to call these .kirbi files “tickets”, but it’s worth keeping in mind that they contain <em>both</em> pieces of data (as a “ticket” in the Kerberos sense, not the hacker’s sense, isn’t useful without the corresponding session key). See “Rubeus - Now With More Kekeo” for a good discussion of this.</p>
 <p>Mimikatz needs to be run with administrative privileges (on the local machine), and provides its own command prompt.</p>
 <ul>
-<li><code class="language-plaintext highlighter-rouge">privilege::debug</code> — See if you’re running with the right privileges.</li>
-<li><code class="language-plaintext highlighter-rouge">sekurlsa::tickets /export</code> — Dump any Kerberos ”tickets” (really ticket + session key data structures) from LSASS’s memory as .kirbi files. Tickets are named like ID-USER-SERVICE-DOMAIN.kirbi; ticket granting tickets have a <code class="language-plaintext highlighter-rouge">krbtgt</code> SERVICE name. If you can find a <code class="language-plaintext highlighter-rouge">krbtgt</code> ticket belonging to an administrator account, then you’ve struck gold (literally — see the next section).</li>
-<li><code class="language-plaintext highlighter-rouge">kerberos::ptt TICKET_FILE</code> — Load the data structure in the specified .kirbi file into memory (allowing the account you’re logged in as to “pass the ticket” and impersonate the user whose ticket you’ve harvested).</li>
+<li><code class="language-plaintext highlighter-rouge">privilege::debug</code> - See if you’re running with the right privileges.</li>
+<li><code class="language-plaintext highlighter-rouge">sekurlsa::tickets /export</code> - Dump any Kerberos “tickets” (really ticket + session key data structures) from LSASS’s memory as .kirbi files. Tickets are named like ID-USER-SERVICE-DOMAIN.kirbi; ticket granting tickets have a <code class="language-plaintext highlighter-rouge">krbtgt</code> SERVICE name. If you can find a <code class="language-plaintext highlighter-rouge">krbtgt</code> ticket belonging to an administrator account, then you’ve struck gold (literally - see the next section).</li>
+<li><code class="language-plaintext highlighter-rouge">kerberos::ptt TICKET_FILE</code> - Load the data structure in the specified .kirbi file into memory (allowing the account you’re logged in as to “pass the ticket” and impersonate the user whose ticket you’ve harvested).</li>
 </ul>
 <p>The built-in Windows command <code class="language-plaintext highlighter-rouge">klist</code> will show you the current Kerberos tickets in memory.</p>
 <p>The only real way to defend against this attack is to <em>only</em> allow domain admins to log into domain controllers, <em>not</em> lower privileged machines!</p>
 <ul>
-<li><a href="http://www.harmj0y.net/blog/redteaming/rubeus-now-with-more-kekeo/">Rubeus — Now With More Kekeo</a></li>
+<li><a href="http://www.harmj0y.net/blog/redteaming/rubeus-now-with-more-kekeo/">Rubeus - Now With More Kekeo</a></li>
 </ul>
-<h3 id="goldensilver-ticket-attacks-with-mimikatz">Golden/Silver Ticket Attacks with Mimikatz</h3>
+<h2 id="goldensilver-ticket-attacks-with-mimikatz">Golden/Silver Ticket Attacks with Mimikatz</h2>
 <p>The idea with gold and silver tickets is that, since the KDC and service long term secret keys are just the NT hashes of the corresponding service account’s passwords, then if you can dump the password (or even its hash), you can <em>forge</em> a kerberos ticket without ever needing to contact the KDC. (See “Silver &amp; Golden Tickets”.)</p>
 <p>Silver tickets are forged using a service account’s NT hash, and can be used to grant any user access to that service. This works because Kerberos implicitly assumes that <em>only</em> the KDC and the service account know the service account’s long term secret key.</p>
-<p>Golden tickets take things a step further — if you can get the <code class="language-plaintext highlighter-rouge">krbtgt</code> <em>user</em>’s NT hash, then you can forge a ticket granting ticket for any user, and then use that to get the KDC to provide a valid service ticket for any service that user has access to. This works because Kerberos trusts the encrypted ticket granting ticket blob and <em>doesn’t reauthenticate the user before granting further access</em>.</p>
-<p>Golden tickets are powerful (since you can be anyone, it’s trivial to gain control of the domain), but also noisier — because you’re running through the KDC infrastructure, golden ticket still generate (almost) all of the normal logging, while silver tickets allow you to bypass the KDC completely and only generate logs on the service server (if that).</p>
+<p>Golden tickets take things a step further - if you can get the <code class="language-plaintext highlighter-rouge">krbtgt</code> <em>user</em>’s NT hash, then you can forge a ticket granting ticket for any user, and then use that to get the KDC to provide a valid service ticket for any service that user has access to. This works because Kerberos trusts the encrypted ticket granting ticket blob and <em>doesn’t reauthenticate the user before granting further access</em>.</p>
+<p>Golden tickets are powerful (since you can be anyone, it’s trivial to gain control of the domain), but also noisier - because you’re running through the KDC infrastructure, golden ticket still generate (almost) all of the normal logging, while silver tickets allow you to bypass the KDC completely and only generate logs on the service server (if that).</p>
 <p>To generate a gold or silver ticket using Mimikatz, begin by running the <code class="language-plaintext highlighter-rouge">lsadump::lsa /inject /name:SERVICE</code> command to retrieve the service SID and NTLM password hash for that service. If SERVICE is <code class="language-plaintext highlighter-rouge">krbtgt</code> then this will allow the creation of a golden ticket, otherwise you’ll be creating a silver ticket.</p>
 <p>(You can also use a user name instead of SERVICE, in which case it appears that Mimikatz will just request a ticket granting ticket from the KDC as that user in the next step; this is theoretically just as noisy as a golden ticket, but looks more “normal”.)</p>
 <p>To actually create and cache the ticket, use <code class="language-plaintext highlighter-rouge">Kerberos::golden /user:USER /domain:DOMAIN /sid:SID /krbtgt:HASH /id:TYPE</code>, where:</p>
@@ -157,7 +156,7 @@ author: 100007
 <li><a href="https://cardboard-iguana.com/notes/windows-password-hashes.html">Windows Password Hashes</a></li>
 <li><a href="https://en.hackndo.com/kerberos-silver-golden-tickets/">Silver &amp; Golden Tickets</a></li>
 </ul>
-<h3 id="kerberos-backdoors-with-mimikatz">Kerberos Backdoors with Mimikatz</h3>
+<h2 id="kerberos-backdoors-with-mimikatz">Kerberos Backdoors with Mimikatz</h2>
 <p>If Mimikatz is run on a domain controller, it can modify the authentication service’s memory using the <code class="language-plaintext highlighter-rouge">misc::skeleton</code> command to cause it to attempt to decrypt the AS-REQ using <em>both</em> the user’s NT hash <em>and</em> an NT hash of your choosing (by default <code class="language-plaintext highlighter-rouge">60BA4FCADC466C7A033C178194C03DF6</code>, which is just <code class="language-plaintext highlighter-rouge">mimikatz</code>). This means that you can send an AS-REQ as any user using the “skeleton key” hash to gain access as that user, similar to a golden ticket attack.</p>
 <p>Obviously this isn’t very persistent itself, as the skeleton key will be lost if the server is rebooted or the authentication service restarted.</p>
 <ul>

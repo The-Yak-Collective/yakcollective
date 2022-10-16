@@ -1,6 +1,6 @@
 ---
 title: 'ITPro.TV: CompTIA Security+ (SY0-601)'
-date: 2022-03-03 06:00:00.000000000 Z
+date: 2022-03-03 12:00:00.000000000 Z
 layout: post-external
 original_link: https://cardboard-iguana.com/log/2022-03-03-itprotv-comptia-security-plus.html
 author: 100007
@@ -9,8 +9,8 @@ author: 100007
 <h1 id="itprotv-comptia-security-sy0-601">ITPro.TV: CompTIA Security+ (SY0-601)</h1>
 <p><strong>author:</strong> Nathan Acks<br />
 <strong>date:</strong> 2022-03-03</p>
-<h2 id="comptia-security-exam-cram">CompTIA Security+ Exam Cram</h2>
-<h3 id="cryptosystems">Cryptosystems</h3>
+<h1 id="comptia-security-exam-cram">CompTIA Security+ Exam Cram</h1>
+<h2 id="cryptosystems">Cryptosystems</h2>
 <p>Cryptosystems are concerned with data confidentiality (encrypting) and integrity (hashing/signing).</p>
 <p>Vocabulary:</p>
 <ul>
@@ -29,12 +29,12 @@ author: 100007
 <li>Nonrepudiation: The use of a cryptosystem to prevent deniability, typically via cryptographic signatures. Note that in a fully nonrepudiable client/server model the host will receive proof of origin (the message comes from the client), while the client will receive proof of submission (the data was sent), delivery (that data was received), and receipt (that data was read correctly).</li>
 </ul>
 <p>Block cyphers are generally high diffusion algorithms, while stream ciphers are (necessarily) low diffusion.</p>
-<p>Note that really, both the public and private keys in asymmetric encryption schemes and encrypt and decrypt messages — it’s just that you don’t use the public key to decrypt the actual message because <em>everyone</em> potentially has access to it. But the symmetry (heh) in asymmetric keys becomes apparent when you think about what a <em>signature</em> actually is — an encrypted hash of the plaintext.</p>
+<p>Note that really, both the public and private keys in asymmetric encryption schemes and encrypt and decrypt messages - it’s just that you don’t use the public key to decrypt the actual message because <em>everyone</em> potentially has access to it. But the symmetry (heh) in asymmetric keys becomes apparent when you think about what a <em>signature</em> actually is - an encrypted hash of the plaintext.</p>
 <p>Finally, the public key in asymmetric cryptography is generally derived from the private key (but the reverse is not possible). This means that it’s often (always?) possible to use the private half of an asymmetric keypair as a symmetric key (not that you’d actually <em>want</em> to do this…).</p>
 <p>In a fully asymmetric cryptosystem, each user has a public/private keypair, and uses the recipients public key to encrypt messages to them. This is expensive though, so in general asymmetric cryptography is used in one of two ways:</p>
 <ul>
 <li>To exchange a short-lived symmetric (“session”) key for use in the actual communication, or</li>
-<li>More recently, simply to verify identities and begin a Diffie-Hellman key exchange (after the initial key creation, new Diffie-Hellman exchanges are subsequently conducted as part of every message, allowing session keys to be ratcheted for every message — a method called “forward secrecy”).</li>
+<li>More recently, simply to verify identities and begin a Diffie-Hellman key exchange (after the initial key creation, new Diffie-Hellman exchanges are subsequently conducted as part of every message, allowing session keys to be ratcheted for every message - a method called “forward secrecy”).</li>
 </ul>
 <p>Note that while forward secrecy protects against both the (future) disclosure of the private key and harvesting of all on-the-wire messages, it still fails if the attacker has continuous access to the memory of one party and/or the ability to influence the generation of per-message ephemeral secrets.</p>
 <p>Other terms for symmetric keys: Secret keys, private keys, shared secrets.</p>
@@ -44,11 +44,11 @@ author: 100007
 <li><a href="https://en.wikipedia.org/wiki/Forward_secrecy">Forward secrecy (Wikipedia)</a></li>
 <li><a href="https://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange">Diffie-Hellman key exchange (Wikipedia)</a></li>
 </ul>
-<h3 id="use-of-proven-technologies-and-implementations">Use of Proven Technologies and Implementations</h3>
+<h2 id="use-of-proven-technologies-and-implementations">Use of Proven Technologies and Implementations</h2>
 <p>Exam Cram emphasizes several times the efficiency of elliptic curve cryptography (ECC) and its application for mobile devices with more constrained computational or energetic profiles. Which I suspect means that a question like this is likely to be on the Security+ exam.</p>
-<h3 id="steganography">Steganography</h3>
+<h2 id="steganography">Steganography</h2>
 <p>Exam Cram indicates that the Security+ test is likely to have some kind of question about the difference between steganography and cryptography.</p>
-<h3 id="cryptography-use-cases">Cryptography Use Cases</h3>
+<h2 id="cryptography-use-cases">Cryptography Use Cases</h2>
 <p>To reiterate, a list of the roles of cryptography in security:</p>
 <ul>
 <li>Confidentiality (encryption)</li>
@@ -56,12 +56,14 @@ author: 100007
 <li>Nonrepudiation (signing)</li>
 <li>Authentication (can be accomplished via a public/private key cryptography during the initial handshake)</li>
 </ul>
-<h2 id="itprotv-comptia-security-sy0-601-1">ITPro.TV: CompTIA Security+ (SY0-601)</h2>
-<h2 id="cryptography">Cryptography</h2>
-<h3 id="cryptography-concepts">Cryptography Concepts</h3>
+<h1 id="itprotv-comptia-security-sy0-601-1">ITPro.TV: CompTIA Security+ (SY0-601)</h1>
+<h1 id="cryptography">Cryptography</h1>
+<h2 id="cryptography-concepts">Cryptography Concepts</h2>
 <blockquote>
 <p>[Cryptography] is trying to make us live in a world that’s “need to know”.</p>
-<p>— Dan Lowrie</p>
+<ul>
+<li>Dan Lowrie</li>
+</ul>
 </blockquote>
 <p>The three states of data:</p>
 <ul>
@@ -74,195 +76,69 @@ author: 100007
 <li>PRESENT</li>
 <li>TWINE</li>
 </ul>
-<h3 id="encryption-and-steganography">Encryption And Steganography</h3>
-<p>Encryption is about ensuring confidentiality; steganography is about hiding information (which may — and probably should be! — itself cyphertext).</p>
+<h2 id="encryption-and-steganography">Encryption And Steganography</h2>
+<p>Encryption is about ensuring confidentiality; steganography is about hiding information (which may - and probably should be! - itself cyphertext).</p>
 <p>Interesting… ITPro.TV is defining a streaming cipher as operating byte-by-byte, whereas Exam Cram defined them as operating bit-by-bit. So either one of these is wrong, or the difference between stream and block cyphers are more a matter of degree than kind (I kind of suspect it’s the latter).</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left">Stream Cypher</th>
-<th style="text-align: left">Block Cypher</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left">Bit/Byte-based</td>
-<td style="text-align: left">Block-based (64 bits or higher)</td>
-</tr>
-<tr>
-<td style="text-align: left">Generally less secure</td>
-<td style="text-align: left">Generally more secure</td>
-</tr>
-<tr>
-<td style="text-align: left">Faster</td>
-<td style="text-align: left">Slower</td>
-</tr>
-</tbody>
-</table>
+<p>Stream cipher bullet points:</p>
+<ul>
+<li>Bit/Byte-based</li>
+<li>Generally less secure</li>
+<li>Faster</li>
+</ul>
+<p>Block cipher bullet points:</p>
+<ul>
+<li>Block-based (64 bits or higher)</li>
+<li>Generally more secure</li>
+<li>Slower</li>
+</ul>
 <p>Block cipher modes:</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left">Mode</th>
-<th style="text-align: left">Considerations</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left">Electronic Code Book (ECB)</td>
-<td style="text-align: left">Old, weak</td>
-</tr>
-<tr>
-<td style="text-align: left">Cypher Block Encoding (ECC)</td>
-<td style="text-align: left">Errors in one block will effect the rest of the chain</td>
-</tr>
-<tr>
-<td style="text-align: left">Cypher Feedback (CFB)</td>
-<td style="text-align: left">Allows a block cipher to function more like a stream cipher</td>
-</tr>
-<tr>
-<td style="text-align: left">Output Feedback (OFB)</td>
-<td style="text-align: left">Allows a block cipher to function more like a stream cipher</td>
-</tr>
-<tr>
-<td style="text-align: left">Counter Mode (CTR)</td>
-<td style="text-align: left">Strongest, used by AES</td>
-</tr>
-</tbody>
-</table>
-<h3 id="hashing">Hashing</h3>
-<p>Hashes are always fixed length (for a given hash type). Also, “message digest” == ”fingerprint” == “hash”!</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left">Algorithm</th>
-<th style="text-align: left">Considerations</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left">MD5</td>
-<td style="text-align: left">128-bit, prone to collisions (old, weak)</td>
-</tr>
-<tr>
-<td style="text-align: left">SHA1</td>
-<td style="text-align: left">160-bit, some collisions</td>
-</tr>
-<tr>
-<td style="text-align: left">SHA2</td>
-<td style="text-align: left">224, 256, 384, 512 bit variants (modern)</td>
-</tr>
-<tr>
-<td style="text-align: left">RIPEMD</td>
-<td style="text-align: left">128, 160, 256, 320 bit variants (uncommon)</td>
-</tr>
-</tbody>
-</table>
+<ul>
+<li>Electronic Code Book (ECB) - Old, weak</li>
+<li>Cypher Block Encoding (ECC) - Errors in one block will effect the rest of the chain</li>
+<li>Cypher Feedback (CFB) - Allows a block cipher to function more like a stream cipher</li>
+<li>Output Feedback (OFB) - Allows a block cipher to function more like a stream cipher</li>
+<li>Counter Mode (CTR) - Strongest, used by AES</li>
+</ul>
+<h2 id="hashing">Hashing</h2>
+<p>Hashes are always fixed length (for a given hash type). Also, “message digest” == “fingerprint” == “hash”!</p>
+<ul>
+<li>MD5 - 128-bit, prone to collisions (old, weak)</li>
+<li>SHA1 - 160-bit, some collisions</li>
+<li>SHA2 - 224, 256, 384, 512 bit variants (modern)</li>
+<li>RIPEMD - 128, 160, 256, 320 bit variants (uncommon)</li>
+</ul>
 <p>HMACs are “hashed message authentication codes” used to verify message integrity and authenticity. HMACs are not hash functions themselves, but are rather encrypted hashes that are appended to messages (so, a signature).</p>
 <p>Checksums are not hashing algorithms, but serve a similar purpose.</p>
 <p>A note about salts: You <em>don’t</em> want your salt(s) to become public, but it also doesn’t completely negate their value if they are leaked. The reason for this is that, so long as you are using <em>unique</em> salts in every instance, you are still preventing the use of <em>mass</em> password/data cracking. So even a leaked salt buys you time… But that’s the only thing it buys you at that point, so it’s still important to re-encrypt / re-hash / invalidate passwords, etc. if this happens!</p>
-<h3 id="symmetric-vs-asymmetric-encryption">Symmetric vs. Asymmetric Encryption</h3>
+<h2 id="symmetric-vs-asymmetric-encryption">Symmetric vs. Asymmetric Encryption</h2>
 <p>Symmetric cyphers:</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left">Name</th>
-<th style="text-align: left">Considerations</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left">AES</td>
-<td style="text-align: left">Block cypher, 128 – 256 bits</td>
-</tr>
-<tr>
-<td style="text-align: left">DES</td>
-<td style="text-align: left">Block cypher, 56-bits</td>
-</tr>
-<tr>
-<td style="text-align: left">3DES</td>
-<td style="text-align: left">Three DES rounds, 168-bits (effective)</td>
-</tr>
-<tr>
-<td style="text-align: left">Blowfish</td>
-<td style="text-align: left">Block cipher, 64-bit</td>
-</tr>
-<tr>
-<td style="text-align: left">RC4</td>
-<td style="text-align: left">Stream cypher, used in WEP and WPA</td>
-</tr>
-<tr>
-<td style="text-align: left">RC5</td>
-<td style="text-align: left">Block cipher variant of RC4</td>
-</tr>
-<tr>
-<td style="text-align: left">RC6</td>
-<td style="text-align: left">Block cipher variant of RC4</td>
-</tr>
-</tbody>
-</table>
+<ul>
+<li>AES - Block cypher, 128 - 256 bits</li>
+<li>DES - Block cypher, 56-bits</li>
+<li>3DES - Three DES rounds, 168-bits (effective)</li>
+<li>Blowfish - Block cipher, 64-bit</li>
+<li>RC4 - Stream cypher, used in WEP and WPA</li>
+<li>RC5 - Block cipher variant of RC4</li>
+<li>RC6 - Block cipher variant of RC4</li>
+</ul>
 <p>Of these, only AES is considered strong these days.</p>
 <p>Asymmetric cyphers:</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left">Name</th>
-<th style="text-align: left">Considerations</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left">RSA</td>
-<td style="text-align: left">Second oldest, common</td>
-</tr>
-<tr>
-<td style="text-align: left">Diffie-Hellman</td>
-<td style="text-align: left">Oldest standard, used for key exchange</td>
-</tr>
-<tr>
-<td style="text-align: left">DSA</td>
-<td style="text-align: left">NIST “digital security standard”</td>
-</tr>
-<tr>
-<td style="text-align: left">EIGamal</td>
-<td style="text-align: left">Used by PGP/GPG</td>
-</tr>
-<tr>
-<td style="text-align: left">ECC</td>
-<td style="text-align: left">New, fast, small keys</td>
-</tr>
-</tbody>
-</table>
-<p>Two applications/machines that try to communicate cryptographically need to first agree on a “cipher suite” — a set of cryptographic algorithms — to use. These are represented in a standard(ish) fashion:</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left">TLS</th>
-<th style="text-align: left">_</th>
-<th style="text-align: left">DHE</th>
-<th style="text-align: left">_</th>
-<th style="text-align: left">RSA</th>
-<th style="text-align: left">_WITH_</th>
-<th style="text-align: left">AES_256</th>
-<th style="text-align: left">_</th>
-<th style="text-align: left">GCM</th>
-<th style="text-align: left">_</th>
-<th style="text-align: left">SHA384</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left">Standard identifier</td>
-<td style="text-align: left"> </td>
-<td style="text-align: left">Key exchange</td>
-<td style="text-align: left"> </td>
-<td style="text-align: left">Asymmetric cipher</td>
-<td style="text-align: left"> </td>
-<td style="text-align: left">Symmetric cipher</td>
-<td style="text-align: left"> </td>
-<td style="text-align: left">Symmetric cipher mode</td>
-<td style="text-align: left"> </td>
-<td style="text-align: left">HMAC</td>
-</tr>
-</tbody>
-</table>
+<ul>
+<li>RSA - Second oldest, common</li>
+<li>Diffie-Hellman - Oldest standard, used for key exchange</li>
+<li>DSA - NIST “digital security standard”</li>
+<li>EIGamal - Used by PGP/GPG</li>
+<li>ECC - New, fast, small keys</li>
+</ul>
+<p>Two applications/machines that try to communicate cryptographically need to first agree on a “cipher suite” - a set of cryptographic algorithms - to use. These are represented in a standard(ish) fashion as “standard name + key exchange + asymmetric cipher (with) symmetric cipher + symmetric cipher mode + HMAC”. For example:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TLS_DHE_RSA_WITH_AES_256_GCM_SHA384
+</code></pre></div></div>
+<p>Has the following parts:</p>
+<ul>
+<li>TLS - standard</li>
+<li>DHE - key exchange method</li>
+<li>RSA - asymmetric cipher</li>
+<li>AES-256 - symmetric cipher</li>
+<li>GCM - symmetric cipher mode</li>
+<li>SHA384 - HMAC</li>
+</ul>

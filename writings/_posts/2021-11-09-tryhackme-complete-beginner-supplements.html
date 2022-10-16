@@ -1,6 +1,6 @@
 ---
 title: 'TryHackMe: Complete Beginner (Supplements)'
-date: 2021-11-09 06:00:00.000000000 Z
+date: 2021-11-09 12:00:00.000000000 Z
 layout: post-external
 original_link: https://cardboard-iguana.com/log/2021-11-09-tryhackme-complete-beginner-supplements.html
 author: 100007
@@ -9,12 +9,11 @@ author: 100007
 <h1 id="tryhackme-complete-beginner-supplements">TryHackMe: Complete Beginner (Supplements)</h1>
 <p><strong>author:</strong> Nathan Acks<br />
 <strong>date:</strong> 2021-11-09</p>
-<h2 id="splunk">Splunk</h2>
-<h3 id="can-you-dig-it">Can You Dig It?</h3>
+<h1 id="splunk">Splunk</h1>
+<h2 id="can-you-dig-it">Can You Dig It?</h2>
 <p>Mostly this section is just looking things up in the Splunk Quick Reference Guide.</p>
 <p>Splunk stores imported data in “indexes”; log timestamps are stored in the <code class="language-plaintext highlighter-rouge">_time</code> field.</p>
 <p>The <code class="language-plaintext highlighter-rouge">bucket</code> command can be used to group results by time or other metrics <em>during processing</em>. However, chart processing uses the <code class="language-plaintext highlighter-rouge">span</code> directive instead.</p>
-<p>Various Splunk apps (extensions, really) can be found at https://splunkbase.splunk.com. Forums and the like can be found at https://community.splunk.com.</p>
 <p>Some acronyms:</p>
 <ul>
 <li>SOC: Security Operations Center</li>
@@ -22,11 +21,11 @@ author: 100007
 <li>BOTS: Boss of the SOC (some kind of Splunk competition)</li>
 <li>CIM: Common Information Model</li>
 </ul>
-<p>References:</p>
+<p>Various Splunk apps (extensions, really) can be found at https://splunkbase.splunk.com. Forums and the like can be found at https://community.splunk.com.</p>
 <ul>
 <li><a href="https://www.splunk.com/pdfs/solution-guides/splunk-quick-reference-guide.pdf">Splunk Quick Reference Guide</a></li>
 </ul>
-<h3 id="halp-im-drowning-in-logs">Halp, I’m Drowning in Logs!</h3>
+<h2 id="halp-im-drowning-in-logs">Halp, I’m Drowning in Logs!</h2>
 <p>The cyber killchain:</p>
 <ul>
 <li>Reconnaissance</li>
@@ -37,7 +36,7 @@ author: 100007
 <li>Command &amp; Control</li>
 <li>Actions on Objectives</li>
 </ul>
-<h3 id="advanced-persistent-threat">Advanced Persistent Threat</h3>
+<h2 id="advanced-persistent-threat">Advanced Persistent Threat</h2>
 <p>In Splunk, searching for <code class="language-plaintext highlighter-rouge">*</code> matches any <em>non-null</em> string. This is particularly useful when combining data sources, doing lookups, etc., as adding a subsearch like <code class="language-plaintext highlighter-rouge">| search field_name=*</code> will ensure that only rows that actually matched are returned.</p>
 <p>Because Splunk aggregates logs from multiple sources, field names might not always be named consistently Because of this, a common pattern is to include searches like <code class="language-plaintext highlighter-rouge">(field_1="term" or field_2="term")</code>. Note that it’s also possible to leave the field specification off entirely, in which case the provided “term” will be searched for in all fields.</p>
 <p>Sysmon records a program starting up using the EventDescription of “Process Create” and an EventCode of 1.</p>

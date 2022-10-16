@@ -1,6 +1,6 @@
 ---
 title: 'ITPro.TV: CompTIA Security+ (SY0-601) &amp; TryHackMe: Jr. Penetration Tester'
-date: 2022-03-02 06:00:00.000000000 Z
+date: 2022-03-02 12:00:00.000000000 Z
 layout: post-external
 original_link: https://cardboard-iguana.com/log/2022-03-02-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.html
 author: 100007
@@ -9,10 +9,10 @@ author: 100007
 <h1 id="itprotv-comptia-security-sy0-601--tryhackme-jr-penetration-tester">ITPro.TV: CompTIA Security+ (SY0-601) &amp; TryHackMe: Jr. Penetration Tester</h1>
 <p><strong>author:</strong> Nathan Acks<br />
 <strong>date:</strong> 2022-03-02</p>
-<h2 id="comptia-security-exam-cram">CompTIA Security+ Exam Cram</h2>
-<h3 id="an-introduction-to-threat-actors-vectors-and-intelligence-sources">An Introduction to Threat Actors, Vectors, and Intelligence Sources</h3>
+<h1 id="comptia-security-exam-cram">CompTIA Security+ Exam Cram</h1>
+<h2 id="an-introduction-to-threat-actors-vectors-and-intelligence-sources">An Introduction to Threat Actors, Vectors, and Intelligence Sources</h2>
 <p>Threat actor: Someone or something that executes on a given threat. The “who” of a cybersecurity incident.</p>
-<h3 id="threat-actor-attributes">Threat Actor Attributes</h3>
+<h2 id="threat-actor-attributes">Threat Actor Attributes</h2>
 <p>Things to consider:</p>
 <ul>
 <li>What is the threat actor’s <em>relationship</em> to your organization?</li>
@@ -20,10 +20,10 @@ author: 100007
 <li>What is the <em>intent</em> of the threat actor?</li>
 <li>What are the threat actor’s <em>capabilities</em>?</li>
 </ul>
-<p>(Later on, Exam Cram talks about these factors as part of building a threat profile for an organization, though this seems like an odd take to me. Really, <em>anyone</em> could be targeted by <em>anything</em>, but the associated <em>risk</em> of attack by a given threat actor is going to vary depending upon the particular situation. This make threat <em>profiles</em> inherently probabilistic — you wouldn’t really say “my threat profile includes external threat actors”, but rather “the most common threat actors we expect to face are external”.)</p>
+<p>(Later on, Exam Cram talks about these factors as part of building a threat profile for an organization, though this seems like an odd take to me. Really, <em>anyone</em> could be targeted by <em>anything</em>, but the associated <em>risk</em> of attack by a given threat actor is going to vary depending upon the particular situation. This make threat <em>profiles</em> inherently probabilistic - you wouldn’t really say “my threat profile includes external threat actors”, but rather “the most common threat actors we expect to face are external”.)</p>
 <p>The <em>intent</em> vs. <em>motive</em> is a question of the threat actor’s <em>proximate</em> vs. <em>distal</em> objectives. For example, a threat actor may <em>intend</em> to deploy ransomware because they are <em>motivated</em> by financial gain. Intents and motives may not necessarily be malicious: For example, a careless employee <em>motivated</em> to close a deal may <em>intend</em> to share documents that they think will help realize that end, without thinking through the consequence of those documents exposure to the wider organization.</p>
 <p>Exam Cram indicates that the primary <em>relationship</em> that the Security+ exam is concerned with is whether a threat actor is <em>internal</em> or <em>external</em>.</p>
-<h3 id="threat-actor-types">Threat Actor Types</h3>
+<h2 id="threat-actor-types">Threat Actor Types</h2>
 <p>Common types from the Security+ exam:</p>
 <ul>
 <li>Script kiddies</li>
@@ -34,8 +34,8 @@ author: 100007
 <li>State actors</li>
 </ul>
 <p>Exam Cram uses the term “low and slow” to describe APT operations.</p>
-<h3 id="vectors">Vectors</h3>
-<p>A.k.a., “attack vectors” — the pathway used by the threat actor when attacking an organization. Common attack vectors from the Security+ exam:</p>
+<h2 id="vectors">Vectors</h2>
+<p>A.k.a., “attack vectors” - the pathway used by the threat actor when attacking an organization. Common attack vectors from the Security+ exam:</p>
 <ul>
 <li>Direct access</li>
 <li>Wireless</li>
@@ -47,21 +47,21 @@ author: 100007
 <li>Supply chain</li>
 </ul>
 <p>(What, no “they just connected to the exposed RDP endpoint over the internet”? I guess that qualifies as “improper usage”?)</p>
-<h3 id="sharing-centers">Sharing Centers</h3>
+<h2 id="sharing-centers">Sharing Centers</h2>
 <p>ISAC: Information Sharing and Analysis Center</p>
-<h3 id="open-source-intelligence">Open-Source Intelligence</h3>
+<h2 id="open-source-intelligence">Open-Source Intelligence</h2>
 <p>OSINT: Open Source INTelligence</p>
 <p>Which is not “open source” like “open source software”, but rather “open” as in freely available. Exam Cram calls OSINT “<em>overtly</em> gathered intelligence”, which I kind of like.</p>
 <p>Common sources:</p>
 <ul>
 <li>Vulnerability databases</li>
-<li>MITRE’s ATT&amp;CK (Tactics, Techniques, and Procedures — a.k.a. TTPs)</li>
+<li>MITRE’s ATT&amp;CK (Tactics, Techniques, and Procedures - a.k.a. TTPs)</li>
 <li>Dark web</li>
-<li>Indicators of compromise (a.k.a., IOCs — frequently published by threat intel firms)</li>
-<li>Automated indicator sharing (a.k.a., AIS — a DHS program built on the structured threat information expression — STIX — language and the trusted automated exchange of indicator information — TAXII — protocol)</li>
+<li>Indicators of compromise (a.k.a., IOCs - frequently published by threat intel firms)</li>
+<li>Automated indicator sharing (a.k.a., AIS - a DHS program built on the structured threat information expression - STIX - language and the trusted automated exchange of indicator information - TAXII - protocol)</li>
 <li>Threat maps (sometimes published by threat intel firms)</li>
 <li>File/code repos</li>
-<li>General web information — blog posts, papers, photos, RFCs, etc.</li>
+<li>General web information - blog posts, papers, photos, RFCs, etc.</li>
 </ul>
 <p>Some specific links:</p>
 <ul>
@@ -72,8 +72,8 @@ author: 100007
 <li><a href="https://cybermap.kaspersky.com/">Kaspersky Cyberthreat Map</a></li>
 </ul>
 <p>Exam Cram calls out TTP, IOC, and AIS as three acronyms to know for the exam.</p>
-<h2 id="itprotv-comptia-security-sy0-601">ITPro.TV: CompTIA Security+ (SY0-601)</h2>
-<h3 id="threat-intelligence--osint">Threat Intelligence — OSINT</h3>
+<h1 id="itprotv-comptia-security-sy0-601">ITPro.TV: CompTIA Security+ (SY0-601)</h1>
+<h2 id="threat-intelligence---osint">Threat Intelligence - OSINT</h2>
 <p>Threat Intelligence: The gathering and analysis of data for the purpose of identifying, preventing, and remediating potential attacks.</p>
 <p>One reason to go through the exercise of information classification is to ensure that proper controls are in place to prevent the disclosure of potentially sensitive data (which could then be used by attackers in their OSINT efforts!).</p>
 <p>Useful tools:</p>
@@ -83,7 +83,7 @@ author: 100007
 <li>Shodan.io / Censys.io (these sites can be integrated into the previous two tools)</li>
 </ul>
 <p>Both Maltego and recon-ng require a large number of API keys to function</p>
-<h3 id="threat-intelligence--threat-maps-and-feeds">Threat Intelligence — Threat Maps And Feeds</h3>
+<h2 id="threat-intelligence---threat-maps-and-feeds">Threat Intelligence - Threat Maps And Feeds</h2>
 <p>Threat Map: A real- (or near-real-) time map of identified threats/attacks, normally visualized geographically.</p>
 <p>Threat Feed: A real- (or near-real-) time stream (often in the form of an RSS feed) containing information about threats, attacks, and threat actors.</p>
 <p>Things that often go into a threat feed:</p>
@@ -96,7 +96,7 @@ author: 100007
 <p>VirusTotal is a <em>little bit</em> like a threat feed.</p>
 <p>STIX and TAXII together define a common (low-level) language for talking about IOCs and transmitting them between systems. STIX and TAXII come together in the Automated Indicator Sharing (AIS) system, which is CISA’s IOC clearinghouse mentioned by Exam Cram.</p>
 <p>I’m a little skeptical about the overall utility of threat maps, though they do <em>look</em> cool.</p>
-<h3 id="threat-intelligence-vulnerability-databases--feeds">Threat Intelligence Vulnerability Databases &amp; Feeds</h3>
+<h2 id="threat-intelligence-vulnerability-databases--feeds">Threat Intelligence Vulnerability Databases &amp; Feeds</h2>
 <p>Vulnerability Database: A collection of information about security flaws (and sometimes information about how to exploit them).</p>
 <p>Examples:</p>
 <ul>
@@ -112,7 +112,7 @@ author: 100007
 <li>CVSS (the Common Vulnerability Scoring System, which provides severity scoring for CVEs that tries to weigh both impact and ease of exploitation, from “nothing to worry about here” 0 to “hair on fire” 10)</li>
 </ul>
 <p>A vulnerability feed is like a threat feed, but for vulnerabilities. MITRE and NVD both maintain vulnerability feeds.</p>
-<h3 id="threat-actors-and-vectors">Threat Actors And Vectors</h3>
+<h2 id="threat-actors-and-vectors">Threat Actors And Vectors</h2>
 <p>Common threat actors that are important to know for the Security+ exam:</p>
 <ul>
 <li>Script kiddies</li>
@@ -133,8 +133,8 @@ author: 100007
 <li>Removable media</li>
 <li>Cloud-based avenues (S3 buckets, etc.)</li>
 </ul>
-<h2 id="tryhackme-jr-penetration-tester">TryHackMe: Jr. Penetration Tester</h2>
-<h3 id="username-enumeration">Username Enumeration</h3>
+<h1 id="tryhackme-jr-penetration-tester">TryHackMe: Jr. Penetration Tester</h1>
+<h2 id="username-enumeration">Username Enumeration</h2>
 <p>Use ffuf to enumerate potential users based on a wordlist (assumes that the form we’re hitting is not AJAX-y):</p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ffuf <span class="nt">-w</span> /usr/share/wordlists/wfuzz/others/names.txt <span class="se">\</span>
 <span class="nt">-X</span> POST <span class="nt">-d</span> <span class="s2">"</span><span class="nv">$POST_VARS</span><span class="s2">"</span> <span class="se">\</span>
@@ -146,7 +146,7 @@ author: 100007
 <ul>
 <li><a href="https://cardboard-iguana.com/notes/ffuf.html">Using “ffuf”</a></li>
 </ul>
-<h3 id="brute-forcing">Brute Forcing</h3>
+<h2 id="brute-forcing">Brute Forcing</h2>
 <p>Ffuf can also be used as a simple brute-forcer:</p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ffuf <span class="nt">-w</span> /usr/share/wordlists/wfuzz/others/names.txt:W1,<span class="nv">$HOME</span>/.local/share/red-team/wordlists/rockyou.txt:W2 <span class="se">\</span>
 <span class="nt">-X</span> POST <span class="nt">-d</span> <span class="s2">"</span><span class="nv">$POST_VARS</span><span class="s2">"</span> <span class="se">\</span>
@@ -156,9 +156,9 @@ author: 100007
 <p>Here we assign W1 and W2 to take terms from the two supplied wordlists; <code class="language-plaintext highlighter-rouge">$POST_VARS</code> then looks something like <code class="language-plaintext highlighter-rouge">username=W1&amp;password=W2</code>. This example assumes that a successful login will return an HTTP status code <em>other</em> than 200 (probably a 301 or 302).</p>
 <p>Again, the <code class="language-plaintext highlighter-rouge">-s</code> flag can be advisable here.</p>
 <p>Note that ffuf will try every possible combination of elements between the two wordlists, which means that the number of combinations tried grows geometrically.</p>
-<h3 id="logic-flaws">Logic Flaws</h3>
+<h2 id="logic-flaws">Logic Flaws</h2>
 <p>It’s worth experimenting with forms to check how GET and POST variables interact (and if one can be used to override the other.</p>
-<h3 id="cookie-tampering">Cookie Tampering</h3>
+<h2 id="cookie-tampering">Cookie Tampering</h2>
 <p>Interesting; sometimes cookies are hashes, rather than plain strings. I’m guessing that the reason you’d do this is that you’re concatenating some values together and then check to see if the hash matches before granting certain privileges? This seems potentially much less secure than password hashing (even with a salt) though, as the number of terms that could reasonably be included in a permission string is much smaller than the number of character combinations in even a modest password…</p>
 <p><a href="https://crackstation.net/">CrackStation is an online database of hashes (basically a rainbow table).</a></p>
 <p>I guess the reason you’d do this is to try to minimize the number of database hits?</p>

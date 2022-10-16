@@ -1,0 +1,46 @@
+---
+title: 'OffSec Live: PEN-200 &amp; AWS Deep Dive'
+date: 2022-08-03 12:00:00.000000000 Z
+layout: post-external
+original_link: https://cardboard-iguana.com/log/2022-08-03-offsec-live-pen-200-and-aws-deep-dive.html
+author: 100007
+---
+
+<h1 id="offsec-live-pen-200--aws-deep-dive">OffSec Live: PEN-200 &amp; AWS Deep Dive</h1>
+<p><strong>author:</strong> Nathan Acks<br />
+<strong>date:</strong> 2022-08-03</p>
+<p>The semi-regular Wednesday twofer: OffSec Live in the morning and the “Monitoring and Analytics” portion of the “AWS Cloud Practitioner Essentials” course in the evening.</p>
+<ul>
+<li><a href="https://www.offensive-security.com/offsec/offsec-live/">OffSec Live</a></li>
+<li><a href="https://learn.offensive-security.com/offsec-live-webinars">Join OffSec Live</a></li>
+<li><a href="https://www.aws.training/learningobject/curriculum?id=27076">AWS Cloud Practitioner Essentials</a></li>
+</ul>
+<h1 id="offsec-live-sql-injection">OffSec Live: SQL Injection</h1>
+<p>Remember that when trying to bypass logins with SQL injection, it’s a good idea to use <code class="language-plaintext highlighter-rouge">limit 1</code> to ensure that the code gets back the expected number of results!</p>
+<p>In MySQL, you can use <code class="language-plaintext highlighter-rouge">concat()</code> to return values from multiple columns in a single output field. Since <code class="language-plaintext highlighter-rouge">concat()</code> accepts hexadecimal values for ASCII characters, we can use <code class="language-plaintext highlighter-rouge">0x3a</code> (<code class="language-plaintext highlighter-rouge">:</code>) to make field separation obvious.</p>
+<p>Sometimes you can chain queries as part of SQL injection. This isn’t useful for <em>retrieving</em> input, but if the database is badly secured you can use this to <em>modify</em> the backend database (obviously requires the application to be using the same user/permissions for both reads and writes). Use the <code class="language-plaintext highlighter-rouge">sleep()</code> function to test if this vulnerability impacts the system you’re attacking.</p>
+<ul>
+<li><a href="https://cardboard-iguana.com/notes/sql-injection.html">SQL Injection</a></li>
+</ul>
+<h2 id="mysql-reverse-shells">MySQL Reverse Shells</h2>
+<p>It’s really hard to get a reverse shell in PostgrSQL. But MySQL and MariaDB are more exploitable.</p>
+<p>You can “upload” reverse shells using MySQL using <code class="language-plaintext highlighter-rouge">INTO OUTFILE</code>: <code class="language-plaintext highlighter-rouge">'&lt;?php system($_GET["cmd"]); ?&gt;' INTO OUTFILE '/var/www/html/cmd.php'</code> (the path may require some brute-forcing or additional reconnaissance; sometimes you can force an error to return a potentially writeable path). This can then be leveraged into a reverse shell.</p>
+<ul>
+<li><a href="https://cardboard-iguana.com/notes/exploiting-mysql.html">Exploiting MySQL</a></li>
+</ul>
+<h1 id="monitoring-and-analytics">Monitoring and Analytics</h1>
+<h2 id="cloudwatch">CloudWatch</h2>
+<p>CloudWatch is primarily about log <em>monitoring</em> - <em>metrics</em> are extracted from logs, which can be watched by <em>alarms</em> that trigger certain actions (like sending messages to SNS) when triggered.</p>
+<p>CloudWatch can ingest data from on-prem systems, in addition to services/system in AWS.</p>
+<h2 id="cloudtrail">CloudTrail</h2>
+<p>CloudTrail is AWS’s (API) logging engine.</p>
+<p>Logs are stored in S3.</p>
+<p>Events are logged with 15 minutes.</p>
+<p>CloudTrail has its <em>own</em> alarm/automation system, called “CloudTrail Insights”.</p>
+<p>You might thing of CloudTrail as being more concerned about account <em>activity</em>, and CloudWatch as being more focused on service/resource <em>performance</em>.</p>
+<h2 id="trusted-advisor">Trusted Advisor</h2>
+<p>This seems to be a more general version of AWS Inspector - Trusted Advisor is more about your <em>entire</em> AWS account, while AWS Inspector is geared more towards individual systems.</p>
+<p>Trusted Advisor can detect S3 buckets with open access permissions. (It’s starting to sound a bit like Scout Suite.)</p>
+<ul>
+<li><a href="https://github.com/nccgroup/ScoutSuite">nccgroup / ScoutSuite</a></li>
+</ul>

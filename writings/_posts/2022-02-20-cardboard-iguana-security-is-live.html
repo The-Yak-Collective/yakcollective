@@ -1,6 +1,6 @@
 ---
 title: Cardboard Iguana Security is Live!
-date: 2022-02-20 06:00:00.000000000 Z
+date: 2022-02-20 12:00:00.000000000 Z
 layout: post-external
 original_link: https://cardboard-iguana.com/log/2022-02-20-cardboard-iguana-security-is-live.html
 author: 100007
@@ -15,7 +15,7 @@ author: 100007
 <ul>
 <li><a href="https://cardboard-iguana.com">Cardboard Iguana Security</a></li>
 </ul>
-<h2 id="design-philosophy">Design Philosophy</h2>
+<h1 id="design-philosophy">Design Philosophy</h1>
 <p>I had a number of goals when I set out on this journey.</p>
 <p>(1) I wanted to continue to take my notes using Obsidian, and I didn’t want to have to worry about post frontmatter, how to link images, etc. It all needed to <em>just work</em>.</p>
 <p>(2) I wanted the content to be usable on GitHub, as well as in Obsidian and on the website itself. No broken images, etc. This put significant constraints on how I could structure the site (for example, I never was able to figure out how to use Jekyll’s built-in post functionality without messing up images and internal links <em>somewhere</em>).</p>
@@ -38,8 +38,8 @@ author: 100007
 <li><a href="https://docs.ipfs.io/how-to/websites-on-ipfs/static-site-generators/">Static-site generators (IPFS Docs)</a></li>
 <li><a href="https://github.com/tdemin/gmnhg">tdemin / gmnhg</a></li>
 </ul>
-<h2 id="how-the-build-process-works">How the Build Process Works</h2>
-<p>I keep all of my notes and writings in Obsidian. I’ve set Obsidian up to insert relative Markdown links and take care to keep my markup limited to what constitutes “Gemini compatible Markdown”. (As I mentioned previously, this isn’t actually that hard to do — the most difficult part is remembering to keep a list of links at the end of each section, rather than embedding links directly in the document text.)</p>
+<h1 id="how-the-build-process-works">How the Build Process Works</h1>
+<p>I keep all of my notes and writings in Obsidian. I’ve set Obsidian up to insert relative Markdown links and take care to keep my markup limited to what constitutes “Gemini compatible Markdown”. (As I mentioned previously, this isn’t actually that hard to do - the most difficult part is remembering to keep a list of links at the end of each section, rather than embedding links directly in the document text.)</p>
 <p>I sync Obsidian to a private repo on GitHub, and then use GitHub Actions to push the folders that correspond to my websites out to their corresponding public repos. For Cardboard Iguana, the code to do this looks like the following:</p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">mkdir </span>_repos
 <span class="nb">cd </span>_repos
@@ -177,7 +177,7 @@ npm <span class="nb">install</span>
 <li><a href="https://ipfs.io/">IPFS</a></li>
 <li><a href="https://docs.ipfs.io/concepts/ipns/">InterPlanetary Name System (IPNS)</a></li>
 </ul>
-<h2 id="where-next">Where Next?</h2>
+<h1 id="where-next">Where Next?</h1>
 <p>As I mentioned previously, the above process doesn’t build anything for Gemini. I’d like to add this in at some point, but I’ve yet to find a Gemini host geared toward multiple websites (even sourcehut seems to focus on single, personal websites). I really don’t want to spend the time running my own server, though I’m starting to suspect it may come to that.</p>
 <p>I’d like to find a way to handle links that is more Markdown-native will producing sensible output in a Markdown-to-Gemini converter. If such a thing doesn’t exist once I finish the certification sequence I’m currently working on, perhaps I’ll submit a patch for md2gmn.</p>
 <p>But for now, I’ve spent <em>way</em> too much time on this. Time to get back to my studies!</p>

