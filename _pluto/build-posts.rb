@@ -77,7 +77,7 @@ private
 			frontmatter["author"] = item.feed.key.to_i
 		end
 
-    	File.open(post_name, 'w:utf-8') do |post_file|
+		File.open(post_name, 'w:utf-8') do |post_file|
 			post_file.write frontmatter.to_yaml
 
 			# to_yaml starts YAML "document" with ---, but doesn't end it.
