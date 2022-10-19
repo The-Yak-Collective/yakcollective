@@ -71,3 +71,4 @@ include:
 exclude:
   - package.json
   - README.md
+  - TODO.md
