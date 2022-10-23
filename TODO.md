@@ -29,3 +29,6 @@
 	* [ ] Discord Push
 	* [ ] Automatic site rebuild (daily? hourly?)
 * [ ] Deactivate IFTTT!
+* [ ] Write a script to post service usage to Discord
+  * `curl -H "Accept: application/vnd.github+json" -H "Authorization: Bearer $GITHUB_TOKEN"  https://api.github.com/orgs/${ACCOUNT_SLUG}/settings/billing/actions | jq.`
+  * `curl -H "User-Agent: MyApp $ACCOUNT_EMAIL" -H "Authorization: Bearer $NETLIFY_TOKEN" https://api.netlify.com/api/v1/${ACCOUNT_SLUG}/builds/status | jq .`
