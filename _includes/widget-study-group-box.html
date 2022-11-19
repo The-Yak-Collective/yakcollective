@@ -1,0 +1,46 @@
+{% comment %}
+	Study group boxes display study group summary information, similar
+	to member cards. They are presented only as links (there are no
+	"coming soon" study groups).
+
+	This include takes one paramter:
+	
+		`study_group`
+		REQUIRED study group ID. This is the name of the file
+		corresponding to the study group in the `/study-groups/`
+		directory, less the `.md` bit. So the Fermi Gym's study group ID
+		is specified by setting `study_group="fermi-gym"`.
+
+	Note that this widget outputs HTML in a safe way, and is thus
+	suitable for inclusion in both Markdown and HTML pages.
+{% endcomment %}
+
+{% comment %}
+	Find study group data.
+{% endcomment %}
+{% assign study_group_url = "/study-groups/" | append: include.study_group | append: ".html" %}
+{% assign study_group_data = site.pages | find: "url", study_group_url %}
+
+{% comment %}
+	Output study group box HTML.
+{% endcomment %}
+<div id="{{ study_group_data.url | replace: '.html', '' | replace: '/', ' ' | strip | split: ' ' | last }}-box" class="mv4">
+	<a href="{{ study_group_data.url }}" class="project-box db ba relative">
+		<div class="w-50">
+			{% if study_group_data.contributors %}<div class="smaller lh-title fw9 mv0 pt1 bt bw1 ph2 sans-serif ttu silent-link">{{ study_group_data.contributors }}</div>{% endif %}
+			{% if study_group_data.title %}<h2 class="ph2 fw8 f3 lh-solid pt4 pb1 mb1 mt4 pseudo-link">{{ study_group_data.title }}</h2>{% endif %}
+			{% if study_group_data.channel %}<p class="ph2 small lh-solid pv1 mt0 mb4 fw6 subhead"><code>#{{ study_group_data.channel }}</code></p>{% endif %}
+
+			{% comment %}
+				Study group date.
+			{% endcomment %}
+			{% if study_group_data.date %}
+				<time class="db smaller ph2 mt3 mb2 ttu tracked-tight">
+					Since: {{ study_group_data.date | date_to_long_string: "ordinal", "US" }} UTC
+				</time>
+			{% endif %}
+
+		</div>
+		<div class="w-50 h-100 absolute top-0 right-0 bl hero"></div>
+	</a>
+</div>

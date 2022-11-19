@@ -49,6 +49,11 @@ defaults:
     values:
       layout: page-project
   - scope:
+      path: "study-groups/*"
+      type: pages
+    values:
+      layout: page-study-group
+  - scope:
       path: ""
       type: pages
     values:
@@ -70,5 +75,6 @@ include:
   - _redirects
 exclude:
   - package.json
+  - package-lock.json
   - README.md
   - TODO.md

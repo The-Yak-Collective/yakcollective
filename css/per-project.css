@@ -3,6 +3,38 @@ layout: none
 ---
 
 {% comment %}
+	Generate styles for study groups.
+{% endcomment %}
+{% assign study_groups = site.pages | where: "layout", "page-study-group" %}
+{% for study_group in study_groups %}
+	{% assign study_group_id = study_group.url | replace: ".html", "" | replace: "/", " " | strip | split: " " | last %}
+	{% if study_group.hero_image %}
+		#{{ study_group_id }}-hero .hero {
+			content : "";
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			background-image: url("{{ study_group.hero_image }}");
+			background-size: cover;
+			width: 100%;
+			height: 100%;
+			opacity: 0.5;
+		}
+	{% endif %}
+	#{{ study_group_id }}-box .hero {
+		{% if study_group.hero_image %}
+			background-image: url("{{ study_group.hero_image }}");
+			background-position: center center;
+		{% else %}
+			background-image: url("/img/yak-og.jpg");
+			background-position: center right;
+		{% endif %}
+		background-size: cover;
+	}
+{% endfor%}
+
+{% comment %}
 	Generate project-specific styles.
 {% endcomment %}
 {% assign projects = site.pages | where: "layout", "page-project" %}
