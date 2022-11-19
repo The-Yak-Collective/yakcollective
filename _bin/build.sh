@@ -10,36 +10,23 @@ if [[ ! -f _config.yml || ! -d _bin ]]; then
 	exit 1
 fi
 
+# Run init, if necessary.
+#
+if [[ ! -f .common-init ]]; then
+	chmod +x _bin/common-init.sh
+	./_bin/common-init.sh
+fi
+
 # Clean destination directory.
 #
 [[ -d _site ]] && rm --recursive --force _site
 
-# Pull Knack data.
+# Build site.
 #
-chmod +x _bin/knack-pull-yaks.sh
-./_bin/knack-pull-yaks.sh || exit 2
-
-# If we're running from Netlify, then all Ruby Gem setup has already
-# been done for us. We assume that this is the case if the `jekyll`
-# binary is in our path.
-#
-# Otherwise, use `bundle` to make sure that everything is installed
-# and run the build.
-#
-if [[ -n "$(which jekyll)" ]]; then
-	jekyll build --profile || exit 4
-elif [[ -n "$(which bundle)" ]]; then
-	bundle config set path vendor/bundle || exit 8
-	bundle install || exit 3
-	bundle exec jekyll build --profile || exit 16
-else
-	echo "Cannot find Bundler, and Jekyll does not seem to be installed."
-	exit 32
-fi
+bundle exec jekyll build --profile
 
 # Make all URLs relative (required for most web3 hosting solutions).
 #
-npm install
 (
 	cd _site
 	../node_modules/.bin/all-relative
@@ -61,7 +48,7 @@ find _site -type f -iname '*.html' -exec sed -i -e 's/&#x007b;/{/g;s/&#x007d;/}/
 
 # Minify: https://github.com/tdewolff/minify
 #
-# Current version: 2.9.22 (last checked 2021-11-14)
+# Current version: 2.12.4 (last checked 2022-10-16)
 #
 # It's too bad we need to cart this binary around as part of the repo,
 # but Netlify doesn't support installing our own tools (otherwise we'd
@@ -78,10 +65,13 @@ find _site -type f -iname '*.html' -exec sed -i -e 's/&#x007b;/{/g;s/&#x007d;/}/
 # result in invalid HTML/CSS/JS output! Netlify optimization should
 # therefore be turned off when "hand optimization" like this is used.
 #
-chmod +x _bin/minify
-mv _site _site.original
-(
-	cd _site.original
-	../_bin/minify --all --recursive --sync --output ../_site .
-)
-rm -rf _site.original
+MINIFY_BINARY="minify-$(uname -s | tr "[:upper:]" "[:lower:]")-$(uname -m)"
+if [[ -f _bin/"$MINIFY_BINARY" ]]; then
+	chmod +x _bin/"$MINIFY_BINARY"
+	mv _site _site.original
+	(
+		cd _site.original
+		../_bin/"$MINIFY_BINARY" --all --recursive --sync --output ../_site .
+	)
+	rm -rf _site.original
+fi

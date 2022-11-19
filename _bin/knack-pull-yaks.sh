@@ -77,9 +77,9 @@ jq -n '{records: [inputs.records] | add}' $TEMP_DIR/knack-yaks-* > _data/knack_y
 mkdir -p members
 
 while IFS= read -r RECORD; do
-	MEMBER_ID="$(echo "$RECORD" | sed -e 's/\t.*$//')"
+	MEMBER_ID="$(echo "$RECORD" | cut -f 1)"
 	echo "Processing avatar for member $MEMBER_ID..."
-	KNACK_PATH="$(echo "$RECORD" | sed -e "s/^$MEMBER_ID\t\?//;s#https://s3-eu-west-1.amazonaws.com/assets.knack-eu.com/assets/5f70876d8e7037001504bfe8/##")"
+	KNACK_PATH="$(echo "$RECORD" | cut -s -f 2 | sed -e "s#https://s3-eu-west-1.amazonaws.com/assets.knack-eu.com/assets/5f70876d8e7037001504bfe8/##")"
 	if [[ -n "$KNACK_PATH" ]]; then
 		USE_CURL="yes"
 		AVATAR_URL="https://res.cloudinary.com/yak-collective/image/upload/c_fill,g_face,w_400,h_400,e_sharpen:50/yak-barn-v1/${KNACK_PATH%.*}.jpg"

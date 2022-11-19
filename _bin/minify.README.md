@@ -22,42 +22,38 @@ If you do not have `make`, instead run the following lines to install `minify` a
     go install ./cmd/minify
     source minify_bash_tab_completion
 
-Optionally, you can run `go install github.com/tdewolff/minify/cmd/minify@latest` to install the latest version.
+Optionally, you can run `go install github.com/tdewolff/minify/v2/cmd/minify@latest` to install the latest version.
 
 ### Arch Linux
-Using `yay`:
-
+Using yay, see [AUR](https://aur.archlinux.org/packages/minify/)
 ```
-yay -Syu minify
+yay -S minify
 ```
-
-[Minify in AUR](https://aur.archlinux.org/packages/minify/)
 
 ### FreeBSD
 ```
 pkg install minify
 ```
 
-### MacOS
-Using Homebrew:
+### Alpine Linux
+Enable the [community repo](https://wiki.alpinelinux.org/wiki/Enable_Community_Repository)
+```
+apk add minify
+```
 
+### MacOS
+Using Homebrew, see [Brew tap](https://github.com/tdewolff/homebrew-tap/)
 ```
 brew install tdewolff/tap/minify
 ```
 
-[Brew tap](https://github.com/tdewolff/homebrew-tap/)
-
 ### Ubuntu
-Update the package index:
-
 ```
 sudo apt-get update
-```
-
-Install minify deb package:
-```
 sudo apt-get install minify
 ```
+
+Note: may be outdated
 
 ### Docker
 Pull the image:
@@ -66,11 +62,12 @@ Pull the image:
 docker pull tdewolff/minify
 ```
 
+> The `ENTRYPOINT` of the container is the `minify` command
+
 and run the image, for example in interactive mode:
 
-```
-docker run -i tdewolff/minify
-echo "(function(){ if (a == false) { return 0; } else { return 1; } })();" | minify --type js
+```bash
+docker run -i tdewolff/minify sh -c 'echo "(function(){ if (a == false) { return 0; } else { return 1; } })();" | minify --type js'
 ```
 
 which will output
@@ -166,7 +163,7 @@ $ minify -r -o out/ src
 
 Minify only javascript files in **src/**:
 ```sh
-$ minify -r -o out/ --match=\.js src
+$ minify -r -o out/ --match="\.js$" src
 ```
 
 ### Concatenate
