@@ -8,6 +8,8 @@ Current experiments include: **building** open-source rovers, **crafting** exper
 
 Check out our [members](/members.html) and [projects](/projects.html), read some of [our latest thoughts](/writings.html), and get in touch with any of us if you’d like to learn more.
 
+<!--
+
 ## Featured Yak
 
 {% comment %}
@@ -47,6 +49,21 @@ Check out our [members](/members.html) and [projects](/projects.html), read s
         <small class="db"><p><a href="{{ member_url }}">Learn more&hellip;</a></p></small>
 	</div>
 </div>
+
+-->
+
+## Active Study Groups
+
+{% assign study_groups = site.pages | where: "layout", "page-study-group"
+                                    | where: "ended", false
+                                    | where_exp: "study_group", "study_group.date <= site.time or site.future == true"
+                                    | sort: "date"
+                                    | reverse %}
+
+{% for study_group in study_groups %}
+    {% assign study_group_id = study_group.name | replace: ".md", "" | replace: ".html", "" %}
+    {% include widget-study-group-box.html study_group=study_group_id %}
+{% endfor %}
 
 ## Most Recent Project
 
