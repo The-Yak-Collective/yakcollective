@@ -3,18 +3,13 @@
 # NOTE: Any parameters passed to this script will be appended to the
 # `jekyll` build command.
 
-# Check to make sure that we're running in the repository root.
+# Source init.
 #
-if [[ ! -f _config.yml || ! -d _bin ]]; then
-	echo "This script must be run from the repository root!"
+if [[ -f ./_bin/common-init.sh ]]; then
+	source ./_bin/common-init.sh
+else
+	echo "Init file not found! Are you running from the repository root?"
 	exit 1
-fi
-
-# Run init, if necessary.
-#
-if [[ ! -f .common-init ]]; then
-	chmod +x _bin/common-init.sh
-	./_bin/common-init.sh
 fi
 
 # Clean destination directory.

@@ -2,8 +2,8 @@
 
 * [ ] Tweet new RSS entries + push to Discord (avoid duplication)
 	* [x] Create Twitter & Discord posts along with blog posts
-	* [ ] Move Twitter & Discord posts into staging directory IFF timestamp is later than the most recent timestamp in the key/set sequence (or last run, if no entries for a given key/set exist)
-		* [ ] Bring back the last-run timestamp!
+	* [ ] Move Twitter & Discord posts into staging directory IFF timestamp is later than the last run
+		* [x] Bring back the last-run timestamp!
 	* [ ] Update Twitter posts to use Twitter handle or professional name
 	* [ ] Script to push out the (lexical) oldest Twitter and Discord post
 		* Archive pushed posts?

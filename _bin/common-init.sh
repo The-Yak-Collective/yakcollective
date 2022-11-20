@@ -1,18 +1,30 @@
 #!/usr/bin/env bash
 
-# Install pre-requisits.
+# Check to make sure that we're running in the repository root.
 #
-[[ -z "$(which bundle)" ]] && gem install bundler
+if [[ ! -f _config.yml || ! -d _bin ]]; then
+	echo "This script must be run from the repository root!"
+	exit 1
+fi
 
-bundle config set path vendor/bundle
-bundle install
-npm install
-
-# Pull Knack data.
+# Only run init if necessary.
 #
-chmod +x _bin/knack-pull-yaks.sh
-./_bin/knack-pull-yaks.sh
+if [[ ! -f .common-init ]]; then
 
-# Script run indicator.
-#
-date "+%s" > .common-init
+	# Install pre-requisits.
+	#
+	[[ -z "$(which bundle)" ]] && gem install bundler
+
+	bundle config set path vendor/bundle
+	bundle install
+	npm install
+
+	# Pull Knack data.
+	#
+	chmod +x _bin/knack-pull-yaks.sh
+	./_bin/knack-pull-yaks.sh
+
+	# Script run indicator.
+	#
+	date "+%s" > .common-init
+if

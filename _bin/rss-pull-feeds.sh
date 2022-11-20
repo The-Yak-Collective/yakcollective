@@ -1,17 +1,12 @@
 #!/usr/bin/env bash
 
-# Check to make sure that we're running in the repository root.
+# Source init.
 #
-if [[ ! -f _config.yml || ! -d _bin ]]; then
-	echo "This script must be run from the repository root!"
+if [[ -f ./_bin/common-init.sh ]]; then
+	source ./_bin/common-init.sh
+else
+	echo "Init file not found! Are you running from the repository root?"
 	exit 1
-fi
-
-# Run init, if necessary.
-#
-if [[ ! -f .common-init ]]; then
-	chmod +x _bin/common-init.sh
-	./_bin/common-init.sh
 fi
 
 # Generate ini file for the "writings" page.
@@ -59,3 +54,7 @@ mv _pluto/twitter/* _twitter/
 # Integrate writings.
 #
 mv _pluto/writings/* writings/_posts/
+
+# Script run indicator.
+#
+date "+%s" > _pluto/.last-run
