@@ -67,7 +67,7 @@ _The podcast’s flow of conversation mustn’t be interrupted._ Interruptions v
 
 For example, think about a traditional messaging format.
 
-[![](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2Ff9afd0e4-4c22-4a94-9ede-5f1166b02647_1414x990.png "http://a9.io/glue-comic/")](http://a9.io/glue-comic/)
+[![](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2Ff9afd0e4-4c22-4a94-9ede-5f1166b02647_1414x990.png "https://a9.io/glue-comic/")](https://a9.io/glue-comic/)
 
 A live transcription software that _only_ maps words to the speaker who said them isn't of much help to the podcasters. _They just said the words._ It’s mostly for the benefit of the audience; often, they want to go back to some spot in the conversation. It's common for speakers to want to do this, too.
 
@@ -75,7 +75,7 @@ Remember our phrases, like “Let’s put a pin in that”? We need a functional
 
 The pin should be short; only 3-4 words, not unlike a sticky note you would write for yourself. The pin is a reminder to return to the conversation and context that led up to that point. _It indicates an open loop_. The pin should also provide enough context to re-prompt the speaker to expand on it later in the conversation. We want to retain both the “meaning” of the thought in that particular moment _and_ have an external memory that reduces cognitive load.
 
-[![](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F55d75d4d-953b-47bf-b908-f04d170cc85b_1016x1286.png "http://a9.io/glue-comic/page-2")](https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F55d75d4d-953b-47bf-b908-f04d170cc85b_1016x1286.png)
+[![](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F55d75d4d-953b-47bf-b908-f04d170cc85b_1016x1286.png "https://a9.io/glue-comic/page-2")](https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F55d75d4d-953b-47bf-b908-f04d170cc85b_1016x1286.png)
 
 As a conversation progresses, focus shifts and "pins'' are created. The speakers will have increasing difficulty holding the whole conversation in their head. They’ll forget important points they meant to revisit. This creates loops that are never closed. At some point, it'll make sense for a speaker to revisit a particular "pin".
 
@@ -89,7 +89,7 @@ Think of it as a visual-spatial aid. Unlike note-taking, it won’t interrupt th
 
 This idea is closely related to Crawford & Dombkowski's "Nonlinear conversation medium", but instead of augmenting written dialogue like a text message conversation, it augments auditory conversation.
 
-[![](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2Fd3866040-6492-4877-bfb8-ea795689985e_1400x494.png "http://a9.io/glue-comic/page-2")](http://a9.io/glue-comic/)
+[![](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2Fd3866040-6492-4877-bfb8-ea795689985e_1400x494.png "https://a9.io/glue-comic/page-2")](https://a9.io/glue-comic/)
 
 Traditional messaging systems have a complete memory of the conversation. But most are written conversation, which is procedurally represented one thought after the other. The ideal system would provide a visual aid that takes us from procedural to nonlinear, like a natural verbal conversation.
 
@@ -100,7 +100,7 @@ The juxtaposition allows you to see the flowing conversation, while also seeing 
 
 When a pin is revisited, it will be emphasized or visually emboldened to communicate to the speaker and audience that we are currently revisiting that pin. This allows us to figure out where “we” are in the conversation.
 
-_\*While this idea is loosely developed, I think it has legs. I pulled inspiration from many places but heavily from [here](http://a9.io/glue-comic/)._
+_\*While this idea is loosely developed, I think it has legs. I pulled inspiration from many places but heavily from [here](https://a9.io/glue-comic/)._
 
 \*\*_Conversational Complexity is basically the number of different threads of conversation \* the depth of those threads. At a certain complexity, the listeners and speakers hit a cognitive ceiling where they need aids to help manage and keep track of the conversation._
 

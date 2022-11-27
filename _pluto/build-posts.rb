@@ -110,6 +110,7 @@ private
 			post_content = post_content.gsub(/\[[\n ]+(!\[\]\(.*\))[\n ]+\]\(/, '[\1](')
 			post_content = post_content.gsub(/^ +$/, '')
 			post_content = post_content.gsub('&nbsp;', ' ')
+			post_content = post_content.gsub('http://a9.io/glue-comic', 'https://a9.io/glue-comic')
 
 			post_file.write post_content
 		end
