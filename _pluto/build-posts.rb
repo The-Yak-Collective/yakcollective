@@ -5,6 +5,7 @@
 # Load needed gems.
 #
 require "pluto/models"
+require "reverse_markdown"
 
 # What are we building? This should be passed in on the command line.
 #
@@ -65,7 +66,7 @@ private
 		
 		FileUtils.mkdir_p(posts_root)
 		
-		post_name = "#{posts_root}/#{item.published.strftime('%Y-%m-%d')}-#{title_to_key(item.title)}.html"
+		post_name = "#{posts_root}/#{item.published.strftime('%Y-%m-%d')}-#{title_to_key(item.title)}.md"
 
 		frontmatter = {
 			"title"  => item.title,
@@ -88,21 +89,28 @@ private
 			#
 			post_file.write "---\n\n"
 
+			# Extract as much content as possible.
+			#
 			if item.content
-				post_content = item.content
+				post_html = item.content
 			elsif item.summary
-				post_content = item.summary
+				post_html = item.summary
 			else
-				post_content = ""
+				post_html = ""
 				puts "[WARNING] No content found in #{item.title}: #{item.title}"
 			end
 
-			# Replace { with &#x007b; and } with &#x007d; to work
-			# around Jekyll parsing issues.
+			# Convert HTML to Markdown.
 			#
-			post_content = post_content.gsub(/{/, "&#x007b;")
-			post_content = post_content.gsub(/}/, "&#x007d;")
-		
+			markdownified_html = ReverseMarkdown.convert(post_html, unknown_tags: :bypass, github_flavored: true)
+			post_content = markdownified_html.to_s
+
+			# Various fixes.
+			#
+			post_content = post_content.gsub(/\[[\n ]+(!\[\]\(.*\))[\n ]+\]\(/, '[\1](')
+			post_content = post_content.gsub(/^ +$/, '')
+			post_content = post_content.gsub('&nbsp;', ' ')
+
 			post_file.write post_content
 		end
 	end

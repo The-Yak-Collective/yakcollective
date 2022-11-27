@@ -45,8 +45,6 @@ mv _pluto/discord/* _discord/
 #
 mv _pluto/newsletter/* newsletter/_posts/
 
-sed -i 's#http://a9\.io/glue-comic/#https://a9.io/glue-comic/#g' newsletter/_posts/2020-09-04-podcasting-needs-cognitive-hooks.html
-
 # Integrate Twitter posts.
 #
 mv _pluto/twitter/* _twitter/

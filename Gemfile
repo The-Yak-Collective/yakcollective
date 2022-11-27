@@ -15,3 +15,6 @@ gem "jekyll-datapage-generator"
 gem "activerecord", "~> 6.1.4.4" # https://github.com/feedreader/pluto/issues/42
 gem "rss"
 gem "pluto"
+
+# https://github.com/xijo/reverse_markdown
+gem "reverse_markdown"

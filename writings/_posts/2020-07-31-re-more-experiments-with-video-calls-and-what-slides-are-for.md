@@ -1,0 +1,10 @@
+---
+layout: post-external
+title: |
+  re: More experiments with video calls, and what slides are for
+date: 2020-07-31 17:00:00 +0000
+author: 100063
+original_link: http://tomcritchlow.com/2020/08/01/face-slides/
+---
+
+Matt, I’ve really been enjoying your experiments with a more playful, expressive and distinct approach to virtual presentations. I was really looking forward to this talk (which was supposed to happen in my discord but unfortunately tech issues prevented us from seeing it - sorry!):

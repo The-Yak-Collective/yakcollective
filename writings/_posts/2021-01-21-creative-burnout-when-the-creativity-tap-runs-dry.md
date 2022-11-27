@@ -1,0 +1,61 @@
+---
+layout: post-external
+title: |
+  Creative burnout: when the creativity tap runs dry
+date: 2021-01-21 02:57:00 +0000
+author: 100071
+original_link: https://nesslabs.com/creative-burnout?utm_source=rss&utm_medium=rss&utm_campaign=creative-burnout
+---
+
+Creativity is fragile: it needs to be fed enough inspiration, but not too much, for consuming an excessive amount of information may destroy its delicate balance. It needs space to grow, but should not be forced, for mechanical work may lead to lifeless output. Despite all our care, sometimes, it seems to be gone: the creativity tap has run dry. We experience the dreaded creative burnout.
+
+Whether they know it or not, any designer, writer, entrepreneur, photographer or creator of any type has experienced it at least once. Creative burnout is a state of emotional, physical, and mental exhaustion around creative work. The symptoms can be hard to pinpoint, and the potential causes are many.
+
+## Symptoms of creative burnout
+
+Because it’s normal for creativity to fluctuate depending on factors such as sleep and stress levels, creative burnout can easily fly under the radar—masking as temporary procrastination, tiredness, or lack of motivation. But for people who genuinely care about their work and for those who rely on creative output as an emotional outlet, creative burnout can have a devastating impact on their mental health.
+
+Before you can bounce back, you need to notice something is wrong. Pay attention to the following signs of creative burnout. In isolation, most of these signs are harmless. However, if you have more than two symptoms, it may be time to shake things up.
+
+[![The 10 symptoms of creative burnout](https://nesslabs.com/wp-content/uploads/2021/01/creative-burnout-signs-symptoms.jpg)](https://nesslabs.com/wp-content/uploads/2021/01/creative-burnout-signs-symptoms.jpg)
+
+1. **Procrastination.** Putting off work for a couple of days because you don’t feel like you have enough mental energy is nothing to worry about. However, if you [procrastinate](https://nesslabs.com/neuroscience-of-procrastination) for long periods of time and ignore important deadlines, it may be a sign of creative burnout.
+2. **Struggle to do basic work.** Is your to-do list getting longer and longer, but you can’t bring yourself to check some easy tasks off it? Are you burying your head in the send and neglecting the growing mountain of little things you ought to get off your plate? This may be another symptom.
+3. **Constant exhaustion.** Sometimes, we don’t get enough sleep and feel a bit sluggish the day after. That’s completely fine. But if the physical exhaustion is sustained over a long period of time despite a decent amount of sleep, you may be burning out.
+4. **Inexplicable stress.** Creative work can be stressful. Deadlines, complicated projects with many moving parts, a pushy client… These factors can cause stress that’s within the [Goldilocks curve](https://nesslabs.com/goldilocks-principle) and remain manageable. But creative burnout may make you feel persistently stressed without being able to pinpoint the exact cause.
+5. **Unhealthy comparisons.** We are more connected than ever, and many creators follow the work of fellow creators online. Some creators are more productive than others, and this productivity usually ebbs and flows. If you look at their output and can’t help but compare their productivity to yours in a negative way, you may be experiencing a symptom of creative burnout.
+6. **Unbalanced content consumption.** As a creator, it’s vital to balance your levels of [creative input and creative output](https://nesslabs.com/creative-input-output). When we are burning out, we often find ourselves scrolling endlessly and binging TV shows, but not creating much work of our own. 
+7. **Morning dread.** Have you ever experienced that feeling of angst, a sense of doom where your mind is racing into the future, and everything seems bleak? Stressful times in our life can make us dread waking up. If this feeling persists, it may be a sign of creative burnout—or something even more serious.
+8. **Harmful habits.** Eating unhealthy food or eating more than usual, abandoning your exercise routine, drinking more alcohol… If you are experiencing creative burnout, you may be coping through damaging mechanisms which will leave you feeling even worse.
+9. **Irritability.** You may be feeling frustrated with your colleagues, annoyed with your spouse, snappy at your kids. Being more temperamental than usual can be a symptom of creative burnout.
+10. **Self-doubt.** Finally, you may also think that you will never be good enough, that your work is pointless, or that you lack the necessary imagination—despite having produced good creative work in the past and having received praise for it.
+
+There are two important caveats to this list of signs. First, there is a difference between creative burnout and the good old creative block. Feeling occasionally stuck when working on a project is perfectly normal. Sometimes, the creative block can last for what feels like a very long time. And while a creative block can be stressful, it doesn’t share the same symptoms you will find in creative burnout.
+
+Second, if you are experiencing many of these signs, or even just one of these signs for a long time, it may be more serious than creative burnout. Many of these signs are also found in mental health conditions such as depression, anxiety disorders, seasonal affective disorder, or could be caused by sleep problems. In doubt, it’s always worth [talking to a professional](https://www.webmd.com/mental-health/features/how-to-find-therapist).
+
+## How to bounce back from creative burnout
+
+Creative burnout can make us feel powerless, as if there was nothing to be done about it. But we do have agency and can use simple strategies to break the cycle. Of course, simple does not mean easy, but removing unnecessary complexity from our approach makes it more likely to succeed.
+
+- **Get support.** Because creative burnout impacts our work, our first instinct may be to hide our struggle from our colleagues. However, just grabbing someone and telling them: “I’ve been feeling burned out lately” can be immensely helpful. You will find that most people are more than happy to help, whether by giving you a hand with a project, brainstorming fresh ideas, or just lending an ear. Voicing your struggle is also a great first step in bouncing back from creative burnout.
+- **Take a break.** Not just a short walk, which may be helpful for creative block but probably not enough to help with creative burnout. Take a proper break—a few days off, with your out-of-office autoresponder on, where nobody will expect any work from you. The anxiety of knowing you are supposed to work but can’t bring yourself to is a vicious cycle. Taking a break is a way to escape that cycle so you can start afresh. Use the time to do things that have nothing to do work without feeling any guilt: spend time with your loved ones, read books, take naps, cook, watch movies, go on a weekend holiday in the countryside, take care of your plants… Or just do nothing, that’s perfectly fine.
+- **Make space for self-reflection.** Replace destructive existential angst with constructive self-reflection. It could take the form of journaling, discussing your struggle with a friend, reviewing your current environment and your schedule, running a [motivation clinic](https://nesslabs.com/motivation-components), or even just talking to yourself out loud. Burnout can be hard to manage when we can’t define its exact source. Turn yourself into a self-experimenting scientist and try to uncover the roots of the problem.
+- **Look at your past work.** Because creative burnout often comes with self-doubt, it’s easy to forget all our past accomplishments and to focus on our present challenges instead. Go browse your past work, both the good and the bad. If it’s good, remember how it wasn’t easy to produce. If it’s bad, look at how much progress you have made. Channel the feelings you experience while reviewing your past work to break away to overcome your self-doubt.
+- **Start with the basics.** Choose the smallest atomic unit of creative work you can do to get you started again. Are you trying to write a book? Just write one paragraph. Trying to design a new website? Just work on one wireframe. Instead of looking at the mountain of work in front of you and feeling paralysed, take your first baby step.
+
+Don’t forget to be kind to yourself. Creative burnout does not mean you don’t care about your work; it doesn’t mean you are lazy; it doesn’t mean you are not talented. Creative burnout can stem from perfectionism, external pressure, high expectations, or hypersensitivity. It’s a temporary state, not a permanent condition.
+
+## Prevention is better than cure
+
+While there are simple strategies to manage creative burnout, the best way to deal with it is to avoid burning out in the first place. Because of all the different causes of creative burnout, it may not always be possible, but creating a mental scaffolding to support your health and creativity can go a long way.
+
+- **Metacognition.** Don’t wait until things are bad to start reflecting on how you feel, your progress, your goals, and your motivations. [Metacognition](https://nesslabs.com/metacognition) means “thinking about thinking”—it’s being aware of your own awareness so you can determine the best strategies for learning and problem-solving, as well as when to apply them. It consists in planning, monitoring, and evaluating your creative work on an ongoing basis, so you can catch any early signs of creative burnout.
+- **Mindful productivity.** Mindfulness and productivity may seem antithetic, but borrowing principles from mindfulness when you pursue creative work will help you build a sustainable work environment for yourself. [Mindful productivity](https://nesslabs.com/mindful-productivity) can be defined as being consciously present in the work you’re doing while you’re doing it. It’s not about meditation; it’s about calmly acknowledging and accepting your feelings and thoughts while engaged in work or creative activities.
+- **Habits, routines, rituals.** Make sure you have the basics covered in terms of mental and physical health. [Habits, routines, and rituals](https://nesslabs.com/habits-routines-rituals) all have different levels of intentionality, and are all helpful to help you feel balanced and healthy. Manage your habits, maintain your routines, and make new, meaningful rituals to better connect with your inner self.
+- **Information diet.** A mindful approach to content consumption is about managing the quantity and quality of content you consume. Is the content you consume nourishing, inspiring, fostering curiosity and personal growth? Or is it draining and anxiety-inducing? Manage your [information diet](https://nesslabs.com/information-diet) by curating your inbox, adding more high-quality “foods” to your content menu, and scheduling your content consumption.
+- **Structured distraction.** Many creators have internalised the idea that they need to be hyperfocused on their work. But our brains were not designed to sustain attention for long periods of time. We need to alternate between focus and distractions. Instead of forcing ourselves to work through fatigue and demotivation, make sure to [take creative breaks](https://nesslabs.com/structured-distraction-breaks-at-work). It will help you restore your motivation, prevent decision fatigue, and improve your overall well-being.
+
+Our individual differences affect the way we experience creative burnout. For some, it may be easier to manage, while for others it may feel insurmountable. Wherever you currently sit on the spectrum, know that it is possible to break the cycle and bouche back; that people around you are one of the best sources of support; and that creative burnout means absolutely nothing about to your passion, talent, or work ethics. There is no permanent cure for creative burnout: being attentive to early symptoms and applying some simple remedies is the best way to go.
+
+The post [Creative burnout: when the creativity tap runs dry](https://nesslabs.com/creative-burnout) appeared first on [Ness Labs](https://nesslabs.com).

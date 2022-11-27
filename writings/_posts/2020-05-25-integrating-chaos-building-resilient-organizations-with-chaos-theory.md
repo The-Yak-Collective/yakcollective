@@ -1,0 +1,296 @@
+---
+layout: post-external
+title: 'Integrating Chaos: Building Resilient Organizations with Chaos Theory'
+date: 2020-05-25 17:06:45.000000000 Z
+author: 100078
+original_link: https://think-boundless.com/chaos-theory/?utm_source=rss&utm_medium=rss&utm_campaign=chaos-theory
+---
+![Chaos Theory in Modern Organizations](https://i2.wp.com/think-boundless.com/wp-content/uploads/2020/05/Integrating-Chaos-Spiral.jpg?resize=1024#2C576&ssl=1)
+
+Our imagination about what happens in the business world has become disconnected with reality and it all starts with an accepted narrative about the unstoppable power of Fredrick Taylor’s ideas
+
+The narrative goes like this: Fredrick Taylor introduced managers to analytical methods and tools that helped them to dramatically improve productivity; however these efforts also kick-started a non-stop line of efforts that led to the inevitable over-optimization of human labor.
+
+This over-simplification of Taylor is part of a narrative that has become entrenched and feeds a broad movement that says organizations are _broken_. The story says that organizations might be efficient, but at enormous cost – they destroy autonomy, stifle creativity and at worst, are systems that enable widespread verbal and physical abuse. All starting with Taylor of course.
+
+Yet, as I’ll show you, this story is wrong, misses the context of Taylor’s time and ignores that a hyper-optimized mindset towards work did not take hold until the emergence of the “career path” in the 1960s. This coincided with the risk of “knowledge work” and this shift turned work into a performance, distracting many from the real mission of any organization: survival.
+
+**Instead of seeing organizations as broken, a more accurate starting point is to think of them as complex systems and instead of broken, as fragile**. As the scale of business gets bigger, the hidden fragility of many organizations puts employees, customers and society at risk.
+
+To address this fragility, I want to look at organizations as “complex adaptive systems”, an idea that emerged from a field called Chaos Theory in the 1970s and 1980s. I want to push for a broader adoption of these principles and encourage a new generation of “chaos managers” to become interested in the survival and success of our institutions.  
+
+I first learned about chaos theory 13 years ago and have been thinking about it ever since.  During the ten years I spent in the corporate world and as a management consultant, I couldn’t escape the feeling that something was missing.  This is my first attempt to fill that gap and to give many other frustrated managers and leaders an additional lens to help them think about helping their organizations thrive.  
+
+This essay will explore the following:
+
+- What we got wrong about Taylor
+- How the idea of the “career path” turned workers into performers
+- How organizations subsequently became complicated, not complex
+- Why chaos theory does not lead to anarchy
+- The implications of chaos theory on leadership
+- An actionable five-part guide for the modern “chaos manager”
+
+## **Taylor’s Promise & How Workers Become Performers**
+
+![Climbing the career ladder](https://i1.wp.com/think-boundless.com/wp-content/uploads/2020/05/Climbing-Job-Titles.jpg?fit=1024#2C576&ssl=1)
+
+If you dig into Fredrick Taylor, you find a number of surprising things and I’m not talking about his 1881 US Open Doubles Tennis championship.  What I’m talking about is the historical context of his famous contribution, [_Scientific Management_](http://www.gutenberg.org/ebooks/6435). 
+
+Taylor saw his approach to business not as a set of tools, but as a paradigm shift away from the harsh worker versus manager divisions that were common at the time. His ambitions were quite profound as he felt that his approach would lead to “elimination of almost all causes for dispute and disagreement between them” and unlock “prosperity for the employee, coupled with prosperity for the employer.”
+
+This is overlooked when modern work critics blame Taylor for the hyper-optimization of the modern workplace. They miss the fact that Taylor’s focus was on production workers and the union of workers and management as well as the adoption of his tools did not become widespread until the emergence of the knowledge worker.
+
+While manufacturing workers had a strong “class consciousness,” the emerging class of “white collar” workers were not really sure [who they were](https://amzn.to/3d4Pbaq):
+
+> _White-collar workers rarely knew where they were, whom they should identify with. It was an enduring dilemma, rooted in what might be called a class unconsciousness, that would characterize the world of the office worker until the present day._
+
+Despite attempts throughout the 20th century for labor movements to include these workers, knowledge workers were distinct because of their desire to distance themselves from organized blue-collar workers.  Instead of labor unions, they formed “associations” and increasingly saw themselves as aspiring business people rather than at tension with the owners of capital and leaders of organizations.  
+
+The knowledge worker was not concerned with bargaining for rights.  Instead, they focused on managing a career, developing skills and acquiring achievements or “pursuit of consecutive progressive achievement” as Merriam-Webster puts it. It was only time before they became part of the elite.  
+
+People saw themselves not as a part of an organization but as someone with a first-person account of achievements and contributions that could be carried from employer to employer. 
+
+As the job morphed into a career, the worker shifted from someone merely doing their job to someone that needed to perform. 
+
+### **Continuous Improvement & The “Theatre Of Work”**
+
+In the 1980s, new “schools” of business thinking like Total Quality Management, Six Sigma and Lean entered the scene.  The accepted narrative of this shift is that US companies needed new approaches to compete with Japanese companies.  There is some truth to that story, but it ignores the fact that these programs would not have been adopted with such enthusiasm without the fuel of career aspirations.  
+
+![Emergence of "career path" google ngram books results](https://lh5.googleusercontent.com/uFLkxAEvzdLbU00Ybd5rzookQdPGg0rxN-lAOuJ5GQdyk0Z7cn7gaEBJXv_R6bpR_SGXwtc4-ToHEeapu_58b4L1WpTJdVM3EeTB6QGy5s03_1VbrR_h3a7lDbrnOka_QIVV3oH4)
+
+Every aspirational leader attached their careers to these programs in the 1980’s, most notably Jack Welch.  In 1989, he gave an interview in which [he detailed](https://hbr.org/1989/09/speed-simplicity-self-confidence-an-interview-with-jack-welch) GE’s newly launched “work out” program:
+
+> _We want 300,000 people with different career objectives, different family aspirations, different financial goals, to share directly in this company’s vision, the information, the decision-making process, and the rewards_
+
+For someone at GE, it was very clear that you would need to get involved in one of these programs if you hoped to progress at the company. By the end of the 1990’s every large company had similar programs and employees had figured out that to get ahead you needed to document your progress.
+
+I got my first taste of this game in my first internship.  I spent the entire summer creating a proposal and then purchasing a foam board which helped our group organize some inventory we kept in a file cabinet.  While it didn’t appear that the parts were too hard to find in the file cabinet in the first place, by the end of the summer the project helped the group earn the next “level” in the company’s continuous improvement program.
+
+Consultant and writer Tom Critchlow would argue that I was operating in the “[theatre of work](https://tomcritchlow.com/2019/11/18/yes-and/)”:
+
+> _Many people aspire to “silent success” at work – to do work that “speaks for itself”. Unfortunately this is the wrong move in the theatre of work. Instead we should aspire to the opposite – for knowledge work, the performance of the work is the work._
+
+Continuous Improvement programs helped complete the shift of work into a performance and kept workers in a non-stop search for problems that need to be fixed.
+
+### **The Organization, It’s Complicated**
+
+A Taylorist revolution this was not.  Instead of real productivity improvements there was an explosion of paperwork, reports and well-intended initiatives, many of which drove increasing **complicatedness**.
+
+Today’s business leader sees almost every issue and activity through a complicated lens.  This lens sees all commercial issues and behavior as things that can be understood, measured and then documented or fixed in a process.  
+
+Anyone who has worked in a large company has run into the complicated approach when they have to deal with their expenses.  Typically any expense above a certain amount must be approved and then you need to go through a formal process for reimbursement.  While this approach eliminates the chance that an employee will spend recklessly, it adds additional work for every single person in the company and may unnecessarily limit useful expenses.  However, when this kind of approach is implemented, it will also help the project leader show quantified savings that they can point to at their next performance review.  
+
+In contrast, a **complex** lens would admit that cause and effect is not easily understood, there may be many solutions to a problem, and that even if you “fix” something, the process and related human behavior will continue to evolve and adapt. 
+
+A good example of a complex lens is how Trader Joe’s thinks about customer service.  If you walk into a Trader Joe’s and ask an employee if you can try one of the items, they will take a box, open it, and let you try some, no questions asked.  This creates complexity and uncertain outcomes, but the employees also get a lot of interesting feedback that they can pass along to the people that buy products for the company.  
+
+The best assessment of the creeping complicatedness in organizations is from Boston Consulting Group who studied the internal operations of more than 100 companies.  They [found that](https://hbr.org/2011/09/smart-rules-six-ways-to-get-people-to-solve-problems-without-you) the “amount of procedures, vertical layers, interface structures, coordination bodies, and decision approvals within organizations had increased by anywhere from 50# to 350# over a 15-year period.”  And in the top 20# most complicated organizations?  The managers in those organizations “spend 40# of their time writing reports and 30# to 60# of it in coordination meetings.”
+
+The experience of sitting in “coordination” meetings is one of the most painful experiences for the modern worker and as many come to realize, is the stage of the theatre of work, where the most powerful people battle it out for having the most compelling narrative of what is really happening, complicatedness be damned.
+
+## **The Early Excitement Of Chaos Theory**
+
+![Chaos Theory](https://i1.wp.com/think-boundless.com/wp-content/uploads/2020/05/Hurricane-Spiral.jpg?fit=1024#2C576&ssl=1)
+
+But what if this creeping complicatedness of our organizations increases the fragility of the organization? 
+
+That is the conclusion of researchers who think organizations should be understood as “complex adaptive systems.”
+
+In the 1970’s and 80’s a new field of research began to emerge called Chaos Theory. Scientists were looking at complex dynamic systems and trying to understand how they emerge and evolve. They drew inspiration from the natural world, looking at phenomena like how organisms grow in the wild, and how weather evolves. Eventually, they began applying the lessons to fields such as finance, biology, economics and eventually, organizations.
+
+One of the fundamental implications of chaos theory is that small changes have the potential to have big effects within the system, whereas large changes are less likely to shift the underlying order of the system. This is because the organization is seen as a complex system rather than a fixed body. The individual behaviors and reactions of people within a complex system are unpredictable, but they are linked to one another. The feedback from each of those unpredictable actions will give feedback to others in the organizations and influence their subsequent decisions and reactions.
+
+In the 1990s there was a lot of excitement around these ideas.  In 1999, Richard Pascale, a former management consultant and author, [wrote about](https://sloanreview.mit.edu/article/surfing-the-edge-of-chaos/) chaos theory in the MIT Sloan Management review, predicting that “the next point of inflection is about to unfold”.
+
+### **However, Chaos Theory Has No Star**
+
+![The CEO is the center of the universe. Modern Leadership & John Kotter](https://i0.wp.com/think-boundless.com/wp-content/uploads/2020/05/CEO-solar-system.jpg?fit=1024#2C576&ssl=1)
+
+Alas, a new era did not unfold. The increased use of computers and connectivity coincided with globalization and growth of large businesses that paired well with change management frameworks like John Kotter’s 8-step “change management” approach. 
+
+I first stumbled upon Pascale’s writing on chaos theory while leading research at BCG where I helped revamp their thinking on organizational change in the mid 2010s.  I thought that the Partners I was working with would share my excitement.
+
+However, I quickly realized the problem.  Kotter’s approach puts the senior executive at the center of the story and the leader’s task is to force a change on a resistant organization.  To him, [the business leader](https://www.amazon.com/Leading-Change-Foremost-Business-Leadership/dp/142720232X) “defines what the future should look like, aligns people with that vision, and inspires them to make it happen despite the obstacles”
+
+Chaos theory, in contrast, removes the senior executive from the center of the story and puts the system at the center.  That is exciting for people who enjoy thinking about complex systems, but isn’t likely to be profitable to a consulting firm which sells projects to senior executives.
+
+I don’t deny that many of the people at senior levels of organizations _do_ have useful experience and are probably better than most at figuring out the direction of the company.  However, it is worth considering why that seems to be the only way we believe modern organizations can be run.
+
+Former CEO Luke Kanies gives us a rare glimpse into the awkward implications of large organizations.  He had the experience of growing up on a commune and then building a 500+ person company and really [struggled with](https://medium.com/s/please-advise/why-we-hate-working-for-big-companies-9e6c787a32ac) the tension between the belief in a free market and the reality of running a company as a top-down operation.  
+
+> _We still live in a free market economy, but it’s not one Adam Smith would recognize. Instead of individual or small operators, ours is composed almost entirely of corporations. Really big corporations. And these companies use the same kind of central planning that we so despise in communist systems._  
+>   
+> _…We could see no way to have a system where the people doing the work built a plan for the organization. Even thinking about it now, my reaction is, “How would they know what my goals are?” That’s the kind of question you can only ask in an authoritarian state, not in a free market economy._  
+>   
+> **_My goals became my company’s goals, and the only real way to ensure people worked toward them was for me to provide a plan._**
+
+We have no other playbooks for running large companies.  Top-down and complicated is the only way we know how to do it and this fact is worth acknowledging more openly.  Many corporations engage in culture PR, telling employees that they will be given the Dan Pink sandwich of autonomy, mastery, and purpose when the day-to-day reality is far from it. 
+
+A first step towards adding new models to the toolbox like Chaos Theory has to be an admission that creating dynamic large organizations remains elusive, and the very few examples we have means that there is very little expertise on how to behave in new ways.  
+
+### **Chaos Theory Is A New Lens On Business**
+
+It’s an open secret in modern organizations that most change efforts fail.  Kotter estimated in his book that upwards of 70# of change efforts fail and this has become one of the most repeated facts from consulting firms who unironically share this in the front of pitch decks which then go on to sell another top-down change program.
+
+**The best argument to immediately increase awareness of Chaos Theory is that it gives managers a way of understanding the reasons why these change programs fail.  **
+
+With a deeper understanding, managers can then use it as a lens to re-frame many of the activities which are traditionally seen as bad practices such as redundant activities and lack of processes.  While many of the implications of chaos theory are counterintuitive, Pascale offers [four basic principles](https://sloanreview.mit.edu/article/surfing-the-edge-of-chaos/) of “complex adaptive systems”:
+
+1. They consist of **many agents acting in parallel** and are not hierarchically controlled
+2. They **continuously shuffle these building blocks** and generate multiple levels of organization and structure 
+3. They are subject to the second law of thermodynamics, exhibiting entropy and **winding down over time unless replenished with energy**. In this sense, complex adaptive systems are vulnerable to death. 
+4. They have **a capacity for pattern recognition** and employ this to anticipate the future and learn to recognize the anticipation of seasonal change
+
+Chaos theory posits that this is a natural state that emerges _without_ central control_. _ Instead of letting things emerge, we do the exact opposite, we try to control organizations as much as possible.
+
+This approach makes a lot of sense because organizations are run by humans who have a natural desire for control.  But consider the implications of operating in an organization which is a truly complex adaptive system, [suggested by](http://www.complexityforum.com/members/Grobman#202005#20Complexity#20theory.pdf) Professor Gary Grobman:
+
+> _Complexity theory suggests that organizational managers promote bringing their organizations to the “edge of chaos” rather than troubleshooting, to trust workers to self-organize to solve problems, to encourage rather than banish informal communication networks, to “go with the flow” rather than script procedures, to build in some redundancy and slack resources and to induce a healthy level of tension and anxiety in the organization to promote creativity and maximize organizational effectiveness_
+
+This is terrifying for most managers and helping them grapple with inevitable insecurity and emotional challenges of embracing these methods is just as important as an understanding of the principles themselves.
+
+### **“Eyes On, Hands-Off”: Chaos Does Not Mean Anarchy**
+
+![Gardening as leadership style](https://i2.wp.com/think-boundless.com/wp-content/uploads/2020/05/Gardening-Plants.jpg?fit=1024#2C576&ssl=1)
+
+“You can’t just let people do whatever they want.”  This is the most common pushback to the idea of chaos theory.  People mistake chaos theory as the first step on the road to anarchy.  Yet in the highest stakes arena, the military, they openly embrace many of the principles of chaos theory.  
+
+A publication from the US Marine Corps published in 1996 titled “Command and Control” offers a view of a seemingly traditional view of leadership [through a complex lens](https://fas.org/irp/doddir/usmc/mcdp6/fwd.htm): “command and control is not the exclusive province of senior commanders and staff: effective command and control is the responsibility of all Marines.”  It goes on to detail command and control as “a complex system characterized by reciprocal action and feedback” that “provides the means to adapt to changing conditions.”
+
+Here is General Stanley Mchrystal writing in his book “Team of Teams” which details how the military had to come up with a better approach to counteract the more “chaotic” and emergent activity of the terrorists they were fighting in the early 2000s:
+
+> _The temptation to lead as a chess master, controlling each move of the organization, must give way to an approach as a gardener, enabling rather than directing. A gardening approach to leadership is anything but passive. The leader acts as an “Eyes-On, Hands-Off” enabler who creates and maintains an ecosystem in which the organization operates._
+
+Notice how similar this is to Grobman’s conception of a chaos theory manager and how antithetical this is to Kotter’s definition of a leader.  This goes against the caricature of military organizations as top-down rigid hierarchies.  Unlike many companies today, military organizations have people who plan to have much longer tenures within the organization and are personally at risk if the organization becomes too fragile and complicated.
+
+## **The Five Roles Of The Chaos Manager**
+
+![How to use chaos theory in management](https://i2.wp.com/think-boundless.com/wp-content/uploads/2020/05/AnimatedGIF-Loop2.gif?w=1170&ssl=1)
+
+A good way to think about chaos theory would be by thinking about how Jazz relates to most other music.  As Louis Armstrong said, “If you have to ask what jazz is, you’ll never know.”  Chaos Theory is similar.  It can’t be easily boiled down to easily understood scientific laws, great business book narratives, credentials or 8-step plans.  Similar to jazz, it is improvisational in nature.
+
+Many people in the business world are hungry for a different way of thinking about change in modern organizations but don’t buy into the idea that organizations are “broken.”  They also don’t think that the solution to these problems is another complicated continuous improvement program or consulting firm transformation program.
+
+Chaos theory can be the improvisational permission that leaders need to explore ways of leading and managing beyond simply what has been done for the last fifty years.  This can help to inspire a new generation of “chaos managers” that want to treat organizations as they are: living, dynamic systems.  
+
+Fundamentally, the chaos manager thinks about five roles:
+
+1. **Emergence Architect:** Increase the opportunity for changes that have large positive effects by engaging in more small experiments
+2. **Authority Aligner:** Increasing the credibility of top-down leadership by focusing on personal authority in addition to positional authority.
+3. **Reality Sensemaker** : Shift from the illusion of top-down control to better control though improved sensemaking, better feedback & making appropriate decisions at lower levels of the organization
+4. **Chaos Injector** : Ensures that the organization is not stagnant and looks for ways to inject “energy” throughout the company
+5. **Survival Guide** : Can increase the perceived credibility among employees, customers, society and shareholders by shifting organization’s mission to survival 
+
+### **Role #1: Emergence Architect**
+
+![Designing for emergent behavior in organizations](https://i0.wp.com/think-boundless.com/wp-content/uploads/2020/05/Butterfly-Infinity.jpg?fit=1024#2C576&ssl=1)
+
+The canonical example of chaos theory is the Butterfly effect. Far away in China, a butterfly flaps its wings. The tiny change in pressure it causes has cascading effects, causing whorls of wind, which in turn cause pressure disturbances of their own. These spirals of wind feedback further on themselves in a relentless positive cycle. Far away, a hurricane forms. The butterfly, oblivious, flies on.
+
+The Butterfly effect occurs in all systems of sufficient complexity. It is characterised by two features:
+
+1. **Nonlinearity**. Small changes in input (flap of wings in China) have big effects on outcomes (wind in the US)
+2. **Unpredictability**. Because we can never know the precise nature of all inputs, and small changes in inputs lead to big changes in outcomes, we cannot forecast outcomes.
+
+Both of these things are the enemy of the modern manager.  The modern manager spends their time convincing others that the future is both predictable and can be dictated by well-designed programs and initiatives. Yet over time this desire for predictability only ends in the inevitable path of stagnation.  
+
+Yet not every company operates like this.  Amazon is a company both obsessed with **long-term survival** and a deep understanding that survival requires designing for complexity.  Here are three lesser known ways they design this:
+
+#### #1 **Designing for emergence of skills**. From Bezos 2009 [shareholder letter](https://drive.google.com/file/d/1SpgDsIpC_cAS0O4cBz4Sb_GJcEIBhUtA/view):
+
+> _“Working backwards”  from customer needs can be contrasted with a “skills-forward” approach where existing skills and competencies are used to drive business opportunities. The skills-forward approach says, “We are really good at X. What else can we do with X?” That’s a useful and rewarding business approach. However, if used exclusively, the company employing it will never be driven to develop fresh skills._
+
+#### #2 **Accepting a stance of not knowing** : From Bezos 2016 [shareholder letter](https://drive.google.com/file/d/1SpgDsIpC_cAS0O4cBz4Sb_GJcEIBhUtA/view):
+
+> _One area where I think we are especially distinctive is failure. I believe we are the best place in the world to fail (we have plenty of practice!), and failure and invention are inseparable twins. To invent you have to experiment, and_ **_if you know in advance that it’s going to work, it’s not an experiment_** _._
+
+#### **#3 Making reversible decisions at the lowest level** : 
+
+Amazon pushes teams to escalate one-way door decisions – those that can’t be reversed and may have long-term consequences.  However, with “two-way” decisions, managers are coached to make these decisions themselves.  Here is how one manager at Amazon [describes it](https://aws.amazon.com/blogs/enterprise-strategy/letting-go-enabling-autonomy-in-teams/):
+
+> _Decision-making processes are evaluated for speed more than control. It’s not an excuse for poor decisions, but rather a reflection that the search for perfect information is normally fruitless and slow. Delegation of these decisions enables better rigor and time to be spent on fewer, more critical decisions…If teams escalate two-way door decisions due to a perceived lack of empowerment, use the escalations as opportunities to coach the teams_
+
+Bezos has noted that most large organizations default to seeing every decision as a one-way door that [results](https://drive.google.com/file/d/1SpgDsIpC_cAS0O4cBz4Sb_GJcEIBhUtA/view) in “slowness, unthoughtful risk aversion, failure to experiment sufficiently, and consequently diminished invention.”  Making quick decisions increases the chances of mistakes, but it also helps the company continue to operate as a complex “invention machine,” as he calls it, rather than another fragile, large company.
+
+### **Role #2: Authority Aligner**
+
+> _Done well, command and control adds to our strength. Done poorly, it invites disaster, even against a weaker enemy –_ **_US Marines, “Command and Control”_**
+
+Many organizations are not in fact the command and control hierarchies that they are portrayed to be. While there may be a clear formal hierarchy and a well-designed org chart of the people in the organization, anyone with more than a week’s experience in a modern organization knows that informal networks control how things actually get done and that improvisational behavior is part of most work.
+
+The chaos manager is concerned with the credibility of the organization and ensures that positional authority is aligned with personal authority.  That the people in leadership are the ones people want to follow.  While the Marine Corps has a clear position hierarchy, they have a deep understanding of this [idea](https://fas.org/irp/doddir/usmc/mcdp6/ch1.htm). 
+
+> _Official authority is a function of rank and position and is bestowed by organization and by law. Personal authority is a function of personal influence and derives from factors such as experience, reputation, skill, character, and personal example. It is bestowed by the other members of the organization._
+> 
+> _…Official authority provides the power to act but is rarely enough; most effective commanders also possess a high degree of personal authority_
+
+Companies undermine their credibility in two ways: 
+
+1. Official authority doesn’t have associated responsibility for its actions
+2. Personal authority doesn’t get recognized and integrated over time
+
+The first condition results when there is a lack of “_skin in the game.” _ When people within the organization see that senior leaders pay no costs for mistakes and carry no responsibility for their decisions, the organization fills with a creeping nihilism rather than ideas and creativity.
+
+The second condition exists in most companies because positional authority is so salient and easy to understand.  Personal authority is the credibility that people carry within the organization regardless of their rank within the company.  While these people often command the respect of their peers, they often grow disgruntled because their skills are not a perfect fit for climbing the corporate ladder or are overlooked by senior leaders.
+
+Bridgewater Associates is one company that takes finding the people with personal authority seriously.  As Ray Dalio [says](https://www.linkedin.com/pulse/work-principle-5-believability-weight-your-decision-making-ray-dalio/),
+
+> _In typical organizations, most decisions are made either autocratically, by a top-down leader, or democratically, where everyone shares their opinions and those opinions that have the most support are implemented. Both systems produce inferior decision making. That’s because the best decisions are made by an idea meritocracy_
+
+To cultivate an idea meritocracy, they developed an app called a “dot collector” which enables all employees to rate each other along many different dimensions, ranging from “knowledgeability” to communication style. Over time, the app builds up a picture of each employee’s “believability” on different issues. This enables Bridgewater to understand where expertise lies within the company in addition to the hierarchical authority easily understood on an org chart.
+
+### **Role #3: Reality Sensemaker**
+
+In a complex system, what is the role of the leader? General McChrystal says leaders become “gardeners” and Professor Grobman suggests leaders learn how to “go with the flow.”  We might have a general sense of what they mean, but what should a leader do on a day to day basis?
+
+The chaos manager engages in a continuous search for truth about the reality within the organization and sees the organization not as a stable system, but an adaptive network with dynamic relationships, interactions and rules.  Today’s reality is not tomorrow’s.
+
+Edgar Schein helped popularize the idea of assessing corporate culture in the 1980’s.  While many people gravitate to his three-tiered culture framework, he saw the understanding of culture not as a top-down reality shaping initiative but as a deep [inquiry](https://sloanreview.mit.edu/article/coming-to-a-new-awareness-of-organizational-culture/?use_credit=fecf2c550171d3195c879d115440ae45) into the “nature of humanity, human relationships, time, space, and the nature of reality and truth itself.”  
+
+The chaos manager takes this search for truth seriously and knows that the fine balance of command and control can only be reached if they have an accurate map of reality.  The chaos manager does not have authority because of their position, but because of their ability to learn, listen and integrate.  The best leaders have the best map of reality.  
+
+![Command and control in complex adaptive systems versus traditional management](https://lh5.googleusercontent.com/kkEAuS4Zhr4fJE5ybI9oR4ts9OZw9YLWCrm_SI1dwkFMHboJql6AaMyL3c9xkmX9A95oj7glG6UvR-mjQcS101yxhpp20XGMBLsYIyFhKm_0O7q7-HzBHSVXd326jyTVbPVV6qaI)
+
+One of the best accounts we have of embracing this model is from Steve Miller, who became a “chaos manager” later in his career at Shell:
+
+> _The scariest part is letting go. You don’t have the same kind of control that traditional leadership is used to. What you don’t realize until you do it is that y_ **_ou may, in fact, have more controls but in a different fashion_** _. You get more feedback than before, you learn more than before, you know more through your own people about what’s going on in the marketplace and with customers than before. But you still have to let go of the old sense of control._
+
+### **Role #4: Chaos Injector**
+
+![Controlled burns as a way to control systems](https://i1.wp.com/think-boundless.com/wp-content/uploads/2020/05/Forest-Fire2.jpg?fit=1024#2C576&ssl=1)
+
+In the forestry world, a “controlled burn” is an accepted practice of lowering the risk of fragility.  A “controlled burn” is a fire purposefully set with the goal of lowering the risk of more uncontrolled wildfires that put people and communities at risk.
+
+The chaos manager knows that organizations are at risk if they become stagnant and similarly look for ways to unleash controlled burns within their organization.  These are often small and subtle design decisions that may lead to unexpected positive outcomes.  Three simple examples include:
+
+1. **Unplanned Interactions** : Steve Jobs had this in mind when he designed Apple’s headquarters: their corridors were deliberately small so you _had_ to bump into colleagues you didn’t directly work with. Increasing connectivity between key nodes in the organizational network allows for both ideas and people to collide.
+2. **Human Judgement Over Rules** : At Ritz Carlton, where employees are given a budget to spend on making customers happy, no questions asked. This is inherently unpredictable — each guest is different, so management may not know what money is being spent on. But as customer demands change, the company does not have to develop 
+3. **Aligning Career Incentives** : Many individuals do not have any incentive to think about the health of an entire organization.  One way to do this is to increase the connections between groups, such as making an engineering team responsible for the customer service demands for their product after launch.  This can shift teams out of their default modes of approaching and solving problems and work in new ways.
+
+The chaos manager is always listening and looking for teams that are stuck within rigid rules and individuals with limited autonomy.  The chaos manager knows that they need to inject chaos to ignite the literal creative energy of individuals throughout the organization.
+
+### **Role #5: Survival Guide**
+
+In Chaos Theory, the mission is clear: survival.
+
+Right now many organizations have operated for decades in a simulated reality that is itself fragile and where plans don’t have to make sense, competition doesn’t matter and second-order effects can be safely ignored.  Before the Covid-19 pandemic, the US and UK were rated the top two countries in preparedness.  Why? Because they had done extensive planning and even run simulations.  They had plans.
+
+But their plans were overly optimistic and focused on keeping morale high and the economy running.  Anchored to these plans, people were more interested in trying to make them happen rather than taking a more adaptive response.  The deeper problem is the absolute faith in plans in the first place.  If you think everything can be modeled on a spreadsheet, you start to lose touch with reality and stop orienting towards survival. In this case, human survival was at stake too.
+
+Many people have given up on institutions.  Chaos theory is a lens that can help us escape this nihilistic view.  Yuval Levin has chronicled the role of institutions in our lives and [believes](https://www.aei.org/press/how-did-americans-lose-faith-in-everything/) “We lose faith in an institution when we no longer believe that it plays this ethical or formative role of teaching the people within it to be trustworthy.” 
+
+As I have outlined, almost every incentive within modern organizations is conspiring to shift people’s attention away from the organization’s credibility and survival.  Company starts struggling? Just get another job.  Your initiative doesn’t really matter? So what, it looks good on a resume.  Employees suffer under the current paradigm?  Sorry buddy, it’s always been that way.
+
+Levin suggests that we need to start asking “Given my role here, how should I behave?”  This is a nice sentiment, but I’m not sure most people are there yet.
+
+Instead, Chaos Theory can integrate with the current paradigm and give current leaders the feeling that they are _still doing something_ while we discover _what works_.  To the many business leaders and managers who are frustrated with the accepted reality of organizations, it gives them a framework to play and experiment to potentially find a way out.
+
+I might be a bit crazy, but similar to Taylor’s belief that Scientific Management could help transcend the divide between workers and owners, I believe that an earnest attempt at applying the lessons of Chaos Theory can help to soften some of the broad disillusionment across the corporate world that any real change is possible and help people take pride in their roles, institutions and our systems.
+
+* * *
+
+_Special thanks to [Thomas Hollands](https://www.xsrus.com/) who partnered with me on the many initial drafts and helped me shape the overall theme of this essay and [Jeremy Finch](https://jeremyafinch.com/), who created the illustrations. Also to Vinay Debrou, Michael Kueker_, _Greg Doctor, Mike Tannenbaum, and Tom Critchlow for reading drafts and helping to make it a lot better._
+
+[contact-form-7]
+
+The post [Integrating Chaos: Building Resilient Organizations with Chaos Theory](https://think-boundless.com/chaos-theory/) appeared first on [Boundless: Beyond The Default Path](https://think-boundless.com).

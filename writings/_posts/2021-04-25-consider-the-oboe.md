@@ -1,0 +1,38 @@
+---
+layout: post-external
+title: |
+  Consider the oboe
+date: 2021-04-25 23:35:00 +0000
+author: 100047
+original_link: https://antlerboy.medium.com/consider-the-oboe-4e7f9cd107?source=rss-97852f5a56ae------2
+---
+
+### What’s your favourite example to illustrate radically different ‘worlds’?
+
+#### Consider the #oboe.
+
+![](https://cdn-images-1.medium.com/max/640/1*SoZ-_LJiejmULO-QSb1yCA.gif)
+
+It’s a weird instrument; one of the most ancient.
+
+To play it requires immense skill, and the patience to spend hours crafting the reeds necessary to make any sound at all.
+
+Early pictorial examples of a double-reed instrument resembling the oboe have been found in Sumeria dating back to 2800 BC, and there are a slew of jokes about oboists to be found on the internet.
+
+It’s one of the hardest instruments to get a tone, and used to tune the rest of the audience.
+
+But the oboe isn’t alone in being idiosyncratic.
+
+An old joke talks about #relationships between different orchestra roles:
+
+\>\> The second violist drove home to find a police cordon. “I’m so sorry,” the officer said, “but the conductor came to your house, stole your wife, killed your dog, and burned down the house.”
+
+The astonished violist responded, “The MAESTRO? Came to MY house?”
+
+In life, and in organisations, different #roles aren’t simply interchangeable job descriptions.
+
+They are different #worlds, places where we’re under different pressures, we have different practices. The world of the oboist is different from the world of the trombonist.
+
+What’s your example of different #sensemaking worlds?
+
+ ![](https://medium.com/_/stat?event=post.clientViewed&referrerSource=full_rss&postId=4e7f9cd107)

@@ -1,0 +1,53 @@
+---
+layout: post-external
+title: What does ‘the power to transcend paradigms’ mean?
+date: 2020-02-27 18:34:11.000000000 Z
+author: 100047
+original_link: https://medium.com/@antlerboy/what-does-the-power-to-transcend-paradigms-mean-306be913ff2a?source=rss-97852f5a56ae------2
+---
+
+Epistemic status — just a rushed response when what I wanted to say became too long for a tweet stream.
+
+On Twitter, Simon Parker asked:
+
+> Systems folk... I'm really intrigued by Donella's transcending paradigms leverage point. Has anyone got a good example of where using this point has worked in practice?
+> 
+>  — [@SimonFParker](https://twitter.com/SimonFParker/status/1232946521752186881)
+
+Matthew Mezey (and others — worth a look a the tweet thread) replied:
+
+> [@SimonFParker](http://twitter.com/SimonFParker "Twitter profile for @SimonFParker") Developmentalist Prof Michael Commons' research on cognitive complexity includes a stage where a few people are able to innovate from integrating paradigms etc. He probably gives examples. May focus on scientists though, not sure... Could be worth a look? [https://t.co/bWRmwzJifr](https://t.co/bWRmwzJifr)
+> 
+>  — [@MatthewMezey](https://twitter.com/MatthewMezey/status/1232951665285832704)
+
+My response is this:
+
+I agree — this is unlikely to happen unless people (or organisations) are at one of those ‘late stage’ levels (I prefer Torbert, or Kegan or Cook-Greuter personally), so you would expect it to be very rare in practice.
+
+‘Transcend paradigms’ can be read in two ways, of course — it’s interesting how explicitly her original paper sets this out as meta-rationality (using the Buddhist analogy) — so this is a fluid post-conventional post-systemic mode of reasoning. i.e. it doesn’t mean ‘transcend the _dominant_ paradigms’, it means ‘transcend the _whole concept of paradigms_’ and be able to switch between modes and paradigms gracefully and with intentionality. It’s hard for a person to do this, arguably harder (to an exponential degree) for a system (not getting too Rainbow Rhythms about this, but you’re only likely to experience it in Five Rhythms or trance dance or maybe the upper limits of improvisation in theatre, dance or music or something?). It is more likely to happen in an organisation _within a context_ — in a reflective practice or planning room — than in an organisation as a whole.
+
+So it might be easier to think of examples in other contexts, e.g. CIA black ops, Al Qaeda, political/social disruptors (“Brexit” campaign and the like), the KLF, conceivably Bill Murray (or the combination of Jim Carrey and Andy Kaufman in Man in the Moon), Dylan, Marina Abramovic, probably a lot of the top female pop stars. Possibly my favourite example I use at the moment is the team led by post-rational ‘ironist’, House, MD— you can see the framing change regularly… and you can see how it’s received too. Legal and moral frameworks are also part of paradigms therefore you can’t expect this to be contained within ‘acceptable’ boundaries. There are some nice examples in the West Wing as well.
+
+And because it’s a ‘cycling through’, usually to deal with a particular situation, but would be more likely to cause problems in a ‘steady state’, you’re relatively unlikely to see it happen over a period of time in organisations (outside the arts etc) — potentially some multi-pivots, then things settle down (usually with the ‘paradigm transcending’ leader moving on — often at the point of a gun, or a boot). (You might also google some of the recent coverage of Jos de Blok in Dutch and have Google translate it for you).
+
+Mahoo’s ( [https://twitter.com/SystemsNinja](https://twitter.com/SystemsNinja)) point (as I take it) is always that this is about how systems are framed, understood, conceptualised, since in a truly logical sense we should not speak of ‘systems in the world’. That means that the power to transcend paradigms is all about applying metacontextuality to how a situation is conceived at the deepest possible level, and coming out with the most interesting or powerful potential framing. So the absolute best systems practitioners will be doing this regularly, but the results you could see will be individuals, teams, structures, approaches that have been re-conceptualised (you see the keystone arch bridge, not the scaffold which allowed it to be built).
+
+And the ultimate point in the ‘leverage points’ (which anyway was a moment of inspiration and a metaphor, not a pseudo-scientific list using leverage as a precise analogue) should be read as part of Meadow’s transition to a post-mechanistic view of the world and this is the critical paper: [http://donellameadows.org/dancing-with-systems/](http://donellameadows.org/dancing-with-systems/) (NB that this paper, read with appreciation of Meadow’s deep history, is great — I worry that, read otherwise, it is a prescription and endorsement for woo, hand-waving, and exhortation without a sense of direction which unfortunately infuses so much we see in the likes of ‘systems change’ coming from a ‘complexity’ perspective — which when it happens seems to me deeply problematic — unhelpful and dangerous.)
+
+Certainly it seems to overlook — or, more likely, assume — any possible requirement for cognitive complexity or adult development, in the same way as Laloux’s potentially dangerous application of perhaps bastardised Integral or Spiral Dynamics theory to a bunch of fascinating case studies, all in their particular context; thereby illustrating that this stuff is an awful lot easier if you start from a given, fixed, context.
+
+For an organisational framing, you could say either that the organisation has to change its paradigm or metaphor of self-organisation _fluidly_ to achieve this, or that it is unlikely for an organisation _as a whole_ to achieve this. There’s a sense in which such an organisation would be re-configuring itself too fast for most of our observational devices to take it in. They might already exist, they just might not visit our dimensions frequently enough for us to realise it ;-)
+
+Parasites which go through unusual life-cycle phases might be intriguing examples of the ‘organisational’ power to transcend paradigms (though of course they are now ‘frozen’); the mutational power of viruses might be another example?
+
+And experience seems to show that organisations _made up of_ post-conventional types don’t… well, don’t stay _organised_ for long. I’ve probably laboured the point enough that stability is not associated with the transcending of paradigms (think about the trope of the crazy genius and their real-world anchor; Bond and Moneypenny or whatever) — and I might be guilty of talking about the shadow side anyway. To be fair, we are only talking about the _power_ to transcend paradigms, not the obsessive compulsion to do so — it’s only my take on it to say that this reflects a sort of phase shift which is unlikely to be consistent with settling back into a consistent paradigm.
+
+Remember, Meadows herself gave a very strong caveat to the list:
+
+> “There is so much that has to be said to qualify this list. It is tentative and its order is slithery. There are exceptions to every item that can move it up or down the order of leverage. Having had the list percolating in my subconscious for years has not transformed me into a Superwoman. The higher the leverage point, the more the system will resist changing it — that’s why societies have to rub out truly enlightened beings.
+
+> “Magical leverage points are not easily accessible, even if we know where they are and which direction to push on them. There are no cheap tickets to mastery. You have to work hard at it, whether that means rigorously analyzing a system or rigorously casting off your own paradigms and throwing yourself into the humility of Not Knowing. In the end, it seems that mastery has less to do with pushing leverage points than it does with strategically, profoundly, madly letting go.”
+
+So ‘has anyone got a really good example of where using ‘the power to transcend paradigms’ has worked in practice’ perhaps shows that ‘leverage point 1’ is just the power to shift leverage point 2 turned on itself — and perhaps the best examples is Meadow’s own transition from her earlier writing to the later?
+
+ ![](https://medium.com/_/stat?event=post.clientViewed&referrerSource=full_rss&postId=306be913ff2a)
