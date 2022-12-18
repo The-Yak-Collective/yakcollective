@@ -2,11 +2,10 @@
 
 * [ ] Tweet new RSS entries + push to Discord (avoid duplication)
 	* [x] Create Twitter & Discord posts along with blog posts
-	* [ ] Move Twitter & Discord posts into staging directory IFF timestamp is later than the last run
+	* [x] Move Twitter & Discord posts into staging directory IFF timestamp is later than the last run
 		* [x] Bring back the last-run timestamp!
-	* [ ] Update Twitter posts to use Twitter handle or professional name
+	* [x] Update Twitter posts to use Twitter handle or professional name
 	* [ ] Script to push out the (lexical) oldest Twitter and Discord post
-		* Archive pushed posts?
 * [ ] Figure out how to build Yak-of-the-Day tweets (but leave this deactivated for now)
 	* Create a yak-of-the-day directory
 	* If today's entry isn't in the yak-of-the-day directory...

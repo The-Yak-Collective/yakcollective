@@ -10,7 +10,7 @@ We have a son!
 
 Three weeks ago, Avital gave birth to our son Curio Rav Lubin. We’re doing amazing and loving our time together.
 
-![](https://blog.randylubin.com/images/img_1474.png)
+![](/images/img_1474.png)
 
 ## About his name
 
@@ -26,4 +26,5 @@ Curio ended up spending a week in the NICU until he gained enough weight, which 
 
 We won’t be posting to social media much, but feel free to sign up to our newsletter for occasional updates: [https://tinyletter.com/thelubinletters/](https://tinyletter.com/thelubinletters "https://tinyletter.com/thelubinletters")
 
-![](https://blog.randylubin.com/images/img_1403.png) ![](https://blog.randylubin.com/images/img_1413.png)
+![](/images/img_1403.png) ![](/images/img_1413.png)
+

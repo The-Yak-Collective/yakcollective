@@ -2,7 +2,7 @@
 title: "#6 Leisure and building"
 date: 2020-04-26 18:34:22.000000000 Z
 layout: post-external
-original_link: https://sachinsnotes.substack.com/p/leisure-and-building
+original_link: https://summerlightning.substack.com/p/leisure-and-building
 author: 100013
 ---
 
@@ -28,5 +28,5 @@ There is a certain question that VCs, entrepreneurs and people who have gone ind
 
 Get this short newsletter once a week
 
-[Sign up now](https://sachinsnotes.substack.com/subscribe?)
+[Sign up now](https://summerlightning.substack.com/subscribe?)
 

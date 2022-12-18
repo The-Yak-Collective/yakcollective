@@ -2,7 +2,7 @@
 title: "#15 Ode to Freeway Exits"
 date: 2022-01-23 23:43:16.000000000 Z
 layout: post-external
-original_link: https://sachinsnotes.substack.com/p/15-ode-to-freeway-exits
+original_link: https://summerlightning.substack.com/p/15-ode-to-freeway-exits
 author: 100013
 ---
 

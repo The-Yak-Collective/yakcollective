@@ -2,7 +2,7 @@
 title: "#11 Boom, Bust and Repeat"
 date: 2020-10-08 15:21:28.000000000 Z
 layout: post-external
-original_link: https://sachinsnotes.substack.com/p/11-boom-bust-and-repeat
+original_link: https://summerlightning.substack.com/p/11-boom-bust-and-repeat
 author: 100013
 ---
 

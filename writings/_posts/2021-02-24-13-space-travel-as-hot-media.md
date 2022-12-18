@@ -2,7 +2,7 @@
 title: "#13 Space Travel as Hot Media"
 date: 2021-02-24 06:08:11.000000000 Z
 layout: post-external
-original_link: https://sachinsnotes.substack.com/p/13-space-travel-as-hot-media
+original_link: https://summerlightning.substack.com/p/13-space-travel-as-hot-media
 author: 100013
 ---
 

@@ -2,13 +2,13 @@
 title: "#10 The loss of narrative momentum"
 date: 2020-06-28 19:54:36.000000000 Z
 layout: post-external
-original_link: https://sachinsnotes.substack.com/p/10-the-loss-of-narrative-momentum
+original_link: https://summerlightning.substack.com/p/10-the-loss-of-narrative-momentum
 author: 100013
 ---
 
 _Greetings to all readers. This is a newsletter by [Sachin Benny](https://twitter.com/SachinB91)that explores emerging narratives during the quarantine era. Sign up to receive weekly emails here. If you catch me not publishing a newsletter every week I’ll venmo you $25._
 
-[Subscribe now](https://sachinsnotes.substack.com/subscribe?)
+[Subscribe now](https://summerlightning.substack.com/subscribe?)
 
 > _Life grows when a temporary falling out is a transition to a more extensive balance of the energies of the organism with those of the conditions under which it lives_ - John Dewey, Art As Experience
 

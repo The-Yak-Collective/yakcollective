@@ -2,7 +2,7 @@
 title: "#5 I got a Zoom haircut"
 date: 2020-04-19 00:54:10.000000000 Z
 layout: post-external
-original_link: https://sachinsnotes.substack.com/p/i-got-a-zoom-haircut
+original_link: https://summerlightning.substack.com/p/i-got-a-zoom-haircut
 author: 100013
 ---
 

@@ -2,7 +2,7 @@
 title: "#8 Unlearning Total Work"
 date: 2020-05-11 00:53:36.000000000 Z
 layout: post-external
-original_link: https://sachinsnotes.substack.com/p/7-unlearning-total-work
+original_link: https://summerlightning.substack.com/p/7-unlearning-total-work
 author: 100013
 ---
 

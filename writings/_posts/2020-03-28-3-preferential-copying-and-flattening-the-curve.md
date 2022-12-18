@@ -2,7 +2,7 @@
 title: "#3 Preferential copying and flattening the curve"
 date: 2020-03-28 17:31:58.000000000 Z
 layout: post-external
-original_link: https://sachinsnotes.substack.com/p/preferential-copying-and-flattening
+original_link: https://summerlightning.substack.com/p/preferential-copying-and-flattening
 author: 100013
 ---
 
@@ -70,5 +70,5 @@ I guess I have to end with some declarative statement so I’ll end with - Plato
 
 If you enjoyed reading this, sign up and share with others
 
-[Sign up now](https://sachinsnotes.substack.com/subscribe?)
+[Sign up now](https://summerlightning.substack.com/subscribe?)
 

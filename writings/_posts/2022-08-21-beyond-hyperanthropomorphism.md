@@ -6,6 +6,8 @@ original_link: https://studio.ribbonfarm.com/p/beyond-hyperanthropomorphism
 author: 100041
 ---
 
+_This research note is part of the [Mediocre Computing](https://studio.ribbonfarm.com/p/mediocre-computing) series_
+
 One of the things that makes me an outlier in today’s technology scene is that I cannot even begin to understand or empathize with mindsets capable of being scared of AI and robots in a special way. I sincerely believe their fears are strictly nonsensical in a philosophical sense, in the same sense that I consider fear of ghosts or going to hell in an “afterlife” to be strictly nonsensical. Since I often state this position (and not always politely, I’m afraid) and walk away from many AI conversations, I decided to document at least a skeleton version of my argument. One that grants the AI-fear view the _most_ generous and substantial interpretation I can manage.
 
 Let me state upfront that I share in _normal_ sorts of fears about AI-based technologies that apply to all kinds of technologies. Bridges can collapse, nuclear weapons can end the world, and chemical pollution can destabilize ecosystems. In that category of fears, we can include: killer robots and drones can kill more efficiently than guns and Hellfire missiles, disembodied AIs might misdiagnose X-rays, over-the-air autopilot updates might brick entire fleets of Teslas causing big pile-ups, and trading algorithms might cause billions in losses through poorly judged trades. Criticisms of the effects of existing social media platforms that rely on AI algorithms fall within these boundaries as well.

@@ -2,7 +2,7 @@
 title: "#9  The home goes brrrr..."
 date: 2020-06-12 03:34:38.000000000 Z
 layout: post-external
-original_link: https://sachinsnotes.substack.com/p/8-the-home-goes-brrrr
+original_link: https://summerlightning.substack.com/p/8-the-home-goes-brrrr
 author: 100013
 ---
 

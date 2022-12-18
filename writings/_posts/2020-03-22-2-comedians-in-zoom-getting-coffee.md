@@ -2,7 +2,7 @@
 title: "#2 Comedians in Zoom getting coffee"
 date: 2020-03-22 00:13:04.000000000 Z
 layout: post-external
-original_link: https://sachinsnotes.substack.com/p/comedians-in-zoom-getting-coffee
+original_link: https://summerlightning.substack.com/p/comedians-in-zoom-getting-coffee
 author: 100013
 ---
 

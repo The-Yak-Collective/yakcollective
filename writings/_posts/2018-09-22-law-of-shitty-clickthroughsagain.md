@@ -2,7 +2,7 @@
 title: Law of shitty clickthroughs..again
 date: 2018-09-22 17:28:05.000000000 Z
 layout: post-external
-original_link: https://sachinsnotes.substack.com/p/coming-soon
+original_link: https://summerlightning.substack.com/p/coming-soon
 author: 100013
 ---
 

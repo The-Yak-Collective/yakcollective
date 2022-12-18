@@ -2,7 +2,7 @@
 title: "#12 Just in time society"
 date: 2021-02-22 00:23:57.000000000 Z
 layout: post-external
-original_link: https://sachinsnotes.substack.com/p/12-just-in-time-society
+original_link: https://summerlightning.substack.com/p/12-just-in-time-society
 author: 100013
 ---
 

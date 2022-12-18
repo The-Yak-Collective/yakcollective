@@ -2,7 +2,7 @@
 title: Someone's cracked the cultural code
 date: 2018-11-01 02:17:39.000000000 Z
 layout: post-external
-original_link: https://sachinsnotes.substack.com/p/someones-cracked-the-cultural-code
+original_link: https://summerlightning.substack.com/p/someones-cracked-the-cultural-code
 author: 100013
 ---
 

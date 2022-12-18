@@ -6,7 +6,7 @@ original_link: https://blog.randylubin.com/gaming-like-it-s-1926
 author: 100074
 ---
 
-![](https://blog.randylubin.com/images/1926-game-jam-logo-rockwell.png)
+![](/images/1926-game-jam-logo-rockwell.png)
 
 It’s a new year and that means a new round of works entering the public domain!
 

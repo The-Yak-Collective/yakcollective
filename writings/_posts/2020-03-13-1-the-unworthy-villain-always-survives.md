@@ -2,7 +2,7 @@
 title: "#1 The unworthy villain always survives"
 date: 2020-03-13 01:43:26.000000000 Z
 layout: post-external
-original_link: https://sachinsnotes.substack.com/p/the-unworthy-villain-always-survives
+original_link: https://summerlightning.substack.com/p/the-unworthy-villain-always-survives
 author: 100013
 ---
 

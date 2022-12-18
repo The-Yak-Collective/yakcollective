@@ -2,7 +2,7 @@
 title: "#7 Brave New Reboot"
 date: 2020-05-03 17:16:02.000000000 Z
 layout: post-external
-original_link: https://sachinsnotes.substack.com/p/brave-new-reboot
+original_link: https://summerlightning.substack.com/p/brave-new-reboot
 author: 100013
 ---
 
@@ -77,5 +77,5 @@ The bottom-left is where you end up if your expertise or asset no longer has the
 
 We are also seeing a huge shift into below the API gig economy [from people who were unlucky to be caught in a situation](https://www.cnn.com/2020/04/26/us/gig-workers-informal-jobs-coronavirus/index.html)where their current business model became irrelevant overnight. Without re-skilling and without fixed assets to put to use in other ways, there would be more people and businesses in invisible markets governed by algorithms over the next 6-18 months.
 
-[Sign up now](https://sachinsnotes.substack.com/subscribe?)
+[Sign up now](https://summerlightning.substack.com/subscribe?)
 

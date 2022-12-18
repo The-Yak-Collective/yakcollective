@@ -1,1 +1,1 @@
-Check out @100007’s new post, “TryHackMe: Complete Beginner (Supplements) &amp; Exploiting Log4j” — https://cardboard-iguana.com/log/2022-01-02-tryhackme-complete-beginner-supplements-and-exploiting-log4j.html
+Check out @necopinus’s new post, “TryHackMe: Complete Beginner (Supplements) &amp; Exploiting Log4j” — https://cardboard-iguana.com/log/2022-01-02-tryhackme-complete-beginner-supplements-and-exploiting-log4j.html

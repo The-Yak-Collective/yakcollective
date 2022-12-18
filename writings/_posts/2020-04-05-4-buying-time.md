@@ -2,7 +2,7 @@
 title: "#4 Buying time"
 date: 2020-04-05 23:39:31.000000000 Z
 layout: post-external
-original_link: https://sachinsnotes.substack.com/p/buying-time
+original_link: https://summerlightning.substack.com/p/buying-time
 author: 100013
 ---
 
@@ -28,5 +28,5 @@ Here are a few curated links that I hope will help orient yourself for the futur
 
 4. [Economic Carnage](https://www.rationally-exuberant.com/blog-1/economic-carnage) - The businesses that will be destroyed and the ones that will be accelerated 
 
-[Sign up now](https://sachinsnotes.substack.com/subscribe?)
+[Sign up now](https://summerlightning.substack.com/subscribe?)
 

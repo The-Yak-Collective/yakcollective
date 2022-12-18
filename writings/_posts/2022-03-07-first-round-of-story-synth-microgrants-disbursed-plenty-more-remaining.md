@@ -12,4 +12,5 @@ I’m holding office hours this Wednesday (March 9th) from 5-6pm PST and the gra
 
 We’ll be accepting more applicants throughout the spring until all $30,000 is disbursed. If you’re interested, learn more and apply here: [https://www.bigbadcon.com/story-synth-microgrants/](https://www.bigbadcon.com/story-synth-microgrants/ "https://www.bigbadcon.com/story-synth-microgrants/")
 
-![](https://blog.randylubin.com/images/story-synth-and-big-bad-con-microgrant-banner.png)
+![](/images/story-synth-and-big-bad-con-microgrant-banner.png)
+
