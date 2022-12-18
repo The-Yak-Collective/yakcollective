@@ -3,7 +3,7 @@ title: The Yak Online Governance Primer
 date: 2022-02-02 00:00:00
 type: Whitepaper
 sequence: covid-19
-hero_image: /projects/yak-online-governance-primer/yak-online-governance-primer-banner.jpg
+hero_image: /projects/yak-online-governance-primer/yak-online-governance-primer-banner.webp
 page_headers: |
   <style type="text/css">
     #yak-online-governance-primer-hero .hero {
@@ -89,7 +89,7 @@ The studies in our first year led us to develop a shared map of the territory. T
 
 The 2x2 diagram that results suggests that there are four relatively distinct regimes of online governance, which we have dubbed *Hobbesian*, *Gaia*, *Muddler*, and *Citadel*.
 
-{% include widget-image.html layout="center" image="/projects/yak-online-governance-primer/yak-online-governance-primer-2x2.jpg" alt="The Four Online Governance Regimes" caption="The Four Online Governance Regimes" %}
+{% include widget-image.html layout="center" image="/projects/yak-online-governance-primer/yak-online-governance-primer-2x2.webp" alt="The Four Online Governance Regimes" caption="The Four Online Governance Regimes" %}
 
 In the following sections we discuss each of the four regimes in turn, roughly in order of strength of governance forces:
 
@@ -110,7 +110,7 @@ The Hobbesian governance regime is personified by the archetype of the anarch, e
 
 Hobbesian groups tend to be relatively low in energy and cohesion. As a result, a functional Hobbesian regime takes time to build and faces many risks along the way. One major risk is of individuals being isolated, scapegoated, and persecuted. Junger himself was persecuted by both the Allies and Nazis through World War II.
 
-{% include widget-image.html layout="left" image="/projects/yak-online-governance-primer/yak-online-governance-primer-2x2-hobbesian.jpg" alt="Hobbesian Regimes: Wild and Low Alignment" caption="Hobbesian Regimes: Wild and Low Alignment" %}
+{% include widget-image.html layout="left" image="/projects/yak-online-governance-primer/yak-online-governance-primer-2x2-hobbesian.webp" alt="Hobbesian Regimes: Wild and Low Alignment" caption="Hobbesian Regimes: Wild and Low Alignment" %}
 
 Early in its history, a wild and low alignment governance regime has to solve for *trust* and *common knowledge*. *Trust* is generally low among individuals who are suspicious of prevailing ideologies and exhibit an inclination towards doing their own research. *Common knowledge* <a href="#02" id="02top">[2]</a> is needed for a governance regime to be functional and Hobbesian regimes typically suffer from a strong deficit.
 
@@ -140,7 +140,7 @@ Gaia, the Greek goddess who personified the Earth, also personifies the fifteen 
 
 The overarching governance question in a Gaia regime is this: will the strong tendency toward organic coevolution make the organization resistant to any form of designed structure, even when it improves functioning or addresses possibly fatal weaknesses? In contrast to the Hobbesian regime, which shares the basic suspicion of formal structure, the presence of high alignment makes different outcomes possible.
 
-{% include widget-image.html layout="right" image="/projects/yak-online-governance-primer/yak-online-governance-primer-2x2-gaia.jpg" alt="Gaia Regimes: Wild and High Alignment" caption="Gaia Regimes: Wild and High Alignment" %}
+{% include widget-image.html layout="right" image="/projects/yak-online-governance-primer/yak-online-governance-primer-2x2-gaia.webp" alt="Gaia Regimes: Wild and High Alignment" caption="Gaia Regimes: Wild and High Alignment" %}
 
 It is important to understand the distaste for designed structures that drives organizations in the Gaia quadrant. Ivan Illich, arguably a Gaian philosopher, exhibited a particularly refined form of this distaste. Illich’s work was marked by a tension between progressive, libertarian, and anarchist impulses.
 
@@ -174,7 +174,7 @@ The Muddler governance regime represents a condition of shared and commonly ackn
 
 When a group sees itself as *ordinary people muddling through in ignorance*, doing their mediocre best rather than as *Chosen Ones constructing a utopia*, things are seen in realistic proportions. The seven readings of this section help foster and anchor the attitudes necessary to govern in the Muddler regime.
 
-{% include widget-image.html layout="left" image="/projects/yak-online-governance-primer/yak-online-governance-primer-2x2-muddler.jpg" alt="Muddler Regimes: Managed and Low Alignment" caption="Muddler Regimes: Managed and Low Alignment" %}
+{% include widget-image.html layout="left" image="/projects/yak-online-governance-primer/yak-online-governance-primer-2x2-muddler.webp" alt="Muddler Regimes: Managed and Low Alignment" caption="Muddler Regimes: Managed and Low Alignment" %}
 
 The quadrant label comes from Charles Lindblom’s 1959 article, *The Science of Muddling Through* <a href="#27" id="27top">[27]</a>. In it, Lindblom identifies the method of successive approximations (which bears a strong resemblance to modern agile management methods) as a characteristic of successful organizations. The muddling-through organization is the opposite of the efficient, machine-like organization. Frederick Laloux <a href="#28" id="28top">[28]</a> characterizes this condition in terms of loosened optimality criteria, and heightened appreciation for the benefits of “fatter” unoptimized systems. An example can be found in the interview with Tobi Lüttke, founder of Shopify <a href="#29" id="29top">[29]</a>. The key is understanding the organization as a complex system, and being non-deterministically in harmony with, and attuned to, what’s going on. But this posture must also be oriented toward a purpose, and resist simply surrendering to the system’s natural evolutionary tendencies.
 
@@ -198,7 +198,7 @@ The sixteen readings in this section revolve around organizations that are usual
 
 Platforms and ecosystems are ubiquitous today, but are still confusing even for their participants. An ecosystem can be defined as “a dynamic group of largely independent economic players that create products or services that together constitute a coherent solution” <a href="#20" id="20top">[20]</a>. The significant questions in the Citadel quadrant revolve around why and how exactly these independent players can collaborate, what keeps them together, and how their products and services compete.
 
-{% include widget-image.html layout="right" image="/projects/yak-online-governance-primer/yak-online-governance-primer-2x2-citadel.jpg" alt="Citadel Regimes: Managed and High Alignment" caption="Citadel Regimes: Managed and High Alignment" %}
+{% include widget-image.html layout="right" image="/projects/yak-online-governance-primer/yak-online-governance-primer-2x2-citadel.webp" alt="Citadel Regimes: Managed and High Alignment" caption="Citadel Regimes: Managed and High Alignment" %}
 
 One of the problems most platform builders face is that intuitions developed while running a traditional organization frequently fails them. For example, hoarding power and value is often adaptive in traditional organizations but can drive platforms to failure. Intelligent ways to distribute power and value can be hard to discover.
 

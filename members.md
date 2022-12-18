@@ -21,7 +21,7 @@ _Members: Update your profile anytime in the [Yak Member Portal](https://yak.kna
 			Output member card HTML.
 		{% endcomment %}
 		<a href="{{ member_url }}" class="dib tc lh-copy w4 ma3 pa3 ba member-box" id="{{ member_id }}">
-			<img class="w3 h3 br-100 ba image-border" src="/members/{{ member_id }}.jpg" alt="{{ professional_name }}" />
+			<img class="w3 h3 br-100 ba image-border" src="/members/{{ member_id }}.webp" alt="{{ professional_name }}" />
 
 			{% comment %}
 				Member "professional" name. The `pseudo-link` class is

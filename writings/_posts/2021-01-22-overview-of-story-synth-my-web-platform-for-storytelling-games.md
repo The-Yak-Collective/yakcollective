@@ -9,7 +9,7 @@ original_link: https://blog.randylubin.com/story-synth-overview
 
 A few months back I launched Story Synth, a web platform for designing, playing, and sharing prompt-driven storytelling games. I’m loving how it’s shaping up and hope to continue expanding it for years to come. This post covers the past, present, and future of the platform.
 
-![](/images/screen-shot-2021-01-22-at-8-58-21-am.png)
+![](https://blog.randylubin.com/images/screen-shot-2021-01-22-at-8-58-21-am.png)
 
 Quick links:
 
@@ -30,7 +30,7 @@ One side effect of pandemic social distancing is that it’s become difficult to
 
 I’d looked into online tabletop tools like Roll20, Tabletopia, and Virtual Tabletop Simulator, but they all suffered from steep learning curves, tedious asset pipelines (getting content into the platform), and they optimized for much more complex games than I was envisioning (e.g. board games, games with miniatures on a map). With no good tool at hand, I decided to create my own platform, specifically geared toward lightweight prompt driven games.
 
-![](/images/screen-shot-2021-01-22-at-8-56-54-am.png)
+![](https://blog.randylubin.com/images/screen-shot-2021-01-22-at-8-56-54-am.png)
 
 I built the Story Synth platform to initially support [Dawn of the Monster Invasion](https://storysynth.org), which became my [Golden Cobra](http://goldencobra.org/) submission. Soon after finishing the game, I launched the Story Synth platform to the public so that other designers could create games through it. The game + platform ended up winning the Golden Cobra prize for Best New Tool which was a nice honor!
 
@@ -48,15 +48,15 @@ My roadmap for the platform keeps growing and my guess is that I’ll be happy w
 
 Designers create new games by adding their content to a Google Sheet. There are [templates](https://docs.storysynth.org/guide/formats.html) available for a variety of game formats, most of which involve different ways of presenting prompts to the players (Ex: For the Queen, A Quiet Year).
 
-![](/images/screen-shot-2021-01-22-at-9-09-09-am.png)
+![](https://blog.randylubin.com/images/screen-shot-2021-01-22-at-9-09-09-am.png)
 
 After crafting their game in the sheet, Designers can paste a link to that sheet into the Story Synth homepage. The app then uses the sheet data to automatically assemble the game.
 
-![](/images/screen-shot-2021-01-22-at-9-10-41-am.png)
+![](https://blog.randylubin.com/images/screen-shot-2021-01-22-at-9-10-41-am.png)
 
 The designer then has access to a page for their game that lets them generate new sessions. The game page isn’t automatically shared anywhere but the designer can distribute the link as broadly as they like. When in a game session, everyone at the same URL sees the same content in realtime, which makes it easy to play online.
 
-![](/images/screen-shot-2021-01-22-at-9-11-33-am.png)
+![](https://blog.randylubin.com/images/screen-shot-2021-01-22-at-9-11-33-am.png)
 
 From there, designers can iterate on their game as easily as updating their sheet and refreshing their webpage.
 

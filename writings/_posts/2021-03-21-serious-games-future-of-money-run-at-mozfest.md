@@ -11,7 +11,7 @@ Over the past two weeks we’ve run a game about the Future of Money at Mozilla�
 
 This post will give an overview of the game and provide some insight into the design choices we made.
 
-![](/images/mozfest-fom-1.png)
+![](https://blog.randylubin.com/images/mozfest-fom-1.png)
 
 ## The Design Goal
 
@@ -31,7 +31,7 @@ After batting around a bunch of ideas, we settled on a game set in a cyberpunk d
 
 ## The Game
 
-![](/images/screen-shot-2021-03-18-at-1-16-10-pm.png)
+![](https://blog.randylubin.com/images/screen-shot-2021-03-18-at-1-16-10-pm.png)
 
 ### The Setting
 
@@ -55,7 +55,7 @@ The game took place over three rounds that span a broad swath of time. In the fi
 
 Over the course of the game, players engaged in a variety of activities but one main one was crafting interventions for their faction. In each of the first two rounds, each faction had to develop two main ways their faction was going to influence the city and further their aims. See our example intervention below:
 
-![](/images/screen-shot-2021-03-21-at-7-15-50-pm.png)
+![](https://blog.randylubin.com/images/screen-shot-2021-03-21-at-7-15-50-pm.png)
 
 Interventions would be collaboratively authored by the players in breakout groups and then shared to the entire session at the end of each round. Then, the game facilitators would evaluate the interventions and update the state of the game for the following round.
 
@@ -65,7 +65,7 @@ In the final round of the game, players drafted plans and speeches to promote th
 
 ## The Platform
 
-![](/images/2021-03-18-13_26_53-mozfest2021-_-spatialchat.png)
+![](https://blog.randylubin.com/images/2021-03-18-13_26_53-mozfest2021-_-spatialchat.png)
 
 We ran the game on [Spatial Chat](https://spatial.chat/) – an online event space where players appear in small circles that can move around the room and you can hear people who are close to you but audio fades with distance.
 
@@ -100,13 +100,13 @@ Much of the game involved players brainstorming and pitching interventions. We d
 
 ### Game state
 
-![](/images/screen-shot-2021-03-21-at-8-23-11-pm.png)
+![](https://blog.randylubin.com/images/screen-shot-2021-03-21-at-8-23-11-pm.png)
 
 The game state was relatively light for this game, compared to some of our other designs.
 
 We tracked the relative market share / transaction volume of the different currencies over the course of the game which was driven by the facilitator interpretations of the player interventions. That way players had a quick feedback loop for how their actions were affecting the world.
 
-![](/images/screen-shot-2021-03-21-at-8-25-25-pm.png)
+![](https://blog.randylubin.com/images/screen-shot-2021-03-21-at-8-25-25-pm.png)
 
 We also had gauges that tracked city residents’ sentiment around happiness, trust, and hope. And we had qualitative tracking of the state of the MegaCorp and also factions’ goals which we would update each round.
 

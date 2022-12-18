@@ -9,7 +9,7 @@ original_link: https://blog.randylubin.com/san-bruno-mountain
 
 After ten years of living in SF, I finally made it up to the summit of San Bruno Mountain.
 
-![](/images/san-bruno-summit.png)
+![](https://blog.randylubin.com/images/san-bruno-summit.png)
 
 San Bruno Mountain is near the southern border of San Francisco and it separates the city from South San Francisco and Colma. It was a clear day and we had fantastic views from the top – we could a sweeping panorama that included downtown SF, Oakland and easy bay, Mount Diablo, and a good chunk of south bay. The western half of SF and much of Daly City and Colma were shrouded in fog but that just added to the view.
 

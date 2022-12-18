@@ -4,10 +4,10 @@ date: 2021-03-28 00:00:00
 tagline: Mars rovers for everybody
 type: Program
 sequence: covid-19
-hero_image: /projects/yak-rover/yak-rover.jpg
+hero_image: /projects/yak-rover/yak-rover.webp
 page_css: /projects/yak-rover/yak-rover.css
 summary: |
-  <img src="/projects/yak-rover/yak-rover.jpg" alt="Yak Rover" />
+  <img src="/projects/yak-rover/yak-rover.webp" alt="Yak Rover" />
 
   The Yak Rover project is an effort by the Yak Collective to create an open-source rover design capable of actually being deployed on Mars by 2031. We are betting that radically declining launch costs, and increasingly capable infrastructure on Mars and the Moon (such as shared communications relay or charging facilities) could open up the possibility of an open-source space program based on low-cost rovers. 
 

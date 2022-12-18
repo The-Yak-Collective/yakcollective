@@ -39,7 +39,7 @@ We explored a variety of worldbuilding approaches and knew that we wanted player
 - Non-health trends: climate change, justice and human rights, economy
 - Health trends: health technology, health access, and health engagement
 
-![6 magazine covers of different futures, focused on economic, health, climate, and justice trends](/images/2020-12-15.png)
+![6 magazine covers of different futures, focused on economic, health, climate, and justice trends](https://blog.randylubin.com/images/2020-12-15.png)
 
 We had the players then choose one trend from each group to be clearly negative; these trends would play a key role in influencing the rest of play. We presented the trends to the players via fake magazine covers, which Jason did a phenomenal job designing!
 

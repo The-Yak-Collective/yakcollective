@@ -20,8 +20,8 @@ I think this is a really cool approach to interactive storytelling I’m keen to
 
 – Prompting more storytelling on the part of the reader through both open ended and pointed questions. Single-player rpgs and larps have been exploring this space for a bit and I think there could be a cool hybrid approach with a GPT-2 algorithm
 
-![](/images/2834e7177557f4bb76de978677c9ae61f086df11db9f1bf70ef778b3c08176df.png)
+![](https://blog.randylubin.com/images/2834e7177557f4bb76de978677c9ae61f086df11db9f1bf70ef778b3c08176df.png)
 
-![](/images/dae24b57199f2a1a55f48113db5c11cd2b0a603bcd47f95e42d3e2f31ffd006a.png)
+![](https://blog.randylubin.com/images/dae24b57199f2a1a55f48113db5c11cd2b0a603bcd47f95e42d3e2f31ffd006a.png)
 
-![](/images/7defff1ba0c5e9991321e72de643ed4506293e030a2342e7ec73c6174e73385f.png)
+![](https://blog.randylubin.com/images/7defff1ba0c5e9991321e72de643ed4506293e030a2342e7ec73c6174e73385f.png)

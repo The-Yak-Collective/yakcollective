@@ -4,7 +4,7 @@ date: 2020-06-10 00:00:00
 tagline: Rediscovering the home as a production frontier
 type: Report
 sequence: covid-19
-hero_image: /projects/the-new-old-home/the-new-old-home.jpg
+hero_image: /projects/the-new-old-home/the-new-old-home.webp
 page_css: /projects/the-new-old-home/the-new-old-home.css
 summary: |
   The Yak Collective's second report, _The New Old Home_, offers 22 perspectives built around Pamela Hobart's central thesis: as work returns to the home in the form of remote work opportunities (a trend now dramatically accelerated by pandemic circumstances), we can turn to historical modes of integrated living, reconsidered in light of newer technology, to guide our attempts at co-located life and work. 
@@ -44,7 +44,7 @@ credits:
 			</div>
 		</figure>
 		<figcaption class="yak-content">
-			<p><a href="the-new-old-home/the-new-old-home-2020-10-28.pdf"><img class="h1" src="../img/pdf.png" alt="Download PDF"> Download PDF</a></p>
+			<p><a href="the-new-old-home/the-new-old-home-2020-10-28.pdf"><img class="h1" src="../img/pdf.webp" alt="Download PDF"> Download PDF</a></p>
 		</figcaption>
 	</div></div>
 </div>
@@ -53,11 +53,11 @@ credits:
 	<div class="box-interior"><div>
 		<figure class="ma0">
 			<div class="pdf-slideshow relative">
-				<a href="the-new-old-home/the-new-old-home-2020-10-28.pdf" class="silent-link"><img src="the-new-old-home/the-new-old-home-2020-10-28.jpg" title="The New Old Home" class="w-100 h-100 absolute top-0 left-0 ba bw2"></a>
+				<a href="the-new-old-home/the-new-old-home-2020-10-28.pdf" class="silent-link"><img src="the-new-old-home/the-new-old-home-2020-10-28.webp" title="The New Old Home" class="w-100 h-100 absolute top-0 left-0 ba bw2"></a>
 			</div>
 		</figure>
 		<figcaption class="yak-content">
-			<p><a href="the-new-old-home/the-new-old-home-2020-10-28.pdf"><img class="h1" src="../img/pdf.png" alt="Download PDF"> Download PDF</a></p>
+			<p><a href="the-new-old-home/the-new-old-home-2020-10-28.pdf"><img class="h1" src="../img/pdf.webp" alt="Download PDF"> Download PDF</a></p>
 		</figcaption>
 	</div></div>
 </div>

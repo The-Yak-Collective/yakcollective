@@ -1,6 +1,6 @@
 ---
 date: 2020-11-20 00:00:00
-hero_image: /projects/astonishing-stories/out-of-the-loop.jpg
+hero_image: /projects/astonishing-stories/out-of-the-loop.webp
 hero_attach_vertical: center
 hero_attach_horizontal: center
 author: 100013

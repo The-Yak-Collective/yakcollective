@@ -1,6 +1,6 @@
 ---
 date: 2020-10-23 00:00:00
-hero_image: /projects/astonishing-stories/wholeness-in-a-timeless-activity.jpg
+hero_image: /projects/astonishing-stories/wholeness-in-a-timeless-activity.webp
 hero_attach_vertical: top
 hero_attach_horizontal: center
 author: 100015

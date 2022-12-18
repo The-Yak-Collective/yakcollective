@@ -1,6 +1,6 @@
 ---
 date: 2020-11-13 00:00:00
-hero_image: /projects/astonishing-stories/mechanical-turks-all-the-way-down.jpg
+hero_image: /projects/astonishing-stories/mechanical-turks-all-the-way-down.webp
 hero_attach_vertical: center
 hero_attach_horizontal: center
 author: 100006

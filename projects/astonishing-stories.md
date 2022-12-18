@@ -5,7 +5,7 @@ tagline: Weird is part of the job
 roam_page: https://roamresearch.com/#/app/Astonishing_Stories/page/5x1kRx_Fx
 type: Zine
 sequence: covid-19
-hero_image: /projects/astonishing-stories/astonishing-stories.jpg
+hero_image: /projects/astonishing-stories/astonishing-stories.webp
 page_css: /projects/astonishing-stories/astonishing-stories.css
 summary: |
   The upside of an extremely uncertain environment is that we have been free to indulge in pure speculation about the known knowns and unknown unknowns of the future. The result is Astonishing Stories, an anthology of short vignettes from the future developed from the networked thoughts of over 30 indie consultants.

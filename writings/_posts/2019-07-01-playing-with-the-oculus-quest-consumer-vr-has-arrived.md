@@ -8,7 +8,7 @@ original_link: https://blog.randylubin.com/post/185970463618/playing-with-the-oc
 
 I recently bought the new [Oculus Quest](https://amzn.to/2J1aZXK) VR headset and it’s incredibly impressive. I’m convinced that this will be the year that consumer VR goes mainstream and I suspect the Quest will be the smash hit this holiday season. The surge of new adopters will lead to more startups and investment in VR content kicking off a positive feedback loop drawing in new customers and content creators.
 
-![](/images/d2874622cc524942adfb75c5fb74b812b6a7beb3f6f33ebe0780170c7c59eece.png)
+![](https://blog.randylubin.com/images/d2874622cc524942adfb75c5fb74b812b6a7beb3f6f33ebe0780170c7c59eece.png)
 
 I’ve been playing around with VR for years and while I’ve always believed in its potential there were very real drawbacks preventing wide spread adoption:
 

@@ -9,7 +9,7 @@ original_link: https://blog.randylubin.com/prerendering-vue-for-story-synth-unfu
 
 This weekend I went down a bit of a rabbit hole trying to get social media unfurls to work properly for specific games in Story Synth (which is built in Vue.js). In the end, I got it working but I had to make tweaks up and down the stack to get there. Warning - this will be fairly technical and in the weeds but if someone else shares this problem hopefully it saves them some time!
 
-![Around the Realm unfurl, showing the game's logo](/images/screen-shot-2021-02-07-at-8-22-04-am.png "The final unfurl for Around the Realm")
+![Around the Realm unfurl, showing the game's logo](https://blog.randylubin.com/images/screen-shot-2021-02-07-at-8-22-04-am.png "The final unfurl for Around the Realm")
 
 ## The Problem
 
@@ -17,7 +17,7 @@ Social media unfurls are when sites like Twitter or Facebook as well as messagin
 
 Unfurls are based on a page’s metadata – you can make your own by adding the [relevant meta tags](https://css-tricks.com/essential-meta-tags-social-media/) to your page’s head. When I first built Story Synth, I added an image and description for the site and it shows up on any Story Synth link.
 
-![An unfurl of a link to Story Synth homepage, showing the Story Synth logo](/images/screen-shot-2021-02-07-at-8-19-44-am.png "A generic Story Synth unfurl")
+![An unfurl of a link to Story Synth homepage, showing the Story Synth logo](https://blog.randylubin.com/images/screen-shot-2021-02-07-at-8-19-44-am.png "A generic Story Synth unfurl")
 
 This looks good enough for the homepage but I want specific games to have their own unfurls with the cover image for the game. Without that customization, all Story Synth links look the same at a glance.
 

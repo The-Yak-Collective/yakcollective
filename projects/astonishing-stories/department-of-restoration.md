@@ -1,6 +1,6 @@
 ---
 date: 2020-11-06 00:00:00
-hero_image: /projects/astonishing-stories/department-of-restoration.jpg
+hero_image: /projects/astonishing-stories/department-of-restoration.webp
 hero_attach_vertical: center
 hero_attach_horizontal: center
 author: 100022

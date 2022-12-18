@@ -53,7 +53,7 @@
   "description": {{ site.description | jsonify }},
   "home_page_url": "__SITE_BASE_URL__",
   "feed_url": "__SITE_BASE_URL__/{{ page.path }}",
-  "favicon": "__SITE_BASE_URL__/img/favicon.png",
+  "favicon": "__SITE_BASE_URL__/img/favicon.webp",
 
   {% comment %}
     We do the "Daring Fireball" thing here and link to the original

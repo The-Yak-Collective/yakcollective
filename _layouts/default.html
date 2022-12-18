@@ -16,7 +16,7 @@
 		<meta name="twitter:site" content="@yak_collective">
 		<meta name="viewport" content="width=device-width">
 		<meta property="og:type" content="article" />
-		<link rel="icon" href="/img/favicon.png" />
+		<link rel="icon" href="/img/favicon.webp" />
 
 		{% comment %}
 			If an RSS feed exists at `/the/current/path/feed.xml` or any
@@ -209,7 +209,7 @@
 			on.
 		{% endcomment %}
 		{% assign page_author = "yak_collective" %}
-		{% assign page_image ="__SITE_BASE_URL__/img/yak-og.jpg" %}
+		{% assign page_image ="__SITE_BASE_URL__/img/yak-og.webp" %}
 		{% if page.author %}
 			{% assign member = site.data.knack_yaks.records | find: "field_101_raw", page.author %} 
 			{% if member %}
@@ -217,14 +217,14 @@
 				{% if twitter != empty %}
 					{% assign page_author = twitter %}
 				{% endif %}
-				{% assign page_image = "__SITE_BASE_URL__/members/" | append: page.author | append: "-og.jpg" %}
+				{% assign page_image = "__SITE_BASE_URL__/members/" | append: page.author | append: "-og.webp" %}
 			{% endif %}
 		{% elsif page.field_101_raw %}
 			{% assign twitter = page.field_43_raw | strip %}
 			{% if twitter != empty %}
 				{% assign page_author = twitter %}
 			{% endif %}
-			{% assign page_image = "__SITE_BASE_URL__/members/" | append: page.author | append: "-og.jpg" %}
+			{% assign page_image = "__SITE_BASE_URL__/members/" | append: page.author | append: "-og.webp" %}
 		{% endif %}
 		{% if page.hero_image %}
 			{% assign page_image = page.hero_image | prepend: "__SITE_BASE_URL__" %}

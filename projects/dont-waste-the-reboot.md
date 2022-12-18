@@ -4,7 +4,7 @@ date: 2020-04-30 00:00:00
 tagline: Making the next normal better than the last one
 type: Report
 sequence: covid-19
-hero_image: /projects/dont-waste-the-reboot/dont-waste-the-reboot.jpg
+hero_image: /projects/dont-waste-the-reboot/dont-waste-the-reboot.webp
 page_css: /projects/dont-waste-the-reboot/dont-waste-the-reboot.css
 summary: |
   The inaugural report by the Yak Collective, _Don't Waste the Reboot_ offers organizations a smorgasbord of 25 creative and unexpected provocations, ideas, and action frameworks to navigate the COVID-19 crisis.
@@ -46,7 +46,7 @@ credits:
 			</div>
 		</figure>
 		<figcaption class="yak-content">
-			<p><a href="dont-waste-the-reboot/dont-waste-the-reboot-2020-10-28.pdf"><img class="h1" src="../img/pdf.png" alt="Download PDF"> Download PDF</a></p>
+			<p><a href="dont-waste-the-reboot/dont-waste-the-reboot-2020-10-28.pdf"><img class="h1" src="../img/pdf.webp" alt="Download PDF"> Download PDF</a></p>
 		</figcaption>
 	</div></div>
 </div>
@@ -55,11 +55,11 @@ credits:
 	<div class="box-interior"><div>
 		<figure class="ma0">
 			<div class="pdf-slideshow relative">
-				<a href="dont-waste-the-reboot/dont-waste-the-reboot-2020-10-28.pdf" class="silent-link"><img src="dont-waste-the-reboot/dont-waste-the-reboot-2020-10-28.jpg" title="Don't Waste the Reboot" class="w-100 h-100 absolute top-0 left-0 ba bw2"></a>
+				<a href="dont-waste-the-reboot/dont-waste-the-reboot-2020-10-28.pdf" class="silent-link"><img src="dont-waste-the-reboot/dont-waste-the-reboot-2020-10-28.webp" title="Don't Waste the Reboot" class="w-100 h-100 absolute top-0 left-0 ba bw2"></a>
 			</div>
 		</figure>
 		<figcaption class="yak-content">
-			<p><a href="dont-waste-the-reboot/dont-waste-the-reboot-2020-10-28.pdf"><img class="h1" src="../img/pdf.png" alt="Download PDF"> Download PDF</a></p>
+			<p><a href="dont-waste-the-reboot/dont-waste-the-reboot-2020-10-28.pdf"><img class="h1" src="../img/pdf.webp" alt="Download PDF"> Download PDF</a></p>
 		</figcaption>
 	</div></div>
 </div>

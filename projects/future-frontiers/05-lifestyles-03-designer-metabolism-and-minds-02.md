@@ -5,7 +5,7 @@ title: "Designer Metabolism and Minds"
 layout: page-project-slide
 date: 2020-12-01 00:00:00
 google_doc: "https://docs.google.com/presentation/d/1oIziqtVM878uRG-JOfrQNvGFsQWKP_S_W8cLkhQlXvA/edit#slide=id.ga2ecfa2280_1_50"
-hero_image: /projects/future-frontiers/05-lifestyles-03-designer-metabolism-and-minds-02.jpg
+hero_image: /projects/future-frontiers/05-lifestyles-03-designer-metabolism-and-minds-02.webp
 hero_border: true
 hero_description: Designer metabolism and minds
 hero_caption:  |

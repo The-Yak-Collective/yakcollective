@@ -1,6 +1,6 @@
 ---
 date: 2020-10-30 00:00:00
-hero_image: /projects/astonishing-stories/your-payment-is-ready.jpg
+hero_image: /projects/astonishing-stories/your-payment-is-ready.webp
 hero_attach_vertical: center
 hero_attach_horizontal: center
 author: 100046

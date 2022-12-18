@@ -6,7 +6,7 @@ original_link: https://blog.randylubin.com/story-synth-grant-program
 author: 100074
 ---
 
-![](/images/story-synth-and-big-bad-con-microgrant-banner.png)
+![](https://blog.randylubin.com/images/story-synth-and-big-bad-con-microgrant-banner.png)
 
 I’m thrilled to announce the a new program offering microgrants for game designers to make games in Story Synth. The program is being administered by [Big Bad Con](https://www.bigbadcon.com/) and is funded by [Grant for the Web](https://www.grantfortheweb.org/) – you can find out all the details and apply by visiting [Big Bad Con’s Grant Page](https://www.bigbadcon.com/story-synth-microgrants/).
 
@@ -19,4 +19,3 @@ Grant for the Web is a fund to boost open, fair, and inclusive standards and inn
 I’m eagerly anticipating a new wave of designers making Story Synth games and I look forward to helping them in their game design journeys. I have no doubt that they’ll have creative suggestions for new features and formats, which will hopefully usher in an additional wave of creative game design.
 
 I’ll be sure to follow up here with the program’s progress and with links to the games!
-
