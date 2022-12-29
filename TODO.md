@@ -8,7 +8,7 @@
 	* [x] Script to push out the (lexical) oldest post to Discord
 	* [ ] Script to push out the (lexical) oldest tweet to Twitter
 		* Maybe use [a "native" GitHub Action](https://github.com/marketplace/actions/send-tweet-action)?
-		* I'd prefer to be able to call this via curl or a shell script though...
+		* Maybe use [twurl](https://github.com/twitter/twurl)?
 * [ ] Figure out how to build Yak-of-the-Day tweets (but leave this deactivated for now)
 	* Create a yak-of-the-day directory
 	* If today's entry isn't in the yak-of-the-day directory...
