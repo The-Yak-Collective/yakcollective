@@ -9,6 +9,7 @@
 	* [ ] Script to push out the (lexical) oldest tweet to Twitter
 		* Maybe use [a "native" GitHub Action](https://github.com/marketplace/actions/send-tweet-action)?
 		* Maybe use [twurl](https://github.com/twitter/twurl)?
+		* Maybe use [tweet.sh](https://github.com/piroor/tweet.sh)?
 * [ ] Figure out how to build Yak-of-the-Day tweets (but leave this deactivated for now)
 	* Create a yak-of-the-day directory
 	* If today's entry isn't in the yak-of-the-day directory...
