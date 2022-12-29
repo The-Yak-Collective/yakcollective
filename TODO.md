@@ -5,7 +5,10 @@
 	* [x] Move Twitter & Discord posts into staging directory IFF timestamp is later than the last run
 		* [x] Bring back the last-run timestamp!
 	* [x] Update Twitter posts to use Twitter handle or professional name
-	* [ ] Script to push out the (lexical) oldest Twitter and Discord post
+	* [x] Script to push out the (lexical) oldest post to Discord
+	* [ ] Script to push out the (lexical) oldest tweet to Twitter
+		* Maybe use [a "native" GitHub Action](https://github.com/marketplace/actions/send-tweet-action)?
+		* I'd prefer to be able to call this via curl or a shell script though...
 * [ ] Figure out how to build Yak-of-the-Day tweets (but leave this deactivated for now)
 	* Create a yak-of-the-day directory
 	* If today's entry isn't in the yak-of-the-day directory...
@@ -29,5 +32,5 @@
 	* [ ] Automatic site rebuild (daily? hourly?)
 * [ ] Deactivate IFTTT!
 * [ ] Write a script to post service usage to Discord
-  * `curl -H "Accept: application/vnd.github+json" -H "Authorization: Bearer $GITHUB_TOKEN"  https://api.github.com/orgs/${ACCOUNT_SLUG}/settings/billing/actions | jq.`
-  * `curl -H "User-Agent: MyApp $ACCOUNT_EMAIL" -H "Authorization: Bearer $NETLIFY_TOKEN" https://api.netlify.com/api/v1/${ACCOUNT_SLUG}/builds/status | jq .`
+	* `curl -H "Accept: application/vnd.github+json" -H "Authorization: Bearer $GITHUB_TOKEN"  https://api.github.com/orgs/${ACCOUNT_SLUG}/settings/billing/actions | jq.`
+	* `curl -H "User-Agent: MyApp $ACCOUNT_EMAIL" -H "Authorization: Bearer $NETLIFY_TOKEN" https://api.netlify.com/api/v1/${ACCOUNT_SLUG}/builds/status | jq .`
