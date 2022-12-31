@@ -38,8 +38,6 @@ find _site -type f \( -iname '*.html'  -o -iname '*.xml'  -o -iname '*.json' -o 
 
 # Minify: https://github.com/tdewolff/minify
 #
-# Current version: 2.12.4 (last checked 2022-10-16)
-#
 # It's too bad we need to cart this binary around as part of the repo,
 # but Netlify doesn't support installing our own tools (otherwise we'd
 # just `apt install minify`).
