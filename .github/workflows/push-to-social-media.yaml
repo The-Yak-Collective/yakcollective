@@ -24,6 +24,11 @@ jobs:
           ACCESS_TOKEN_SECRET: ${{ secrets.TWITTER_ACCESS_TOKEN_SECRET }}
         run: |
           ./_bin/push-to-twitter.sh
+      - name: Push oldest queued post to Discord
+        env:
+          DISCORD_CHANNEL_URL: ${{ secrets.DISCORD_CHANNEL_URL }}
+        run: |
+          ./_bin/push-to-discord.sh
       - name: Commit changes to repository
         run: |
           git config user.name github-actions
