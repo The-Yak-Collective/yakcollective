@@ -1,6 +1,6 @@
 # TODO
 
-* [ ] Tweet new RSS entries + push to Discord (avoid duplication)
+* [x] Tweet new RSS entries + push to Discord (avoid duplication)
 	* [x] Create Twitter & Discord posts along with blog posts
 	* [x] Move Twitter & Discord posts into staging directory IFF timestamp is later than the last run
 		* [x] Bring back the last-run timestamp!
@@ -13,8 +13,8 @@
 	* `curl -H "User-Agent: MyApp $ACCOUNT_EMAIL" -H "Authorization: Bearer $NETLIFY_TOKEN" https://api.netlify.com/api/v1/${ACCOUNT_SLUG}/builds/status | jq .`
 * [ ] Create GitHub Actions workflows
 	* [x] Tweet
-	* [ ] Pull RSS feeds
-	* [ ] Discord Push
+	* [x] Discord Push
+	* [x] Pull RSS feeds
 	* [ ] Service health check to Discord
 	* [ ] Automatic site rebuild (daily? hourly?)
 * [ ] Deactivate IFTTT!
