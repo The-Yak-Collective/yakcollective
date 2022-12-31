@@ -9,13 +9,13 @@
 	* [x] Script to push out the (lexical) oldest tweet to Twitter
 * [x] Completely remove yak-of-the-day functionality
 * [ ] Write a script to post service usage to Discord
-	* `curl -H "Accept: application/vnd.github+json" -H "Authorization: Bearer $GITHUB_TOKEN"  https://api.github.com/orgs/${ACCOUNT_SLUG}/settings/billing/actions | jq.`
-	* `curl -H "User-Agent: MyApp $ACCOUNT_EMAIL" -H "Authorization: Bearer $NETLIFY_TOKEN" https://api.netlify.com/api/v1/${ACCOUNT_SLUG}/builds/status | jq .`
+	* `curl -H "Accept: application/vnd.github+json" -H "Authorization: Bearer $GITHUB_BEARER_TOKEN"  https://api.github.com/orgs/${GITHUB_ACCOUNT_SLUG}/settings/billing/actions | jq.`
+	* `curl -H "User-Agent: MyApp $NETLIFY_ACCOUNT_EMAIL" -H "Authorization: Bearer $NETLIFY_BEARER_TOKEN" https://api.netlify.com/api/v1/${NETLIFY_ACCOUNT_SLUG}/builds/status | jq .`
 * [ ] Create GitHub Actions workflows
 	* [x] Tweet
 	* [x] Discord Push
 	* [x] Pull RSS feeds
 	* [ ] Service health check to Discord
 	* [ ] Automatic site rebuild (daily? hourly?)
-* [ ] Deactivate IFTTT!
 * [ ] Merge changes into `prod`
+* [ ] Deactivate IFTTT!
