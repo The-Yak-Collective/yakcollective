@@ -6,11 +6,6 @@ original_link: https://cardboard-iguana.com/log/2022-10-04-aws-deep-dive.html
 author: 100007
 ---
 
-# AWS Deep Dive
-
-**author:** Nathan Acks  
-**date:** 2022-10-04
-
 # Amazon API Gateway
 
 Notes about the Amazon API Gateway continue.
@@ -37,16 +32,16 @@ Setting a request parameter to “true” when defining it marks it as required,
 
 ```
 aws apigateway put-method \
---rest-api-id vaz7da96z6 \
---resource-id 6sxz2j \
---http-method GET \
---authorization-type "NONE" \
---region us-west-2 \
---request-parameters '{
-"method.request.path.foo": true,
-"method.request.querystring.bar": false,
-"method.request.header.baz": false
-}'
+	--rest-api-id vaz7da96z6 \
+	--resource-id 6sxz2j \
+	--http-method GET \
+	--authorization-type "NONE" \
+	--region us-west-2 \
+	--request-parameters '{
+	    "method.request.path.foo": true,
+	    "method.request.querystring.bar": false,
+	    "method.request.header.baz": false
+	  }'
 ```
 
 If a request model is supplied, then a “validator” can also be set up in the API Gateway and then applied to incoming parameters, though only parameters marked as required can be validated.

@@ -6,11 +6,6 @@ original_link: https://cardboard-iguana.com/log/2022-04-18-itprotv-comptia-secur
 author: 100007
 ---
 
-# ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester
-
-**author:** Nathan Acks  
-**date:** 2022-04-18
-
 # CompTIA Security+ Exam Cram
 
 Today’s reading is Chapter 28 from the Security+ Exam Cram, “Incident Investigation”.

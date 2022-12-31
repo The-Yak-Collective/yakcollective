@@ -6,11 +6,6 @@ original_link: https://cardboard-iguana.com/log/2021-10-03-tryhackme-complete-be
 author: 100007
 ---
 
-# TryHackMe: Complete Beginner
-
-**author:** Nathan Acks  
-**date:** 2021-10-03
-
 # Network Services
 
 ## Understanding NFS
@@ -36,10 +31,11 @@ Windows actually does support NFS.
 # List NFS shares.
 #
 showmount -e $SERVER_IP
+
 # Mount an NFS share.
 #
 mount -t nfs ${SERVER_IP}:${SHARE_PATH} \
-$LOCAL_MOUNT_DIR -nolock
+	$LOCAL_MOUNT_DIR -nolock
 ```
 
 All versions of NFS use port 2049 to transfer data; NFSv1 - NFSv3 also depended on the “portmapper” service running on port 111, but this requirement was removed in NFSv4.
@@ -88,7 +84,7 @@ Now we’re going to use Hydra to try to brute-force an SSH password. This looks
 
 ```
 hydra -t 4 -l $USER_NAME -P $WORDLIST \
--vV $TARGET_IP_ADDRESS ssh
+	-vV $TARGET_IP_ADDRESS ssh
 ```
 
 The -t flag specifies the number of threads (parallel connection attempts) that Hydra should make at any one time.
@@ -113,10 +109,10 @@ That said, basically this was all the same as running:
 
 ```
 SELECT Host,
-User,
-authentication_string,
-password_expired,
-account_locked
+       User,
+       authentication_string, 
+       password_expired,
+       account_locked
 FROM mysql.user\G
 ```
 

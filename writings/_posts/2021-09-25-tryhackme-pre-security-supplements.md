@@ -6,11 +6,6 @@ original_link: https://cardboard-iguana.com/log/2021-09-25-tryhackme-pre-securit
 author: 100007
 ---
 
-# TryHackMe: Pre Security (Supplements)
-
-**author:** Nathan Acks  
-**date:** 2021-09-25
-
 # Windows Event Logs
 
 ## Event Viewer
@@ -54,16 +49,19 @@ NOTE: PowerShell produces a couple of different logs which, by default, log almo
 # Get help on Get-WinEvent (calls out to Microsoft).
 #
 Get-Help Get-WinEvent
+
 # Filter event log output using the Where-Object command. This
 # apparently pipes the entire output to the Where-Object command, which
 # then scans for the appropriate field. So a bit inefficient for large
 # logs.
 #
 Get-WinEvent -LogName Application | Where-Object {
-$_.ProviderName -Match 'WLMS'
+	$_.ProviderName -Match 'WLMS'
 }
+
 # To match event IDs with Where-Object, use the slightly different form
 # `Where-Object Id -eq 100`, etc.
+
 # Use the -FilterHashtable flag. This causes the filtering to be done
 # during the call made by Get-WinEvent, and has a more straight-forward
 # syntax too. However, it only works when called against the system
@@ -74,8 +72,9 @@ $_.ProviderName -Match 'WLMS'
 # as well, which can make scripts A LOT more readable!
 #
 Get-WinEvent -FilterHashtable @{
-LogName = 'Application'; ProviderName = 'WLMS'
+	LogName = 'Application'; ProviderName = 'WLMS'
 }
+
 # To display all information about an event, pipe the output of
 # Get-WinEvent to `Format-List -Property *`
 ```
@@ -102,19 +101,19 @@ XPath is a W3C spec for identifying elements in an XML document. Microsoft suppo
 
 ```
 <Event xmls="http://schemas.microsoft.com/win/2004/08/events/event">
-<System>
-<Provider Name="WLMS" />
-<EventID Qualifiers="0">100</EventID>
-<Level>4</Level>
-<Task>0</Task>
-<Keywords>0x80000000000000</Keywords>
-<TimeCreated SystemTime="2020-12-15T01:09:08.940277500Z" />
-<EventRecordID>238</EventRecordID>
-<Channel>Application</Channel>
-<Computer>WIN-1O0UJBNP9G7</Computer>
-<Security />
-</System>
-<EventData />
+	<System>
+		<Provider Name="WLMS" />
+		<EventID Qualifiers="0">100</EventID>
+		<Level>4</Level>
+		<Task>0</Task>
+		<Keywords>0x80000000000000</Keywords>
+		<TimeCreated SystemTime="2020-12-15T01:09:08.940277500Z" />
+		<EventRecordID>238</EventRecordID>
+		<Channel>Application</Channel>
+		<Computer>WIN-1O0UJBNP9G7</Computer>
+		<Security />
+	</System>
+	<EventData />
 </Event>
 ```
 

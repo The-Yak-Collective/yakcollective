@@ -6,11 +6,6 @@ original_link: https://cardboard-iguana.com/log/2021-09-14-tryhackme-pre-securit
 author: 100007
 ---
 
-# TryHackMe: Pre Security
-
-**author:** Nathan Acks  
-**date:** 2021-09-14
-
 # Extending Your Network
 
 ## Introduction to Port Forwarding
@@ -53,20 +48,20 @@ Technically TLDs are _not_ actually the top of the domain hierarchy - that would
 
 ```
 Client
--> Recursive DNS server (local, LAN, ISP)
--> (possibly other DNS servers)
--> Root DNS server
--> TLD server (.com, etc.)
--> Authoritative DNS server (NS record)
+  -> Recursive DNS server (local, LAN, ISP)
+    -> (possibly other DNS servers)
+      -> Root DNS server
+        -> TLD server (.com, etc.)
+          -> Authoritative DNS server (NS record)
 ```
 
 What’s actually going on here is made a little bit clearer by Wikipedia’s DNS address resolution discussion. Basically, DNS records are resolve from right-to-left, with each level responsible for knowing the location of the next level’s authoritative server. So, the root DNS servers (“.”) know where to find the TLD servers, the TLD servers know where to find the (second-level) domain servers, and the (second-level) domain server knows all the DNS entries for a domain (including for its subdomains). In theory this means that all you actually need is:
 
 ```
 Client
--> Root DNS server
--> TLD server
--> Authoritative DNS server
+  -> Root DNS server
+    -> TLD server
+      -> Authoritative DNS server
 ```
 
 Everything that happens first between the client and the root DNS server is just caching to make things happen faster (if the answer to a query hasn’t expired from the cache of a recursive server, it will be provided by that server directly without making subsequent queries further up the chain).
@@ -102,12 +97,13 @@ Server: nginx/1.15.8
 Date: Fri, 09 Apr 2021 13:34:03 GMT
 Content-Type: text/html
 Content-Length: 98
+
 <html>
 <head>
-<title>TryHackMe</title>
+    <title>TryHackMe</title>
 </head>
 <body>
-Welcome To TryHackMe.com
+    Welcome To TryHackMe.com
 </body>
 </html>
 ```

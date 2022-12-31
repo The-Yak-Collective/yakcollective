@@ -6,11 +6,6 @@ original_link: https://cardboard-iguana.com/log/2022-08-17-offsec-live-pen-200.h
 author: 100007
 ---
 
-# OffSec Live: PEN-200
-
-**author:** Nathan Acks  
-**date:** 2022-08-17
-
 OffSec Live returns today after taking a week off for DEF CON.
 
 - [OffSec Live](https://www.offensive-security.com/offsec/offsec-live/)

@@ -6,11 +6,6 @@ original_link: https://cardboard-iguana.com/log/2022-03-31-tryhackme-jr-penetrat
 author: 100007
 ---
 
-# TryHackMe: Jr. Penetration Tester
-
-**author:** Nathan Acks  
-**date:** 2022-03-31
-
 # Nmap Live Host Discovery
 
 ## Subnetworks

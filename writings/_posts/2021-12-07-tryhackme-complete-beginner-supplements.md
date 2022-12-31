@@ -6,11 +6,6 @@ original_link: https://cardboard-iguana.com/log/2021-12-07-tryhackme-complete-be
 author: 100007
 ---
 
-# TryHackMe: Complete Beginner (Supplements)
-
-**author:** Nathan Acks  
-**date:** 2021-12-07
-
 # Ice
 
 [See my Ice CTF write-up.](https://cardboard-iguana.com/notes/tryhackme-ice.html)

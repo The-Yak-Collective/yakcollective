@@ -6,11 +6,6 @@ original_link: https://cardboard-iguana.com/log/2022-07-01-offsec-live-pen-200.h
 author: 100007
 ---
 
-# OffSec Live: PEN-200
-
-**author:** Nathan Acks  
-**date:** 2022-07-01
-
 Today’s session is more interactive/follow-along, which I’m not able to do because I’m not actually a PEN-200 student. But they’re having _a lot_ of technical problems, so many fewer notes than normal.
 
 - [OffSec Live](https://www.offensive-security.com/offsec/offsec-live/)

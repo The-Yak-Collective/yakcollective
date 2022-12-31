@@ -6,11 +6,6 @@ original_link: https://cardboard-iguana.com/log/2021-10-10-tryhackme-complete-be
 author: 100007
 ---
 
-# TryHackMe: Complete Beginner
-
-**author:** Nathan Acks  
-**date:** 2021-10-10
-
 # Pickle Rick
 
 [See my “Pickle Rick” CTF write-up.](https://cardboard-iguana.com/notes/tryhackme-pickle-rick.html)

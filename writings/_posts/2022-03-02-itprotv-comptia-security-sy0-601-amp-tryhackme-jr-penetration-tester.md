@@ -6,11 +6,6 @@ original_link: https://cardboard-iguana.com/log/2022-03-02-itprotv-comptia-secur
 author: 100007
 ---
 
-# ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester
-
-**author:** Nathan Acks  
-**date:** 2022-03-02
-
 # CompTIA Security+ Exam Cram
 
 ## An Introduction to Threat Actors, Vectors, and Intelligence Sources
@@ -175,9 +170,9 @@ Use ffuf to enumerate potential users based on a wordlist (assumes that the form
 
 ```
 ffuf -w /usr/share/wordlists/wfuzz/others/names.txt \
--X POST -d "$POST_VARS" \
--H "Content-Type: application/x-www-form-urlencoded" \
--u $FORM_URL -mr "$ERROR_MEESAGE_SUBSTRING"
+     -X POST -d "$POST_VARS" \
+     -H "Content-Type: application/x-www-form-urlencoded" \
+     -u $FORM_URL -mr "$ERROR_MEESAGE_SUBSTRING"
 ```
 
 Here `$POST_VARS` should look something like `username=FUZZ&email=FUZZ@example.com&password=1234&cpassword=1234` (recall that FUZZ is the variable that ffuf will be fuzzing over). The `-mr` flag instructs ffuf to filter on page text for a “successful hit”.
@@ -192,9 +187,9 @@ Ffuf can also be used as a simple brute-forcer:
 
 ```
 ffuf -w /usr/share/wordlists/wfuzz/others/names.txt:W1,$HOME/.local/share/red-team/wordlists/rockyou.txt:W2 \
--X POST -d "$POST_VARS" \
--H "Content-Type: application/x-www-form-urlencoded" \
--u $LOGIN_URL -fc 200
+     -X POST -d "$POST_VARS" \
+     -H "Content-Type: application/x-www-form-urlencoded" \
+     -u $LOGIN_URL -fc 200
 ```
 
 Here we assign W1 and W2 to take terms from the two supplied wordlists; `$POST_VARS` then looks something like `username=W1&password=W2`. This example assumes that a successful login will return an HTTP status code _other_ than 200 (probably a 301 or 302).
@@ -223,12 +218,15 @@ Remember that `basenc` can be used to encode/decode a variety of encodings, incl
 # Encode $STRING to base64.
 #
 echo "$STRING" | basenc --base64
+
 # Encode $STRING to URL-safe base64.
 #
 echo "$STRING" | basenc --base64url
+
 # Dencode $BASE64_STRING from base64.
 #
 echo "$BASE64_STRING" | basenc -d --base64
+
 # Dencode $BASE64_STRING from URL-safe base64.
 #
 echo "$BASE64_STRING" | basenc -d --base64url

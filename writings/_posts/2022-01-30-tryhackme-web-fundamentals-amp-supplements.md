@@ -6,11 +6,6 @@ original_link: https://cardboard-iguana.com/log/2022-01-30-tryhackme-web-fundame
 author: 100007
 ---
 
-# TryHackMe: Web Fundamentals & Supplements
-
-**author:** Nathan Acks  
-**date:** 2022-01-30
-
 # Tools’R’us
 
 [See my Tools’R’us CTF write-up.](https://cardboard-iguana.com/notes/tryhackme-tools-r-us.html)

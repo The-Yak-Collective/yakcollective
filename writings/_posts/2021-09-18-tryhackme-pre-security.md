@@ -6,11 +6,6 @@ original_link: https://cardboard-iguana.com/log/2021-09-18-tryhackme-pre-securit
 author: 100007
 ---
 
-# TryHackMe: Pre Security
-
-**author:** Nathan Acks  
-**date:** 2021-09-18
-
 # System Configuration
 
 The Tools tab of msconfig.exe can be quite useful, as it provides full pats to various Windows system utilities (in the “Selected command” line).

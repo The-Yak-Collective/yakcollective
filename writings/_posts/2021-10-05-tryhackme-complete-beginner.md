@@ -6,11 +6,6 @@ original_link: https://cardboard-iguana.com/log/2021-10-05-tryhackme-complete-be
 author: 100007
 ---
 
-# TryHackMe: Complete Beginner
-
-**author:** Nathan Acks  
-**date:** 2021-10-05
-
 # OWASP Top 10
 
 ## (Severity 01) Injection

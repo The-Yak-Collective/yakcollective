@@ -6,11 +6,6 @@ original_link: https://cardboard-iguana.com/log/2022-04-19-itprotv-comptia-secur
 author: 100007
 ---
 
-# ITPro.TV: CompTIA Security+ (SY0-601)
-
-**author:** Nathan Acks  
-**date:** 2022-04-19
-
 # CompTIA Security+ Exam Cram
 
 Today’s reading is Chapters 27 and 29, “Incident Response” and “Incident Mitigation”, from the Security+ Exam Cram.

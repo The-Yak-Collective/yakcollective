@@ -6,11 +6,6 @@ original_link: https://cardboard-iguana.com/log/2022-02-20-cardboard-iguana-secu
 author: 100007
 ---
 
-# Cardboard Iguana Security is Live!
-
-**author:** Nathan Acks  
-**date:** 2022-02-20
-
 Up until now there actually hasn’t _been_ a Cardboard Iguana Security website. All of those posts before this one? Just me, writing to myself.
 
 All that changes today though, because Cardboard Iguana Security is (finally) live!
@@ -58,12 +53,16 @@ I sync Obsidian to a private repo on GitHub, and then use GitHub Actions to push
 ```
 mkdir _repos
 cd _repos
+
 git clone https://necopinus:$PERSONAL_ACCESS_TOKEN@github.com/necopinus/cardboard-iguana.com
 cd cardboard-iguana.com
+
 git config user.name "GitHub Action"
 git config user.email "github.actions@cardboard-iguana.com"
+
 chmod +x .bin/update-website.sh
 ./.bin/update-website.sh
+
 git add -A -v
 git commit -m "Refreshed website content" || true
 git push
@@ -75,23 +74,26 @@ Pushing out to the other two websites is done in a similar fashion.
 
 ```
 #!/usr/bin/env bash
+
 CWD="$(pwd)"
 REPO_DIR="$(basename "$CWD")"
 REPO_PARENT_DIR="$(basename "$(dirname "$CWD")")"
+
 if [["$REPO_DIR" == "cardboard-iguana.com"]] && \
-[["$REPO_PARENT_DIR" == "_repos"]] && \
-[[-d ../../cardboard-iguana.com]]; then
-find . -mindepth 1 \
--maxdepth 1 \
--not -iname '.bin' \
--not -iname '.git' \
--not -iname '.gitignore' \
--not -iname '_config.yml' \
--exec rm -rf "{}" \;
-cp -rf ../../cardboard-iguana.com/* .
+   [["$REPO_PARENT_DIR" == "_repos"]] && \
+   [[-d ../../cardboard-iguana.com]]; then
+	find . -mindepth 1 \
+	       -maxdepth 1 \
+	       -not -iname '.bin' \
+	       -not -iname '.git' \
+	       -not -iname '.gitignore' \
+	       -not -iname '_config.yml' \
+	       -exec rm -rf "{}" \;
+
+	cp -rf ../../cardboard-iguana.com/* .
 else
-echo "Unexpected execution directory"
-exit 1
+	echo "Unexpected execution directory"
+	exit 1
 fi
 ```
 
@@ -99,25 +101,29 @@ Commits into the website public repo trigger a build in Fleek. The build kicks o
 
 ```
 #!/usr/bin/env bash
+
 # Check to make sure that we're running in the repository root.
 #
 if [[! -f _config.yml || ! -d .bin]]; then
-echo "This script must be run from the repository root!"
-exit 1
+	echo "This script must be run from the repository root!"
+	exit 1
 fi
+
 # Remove old _theme directory, if it exists
 #
 [[-d _theme]] && rm --recursive --force _theme
+
 # Clone the theme and copy relevant files into the main repository.
 #
 git clone https://github.com/necopinus/website-theme.git _theme
 rm -f _theme/README.md _theme/LICENSE
 find _theme -mindepth 1 \
--maxdepth 1 \
--not -iname '.*' \
--exec basename "{}" \; | xargs rm -rf
+            -maxdepth 1 \
+            -not -iname '.*' \
+            -exec basename "{}" \; | xargs rm -rf
 mv _theme/* .
 rm -rf _theme
+
 # Build website.
 #
 ./_build/html.sh
@@ -127,44 +133,50 @@ rm -rf _theme
 
 ```
 #!/usr/bin/env bash
+
 # Check to make sure that we're running in the repository
 # root.
 #
 if [[! -f _config.yml || ! -d .bin]]; then
-echo "This script must be run from the repository root!"
-exit 1
+	echo "This script must be run from the repository root!"
+	exit 1
 fi
+
 # Clean destination directory.
 #
 [[-d _site]] && rm -rf _site
+
 # Build the site using either system Jekyll (assume that
 # our environment has installed the necessary gems
 # automatically) or via bundler.
 #
 if [[-n "$(which jekyll)"]]; then
-jekyll build --profile || exit 4
+	jekyll build --profile || exit 4
 elif [[-n "$(which bundle)"]]; then
-bundle config set path vendor/bundle || exit 8
-bundle install || exit 3
-bundle exec jekyll build --profile || exit 16
+	bundle config set path vendor/bundle || exit 8
+	bundle install || exit 3
+	bundle exec jekyll build --profile || exit 16
 else
-echo "Cannot find Bundler, and Jekyll does not seem to be installed."
-exit 32
+	echo "Cannot find Bundler, and Jekyll does not seem to be installed."
+	exit 32
 fi
+
 # Wrap tables in a div in order to make them scrollable
 # (without breaking accessibility).
 #
 find _site -type f \
--iname '*.html' \
--exec sed -i -e 's#<table>#<div class="table-wrapper"><table>#g;s#</table>#</table></div>#g' "{}" \;
+           -iname '*.html' \
+           -exec sed -i -e 's#<table>#<div class="table-wrapper"><table>#g;s#</table>#</table></div>#g' "{}" \;
+
 # Make all URLs relative (required for most web3 hosting
 # solutions).
 #
 npm install
 (
-cd _site
-../node_modules/.bin/all-relative
+	cd _site
+	../node_modules/.bin/all-relative
 )
+
 # Minify: https://github.com/tdewolff/minify
 #
 # Current version: 2.9.22 (last checked 2021-11-14)
@@ -177,11 +189,11 @@ chmod +x _build/minify
 cp -rf _site _site.original
 rm -rf _site/*
 (
-cd _site.original
-../_build/minify --all \
---recursive \
---sync \
---output ../_site .
+	cd _site.original
+	../_build/minify --all \
+	                 --recursive \
+	                 --sync \
+	                 --output ../_site .
 )
 rm -rf _site.original
 ```

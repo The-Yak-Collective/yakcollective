@@ -6,11 +6,6 @@ original_link: https://cardboard-iguana.com/log/2022-06-05-aws-deep-dive.html
 author: 100007
 ---
 
-# AWS Deep Dive
-
-**author:** Nathan Acks  
-**date:** 2022-06-05
-
 It’s been a while, hasn’t it?
 
 I’d originally intended to spend May wrapping up “supplemental” TryHackMe room’s I’d been making note of while studying for the Security+ exam. But then I started a new job and wound up spending much of the time I had been using for my studies bringing myself up to speed instead.

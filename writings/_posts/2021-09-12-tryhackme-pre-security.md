@@ -6,11 +6,6 @@ original_link: https://cardboard-iguana.com/log/2021-09-12-tryhackme-pre-securit
 author: 100007
 ---
 
-# TryHackMe: Pre Security
-
-**author:** Nathan Acks  
-**date:** 2021-09-12
-
 # What is Networking?
 
 ## Identifying Devices on a Network

@@ -6,11 +6,6 @@ original_link: https://cardboard-iguana.com/log/2022-03-29-itprotv-comptia-secur
 author: 100007
 ---
 
-# ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester
-
-**author:** Nathan Acks  
-**date:** 2022-03-29
-
 # ITPro.TV: CompTIA Security+ (SY0-601)
 
 ## Network Security - Segmentation
@@ -129,6 +124,7 @@ WHOIS responses include name server information (in the aptly-named “Name Serv
 # nslookup command syntax; only $DOMAIN is required
 #
 nslookup -type=$QUERY_TYPE $DOMAIN $NAME_SERVER
+
 # Examples
 #
 nslookup -type=A microsoft.com 8.8.8.8
@@ -142,6 +138,7 @@ nslookup -type=MX google.com
 # dig command syntax; only $DOMAIN is required
 #
 dig @$NAME_SERVER $DOMAIN $QUERY_TYPE
+
 # Examples
 #
 dig @8.8.8.8 microsoft.com A

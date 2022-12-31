@@ -6,11 +6,6 @@ original_link: https://cardboard-iguana.com/log/2021-11-21-tryhackme-complete-be
 author: 100007
 ---
 
-# TryHackMe: Complete Beginner (Supplements)
-
-**author:** Nathan Acks  
-**date:** 2021-11-21
-
 # MAL: Researching
 
 ## Online Sandboxing
@@ -28,6 +23,7 @@ Calculating file hashes with PowerShell!
 # Using CertUtil
 #
 CertUtil -hashfile $FILE_PATH $ALGORITHM
+
 # Using Get-FileHash
 #
 Get-FileHash -Algorithm $ALGORITHM $FILE_PATH

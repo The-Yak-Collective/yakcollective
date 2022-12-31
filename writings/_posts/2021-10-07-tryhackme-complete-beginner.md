@@ -6,11 +6,6 @@ original_link: https://cardboard-iguana.com/log/2021-10-07-tryhackme-complete-be
 author: 100007
 ---
 
-# TryHackMe: Complete Beginner
-
-**author:** Nathan Acks  
-**date:** 2021-10-07
-
 # OWASP Top 10
 
 ## (Severity 09) Components With Known Vulnerabilities
@@ -41,7 +36,7 @@ The best way to defend against these attacks is to simply sanitize strings by ex
 
 ```
 $sanitized_string =
-str_replace(chr(0), '', $original_string);
+	str_replace(chr(0), '', $original_string);
 ```
 
 [Defend the Web has a much better description of what’s going on here than the one offered by TryHackMe.](https://defendtheweb.net/article/common-php-attacks-poison-null-byte)

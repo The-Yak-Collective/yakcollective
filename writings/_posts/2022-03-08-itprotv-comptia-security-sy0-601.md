@@ -6,11 +6,6 @@ original_link: https://cardboard-iguana.com/log/2022-03-08-itprotv-comptia-secur
 author: 100007
 ---
 
-# ITPro.TV: CompTIA Security+ (SY0-601)
-
-**author:** Nathan Acks  
-**date:** 2022-03-08
-
 # CompTIA Security+ Exam Cram
 
 Today I’ll be reading chapter 23 of the Exam Cram, “Identity and Account Management Controls”.

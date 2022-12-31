@@ -6,11 +6,6 @@ original_link: https://cardboard-iguana.com/log/2021-10-04-tryhackme-complete-be
 author: 100007
 ---
 
-# TryHackMe: Complete Beginner
-
-**author:** Nathan Acks  
-**date:** 2021-10-04
-
 # Burp Suite
 
 ## Installation

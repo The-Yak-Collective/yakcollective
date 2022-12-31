@@ -6,11 +6,6 @@ original_link: https://cardboard-iguana.com/log/2022-06-23-aws-deep-dive.html
 author: 100007
 ---
 
-# AWS Deep Dive
-
-**author:** Nathan Acks  
-**date:** 2022-06-23
-
 # Deep Dive on Amazon S3 Security and Management
 
 [AWS re:Invent 2018: Deep Dive on Amazon S3 Security and Management (YouTube)](https://youtu.be/x25FSsXrBqU)

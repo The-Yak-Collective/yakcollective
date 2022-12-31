@@ -6,11 +6,6 @@ original_link: https://cardboard-iguana.com/log/2022-01-26-tryhackme-web-fundame
 author: 100007
 ---
 
-# TryHackMe: Web Fundamentals
-
-**author:** Nathan Acks  
-**date:** 2022-01-26
-
 # Avengers Blog
 
 ## SQL Injection

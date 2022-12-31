@@ -6,11 +6,6 @@ original_link: https://cardboard-iguana.com/log/2022-04-04-itprotv-comptia-secur
 author: 100007
 ---
 
-# ITPro.TV: CompTIA Security+ (SY0-601)
-
-**author:** Nathan Acks  
-**date:** 2022-04-04
-
 # Virtualization
 
 Type I hypervisors (bare metal) are most common in business applications. And Qubes. Cloud systems are obviously all based around Type I hypervisors.

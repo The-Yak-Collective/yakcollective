@@ -6,11 +6,6 @@ original_link: https://cardboard-iguana.com/log/2022-07-27-offsec-live-pen-200.h
 author: 100007
 ---
 
-# OffSec Live: PEN-200
-
-**author:** Nathan Acks  
-**date:** 2022-07-27
-
 OffSec Live has apparently moved to Zoom. 😕
 
 (It’s definitely a smoother experience as a viewer, but the chat is more limited and I miss being able to throw it up on the TV.)

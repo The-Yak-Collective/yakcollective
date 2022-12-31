@@ -6,11 +6,6 @@ original_link: https://cardboard-iguana.com/log/2021-12-14-tryhackme-complete-be
 author: 100007
 ---
 
-# TryHackMe: Complete Beginner (Supplements)
-
-**author:** Nathan Acks  
-**date:** 2021-12-14
-
 # Overpass 2: Hacked
 
 [See my Overpass 2: Hacked CTF write-up.](https://cardboard-iguana.com/notes/tryhackme-overpass-2-hacked.html)

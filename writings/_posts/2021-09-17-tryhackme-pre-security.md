@@ -6,11 +6,6 @@ original_link: https://cardboard-iguana.com/log/2021-09-17-tryhackme-pre-securit
 author: 100007
 ---
 
-# TryHackMe: Pre Security
-
-**author:** Nathan Acks  
-**date:** 2021-09-17
-
 # The File System
 
 NTFS stands for the “New Technology File System”. _Very_ old versions of Windows NT (_before_ FAT32) used HPFS (the “High Performance File System”).

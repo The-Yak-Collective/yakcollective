@@ -6,11 +6,6 @@ original_link: https://cardboard-iguana.com/log/2022-02-02-tryhackme-web-fundame
 author: 100007
 ---
 
-# TryHackMe: Web Fundamentals (Supplements)
-
-**author:** Nathan Acks  
-**date:** 2022-02-02
-
 # Game Zone
 
 ## Obtain Access via SQLi

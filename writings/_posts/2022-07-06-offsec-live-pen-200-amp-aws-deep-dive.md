@@ -6,11 +6,6 @@ original_link: https://cardboard-iguana.com/log/2022-07-06-offsec-live-pen-200-a
 author: 100007
 ---
 
-# OffSec Live: PEN-200 & AWS Deep Dive
-
-**author:** Nathan Acks  
-**date:** 2022-07-06
-
 Another entry written in two parts. As before, the OffSec Live class notes were in the morning and the “AWS Cloud Practitioner Essentials” notes are from the evening.
 
 - [OffSec Live](https://www.offensive-security.com/offsec/offsec-live/)

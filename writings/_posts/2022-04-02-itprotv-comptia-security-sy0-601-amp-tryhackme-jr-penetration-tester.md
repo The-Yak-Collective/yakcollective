@@ -6,11 +6,6 @@ original_link: https://cardboard-iguana.com/log/2022-04-02-itprotv-comptia-secur
 author: 100007
 ---
 
-# ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester
-
-**author:** Nathan Acks  
-**date:** 2022-04-02
-
 # CompTIA Security+ Exam Cram
 
 Today I’ll be covering Chapter 22 of the Security+ Exam Cram, “Cloud Cybersecurity Solutions”.
@@ -336,6 +331,7 @@ To: "To Address" <toaddress@host2.tld>
 From: "From Address" <fromaddress@host1.tld>
 Subject: An Email
 This is content.
+
 Here is another line.
 .
 QUIT
@@ -399,11 +395,12 @@ DoT = DNS-over-TLS
 # Generic Hydra invocation
 #
 hydra -l $USERNAME -P $WORDLIST $SERVER $SERVICE
+
 # For example...
 #
 hydra -l john \
--P ~/.local/share/red-team/wordlists/rockyou.txt \
-10.10.10.100 ssh
+      -P ~/.local/share/red-team/wordlists/rockyou.txt \
+         10.10.10.100 ssh
 ```
 
 Additional Hydra options:

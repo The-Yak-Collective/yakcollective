@@ -6,11 +6,6 @@ original_link: https://cardboard-iguana.com/log/2022-06-28-aws-deep-dive.html
 author: 100007
 ---
 
-# AWS Deep Dive
-
-**author:** Nathan Acks  
-**date:** 2022-06-28
-
 # Amazon S3: Bucket Policies and User Policies
 
 This is an exercise in setting up cross-account bucket permissions.

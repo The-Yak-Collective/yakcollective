@@ -6,11 +6,6 @@ original_link: https://cardboard-iguana.com/log/2022-08-25-aws-deep-dive.html
 author: 100007
 ---
 
-# AWS Deep Dive
-
-**author:** Nathan Acks  
-**date:** 2022-08-25
-
 # A Serverless Journey: AWS Lambda Under the Hood
 
 [AWS re:Invent 2018: A Serverless Journey - AWS Lambda Under the Hood (YouTube)](https://youtu.be/3qln2u1Vr2E)

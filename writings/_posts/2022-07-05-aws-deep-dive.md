@@ -6,11 +6,6 @@ original_link: https://cardboard-iguana.com/log/2022-07-05-aws-deep-dive.html
 author: 100007
 ---
 
-# AWS Deep Dive
-
-**author:** Nathan Acks  
-**date:** 2022-07-05
-
 Today I’ll be starting the ~6 hour “AWS Cloud Practitioner Essentials” course as I continue to dive deeper into AWS.
 
 - [AWS Cloud Practitioner Essentials](https://www.aws.training/learningobject/curriculum?id=27076)

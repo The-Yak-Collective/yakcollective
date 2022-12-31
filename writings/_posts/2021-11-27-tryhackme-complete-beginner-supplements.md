@@ -6,11 +6,6 @@ original_link: https://cardboard-iguana.com/log/2021-11-27-tryhackme-complete-be
 author: 100007
 ---
 
-# TryHackMe: Complete Beginner (Supplements)
-
-**author:** Nathan Acks  
-**date:** 2021-11-27
-
 # Wireshark 101
 
 ## ICMP Traffic

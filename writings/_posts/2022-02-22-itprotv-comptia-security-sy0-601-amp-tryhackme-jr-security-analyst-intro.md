@@ -7,11 +7,6 @@ original_link: https://cardboard-iguana.com/log/2022-02-22-itprotv-comptia-secur
 author: 100007
 ---
 
-# ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Security Analyst Intro
-
-**author:** Nathan Acks  
-**date:** 2022-02-22
-
 (So, I didn’t get to start this yesterday as I’d planned, because I needed to take The Yak Online Governance Primer live instead!)
 
 It’s time to get down to business… Up until now, I’ve been trying to bring myself up to speed on the fundamentals. Now it’s time to actually start earning some certifications! First up: The CompTIA Security+.

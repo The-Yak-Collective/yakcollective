@@ -6,11 +6,6 @@ original_link: https://cardboard-iguana.com/log/2021-09-11-context-setting.html
 author: 100007
 ---
 
-# Context Setting
-
-**author:** Nathan Acks  
-**date:** 2021-09-11
-
 Welcome to Cardboard Iguana Security and the inaugural entry of “A Hacker’s Journal”. Which you’re probably reading retrospectively, because I’m starting this journal before I’ve actually finished putting together the Cardboard Iguana Security website.
 
 I think it’s worth context setting a bit with this first post, both for the benefit of folks reading this retrospectively (you), and for myself (to set my own expectations).

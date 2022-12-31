@@ -6,11 +6,6 @@ original_link: https://cardboard-iguana.com/log/2021-11-16-tryhackme-complete-be
 author: 100007
 ---
 
-# TryHackMe: Complete Beginner (Supplements)
-
-**author:** Nathan Acks  
-**date:** 2021-11-16
-
 # Volatility
 
 ## Examining Our Patient

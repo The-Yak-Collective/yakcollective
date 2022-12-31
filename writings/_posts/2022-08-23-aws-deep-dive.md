@@ -6,11 +6,6 @@ original_link: https://cardboard-iguana.com/log/2022-08-23-aws-deep-dive.html
 author: 100007
 ---
 
-# AWS Deep Dive
-
-**author:** Nathan Acks  
-**date:** 2022-08-23
-
 # DNS Demystified: Amazon Route 53
 
 [AWS re:Invent 2016: DNS Demystified - Amazon Route 53 (YouTube)](https://youtu.be/UP7wDBjZ37o)

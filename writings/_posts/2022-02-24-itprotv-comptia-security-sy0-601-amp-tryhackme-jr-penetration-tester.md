@@ -6,11 +6,6 @@ original_link: https://cardboard-iguana.com/log/2022-02-24-itprotv-comptia-secur
 author: 100007
 ---
 
-# ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester
-
-**author:** Nathan Acks  
-**date:** 2022-02-24
-
 # CompTIA Security+ Exam Cram
 
 ## Password Attacks

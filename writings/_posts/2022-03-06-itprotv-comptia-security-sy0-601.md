@@ -6,11 +6,6 @@ original_link: https://cardboard-iguana.com/log/2022-03-06-itprotv-comptia-secur
 author: 100007
 ---
 
-# ITPro.TV: CompTIA Security+ (SY0-601)
-
-**author:** Nathan Acks  
-**date:** 2022-03-06
-
 # CompTIA Security+ Exam Cram
 
 Today I’m going to be reading through chapters 17 (Secure Protocols) and 25 (Public Key Infrastructure) of the CompTIA Security+ Exam Cram.

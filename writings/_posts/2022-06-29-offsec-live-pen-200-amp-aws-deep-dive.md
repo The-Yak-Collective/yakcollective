@@ -6,11 +6,6 @@ original_link: https://cardboard-iguana.com/log/2022-06-29-offsec-live-pen-200-a
 author: 100007
 ---
 
-# OffSec Live: PEN-200 & AWS Deep Dive
-
-**author:** Nathan Acks  
-**date:** 2022-06-29
-
 This entry was actually written over the course of most of the day, as the next session of Offensive Security’s free streaming “OffSec Live” class was in the morning and I worked on the “AWS Deep Drive” learning path in the evening.
 
 - [OffSec Live](https://www.offensive-security.com/offsec/offsec-live/)
@@ -28,6 +23,7 @@ This entry was actually written over the course of most of the day, as the next 
 # -v Increase verbosity (connection status, etc.)
 #
 nc -nv $IP $PORT
+
 # Use netcat to scan for open ports (slow, TCP-only).
 #
 # -z Try to connect to all TCP ports, and report which are open

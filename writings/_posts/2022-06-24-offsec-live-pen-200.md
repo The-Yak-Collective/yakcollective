@@ -6,11 +6,6 @@ original_link: https://cardboard-iguana.com/log/2022-06-24-offsec-live-pen-200.h
 author: 100007
 ---
 
-# OffSec Live: PEN-200
-
-**author:** Nathan Acks  
-**date:** 2022-06-24
-
 While I don’t think I’m quite ready yet to take a crack at the OSCP, Offensive Security’s free streaming classes (“OffSec Live”) seem like too good of a deal to pass up. I wasn’t able to catch the first because I was traveling, but I’ll be watching (and taking notes on) as many other sections as I can moving forward.
 
 - [PEN-200](https://www.offensive-security.com/pwk-oscp/)
@@ -34,6 +29,7 @@ I always forget that redirects work both ways:
 # Redirect dmesg to an external file.
 #
 dmesg > boot.log
+
 # Push boot.log into cat, and output with line numbers.
 #
 cat -n < boot.log
@@ -49,6 +45,7 @@ Line A
 Line B
 Line C
 EOF
+
 # Also, redirect "heredoc" into a file.
 #
 cat << EOF > file.txt

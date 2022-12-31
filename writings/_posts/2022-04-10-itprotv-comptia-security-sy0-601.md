@@ -6,11 +6,6 @@ original_link: https://cardboard-iguana.com/log/2022-04-10-itprotv-comptia-secur
 author: 100007
 ---
 
-# ITPro.TV: CompTIA Security+ (SY0-601)
-
-**author:** Nathan Acks  
-**date:** 2022-04-10
-
 # CompTIA Security+ Exam Cram
 
 Today I’ll be covering Chapters 7 and 8 of the Security+ Exam Cram, “Security Assessment Techniques” and “Penetration Testing Techniques”.
@@ -99,9 +94,11 @@ Interesting tools:
 # Start dumping packets observed on interface $IFACE.
 #
 tcpdump -i $IFACE
+
 # Dump packets observed on interface $IFACE to pcap file $PCAP_FILE.
 #
 tcpdump -i $IFACE -w ${PCAP_FILE}.pcap
+
 # Replay packets from $PCAP_FILE.
 #
 tcpreplay -i $IFACE ${PCAP_FILE}.pcap

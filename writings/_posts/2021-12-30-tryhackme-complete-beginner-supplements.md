@@ -6,11 +6,6 @@ original_link: https://cardboard-iguana.com/log/2021-12-30-tryhackme-complete-be
 author: 100007
 ---
 
-# TryHackMe: Complete Beginner (Supplements)
-
-**author:** Nathan Acks  
-**date:** 2021-12-30
-
 # Attacktive Directory
 
 [See my Attacktive Directory CTF write-up.](https://cardboard-iguana.com/notes/tryhackme-attacktive-directory.html)

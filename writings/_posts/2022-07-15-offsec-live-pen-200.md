@@ -6,11 +6,6 @@ original_link: https://cardboard-iguana.com/log/2022-07-15-offsec-live-pen-200.h
 author: 100007
 ---
 
-# OffSec Live: PEN-200
-
-**author:** Nathan Acks  
-**date:** 2022-07-15
-
 Today we’ll be focusing on _passive_ information gathering (which should really be the _first_ thing you do).
 
 The big conceptual difference between “active” and “passive” information gathering is whether your activity “looks normal” to the defenders. So, browsing a website is passive (though it’s not _strictly_ so), as is using third-party tools that would _not_ alert the defenders (so Shodan, Google, and Netcraft are passive, but online port scanners are not).

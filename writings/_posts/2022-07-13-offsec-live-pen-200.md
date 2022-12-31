@@ -6,11 +6,6 @@ original_link: https://cardboard-iguana.com/log/2022-07-13-offsec-live-pen-200.h
 author: 100007
 ---
 
-# OffSec Live: PEN-200
-
-**author:** Nathan Acks  
-**date:** 2022-07-13
-
 - [OffSec Live](https://www.offensive-security.com/offsec/offsec-live/)
 - [OffSecOfficial Twitch Channel](https://www.twitch.tv/offsecofficial)
 

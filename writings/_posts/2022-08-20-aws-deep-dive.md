@@ -6,11 +6,6 @@ original_link: https://cardboard-iguana.com/log/2022-08-20-aws-deep-dive.html
 author: 100007
 ---
 
-# AWS Deep Dive
-
-**author:** Nathan Acks  
-**date:** 2022-08-20
-
 # Amazon VPC: Security at the Speed of Light
 
 [AWS re:Invent 2018: Amazon VPC - Security at the Speed of Light (YouTube)](https://youtu.be/uhXalpNzPU4)

@@ -6,11 +6,6 @@ original_link: https://cardboard-iguana.com/log/2022-02-28-itprotv-comptia-secur
 author: 100007
 ---
 
-# ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester
-
-**author:** Nathan Acks  
-**date:** 2022-02-28
-
 # CompTIA Security+ Exam Cram
 
 ## Weak Configurations
@@ -163,8 +158,8 @@ The dnsrecon tool actually allows us to (attempt) to brute force subdomains from
 
 ```
 dnsrecon --type brt \
---domain $DOMAIN \
---dictionary /usr/share/wordlists/metasploit/namelist.txt
+         --domain $DOMAIN \
+         --dictionary /usr/share/wordlists/metasploit/namelist.txt
 ```
 
 ## OSINT: Sublist3r
@@ -183,8 +178,8 @@ It turns out that ffuf can fuzz HTTP headers, which can be used to try to brute 
 
 ```
 ffuf -w /usr/share/wordlists/metasploit/namelist.txt \
--H "Host: FUZZ.$DOMAIN" \
--u https://$IP
+     -H "Host: FUZZ.$DOMAIN" \
+     -u https://$IP
 ```
 
 Use `-fs $SIZE` to remove results of a particular size from the list (which you’ll probably need to do in most cases).

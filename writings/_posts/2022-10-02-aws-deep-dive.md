@@ -6,11 +6,6 @@ original_link: https://cardboard-iguana.com/log/2022-10-02-aws-deep-dive.html
 author: 100007
 ---
 
-# AWS Deep Dive
-
-**author:** Nathan Acks  
-**date:** 2022-10-02
-
 # Amazon API Gateway
 
 More notes about the Amazon API Gateway. (In the interest of time I’m skipping the “Tutorials and Workshops” section of Amazon’s documentation, however.)

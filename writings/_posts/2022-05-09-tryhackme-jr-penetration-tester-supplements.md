@@ -6,11 +6,6 @@ original_link: https://cardboard-iguana.com/log/2022-05-09-tryhackme-jr-penetrat
 author: 100007
 ---
 
-# TryHackMe: Jr. Penetration Tester (Supplements)
-
-**author:** Nathan Acks  
-**date:** 2022-05-09
-
 With the course work for the Security+ exam out of the way, it’s time to turn back to all of the “supplements” I picked up along the way while working through the TryHackMe Jr. Penetration Tester sequence. Today:
 
 - [TryHackMe: Red Team Engagements](https://tryhackme.com/room/redteamengagements)

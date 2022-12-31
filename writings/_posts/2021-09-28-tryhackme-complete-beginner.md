@@ -6,11 +6,6 @@ original_link: https://cardboard-iguana.com/log/2021-09-28-tryhackme-complete-be
 author: 100007
 ---
 
-# TryHackMe: Complete Beginner
-
-**author:** Nathan Acks  
-**date:** 2021-09-28
-
 # NMAP
 
 Interesting (but makes sense)… Each connection a web browser makes corresponds to a different local port (so, $RANDOM\_PORT -\> 443).

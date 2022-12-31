@@ -6,11 +6,6 @@ original_link: https://cardboard-iguana.com/log/2022-04-03-tryhackme-jr-penetrat
 author: 100007
 ---
 
-# TryHackMe: Jr. Penetration Tester
-
-**author:** Nathan Acks  
-**date:** 2022-04-03
-
 # Net Sec Challenge
 
 [See my “Net Sec Challenge” write-up.](https://cardboard-iguana.com/notes/tryhackme-net-sec-challenge.html)

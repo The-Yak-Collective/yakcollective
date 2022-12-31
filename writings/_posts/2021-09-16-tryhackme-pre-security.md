@@ -6,11 +6,6 @@ original_link: https://cardboard-iguana.com/log/2021-09-16-tryhackme-pre-securit
 author: 100007
 ---
 
-# TryHackMe: Pre Security
-
-**author:** Nathan Acks  
-**date:** 2021-09-16
-
 # A Bit of Background on Linux
 
 The first release of Linux was on September 17, 1991.

@@ -8,11 +8,6 @@ author: 100007
 
 # ITPro.TV: CompTIA Security+ (SY0-601)
 
-**author:** Nathan Acks  
-**date:** 2022-03-14
-
-# ITPro.TV: CompTIA Security+ (SY0-601)
-
 ## Access Control Schemes
 
 Access control is about how authorization is actually _enforced_.

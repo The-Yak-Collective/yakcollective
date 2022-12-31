@@ -6,11 +6,6 @@ original_link: https://cardboard-iguana.com/log/2021-09-21-tryhackme-pre-securit
 author: 100007
 ---
 
-# TryHackMe: Pre Security (Supplements)
-
-**author:** Nathan Acks  
-**date:** 2021-09-21
-
 # Regular Expressions
 
 ## Metacharacters and Repetitions

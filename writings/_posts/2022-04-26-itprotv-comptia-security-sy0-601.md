@@ -6,11 +6,6 @@ original_link: https://cardboard-iguana.com/log/2022-04-26-itprotv-comptia-secur
 author: 100007
 ---
 
-# ITPro.TV: CompTIA Security+ (SY0-601)
-
-**author:** Nathan Acks  
-**date:** 2022-04-26
-
 # Security Controls
 
 “Countermeasures” are another commonly used term for “controls”.

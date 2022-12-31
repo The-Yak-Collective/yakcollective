@@ -6,11 +6,6 @@ original_link: https://cardboard-iguana.com/log/2021-11-04-tryhackme-complete-be
 author: 100007
 ---
 
-# TryHackMe: Complete Beginner
-
-**author:** Nathan Acks  
-**date:** 2021-11-04
-
 # Basic Pentesting
 
 [See my Basic Pentesting CTF write-up.](https://cardboard-iguana.com/notes/tryhackme-basic-pentesting.html)

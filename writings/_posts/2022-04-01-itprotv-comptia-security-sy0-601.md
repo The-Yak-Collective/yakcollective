@@ -6,11 +6,6 @@ original_link: https://cardboard-iguana.com/log/2022-04-01-itprotv-comptia-secur
 author: 100007
 ---
 
-# ITPro.TV: CompTIA Security+ (SY0-601)
-
-**author:** Nathan Acks  
-**date:** 2022-04-01
-
 # CompTIA Security+ Exam Cram
 
 Today I’ll be covering Chapter 14 of the Security+ Exam Cram, “Embedded and Specialized Systems”. I should really have read this before [March 27th](https://cardboard-iguana.com/log/2022-03-27-itprotv-comptia-security-plus.html).

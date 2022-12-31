@@ -7,11 +7,6 @@ original_link: https://cardboard-iguana.com/log/2022-04-28-itprotv-comptia-secur
 author: 100007
 ---
 
-# ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester (Supplements)
-
-**author:** Nathan Acks  
-**date:** 2022-04-28
-
 # ITPro.TV: CompTIA Security+ (SY0-601)
 
 ## Organizational Security Policies - Data

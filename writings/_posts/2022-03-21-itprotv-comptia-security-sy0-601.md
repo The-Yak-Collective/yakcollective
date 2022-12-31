@@ -6,11 +6,6 @@ original_link: https://cardboard-iguana.com/log/2022-03-21-itprotv-comptia-secur
 author: 100007
 ---
 
-# ITPro.TV: CompTIA Security+ (SY0-601)
-
-**author:** Nathan Acks  
-**date:** 2022-03-21
-
 # CompTIA Security+ Exam Cram
 
 Today I’ll be reading chapter 20 of the Security+ Exam Cram, “Wireless Security Settings”.

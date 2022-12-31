@@ -6,11 +6,6 @@ original_link: https://cardboard-iguana.com/log/2021-11-02-tryhackme-complete-be
 author: 100007
 ---
 
-# TryHackMe: Complete Beginner
-
-**author:** Nathan Acks  
-**date:** 2021-11-02
-
 # Linux PrivEsc
 
 ## Cron Jobs
@@ -32,8 +27,8 @@ Quick-n-dirty command to find all SUID/SGID executables.
 
 ```
 find / -type f \
--a \( -perm -u+s -o -perm -g+s \) \
--exec ls -l {} \; 2> /dev/null
+       -a \( -perm -u+s -o -perm -g+s \) \
+       -exec ls -l {} \; 2> /dev/null
 ```
 
 Quickly see what shared libraries an executable is trying to load:

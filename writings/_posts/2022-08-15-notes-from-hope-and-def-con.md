@@ -6,11 +6,6 @@ original_link: https://cardboard-iguana.com/log/2022-08-15-notes-from-hope-and-d
 author: 100007
 ---
 
-# Notes from HOPE and DEF CON
-
-**author:** Nathan Acks  
-**date:** 2022-08-15
-
 Now that both HOPE and DEF CON are behind me, I want to summarize some of my initial thoughts. This is not a “what did I learn about hacking” post, but rather musings about _attending_ these events.
 
 - [A New HOPE](https://xiv.hope.net/)

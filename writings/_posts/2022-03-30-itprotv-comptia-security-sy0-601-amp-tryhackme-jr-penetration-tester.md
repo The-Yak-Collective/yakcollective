@@ -6,11 +6,6 @@ original_link: https://cardboard-iguana.com/log/2022-03-30-itprotv-comptia-secur
 author: 100007
 ---
 
-# ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester
-
-**author:** Nathan Acks  
-**date:** 2022-03-30
-
 # CompTIA Security+ Exam Cram
 
 Today I’ll be covering Chapter 10 of the Security+ Exam Cram, “Virtualization and Cloud Computing”. I won’t be doing any ITPro.TV lectures, however, as this is the first in another long stretch of readings I want to finish before starting the next sequence there.

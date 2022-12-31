@@ -6,11 +6,6 @@ original_link: https://cardboard-iguana.com/log/2022-07-29-offsec-live-pen-200.h
 author: 100007
 ---
 
-# OffSec Live: PEN-200
-
-**author:** Nathan Acks  
-**date:** 2022-07-29
-
 Joining late, because of OS updates. It looks like we’re talking about SQL Injection today.
 
 # SQL Injection (SQLi)

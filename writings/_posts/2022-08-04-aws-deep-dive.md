@@ -6,11 +6,6 @@ original_link: https://cardboard-iguana.com/log/2022-08-04-aws-deep-dive.html
 author: 100007
 ---
 
-# AWS Deep Dive
-
-**author:** Nathan Acks  
-**date:** 2022-08-04
-
 Today I’ll be covering the “Pricing and Support” module from the “AWS Cloud Practitioner Essentials” course.
 
 - [AWS Cloud Practitioner Essentials](https://www.aws.training/learningobject/curriculum?id=27076)

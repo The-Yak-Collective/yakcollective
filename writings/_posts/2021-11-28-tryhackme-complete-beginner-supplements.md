@@ -6,11 +6,6 @@ original_link: https://cardboard-iguana.com/log/2021-11-28-tryhackme-complete-be
 author: 100007
 ---
 
-# TryHackMe: Complete Beginner (Supplements)
-
-**author:** Nathan Acks  
-**date:** 2021-11-28
-
 # Cross-Site Scripting
 
 ## Introduction
@@ -63,11 +58,11 @@ A simple JavaScript keylogger:
 
 ```
 <script type="text/javascript">
-let l = "";
-document.onkeypress = function (e) {
-l += e.key;
-console.log(l);
-}
+	let l = "";  
+	document.onkeypress = function (e) {
+		l += e.key;
+		console.log(l);
+	}
 </script>
 ```
 

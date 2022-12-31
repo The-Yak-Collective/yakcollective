@@ -6,11 +6,6 @@ original_link: https://cardboard-iguana.com/log/2022-09-19-aws-deep-dive.html
 author: 100007
 ---
 
-# AWS Deep Dive
-
-**author:** Nathan Acks  
-**date:** 2022-09-19
-
 The AWS deep dive reading notes return!
 
 # AWS IAM Policies in a Nutshell
@@ -49,7 +44,7 @@ The statement `Condition` property is an object that contains one or more condit
 
 ```
 "conditionOperator": {
-"conditionKey": "conditionValue"
+	"conditionKey": "conditionValue"
 }
 ```
 
@@ -57,7 +52,7 @@ For example:
 
 ```
 "DateGreaterThan": {
-"aws:CurrentTime": "2022-09-19T00:00:00Z"
+	"aws:CurrentTime": "2022-09-19T00:00:00Z"
 }
 ```
 

