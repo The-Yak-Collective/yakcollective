@@ -9,11 +9,11 @@
 	* [x] Script to push out the (lexical) oldest tweet to Twitter
 * [x] Completely remove yak-of-the-day functionality
 * [x] Write a script to post service usage to Discord
-* [ ] Create GitHub Actions workflows
+* [ ] Create hourly site update automation
 	* [x] Tweet
 	* [x] Discord Push
 	* [x] Pull RSS feeds
 	* [x] Service health check to Discord
-	* [ ] Automatic site rebuild (daily? hourly?)
+	* [ ] Automatic site rebuild
 * [ ] Merge changes into `prod`
 * [ ] Deactivate IFTTT!
