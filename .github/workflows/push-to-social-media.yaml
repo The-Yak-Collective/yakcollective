@@ -1,0 +1,33 @@
+name: Push to Social Media
+
+on:
+  schedule:
+    - cron: '0 */1 * * *'
+
+jobs:
+  push-to-twitter:
+    name: Push to social media
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      - name: Download dependencies
+        run: |
+          sudo apt install nkf
+      - name: Push oldest queued tweet to Twitter
+        env:
+          MY_SCREEN_NAME: yak_collective
+          MY_LANGUAGE: en
+          CONSUMER_KEY: ${{ secrets.TWITTER_CONSUMER_KEY }}
+          CONSUMER_SECRET: ${{ secrets.TWITTER_CONSUMER_SECRET }}
+          ACCESS_TOKEN: ${{ secrets.TWITTER_ACCESS_TOKEN }}
+          ACCESS_TOKEN_SECRET: ${{ secrets.TWITTER_ACCESS_TOKEN_SECRET }}
+        run: |
+          ./_bin/push-to-twitter.sh
+      - name: Commit changes to repository
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add -A -v
+          git commit -m "Pushed oldest queued tweet to Twitter" || true
+          git push

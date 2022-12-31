@@ -6,14 +6,11 @@
 		* [x] Bring back the last-run timestamp!
 	* [x] Update Twitter posts to use Twitter handle or professional name
 	* [x] Script to push out the (lexical) oldest post to Discord
-	* [ ] Script to push out the (lexical) oldest tweet to Twitter
-		* Maybe use [a "native" GitHub Action](https://github.com/marketplace/actions/send-tweet-action)?
-		* Maybe use [twurl](https://github.com/twitter/twurl)?
-		* Maybe use [tweet.sh](https://github.com/piroor/tweet.sh)?
+	* [x] Script to push out the (lexical) oldest tweet to Twitter
 * [ ] Completely remove yak-of-the-day functionality
 * [ ] Create GitHub Actions workflows
+	* [x] Tweet
 	* [ ] Pull RSS feeds
-	* [ ] Tweet
 	* [ ] Discord Push
 	* [ ] Automatic site rebuild (daily? hourly?)
 * [ ] Deactivate IFTTT!

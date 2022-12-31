@@ -12,3 +12,13 @@ fi
 # _twitter directory
 #
 POST="$(ls -1 _twitter | sort -u | head -1)"
+
+# Post file contents to Twitter and archive file if successful.
+#
+if [[ -n "$POST" ]]; then
+	export DEBUG=true
+	cat "_twitter/$POST" | ./_bin/tweet.sh post
+	if [[ $? -eq 0 ]]; then
+		rm "_twitter/$POST"
+	fi
+fi
