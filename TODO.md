@@ -7,7 +7,7 @@
 	* [x] Update Twitter posts to use Twitter handle or professional name
 	* [x] Script to push out the (lexical) oldest post to Discord
 	* [x] Script to push out the (lexical) oldest tweet to Twitter
-* [ ] Completely remove yak-of-the-day functionality
+* [x] Completely remove yak-of-the-day functionality
 * [ ] Write a script to post service usage to Discord
 	* `curl -H "Accept: application/vnd.github+json" -H "Authorization: Bearer $GITHUB_TOKEN"  https://api.github.com/orgs/${ACCOUNT_SLUG}/settings/billing/actions | jq.`
 	* `curl -H "User-Agent: MyApp $ACCOUNT_EMAIL" -H "Authorization: Bearer $NETLIFY_TOKEN" https://api.netlify.com/api/v1/${ACCOUNT_SLUG}/builds/status | jq .`
