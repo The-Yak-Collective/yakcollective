@@ -2,6 +2,12 @@
 ---
 # The Yak Collective
 
+[![YakCon 2023](img/yakcon2023.webp)](yakcon2023.html)
+
+<a href="https://lu.ma/event/evt-X4vzgzOFPUEUy7u" class="luma-checkout--button" data-luma-action="checkout" data-luma-event-id="evt-X4vzgzOFPUEUy7u" style="text-decoration: none;">Register now!</a>
+
+<script id="luma-checkout" src="https://embed.lu.ma/checkout-button.js"></script>
+
 The Yak Collective is an online space for collaborative tinkering. Here you can find an eclectic group of people working together on technology, research, writing, and art projects, and occasionally trying to make money together as well.
 
 Current experiments include: **building** open-source rovers, **crafting** experimental web infrastructures, **publishing** speculative fiction, and **studying** emerging decentralization. Learn more about us on the [About page](/about.html).
