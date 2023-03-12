@@ -15,7 +15,5 @@
 	* [x] Pull RSS feeds
 	* [x] Service health check to Discord
 	* [ ] Automatic site rebuild
-    	* [ ] Install the native Ubuntu version of minify!
-        	* [ ] Figure out how to support this in local build environments too...
 * [ ] Merge changes into `prod`
 * [ ] Deactivate IFTTT!

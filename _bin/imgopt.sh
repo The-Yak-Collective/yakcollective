@@ -1,10 +1,15 @@
 #!/usr/bin/env bash
 
-# Image optimization helper script. Expects the following packages
-# (Ubuntu) or equivalents to be installed:
+# Image optimization helper script.
+
+# Source init.
 #
-#     graphicsmagick
-#     webp
+if [[ -f ./_bin/common-init.sh ]]; then
+	source ./_bin/common-init.sh
+else
+	echo "Init file not found! Are you running from the repository root?"
+	exit 1
+fi
 
 # Parse commandline
 #

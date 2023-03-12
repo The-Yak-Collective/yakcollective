@@ -1,5 +1,14 @@
 #!/usr/bin/env bash
 
+# Source init.
+#
+if [[ -f ./_bin/common-init.sh ]]; then
+	source ./_bin/common-init.sh
+else
+	echo "Init file not found! Are you running from the repository root?"
+	exit 1
+fi
+
 # Check to make sure that we're running in the repository root.
 #
 if [[ ! -d _bin ]] || [[ ! -d _twitter ]]; then

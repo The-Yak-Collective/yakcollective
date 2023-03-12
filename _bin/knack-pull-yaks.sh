@@ -1,15 +1,5 @@
 #!/usr/bin/env bash
 
-# Software requirements:
-#
-#     bash
-#     curl
-#     jq
-#
-# These are all available in the current/default Netlify build image.
-#
-#     https://github.com/netlify/build-image/blob/focal/included_software.md
-#
 # These environment variables should also be set:
 #
 #     KNACK_APP_ID
@@ -22,6 +12,15 @@
 #
 # App ID and API KEY are available in the Knack Builder under Settings >
 # API & Code.
+
+# Source init.
+#
+if [[ -f ./_bin/common-init.sh ]]; then
+	source ./_bin/common-init.sh
+else
+	echo "Init file not found! Are you running from the repository root?"
+	exit 1
+fi
 
 # Knack can return up to 1000 rows per page. The default is 25.
 #
