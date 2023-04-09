@@ -92,8 +92,8 @@
 {% comment %}
     Loop through the `filtered_posts` array. Output top-level headings
     for month and year, changing these as post month and year changes.
-    Only output actual post content if the post author has "madeyak"
-    status.
+    Only output actual post content if the post author has
+    "yak-contributor" (`author.field_102_raw`) status.
 
     Adapted from: https://stackoverflow.com/a/19104574
 {% endcomment %}
