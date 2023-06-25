@@ -39,10 +39,4 @@ jobs:
           NETLIFY_ACCOUNT_SLUG: ${{ secrets.NETLIFY_ACCOUNT_SLUG }}
           NETLIFY_TOKEN: ${{ secrets.NETLIFY_TOKEN }}
         run: |
-          GITHUB_DATA="$(curl -H "Accept: application/vnd.github+json" -H "Authorization: Bearer $GH_ACCESS_TOKEN"  https://api.github.com/orgs/${GH_ACCOUNT_SLUG}/settings/billing/actions)"
-
-          curl -i -H "Accept: application/json" -H "Content-Type:application/json" -X POST --data "{\"content\": \"GitHub Workflow Minutes: $(echo $GITHUB_DATA | jq .total_minutes_used) / $(echo $GITHUB_DATA | jq .included_minutes)\"}" "$DISCORD_CHANNEL_URL"
-
-          NETLIFY_DATA="$(curl -H "User-Agent: MyApp $NETLIFY_ACCOUNT_EMAIL" -H "Authorization: Bearer $NETLIFY_TOKEN" https://api.netlify.com/api/v1/${NETLIFY_ACCOUNT_SLUG}/builds/status)"
-
-          curl -i -H "Accept: application/json" -H "Content-Type:application/json" -X POST --data "{\"content\": \"Netlify Build Minutes: $(echo $NETLIFY_DATA | jq .minutes.current) / $(echo $NETLIFY_DATA | jq .minutes.included_minutes)\"}" "$DISCORD_CHANNEL_URL"
+          ./_bin/stats-to-discord.sh
