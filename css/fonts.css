@@ -11,7 +11,7 @@
  * 1. Make sure you're editing `fonts-src.css`.
  * 2. Paste the CSS file generated using https://fonts.google.com/
  *    below.
- * 3. Run `mkfonts.sh`.
+ * 3. Run `./_bin/update-fonts.sh`.
  *
  */
 
