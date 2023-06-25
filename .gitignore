@@ -26,6 +26,5 @@ members/*
 _pluto/*.db
 _pluto/discord/*
 _pluto/newsletter/*
-_pluto/twitter/*
 _pluto/writings/*
 _pluto/writings.ini

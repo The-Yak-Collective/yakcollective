@@ -1,1 +1,0 @@
-Check out @necopinus’s new post, “TryHackMe: Polkit” — https://cardboard-iguana.com/log/2022-02-13-tryhackme-polkit.html

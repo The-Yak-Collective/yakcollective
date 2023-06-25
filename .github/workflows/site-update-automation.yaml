@@ -21,16 +21,6 @@ jobs:
           KNACK_OBJECT: ${{ secrets.KNACK_OBJECT }}
         run: |
           ./_bin/rss-pull-feeds.sh
-      - name: Push oldest queued tweet to Twitter
-        env:
-          MY_SCREEN_NAME: yak_collective
-          MY_LANGUAGE: en
-          CONSUMER_KEY: ${{ secrets.TWITTER_CONSUMER_KEY }}
-          CONSUMER_SECRET: ${{ secrets.TWITTER_CONSUMER_SECRET }}
-          ACCESS_TOKEN: ${{ secrets.TWITTER_ACCESS_TOKEN }}
-          ACCESS_TOKEN_SECRET: ${{ secrets.TWITTER_ACCESS_TOKEN_SECRET }}
-        run: |
-          ./_bin/push-to-twitter.sh
       - name: Push oldest queued post to Discord
         env:
           DISCORD_CHANNEL_URL: ${{ secrets.DISCORD_WEBHOOK_YAKS_AT_WORK }}
