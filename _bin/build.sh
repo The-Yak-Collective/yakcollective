@@ -54,12 +54,12 @@ find _site -type f \( -iname '*.html'  -o -iname '*.xml'  -o -iname '*.json' -o 
 # therefore be turned off when "hand optimization" like this is used.
 #
 MINIFY_BINARY="minify-$(uname -s | tr "[:upper:]" "[:lower:]")-$(uname -m)"
-if [[ -f _bin/"$MINIFY_BINARY" ]]; then
-	chmod +x _bin/"$MINIFY_BINARY"
+if [[ -f ./_bin/minify/"$MINIFY_BINARY" ]]; then
+	chmod +x ./_bin/minify/"$MINIFY_BINARY"
 	mv _site _site.original
 	(
 		cd _site.original
-		../_bin/"$MINIFY_BINARY" --all --recursive --sync --output ../_site .
+		../_bin/minify/"$MINIFY_BINARY" --all --recursive --sync --output ../_site .
 	)
 	rm -rf _site.original
 fi
