@@ -8,7 +8,7 @@
 * [x] Completely remove yak-of-the-day functionality
 * [x] Write a script to post service usage to Discord
 * [ ] Create hourly site update automation
-	* [x] Discord Push
+	* [x] Discord push
 	* [x] Pull RSS feeds
 	* [x] Service health check to Discord
 	* [ ] Automatic site rebuild
