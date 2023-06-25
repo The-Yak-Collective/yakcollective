@@ -13,13 +13,18 @@
 # App ID and API KEY are available in the Knack Builder under Settings >
 # API & Code.
 
-# Source init.
+# Source init. (But ONLY if we're not being run from common-init.sh, to
+# prevent infinite recursion.)
 #
-if [[ -f ./_bin/common-init.sh ]]; then
-	source ./_bin/common-init.sh
-else
-	echo "Init file not found! Are you running from the repository root?"
-	exit 1
+if [[ -z "$KNACK_YAK_PULL_CALLED_BY_COMMON_INIT" ]]
+	if [[ -f ./_bin/common-init.sh ]]; then
+		export COMMON_INIT_CALLED_BY_KNACK_YAK_PULL=1
+		source ./_bin/common-init.sh
+		unset COMMON_INIT_CALLED_BY_KNACK_YAK_PULL
+	else
+		echo "Init file not found! Are you running from the repository root?"
+		exit 1
+	fi
 fi
 
 # Knack can return up to 1000 rows per page. The default is 25.

@@ -95,10 +95,15 @@ if [[ ! -f .common-init ]]; then
 	fi
 	npm install
 
-	# Pull Knack data.
+	# Pull Knack data. (But ONLY if we're not being run from
+	# knack-pull-yaks.sh, to prevent infinite recursion.)
 	#
-	chmod +x _bin/knack-pull-yaks.sh
-	./_bin/knack-pull-yaks.sh
+	if [[ -z "$COMMON_INIT_CALLED_BY_KNACK_YAK_PULL" ]]; then
+		chmod +x _bin/knack-pull-yaks.sh
+		export KNACK_YAK_PULL_CALLED_BY_COMMON_INIT=1
+		./_bin/knack-pull-yaks.sh
+		unset KNACK_YAK_PULL_CALLED_BY_COMMON_INIT
+	fi
 
 	# Script run indicator.
 	#
