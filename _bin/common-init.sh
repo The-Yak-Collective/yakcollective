@@ -39,19 +39,6 @@ if [[ ! -f .common-init ]]; then
 		fi
 	fi
 
-	if [[ -z "$(which nkf)" ]]; then
-		if [[ -n "$(which brew)" ]]; then
-			brew install nkf
-		elif [[ -n "$(which apt)" ]]; then
-			sudo apt install -y nkf
-		elif [[ -n "$(which yum)" ]]; then
-			sudo yum install -y nkf
-		else
-			echo "nkf is not found and is not installable! Bailing..."
-			exit 1
-		fi
-	fi
-
 	if [[ -z "$(which gm)" ]]; then
 		if [[ -n "$(which brew)" ]]; then
 			brew install graphicsmagick

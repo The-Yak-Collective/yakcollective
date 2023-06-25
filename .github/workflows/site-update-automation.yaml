@@ -11,9 +11,6 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
-      - name: Download dependencies
-        run: |
-          sudo apt install nkf
       - name: Pull RSS feeds
         env:
           KNACK_APP_ID: ${{ secrets.KNACK_APP_ID }}
