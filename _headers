@@ -1,0 +1,6 @@
+/*
+  Content-Security-Policy: default-src 'self'; object-src 'none'; font-src 'self'; style-src 'self'; frame-ancestors 'none'; upgrade-insecure-requests; block-all-mixed-content;
+  Referrer-Policy: strict-origin
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  X-XSS-Protection: 1; mode=block
