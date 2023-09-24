@@ -16,7 +16,7 @@
 # Source init. (But ONLY if we're not being run from common-init.sh, to
 # prevent infinite recursion.)
 #
-if [[ -z "$KNACK_YAK_PULL_CALLED_BY_COMMON_INIT" ]]
+if [[ -z "$KNACK_YAK_PULL_CALLED_BY_COMMON_INIT" ]]; then
 	if [[ -f ./_bin/common-init.sh ]]; then
 		export COMMON_INIT_CALLED_BY_KNACK_YAK_PULL=1
 		source ./_bin/common-init.sh
