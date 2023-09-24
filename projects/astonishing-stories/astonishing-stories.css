@@ -49,6 +49,12 @@ h6 {
 		padding-bottom: 1rem;
 	}
 }
+#spotify-iframe {
+	border-radius: 12px;
+	width: 100%;
+	height: 352px;
+	border: none;
+}
 #agglomerizing-the-aesthetic h2,
 #your-payment-is-ready h2 {
 	font-family: "Sonsie One", "Comic Sans MS", cursive, sans-serif;
