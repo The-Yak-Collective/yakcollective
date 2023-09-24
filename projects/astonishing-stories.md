@@ -14,7 +14,7 @@ summary: |
 
   The stories here are not meant to predict the future but to be imagination extenders for entrepreneurs and consultants navigating a post-COVID landscape.
 
-  <a href="https://open.spotify.com/playlist/7o4hqg7Jo8rrz1p61V7037"><strong><i class="fab fa-spotify"></i> Listen to the accompanying Spotify playlist.</strong></a>
+  <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/7o4hqg7Jo8rrz1p61V7037" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 credits:
   lead_editors:
     - 100013
