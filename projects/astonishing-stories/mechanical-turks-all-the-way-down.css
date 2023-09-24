@@ -41,3 +41,6 @@ h6 {
 	background-position: top center;
 	background-size: cover;
 }
+#projects-astonishing-stories-mechanical-turks-all-the-way-down em code {
+	word-break: break-all;
+}

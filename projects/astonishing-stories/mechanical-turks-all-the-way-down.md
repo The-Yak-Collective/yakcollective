@@ -87,7 +87,7 @@ I got a quick reply:
 
 It left a bunch of gibberish in the chat, but then who knew:
 
-> _<code style="word-break: break-all;">eNo1zEEOgzAMRNGrzFXYsOISJJliSxAjx2ng9kWV2P//JrglCxy9BSzxRghhXugNm35ZoYF0Q/qxViRq3Rp4ZZ6BIXSi9SzvMazvBdnqZ9f8BBryB2f1x1/W8QMJXSke</code>_
+> _<code>eNo1zEEOgzAMRNGrzFXYsOISJJliSxAjx2ng9kWV2P//JrglCxy9BSzxRghhXugNm35ZoYF0Q/qxViRq3Rp4ZZ6BIXSi9SzvMazvBdnqZ9f8BBryB2f1x1/W8QMJXSke</code>_
 
 Machines are weird.
 
