@@ -73,6 +73,7 @@ kramdown:
 #
 include:
   - _redirects
+  - _headers
 exclude:
   - package.json
   - package-lock.json
