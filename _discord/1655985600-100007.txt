@@ -1,1 +1,0 @@
-AWS Deep Dive — https://cardboard-iguana.com/log/2022-06-23-aws-deep-dive.html

@@ -2,7 +2,7 @@
 title: 8 Years on the Road
 date: 2022-11-10 00:00:00.000000000 Z
 layout: post-external
-original_link: https://tomcritchlow.com/2022/11/10/8-years-on-the-road/
+original_link: https://tomcritchlow.com/2022/11/10/8-years-on-the-road-copy/
 author: 100063
 ---
 

@@ -5,7 +5,7 @@ on:
     - cron: '0 0 * * *'
 
 jobs:
-  daily-issues-to-discord:
+  force-rebuild:
     name: Force daily rebuild
     runs-on: ubuntu-latest
     steps:

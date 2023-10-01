@@ -127,6 +127,10 @@ The topics included: devices should communicate with each other more, interactio
 
 #### The Roomba is terrified of dog poop and would rather tell the meatbags to deal with it.
 
+![](https://cdn-images-1.medium.com/max/366/1*E9MNpH5eOD2Y8scHne3bVA.png)
+
+_This workshop has been shortlisted for the_ [_2023 Interaction Design Awards_](https://awards.ixda.org/blog/2023/discover-our-2023-interaction-awards-shortlist/)_._
+
 _Special thanks to the_ [_AIxDesign_](https://www.aixdesign.co/) _community for being an early guinea pig for this animistic design mapping exercise._
 
 _If you are interested in running a workshop and want some help for both in person or virtual (aka in Miro) I’m happy to provide more information and templates. Please get in contact with me via_ [_email_](mailto:chrizbo@gmail.com) _or_ [_LinkedIn_](https://www.linkedin.com/in/chrisbu/)_!_

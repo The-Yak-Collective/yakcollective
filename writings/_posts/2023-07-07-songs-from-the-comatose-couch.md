@@ -1,0 +1,24 @@
+---
+title: Songs From The Comatose Couch
+date: 2023-07-07 01:34:44.000000000 Z
+layout: post-external
+original_link: https://summerlightning.substack.com/p/songs-from-the-comatose-couch
+author: 100013
+---
+
+I've been sick for the past week, and I've taken this time to explore the innards of the Criterion Collection. These days I've to be sick to my stomach and unable to eat anything other than couscous and bananas to sit through languorous movies with subtle storylines. I watched Roy Anderson's _[Songs From The Second Floor](https://letterboxd.com/film/songs-from-the-second-floor/)_. The movie is a series of deadpan vignettes about a post-modern society. For example, one of the earlier vignettes set in a long hallway that could be an office or a motel shows a man holding onto another man's leg while pleading, "I've been here 30 years". He repeats the same phrase over and over while he gets dragged away really slowly by the man trying to escape his grasp. The other doors in the hallway creak open lightly to reveal other men, supposedly employees, looking on. It's the kind of thing that you have to be pretty sick to laugh at.
+
+Later on, I begrudgingly went to the urgent care. Only the third time I've been to a physician in six years. Standing at the front desk, I watched two nurses hunched over one computer trying to figure out why my insurance was not working. The presumably senior nurse had a plastic bag full of beef jerky sticks and energy drinks by her side. She was providing instructions to the other nurse on where to click on the screen in a manner that suggested that they were speed-running an RPG. While slowly chewing on some beef jerky of course. The verdict was that I had to pay out of pocket. I was too sick to fight this battle so I agreed. After the physician's assistant examined me, she suggested that I do a test and went on to explain what this would entail. She ended her exposition with, "Is this going to be through insurance?". I replied, "No," then fumbled about an explanation for why so that she knew that I'm not some bum or worse, a college student. I actually have a job ma'am. But, she had heard what she wanted to hear and without skipping a beat, replied, "Well then. I don't think we should do the test. I'll send you home with these meds, and we'll see if it works." My treatment course had suddenly gone from a test costing several hundred dollars to some pills for $9.38. Should I always tell urgent care that I don't have insurance to see what diagnosis they come up with? If I'm unsatisfied, I could always go, "Haha just kidding I have insurance."
+
+As I walked out, I realized the healthcare system around these parts of the world is a series of deadpan vignettes about post-modern society. Everyone is aware of the problems, including the nurses who sound apologetic for every third thing they have to say. It usually goes something like "...not sure if that's covered in your insurance" or "that's going to cost several hundred dollars". Everyone also knows no one is going to fix it.
+
+In fact, I'd like to imagine that all of American culture and technology in the last 30 years has been in service of avoiding fixing healthcare. I have not been to the doctor a whole lot because most of my illnesses can be cured by lying comatose on my couch for several days while watching Netflix for $10.99 a month. This time around I discovered the soothing calm of watching baseball games. Each team in Major League Baseball plays at least 162 games a season. If you are sick between spring and fall, your primary care physician may be backed up but there's always baseball. On the other hand, if it's the type of existential sickness that prevents you from working, the doctors that can get you working again are much easier to access. They'll get you back to sending emails with $40 Adderall. The golden age of this generation was the few short (long?) years of the pandemic when you got bombarded with Instagram ads for Adderall and Viagra from the same online start-up. Matter of fact, all of men's healthcare in the United States is essentially two checkboxes - Does your penis work? Can you do spreadsheets really fast?
+
+It's time to take my pills and watch baseball again.
+
+[![](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F2d4bb05e-38f3-4d01-ab65-63b44c921b2c_1020x564.jpeg)](https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F2d4bb05e-38f3-4d01-ab65-63b44c921b2c_1020x564.jpeg)
+
+Consider subscribing to support my work
+
+Summer Lightning is a reader-supported publication. To receive new posts and support my work, consider becoming a free or paid subscriber.
+

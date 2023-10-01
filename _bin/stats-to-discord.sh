@@ -38,12 +38,12 @@ fi
           
 # Push GitHub health stats to Discord.
 #
-GITHUB_DATA="$(curl -H "Accept: application/vnd.github+json" -H "Authorization: Bearer $GH_ACCESS_TOKEN"  https://api.github.com/orgs/${GH_ACCOUNT_SLUG}/settings/billing/actions)"
+GITHUB_DATA="$(curl -s -H "Accept: application/vnd.github+json" -H "Authorization: Bearer $GH_TOKEN"  https://api.github.com/orgs/${GH_ACCOUNT_SLUG}/settings/billing/actions)"
 
-curl -i -H "Accept: application/json" -H "Content-Type:application/json" -X POST --data "{\"content\": \"GitHub Workflow Minutes: $(echo $GITHUB_DATA | jq .total_minutes_used) / $(echo $GITHUB_DATA | jq .included_minutes)\"}" "$DISCORD_CHANNEL_URL"
+curl -i -H "Accept: application/json" -H "Content-Type:application/json" -X POST --data "{\"content\": \"**GitHub Workflow Minutes (Montly):** $(echo $GITHUB_DATA | jq .total_minutes_used) used / $(echo $GITHUB_DATA | jq .included_minutes) available\"}" "$DISCORD_CHANNEL_URL"
 
 # Push Netlify health stats to Discord.
 #
-NETLIFY_DATA="$(curl -H "User-Agent: MyApp $NETLIFY_ACCOUNT_EMAIL" -H "Authorization: Bearer $NETLIFY_TOKEN" https://api.netlify.com/api/v1/${NETLIFY_ACCOUNT_SLUG}/builds/status)"
+NETLIFY_DATA="$(curl -s -H "User-Agent: MyApp $NETLIFY_ACCOUNT_EMAIL" -H "Authorization: Bearer $NETLIFY_TOKEN" https://api.netlify.com/api/v1/${NETLIFY_ACCOUNT_SLUG}/builds/status)"
 
-curl -i -H "Accept: application/json" -H "Content-Type:application/json" -X POST --data "{\"content\": \"Netlify Build Minutes: $(echo $NETLIFY_DATA | jq .minutes.current) / $(echo $NETLIFY_DATA | jq .minutes.included_minutes)\"}" "$DISCORD_CHANNEL_URL"
+curl -i -H "Accept: application/json" -H "Content-Type:application/json" -X POST --data "{\"content\": \"**Netlify Build Minutes (Monthly):** $(echo $NETLIFY_DATA | jq .minutes.current) used / $(echo $NETLIFY_DATA | jq .minutes.included_minutes) available\"}" "$DISCORD_CHANNEL_URL"

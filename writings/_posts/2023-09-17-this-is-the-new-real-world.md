@@ -1,0 +1,52 @@
+---
+title: This is the New Real World
+date: 2023-09-17 00:04:12.000000000 Z
+layout: post-external
+original_link: https://studio.ribbonfarm.com/p/this-is-the-new-real-world
+author: 100041
+---
+
+_This essay is part of the [Protocol Narratives](https://open.substack.com/pub/ribbonfarmstudio/p/protocol-narratives) series_
+
+The word _world,_ even when preceded by the immodest adjective _real,_ is a self-consciously anthropocentric one that seems curiously aware of its own artificiality. Unlike _planet,_ which decenters the human, or _universe,_ which renders the human infinitesimal, _world_ seems to carry with it an unspoken irrational commitment to the centered human, with all the absurdities such centering entails. So to ask, _what sort of world do we live in,_ is to invite and accept a fundamentally absurd answer. If the answer you find is _not_ fundamentally absurd, you should be skeptical of it. An absurd answer need not be an inconsequential one though. If enough people believe in an absurd world, absurd but consequential histories will unfold. And consequentiality is, if not the same thing as truth, perhaps a property deserving of the adjective _real._
+
+One class of absurd answers to my question unabashedly embraces what we _value_ in the world as it is, and in the world as it could be, and invites us to organize our lives around the felt dissonance between the two. Since we’re already in an anthropocentric regime of thought, I will not bother to distinguish strongly between the _is_ and _ought_ sides of such pairs, but simply treat each pair as a _world_ (not _world view;_ they are constructs we inhabit, not perspectives we adopt). This value-based model is the one I adopted in last week’s issue, [What we seek to save when we seek to save the world](https://studio.ribbonfarm.com/p/what-we-seek-to-save-when-we-seek). It is not a bad way to be present in reality. At least it lends a certain amount of meaning and purpose to life. To live by values is to have something to _do_ with your life by default, and something to fight to save in the face of a nameless sense of threat.
+
+But there is something fundamentally unsatisfying, unilluminating, and solipsistic about a values-based inventory of worlds to inhabit or save. Especially one that treats worlds of all kinds — of the White House, of crackpot religious cultists, of stand-up comedians, of activists for obscure causes — as being equally consequential; equally deserving of the adjective _real._
+
+It is clear from the visible nature of the real world — and I do mean _the, real,_ and _world_ here; the singular, emergent, consequential superposition of all our individual anthropomorphic conceits — that not all individual worlds that in principle contribute to it are equally consequential. Some matter more than others in shaping its nature, its tendencies, and its relationship to the planet it must inhabit. A familiar recent historical real world, the neoliberal world, was shaped more by the beliefs of central bankers than by the beliefs of UFO-trackers. This does not necessarily mean that one set of beliefs was more true than the other. You could argue that macroeconomic theories held by central bankers are not much less fictional than UFOs. But worlds built around belief in specific macroeconomic theories _mattered_ more than ones built around belief in UFOs. In 2003 at least, it would have been safe to assume this, and act accordingly (it is no longer a safe assumption in 2023).
+
+Accounting for consciously shared worlds like religions, fandoms, and nationalisms, as well as commonalities that arise from obvious and lazy lines of thought or imitation, there are perhaps a few thousand to tens of thousands of non-trivial distinct inhabited worlds out there. Of these, perhaps a few hundred are significant enough to require accounting for in any analysis. The rest are, at best, butterflies flapping in the chaotic weather-systems of history, hoping to cause hurricanes.
+
+Of the few hundred that are significant, perhaps a couple of dozen matter _strongly,_ and perhaps a dozen matter _visibly,_ the other dozen being comprised of various sorts of black or gray swans lurking in the margins of globally recognized consequentiality.
+
+This then, is the “real” world — the dozen or so worlds that visibly matter in shaping the context of all our lives, with common knowledge of such shaping constituting a non-trivial part of the _visibly mattering_. The consequentiality of the real world is partly a self-fulfilling prophecy of its own reality. Something that can play the rule of truth. For a while.
+
+So: there is something like a Great Filter operating on the currents of imagined and inhabited worlds to produce this “real” world, and the currents of history that constitute its story.
+
+Almost nothing makes it from the privacy of individual human delusions of significance into the global, public currents of history. Almost none of the high-minded, even noble, moral preoccupations of idealistic minorities makes a difference.
+
+Even the cynical principle that the worlds that matter are the ones which embody the most power, wealth, or popularity is not a reliable guide to what ends up constituting the real. There are strongholds of power and pools of great wealth that do not rise to consequentiality. And unlike in the stock market, the popularity of a world is no guarantee of its consequentiality. That a billion people believe in and inhabit a world does not ensure that it will end up mattering in any way that effects the other seven billion. That a fortune is worth billions does not mean its owners will have a part to play on the world stage (as the flailings of many billionaires show). That a fandom counts millions among its members does not mean it will be culturally significant enough to shape the real world.
+
+Of course, the fact that some worlds survive this brutal winnowing process does not alter the fact that they remain anthropocentric is/ought conceits that are only real to the extent they are briefly consequential (and not necessarily in a way that can be intentionally shaped). They remain mere memes you inhabit unless proven to be more. A world that has made the cut to significance and consequentiality, to the level of _mattering,_ must still survive its encounters with material, as opposed to social realities. The truth about worlds in the material context of the planet, unlike the appeal of worlds inside heads, is (fortunately) not a popularity contest. For all the consequential might of the Catholic Church in the 17th century, it was Galileo’s much punier _[Eppur si muove](https://en.wikipedia.org/wiki/And_yet_it_moves)_ world that eventually ended up mattering more. Truth eventually outweighed short-term consequentiality in the enduring composition of _real._
+
+Yet, it cannot be denied that in the century or so after 1633, when Galileo was forced to recant his heretical views, the not-even-wrong world as constructed by the Catholic Church _did_ matter, and Galileo’s kinda-right world _didn’t._ The recognition of a truth does not guarantee its immediate consequentiality of a world constructed on the basis of such recognition.
+
+It would take a couple of centuries for Galileo’s world to be counted among the ones that mattered, in shaping the real world; for its consequentiality to match its truthfulness (in my estimation, Galileo truly began to matter sometime between the development of modern artillery and the dawn of spaceflight). And the world of the Catholic Church, despite centuries of slow decline (and slow retreat from literal to figurative claims), still matters almost as much in 2023 as it did in 1633. It is just that the real world has gotten much bigger in scope, and other worlds constituting it, like the one shaping the design of the iPhone 15, matter much more.
+
+So even in the best case, to answer a question like _what sort of world do we live in?_ is to craft an unwieldy composite portrait out of the dozen or so constituent worlds that matter at any given time (and perhaps a couple of black swan worlds you might recognize, which most don’t). Those constituent worlds will necessarily vary in their truthfulness (recognized and unrecognized), consequentiality, and fragility, and the whole will necessarily be alloyed with doubt. And will have a shelf-life of perhaps a decade or two.
+
+_The real world,_ in other words, is a fragile, unreliable, dubious, borderline incoherent, unsatisfying house of cards destined to die. Yet, while it lives and reigns, it is an all-consuming, all-dominating thing. A thing that can seem extraordinarily real compared to any more fragile, value-based private delusions we may harbor. To the point that we typically refer to it unironically as the _real_ world, to be contrasted with self-indulgent fantasies, and characterize belief in it as pragmatism rather than just a grittier delusion.
+
+Yet the “real” world is not necessarily any more real than private fantasies. It is merely vastly more consequential — for a while.
+
+And because the “real” world is not actually real, like any unreal thing, it too can go away with startling suddenness when we stop believing in it.[1](#footnote-1) Self-fulfilling prophecies can only create social realities contingent on common knowledge beliefs. Material realities take more than belief, and a good deal more time and energy, to shape.
+
+When “the real world” goes away because we’ve stopped believing in it, as tends to happen every few decades, it can feel like material reality itself, rather than a socially constructed state of mind, has come undone. And we scramble to construct a new real world. It is a necessary human tendency. Humans need a real world to serve as a cognitive “outdoors” (and escape from “indoors”), even if they are not eternal or true. A shared place we can accuse each other of not living in, and being detached from. And even if you and I are too smart for this kind of nonsense, the vast majority of other humans (damn them) will conspire to cobble together a dozen new fantasies and label it _real world,_ and you and I will have to live in it too_._
+
+So it is worth asking the question, _what sort of world do we live in?_ And it is worth actually constructing the answer, and giving it the name _the real world,_ and using it to navigate life — for a while.
+
+So let’s take a stab at it.
+
+[Read more](https://studio.ribbonfarm.com/p/this-is-the-new-real-world)
+
