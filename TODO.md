@@ -11,6 +11,6 @@
 	* [x] Discord push
 	* [x] Pull RSS feeds
 	* [x] Service health check to Discord
-	* [ ] Automatic site rebuild
+	* [x] Automatic site rebuild
 * [ ] Merge changes into `prod`
 * [ ] Deactivate IFTTT!

@@ -1,0 +1,29 @@
+name: 'Update #yaks-at-work'
+
+on:
+  workflow_run:
+    workflows: ['Pull updated content from Yak RSS feeds']
+    types:
+      - completed
+
+jobs:
+  yaks-at-work:
+    name: 'Update #yaks-at-work'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Push oldest queued post to Discord
+        env:
+          DISCORD_CHANNEL_URL: ${{ secrets.DISCORD_WEBHOOK_YAKS_AT_WORK }}
+        run: |
+          ./_bin/push-to-discord.sh
+      - name: Commit changes to repository
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add -A -v
+          git commit -m "Pushed oldest queued post to Discord" || true
+          git push

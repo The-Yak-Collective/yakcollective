@@ -1,0 +1,23 @@
+name: Health check
+
+on:
+  schedule:
+    - cron: '45 0 * * *'
+
+jobs:
+  site-update-automation:
+    name: Health check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Push health stats to Discord
+        env:
+          DISCORD_CHANNEL_URL: ${{ secrets.DISCORD_WEBHOOK_WEBSITE_HEALTH }}
+          GH_ACCOUNT_SLUG: ${{ secrets.GH_ACCOUNT_SLUG }}
+          GH_TOKEN: ${{ secrets.GH_ROBOT_ACCESS_TOKEN }}
+          NETLIFY_ACCOUNT_EMAIL: ${{ secrets.NETLIFY_ACCOUNT_EMAIL }}
+          NETLIFY_ACCOUNT_SLUG: ${{ secrets.NETLIFY_ACCOUNT_SLUG }}
+          NETLIFY_TOKEN: ${{ secrets.NETLIFY_TOKEN }}
+        run: |
+          ./_bin/stats-to-discord.sh
