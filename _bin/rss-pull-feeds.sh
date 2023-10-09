@@ -45,6 +45,68 @@ else
 	LAST_RUN=0
 fi
 
+# Integrate new Bluesky posts.
+#
+while read -r FILE; do
+	DATE="$(basename ${FILE%%-*})"
+	if [[ $DATE -ge $LAST_RUN ]]; then
+		mv -v "$FILE" _bluesky/
+	else
+		rm "$FILE"
+	fi
+done < <(find _pluto/bluesky -type f -iname '*.txt')
+
+while read -r RECORD; do
+	MEMBER_ID="$(echo "$RECORD" | cut -f 1)"
+	BLUESKY_HANDLE="$(echo "$RECORD" | cut -s -f 2| sed -e 's#.*/##;s#@##;s/#//g')"
+	if [[ -n "$BLUESKY_HANDLE" ]]; then
+		while read -r FILE; do
+			sed -i -e "s#@$MEMBER_ID#@$BLUESKY_HANDLE#" "$FILE"
+		done < <(find _bluesky -type f -iname '*.txt' -exec grep -l "@$MEMBER_ID" "{}" \;)
+	fi
+done < <(jq -r '.records[] | [.field_101_raw, .field_108_raw?] | @tsv' _data/knack_yaks.json | sed -e 's/^\s*//;s/\s*$//')
+
+while read -r RECORD; do
+	MEMBER_ID="$(echo "$RECORD" | cut -f 1)"
+	NAME="$(echo "$RECORD" | cut -s -f 2 | sed -e 's#|#/#g')"
+	if [[ -n "$NAME" ]]; then
+		while read -r FILE; do
+			sed -i -e "s|@$MEMBER_ID|$NAME|" "$FILE"
+		done < <(find _bluesky -type f -iname '*.txt' -exec grep -l "@$MEMBER_ID" "{}" \;)
+	fi
+done < <(jq -r '.records[] | [.field_101_raw, .field_97_raw?] | @tsv' _data/knack_yaks.json | sed -e 's/^\s*//;s/\s*$//')
+
+# Integrate new Farcaster posts.
+#
+while read -r FILE; do
+	DATE="$(basename ${FILE%%-*})"
+	if [[ $DATE -ge $LAST_RUN ]]; then
+		mv -v "$FILE" _bluesky/
+	else
+		rm "$FILE"
+	fi
+done < <(find _pluto/farcaster -type f -iname '*.txt')
+
+while read -r RECORD; do
+	MEMBER_ID="$(echo "$RECORD" | cut -f 1)"
+	FARCASTER_HANDLE="$(echo "$RECORD" | cut -s -f 2| sed -e 's#.*/##;s#@##;s/#//g')"
+	if [[ -n "$FARCASTER_HANDLE" ]]; then
+		while read -r FILE; do
+			sed -i -e "s#@$MEMBER_ID#@$FARCASTER_HANDLE#" "$FILE"
+		done < <(find _farcaster -type f -iname '*.txt' -exec grep -l "@$MEMBER_ID" "{}" \;)
+	fi
+done < <(jq -r '.records[] | [.field_101_raw, .field_109_raw?] | @tsv' _data/knack_yaks.json | sed -e 's/^\s*//;s/\s*$//')
+
+while read -r RECORD; do
+	MEMBER_ID="$(echo "$RECORD" | cut -f 1)"
+	NAME="$(echo "$RECORD" | cut -s -f 2 | sed -e 's#|#/#g')"
+	if [[ -n "$NAME" ]]; then
+		while read -r FILE; do
+			sed -i -e "s|@$MEMBER_ID|$NAME|" "$FILE"
+		done < <(find _farcaster -type f -iname '*.txt' -exec grep -l "@$MEMBER_ID" "{}" \;)
+	fi
+done < <(jq -r '.records[] | [.field_101_raw, .field_97_raw?] | @tsv' _data/knack_yaks.json | sed -e 's/^\s*//;s/\s*$//')
+
 # Integrate new Discord posts.
 #
 while read -r FILE; do
@@ -55,6 +117,37 @@ while read -r FILE; do
 		rm "$FILE"
 	fi
 done < <(find _pluto/discord -type f -iname '*.txt')
+
+# Integrate new Twitter posts.
+#
+while read -r FILE; do
+	DATE="$(basename ${FILE%%-*})"
+	if [[ $DATE -ge $LAST_RUN ]]; then
+		mv -v "$FILE" _twitter/
+	else
+		rm "$FILE"
+	fi
+done < <(find _pluto/twitter -type f -iname '*.txt')
+
+while read -r RECORD; do
+	MEMBER_ID="$(echo "$RECORD" | cut -f 1)"
+	TWITTER_HANDLE="$(echo "$RECORD" | cut -s -f 2| sed -e 's#.*/##;s#@##;s/#//g')"
+	if [[ -n "$TWITTER_HANDLE" ]]; then
+		while read -r FILE; do
+			sed -i -e "s#@$MEMBER_ID#@$TWITTER_HANDLE#" "$FILE"
+		done < <(find _twitter -type f -iname '*.txt' -exec grep -l "@$MEMBER_ID" "{}" \;)
+	fi
+done < <(jq -r '.records[] | [.field_101_raw, .field_43_raw?] | @tsv' _data/knack_yaks.json | sed -e 's/^\s*//;s/\s*$//')
+
+while read -r RECORD; do
+	MEMBER_ID="$(echo "$RECORD" | cut -f 1)"
+	NAME="$(echo "$RECORD" | cut -s -f 2 | sed -e 's#|#/#g')"
+	if [[ -n "$NAME" ]]; then
+		while read -r FILE; do
+			sed -i -e "s|@$MEMBER_ID|$NAME|" "$FILE"
+		done < <(find _twitter -type f -iname '*.txt' -exec grep -l "@$MEMBER_ID" "{}" \;)
+	fi
+done < <(jq -r '.records[] | [.field_101_raw, .field_97_raw?] | @tsv' _data/knack_yaks.json | sed -e 's/^\s*//;s/\s*$//')
 
 # Integrate new newsletters.
 #

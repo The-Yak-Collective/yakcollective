@@ -51,7 +51,10 @@ class Planet
 			puts "[#{i+1}] #{item.title}"
 			generate_blog_post(item)
 			unless item.url.empty?
+				generate_bluesky_post(item)
+				generate_farcaster_post(item)
 				generate_discord_post(item)
+				generate_twitter_post(item)
 			end
 		end
 	end
@@ -115,6 +118,54 @@ private
 		end
 	end
 
+	# Generate post files for Bluesky.
+	#
+	def generate_twitter_post(item)
+		posts_root = "./bluesky"
+
+		FileUtils.mkdir_p(posts_root)
+
+		if $feed_set == "writings"
+			post_name = "#{posts_root}/#{item.published.strftime('%s')}-#{item.feed.key}.txt"
+		else
+			post_name = "#{posts_root}/#{item.published.strftime('%s')}-#{$feed_set}.txt"
+		end
+
+		File.open(post_name, 'w:utf-8') do |post_file|
+			if $feed_set == "writings"
+				post_content = "Check out @#{item.feed.key}’s new post, “#{item.title}” — #{item.url}"
+			elsif $feed_set == "newsletter"
+				post_content = "Check out the latest edition of the Yak Talk newsletter, “#{item.title}” — #{item.url}"
+			end
+
+			post_file.write post_content
+		end
+	end
+
+	# Generate post files for Farcaster.
+	#
+	def generate_twitter_post(item)
+		posts_root = "./farcaster"
+
+		FileUtils.mkdir_p(posts_root)
+
+		if $feed_set == "writings"
+			post_name = "#{posts_root}/#{item.published.strftime('%s')}-#{item.feed.key}.txt"
+		else
+			post_name = "#{posts_root}/#{item.published.strftime('%s')}-#{$feed_set}.txt"
+		end
+
+		File.open(post_name, 'w:utf-8') do |post_file|
+			if $feed_set == "writings"
+				post_content = "Check out @#{item.feed.key}’s new post, “#{item.title}” - #{item.url}"
+			elsif $feed_set == "newsletter"
+				post_content = "Check out the latest edition of the Yak Talk newsletter, “#{item.title}” - #{item.url}"
+			end
+
+			post_file.write post_content
+		end
+	end
+
 	# Generate post files for Discord.
 	#
 	def generate_discord_post(item)
@@ -131,6 +182,30 @@ private
 		File.open(post_name, 'w:utf-8') do |post_file|
 			post_content = "#{item.title} — #{item.url}"
 			
+			post_file.write post_content
+		end
+	end
+
+	# Generate post files for Twitter.
+	#
+	def generate_twitter_post(item)
+		posts_root = "./twitter"
+
+		FileUtils.mkdir_p(posts_root)
+
+		if $feed_set == "writings"
+			post_name = "#{posts_root}/#{item.published.strftime('%s')}-#{item.feed.key}.txt"
+		else
+			post_name = "#{posts_root}/#{item.published.strftime('%s')}-#{$feed_set}.txt"
+		end
+
+		File.open(post_name, 'w:utf-8') do |post_file|
+			if $feed_set == "writings"
+				post_content = "Check out @#{item.feed.key}’s new post, “#{item.title}” — #{item.url}"
+			elsif $feed_set == "newsletter"
+				post_content = "Check out the latest edition of the Yak Talk newsletter, “#{item.title}” — #{item.url}"
+			end
+
 			post_file.write post_content
 		end
 	end

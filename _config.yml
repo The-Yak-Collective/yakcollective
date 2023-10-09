@@ -78,4 +78,3 @@ exclude:
   - package.json
   - package-lock.json
   - README.md
-  - TODO.md

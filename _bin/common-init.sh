@@ -95,6 +95,20 @@ if [[ ! -f .common-init ]]; then
 	fi
 	npm install
 
+	if [[ -z "$(which python3)" ]]; then
+		if [[ -n "$(which brew)" ]]; then
+			brew install python
+		elif [[ -n "$(which apt)" ]]; then
+			sudo apt install -y python3
+		elif [[ -n "$(which yum)" ]]; then
+			sudo yum install -y python3
+		else
+			echo "Python 3.x is not found and is not installable! Bailing..."
+			exit 1
+		fi
+	fi
+	python3 -m pip install farcaster
+
 	# Pull Knack data. (But ONLY if we're not being run from
 	# knack-pull-yaks.sh, to prevent infinite recursion.)
 	#

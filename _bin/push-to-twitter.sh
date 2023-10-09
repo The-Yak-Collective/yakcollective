@@ -11,7 +11,7 @@ fi
 
 # Check to make sure that we're running in the repository root.
 #
-if [[ ! -d _bin ]] || [[ ! -d _discord ]]; then
+if [[ ! -d _bin ]] || [[ ! -d _twitter ]]; then
 	echo "This script must be run from the repository root!"
 	exit 1
 fi
@@ -19,22 +19,22 @@ fi
 # Check to make sure that the expected tokens are present in the
 # environment.
 #
-if [[ -z "$DISCORD_CHANNEL_URL" ]]; then
-	echo "Missing DISCORD_CHANNEL_URL environment variable!"
+if [[ -z "$IFTTT_MAKER_KEY" ]]; then
+	echo "Missing IFTTT_MAKER_KEY environment variable!"
 	exit 1
 fi
 
-# Determine the (lexigraphically) oldest Discord post file. This
+# Determine the (lexigraphically) oldest Twitter post file. This
 # variable will be the empty string if no (non-hidden) files are in the
-# _discord directory
+# _twitter directory
 #
-POST="$(ls -1 _discord | sort -u | head -1)"
+POST="$(ls -1 _twitter | sort -u | head -1)"
 
-# Post file contents to Discord and delete file if successful.
+# Post file contents to Twitter and delete file if successful.
 #
 if [[ -n "$POST" ]]; then
-	curl -s -H "Accept: application/json" -H "Content-Type: application/json" -d "{\"content\":\"$(cat "_discord/$POST" | sed -e 's/"/\\"/g')\"}" "$DISCORD_CHANNEL_URL"
+	curl -s -G --data-urlencode "value1=$(cat "_twitter/$POST" | sed -e 's/"/\\"/g')" https://maker.ifttt.com/trigger/post_to_twitter/with/key/$IFTTT_MAKER_KEY
 	if [[ $? -eq 0 ]]; then
-		rm "_discord/$POST"
+		rm "_twitter/$POST"
 	fi
 fi
