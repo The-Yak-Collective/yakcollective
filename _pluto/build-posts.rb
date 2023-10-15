@@ -120,7 +120,7 @@ private
 
 	# Generate post files for Bluesky.
 	#
-	def generate_twitter_post(item)
+	def generate_bluesky_post(item)
 		posts_root = "./bluesky"
 
 		FileUtils.mkdir_p(posts_root)
@@ -144,7 +144,7 @@ private
 
 	# Generate post files for Farcaster.
 	#
-	def generate_twitter_post(item)
+	def generate_farcaster_post(item)
 		posts_root = "./farcaster"
 
 		FileUtils.mkdir_p(posts_root)
