@@ -77,7 +77,7 @@ if [[ ! -f .common-init ]]; then
 			exit 1
 		fi
 	fi
-	[[ -z "$(which bundle)" ]] && gem install bundler
+	[[ -z "$(which bundle)" ]] && sudo gem install bundler
 	bundle config set path vendor/bundle
 	bundle install
 
