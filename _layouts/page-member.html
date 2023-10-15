@@ -23,12 +23,15 @@ layout: default
 {% assign url_3_label = page.field_67_raw.label | strip %}
 {% assign url_3_url = page.field_67_raw.url | strip %}
 {% assign twitter = page.field_43_raw | strip %}
+{% assign farcaster = page.field_109_raw | strip %}
+{% assign bluesky = page.field_108_raw | strip %}
 {% assign background_info = page.field_32_raw | strip %}
 
 {% comment %}
 	People screw up their URLs all the time. Try to fix some common
 	mistakes.
 {% endcomment %}
+
 {% assign url_label_start = url_1_label | downcase | slice: 0, 4 %}
 {% assign url_start = url_1_url | downcase | slice: 0, 4 %}
 {% if url_start != "http" %}
@@ -50,6 +53,7 @@ layout: default
 		{% assign url_1_label = url_1_url %}
 	{% endif %}
 {% endif %}
+
 {% assign url_label_start = url_2_label | downcase | slice: 0, 4 %}
 {% assign url_start = url_2_url | downcase | slice: 0, 4 %}
 {% if url_start != "http" %}
@@ -71,6 +75,7 @@ layout: default
 		{% assign url_2_label = url_2_url %}
 	{% endif %}
 {% endif %}
+
 {% assign url_label_start = url_3_label | downcase | slice: 0, 4 %}
 {% assign url_start = url_3_url | downcase | slice: 0, 4 %}
 {% if url_start != "http" %}
@@ -92,9 +97,20 @@ layout: default
 		{% assign url_3_label = url_3_url %}
 	{% endif %}
 {% endif %}
+
 {% assign twitter_start = twitter | slice: 0 %}
 {% if twitter_start == "@" %}
 	{% assign twitter = twitter | replace_first: "@", "" %}
+{% endif %}
+
+{% assign farcaster_start = farcaster | slice: 0 %}
+{% if farcaster_start == "@" %}
+	{% assign farcaster = farcaster | replace_first: "@", "" %}
+{% endif %}
+
+{% assign bluesky_start = bluesky | slice: 0 %}
+{% if bluesky_start == "@" %}
+	{% assign bluesky = bluesky | replace_first: "@", "" %}
 {% endif %}
 
 <div class="mb3 flex items-top">
@@ -124,7 +140,7 @@ layout: default
 	{{ background_info | markdownify }}
 {% endif %}
 
-{% if url_1_url != empty or twitter != empty %}
+{% if url_1_url != empty or url_2_url != empty or url_3_url != empty or twitter != empty or farcaster != empty or bluesky != empty %}
 	<ul>
 		{% if url_1_url != empty %}
 			<li><a href="{{ url_1_url }}">{{ url_1_label }}</a></li>
@@ -134,6 +150,12 @@ layout: default
 		{% endif %}
 		{% if url_3_url != empty %}
 			<li><a href="{{ url_3_url }}">{{ url_3_label }}</a></li>
+		{% endif %}
+		{% if bluesky != empty %}
+			<li><a href="https://bsky.app/profile/{{ bluesky }}">@{{ bluesky }} on Bluesky</a></li>
+		{% endif %}
+		{% if farcaster != empty %}
+			<li><a href="https://warpcast.com/{{ farcaster }}">@{{ farcaster }} on Farcaster</a></li>
 		{% endif %}
 		{% if twitter != empty %}
 			<li><a href="https://twitter.com/{{ twitter }}">@{{ twitter }} on Twitter</a></li>
