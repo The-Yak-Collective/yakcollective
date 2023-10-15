@@ -8,9 +8,11 @@ author: 100041
 
 A series exploring the idea of narratives that evolve from protocols of telling rather than an integral sense of a story with a beginning and an end.
 
-- Of Fogs and Flows (Sept 22, 2023)
+- [Blithe Spirits and Heavy Souls](https://studio.ribbonfarm.com/p/blithe-spirits-and-heavy-souls) 🔒(Oct 6, 2023) 
 
-- [This is the New Real World](https://studio.ribbonfarm.com/p/this-is-the-new-real-world) (Sept 16, 2023)
+- [Fluid Fogs and Fixed Flows](https://studio.ribbonfarm.com/p/fluid-fogs-and-fixed-flows) 🔒(Sept 22, 2023)
+
+- [This is the New Real World](https://studio.ribbonfarm.com/p/this-is-the-new-real-world) 🔒(Sept 16, 2023)
 
 - [What we seek to save when we see to save the world](https://studio.ribbonfarm.com/p/what-we-seek-to-save-when-we-seek) (Sept 8, 2023)
 
@@ -26,9 +28,15 @@ A series exploring the idea of narratives that evolve from protocols of telling 
 
 - [Thick Time](https://studio.ribbonfarm.com/p/thick-time) (July 29, 2023)
 
+- [The Puzzle of the Permaweird](https://studio.ribbonfarm.com/p/the-puzzle-of-the-permaweird) (April 28, 2023)
+
+- [Disturbed Realities](https://open.substack.com/pub/ribbonfarmstudio/p/disturbed-realities) (Jan 20, 2023)
+
+- [The Permaweird](https://studio.ribbonfarm.com/p/the-permaweird) (January 14, 2023)
+
 - [Logics of Caring](https://studio.ribbonfarm.com/p/logics-of-caring) (January 6, 2023)
 
-External Links
+**External Links**
 
 - [Narrativium](https://www.ribbonfarm.com/series/narrativium/) (blogchain on Ribbonfarm blog, exploring storytelling theories, 10 parts so far)
 
