@@ -81,7 +81,7 @@ done < <(jq -r '.records[] | [.field_101_raw, .field_97_raw?] | @tsv' _data/knac
 while read -r FILE; do
 	DATE="$(basename ${FILE%%-*})"
 	if [[ $DATE -ge $LAST_RUN ]]; then
-		mv -v "$FILE" _bluesky/
+		mv -v "$FILE" _farcaster/
 	else
 		rm "$FILE"
 	fi
