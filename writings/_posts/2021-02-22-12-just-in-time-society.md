@@ -1,0 +1,37 @@
+---
+title: "#12 Just in time society"
+date: 2021-02-22 00:23:57.000000000 Z
+layout: post-external
+original_link: https://summerlightning.substack.com/p/12-just-in-time-society
+author: 100013
+---
+
+> _If it keeps on raining, the levee's going to break  
+> When the levee breaks, we'll have no place to stay - [Led Zeppelin, also a blues tune written after the Great Mississippi Flood of 1927](https://genius.com/Led-zeppelin-when-the-levee-breaks-lyrics)_
+
+I’m writing this while waiting for the next rolling blackout in Austin after the Texas electricity grid failed during the ongoing Polar Vortex. It is a good example of a well defined closed system that makes it apparent that modern American systems and technology is based on the assumption that there will only be minor deviations from the status quo.
+
+The first was the pandemic (ironically almost exactly a year back) . Its quite telling of the state of the things that a year and 400,000 deaths later, PPE shortage is still very much a thing and instead of N95 masks becoming ubiquitous, people are instead asked to double mask . Even the army that people like to point to as a symbol of competence is[struggling to manufacture face masks for soldiers](https://www.popularmechanics.com/military/a35004952/army-face-masks-slow-development-time/) (let alone civilians).
+
+Later in the year, no one was really that surprised when a 220 year old constitution struggled in an era dominated by 95% stochastic terror and 5% that spills over into the real world. The people who unleashed the stochastic terror cannot be held accountable with a system that is closer in history to the printing press than the internet.
+
+The most alarming thing about this is that no one is really that surprised by the state of things. All of these seem to be events that have been predicted for the last two decades but everyone just watched the slow moving train wreck while wrangling with and giving up on fixing all the complex systems that have been created in the years since the Second World War.
+
+Complexity of systems makes cascading failure inevitable. In an ideal free market, complex systems would have the incentive to have fall back options. There are examples of this in competitive, newer markets such as tech. For example Netflix cannot expect to keep customers if their streaming is unreliable and spotty and so their infrastructure developed Chaos Monkeys to solve for this problem. From its Github documentation:
+
+> Chaos Monkey randomly terminates virtual machine instances and containers that run inside of your production environment. Exposing engineers to failures more frequently incentivizes them to build resilient services.
+
+And from [Principles of Chaos Engineering](https://principlesofchaos.org):
+
+> Even when all of the individual services in a distributed system are functioning properly, the interactions between those services can cause unpredictable outcomes. Unpredictable outcomes, compounded by rare but disruptive real-world events that affect production environments, make these distributed systems inherently chaotic.
+> 
+> We need to identify weaknesses before they manifest in system-wide, aberrant behaviors. Systemic weaknesses could take the form of: improper fallback settings when a service is unavailable; retry storms from improperly tuned timeouts; outages when a downstream dependency receives too much traffic; cascading failures when a single point of failure crashes; etc. We must address the most significant weaknesses proactively, before they affect our customers in production. We need a way to manage the chaos inherent in these systems, take advantage of increasing flexibility and velocity, and have confidence in our production deployments despite the complexity that they represent.
+
+With increasing number of known unknowns and unknown unknowns affecting governance systems and infrastructure, ideally people running complex systems should be taking a leaf out of the Chaos Monkeys playbook and inventing their own chaos management solution. Ironically energy markets do have a similar system to meet demand during conditions of high strain called Capacity markets where energy providers can buy capacity futures to meet potential demand during a peak condition such as a winter storm or peak summer temperatures.[But the kicker being that Texas does not have capacity markets and is reliant solely on energy markets](https://judithcurry.com/2021/02/18/assigning-blame-for-the-blackouts-in-texas/?fbclid=IwAR2UW3eB8Syyv-TD2ZYN5Pe4jJH6nNlj_9z0NbnovhIMq81k-B0yoINkNsg). As noted in the excellent article by an energy engineer:
+
+> This means that entities profit only from the actual energy they sell into the system. They do not see any profit from having stand by capacity ready to help out in emergencies. The energy only market works well under normal conditions to keep prices down. While generally markets are often great things, providing needed energy during extreme conditions evidently is not their forte. Unlike the traditional approach where specific entities have responsibilities to meet peak levels, in Texas the responsibility is diffuse and unassigned. **There is no significant long term motivation for entities to ensure extra capacity just in case it may be needed during extreme conditions. Entities that might make that gamble theoretically can profit when markets skyrocket, but such approaches require tremendous patience and the ability to weather many years of potential negative returns.**
+
+The lack of significant long term motivation is something that can probably be ascribed to other systems such as healthcare and government. It cannot be explained away by lack of resources or capital, because everything else seem to suggest a surplus and not scarcity. One explanation I can think of is that systems just like people have a _[sense of foreshortened future](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4166378/)_, as a result they only respond to immediate needs and concerns without considering how and why they got here and importantly not investing in long term plans. Deregulation of the electricity market in Texas resulted in more retail providers and innovative pricing such as Griddy but none on these providers had any incentives to make long terms plans. In the summer of 2018, the Texas grid almost collapsed and instead of this being a warning sign to make longer term changes, it was heralded as a success for ERCOT. The response to the current crisis should probably be to consider options such as capacity markets but I fear what is going to happen is that a lot of capital will be thrown at the problem which will disappear somewhere and then re-emerge as a new problem couple of years from now. In that case complexity may not be increasing in systems due to popular reasons such as lack of innovation, capital or lack of talent but rather because of the willingness to kick problems down the road because that is the easiest thing to do and systems can get away with it. Eventually everyone will have a short term memory and the tragedy will repeat again.
+
+Living in the US currently reminds me of Psycho Sam from Hunt For Wilderpeople. A literal tin foil wearing, conspiracy theory thumping, combat LARPing character who when the moment of glory comes near realizes that he has forgot to dig his underground bunker and exclaims “what have I been doing with my life?”. In fact now I wonder if this was supposed to be some kind of archetypal American character.
+

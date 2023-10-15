@@ -27,7 +27,7 @@ layout: none
 			background-image: url("{{ study_group.hero_image }}");
 			background-position: center center;
 		{% else %}
-			background-image: url("/img/yak-og.jpg");
+			background-image: url("/img/yak-og.webp");
 			background-position: center right;
 		{% endif %}
 		background-size: cover;
@@ -59,7 +59,7 @@ layout: none
 			background-image: url("{{ project.hero_image }}");
 			background-position: center center;
 		{% else %}
-			background-image: url("/img/yak-og.jpg");
+			background-image: url("/img/yak-og.webp");
 			background-position: center right;
 		{% endif %}
 		background-size: cover;
@@ -72,7 +72,7 @@ layout: none
 {% assign project_pages = site.pages | where: "layout", "page-project-page" %}
 {% for project_page in project_pages %}
 	#{{ project_page.url | replace: '.html', '' | replace: '/', ' ' | strip | split: ' ' | last }} .project-page-box .hero {
-		background: {% if project_page.hero_image %}url('{{ project_page.hero_image }}') {{ project_page.hero_attach_vertical | default: "center" }} {{ project_page.hero_attach_horizontal | default: "center" }}{% else %}url('/img/yak-og.jpg') center right{% endif %};
+		background: {% if project_page.hero_image %}url('{{ project_page.hero_image }}') {{ project_page.hero_attach_vertical | default: "center" }} {{ project_page.hero_attach_horizontal | default: "center" }}{% else %}url('/img/yak-og.webp') center right{% endif %};
 	}
 {% endfor %}
 

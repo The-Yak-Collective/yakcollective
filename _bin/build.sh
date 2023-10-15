@@ -3,18 +3,13 @@
 # NOTE: Any parameters passed to this script will be appended to the
 # `jekyll` build command.
 
-# Check to make sure that we're running in the repository root.
+# Source init.
 #
-if [[ ! -f _config.yml || ! -d _bin ]]; then
-	echo "This script must be run from the repository root!"
+if [[ -f ./_bin/common-init.sh ]]; then
+	source ./_bin/common-init.sh
+else
+	echo "Init file not found! Are you running from the repository root?"
 	exit 1
-fi
-
-# Run init, if necessary.
-#
-if [[ ! -f .common-init ]]; then
-	chmod +x _bin/common-init.sh
-	./_bin/common-init.sh
 fi
 
 # Clean destination directory.
@@ -41,14 +36,7 @@ if [[ -n "$1" ]]; then
 fi
 find _site -type f \( -iname '*.html'  -o -iname '*.xml'  -o -iname '*.json' -o -iname '*.js' -o -iname '*.css' \) -exec sed -i -e "s|__SITE_BASE_URL__|$SITE_BASE_URL|g" "{}" \;
 
-# Revert escaped HTML characters that are needed to prevent Jekyll
-# from barfing, but then cause minify (below) to barf. Sheesh.
-#
-find _site -type f -iname '*.html' -exec sed -i -e 's/&#x007b;/{/g;s/&#x007d;/}/g' "{}" \;
-
 # Minify: https://github.com/tdewolff/minify
-#
-# Current version: 2.12.4 (last checked 2022-10-16)
 #
 # It's too bad we need to cart this binary around as part of the repo,
 # but Netlify doesn't support installing our own tools (otherwise we'd
@@ -66,12 +54,12 @@ find _site -type f -iname '*.html' -exec sed -i -e 's/&#x007b;/{/g;s/&#x007d;/}/
 # therefore be turned off when "hand optimization" like this is used.
 #
 MINIFY_BINARY="minify-$(uname -s | tr "[:upper:]" "[:lower:]")-$(uname -m)"
-if [[ -f _bin/"$MINIFY_BINARY" ]]; then
-	chmod +x _bin/"$MINIFY_BINARY"
+if [[ -f ./_bin/minify/"$MINIFY_BINARY" ]]; then
+	chmod +x ./_bin/minify/"$MINIFY_BINARY"
 	mv _site _site.original
 	(
 		cd _site.original
-		../_bin/"$MINIFY_BINARY" --all --recursive --sync --output ../_site .
+		../_bin/minify/"$MINIFY_BINARY" --all --recursive --sync --output ../_site .
 	)
 	rm -rf _site.original
 fi

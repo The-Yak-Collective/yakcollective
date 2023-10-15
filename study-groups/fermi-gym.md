@@ -4,7 +4,7 @@ date: 2022-11-14 00:00:00
 ended: false
 contributors: Open to all
 channel: fermi-gym
-hero_image: /study-groups/fermi-gym/fermi-gym.jpg
+hero_image: /study-groups/fermi-gym/fermi-gym.webp
 ---
 # Fermi Gym
 

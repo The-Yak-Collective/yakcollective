@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Bangers&display=swap");
 body {
 	font-family: "Noto Sans", Verdana, sans-serif;
 }
@@ -36,7 +37,7 @@ h6 {
 	font-size: 1.1em
 }
 .fill-space {
-	background-image: url("/projects/astonishing-stories/wholeness-in-a-timeless-activity-bg.jpg");
+	background-image: url("/projects/astonishing-stories/wholeness-in-a-timeless-activity-bg.webp");
 	background-position: top center;
 	background-size: cover;
 }

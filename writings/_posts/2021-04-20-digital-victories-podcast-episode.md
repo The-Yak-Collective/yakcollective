@@ -1,0 +1,10 @@
+---
+layout: post-external
+title: |
+  Digital Victories Podcast Episode
+date: 2021-04-20 17:00:00 +0000
+author: 100063
+original_link: http://tomcritchlow.com/2021/04/21/digital-victories-podcast/
+---
+
+I was invited on to the digital victories podcast recently and really enjoyed the conversation. We covered how to actually convince clients to change, why executive presence matters and why I’m launching the SEO MBA.

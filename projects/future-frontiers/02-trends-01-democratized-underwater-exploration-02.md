@@ -5,7 +5,7 @@ title: Democratized Underwater Exploration
 layout: page-project-slide
 date: 2020-12-01 00:00:00
 google_doc: "https://docs.google.com/presentation/d/1oIziqtVM878uRG-JOfrQNvGFsQWKP_S_W8cLkhQlXvA/edit#slide=id.g8f42444074_0_15"
-hero_image: /projects/future-frontiers/02-trends-01-democratized-underwater-exploration-02.jpg
+hero_image: /projects/future-frontiers/02-trends-01-democratized-underwater-exploration-02.webp
 hero_border: true
 hero_description: Democratized underwater exploration
 hero_caption:  |

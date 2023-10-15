@@ -1,15 +1,5 @@
 #!/usr/bin/env bash
 
-# Software requirements:
-#
-#     bash
-#     curl
-#     jq
-#
-# These are all available in the current/default Netlify build image.
-#
-#     https://github.com/netlify/build-image/blob/focal/included_software.md
-#
 # These environment variables should also be set:
 #
 #     KNACK_APP_ID
@@ -22,6 +12,20 @@
 #
 # App ID and API KEY are available in the Knack Builder under Settings >
 # API & Code.
+
+# Source init. (But ONLY if we're not being run from common-init.sh, to
+# prevent infinite recursion.)
+#
+if [[ -z "$KNACK_YAK_PULL_CALLED_BY_COMMON_INIT" ]]; then
+	if [[ -f ./_bin/common-init.sh ]]; then
+		export COMMON_INIT_CALLED_BY_KNACK_YAK_PULL=1
+		source ./_bin/common-init.sh
+		unset COMMON_INIT_CALLED_BY_KNACK_YAK_PULL
+	else
+		echo "Init file not found! Are you running from the repository root?"
+		exit 1
+	fi
+fi
 
 # Knack can return up to 1000 rows per page. The default is 25.
 #
@@ -82,22 +86,22 @@ while IFS= read -r RECORD; do
 	KNACK_PATH="$(echo "$RECORD" | cut -s -f 2 | sed -e "s#https://s3-eu-west-1.amazonaws.com/assets.knack-eu.com/assets/5f70876d8e7037001504bfe8/##")"
 	if [[ -n "$KNACK_PATH" ]]; then
 		USE_CURL="yes"
-		AVATAR_URL="https://res.cloudinary.com/yak-collective/image/upload/c_fill,g_face,w_400,h_400,e_sharpen:50/yak-barn-v1/${KNACK_PATH%.*}.jpg"
-		OG_URL="https://res.cloudinary.com/yak-collective/image/upload/c_fill,g_face,w_1200,h_630,e_sharpen:50/yak-barn-v1/${KNACK_PATH%.*}.jpg"
+		AVATAR_URL="https://res.cloudinary.com/yak-collective/image/upload/c_fill,g_face,w_400,h_400,e_sharpen:50/yak-barn-v1/${KNACK_PATH%.*}.webp"
+		OG_URL="https://res.cloudinary.com/yak-collective/image/upload/c_fill,g_face,w_1200,h_630,e_sharpen:50/yak-barn-v1/${KNACK_PATH%.*}.webp"
 	else
 		USE_CURL="no"
 		AVATAR_URL=""
 		OG_URL=""
 	fi
 	if [[ "$USE_CURL" == "yes" ]]; then
-		curl -sS -o "members/${MEMBER_ID}.jpg"    "$AVATAR_URL"
-		curl -sS -o "members/${MEMBER_ID}-og.jpg" "$OG_URL"
+		curl -sS -o "members/${MEMBER_ID}.webp"    "$AVATAR_URL"
+		curl -sS -o "members/${MEMBER_ID}-og.webp" "$OG_URL"
 	fi
-	if [[ ! -s "members/${MEMBER_ID}.jpg" ]]; then
-		cp "img/yak.jpg" "members/${MEMBER_ID}.jpg"
+	if [[ ! -s "members/${MEMBER_ID}.webp" ]]; then
+		cp "img/yak.webp" "members/${MEMBER_ID}.webp"
 	fi
-	if [[ ! -s "members/${MEMBER_ID}-og.jpg" ]]; then
-		cp "img/yak-og.jpg" "members/${MEMBER_ID}-og.jpg"
+	if [[ ! -s "members/${MEMBER_ID}-og.webp" ]]; then
+		cp "img/yak-og.webp" "members/${MEMBER_ID}-og.webp"
 	fi
 done <<< "$(jq -r '.records[] | [.field_101_raw, .field_44_raw.url?] | @tsv' _data/knack_yaks.json | sed -e 's/^\s*//;s/\s*$//')"
 

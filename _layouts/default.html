@@ -16,7 +16,7 @@
 		<meta name="twitter:site" content="@yak_collective">
 		<meta name="viewport" content="width=device-width">
 		<meta property="og:type" content="article" />
-		<link rel="icon" href="/img/favicon.png" />
+		<link rel="icon" href="/img/favicon.webp" />
 
 		{% comment %}
 			If an RSS feed exists at `/the/current/path/feed.xml` or any
@@ -126,18 +126,18 @@
 		<meta name="twitter:title" content="{{ the_title }}">
 
 		{% comment %}
-			Preload used Font Awesome files (a.k.a. Lighthouse score
-			hacking).
+			Preconnect hints (for fonts & styles).
 		{% endcomment %}
-		<link rel="preload" href="/fonts/awesome/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
-		<link rel="preload" href="/fonts/awesome/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+		<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link rel="preconnect" href="https://unpkg.com" crossorigin>
 
 		{% comment %}
 			CSS magic.
 		{% endcomment %}
-		<link rel="stylesheet" href="/css/fonts.css">
-		<link rel="stylesheet" href="/css/font-awesome.min.css">
-		<link rel="stylesheet" href="/css/tachyons.min.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap">
+		<link rel="stylesheet" href="https://unpkg.com/@fortawesome/fontawesome-free@5.15.4/css/all.min.css">
+		<link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css">
 		<link rel="stylesheet" href="/css/layout.css">
 		<link rel="stylesheet" href="/css/layout-30.css" media="(min-width: 30em)">
 		<link rel="stylesheet" href="/css/layout-40.css" media="(min-width: 40em)">
@@ -209,7 +209,7 @@
 			on.
 		{% endcomment %}
 		{% assign page_author = "yak_collective" %}
-		{% assign page_image ="__SITE_BASE_URL__/img/yak-og.jpg" %}
+		{% assign page_image ="__SITE_BASE_URL__/img/yak-og.webp" %}
 		{% if page.author %}
 			{% assign member = site.data.knack_yaks.records | find: "field_101_raw", page.author %} 
 			{% if member %}
@@ -217,14 +217,14 @@
 				{% if twitter != empty %}
 					{% assign page_author = twitter %}
 				{% endif %}
-				{% assign page_image = "__SITE_BASE_URL__/members/" | append: page.author | append: "-og.jpg" %}
+				{% assign page_image = "__SITE_BASE_URL__/members/" | append: page.author | append: "-og.webp" %}
 			{% endif %}
 		{% elsif page.field_101_raw %}
 			{% assign twitter = page.field_43_raw | strip %}
 			{% if twitter != empty %}
 				{% assign page_author = twitter %}
 			{% endif %}
-			{% assign page_image = "__SITE_BASE_URL__/members/" | append: page.author | append: "-og.jpg" %}
+			{% assign page_image = "__SITE_BASE_URL__/members/" | append: page.author | append: "-og.webp" %}
 		{% endif %}
 		{% if page.hero_image %}
 			{% assign page_image = page.hero_image | prepend: "__SITE_BASE_URL__" %}

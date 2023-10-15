@@ -5,7 +5,7 @@ title: On Horizons
 layout: page-project-slide
 date: 2020-12-01 00:00:00
 google_doc: "https://docs.google.com/presentation/d/1oIziqtVM878uRG-JOfrQNvGFsQWKP_S_W8cLkhQlXvA/edit#slide=id.ga87d80f4b3_0_0"
-hero_image: /projects/future-frontiers/01-philosophy-01-on-horizons-01.jpg
+hero_image: /projects/future-frontiers/01-philosophy-01-on-horizons-01.webp
 hero_description: On horizons
 hero_caption:  |
   Carse photo from [Simon &amp; Schuster](https://www.simonandschuster.biz/authors/James-Carse/313085); collage by [Jenna Dixon](/members/100018/)

@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Sonsie+One&family=Ceviche+One&family=Bangers&display=swap");
 body {
 	font-family: "Noto Sans", Verdana, sans-serif;
 }
@@ -47,6 +48,12 @@ h6 {
 		padding-top: 2rem;
 		padding-bottom: 1rem;
 	}
+}
+#spotify-iframe {
+	border-radius: 12px;
+	width: 100%;
+	height: 352px;
+	border: none;
 }
 #agglomerizing-the-aesthetic h2,
 #your-payment-is-ready h2 {

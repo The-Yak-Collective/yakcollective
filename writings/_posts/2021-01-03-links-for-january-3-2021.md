@@ -1,0 +1,32 @@
+---
+title: Links for January 3, 2021
+date: 2021-01-03 20:09:03.000000000 Z
+layout: post-external
+original_link: https://bens.substack.com/p/links-for-january-3-2021
+author: 100046
+---
+
+#### Happy New Year.
+
+#### Links:
+
+- [Avoid the news: towards a healthy news diet](https://www.gwern.net/docs/culture/2010-dobelli.pdf) (Rolf Dobelli) Also, a more humorous take: [Why TV news is a waste of human effort](https://www.cgpgrey.com/blog/why-tv-news-is-a-waste-of-human-effort-one-video-is-worth-a-trillion-dollars)). I think this is part of a broader difficulty navigating our relationship with information. Writers like Cal Newport encourage [Deep Work](https://www.amazon.com/Deep-Work-Focused-Success-Distracted/dp/1455586692) while others consider such disengagement [actively detrimental](https://breakingsmart.substack.com/p/semicolon-shaped-people) for life in the [modern world](https://breakingsmart.substack.com/p/against-waldenponding). I often find it difficult to focus on one thing without getting distracted. Reading, really skimming, the news—and its more insidious cousins, the listicle, Twitter, and Instagram—can make it difficult to focus on longer pieces of writing or any activity that requires sustained attention. And I think my ability to focus has gotten worse over time. A quick test might be to see if you can read the entirety of the linked article without clicking away to something else. I couldn’t. A recent book by Ann Blair which I haven’t read yet—_[Too much to know: managing scholarly information before the Modern Age](https://www.amazon.com/Deep-Work-Focused-Success-Distracted/dp/1455586692)—_argues that the feeling of information overload isn’t new. 
+
+- [My four months as a private prison security guard](https://www.motherjones.com/politics/2016/06/cca-private-prisons-corrections-corporation-inmates-investigation-bauer/) (2016, _Mother Jones_) Much better than I expected. Written by the same guy who was held prisoner in Iran for two years after he and two buddies accidentally wandered across the border from Iraq. I remember thinking when I first heard that story, “You had to do one thing! And that was _not_ go hiking in Iraq!”
+
+- [Can Poetry Matter?](https://www.theatlantic.com/magazine/archive/1991/05/can-poetry-matter/305062/) (1991, Dana Gioia) Rather old but still relevant and still interesting. There’s more poetry being written than ever, yet nobody reads any of it. Why? If you ask the poets, they’ll complain about the degenerate tastes of the _hoi polloi_. If you ask Dana Gioia, he’ll say that it’s because a lot of contemporary poetry isn’t very good, and it’s mostly written for other poets to fawn over and in order for the authors to get cushy teaching gigs in college creative writing programs. [Who Killed Poetry?](https://buoy.antville.org/static/sites/buoy/files/epstien.pdf) (1988, Joseph Epstein) is another good article that makes overlapping points. I liked this quote about why nobody writes book-length poems anymore: “The most recent effort, a 307-page novel entitled _The Golden Gate_, composed in a Pushkinian rhyme scheme by a young writer named Vikram Seth, appeared in 1986 to much acclaim. But it was acclaim of the odd kind that Samuel Johnson felt was owed to women preachers and dogs walking on their hind legs: ‘You are surprised to find it done at all.’ So swept away were readers by the sheer freakiness of Vikram Seth's accomplishment that they overlooked its rather clichéd Berkeleyan (California not Bishop) message about making love not war.” 
+
+- [The last children of Down-syndrome](https://www.theatlantic.com/magazine/archive/2020/12/the-last-children-of-down-syndrome/616928/) (2020, _The Atlantic_) As prenatal genetic testing becomes more ubiquitous, the number of children born with Down syndrome has greatly declined. Is this a good thing? A quote from the article: “[…] Down syndrome is defined and diagnosed by a medical system made up of people who have to be highly successful to get there, who likely base part of their identity on their intelligence. This is the system giving parents the tools to decide what kind of children to have. Might it be biased on the question of whose lives have value?” 
+
+- [At a loss for words: how a flawed idea is teaching millions of kids to be poor readers](https://www.apmreports.org/episode/2019/08/22/whats-wrong-how-schools-teach-reading) (2019, _American Public Media Reports_) I think I learned to read with phonics. These other methods seem kind of wacky. 
+
+- [The Atlantic retracts an article](https://awfulannouncing.com/online-outlets/the-atlantic-retracts-niche-sports-article-saying-author-decieved-them.html) I [linked to previously](https://bens.substack.com/p/links-for-october-23-2020) on how wealthy, Ivy-obsessed, New England parents push their children into obscure high school sports to give them a leg-up in college admissions. The author, Ruth Shalit, made-up or exaggerated numerous details in her piece and had previously left her job at the _New Republic_ after she was accused of plagiarism in the late-90s. Native of Whitefish Bay in Milwaukee.
+
+#### **Books I’m Currently Reading:**
+
+- [The Dark Forest](https://www.amazon.com/Dark-Forest-Remembrance-Earths-Past/dp/0765386690/) (Cixin Liu) I finished the first book in the series. Very good. This is the second. Megan has finished the whole trilogy and says the second and third books are better than the first, but I am reading it a little more slowly. 
+
+- [Being-in-the-World: A Commentary on Heidegger's Being and Time](https://www.amazon.com/Being-World-Commentary-Heideggers-Division/dp/0262540568) (Hubert Dreyfus) Still reading. One observation is that it must be exceedingly difficult to describe ideas and concepts no one has had before. The language isn’t there and neither is the intuition. I probably won’t understand enough to give a decent synopsis, but one of Heidegger’s motivating ideas is that the familiar distinction between subject and object that philosophers have assumed since Plato isn’t so fundamental and actually misrepresents a good deal of the way people experience the world around them.
+
+- [Works and lives: the anthropologist as author](https://www.amazon.com/Works-Lives-Anthropologist-as-Author/dp/0804717478) (Clifford Geertz) What makes an anthropologist’s account of a foreign culture persuasive? Or, why should anyone listen to an anthropologist? Asking for a friend.
+

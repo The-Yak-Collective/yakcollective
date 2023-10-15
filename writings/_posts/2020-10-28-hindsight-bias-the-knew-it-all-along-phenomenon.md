@@ -1,0 +1,44 @@
+---
+layout: post-external
+title: |
+  Hindsight bias: the knew-it-all-along phenomenon
+date: 2020-10-28 02:24:00 +0000
+author: 100071
+original_link: https://nesslabs.com/hindsight-bias?utm_source=rss&utm_medium=rss&utm_campaign=hindsight-bias
+---
+
+Historians and physicians alike are constantly fighting an invisible beast: the hindsight bias, also known as creeping determinism, which is the tendency for people to perceive past outcomes as having been more predictable than they actually were. Linked to distortions of our memories, the hindsight bias causes us to think we knew how an event would unfold, even before the event happened. It’s the typical “I knew it!” we hear so often in conversations. Very often, we actually didn’t know.
+
+## Biased cognitive models
+
+The hindsight bias is likely to be caused by many connected processes rather than one single factor. To understand the cognitive processes behind the hindsight bias, researchers have [created](https://guilfordjournals.com/doi/10.1521/soco.2007.25.1.132) three separate models.
+
+**1. Selective activation and reconstructive anchoring (SARA) —** People can only remember small, select amounts of information. When they are asked to recall an event later, they use that biased selection of memories to support their own opinions about the event. The current information about the event acts as a memory anchor, which then impacts the reactivated memories, and alters them. So, first, we only reactivate a biased selection of memories, and then we reconstruct these memories to fit the new anchor.
+
+**2. Reconstruction after feedback with “take the best” (RAFT) —** A by-product of adaptive learning, this model is based on the way we evaluate knowledge. For instance, if you are asked whether Paris has 1 million or 2 million inhabitants, your answer will be influenced by how much you know about Paris. If you have visited, you may perceive it as more populous. If you have only seen romantic movies about Paris, you may perceive it as less populous. Based on that knowledge, we “take the best” answer and reconstruct our memories accordingly. Similarly, when asked to evaluate the probability of an event in hindsight, we can’t help but use our current knowledge to determine the best answer and update our knowledge base.
+
+**3. Causal model theory (CMT) —** When there is a discrepancy between a person’s expectations and the reality of an event, we tend to try to explain the outcome through cause reasoning. We go back in time, following the chain of events, selectively retrieving memories that seem to logically be connected, which can give us the false sentiment that the outcome was inevitable.
+
+It is currently unknown which model accounts for most of the times we fall prey to the hindsight bias, though it is suspected all three models play a role in combination.
+
+## Consequences of the hindsight bias
+
+The hindsight bias has positive and negative consequences. As long as the bias distortion is reasonable, the hindsight bias can lead to an increase in confidence and performance, giving us assurance in our own decision-making so we don’t experience [choice paralysis](https://nesslabs.com/overchoice) in the future.
+
+However, the hindsight bias can be a barrier to rational thinking, and it can reduce our ability to learn from experience. If we always think we correctly predicted an outcome, how can we draw lessons from wrong decisions?
+
+The hindsight bias is particularly dangerous in the medical space, where doctors may not be able to assess their diagnostic rationally. Dr Hal Arkes [reports](https://journals.sagepub.com/doi/full/10.1177/0963721413489988) this enlightening anecdote:
+
+_“A clinicopathologic conference (CPC) is a dramatic event at a hospital. A young physician, such as a resident, is given all of the documentation except the autopsy report that pertains to a deceased patient. After studying the material for a week or so, the physician presents the case to the assembled medical staff, going over the case and listing the differential diagnosis, which consists of the several possible diagnoses for this patient. Finally, the presenting physician announces the diagnosis that he or she thinks is the correct one. The presenter then sits down, sweating profusely, as the pathologist who did the autopsy takes the podium and announces the correct diagnosis. The cases are chosen because they are difficult, so the presenting physician’s hypothesis often is incorrect. The CPC is supposed to be an educational experience. Its goal is to enlighten the audience members about diagnosing a particularly challenging case. However, after hearing the pathologist’s report, which contradicts the diagnosis made by the presenting physician, many audience members think, “Why aren’t we hiring residents as astute as my cohort of residents? This diagnosis was easy.” The audience members do not learn from the instructive case presented at the CPC. Instead, they criticize the presenter, because in hindsight, they think the case was relatively obvious.”_
+
+If the hindsight bias is so prevalent and so dangerous, how can we manage it better and avoid its worst pitfalls?
+
+## Alternative hypotheses
+
+Unfortunately, [research](https://www.sciencedirect.com/science/article/abs/pii/S0749597896900643) suggests that it is impossible to completely get rid of the hindsight bias. People still fall prey to it even when they are aware of it or even when they have the intention of actively eradicating it. However, while it is not possible to eliminate it, we can significantly reduce the bias by using a simple method.
+
+“Before some neuropsychologists stated in hindsight the probability that they would have assigned to the correct diagnosis, they first had to explain how each alternative diagnosis might have been correct. What symptoms might have been consistent with the diagnoses that were not the correct one? This simple exercise reduced the magnitude of the hindsight bias by 71#,” reports Dr Hal Arkes.
+
+Thinking about how alternative hypotheses could be correct is the single most powerful strategy to reduce the effects of the hindsight bias. Next time you are tempted to say “I knew it all along!”, think instead of alternative outcomes and how they could have been correct. It may not always work, but the practice will help you avoid the hindsight bias in many situations when we are prone to [jumping to conclusions](https://nesslabs.com/jumping-to-conclusions).
+
+The post [Hindsight bias: the knew-it-all-along phenomenon](https://nesslabs.com/hindsight-bias) appeared first on [Ness Labs](https://nesslabs.com).
