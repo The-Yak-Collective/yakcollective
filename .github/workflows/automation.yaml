@@ -2,7 +2,7 @@ name: Update RSS cache and social media feeds
 
 on:
   schedule:
-    - cron: '30 */1 * * *'
+    - cron: '0 */12 * * *'
 
 jobs:
   automation:
