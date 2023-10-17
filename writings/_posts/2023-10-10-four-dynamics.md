@@ -14,6 +14,8 @@ Empower. Harmonise.
 
 How are these out of balance in your organisation? And what’s the cost?
 
+![](https://chosenpath.files.wordpress.com/2023/10/image-14.png?w=934)
+
 Sounds a bit like something on offer in a fancy hair salon, I know.
 
 But these dynamics turn out to be critical for human and organisational effectiveness.
