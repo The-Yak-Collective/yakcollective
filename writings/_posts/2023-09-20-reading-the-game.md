@@ -82,5 +82,5 @@ Thanks for reading The Uncertainty Mindset (soon to become tbd)! Subscribe for f
 
 [1](#footnote-anchor-1)
 
-I’m sure there are games which represent situations of true uncertainty — i.e., where the game is designed around one or more of incompletely known actions, outcomes, causation, and/or value. I can’t think of many at the moment (other than something like the fictional game [Azad in](https://en.wikipedia.org/wiki/The_Player_of_Games)_[The Player of Games](https://en.wikipedia.org/wiki/The_Player_of_Games)_ where the uncertainty is a major #plottwist) so please send pointers to actual games like this.
+I’m sure there are games which represent situations of true uncertainty — i.e., where the game is designed around one or more of incompletely known actions, outcomes, causation, and/or value. I can’t think of many at the moment (other than something like the fictional game [Azad in](https://en.wikipedia.org/wiki/The_Player_of_Games)_[The Player of Games](https://en.wikipedia.org/wiki/The_Player_of_Games)_ where the uncertainty is a major #plottwist) so please send pointers to actual games like this. **Update (19/10/23):** The [Glass Bead Game](https://en.wikipedia.org/wiki/The_Glass_Bead_Game) (in the eponymous book) and [Calvinball](https://calvinandhobbes.fandom.com/wiki/Calvinball) (from Calvin & Hobbes) are two other fictional games like this.
 
