@@ -112,7 +112,7 @@ if [[ ! -f .common-init ]]; then
 			exit 1
 		fi
 	fi
-	python3 -m pip install farcaster
+	python3 -m pip install --upgrade farcaster
 
 	# Pull Knack data. (But ONLY if we're not being run from
 	# knack-pull-yaks.sh, to prevent infinite recursion.)

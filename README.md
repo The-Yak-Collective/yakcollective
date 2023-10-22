@@ -4,37 +4,71 @@
 
 Every collective needs a website. This is ours. It isn't much to look at, but it gets the job done.
 
-## Building the Website
+## Local Website and Automation Testing
 
 ```bash
-# You'll need to set the KNACK_APP_ID, KNACK_API_KEY, and KNACK_OBJECT
-# environment variables in order to pull the member list down locally
-# (which is needed for the build process). Values for these variables
-# can be found in Netlify. NEVER COMMIT THESE VARIABLES TO GIT!
+# Make sure that the environment is set.
 #
-export KNACK_APP_ID=XXXXXXXX
-export KNACK_API_KEY=YYYYYYYY
-export KNACK_OBJECT=ZZZZZZZZ
+export KNACK_APP_ID=XXXXXXXXXXXXXXX
+export KNACK_API_KEY=XXXXXXXXXXXXXXX
+export KNACK_OBJECT=XXXXXXXXXXXXXXX
+[[ ! -f pyvenv.cfg ]] && python3 -m venv .
+. ./bin/activate
+[[ -f .common-init ]] && rm .common-init
+./_bin/common-init.sh
 
-# Cache member data locally.
+# Pull RSS feed update.
 #
-./_bin/knack-pull-yaks.sh
+./_bin/rss-pull-feeds.sh
 
-# OPTIONAL: Set Bundler to only install gems within the build
-# directory.
+# Build the actual website.
 #
-bundle config set path vendor/bundle
+./_bin/build.sh
 
-# Install deps.
-#
-bundle install
-
-# Serve the site on http://127.0.0.1:4000.
+# View the website locally via http://127.0.0.1:4000.
 #
 bundle exec jekyll serve
-```
 
-In general there should be not need to run `_bin/build.sh` unless you're specifically debugging that functionality.
+# Push the website to Netlify.
+#
+export NETLIFY_AUTH_TOKEN=XXXXXXXXXXXXXXX
+export NETLIFY_SITE=XXXXXXXXXXXXXXX
+./node_modules/.bin/netlify deploy --dir _site --site $NETLIFY_SITE --message "Local development deploy $(date -u +"%Y%m%d%H%M%S")/${USER}@${HOST}" --prod
+
+# Push an update to Twitter.
+#
+export IFTTT_MAKER_KEY=XXXXXXXXXXXXXXX
+./_bin/push-to-twitter.sh
+
+# Push an update to Bluesky.
+#
+export BLUESKY_APP_PASSWORD=XXXXXXXXXXXXXXX
+./_bin/push-to-bluesky.sh
+
+# Push an update to Farcaster.
+#
+export FARCASTER_MNEMONIC="XXXXXXXXXXXXXXX"
+./_bin/push-to-farcaster.sh
+
+# Run the #yaks-at-work update script.
+#
+export DISCORD_CHANNEL_URL=https://discord.com/api/webhooks/0000000000000000/XXXXXXXXXXXXXXX
+./_bin/push-to-discord.sh
+
+# Push website health stats to Discord.
+#
+export DISCORD_CHANNEL_URL=https://discord.com/api/webhooks/0000000000000000/XXXXXXXXXXXXXXX
+export GH_ACCOUNT_SLUG=XXXXXXXXXXXXXXX
+export GH_TOKEN=XXXXXXXXXXXXXXX
+export NETLIFY_ACCOUNT_EMAIL=XXXXXXXXXXXXXXX@XXXXXXXXXXXXXXX
+export NETLIFY_ACCOUNT_SLUG=XXXXXXXXXXXXXXX
+export NETLIFY_AUTH_TOKEN=XXXXXXXXXXXXXXX
+./_bin/stats-to-discord.sh
+
+# Leave Python virtual environment.
+#
+deactivate
+```
 
 ## Ways to Contribute
 
