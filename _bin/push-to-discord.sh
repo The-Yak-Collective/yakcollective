@@ -26,9 +26,12 @@ fi
 
 # Determine the (lexigraphically) oldest Discord post file. This
 # variable will be the empty string if no (non-hidden) files are in the
-# _discord directory
+# _discord directory (in which case we should exit).
 #
 POST="$(ls -1 _discord | sort -u | head -1)"
+if [[ -z "$POST" ]]; then
+	exit
+fi
 
 # If $POST is a zero-length file, we just skip posting this cycle. This
 # allows for (very rough) timed posting. (Basically, this forces
@@ -43,9 +46,7 @@ fi
 
 # Post file contents to Discord and delete file if successful.
 #
-if [[ -n "$POST" ]]; then
-	curl -s -H "Accept: application/json" -H "Content-Type: application/json" -d "{\"content\":\"$(cat "_discord/$POST" | sed -e 's/"/\\"/g')\"}" "$DISCORD_CHANNEL_URL"
-	if [[ $? -eq 0 ]]; then
-		rm "_discord/$POST"
-	fi
+curl -s -H "Accept: application/json" -H "Content-Type: application/json" -d "{\"content\":\"$(cat "_discord/$POST" | sed -e 's/"/\\"/g')\"}" "$DISCORD_CHANNEL_URL"
+if [[ $? -eq 0 ]]; then
+	rm "_discord/$POST"
 fi

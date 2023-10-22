@@ -26,9 +26,12 @@ fi
 
 # Determine the (lexigraphically) oldest Twitter post file. This
 # variable will be the empty string if no (non-hidden) files are in the
-# _twitter directory
+# _twitter directory (in which case we should exit).
 #
 POST="$(ls -1 _twitter | sort -u | head -1)"
+if [[ -z "$POST" ]]; then
+	exit
+fi
 
 # If $POST is a zero-length file, we just skip posting this cycle. This
 # allows for (very rough) timed posting. (Basically, this forces
@@ -43,9 +46,7 @@ fi
 
 # Post file contents to Twitter and delete file if successful.
 #
-if [[ -n "$POST" ]]; then
-	curl -s -G --data-urlencode "value1=$(cat "_twitter/$POST" | sed -e 's/"/\\"/g')" https://maker.ifttt.com/trigger/post_to_twitter/with/key/$IFTTT_MAKER_KEY
-	if [[ $? -eq 0 ]]; then
-		rm "_twitter/$POST"
-	fi
+curl -s -G --data-urlencode "value1=$(cat "_twitter/$POST" | sed -e 's/"/\\"/g')" https://maker.ifttt.com/trigger/post_to_twitter/with/key/$IFTTT_MAKER_KEY
+if [[ $? -eq 0 ]]; then
+	rm "_twitter/$POST"
 fi

@@ -26,9 +26,12 @@ fi
 
 # Determine the (lexigraphically) oldest Farcaster post file. This
 # variable will be the empty string if no (non-hidden) files are in the
-# _farcaster directory
+# _farcaster directory (in which case we should exit).
 #
 POST="$(ls -1 _farcaster | sort -u | head -1)"
+if [[ -z "$POST" ]]; then
+	exit
+fi
 
 # If $POST is a zero-length file, we just skip posting this cycle. This
 # allows for (very rough) timed posting. (Basically, this forces
@@ -43,10 +46,8 @@ fi
 
 # Post file contents to Farcaster and delete file if successful.
 #
-if [[ -n "$POST" ]]; then
-	export FARCASTER_POST="$(cat "_farcaster/$POST")"
-	python3 -c 'import os; from farcaster import Warpcast; client = Warpcast(mnemonic = os.environ.get("FARCASTER_MNEMONIC")); client.post_cast(text = os.environ.get("FARCASTER_POST"));'
-	if [[ $? -eq 0 ]]; then
-		rm "_farcaster/$POST"
-	fi
+export FARCASTER_POST="$(cat "_farcaster/$POST")"
+python3 -c 'import os; from farcaster import Warpcast; client = Warpcast(mnemonic = os.environ.get("FARCASTER_MNEMONIC")); client.post_cast(text = os.environ.get("FARCASTER_POST"));'
+if [[ $? -eq 0 ]]; then
+	rm "_farcaster/$POST"
 fi

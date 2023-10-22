@@ -26,10 +26,12 @@ fi
 
 # Determine the (lexigraphically) oldest Bluesky post file. This
 # variable will be the empty string if no (non-hidden) files are in the
-# _bluesky directory
+# _bluesky directory (in which case we should exit).
 #
 POST="$(ls -1 _bluesky | sort -u | head -1)"
-POST_CONTENT="$(cat "_bluesky/$POST")"
+if [[ -z "$POST" ]]; then
+	exit
+fi
 
 # If $POST is a zero-length file, we just skip posting this cycle. This
 # allows for (very rough) timed posting. (Basically, this forces
@@ -41,6 +43,12 @@ if [[ ! -s "_bluesky/$POST" ]]; then
 	rm "_bluesky/$POST"
 	exit
 fi
+
+# Posting to Bluesky with working links takes a lot of magic. It's
+# helpful to have the post content stored as a variable for what's
+# about to come.
+#
+POST_CONTENT="$(cat "_bluesky/$POST")"
 
 # Pull out link (if any). Regex from:
 #
@@ -80,7 +88,7 @@ MENTION_END=$(( ${#POST_CONTENT} - ${#REMAINING} ))
 
 MENTION_DID="$(curl -s "https://bsky.social/xrpc/com.atproto.identity.resolveHandle?handle=${MENTION:1}" | jq -r .did)"
 
-if [[ "$MENTION_DID" = "null" ]]; then
+if [[ "$MENTION_DID" = "null" ]] || [[ -z "$MENTION_DID" ]]; then
 	MENTION_FACET=""
 else
 	MENTION_FACET=",{\"index\":{\"byteStart\":$MENTION_START,\"byteEnd\":$MENTION_END},\"features\":[{\"\$type\":\"app.bsky.richtext.facet#mention\",\"did\":\"$MENTION_DID\"}]}"
@@ -88,12 +96,10 @@ fi
 
 # Post file contents to Bluesky and delete file if successful.
 #
-if [[ -n "$POST" ]]; then
-	AUTH_TOKEN="$(curl -s -H "Accept: application/json" -H "Content-Type: application/json" -d "{\"identifier\":\"yakcollective.org\",\"password\":\"$BLUESKY_APP_PASSWORD\"}" https://bsky.social/xrpc/com.atproto.server.createSession | jq -r .accessJwt)"
+AUTH_TOKEN="$(curl -s -H "Accept: application/json" -H "Content-Type: application/json" -d "{\"identifier\":\"yakcollective.org\",\"password\":\"$BLUESKY_APP_PASSWORD\"}" https://bsky.social/xrpc/com.atproto.server.createSession | jq -r .accessJwt)"
+if [[ $? -eq 0 ]]; then
+	echo curl -s -H "Authorization: Bearer $AUTH_TOKEN" -H "Accept: application/json" -H "Content-Type: application/json" -d "{\"repo\":\"yakcollective.org\",\"collection\":\"app.bsky.feed.post\",\"record\":{\"\$type\":\"app.bsky.feed.post\",\"text\":\"$(echo "$POST_CONTENT" | sed -e 's/"/\\"/g')\",\"createdAt\":\"$(date -u +"%Y-%m-%dT%H:%M:%SZ")\",\"facets\":[$LINK_FACET$MENTION_FACET]}}" https://bsky.social/xrpc/com.atproto.repo.createRecord
 	if [[ $? -eq 0 ]]; then
-		curl -s -H "Authorization: Bearer $AUTH_TOKEN" -H "Accept: application/json" -H "Content-Type: application/json" -d "{\"repo\":\"yakcollective.org\",\"collection\":\"app.bsky.feed.post\",\"record\":{\"\$type\":\"app.bsky.feed.post\",\"text\":\"$(echo "$POST_CONTENT" | sed -e 's/"/\\"/g')\",\"createdAt\":\"$(date -u +"%Y-%m-%dT%H:%M:%SZ")\",\"facets\":[$LINK_FACET$MENTION_FACET]}}" https://bsky.social/xrpc/com.atproto.repo.createRecord
-		if [[ $? -eq 0 ]]; then
-			rm "_bluesky/$POST"
-		fi
+		rm "_bluesky/$POST"
 	fi
 fi
