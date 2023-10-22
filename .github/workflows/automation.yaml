@@ -29,6 +29,7 @@ jobs:
           NETLIFY_SITE: ${{ secrets.NETLIFY_SITE }}
         run: |
           ./_bin/build.sh
+          echo "$(date -u +"%Y%m%d%H%M%S")" > _site/build-date.txt
           ./node_modules/.bin/netlify deploy --dir _site --site $NETLIFY_SITE --message "Automatic deploy from GitHub Actions $(date -u +"%Y%m%d%H%M%S")" --prod
       - name: Push oldest queued post to Twitter
         env:
