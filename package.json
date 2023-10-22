@@ -12,7 +12,8 @@
   "author": "Nathan Acks <nathan.acks@cardboard-iguana.com>",
   "license": "MIT",
   "dependencies": {
-    "all-relative": "*"
+    "all-relative": "*",
+    "netlify-cli": "*"
   },
   "repository": {
     "url": "https://github.com/The-Yak-Collective/yakcollective"

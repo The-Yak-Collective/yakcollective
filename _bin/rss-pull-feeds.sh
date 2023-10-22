@@ -47,6 +47,8 @@ fi
 
 # Integrate new Bluesky posts.
 #
+echo "Setting up new Bluesky posts..."
+
 while read -r FILE; do
 	DATE="$(basename ${FILE%%-*})"
 	if [[ $DATE -ge $LAST_RUN ]]; then
@@ -55,6 +57,8 @@ while read -r FILE; do
 		rm "$FILE"
 	fi
 done < <(find _pluto/bluesky -type f -iname '*.txt')
+
+echo "Fixing Bluesky handles..."
 
 while read -r RECORD; do
 	MEMBER_ID="$(echo "$RECORD" | cut -f 1)"
@@ -78,6 +82,8 @@ done < <(jq -r '.records[] | [.field_101_raw, .field_97_raw?] | @tsv' _data/knac
 
 # Integrate new Farcaster posts.
 #
+echo "Setting up new Farcaster posts..."
+
 while read -r FILE; do
 	DATE="$(basename ${FILE%%-*})"
 	if [[ $DATE -ge $LAST_RUN ]]; then
@@ -109,6 +115,8 @@ done < <(jq -r '.records[] | [.field_101_raw, .field_97_raw?] | @tsv' _data/knac
 
 # Integrate new Discord posts.
 #
+echo "Setting up new Discord posts..."
+
 while read -r FILE; do
 	DATE="$(basename ${FILE%%-*})"
 	if [[ $DATE -ge $LAST_RUN ]]; then
@@ -120,6 +128,8 @@ done < <(find _pluto/discord -type f -iname '*.txt')
 
 # Integrate new Twitter posts.
 #
+echo "Setting up new Twitter posts..."
+
 while read -r FILE; do
 	DATE="$(basename ${FILE%%-*})"
 	if [[ $DATE -ge $LAST_RUN ]]; then

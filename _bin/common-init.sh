@@ -68,10 +68,15 @@ if [[ ! -f .common-init ]]; then
 	if [[ -z "$(which gem)" ]]; then
 		if [[ -n "$(which brew)" ]]; then
 			brew install ruby
+			if [[ -d /opt/homebrew/opt/ruby/bin ]]; then
+				PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+			elif [[ -d /usr/local/opt/ruby/bin ]]; then
+				PATH="/usr/local/opt/ruby/bin:$PATH"
+			fi
 		elif [[ -n "$(which apt)" ]]; then
-			sudo apt install -y ruby
+			sudo apt install -y ruby bundler
 		elif [[ -n "$(which yum)" ]]; then
-			sudo yum install -y ruby
+			sudo yum install -y ruby rubygem-bundler
 		else
 			echo "Ruby is not found and is not installable! Bailing..."
 			exit 1

@@ -31,8 +31,8 @@ if [[ -z "$NETLIFY_ACCOUNT_SLUG" ]]; then
 	echo "Missing NETLIFY_ACCOUNT_SLUG environment variable!"
 	exit 1
 fi
-if [[ -z "$NETLIFY_TOKEN" ]]; then
-	echo "Missing NETLIFY_TOKEN environment variable!"
+if [[ -z "$NETLIFY_AUTH_TOKEN" ]]; then
+	echo "Missing NETLIFY_AUTH_TOKEN environment variable!"
 	exit 1
 fi
           
@@ -44,6 +44,6 @@ curl -i -H "Accept: application/json" -H "Content-Type:application/json" -X POST
 
 # Push Netlify health stats to Discord.
 #
-NETLIFY_DATA="$(curl -s -H "User-Agent: MyApp $NETLIFY_ACCOUNT_EMAIL" -H "Authorization: Bearer $NETLIFY_TOKEN" https://api.netlify.com/api/v1/${NETLIFY_ACCOUNT_SLUG}/builds/status)"
+NETLIFY_DATA="$(curl -s -H "User-Agent: MyApp $NETLIFY_ACCOUNT_EMAIL" -H "Authorization: Bearer $NETLIFY_AUTH_TOKEN" https://api.netlify.com/api/v1/${NETLIFY_ACCOUNT_SLUG}/builds/status)"
 
 curl -i -H "Accept: application/json" -H "Content-Type:application/json" -X POST --data "{\"content\": \"**Netlify Build Minutes (Monthly):** $(echo $NETLIFY_DATA | jq .minutes.current) used / $(echo $NETLIFY_DATA | jq .minutes.included_minutes) available\"}" "$DISCORD_CHANNEL_URL"

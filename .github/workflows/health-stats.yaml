@@ -18,6 +18,6 @@ jobs:
           GH_TOKEN: ${{ secrets.GH_ROBOT_ACCESS_TOKEN }}
           NETLIFY_ACCOUNT_EMAIL: ${{ secrets.NETLIFY_ACCOUNT_EMAIL }}
           NETLIFY_ACCOUNT_SLUG: ${{ secrets.NETLIFY_ACCOUNT_SLUG }}
-          NETLIFY_TOKEN: ${{ secrets.NETLIFY_TOKEN }}
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_TOKEN }}
         run: |
           ./_bin/stats-to-discord.sh
