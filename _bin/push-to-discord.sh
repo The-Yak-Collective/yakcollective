@@ -30,6 +30,17 @@ fi
 #
 POST="$(ls -1 _discord | sort -u | head -1)"
 
+# If $POST is a zero-length file, we just skip posting this cycle. This
+# allows for (very rough) timed posting. (Basically, this forces
+# automatic posting to wait an hour, though if another post is added to
+# the queue with a filename that comes lexicographically before the
+# zero-length "wait" post, then the wait will be bumped out one cycle.)
+#
+if [[ ! -s "_discord/$POST" ]]; then
+	rm "_discord/$POST"
+	exit
+fi
+
 # Post file contents to Discord and delete file if successful.
 #
 if [[ -n "$POST" ]]; then

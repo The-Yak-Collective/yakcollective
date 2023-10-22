@@ -31,6 +31,17 @@ fi
 POST="$(ls -1 _bluesky | sort -u | head -1)"
 POST_CONTENT="$(cat "_bluesky/$POST")"
 
+# If $POST is a zero-length file, we just skip posting this cycle. This
+# allows for (very rough) timed posting. (Basically, this forces
+# automatic posting to wait an hour, though if another post is added to
+# the queue with a filename that comes lexicographically before the
+# zero-length "wait" post, then the wait will be bumped out one cycle.)
+#
+if [[ ! -s "_bluesky/$POST" ]]; then
+	rm "_bluesky/$POST"
+	exit
+fi
+
 # Pull out link (if any). Regex from:
 #
 #     https://atproto.com/blog/create-post#mentions-and-links
