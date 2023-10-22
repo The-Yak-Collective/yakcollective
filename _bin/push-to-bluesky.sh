@@ -98,7 +98,7 @@ fi
 #
 AUTH_TOKEN="$(curl -s -H "Accept: application/json" -H "Content-Type: application/json" -d "{\"identifier\":\"yakcollective.org\",\"password\":\"$BLUESKY_APP_PASSWORD\"}" https://bsky.social/xrpc/com.atproto.server.createSession | jq -r .accessJwt)"
 if [[ $? -eq 0 ]]; then
-	echo curl -s -H "Authorization: Bearer $AUTH_TOKEN" -H "Accept: application/json" -H "Content-Type: application/json" -d "{\"repo\":\"yakcollective.org\",\"collection\":\"app.bsky.feed.post\",\"record\":{\"\$type\":\"app.bsky.feed.post\",\"text\":\"$(echo "$POST_CONTENT" | sed -e 's/"/\\"/g')\",\"createdAt\":\"$(date -u +"%Y-%m-%dT%H:%M:%SZ")\",\"facets\":[$LINK_FACET$MENTION_FACET]}}" https://bsky.social/xrpc/com.atproto.repo.createRecord
+	curl -s -H "Authorization: Bearer $AUTH_TOKEN" -H "Accept: application/json" -H "Content-Type: application/json" -d "{\"repo\":\"yakcollective.org\",\"collection\":\"app.bsky.feed.post\",\"record\":{\"\$type\":\"app.bsky.feed.post\",\"text\":\"$(echo "$POST_CONTENT" | sed -e 's/"/\\"/g')\",\"createdAt\":\"$(date -u +"%Y-%m-%dT%H:%M:%SZ")\",\"facets\":[$LINK_FACET$MENTION_FACET]}}" https://bsky.social/xrpc/com.atproto.repo.createRecord
 	if [[ $? -eq 0 ]]; then
 		rm "_bluesky/$POST"
 	fi
