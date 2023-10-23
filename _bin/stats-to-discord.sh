@@ -40,7 +40,7 @@ fi
 #
 GITHUB_DATA="$(curl -s -H "Accept: application/vnd.github+json" -H "Authorization: Bearer $GH_TOKEN"  https://api.github.com/orgs/${GH_ACCOUNT_SLUG}/settings/billing/actions)"
 
-curl -i -H "Accept: application/json" -H "Content-Type:application/json" -X POST --data "{\"content\": \"**GitHub Workflow Minutes (Montly):** $(echo $GITHUB_DATA | jq .total_minutes_used) used / $(echo $GITHUB_DATA | jq .included_minutes) available\"}" "$DISCORD_CHANNEL_URL"
+curl -i -H "Accept: application/json" -H "Content-Type:application/json" -X POST --data "{\"content\": \"**GitHub Workflow Minutes (Monthly):** $(echo $GITHUB_DATA | jq .total_minutes_used) used / $(echo $GITHUB_DATA | jq .included_minutes) available\"}" "$DISCORD_CHANNEL_URL"
 
 # Push Netlify health stats to Discord.
 #
