@@ -50,6 +50,23 @@ fi
 #
 POST_CONTENT="$(cat "_bluesky/$POST")"
 
+# Bluesky posts can contain unicode, which CAN use multibyte
+# characters. And the "facet" functionality counts things in BYTES, not
+# characters! To PARTIALLY work around this, we temporarilly set LANG
+# and LC_ALL to the generic "C" locale. See:
+#
+# https://stackoverflow.com/questions/17368067/length-of-string-in-bash/31009961#31009961
+#
+# FIXME: The right solution here is probably to rewrite this script in
+# something like Python and directly lift the example code from the
+# Bluesky blog.
+#
+ORIGINAL_LANG=$LANG
+ORIGINAL_LC_ALL=$LC_ALL
+
+export LANG=C
+export LC_ALL=C
+
 # Pull out link (if any). Regex from:
 #
 #     https://atproto.com/blog/create-post#mentions-and-links
@@ -93,6 +110,12 @@ if [[ "$MENTION_DID" = "null" ]] || [[ -z "$MENTION_DID" ]]; then
 else
 	MENTION_FACET=",{\"index\":{\"byteStart\":$MENTION_START,\"byteEnd\":$MENTION_END},\"features\":[{\"\$type\":\"app.bsky.richtext.facet#mention\",\"did\":\"$MENTION_DID\"}]}"
 fi
+
+# Reset LANG and LC_ALL back to the system default to avoid any
+# weirdness with the curl command line below.
+#
+export LANG=$ORIGINAL_LANG
+export LC_ALL=$ORIGINAL_LC_ALL
 
 # Post file contents to Bluesky and delete file if successful.
 #
