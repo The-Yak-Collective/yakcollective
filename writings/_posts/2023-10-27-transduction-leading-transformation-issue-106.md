@@ -120,7 +120,7 @@ In a return to original Systems Thinking Ontario format, we reviewed an (old) sy
 
 > ‘Applying intersectional systems thinking to strengthen the response to violence against women’!
 
-![](https://cdn-images-1.medium.com/max/1600/0*DxW8ZWQrWROwLrTW.png)
+![](https://chosenpath.files.wordpress.com/2023/10/f6056-0dxw8zwqrwrowlrtw.png)
 
 > [Seminar series: Systems for Health — SYSTAC European Hub](https://systac-europe.org/seminar-series-systems-for-health/)
 
@@ -140,7 +140,7 @@ Manuscripts should be submitted by 30th April 2024.
 
 [33. Zooming out AND zooming in AT THE SAME TIME](https://mastodon.social/@antlerboy/111296808276495235) — the secret of Solution Focus
 
-![](https://cdn-images-1.medium.com/max/1600/0*_7eOaTmKs2FkR3Ev.png)
+![](https://chosenpath.files.wordpress.com/2023/10/7504a-0_7eoatmks2fkr3ev.jpg)
 
 [Steps To A Humanity Of Organisation](https://markmckergow.substack.com/p/33-zooming-out-and-zooming-in-at?utm_source=substack&utm_campaign=post_embed&utm_medium=web)
 
@@ -150,7 +150,7 @@ Manuscripts should be submitted by 30th April 2024.
 
 [Read more](https://markmckergow.substack.com/p/33-zooming-out-and-zooming-in-at?utm_source=substack&utm_campaign=post_embed&utm_medium=web)
 
-![](https://cdn-images-1.medium.com/max/1600/0*JQcLFAaPhuTWOq7U.jpeg)
+![](https://chosenpath.files.wordpress.com/2023/10/c0570-0jqclfaaphutwoq7u.jpeg)
 
 [Steps To A Humanity Of Organisation · 23h **33. Zooming out AND zooming in AT THE SAME TIME — the secret of Solution Focus ** By  **Mark McKergow**](https://markmckergow.substack.com/p/33-zooming-out-and-zooming-in-at)
 
@@ -158,7 +158,7 @@ Manuscripts should be submitted by 30th April 2024.
 
 [The rise of the accidental manager](https://mastodon.social/@antlerboy/111296391465541737) [https://plexity.wordpress.com/2023/10/25/the-rise-of-the-accidental-manager/](https://plexity.wordpress.com/2023/10/25/the-rise-of-the-accidental-manager/)
 
-![](https://cdn-images-1.medium.com/max/1600/0*z8AxRtsE-pbF2_jQ.jpeg)
+![](https://chosenpath.files.wordpress.com/2023/10/dab7b-0z8axrtse-pbf2_jq.jpeg)
 
 [arthur~battram…  **The rise of the accidental manager ** The DavidBrentification of Management If they don’t employ trainers and don’t use external consultants wtf do we do? To quote a Colonial Marine, was it Sergeant Apone or Hicks, who said…](https://plexity.wordpress.com/2023/10/25/the-rise-of-the-accidental-manager/)
 
@@ -166,7 +166,7 @@ Manuscripts should be submitted by 30th April 2024.
 
 [Public enquries need a Devil’s Advocate](https://mastodon.social/@antlerboy/111295864584788889)
 
-![](https://cdn-images-1.medium.com/max/1600/0*yMv87xcKakMdfMl6.png)
+![](https://chosenpath.files.wordpress.com/2023/10/8954b-0ymv87xckakmdfml6.jpg)
 
 [The View from Culllingworth](https://simoncooke.substack.com/p/public-enquries-need-a-devils-advocate?utm_source=substack&utm_campaign=post_embed&utm_medium=web)
 
@@ -176,7 +176,7 @@ Manuscripts should be submitted by 30th April 2024.
 
 [Read more](https://simoncooke.substack.com/p/public-enquries-need-a-devils-advocate?utm_source=substack&utm_campaign=post_embed&utm_medium=web)
 
-![](https://cdn-images-1.medium.com/max/1600/0*wTTGLfRnCEiZEEFo.jpeg)
+![](https://chosenpath.files.wordpress.com/2023/10/ba888-0wttglfrnceizeefo.jpeg)
 
 [The View from Culllingworth · 1d **Public enquries need a Devil’s Advocate** By  **Simon Cooke**](https://simoncooke.substack.com/p/public-enquries-need-a-devils-advocate)
 
@@ -184,7 +184,7 @@ Manuscripts should be submitted by 30th April 2024.
 
 [How to transform an organisation](https://mastodon.social/@antlerboy/111294386033370495) [https://gicaminada.wordpress.com/2023/10/10/how-to-transform-an-organisation/](https://gicaminada.wordpress.com/2023/10/10/how-to-transform-an-organisation/)
 
-![](https://cdn-images-1.medium.com/max/1600/0*U8DIPsbgVDeUyTRo.jpeg)
+![](https://chosenpath.files.wordpress.com/2023/10/b3c4a-0u8dipsbgvdeuytro.jpeg)
 
 [Gioia Caminada · Oct 10 **How to transform an organisation** Six simple steps that lead to transformation, in my humble opinion](https://gicaminada.wordpress.com/2023/10/10/how-to-transform-an-organisation/)
 
@@ -196,7 +196,7 @@ Manuscripts should be submitted by 30th April 2024.
 
 [The World’s Most Popular Painter Sent His Followers After Me Because He Didn’t Like a Review of His Work](https://mastodon.social/@antlerboy/111283061457516970). Here’s What I Learned [https://news.artnet.com/opinion/devon-rodriguez-parasocial-aesthetics-2380960](https://news.artnet.com/opinion/devon-rodriguez-parasocial-aesthetics-2380960)
 
-![](https://cdn-images-1.medium.com/max/1600/0*okTpf8shh-ZEok8m.jpeg)
+![](https://chosenpath.files.wordpress.com/2023/10/74d00-0oktpf8shh-zeok8m.jpeg)
 
 [Artnet News · Oct 19 **The World’s Most Popular Painter Sent His Followers After Me Because He Didn’t Like a Review of His Work. Here’s What I Learned | Artnet News** Ben Davis on the fallout from his critical review of Devon Rodriguez’s “Underground,” and what it says about “parasocial aesthetics.”](https://news.artnet.com/opinion/devon-rodriguez-parasocial-aesthetics-2380960)
 
@@ -204,7 +204,7 @@ Manuscripts should be submitted by 30th April 2024.
 
 [\*Privacy Not Included review:](https://mastodon.social/@antlerboy/111279404591490394) Nissan [https://foundation.mozilla.org/en/privacynotincluded/nissan/](https://foundation.mozilla.org/en/privacynotincluded/nissan/)
 
-![](https://cdn-images-1.medium.com/max/1600/0*dV00DiSHDpmZR70X.png)
+![](https://chosenpath.files.wordpress.com/2023/10/cd951-0dv00dishdpmzr70x.jpg)
 
 [Mozilla Foundation **\*Privacy Not Included review: Nissan** How creepy is your car? We read the privacy policies so you don’t have to. Learn how your favorite car brand stacks up when it comes to protecting your privacy and security.](https://foundation.mozilla.org/en/privacynotincluded/nissan/)
 
@@ -212,7 +212,7 @@ Manuscripts should be submitted by 30th April 2024.
 
 [Webinar from SYSTAC European Hub](https://mastodon.social/@antlerboy/111268079891789208), ‘Applying intersectional systems thinking to strengthen the response to violence against women’ 14:00 CEST, 8 November 2023 [https://stream.syscoi.com/2023/10/19/webinar-from-systac-european-hub-applying-intersectional-systems-thinking-to-strengthen-the-response-to-violence-against-women-1400-cest-8-november-2023/](https://stream.syscoi.com/2023/10/19/webinar-from-systac-european-hub-applying-intersectional-systems-thinking-to-strengthen-the-response-to-violence-against-women-1400-cest-8-november-2023/)
 
-![](https://cdn-images-1.medium.com/max/1600/0*PdMbsU7WzH90l7LH.png)
+![](https://chosenpath.files.wordpress.com/2023/10/c46ff-0pdmbsu7wzh90l7lh.png)
 
 [Systems Community of Inquiry · 6d  **Webinar from SYSTAC European Hub, ‘Applying intersectional systems thinking to strengthen the response to violence against women’ 14:00 CEST, 8 November 2023 ** ‘Applying intersectional systems thinking to strengthen the response to violence against women’! Seminar series: Systems for Health — SYSTAC European Hub](https://stream.syscoi.com/2023/10/19/webinar-from-systac-european-hub-applying-intersectional-systems-thinking-to-strengthen-the-response-to-violence-against-women-1400-cest-8-november-2023/)
 
@@ -220,7 +220,7 @@ Manuscripts should be submitted by 30th April 2024.
 
 [A Collage of Everything Imaginable](https://mastodon.social/@antlerboy/111267553024443812)
 
-![](https://cdn-images-1.medium.com/max/1600/0*2t4Uq24t8oqfPn6_.png)
+![](https://chosenpath.files.wordpress.com/2023/10/3788e-02t4uq24t8oqfpn6_.png)
 
 [Discourse](https://www.discoursemagazine.com/p/a-collage-of-everything-imaginable?utm_source=substack&utm_campaign=post_embed&utm_medium=web)
 
@@ -230,7 +230,7 @@ Manuscripts should be submitted by 30th April 2024.
 
 [Read more](https://www.discoursemagazine.com/p/a-collage-of-everything-imaginable?utm_source=substack&utm_campaign=post_embed&utm_medium=web)
 
-![](https://cdn-images-1.medium.com/max/1600/0*qkvuusVDcX7_FN5O.jpeg)
+![](https://chosenpath.files.wordpress.com/2023/10/7559c-0qkvuusvdcx7_fn5o.jpeg)
 
 [Discourse · Oct 19 **A Collage of Everything Imaginable** By  **Sahil Handa**](https://www.discoursemagazine.com/p/a-collage-of-everything-imaginable)
 
@@ -245,7 +245,7 @@ Manuscripts should be submitted by 30th April 2024.
 [New ways of working playbook ](https://mastodon.social/@antlerboy/111266074506155514)  
 [https://newwaysofworking.notion.site/newwaysofworking/New-Ways-of-Working-Playbook-dc607e37f7894f4a9be698a6573cb97b](https://newwaysofworking.notion.site/newwaysofworking/New-Ways-of-Working-Playbook-dc607e37f7894f4a9be698a6573cb97b)
 
-![](https://cdn-images-1.medium.com/max/1600/0*5NPDGpxG0zon2xBq.jpeg)
+![](https://chosenpath.files.wordpress.com/2023/10/78339-05npdgpxg0zon2xbq.jpeg)
 
 [Mark’s Notion on Notion **New Ways of Working Playbook** Hello! ![👋](https://s0.wp.com/wp-content/mu-plugins/wpcom-smileys/twemoji/2/72x72/1f44b.png) Use this playbook to explore key patterns found in progressive organisations & to experiment with some of the most helpful practices out there | Curated by Mark Eddleston.](https://newwaysofworking.notion.site/dc607e37f7894f4a9be698a6573cb97b)
 
@@ -259,7 +259,7 @@ Manuscripts should be submitted by 30th April 2024.
 
 [The Remarkable Work of Robert B. Wolf](https://mastodon.social/@antlerboy/111262834397170587) [https://bobemiliani.com/the-remarkable-work-of-robert-b-wolf/](https://bobemiliani.com/the-remarkable-work-of-robert-b-wolf/)
 
-![](https://cdn-images-1.medium.com/max/1600/0*rAVSIS46kGou7pPX.png)
+![](https://chosenpath.files.wordpress.com/2023/10/38a69-0ravsis46kgou7ppx.png)
 
 [Bob Emiliani · Oct 3 **The Remarkable Work of Robert B. Wolf** Robert B. Wolf, received a bachelor’s degree in electrical engineering from Delaware College (today, University of Delaware) in 1896 and a master’s degree in](https://bobemiliani.com/the-remarkable-work-of-robert-b-wolf/)
 
@@ -267,7 +267,7 @@ Manuscripts should be submitted by 30th April 2024.
 
 [There are ‘only’ seven ways to make savings and improvements](https://mastodon.social/@antlerboy/111262417621672561) in service organisations [https://chosen-path.org/2021/01/14/there-are-only-seven-ways-to-make-savings-and-improvements-in-service-organisations/](https://chosen-path.org/2021/01/14/there-are-only-seven-ways-to-make-savings-and-improvements-in-service-organisations/)
 
-![](https://cdn-images-1.medium.com/max/1600/0*9QxsyHV5BAqbhIKG.png)
+![](https://chosenpath.files.wordpress.com/2023/10/17cac-09qxsyhv5baqbhikg.png)
 
 [chosen path · Jan 14, 2021 **There are ‘only’ seven ways to make savings and improvements in service organisations** 1. Shape and manage demand: effect behavioural change, reduce failure demand 2. Create economies of flow: match capacity, capability, contact points to demand 3. Reduce waste: re-engineer processes…](https://chosen-path.org/2021/01/14/there-are-only-seven-ways-to-make-savings-and-improvements-in-service-organisations/)
 
