@@ -3,6 +3,7 @@
 - [ ] Remove `_post` subdirectories (requires modifications to the Pluto RSS feed pull scripts)
 - [ ] Merge [Foam](https://foambubble.github.io/foam/) VS Code template and set up wiki
 - [ ] Foam-ify all `.md` files
+	- This includes moving to files with spaces in their names!
 - [ ] New, simpler, Foam-compatible theme
 	- Return to using "Yak Gold" as our default accent color
 	- Return to light/dark automatic theming
