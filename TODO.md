@@ -13,3 +13,9 @@
 		- Additional headers
 	- How to handle RSS feeds? Maybe GitHub created/updated?
 	- Can this be made GitHub-compatible, [100 Rabbits](https://100r.co/site/home.html)-style?
+- [ ] Move [IT infrastructure map](https://roamresearch.com/#/app/ArtOfGig/page/w6uAG9Pig) from DOT/Graphviz to something like Mermaid
+	- The goal here is Foam/GitHub compatability
+	- Maybe add it as a (hidden) page here?
+		- Maybe I want an entire `private` directory that isn't published?
+	- Archive the [current repo](https://github.com/The-Yak-Collective/infrastructure-map) when done
+	- Not *technically* part of this project, but makes sense to slot in here...
