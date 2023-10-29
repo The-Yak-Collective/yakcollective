@@ -8,15 +8,6 @@
 .automation/var/cache/*
 .automation/var/state/common-init
 
-# Python virtual environment
-bin/*
-lib/*
-pyvenv.cfg
-
-# Lock files cause more problems than they solve
-Gemfile.lock
-package-lock.json
-
 # Ignore Planet Pluto files that are regularly regenerated
 #
 .automation/var/pluto/*.db
