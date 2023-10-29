@@ -5,12 +5,8 @@
 *.swp
 
 # Ignore build files
+.automation/var/cache/*
 .automation/var/state/common-init
-.bundle/*
-.jekyll-cache/*
-_site/*
-node_modules/*
-vendor/*
 
 # Python virtual environment
 bin/*
@@ -20,10 +16,6 @@ pyvenv.cfg
 # Lock files cause more problems than they solve
 Gemfile.lock
 package-lock.json
-
-# Ignore sensitive data from Knack
-_data/knack_yaks.json
-members/*
 
 # Ignore Planet Pluto files that are regularly regenerated
 #

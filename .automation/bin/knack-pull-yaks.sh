@@ -74,36 +74,39 @@ fi
 #
 echo "Processing Knack member data..."
 mkdir -p _data
-jq -n '{records: [inputs.records] | add}' $TEMP_DIR/knack-yaks-* > _data/knack_yaks.json
+jq -n '{records: [inputs.records] | add}' $TEMP_DIR/knack-yaks-* > .automation/var/cache/_data/knack_yaks.json
 
 # Download Knack avatars locally.
 #
-mkdir -p members
+(
+	cd .automation/var/cache
+	mkdir -p members
 
-while IFS= read -r RECORD; do
-	MEMBER_ID="$(echo "$RECORD" | cut -f 1)"
-	echo "Processing avatar for member $MEMBER_ID..."
-	KNACK_PATH="$(echo "$RECORD" | cut -s -f 2 | sed -e "s#https://s3-eu-west-1.amazonaws.com/assets.knack-eu.com/assets/5f70876d8e7037001504bfe8/##")"
-	if [[ -n "$KNACK_PATH" ]]; then
-		USE_CURL="yes"
-		AVATAR_URL="https://res.cloudinary.com/yak-collective/image/upload/c_fill,g_face,w_400,h_400,e_sharpen:50/yak-barn-v1/${KNACK_PATH%.*}.webp"
-		OG_URL="https://res.cloudinary.com/yak-collective/image/upload/c_fill,g_face,w_1200,h_630,e_sharpen:50/yak-barn-v1/${KNACK_PATH%.*}.webp"
-	else
-		USE_CURL="no"
-		AVATAR_URL=""
-		OG_URL=""
-	fi
-	if [[ "$USE_CURL" == "yes" ]]; then
-		curl -sS -o "members/${MEMBER_ID}.webp"    "$AVATAR_URL"
-		curl -sS -o "members/${MEMBER_ID}-og.webp" "$OG_URL"
-	fi
-	if [[ ! -s "members/${MEMBER_ID}.webp" ]]; then
-		cp "img/yak.webp" "members/${MEMBER_ID}.webp"
-	fi
-	if [[ ! -s "members/${MEMBER_ID}-og.webp" ]]; then
-		cp "img/yak-og.webp" "members/${MEMBER_ID}-og.webp"
-	fi
-done <<< "$(jq -r '.records[] | [.field_101_raw, .field_44_raw.url?] | @tsv' _data/knack_yaks.json | sed -e 's/^\s*//;s/\s*$//')"
+	while IFS= read -r RECORD; do
+		MEMBER_ID="$(echo "$RECORD" | cut -f 1)"
+		echo "Processing avatar for member $MEMBER_ID..."
+		KNACK_PATH="$(echo "$RECORD" | cut -s -f 2 | sed -e "s#https://s3-eu-west-1.amazonaws.com/assets.knack-eu.com/assets/5f70876d8e7037001504bfe8/##")"
+		if [[ -n "$KNACK_PATH" ]]; then
+			USE_CURL="yes"
+			AVATAR_URL="https://res.cloudinary.com/yak-collective/image/upload/c_fill,g_face,w_400,h_400,e_sharpen:50/yak-barn-v1/${KNACK_PATH%.*}.webp"
+			OG_URL="https://res.cloudinary.com/yak-collective/image/upload/c_fill,g_face,w_1200,h_630,e_sharpen:50/yak-barn-v1/${KNACK_PATH%.*}.webp"
+		else
+			USE_CURL="no"
+			AVATAR_URL=""
+			OG_URL=""
+		fi
+		if [[ "$USE_CURL" == "yes" ]]; then
+			curl -sS -o "members/${MEMBER_ID}.webp"    "$AVATAR_URL"
+			curl -sS -o "members/${MEMBER_ID}-og.webp" "$OG_URL"
+		fi
+		if [[ ! -s "members/${MEMBER_ID}.webp" ]]; then
+			cp "img/yak.webp" "members/${MEMBER_ID}.webp"
+		fi
+		if [[ ! -s "members/${MEMBER_ID}-og.webp" ]]; then
+			cp "img/yak-og.webp" "members/${MEMBER_ID}-og.webp"
+		fi
+	done <<< "$(jq -r '.records[] | [.field_101_raw, .field_44_raw.url?] | @tsv' _data/knack_yaks.json | sed -e 's/^\s*//;s/\s*$//')"
+)
 
 # Cleanup.
 #

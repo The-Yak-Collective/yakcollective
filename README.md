@@ -12,8 +12,6 @@ Every collective needs a website. This is ours. It isn't much to look at, but it
 export KNACK_APP_ID=XXXXXXXXXXXXXXX
 export KNACK_API_KEY=XXXXXXXXXXXXXXX
 export KNACK_OBJECT=XXXXXXXXXXXXXXX
-[[ ! -f pyvenv.cfg ]] && python3 -m venv .
-. ./bin/activate
 [[ -f .automation/var/state/common-init ]] && rm .automation/var/state/common-init
 ./.automation/bin/common-init.sh
 
@@ -27,13 +25,13 @@ export KNACK_OBJECT=XXXXXXXXXXXXXXX
 
 # View the website locally via http://127.0.0.1:4000.
 #
-bundle exec jekyll serve
+env BUNDLE_USER_CONFIG=.automation/var/cache/.bundle/config bundle exec jekyll serve
 
 # Push the website to Netlify.
 #
 export NETLIFY_AUTH_TOKEN=XXXXXXXXXXXXXXX
 export NETLIFY_SITE=XXXXXXXXXXXXXXX
-./node_modules/.bin/netlify deploy --dir _site --site $NETLIFY_SITE --message "Local development deploy $(date -u +"%Y%m%d%H%M%S")/${USER}@${HOST}" --prod
+./.automation/var/cache/node_modules/.bin/netlify deploy --dir .automation/var/cache/_site --site $NETLIFY_SITE --message "Local development deploy $(date -u +"%Y%m%d%H%M%S")/${USER}@${HOST}" --prod
 
 # Push an update to Twitter.
 #
@@ -64,10 +62,6 @@ export NETLIFY_ACCOUNT_EMAIL=XXXXXXXXXXXXXXX@XXXXXXXXXXXXXXX
 export NETLIFY_ACCOUNT_SLUG=XXXXXXXXXXXXXXX
 export NETLIFY_AUTH_TOKEN=XXXXXXXXXXXXXXX
 ./.automation/bin/stats-to-discord.sh
-
-# Leave Python virtual environment.
-#
-deactivate
 ```
 
 ## Ways to Contribute

@@ -22,13 +22,15 @@ while read -r RECORD; do
 		echo -e "\tfeed = $RSS_FEED" >> .automation/var/pluto/writings.ini
 		echo "" >> .automation/var/pluto/writings.ini
 	fi
-done < <(jq -r '.records[] | [.field_101_raw, .field_68_raw.url?] | @tsv' _data/knack_yaks.json | sed -e 's/^\s*//;s/\s*$//')
+done < <(jq -r '.records[] | [.field_101_raw, .field_68_raw.url?] | @tsv' .automation/var/cache/_data/knack_yaks.json | sed -e 's/^\s*//;s/\s*$//')
 
 # Pull down RSS feeds.
 #
 (
 	cd .automation/var/pluto
 	chmod +x ../../bin/build-posts.rb
+
+	export BUNDLE_USER_CONFIG=../cache/.bundle/config
 
 	bundle exec pluto update newsletter.ini
 	bundle exec ../../bin/build-posts.rb newsletter
@@ -68,7 +70,7 @@ while read -r RECORD; do
 			sed -i -e "s#@$MEMBER_ID#@$BLUESKY_HANDLE#" "$FILE"
 		done < <(find .automation/var/feeds/bluesky -type f -iname '*.txt' -exec grep -l "@$MEMBER_ID" "{}" \;)
 	fi
-done < <(jq -r '.records[] | [.field_101_raw, .field_108_raw?] | @tsv' _data/knack_yaks.json | sed -e 's/^\s*//;s/\s*$//')
+done < <(jq -r '.records[] | [.field_101_raw, .field_108_raw?] | @tsv' .automation/var/cache/_data/knack_yaks.json | sed -e 's/^\s*//;s/\s*$//')
 
 while read -r RECORD; do
 	MEMBER_ID="$(echo "$RECORD" | cut -f 1)"
@@ -78,7 +80,7 @@ while read -r RECORD; do
 			sed -i -e "s|@$MEMBER_ID|$NAME|" "$FILE"
 		done < <(find .automation/var/feeds/bluesky -type f -iname '*.txt' -exec grep -l "@$MEMBER_ID" "{}" \;)
 	fi
-done < <(jq -r '.records[] | [.field_101_raw, .field_97_raw?] | @tsv' _data/knack_yaks.json | sed -e 's/^\s*//;s/\s*$//')
+done < <(jq -r '.records[] | [.field_101_raw, .field_97_raw?] | @tsv' .automation/var/cache/_data/knack_yaks.json | sed -e 's/^\s*//;s/\s*$//')
 
 # Integrate new Farcaster posts.
 #
@@ -101,7 +103,7 @@ while read -r RECORD; do
 			sed -i -e "s#@$MEMBER_ID#@$FARCASTER_HANDLE#" "$FILE"
 		done < <(find .automation/var/feeds/farcaster -type f -iname '*.txt' -exec grep -l "@$MEMBER_ID" "{}" \;)
 	fi
-done < <(jq -r '.records[] | [.field_101_raw, .field_109_raw?] | @tsv' _data/knack_yaks.json | sed -e 's/^\s*//;s/\s*$//')
+done < <(jq -r '.records[] | [.field_101_raw, .field_109_raw?] | @tsv' .automation/var/cache/_data/knack_yaks.json | sed -e 's/^\s*//;s/\s*$//')
 
 while read -r RECORD; do
 	MEMBER_ID="$(echo "$RECORD" | cut -f 1)"
@@ -111,7 +113,7 @@ while read -r RECORD; do
 			sed -i -e "s|@$MEMBER_ID|$NAME|" "$FILE"
 		done < <(find .automation/var/feeds/farcaster -type f -iname '*.txt' -exec grep -l "@$MEMBER_ID" "{}" \;)
 	fi
-done < <(jq -r '.records[] | [.field_101_raw, .field_97_raw?] | @tsv' _data/knack_yaks.json | sed -e 's/^\s*//;s/\s*$//')
+done < <(jq -r '.records[] | [.field_101_raw, .field_97_raw?] | @tsv' .automation/var/cache/_data/knack_yaks.json | sed -e 's/^\s*//;s/\s*$//')
 
 # Integrate new Discord posts.
 #
@@ -147,7 +149,7 @@ while read -r RECORD; do
 			sed -i -e "s#@$MEMBER_ID#@$TWITTER_HANDLE#" "$FILE"
 		done < <(find .automation/var/feeds/twitter -type f -iname '*.txt' -exec grep -l "@$MEMBER_ID" "{}" \;)
 	fi
-done < <(jq -r '.records[] | [.field_101_raw, .field_43_raw?] | @tsv' _data/knack_yaks.json | sed -e 's/^\s*//;s/\s*$//')
+done < <(jq -r '.records[] | [.field_101_raw, .field_43_raw?] | @tsv' .automation/var/cache/_data/knack_yaks.json | sed -e 's/^\s*//;s/\s*$//')
 
 while read -r RECORD; do
 	MEMBER_ID="$(echo "$RECORD" | cut -f 1)"
@@ -157,15 +159,17 @@ while read -r RECORD; do
 			sed -i -e "s|@$MEMBER_ID|$NAME|" "$FILE"
 		done < <(find .automation/var/feeds/twitter -type f -iname '*.txt' -exec grep -l "@$MEMBER_ID" "{}" \;)
 	fi
-done < <(jq -r '.records[] | [.field_101_raw, .field_97_raw?] | @tsv' _data/knack_yaks.json | sed -e 's/^\s*//;s/\s*$//')
+done < <(jq -r '.records[] | [.field_101_raw, .field_97_raw?] | @tsv' .automation/var/cache/_data/knack_yaks.json | sed -e 's/^\s*//;s/\s*$//')
 
 # Integrate new newsletters.
 #
-mv .automation/var/pluto/newsletter/* newsletter/_posts/
+cp -f .automation/var/pluto/newsletter/* newsletter/_posts/
+cp -f .automation/var/pluto/newsletter/* .automation/var/cache/newsletter/_posts/
 
 # Integrate new writings.
 #
-mv .automation/var/pluto/writings/* writings/_posts/
+cp -f .automation/var/pluto/writings/* writings/_posts/
+cp -f .automation/var/pluto/writings/* .automation/var/cache/writings/_posts/
 
 # Script run indicator.
 #

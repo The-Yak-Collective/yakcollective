@@ -48,6 +48,7 @@ fi
 # Post file contents to Farcaster and delete file if successful.
 #
 export FARCASTER_POST="$(cat ".automation/var/feeds/farcaster/$POST")"
+source .automation/var/cache/bin/activate
 python3 -c 'import os; from farcaster import Warpcast; client = Warpcast(mnemonic = os.environ.get("FARCASTER_MNEMONIC")); client.post_cast(text = os.environ.get("FARCASTER_POST"));'
 if [[ $? -eq 0 ]]; then
 	rm ".automation/var/feeds/farcaster/$POST"

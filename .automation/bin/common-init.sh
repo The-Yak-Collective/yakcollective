@@ -11,108 +11,132 @@ fi
 #
 if [[ ! -f .automation/var/state/common-init ]]; then
 
-	# Install pre-requisits.
+	# Set up cache directory.
 	#
-	if [[ -z "$(which curl)" ]]; then
-		if [[ -n "$(which brew)" ]]; then
-			brew install curl
-		elif [[ -n "$(which apt)" ]]; then
-			sudo apt install -y curl
-		elif [[ -n "$(which yum)" ]]; then
-			sudo yum install -y curl
-		else
-			echo "curl is not found and is not installable! Bailing..."
-			exit 1
-		fi
-	fi
+	mkdir -p .automation/var/cache
+	cp -af . .automation/var/cache/
 
-	if [[ -z "$(which jq)" ]]; then
-		if [[ -n "$(which brew)" ]]; then
-			brew install jq
-		elif [[ -n "$(which apt)" ]]; then
-			sudo apt install -y jq
-		elif [[ -n "$(which yum)" ]]; then
-			sudo yum install -y jq
-		else
-			echo "jq is not found and is not installable! Bailing..."
-			exit 1
-		fi
-	fi
+	find .automation/var/cache -mindepth 1 -type d -iname '.*' -exec rm -rf "{}" \;
+	find .automation/var/cache -mindepth 1 -type f -iname '.*' -exec rm -f "{}" \;
 
-	if [[ -z "$(which gm)" ]]; then
-		if [[ -n "$(which brew)" ]]; then
-			brew install graphicsmagick
-		elif [[ -n "$(which apt)" ]]; then
-			sudo apt install -y graphicsmagick
-		elif [[ -n "$(which yum)" ]]; then
-			sudo yum install -y GraphicsMagick
-		else
-			echo "Graphics Magick is not found and is not installable! Bailing..."
-			exit 1
-		fi
-	fi
+	while IFS= read -d '' -r SKEL_DIR; do
+		CACHE_DIR="$(echo "$SKEL_DIR" | sed -e "s#^\.automation/etc/skel#.automation/var/cache#")"
+		mkdir -p "$CACHE_DIR"
+	done < <(find .automation/etc/skel -mindepth 1 -type d -print0)
 
-	if [[ -z "$(which cwebp)" ]]; then
-		if [[ -n "$(which brew)" ]]; then
-			brew install webp
-		elif [[ -n "$(which apt)" ]]; then
-			sudo apt install -y webp
-		elif [[ -n "$(which yum)" ]]; then
-			sudo yum install -y libwebp-tools
-		else
-			echo "The webp tools are not found and is not installable! Bailing..."
-			exit 1
-		fi
-	fi
+	while IFS= read -d '' -r SKEL_FILE; do
+		CACHE_FILE="$(echo "$SKEL_FILE" | sed -e "s#^\.automation/etc/skel#.automation/var/cache#")"
+		cp -apf "$SKEL_FILE" "$CACHE_FILE"
+	done < <(find .automation/etc/skel -type f -print0)
 
-	if [[ -z "$(which gem)" ]]; then
-		if [[ -n "$(which brew)" ]]; then
-			brew install ruby
-			if [[ -d /opt/homebrew/opt/ruby/bin ]]; then
-				PATH="/opt/homebrew/opt/ruby/bin:$PATH"
-			elif [[ -d /usr/local/opt/ruby/bin ]]; then
-				PATH="/usr/local/opt/ruby/bin:$PATH"
+	(
+		cd .automation/var/cache
+
+		# Install pre-requisits.
+		#
+		if [[ -z "$(which curl)" ]]; then
+			if [[ -n "$(which brew)" ]]; then
+				brew install curl
+			elif [[ -n "$(which apt)" ]]; then
+				sudo apt install -y curl
+			elif [[ -n "$(which yum)" ]]; then
+				sudo yum install -y curl
+			else
+				echo "curl is not found and is not installable! Bailing..."
+				exit 1
 			fi
-		elif [[ -n "$(which apt)" ]]; then
-			sudo apt install -y ruby bundler
-		elif [[ -n "$(which yum)" ]]; then
-			sudo yum install -y ruby rubygem-bundler
-		else
-			echo "Ruby is not found and is not installable! Bailing..."
-			exit 1
 		fi
-	fi
-	[[ -z "$(which bundle)" ]] && sudo gem install bundler
-	bundle config set path vendor/bundle
-	bundle install
 
-	if [[ -z "$(which npm)" ]]; then
-		if [[ -n "$(which brew)" ]]; then
-			brew install node
-		elif [[ -n "$(which apt)" ]]; then
-			sudo apt install -y nodejs npm
-		elif [[ -n "$(which yum)" ]]; then
-			sudo yum install -y nodejs npm
-		else
-			echo "NodeJS is not found and is not installable! Bailing..."
-			exit 1
+		if [[ -z "$(which jq)" ]]; then
+			if [[ -n "$(which brew)" ]]; then
+				brew install jq
+			elif [[ -n "$(which apt)" ]]; then
+				sudo apt install -y jq
+			elif [[ -n "$(which yum)" ]]; then
+				sudo yum install -y jq
+			else
+				echo "jq is not found and is not installable! Bailing..."
+				exit 1
+			fi
 		fi
-	fi
-	npm install
 
-	if [[ -z "$(which python3)" ]]; then
-		if [[ -n "$(which brew)" ]]; then
-			brew install python
-		elif [[ -n "$(which apt)" ]]; then
-			sudo apt install -y python3
-		elif [[ -n "$(which yum)" ]]; then
-			sudo yum install -y python3
-		else
-			echo "Python 3.x is not found and is not installable! Bailing..."
-			exit 1
+		if [[ -z "$(which gm)" ]]; then
+			if [[ -n "$(which brew)" ]]; then
+				brew install graphicsmagick
+			elif [[ -n "$(which apt)" ]]; then
+				sudo apt install -y graphicsmagick
+			elif [[ -n "$(which yum)" ]]; then
+				sudo yum install -y GraphicsMagick
+			else
+				echo "Graphics Magick is not found and is not installable! Bailing..."
+				exit 1
+			fi
 		fi
-	fi
-	python3 -m pip install --upgrade farcaster
+
+		if [[ -z "$(which cwebp)" ]]; then
+			if [[ -n "$(which brew)" ]]; then
+				brew install webp
+			elif [[ -n "$(which apt)" ]]; then
+				sudo apt install -y webp
+			elif [[ -n "$(which yum)" ]]; then
+				sudo yum install -y libwebp-tools
+			else
+				echo "The webp tools are not found and is not installable! Bailing..."
+				exit 1
+			fi
+		fi
+
+		if [[ -z "$(which gem)" ]]; then
+			if [[ -n "$(which brew)" ]]; then
+				brew install ruby
+				if [[ -d /opt/homebrew/opt/ruby/bin ]]; then
+					PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+				elif [[ -d /usr/local/opt/ruby/bin ]]; then
+					PATH="/usr/local/opt/ruby/bin:$PATH"
+				fi
+			elif [[ -n "$(which apt)" ]]; then
+				sudo apt install -y ruby bundler
+			elif [[ -n "$(which yum)" ]]; then
+				sudo yum install -y ruby rubygem-bundler
+			else
+				echo "Ruby is not found and is not installable! Bailing..."
+				exit 1
+			fi
+		fi
+		[[ -z "$(which bundle)" ]] && sudo gem install bundler
+		bundle config set path "$(pwd)/vendor/bundle"
+		bundle install
+
+		if [[ -z "$(which npm)" ]]; then
+			if [[ -n "$(which brew)" ]]; then
+				brew install node
+			elif [[ -n "$(which apt)" ]]; then
+				sudo apt install -y nodejs npm
+			elif [[ -n "$(which yum)" ]]; then
+				sudo yum install -y nodejs npm
+			else
+				echo "NodeJS is not found and is not installable! Bailing..."
+				exit 1
+			fi
+		fi
+		npm install
+
+		if [[ -z "$(which python3)" ]]; then
+			if [[ -n "$(which brew)" ]]; then
+				brew install python
+			elif [[ -n "$(which apt)" ]]; then
+				sudo apt install -y python3
+			elif [[ -n "$(which yum)" ]]; then
+				sudo yum install -y python3
+			else
+				echo "Python 3.x is not found and is not installable! Bailing..."
+				exit 1
+			fi
+		fi
+		python3 -m venv .
+		source bin/activate
+		python3 -m pip install --upgrade farcaster
+	)
 
 	# Pull Knack data. (But ONLY if we're not being run from
 	# knack-pull-yaks.sh, to prevent infinite recursion.)
