@@ -14,16 +14,16 @@ export KNACK_API_KEY=XXXXXXXXXXXXXXX
 export KNACK_OBJECT=XXXXXXXXXXXXXXX
 [[ ! -f pyvenv.cfg ]] && python3 -m venv .
 . ./bin/activate
-[[ -f .common-init ]] && rm .common-init
-./_bin/common-init.sh
+[[ -f .automation/var/state/common-init ]] && rm .automation/var/state/common-init
+./.automation/bin/common-init.sh
 
 # Pull RSS feed update.
 #
-./_bin/rss-pull-feeds.sh
+./.automation/bin/rss-pull-feeds.sh
 
 # Build the actual website.
 #
-./_bin/build.sh
+./.automation/bin/build.sh
 
 # View the website locally via http://127.0.0.1:4000.
 #
@@ -38,22 +38,22 @@ export NETLIFY_SITE=XXXXXXXXXXXXXXX
 # Push an update to Twitter.
 #
 export IFTTT_MAKER_KEY=XXXXXXXXXXXXXXX
-./_bin/push-to-twitter.sh
+./.automation/bin/push-to-twitter.sh
 
 # Push an update to Bluesky.
 #
 export BLUESKY_APP_PASSWORD=XXXXXXXXXXXXXXX
-./_bin/push-to-bluesky.sh
+./.automation/bin/push-to-bluesky.sh
 
 # Push an update to Farcaster.
 #
 export FARCASTER_MNEMONIC="XXXXXXXXXXXXXXX"
-./_bin/push-to-farcaster.sh
+./.automation/bin/push-to-farcaster.sh
 
 # Run the #yaks-at-work update script.
 #
 export DISCORD_CHANNEL_URL=https://discord.com/api/webhooks/0000000000000000/XXXXXXXXXXXXXXX
-./_bin/push-to-discord.sh
+./.automation/bin/push-to-discord.sh
 
 # Push website health stats to Discord.
 #
@@ -63,7 +63,7 @@ export GH_TOKEN=XXXXXXXXXXXXXXX
 export NETLIFY_ACCOUNT_EMAIL=XXXXXXXXXXXXXXX@XXXXXXXXXXXXXXX
 export NETLIFY_ACCOUNT_SLUG=XXXXXXXXXXXXXXX
 export NETLIFY_AUTH_TOKEN=XXXXXXXXXXXXXXX
-./_bin/stats-to-discord.sh
+./.automation/bin/stats-to-discord.sh
 
 # Leave Python virtual environment.
 #

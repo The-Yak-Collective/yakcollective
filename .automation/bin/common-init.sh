@@ -2,14 +2,14 @@
 
 # Check to make sure that we're running in the repository root.
 #
-if [[ ! -f _config.yml ]] || [[ ! -d _bin ]]; then
+if [[ ! -f _config.yml ]] || [[ ! -d .automation/bin ]]; then
 	echo "This script must be run from the repository root!"
 	exit 1
 fi
 
 # Only run init if necessary.
 #
-if [[ ! -f .common-init ]]; then
+if [[ ! -f .automation/var/state/common-init ]]; then
 
 	# Install pre-requisits.
 	#
@@ -118,13 +118,13 @@ if [[ ! -f .common-init ]]; then
 	# knack-pull-yaks.sh, to prevent infinite recursion.)
 	#
 	if [[ -z "$COMMON_INIT_CALLED_BY_KNACK_YAK_PULL" ]]; then
-		chmod +x _bin/knack-pull-yaks.sh
+		chmod +x .automation/bin/knack-pull-yaks.sh
 		export KNACK_YAK_PULL_CALLED_BY_COMMON_INIT=1
-		./_bin/knack-pull-yaks.sh
+		./.automation/bin/knack-pull-yaks.sh
 		unset KNACK_YAK_PULL_CALLED_BY_COMMON_INIT
 	fi
 
 	# Script run indicator.
 	#
-	date "+%s" > .common-init
+	date "+%s" > .automation/var/state/common-init
 fi

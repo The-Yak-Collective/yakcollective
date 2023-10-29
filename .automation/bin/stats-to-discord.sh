@@ -2,8 +2,8 @@
 
 # Source init.
 #
-if [[ -f ./_bin/common-init.sh ]]; then
-	source ./_bin/common-init.sh
+if [[ -f ./.automation/bin/common-init.sh ]]; then
+	source ./.automation/bin/common-init.sh
 else
 	echo "Init file not found! Are you running from the repository root?"
 	exit 1

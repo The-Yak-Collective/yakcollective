@@ -19,38 +19,38 @@ jobs:
           KNACK_API_KEY: ${{ secrets.KNACK_API_KEY }}
           KNACK_OBJECT: ${{ secrets.KNACK_OBJECT }}
         run: |
-          ./_bin/common-init.sh
+          ./.automation/bin/common-init.sh
       - name: Update RSS feeds
         run: |
-          ./_bin/rss-pull-feeds.sh
+          ./.automation/bin/rss-pull-feeds.sh
       - name: Rebuild website
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_TOKEN }}
           NETLIFY_SITE: ${{ secrets.NETLIFY_SITE }}
         run: |
-          ./_bin/build.sh
+          ./.automation/bin/build.sh
           echo "$(date -u +"%Y%m%d%H%M%S")" > _site/build-date.txt
           ./node_modules/.bin/netlify deploy --dir _site --site $NETLIFY_SITE --message "Automatic deploy from GitHub Actions $(date -u +"%Y%m%d%H%M%S")" --prod
       - name: Push oldest queued post to Twitter
         env:
           IFTTT_MAKER_KEY: ${{ secrets.IFTTT_MAKER_KEY }}
         run: |
-          ./_bin/push-to-twitter.sh
+          ./.automation/bin/push-to-twitter.sh
       - name: Push oldest queued post to Bluesky
         env:
           BLUESKY_APP_PASSWORD: ${{ secrets.BLUESKY_APP_PASSWORD }}
         run: |
-          ./_bin/push-to-bluesky.sh
+          ./.automation/bin/push-to-bluesky.sh
       - name: Push oldest queued post to Farcaster
         env:
           FARCASTER_MNEMONIC: ${{ secrets.FARCASTER_MNEMONIC }}
         run: |
-          ./_bin/push-to-farcaster.sh
+          ./.automation/bin/push-to-farcaster.sh
       - name: Push oldest queued post to Discord
         env:
           DISCORD_CHANNEL_URL: ${{ secrets.DISCORD_WEBHOOK_YAKS_AT_WORK }}
         run: |
-          ./_bin/push-to-discord.sh
+          ./.automation/bin/push-to-discord.sh
       - name: Commit changes to repository
         run: |
           git config user.name github-actions

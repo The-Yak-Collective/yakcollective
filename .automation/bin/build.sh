@@ -5,8 +5,8 @@
 
 # Source init.
 #
-if [[ -f ./_bin/common-init.sh ]]; then
-	source ./_bin/common-init.sh
+if [[ -f ./.automation/bin/common-init.sh ]]; then
+	source ./.automation/bin/common-init.sh
 else
 	echo "Init file not found! Are you running from the repository root?"
 	exit 1
@@ -54,12 +54,12 @@ find _site -type f \( -iname '*.html'  -o -iname '*.xml'  -o -iname '*.json' -o 
 # therefore be turned off when "hand optimization" like this is used.
 #
 MINIFY_BINARY="minify-$(uname -s | tr "[:upper:]" "[:lower:]")-$(uname -m)"
-if [[ -f ./_bin/minify/"$MINIFY_BINARY" ]]; then
-	chmod +x ./_bin/minify/"$MINIFY_BINARY"
+if [[ -f ./.automation/bin/third-party/minify/"$MINIFY_BINARY" ]]; then
+	chmod +x ./.automation/bin/third-party/minify/"$MINIFY_BINARY"
 	mv _site _site.original
 	(
 		cd _site.original
-		../_bin/minify/"$MINIFY_BINARY" --all --recursive --sync --output ../_site .
+		../.automation/bin/third-party/minify/"$MINIFY_BINARY" --all --recursive --sync --output ../_site .
 	)
 	rm -rf _site.original
 fi

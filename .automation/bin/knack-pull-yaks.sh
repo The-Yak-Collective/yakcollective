@@ -17,9 +17,9 @@
 # prevent infinite recursion.)
 #
 if [[ -z "$KNACK_YAK_PULL_CALLED_BY_COMMON_INIT" ]]; then
-	if [[ -f ./_bin/common-init.sh ]]; then
+	if [[ -f ./.automation/bin/common-init.sh ]]; then
 		export COMMON_INIT_CALLED_BY_KNACK_YAK_PULL=1
-		source ./_bin/common-init.sh
+		source ./.automation/bin/common-init.sh
 		unset COMMON_INIT_CALLED_BY_KNACK_YAK_PULL
 	else
 		echo "Init file not found! Are you running from the repository root?"

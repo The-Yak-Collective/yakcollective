@@ -4,8 +4,8 @@
 
 # Source init.
 #
-if [[ -f ./_bin/common-init.sh ]]; then
-	source ./_bin/common-init.sh
+if [[ -f ./.automation/bin/common-init.sh ]]; then
+	source ./.automation/bin/common-init.sh
 else
 	echo "Init file not found! Are you running from the repository root?"
 	exit 1
@@ -49,7 +49,7 @@ else
 fi
 
 if [[ "$NEED_HELP" == "yes" ]]; then
-	echo "USAGE: imgopt.sh [rgb|grayscale] [avatar|image|fullbleed] <IMAGE_TO_OPTIMIZE>"
+	echo "USAGE: optimize-image.sh [rgb|grayscale] [avatar|image|fullbleed] <IMAGE_TO_OPTIMIZE>"
 	echo ""
 	echo "Outputs a color (rgb) or grayscale (grayscale) WebP version of"
 	echo "IMAGE_TO_OPTIMIZE that has been scaled down (if appropriate) so that"

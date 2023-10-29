@@ -20,4 +20,4 @@ jobs:
           NETLIFY_ACCOUNT_SLUG: ${{ secrets.NETLIFY_ACCOUNT_SLUG }}
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_TOKEN }}
         run: |
-          ./_bin/stats-to-discord.sh
+          ./.automation/bin/stats-to-discord.sh

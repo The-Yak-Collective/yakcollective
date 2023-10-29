@@ -2,8 +2,8 @@
 
 # Source init.
 #
-if [[ -f ./_bin/common-init.sh ]]; then
-	source ./_bin/common-init.sh
+if [[ -f ./.automation/bin/common-init.sh ]]; then
+	source ./.automation/bin/common-init.sh
 else
 	echo "Init file not found! Are you running from the repository root?"
 	exit 1
@@ -11,7 +11,7 @@ fi
 
 # Check to make sure that we're running in the repository root.
 #
-if [[ ! -d _bin ]] || [[ ! -d _bluesky ]]; then
+if [[ ! -d .automation/bin ]] || [[ ! -d .automation/var/feeds/bluesky ]]; then
 	echo "This script must be run from the repository root!"
 	exit 1
 fi
@@ -26,9 +26,10 @@ fi
 
 # Determine the (lexigraphically) oldest Bluesky post file. This
 # variable will be the empty string if no (non-hidden) files are in the
-# _bluesky directory (in which case we should exit).
+# .automation/var/feeds/bluesky directory (in which case we should
+# exit).
 #
-POST="$(ls -1 _bluesky | sort -u | head -1)"
+POST="$(ls -1 .automation/var/feeds/bluesky | sort -u | head -1)"
 if [[ -z "$POST" ]]; then
 	exit
 fi
@@ -39,8 +40,8 @@ fi
 # the queue with a filename that comes lexicographically before the
 # zero-length "wait" post, then the wait will be bumped out one cycle.)
 #
-if [[ ! -s "_bluesky/$POST" ]]; then
-	rm "_bluesky/$POST"
+if [[ ! -s ".automation/var/feeds/bluesky/$POST" ]]; then
+	rm ".automation/var/feeds/bluesky/$POST"
 	exit
 fi
 
@@ -48,7 +49,7 @@ fi
 # helpful to have the post content stored as a variable for what's
 # about to come.
 #
-POST_CONTENT="$(cat "_bluesky/$POST")"
+POST_CONTENT="$(cat ".automation/var/feeds/bluesky/$POST")"
 
 # Bluesky posts can contain unicode, which CAN use multibyte
 # characters. And the "facet" functionality counts things in BYTES, not
@@ -123,6 +124,6 @@ AUTH_TOKEN="$(curl -s -H "Accept: application/json" -H "Content-Type: applicatio
 if [[ $? -eq 0 ]]; then
 	curl -s -H "Authorization: Bearer $AUTH_TOKEN" -H "Accept: application/json" -H "Content-Type: application/json" -d "{\"repo\":\"yakcollective.org\",\"collection\":\"app.bsky.feed.post\",\"record\":{\"\$type\":\"app.bsky.feed.post\",\"text\":\"$(echo "$POST_CONTENT" | sed -e 's/"/\\"/g')\",\"createdAt\":\"$(date -u +"%Y-%m-%dT%H:%M:%SZ")\",\"facets\":[$LINK_FACET$MENTION_FACET]}}" https://bsky.social/xrpc/com.atproto.repo.createRecord
 	if [[ $? -eq 0 ]]; then
-		rm "_bluesky/$POST"
+		rm ".automation/var/feeds/bluesky/$POST"
 	fi
 fi
