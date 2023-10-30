@@ -30,7 +30,7 @@ Here are the most in-demand soft skills according to a [survey](https://business
 
 It’s unfortunate that we chose to call such fundamental skills “soft”, making them sound somewhat weaker and less crucial to the job compared to hard skills.
 
-This couldn’t be further from the truth. In today’s world, the average lifespan of a technical skill is roughly [18 months](https://www.ibm.com/blogs/ibm-training/skills-transformation-2021-workplace/). Soft skills, by contrast, will never get obsolete, and can be transferred from role to role and anywhere outside the company.
+This couldn’t be further from the truth. In today’s world, the half-life of a technical skill is roughly [2.5 years](https://www.ibm.com/blogs/ibm-training/skills-transformation-2021-workplace/). Soft skills, by contrast, will never get obsolete, and can be transferred from role to role and anywhere outside the company.
 
 Hard skills are linked to your ability to do a specific task, while soft skills are about the way you do them. As technology continues to evolve at breakneck speed, soft skills may be the only constant in an ever-changing work environment. In the most basic sense, hard skills will get you the job, but soft skills will make you excel at it.
 
