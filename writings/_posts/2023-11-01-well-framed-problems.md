@@ -38,7 +38,9 @@ _An Irwin scrim installation at Sprüth-Magers in 2018._
 
 In my view, a good problem framing explicitly explores the tension between **freedom** (it defines the problem broadly to increase the number of possible solutions) and **useful constraint** (it is clear about un/acceptable tradeoffs solutions can make). It’s probably easier to explain these with examples of different framings for the same problem.
 
-Let’s say the problem is that the energy efficiency of transportation is too low — in other words, moving people and objects around consumes too much energy.
+Let’s say the problem is that the energy efficiency of transportation is too low — in other words, the problem is: **Moving people and objects around consumes too much energy.** The broad, lightly-framed question equivalent of this problem is: **How can we reduce the amount of energy needed to move people and objects around?** (All problems can be rewritten as questions.)
+
+Let’s look at a few ways to frame this problem/question to see how framing conditions the range of possible approaches to solutions.
 
 One way to frame this problem is to ask, “How can we build a 100mpg car?” This framing leads inevitably to solutions that are cars which have better fuel efficiency and run on gas. The framing is inherently narrow and prevents non-car, non-gas solutions from being considered at all.
 
@@ -50,7 +52,9 @@ An even broader framing is to ask, “How can we create cities which reduce the 
 
 To see why making un/acceptable tradeoffs explicit improves problem framing, let’s expand the last problem: “How can we create cities which reduce the amount of energy needed to move people and objects around while prioritising small/independent businesses?”
 
-This new framing highlights the importance of small/independent businesses. Another way to say it is that good solutions to the problem will not sacrifice the interests of small/independent businesses — specifying tradeoffs puts meaningful constraints into the problem. This new framing leads us to consider solutions like pedestrianising small streets (to disincentivise driving while increasing footfall to benefit small retailers), changing urban planning policy to encourage mixed-use development (to make it easier for small businesses to establish themselves and allow people to move around less by living/working/playing in the same places), or reducing energy subsidies (to discourage transportation of goods over long distances and encourage small-scale local production and consumption). It also makes it clear not to spend much effort considering solutions like cheap, fuel-efficient private cars (which have historically increased urban sprawl and unintentionally made small/independent businesses less viable).
+This new framing highlights the importance of small/independent businesses. Another way to say it is that good solutions to the problem will not sacrifice the interests of small/independent businesses — specifying tradeoffs puts meaningful constraints into the problem. (Any configuration of un/acceptable tradeoffs can be written as a set of priorities and non-priorities.)
+
+This new framing leads us to consider solutions like pedestrianising small streets (to disincentivise driving while increasing footfall to benefit small retailers), changing urban planning policy to encourage mixed-use development (to make it easier for small businesses to establish themselves and allow people to move around less by living/working/playing in the same places), or reducing energy subsidies (to discourage transportation of goods over long distances and encourage small-scale local production and consumption). This framing also makes it clear not to spend much effort considering solutions like cheap, fuel-efficient private cars (which have historically increased urban sprawl and unintentionally made small/independent businesses less viable).
 
 **A problem statement that explicitly identifies acceptable and unacceptable tradeoffs** _ **usefully** _ **limits the search for solutions — it is a useful constraint because it reduces wasted effort by focusing search on solutions that involve only acceptable tradeoffs and not unacceptable ones.**
 
