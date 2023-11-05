@@ -15,7 +15,7 @@ if [[ ! -f .automation/var/state/common-init ]]; then
 	#
 	[[ -d .automation/var/cache ]] && rm -rf .automation/var/cache
 	mkdir -p .automation/var/cache
-	cp -af . .automation/var/cache/
+	cp -af . .automation/var/cache/ 2> /dev/null
 
 	find .automation/var/cache -mindepth 1 -type d -iname '.*' -exec rm -rf "{}" \; 2> /dev/null
 	find .automation/var/cache -mindepth 1 -type f -iname '.*' -exec rm -f "{}" \; 2> /dev/null
