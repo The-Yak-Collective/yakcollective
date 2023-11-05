@@ -2,7 +2,7 @@
 
 # Check to make sure that we're running in the repository root.
 #
-if [[ ! -f _config.yml ]] || [[ ! -d .automation/bin ]]; then
+if [[ ! -f .automation/etc/skel/_config.yml ]] || [[ ! -d .automation/bin ]]; then
 	echo "This script must be run from the repository root!"
 	exit 1
 fi
