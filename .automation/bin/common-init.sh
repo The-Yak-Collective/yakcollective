@@ -17,8 +17,8 @@ if [[ ! -f .automation/var/state/common-init ]]; then
 	mkdir -p .automation/var/cache
 	cp -af . .automation/var/cache/
 
-	find .automation/var/cache -mindepth 1 -type d -iname '.*' -exec rm -rf "{}" \;
-	find .automation/var/cache -mindepth 1 -type f -iname '.*' -exec rm -f "{}" \;
+	find .automation/var/cache -mindepth 1 -type d -iname '.*' -exec rm -rf "{}" \; 2> /dev/null
+	find .automation/var/cache -mindepth 1 -type f -iname '.*' -exec rm -f "{}" \; 2> /dev/null
 
 	while IFS= read -d '' -r SKEL_DIR; do
 		CACHE_DIR="$(echo "$SKEL_DIR" | sed -e "s#^\.automation/etc/skel#.automation/var/cache#")"
