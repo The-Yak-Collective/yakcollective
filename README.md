@@ -25,7 +25,10 @@ export KNACK_OBJECT=XXXXXXXXXXXXXXX
 
 # View the website locally via http://127.0.0.1:4000.
 #
-env BUNDLE_USER_CONFIG=.automation/var/cache/.bundle/config bundle exec jekyll serve
+(
+	cd .automation/var/cache
+	bundle exec jekyll serve
+)
 
 # Push the website to Netlify.
 #
