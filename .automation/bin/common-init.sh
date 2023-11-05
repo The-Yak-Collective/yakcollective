@@ -13,6 +13,7 @@ if [[ ! -f .automation/var/state/common-init ]]; then
 
 	# Set up cache directory.
 	#
+	[[ -d .automation/var/cache ]] && rm -rf .automation/var/cache
 	mkdir -p .automation/var/cache
 	cp -af . .automation/var/cache/
 
