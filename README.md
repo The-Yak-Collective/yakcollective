@@ -12,12 +12,17 @@ Every collective needs a website. This is ours. It isn't much to look at, but it
 export KNACK_APP_ID=XXXXXXXXXXXXXXX
 export KNACK_API_KEY=XXXXXXXXXXXXXXX
 export KNACK_OBJECT=XXXXXXXXXXXXXXX
-[[ -f .automation/var/state/common-init ]] && rm .automation/var/state/common-init
+rm .automation/var/state/common-init
 ./.automation/bin/common-init.sh
 
 # Pull RSS feed update.
 #
+rm .automation/var/lib/pluto/*.db
 ./.automation/bin/rss-pull-feeds.sh
+
+# Update files that include automatically built lists.
+#
+./.automation/bin/update-lists.sh
 
 # Build the actual website.
 #
