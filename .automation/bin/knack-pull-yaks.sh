@@ -73,7 +73,7 @@ fi
 #     https://stackoverflow.com/a/52730148
 #
 echo "Processing Knack member data..."
-mkdir -p _data
+mkdir -p .automation/var/cache/_data
 jq -n '{records: [inputs.records] | add}' $TEMP_DIR/knack-yaks-* > .automation/var/cache/_data/knack_yaks.json
 
 # Download Knack avatars locally.
