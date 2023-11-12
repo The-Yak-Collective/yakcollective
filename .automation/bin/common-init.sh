@@ -19,6 +19,7 @@ if [[ ! -f .automation/var/state/common-init ]]; then
 
 	find .automation/var/cache/build -mindepth 1 -type d -iname '.*' -exec rm -rf "{}" \; 2> /dev/null
 	find .automation/var/cache/build -mindepth 1 -type f -iname '.*' -exec rm -f "{}" \; 2> /dev/null
+	rm -rf .automation/var/cache/build/private
 
 	while IFS= read -d '' -r SKEL_DIR; do
 		CACHE_DIR="$(echo "$SKEL_DIR" | sed -e "s#^\.automation/etc/skel#.automation/var/cache/build#")"

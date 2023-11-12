@@ -8,6 +8,9 @@
 	- Be sure to copy the new files into the root *and* the build directory!
 - [ ] Modify `update-list.sh` to also create RSS/JSON feeds for newsletters and writings
 	- These files should *only* go in the build directory!
+- [ ] Make sure that everything builds right still
+	- Any missing files in `_site`?
+	- Any improperly included files in `_site`?
 - [ ] Merge [Foam](https://foambubble.github.io/foam/) VS Code template and set up wiki
 - [ ] Foam-ify all `.md` files
 	- This includes moving to files with spaces in their names!
