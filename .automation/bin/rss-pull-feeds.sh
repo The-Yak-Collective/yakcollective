@@ -30,13 +30,14 @@ done < <(jq -r '.records[] | [.field_101_raw, .field_68_raw.url?] | @tsv' .autom
 	cd .automation/var/pluto
 	chmod +x ../../bin/build-posts.rb
 
+	export BUNDLE_GEMFILE=../cache/Gemfile
 	export BUNDLE_USER_CONFIG=../cache/.bundle/config
 
 	bundle exec pluto update newsletter.ini
-	bundle exec ../../bin/build-posts.rb newsletter
+	bundle exec ruby ../../bin/build-posts.rb newsletter
 
 	bundle exec pluto update writings.ini
-	bundle exec ../../bin/build-posts.rb writings
+	bundle exec ruby ../../bin/build-posts.rb writings
 )
 
 # Pull last run timestamp.
@@ -54,9 +55,7 @@ echo "Setting up new Bluesky posts..."
 while read -r FILE; do
 	DATE="$(basename ${FILE%%-*})"
 	if [[ $DATE -ge $LAST_RUN ]]; then
-		mv -v "$FILE" .automation/var/feeds/bluesky/
-	else
-		rm "$FILE"
+		cp -v "$FILE" .automation/var/feeds/bluesky/
 	fi
 done < <(find .automation/var/pluto/bluesky -type f -iname '*.txt')
 
@@ -89,11 +88,11 @@ echo "Setting up new Farcaster posts..."
 while read -r FILE; do
 	DATE="$(basename ${FILE%%-*})"
 	if [[ $DATE -ge $LAST_RUN ]]; then
-		mv -v "$FILE" .automation/var/feeds/farcaster/
-	else
-		rm "$FILE"
+		cp -v "$FILE" .automation/var/feeds/farcaster/
 	fi
 done < <(find .automation/var/pluto/farcaster -type f -iname '*.txt')
+
+echo "Fixing Farcaster handles..."
 
 while read -r RECORD; do
 	MEMBER_ID="$(echo "$RECORD" | cut -f 1)"
@@ -122,9 +121,7 @@ echo "Setting up new Discord posts..."
 while read -r FILE; do
 	DATE="$(basename ${FILE%%-*})"
 	if [[ $DATE -ge $LAST_RUN ]]; then
-		mv -v "$FILE" .automation/var/feeds/discord/
-	else
-		rm "$FILE"
+		cp -v "$FILE" .automation/var/feeds/discord/
 	fi
 done < <(find .automation/var/pluto/discord -type f -iname '*.txt')
 
@@ -135,11 +132,11 @@ echo "Setting up new Twitter posts..."
 while read -r FILE; do
 	DATE="$(basename ${FILE%%-*})"
 	if [[ $DATE -ge $LAST_RUN ]]; then
-		mv -v "$FILE" .automation/var/feeds/twitter/
-	else
-		rm "$FILE"
+		cp -v "$FILE" .automation/var/feeds/twitter/
 	fi
 done < <(find .automation/var/pluto/twitter -type f -iname '*.txt')
+
+echo "Fixing Twitter handles..."
 
 while read -r RECORD; do
 	MEMBER_ID="$(echo "$RECORD" | cut -f 1)"
@@ -163,13 +160,12 @@ done < <(jq -r '.records[] | [.field_101_raw, .field_97_raw?] | @tsv' .automatio
 
 # Integrate new newsletters.
 #
-cp -f .automation/var/pluto/newsletter/* newsletter/_posts/
-cp -f .automation/var/pluto/newsletter/* .automation/var/cache/newsletter/_posts/
+cp -f .automation/var/pluto/newsletter/* newsletter/
+cp -f .automation/var/pluto/newsletter/* .automation/var/cache/newsletter/
 
-# Integrate new writings.
+# Archive new writings.
 #
-cp -f .automation/var/pluto/writings/* writings/_posts/
-cp -f .automation/var/pluto/writings/* .automation/var/cache/writings/_posts/
+cp -f .automation/var/pluto/writings/* .automation/var/spool/writings/
 
 # Script run indicator.
 #

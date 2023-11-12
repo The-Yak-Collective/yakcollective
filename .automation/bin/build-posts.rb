@@ -46,7 +46,7 @@ class Planet
 	# Loop to generate post files
 	#
 	def run
-		Pluto.connect( @db_config )
+		Pluto.connect(@db_config)
 		Pluto::Model::Item.latest.each_with_index do |item, i|
 			puts "[#{i+1}] #{item.title}"
 			generate_blog_post(item)
