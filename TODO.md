@@ -1,6 +1,13 @@
 # TODO
 
-- [ ] Remove `_post` subdirectories (requires modifications to the Pluto RSS feed pull scripts)
+- [x] Remove `_post` subdirectories (requires modifications to the Pluto RSS feed pull scripts)
+- [ ] Finish `update-lists.sh` (generate lists for `newsletter.md` and `writings.md` from Planet Pluto databases)
+	- Current files:
+		- <https://www.yakcollective.org/newsletter.html>
+		- <https://www.yakcollective.org/writings.html>
+	- Be sure to copy the new files into the root *and* the build directory!
+- [ ] Modify `update-list.sh` to also create RSS/JSON feeds for newsletters and writings
+	- These files should *only* go in the build directory!
 - [ ] Merge [Foam](https://foambubble.github.io/foam/) VS Code template and set up wiki
 - [ ] Foam-ify all `.md` files
 	- This includes moving to files with spaces in their names!

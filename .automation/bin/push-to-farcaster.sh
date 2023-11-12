@@ -11,7 +11,7 @@ fi
 
 # Check to make sure that we're running in the repository root.
 #
-if [[ ! -d .automation/bin ]] || [[ ! -d .automation/var/feeds/farcaster ]]; then
+if [[ ! -d .automation/bin ]] || [[ ! -d .automation/var/spool/farcaster ]]; then
 	echo "This script must be run from the repository root!"
 	exit 1
 fi
@@ -26,10 +26,10 @@ fi
 
 # Determine the (lexigraphically) oldest Farcaster post file. This
 # variable will be the empty string if no (non-hidden) files are in the
-# .automation/var/feeds/farcaster directory (in which case we should
+# .automation/var/spool/farcaster directory (in which case we should
 # exit).
 #
-POST="$(ls -1 .automation/var/feeds/farcaster | sort -u | head -1)"
+POST="$(ls -1 .automation/var/spool/farcaster | sort -u | head -1)"
 if [[ -z "$POST" ]]; then
 	exit
 fi
@@ -40,16 +40,16 @@ fi
 # the queue with a filename that comes lexicographically before the
 # zero-length "wait" post, then the wait will be bumped out one cycle.)
 #
-if [[ ! -s ".automation/var/feeds/farcaster/$POST" ]]; then
-	rm ".automation/var/feeds/farcaster/$POST"
+if [[ ! -s ".automation/var/spool/farcaster/$POST" ]]; then
+	rm ".automation/var/spool/farcaster/$POST"
 	exit
 fi
 
 # Post file contents to Farcaster and delete file if successful.
 #
-export FARCASTER_POST="$(cat ".automation/var/feeds/farcaster/$POST")"
-source .automation/var/cache/bin/activate
+export FARCASTER_POST="$(cat ".automation/var/spool/farcaster/$POST")"
+source .automation/var/cache/build/bin/activate
 python3 -c 'import os; from farcaster import Warpcast; client = Warpcast(mnemonic = os.environ.get("FARCASTER_MNEMONIC")); client.post_cast(text = os.environ.get("FARCASTER_POST"));'
 if [[ $? -eq 0 ]]; then
-	rm ".automation/var/feeds/farcaster/$POST"
+	rm ".automation/var/spool/farcaster/$POST"
 fi

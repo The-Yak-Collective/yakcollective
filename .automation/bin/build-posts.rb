@@ -16,7 +16,7 @@ else
 	$feed_set = ARGV[0]
 end
 
-# Extend "Planet" class from pluton/models. This is where all the magic
+# Extend "Planet" class from pluto/models. This is where all the magic
 # happens.
 #
 class Planet

@@ -5,16 +5,16 @@
 *.swp
 
 # Ignore build files
-.automation/var/cache/*
+.automation/var/cache/build/*
 .automation/var/state/common-init
 
 # Ignore Planet Pluto files that are regularly regenerated
 #
-.automation/var/pluto/*.db
-.automation/var/pluto/bluesky/*
-.automation/var/pluto/discord/*
-.automation/var/pluto/farcaster/*
-.automation/var/pluto/newsletter/*
-.automation/var/pluto/twitter/*
-.automation/var/pluto/writings/*
-.automation/var/pluto/writings.ini
+.automation/var/lib/pluto/*.db
+.automation/var/lib/pluto/bluesky/*
+.automation/var/lib/pluto/discord/*
+.automation/var/lib/pluto/farcaster/*
+.automation/var/lib/pluto/newsletter/*
+.automation/var/lib/pluto/twitter/*
+.automation/var/lib/pluto/writings/*
+.automation/var/lib/pluto/writings.ini

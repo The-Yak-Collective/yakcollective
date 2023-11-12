@@ -16,7 +16,7 @@ fi
 # directory.
 #
 (
-	cd .automation/var/cache
+	cd .automation/var/cache/build
 
 	# Clean destination directory.
 	#
@@ -61,12 +61,12 @@ fi
 	# used.
 	#
 	MINIFY_BINARY="minify-$(uname -s | tr "[:upper:]" "[:lower:]")-$(uname -m)"
-	if [[ -f ../../bin/third-party/minify/"$MINIFY_BINARY" ]]; then
-		chmod +x ../../bin/third-party/minify/"$MINIFY_BINARY"
+	if [[ -f ../../../bin/third-party/minify/"$MINIFY_BINARY" ]]; then
+		chmod +x ../../../bin/third-party/minify/"$MINIFY_BINARY"
 		mv _site _site.original
 		(
 			cd _site.original
-			../../../bin/third-party/minify/"$MINIFY_BINARY" --all --recursive --sync --output ../_site .
+			../../../../bin/third-party/minify/"$MINIFY_BINARY" --all --recursive --sync --output ../_site .
 		)
 		rm -rf _site.original
 	fi

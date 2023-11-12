@@ -13,25 +13,25 @@ if [[ ! -f .automation/var/state/common-init ]]; then
 
 	# Set up cache directory.
 	#
-	[[ -d .automation/var/cache ]] && rm -rf .automation/var/cache
-	mkdir -p .automation/var/cache
-	cp -af . .automation/var/cache/ 2> /dev/null
+	[[ -d .automation/var/cache/build ]] && rm -rf .automation/var/cache/build
+	mkdir -p .automation/var/cache/build
+	cp -af . .automation/var/cache/build/ 2> /dev/null
 
-	find .automation/var/cache -mindepth 1 -type d -iname '.*' -exec rm -rf "{}" \; 2> /dev/null
-	find .automation/var/cache -mindepth 1 -type f -iname '.*' -exec rm -f "{}" \; 2> /dev/null
+	find .automation/var/cache/build -mindepth 1 -type d -iname '.*' -exec rm -rf "{}" \; 2> /dev/null
+	find .automation/var/cache/build -mindepth 1 -type f -iname '.*' -exec rm -f "{}" \; 2> /dev/null
 
 	while IFS= read -d '' -r SKEL_DIR; do
-		CACHE_DIR="$(echo "$SKEL_DIR" | sed -e "s#^\.automation/etc/skel#.automation/var/cache#")"
+		CACHE_DIR="$(echo "$SKEL_DIR" | sed -e "s#^\.automation/etc/skel#.automation/var/cache/build#")"
 		mkdir -p "$CACHE_DIR"
 	done < <(find .automation/etc/skel -mindepth 1 -type d -print0)
 
 	while IFS= read -d '' -r SKEL_FILE; do
-		CACHE_FILE="$(echo "$SKEL_FILE" | sed -e "s#^\.automation/etc/skel#.automation/var/cache#")"
+		CACHE_FILE="$(echo "$SKEL_FILE" | sed -e "s#^\.automation/etc/skel#.automation/var/cache/build#")"
 		cp -apf "$SKEL_FILE" "$CACHE_FILE"
 	done < <(find .automation/etc/skel -type f -print0)
 
 	(
-		cd .automation/var/cache
+		cd .automation/var/cache/build
 
 		# Install pre-requisits.
 		#
@@ -83,6 +83,19 @@ if [[ ! -f .automation/var/state/common-init ]]; then
 				sudo yum install -y libwebp-tools
 			else
 				echo "The webp tools are not found and is not installable! Bailing..."
+				exit 1
+			fi
+		fi
+
+		if [[ -z "$(which sqlite3)" ]]; then
+			if [[ -n "$(which brew)" ]]; then
+				brew install sqlite
+			elif [[ -n "$(which apt)" ]]; then
+				sudo apt install -y sqlite3
+			elif [[ -n "$(which yum)" ]]; then
+				sudo yum install -y sqlite3
+			else
+				echo "The SQLite 3.x is not found and is not installable! Bailing..."
 				exit 1
 			fi
 		fi

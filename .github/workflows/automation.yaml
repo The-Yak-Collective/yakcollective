@@ -29,7 +29,7 @@ jobs:
           NETLIFY_SITE: ${{ secrets.NETLIFY_SITE }}
         run: |
           ./.automation/bin/build.sh
-          ./.automation/var/cache/node_modules/.bin/netlify deploy --dir .automation/var/cache/_site --site $NETLIFY_SITE --message "Automatic deploy from GitHub Actions $(date -u +"%Y%m%d%H%M%S")" --prod
+          ./.automation/var/cache/build/node_modules/.bin/netlify deploy --dir .automation/var/cache/build/_site --site $NETLIFY_SITE --message "Automatic deploy from GitHub Actions $(date -u +"%Y%m%d%H%M%S")" --prod
       - name: Push oldest queued post to Twitter
         env:
           IFTTT_MAKER_KEY: ${{ secrets.IFTTT_MAKER_KEY }}

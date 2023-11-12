@@ -26,7 +26,7 @@ export KNACK_OBJECT=XXXXXXXXXXXXXXX
 # View the website locally via http://127.0.0.1:4000.
 #
 (
-	cd .automation/var/cache
+	cd .automation/var/cache/build
 	bundle exec jekyll serve
 )
 
@@ -34,7 +34,7 @@ export KNACK_OBJECT=XXXXXXXXXXXXXXX
 #
 export NETLIFY_AUTH_TOKEN=XXXXXXXXXXXXXXX
 export NETLIFY_SITE=XXXXXXXXXXXXXXX
-./.automation/var/cache/node_modules/.bin/netlify deploy --dir .automation/var/cache/_site --site $NETLIFY_SITE --message "Local development deploy $(date -u +"%Y%m%d%H%M%S")/${USER}@${HOST}" --prod
+./.automation/var/cache/build/node_modules/.bin/netlify deploy --dir .automation/var/cache/build/_site --site $NETLIFY_SITE --message "Local development deploy $(date -u +"%Y%m%d%H%M%S")/${USER}@${HOST}" --prod
 
 # Push an update to Twitter.
 #

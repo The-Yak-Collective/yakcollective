@@ -11,7 +11,7 @@ fi
 
 # Check to make sure that we're running in the repository root.
 #
-if [[ ! -d .automation/bin ]] || [[ ! -d .automation/var/feeds/discord ]]; then
+if [[ ! -d .automation/bin ]] || [[ ! -d .automation/var/spool/discord ]]; then
 	echo "This script must be run from the repository root!"
 	exit 1
 fi
@@ -26,10 +26,10 @@ fi
 
 # Determine the (lexigraphically) oldest Discord post file. This
 # variable will be the empty string if no (non-hidden) files are in the
-# .automation/var/feeds/discord directory (in which case we should
+# .automation/var/spool/discord directory (in which case we should
 # exit).
 #
-POST="$(ls -1 .automation/var/feeds/discord | sort -u | head -1)"
+POST="$(ls -1 .automation/var/spool/discord | sort -u | head -1)"
 if [[ -z "$POST" ]]; then
 	exit
 fi
@@ -40,14 +40,14 @@ fi
 # the queue with a filename that comes lexicographically before the
 # zero-length "wait" post, then the wait will be bumped out one cycle.)
 #
-if [[ ! -s ".automation/var/feeds/discord/$POST" ]]; then
-	rm ".automation/var/feeds/discord/$POST"
+if [[ ! -s ".automation/var/spool/discord/$POST" ]]; then
+	rm ".automation/var/spool/discord/$POST"
 	exit
 fi
 
 # Post file contents to Discord and delete file if successful.
 #
-curl -s -H "Accept: application/json" -H "Content-Type: application/json" -d "{\"content\":\"$(cat ".automation/var/feeds/discord/$POST" | sed -e 's/"/\\"/g')\"}" "$DISCORD_CHANNEL_URL"
+curl -s -H "Accept: application/json" -H "Content-Type: application/json" -d "{\"content\":\"$(cat ".automation/var/spool/discord/$POST" | sed -e 's/"/\\"/g')\"}" "$DISCORD_CHANNEL_URL"
 if [[ $? -eq 0 ]]; then
-	rm ".automation/var/feeds/discord/$POST"
+	rm ".automation/var/spool/discord/$POST"
 fi
