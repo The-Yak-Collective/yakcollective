@@ -4,6 +4,7 @@
 - [ ] Merge [Foam](https://foambubble.github.io/foam/) VS Code template and set up wiki
 - [ ] Foam-ify all `.md` files
 	- This includes moving to files with spaces in their names!
+- [ ] Implement [`foam janitor`](https://github.com/foambubble/foam-cli) as an on-commit GitHub Action
 - [ ] New, simpler, Foam-compatible theme
 	- Return to using "Yak Gold" as our default accent color
 	- Return to light/dark automatic theming
