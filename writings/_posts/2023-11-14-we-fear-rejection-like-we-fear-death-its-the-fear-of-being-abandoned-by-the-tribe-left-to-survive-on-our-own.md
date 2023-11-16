@@ -65,16 +65,16 @@ What could you do if you didn’t fear rejection?
 
 What experiences have helped you get over yourself?
 
-![](https://cdn-images-1.medium.com/max/1600/1*YOuVrHlU0SakkGS7FXFGWA.png)
+![](https://chosenpath.files.wordpress.com/2023/11/8e7c3-1youvrhlu0sakkgs7fxfgwa.png)
 
-![](https://cdn-images-1.medium.com/max/1600/1*vXsuShcstAf-2gw3DCckHQ.png)
+![](https://chosenpath.files.wordpress.com/2023/11/aaf64-1vxsushcstaf-2gw3dcckhq.png)
 
-![](https://cdn-images-1.medium.com/max/1600/1*d9utuwwkpYTtOSlfc6yW1g.png)
+![](https://chosenpath.files.wordpress.com/2023/11/0dfa4-1d9utuwwkpyttoslfc6yw1g.png)
 
-![](https://cdn-images-1.medium.com/max/1600/1*K4kiyy2f73Gwq8AoSWv6DA.png)
+![](https://chosenpath.files.wordpress.com/2023/11/f523a-1k4kiyy2f73gwq8aoswv6da.png)
 
-![](https://cdn-images-1.medium.com/max/1600/1*2oIW9p7im8_yOLjtlFM9ig.png)
+![](https://chosenpath.files.wordpress.com/2023/11/4f624-12oiw9p7im8_yoljtlfm9ig.png)
 
-![](https://cdn-images-1.medium.com/max/1600/1*q_OarONS3HTpFNVjupT1zQ.png)
+![](https://chosenpath.files.wordpress.com/2023/11/809f5-1q_oarons3htpfnvjupt1zq.png)
 
-![](https://cdn-images-1.medium.com/max/1600/1*UeJqoyKsa3pqTntb-dSGOA.png)
+![](https://chosenpath.files.wordpress.com/2023/11/5f7c6-1uejqoyksa3pqtntb-dsgoa.png)
