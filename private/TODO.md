@@ -1,13 +1,9 @@
 # TODO
 
 - [x] Remove `_post` subdirectories (requires modifications to the Pluto RSS feed pull scripts)
-- [ ] Finish `update-lists.sh` (generate lists for `newsletter.md` and `writings.md` from Planet Pluto databases)
-	- Current files:
-		- <https://www.yakcollective.org/newsletter.html>
-		- <https://www.yakcollective.org/writings.html>
-	- Be sure to copy the new files into the root *and* the build directory!
-- [ ] Modify `update-list.sh` to also create RSS/JSON feeds for newsletters and writings
-	- These files should *only* go in the build directory!
+- [x] Finish `update-lists.sh` (generate lists for `newsletter.md` and `writings.md` from Planet Pluto databases)
+- [ ] Add RSS feed creation for "writings" to `update-list.sh`
+	- This file should *only* go in the build directory!
 - [ ] Make sure that everything builds right still
 	- Any missing files in `_site`?
 	- Any improperly included files in `_site`?
@@ -23,11 +19,11 @@
 		- Custom banners
 		- Custom RSS link ("original URL")
 		- Additional headers
-	- How to handle RSS feeds? Maybe GitHub created/updated?
+	- How to handle RSS feeds? Maybe GitHub created/updated? Specially marked pages?
 	- Can this be made GitHub-compatible, [100 Rabbits](https://100r.co/site/home.html)-style?
+- [ ] Create a page in `/private` providing a mapping between Yak Collective member names and IDs
 - [ ] Move [IT infrastructure map](https://roamresearch.com/#/app/ArtOfGig/page/w6uAG9Pig) from DOT/Graphviz to something like Mermaid
 	- The goal here is Foam/GitHub compatability
-	- Maybe add it as a (hidden) page here?
-		- Maybe I want an entire `private` directory that isn't published?
+	- Add it to the `/private` directory
 	- Archive the [current repo](https://github.com/The-Yak-Collective/infrastructure-map) when done
 	- Not *technically* part of this project, but makes sense to slot in here...

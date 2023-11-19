@@ -39,8 +39,120 @@ fi
 
 # Update newsletter.md from Planet Pluto SQLite cache.
 #
+DB=".automation/var/lib/pluto/newsletter.db"
+MIN_YEAR="$(sqlite3 $DB "SELECT STRFTIME('%Y', MIN(published)) FROM items;")"
+MAX_YEAR="$(sqlite3 $DB "SELECT STRFTIME('%Y', MAX(published)) FROM items;")"
+
+cat .automation/var/cache/templates/newsletter.md > newsletter.md
+for YEAR in $(seq $MAX_YEAR -1 $MIN_YEAR); do
+	POST_COUNT="$(sqlite3 $DB "SELECT COUNT(*) FROM items WHERE STRFTIME('%Y', published) = '$YEAR';")"
+
+	if [[ $POST_COUNT -gt 0 ]]; then
+		echo "" >> newsletter.md
+		echo "## $YEAR" >> newsletter.md
+
+		sqlite3 $DB "SELECT '**\`' || STRFTIME('%d', published) || ' month' || STRFTIME('%m', published) || ':\`** *[' || REPLACE(REPLACE(title, '[', '\['), ']', '\]') || '](' || REPLACE(REPLACE(url, '(', '%28'), ')', '%29') || ')*  ' FROM items WHERE STRFTIME('%Y', published) = '$YEAR' ORDER BY published DESC;" | sed 's/month01/Jan/;s/month02/Feb/;s/month03/Mar/;s/month04/Apr/;s/month05/May/;s/month06/Jun/;s/month07/Jul/;s/month08/Aug/;s/month09/Sep/;s/month10/Oct/;s/month11/Nov/;s/month12/Dec/' >> newsletter.md
+	fi
+done
+
+sed 's/<!-- DO NOT REMOVE THIS LINE! DO NOT EDIT BELOW THIS LINE! -->/- TOC style seed\n{:toc}/' newsletter.md > .automation/var/cache/build/newsletter.md
 
 # Update writings.md from Planet Pluto SQLite cache.
 #
+DB=".automation/var/lib/pluto/writings.db"
+MIN_YEAR="$(sqlite3 $DB "SELECT STRFTIME('%Y', MIN(published)) FROM items;")"
+MAX_YEAR="$(sqlite3 $DB "SELECT STRFTIME('%Y', MAX(published)) FROM items;")"
 
-echo "Some day I will be a beautiful script that will do wonderful things!"
+cat .automation/var/cache/templates/writings.md > writings.md
+for YEAR in $(seq $MAX_YEAR -1 $MIN_YEAR); do
+	POST_COUNT="$(sqlite3 $DB "SELECT COUNT(*) FROM items WHERE STRFTIME('%Y', published) = '$YEAR';")"
+
+	if [[ $POST_COUNT -gt 0 ]]; then
+		echo "" >> writings.md
+		echo "## $YEAR" >> writings.md
+
+		FIRST_MONTH="yes"
+
+		for MONTH_INT in $(seq 12 -1 1); do
+			case $MONTH_INT in
+				1)
+					MONTH_NAME="January"
+					MONTH="01"
+					;;
+				2)
+					MONTH_NAME="February"
+					MONTH="02"
+					;;
+				3)
+					MONTH_NAME="March"
+					MONTH="03"
+					;;
+				4)
+					MONTH_NAME="April"
+					MONTH="04"
+					;;
+				5)
+					MONTH_NAME="May"
+					MONTH="05"
+					;;
+				6)
+					MONTH_NAME="June"
+					MONTH="06"
+					;;
+				7)
+					MONTH_NAME="July"
+					MONTH="07"
+					;;
+				8)
+					MONTH_NAME="August"
+					MONTH="08"
+					;;
+				9)
+					MONTH_NAME="September"
+					MONTH="09"
+					;;
+				10)
+					MONTH_NAME="October"
+					MONTH="10"
+					;;
+				11)
+					MONTH_NAME="November"
+					MONTH="11"
+					;;
+				12)
+					MONTH_NAME="December"
+					MONTH="12"
+					;;
+				*)
+					MONTH_NAME="Huh?"
+					MONTH="00"
+					;;
+			esac
+
+			POST_COUNT="$(sqlite3 $DB "SELECT COUNT(*) FROM items WHERE STRFTIME('%Y', published) = '$YEAR' AND STRFTIME('%m', published) = '$MONTH';")"
+
+			if [[ $POST_COUNT -gt 0 ]]; then
+				if [[ "$FIRST_MONTH" == "no" ]]; then
+					echo "" >> writings.md
+				fi
+				echo "### $MONTH_NAME" >> writings.md
+
+				FIRST_MONTH="no"
+
+				sqlite3 $DB "SELECT '**\`' || STRFTIME('%d', items.published) || ' month' || STRFTIME('%m', items.published) || ':\`** [name' || feeds.key || '](/members/' || feeds.key || '.html), *[' || REPLACE(REPLACE(items.title, '[', '\['), ']', '\]') || '](' || REPLACE(REPLACE(items.url, '(', '%28'), ')', '%29') || ')*  ' FROM items JOIN feeds ON feeds.id = items.feed_id WHERE STRFTIME('%Y', items.published) = '$YEAR' AND STRFTIME('%m', items.published) = '$MONTH' ORDER BY items.published DESC;" | sed 's/month01/Jan/;s/month02/Feb/;s/month03/Mar/;s/month04/Apr/;s/month05/May/;s/month06/Jun/;s/month07/Jul/;s/month08/Aug/;s/month09/Sep/;s/month10/Oct/;s/month11/Nov/;s/month12/Dec/' >> writings.md
+			fi
+		done
+	fi
+done
+
+while read -r RECORD; do
+	MEMBER_ID="$(echo "$RECORD" | cut -f 1)"
+	NAME="$(echo "$RECORD" | cut -s -f 2 | sed -e 's#|#/#g')"
+	if [[ -n "$NAME" ]]; then
+		sed -i -e "s|name$MEMBER_ID|$NAME|" writings.md
+	else
+		sed -i -e "s|name$MEMBER_ID|Anonymous Contributor #$MEMBER_ID|" writings.md
+	fi
+done < <(jq -r '.records[] | [.field_101_raw, .field_97_raw?] | @tsv' .automation/var/cache/build/_data/knack_yaks.json | sed -e 's/^\s*//;s/\s*$//')
+
+sed 's/<!-- DO NOT REMOVE THIS LINE! DO NOT EDIT BELOW THIS LINE! -->/- TOC style seed\n{:toc}/' writings.md > .automation/var/cache/build/writings.md
