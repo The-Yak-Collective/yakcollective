@@ -20,7 +20,7 @@
 		- Additional headers
 	- How to handle RSS feeds? Maybe GitHub created/updated? Specially marked pages?
 	- Can this be made GitHub-compatible, [100 Rabbits](https://100r.co/site/home.html)-style?
-- [ ] Create a page in `/private` providing a mapping between Yak Collective member names and IDs
+- [x] Create a page in `/private` providing a mapping between Yak Collective member names and IDs
 - [ ] Move [IT infrastructure map](https://roamresearch.com/#/app/ArtOfGig/page/w6uAG9Pig) from DOT/Graphviz to something like Mermaid
 	- The goal here is Foam/GitHub compatability
 	- Add it to the `/private` directory

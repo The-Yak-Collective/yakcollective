@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+echo "[$(date)] Started member update from Knack"
+
 # These environment variables should also be set:
 #
 #     KNACK_APP_ID
@@ -41,7 +43,7 @@ TEMP_DIR="$(mktemp -d)"
 #
 #    https://docs.knack.com/docs/retrieving-multiple-records
 #
-echo "Pulling Knack member data..."
+echo "[$(date)] Pulling Knack member data..."
 curl -sS -X  GET \
          -H "X-Knack-Application-Id: $KNACK_APP_ID" \
          -H "X-Knack-REST-API-Key: $KNACK_API_KEY" \
@@ -72,7 +74,7 @@ fi
 #
 #     https://stackoverflow.com/a/52730148
 #
-echo "Processing Knack member data..."
+echo "[$(date)] Processing Knack member data..."
 mkdir -p .automation/var/cache/build/_data
 jq -n '{records: [inputs.records] | add}' $TEMP_DIR/knack-yaks-* > .automation/var/cache/build/_data/knack_yaks.json
 
@@ -84,7 +86,7 @@ jq -n '{records: [inputs.records] | add}' $TEMP_DIR/knack-yaks-* > .automation/v
 
 	while IFS= read -r RECORD; do
 		MEMBER_ID="$(echo "$RECORD" | cut -f 1)"
-		echo "Processing avatar for member $MEMBER_ID..."
+		echo "    Processing avatar for member $MEMBER_ID..."
 		KNACK_PATH="$(echo "$RECORD" | cut -s -f 2 | sed -e "s#https://s3-eu-west-1.amazonaws.com/assets.knack-eu.com/assets/5f70876d8e7037001504bfe8/##")"
 		if [[ -n "$KNACK_PATH" ]]; then
 			USE_CURL="yes"
@@ -108,6 +110,41 @@ jq -n '{records: [inputs.records] | add}' $TEMP_DIR/knack-yaks-* > .automation/v
 	done <<< "$(jq -r '.records[] | [.field_101_raw, .field_44_raw.url?] | @tsv' _data/knack_yaks.json | sed -e 's/^\s*//;s/\s*$//')"
 )
 
+# Update Knack member mapping convenience file.
+#
+# FIXME: Right now we hard-cap the length of a name at 30 characters and
+# the length of a Knack ID to 8 characters. It would be better to
+# dynamically determine the maximum lengths for these values first (with
+# a floor of 21 and 8, respectively), and then dynamically resize the
+# table...
+#
+echo "[$(date)] Updating member mapping convenience file..."
+
+source .automation/lib/libalign.sh # Shell "library" for aligning UTF8 strings; doesn't truncate!
+
+MEMBER_MAP="./private/Knack Member ID Map.md"
+
+mkdir -p "$(dirname "$MEMBER_MAP")"
+
+cat > "$MEMBER_MAP" << EOF
+# Knack Member ID Map
+| Yak Collective Member          | Knack ID |
+|:------------------------------ | --------:|
+EOF
+
+while read -r RECORD; do
+	MEMBER_ID="$(echo "$RECORD" | cut -f 1)"
+	NAME="$(echo "$RECORD" | cut -s -f 2 | sed -e 's#|#/#g')"
+
+	printf "| %s | %8.8s |\n" "$(align::left 30 "$NAME")" "$MEMBER_ID" >> "$MEMBER_MAP"
+done < <(jq -r '.records[] | [.field_101_raw, .field_97_raw?] | @tsv' .automation/var/cache/build/_data/knack_yaks.json | sed -e 's/^\s*//;s/\s*$//;s/([^()]\+)//g;s/@.*//;s/ \+/ /g')
+
+echo "" >> "$MEMBER_MAP"
+
 # Cleanup.
 #
+echo "[$(date)] Cleaning up temporary files..."
+
 rm -rf $TEMP_DIR
+
+echo "[$(date)] Finished member update from Knack"
