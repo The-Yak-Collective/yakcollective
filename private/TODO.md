@@ -2,8 +2,7 @@
 
 - [x] Remove `_post` subdirectories (requires modifications to the Pluto RSS feed pull scripts)
 - [x] Finish `update-lists.sh` (generate lists for `newsletter.md` and `writings.md` from Planet Pluto databases)
-- [ ] Add RSS feed creation for "writings" to `update-list.sh`
-	- This file should *only* go in the build directory!
+- [x] Add RSS feed creation for "writings" to `update-list.sh`
 - [ ] Make sure that everything builds right still
 	- Any missing files in `_site`?
 	- Any improperly included files in `_site`?

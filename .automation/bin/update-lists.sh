@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+echo "[$(date)] Started Planet Pluto list updates"
+
 # Source init.
 #
 if [[ -f ./.automation/bin/common-init.sh ]]; then
@@ -21,6 +23,8 @@ fi
 #
 #     https://stackoverflow.com/questions/45125826/delete-everything-after-a-certain-line-in-bash/69868184#69868184
 #
+echo "[$(date)] Updating templates..."
+
 mkdir -p .automation/var/cache/templates
 
 if [[ -f newsletter.md ]]; then
@@ -39,6 +43,8 @@ fi
 
 # Update newsletter.md from Planet Pluto SQLite cache.
 #
+echo "[$(date)] Updating newsletter.md..."
+
 DB=".automation/var/lib/pluto/newsletter.db"
 MIN_YEAR="$(sqlite3 $DB "SELECT STRFTIME('%Y', MIN(published)) FROM items;")"
 MAX_YEAR="$(sqlite3 $DB "SELECT STRFTIME('%Y', MAX(published)) FROM items;")"
@@ -59,6 +65,8 @@ sed 's/<!-- DO NOT REMOVE THIS LINE! DO NOT EDIT BELOW THIS LINE! -->/- TOC styl
 
 # Update writings.md from Planet Pluto SQLite cache.
 #
+echo "[$(date)] Updating writings.md..."
+
 DB=".automation/var/lib/pluto/writings.db"
 MIN_YEAR="$(sqlite3 $DB "SELECT STRFTIME('%Y', MIN(published)) FROM items;")"
 MAX_YEAR="$(sqlite3 $DB "SELECT STRFTIME('%Y', MAX(published)) FROM items;")"
@@ -156,3 +164,44 @@ while read -r RECORD; do
 done < <(jq -r '.records[] | [.field_101_raw, .field_97_raw?] | @tsv' .automation/var/cache/build/_data/knack_yaks.json | sed -e 's/^\s*//;s/\s*$//')
 
 sed 's/<!-- DO NOT REMOVE THIS LINE! DO NOT EDIT BELOW THIS LINE! -->/- TOC style seed\n{:toc}/' writings.md > .automation/var/cache/build/writings.md
+
+# Generate writings.xml from Planet Pluto SQLite cache.
+#
+echo "[$(date)] Creating writings.xml..."
+
+DB=".automation/var/lib/pluto/writings.db"
+
+cat > .automation/var/cache/build/writings.xml << EOF
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/">
+	<channel>
+		<title>Yak Collective Member Writings</title>
+		<description>Yak Collective member posts from around the Web.</description>
+		<sy:updatePeriod>daily</sy:updatePeriod>
+		<sy:updateFrequency>1</sy:updateFrequency>
+		<link>https://yakcollective.org/writings.html</link>
+		<atom:link href="https://yakcollective.org/writings.xml" rel="self" type="application/rss+xml" />
+		<lastBuildDate>$(date --date="$(sqlite3 .automation/var/lib/pluto/writings.db "SELECT MAX(published) FROM items;")" "+%a, %d %b %Y %H:%M:%S %z")</lastBuildDate>
+EOF
+
+while read -r RECORD; do
+	PLUTO_ID="$(echo "$RECORD" | cut -d "|" -f 1)"
+	PUB_DATE="$(date --date="$(echo "$RECORD" | cut -d "|" -f 2)" "+%a, %d %b %Y %H:%M:%S %z")"
+	RSS_LINK="$(sqlite3 $DB "SELECT url FROM items WHERE id = $PLUTO_ID" | sed 's/&/\&amp;/g')"
+
+	cat >> .automation/var/cache/build/writings.xml << EOF
+	<item>
+		<title>$(sqlite3 $DB "SELECT title FROM items WHERE id = $PLUTO_ID" | sed 's/&/\&amp;/g;s/</\&lt;/g;s/>/\&gt;/g')</title>
+		<description>$(sqlite3 $DB "SELECT content FROM items WHERE id = $PLUTO_ID" | sed 's/&/\&amp;/g;s/</\&lt;/g;s/>/\&gt;/g')</description>
+		<pubDate>$PUB_DATE</pubDate>
+		<link>$RSS_LINK</link>
+		<guid isPermaLink="true">$RSS_LINK</guid>
+	</item>
+EOF
+done < <(sqlite3 $DB "SELECT id, published FROM items ORDER BY published, id DESC")
+
+cat >> .automation/var/cache/build/writings.xml << EOF
+	</channel>
+</rss>
+EOF
+
+echo "[$(date)] Finished Planet Pluto list updates"
