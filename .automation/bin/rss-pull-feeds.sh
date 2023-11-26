@@ -79,7 +79,7 @@ while read -r RECORD; do
 			sed -i -e "s|@$MEMBER_ID|$NAME|" "$FILE"
 		done < <(find .automation/var/spool/bluesky -type f -iname '*.txt' -exec grep -l "@$MEMBER_ID" "{}" \;)
 	fi
-done < <(jq -r '.records[] | [.field_101_raw, .field_97_raw?] | @tsv' .automation/var/cache/build/_data/knack_yaks.json | sed -e 's/^\s*//;s/\s*$//')
+done < <(jq -r '.records[] | [.field_101_raw, .field_97_raw?] | @tsv' .automation/var/cache/build/_data/knack_yaks.json | sed -e 's/^\s*//;s/\s*$//;s/([^()]\+)//g;s/@.*//;s/ \+/ /g')
 
 # Integrate new Farcaster posts.
 #
@@ -112,7 +112,7 @@ while read -r RECORD; do
 			sed -i -e "s|@$MEMBER_ID|$NAME|" "$FILE"
 		done < <(find .automation/var/spool/farcaster -type f -iname '*.txt' -exec grep -l "@$MEMBER_ID" "{}" \;)
 	fi
-done < <(jq -r '.records[] | [.field_101_raw, .field_97_raw?] | @tsv' .automation/var/cache/build/_data/knack_yaks.json | sed -e 's/^\s*//;s/\s*$//')
+done < <(jq -r '.records[] | [.field_101_raw, .field_97_raw?] | @tsv' .automation/var/cache/build/_data/knack_yaks.json | sed -e 's/^\s*//;s/\s*$//;s/([^()]\+)//g;s/@.*//;s/ \+/ /g')
 
 # Integrate new Discord posts.
 #
@@ -156,7 +156,7 @@ while read -r RECORD; do
 			sed -i -e "s|@$MEMBER_ID|$NAME|" "$FILE"
 		done < <(find .automation/var/spool/twitter -type f -iname '*.txt' -exec grep -l "@$MEMBER_ID" "{}" \;)
 	fi
-done < <(jq -r '.records[] | [.field_101_raw, .field_97_raw?] | @tsv' .automation/var/cache/build/_data/knack_yaks.json | sed -e 's/^\s*//;s/\s*$//')
+done < <(jq -r '.records[] | [.field_101_raw, .field_97_raw?] | @tsv' .automation/var/cache/build/_data/knack_yaks.json | sed -e 's/^\s*//;s/\s*$//;s/([^()]\+)//g;s/@.*//;s/ \+/ /g')
 
 # Update newsletters and writings caches.
 #
