@@ -70,9 +70,9 @@ I’m still thinking about how to frame this question properly, so what follows 
 
 2. [Each of these types of not-knowing is conceptually different from the others](https://vaughntan.org/introducing-not-knowing#different-types-of-not-knowing) and affects how we think about decisionmaking differently. They affect how we think about bias, learning from limited data, interpretation of ambiguous situations, conceptions of expertise, evaluations of performance relative to human performance, and subjective desirability of outcomes — among many other important things.
 
-3. [Only formal risk is currently symbolically representable in ways (i.e., numerical probabilities) that an AI system can incorporate.](https://vaughntan.org/how-to-think-more-clearly-about-risk#what-is-formal-risk) This means AI systems either omit non-risk forms of not-knowing or conflate them.
+3. [Only formal risk is currently symbolically representable in ways (i.e., numerical probabilities) that an AI system can incorporate.](https://vaughntan.org/how-to-think-more-clearly-about-risk#what-is-formal-risk) This means AI systems either omit non-risk forms of not-knowing or conflate them ([there are some examples here](https://vaughntan.org/not-knowing-discussion-5-false-advertising-summary#discussion-highlights)).
 
-4. AI systems that omit and conflate these types of not-knowing become problematic to understand and interpret, and therefore problematic to use. 
+4. AI systems that omit and conflate these types of not-knowing become problematic to understand and interpret, and therefore problematic to deploy and use. 
 
 So, even provisionally, it seems that answering this question (“**How can we explicitly distinguish between and symbolically represent different types of not-knowing in ways machines can work with?”)** would make it easier to answer more self-evidently important questions, including (but probably not limited to),
 
