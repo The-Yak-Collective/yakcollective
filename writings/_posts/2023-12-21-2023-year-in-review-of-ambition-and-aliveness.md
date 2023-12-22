@@ -16,7 +16,7 @@ This was January 4th, the year had barely started, and I already felt nervously 
 
 Wasn’t I trying to bite more than I could chew?
 
-Let’s rewind a little bit to understand how I ended up there. This is my 2023 [annual review](https://nesslabs.com/year-in-review), but now that the risk of attracting the evil eye should be gone — I’m not 100% sure how it work s— I can finally share the events that led me to writing a book.
+Let’s rewind a little bit to understand how I ended up there. This is my 2023 [annual review](https://nesslabs.com/year-in-review), but now that the risk of attracting the evil eye should be gone — I’m not 100% sure how it works — I can finally share the events that led me to writing a book.
 
 ## Gradually, then all at once
 
