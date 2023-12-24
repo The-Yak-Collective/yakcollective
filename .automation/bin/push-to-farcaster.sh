@@ -50,6 +50,5 @@ fi
 export FARCASTER_POST="$(cat ".automation/var/spool/farcaster/$POST")"
 source .automation/var/cache/build/bin/activate
 python3 -c 'import os; from farcaster import Warpcast; client = Warpcast(mnemonic = os.environ.get("FARCASTER_MNEMONIC")); client.post_cast(text = os.environ.get("FARCASTER_POST"));'
-if [[ $? -eq 0 ]]; then
-	rm ".automation/var/spool/farcaster/$POST"
-fi
+
+rm ".automation/var/spool/farcaster/$POST"

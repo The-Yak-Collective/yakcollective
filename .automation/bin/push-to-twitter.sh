@@ -48,6 +48,5 @@ fi
 # Post file contents to Twitter and delete file if successful.
 #
 curl -s -G --data-urlencode "value1=$(cat ".automation/var/spool/twitter/$POST" | sed -e 's/"/\\"/g')" https://maker.ifttt.com/trigger/post_to_twitter/with/key/$IFTTT_MAKER_KEY
-if [[ $? -eq 0 ]]; then
-	rm ".automation/var/spool/twitter/$POST"
-fi
+
+rm ".automation/var/spool/twitter/$POST"

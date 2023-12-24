@@ -48,6 +48,5 @@ fi
 # Post file contents to Discord and delete file if successful.
 #
 curl -s -H "Accept: application/json" -H "Content-Type: application/json" -d "{\"content\":\"$(cat ".automation/var/spool/discord/$POST" | sed -e 's/"/\\"/g')\"}" "$DISCORD_CHANNEL_URL"
-if [[ $? -eq 0 ]]; then
-	rm ".automation/var/spool/discord/$POST"
-fi
+
+rm ".automation/var/spool/discord/$POST"

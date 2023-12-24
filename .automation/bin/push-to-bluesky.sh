@@ -123,7 +123,6 @@ export LC_ALL=$ORIGINAL_LC_ALL
 AUTH_TOKEN="$(curl -s -H "Accept: application/json" -H "Content-Type: application/json" -d "{\"identifier\":\"yakcollective.org\",\"password\":\"$BLUESKY_APP_PASSWORD\"}" https://bsky.social/xrpc/com.atproto.server.createSession | jq -r .accessJwt)"
 if [[ $? -eq 0 ]]; then
 	curl -s -H "Authorization: Bearer $AUTH_TOKEN" -H "Accept: application/json" -H "Content-Type: application/json" -d "{\"repo\":\"yakcollective.org\",\"collection\":\"app.bsky.feed.post\",\"record\":{\"\$type\":\"app.bsky.feed.post\",\"text\":\"$(echo "$POST_CONTENT" | sed -e 's/"/\\"/g')\",\"createdAt\":\"$(date -u +"%Y-%m-%dT%H:%M:%SZ")\",\"facets\":[$LINK_FACET$MENTION_FACET]}}" https://bsky.social/xrpc/com.atproto.repo.createRecord
-	if [[ $? -eq 0 ]]; then
-		rm ".automation/var/spool/bluesky/$POST"
-	fi
+
+	rm ".automation/var/spool/bluesky/$POST"
 fi
