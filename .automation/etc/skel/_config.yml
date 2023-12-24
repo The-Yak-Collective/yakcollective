@@ -75,6 +75,9 @@ include:
   - _redirects
   - _headers
 exclude:
+  - bin
+  - lib
   - package.json
   - package-lock.json
+  - pyvenv.cfg
   - README.md

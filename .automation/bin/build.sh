@@ -12,6 +12,12 @@ else
 	exit 1
 fi
 
+# Make sure that lists have been generated.
+#
+if [[ ! -f .automation/var/cache/build/writings.xml ]]; then
+	source ./.automation/bin/update-lists.sh
+fi
+
 # Everything that follows needs to happen in the automation cache
 # directory.
 #

@@ -1,7 +1,6 @@
 # https://docs.netlify.com/routing/redirects/#syntax-for-the-redirects-file
 #
 /about/                                                                                                                  /about.html
-/feed.writings.json                                                                                                      /writings/feed.json
 /feed.writings.xml                                                                                                       /writings/feed.xml
 /join/                                                                                                                   /join.html
 /members/                                                                                                                /members.html
