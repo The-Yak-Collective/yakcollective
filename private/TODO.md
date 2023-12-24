@@ -4,7 +4,7 @@
 - [x] Finish `update-lists.sh` (generate lists for `newsletter.md` and `writings.md` from Planet Pluto databases)
 - [x] Add RSS feed creation for "writings" to `update-list.sh`
 - [x] Make sure that everything builds right still
-- [ ] Merge [Foam](https://foambubble.github.io/foam/) VS Code template and set up wiki
+- [x] Merge [Foam](https://foambubble.github.io/foam/) VS Code template and set up wiki
 - [ ] Foam-ify all `.md` files
 	- This includes moving to files with spaces in their names!
 - [ ] Implement [`foam janitor`](https://github.com/foambubble/foam-cli) as an on-commit GitHub Action

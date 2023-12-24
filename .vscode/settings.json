@@ -1,0 +1,33 @@
+{
+  "files.autoSave": "onFocusChange",
+  "editor.minimap.enabled": false,
+  "editor.wrappingIndent": "indent",
+  "editor.overviewRulerBorder": false,
+  "editor.lineHeight": 24,
+  "foam.edit.linkReferenceDefinitions": "withExtensions",
+  "[markdown]": {
+    "editor.quickSuggestions": {
+      "other": true,
+      "comments": false,
+      "strings": false
+    }
+  },
+  "git.enableSmartCommit": true,
+  "git.postCommitCommand": "sync",
+  "files.exclude": {
+    "_site/**": true
+  },
+  "files.insertFinalNewline": true,
+  "markdown.styles": [
+    ".vscode/custom-tag-style.css"
+  ],
+  "foam.preview.embedNoteType": "content-inline",
+  "markdown.extension.list.indentationSize": "inherit",
+  "markdown.extension.preview.autoShowPreviewToSide": true,
+  "markdown.extension.print.imgToBase64": true,
+  "markdown.extension.print.absoluteImgPath": false,
+  "markdown.extension.toc.orderedList": true,
+  "workbench.colorTheme": "Gray Matter Light",
+  "workbench.preferredDarkColorTheme": "Gray Matter Dark",
+  "workbench.preferredLightColorTheme": "Gray Matter Light"
+}
