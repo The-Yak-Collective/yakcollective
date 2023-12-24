@@ -48,6 +48,5 @@ fi
 #
 export FARCASTER_POST="$(cat "_farcaster/$POST")"
 python3 -c 'import os; from farcaster import Warpcast; client = Warpcast(mnemonic = os.environ.get("FARCASTER_MNEMONIC")); client.post_cast(text = os.environ.get("FARCASTER_POST"));'
-if [[ $? -eq 0 ]]; then
-	rm "_farcaster/$POST"
-fi
+
+rm "_farcaster/$POST"
