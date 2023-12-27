@@ -83,11 +83,33 @@ Type here…
 _Do you have preferences regarding the use of external data or sources for suggestions?_  
 Type here…
 
-Answer all the questions or, if you’re in a rush or just want to quickly go through this tutorial, you can copy my answers from [here](https://docs.google.com/document/d/1tz0m8pexvShpCNTmTD4awi6AqCQZrRQ4ekh7IxLIQ-k/).
-
 Paste your answers in the messaging box, and hit enter. The GPT Builder will save your instructions.
 
-To see how these have been interpreted, click on the “Configure” tab, where you’ll see the name, description, and instructions for your thinking partner.
+If you’re in a rush or just want to quickly go through this tutorial, you can copy some sample training data from [here](https://docs.google.com/document/d/1tz0m8pexvShpCNTmTD4awi6AqCQZrRQ4ekh7IxLIQ-k/). For instance, I like to use this list of metacognitive questions I have crafted over the years, so I have included it in the training of my thinking partner:
+
+- Am I underthinking or overthinking this decision?
+- How are cognitive biases influencing my decision?
+- How could this decision better align with my aspirations?
+- Can I think of an easier version of this decision?
+- Can I think of a more adventurous version of this decision?
+
+You could also use questions from thinkers and creators you admire. Tim Ferris [uses](https://www.forbes.com/sites/benjaminphardy/2017/12/13/by-asking-himself-this-9-word-question-tim-ferriss-changed-his-life/) this list of questions:
+
+- Were my goals my own, or simply what I thought I should want?
+- How much of life had I missed from underplanning or overplanning?
+- How could I be kinder to myself?
+- How could I better say no to the noise to better say yes to the adventures I craved?
+- How could I best reassess my life, my priorities, my view of the world, my place in the world, and my trajectory in the world?
+
+And here are [some](https://twitter.com/fortelabs/status/1230602364899299328) of the questions Tiago Forte uses:
+
+- How is this thing that seems bad actually good?
+- What am I pretending? What am I resisting?
+- What is the precise feeling in my body I’m interpreting?
+
+Those kinds of questions will help your custom GPT become a better thinking partner by providing some starting points to explore your thoughts.
+
+To see how your training data have been interpreted, click on the “Configure” tab, where you’ll see the name, description, and instructions for your thinking partner.
 
 ![Setting Up a Custom GPT – Configure Name, Image, Instructions](https://nesslabs.com/wp-content/uploads/2023/12/create-your-gpt-3-1024x555.png)
 
