@@ -231,15 +231,15 @@
 						<div class="dib yak-logo-image"></div>
 					</a>
 					<div class="db dtc-l v-mid w-100 w-90-l tc tr-l">
-						<a class="link dib mv2 mh3" href="/members.html">Member&nbsp;Directory</a>
-						<a class="link dib mv2 mh3" href="/study-groups.html">Study&nbsp;Groups</a>
-						<a class="link dib mv2 mh3" href="/projects.html">Projects</a>
-						<a class="link dib mv2 mh3" href="/writings.html">Writings</a>
-						<a class="link dib mv2 mh3" href="/newsletter.html">Newsletters</a>
+						<a class="link dib mv2 mh3" href="/Members.html">Member&nbsp;Directory</a>
+						<a class="link dib mv2 mh3" href="/Study%20Groups.html">Study&nbsp;Groups</a>
+						<a class="link dib mv2 mh3" href="/Projects.html">Projects</a>
+						<a class="link dib mv2 mh3" href="/Writings.html">Writings</a>
+						<a class="link dib mv2 mh3" href="/Newsletter.html">Newsletters</a>
 						<a class="link dib mv2 mh3" href="https://www.youtube.com/channel/UC9bngPbXMEZ8ivD1GHJ94aw">Recordings</a>
-						<a class="link dib mv2 mh3" href="/about.html">About</a>
+						<a class="link dib mv2 mh3" href="/About.html">About</a>
 						<a class="link dib mv2 mh3" href="https://yak.knack.com/yaks#yak-profile/">Member&nbsp;Portal</a>
-						<a class="link dib mv2 mh3" href="/join.html">Join&nbsp;Us!</a>
+						<a class="link dib mv2 mh3" href="/Join.html">Join&nbsp;Us!</a>
 					</div>
 				</nav>
 			</div>
@@ -254,15 +254,6 @@
 
 		<footer class="bottom-0 ph3 ph5-l bt tc w-100">
 			<small class="db tc mt3">The Yak Collective</small>
-		
-			{% comment %}
-				Insert a random slogan into the footer. We do this
-				twice; once here, and once using JavaScript (the very
-				last line in this file). This ensures that nothing
-				breaks if JavaScript is disabled in the user agent.
-			{% endcomment %}
-			{% assign random_slogan = site.data.slogans | sample: 1 %}
-			<small class="db tc mt3"><a href="/tips.html" id="footer-slogan">{{ random_slogan }}</a></small>
 				
 			{% comment %}
 				Output an RSS feed link, if applicable.
@@ -283,8 +274,5 @@
 			<a class="yak-footer-square-link link dib f4 ma3" href="https://twitter.com/yak_collective" title="Twitter"><i class="fab fa-twitter-square"></i></a>
 			<a class="yak-footer-square-link link dib f4 ma3" href="https://www.youtube.com/channel/UC9bngPbXMEZ8ivD1GHJ94aw" title="YouTube"><i class="fab fa-youtube-square"></i></a>
 		</footer>
-
-		<script defer src="/js/slogans.js"></script>
-
 	</body>
 </html>

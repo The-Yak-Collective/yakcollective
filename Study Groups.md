@@ -1,7 +1,4 @@
----
-title: Yak Collective Study Groups
----
-# Study Groups
+# Yak Collective Study Groups
 
 Yak Collective study groups are workshop tracks for learning varied topics of interest to Yak Collective members. Some study groups have regular (generally weekly) meetings, while others run asynchronously in the associated Discord channel.
 

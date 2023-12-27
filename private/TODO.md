@@ -1,7 +1,7 @@
 # TODO
 
 - [x] Remove `_post` subdirectories (requires modifications to the Pluto RSS feed pull scripts)
-- [x] Finish `update-lists.sh` (generate lists for `newsletter.md` and `writings.md` from Planet Pluto databases)
+- [x] Finish `update-lists.sh` (generate lists for `Newsletter.md` and `Writings.md` from Planet Pluto databases)
 - [x] Add RSS feed creation for "writings" to `update-list.sh`
 - [x] Make sure that everything builds right still
 - [x] Merge [Foam](https://foambubble.github.io/foam/) VS Code template and set up wiki

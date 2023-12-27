@@ -27,57 +27,57 @@ echo "[$(date)] Updating templates..."
 
 mkdir -p .automation/var/cache/templates
 
-if [[ -f newsletter.md ]]; then
-	if [[ $(grep -c '<!-- DO NOT REMOVE THIS LINE! DO NOT EDIT BELOW THIS LINE! -->' newsletter.md) -eq 1 ]]; then
-		sed '/<!-- DO NOT REMOVE THIS LINE! DO NOT EDIT BELOW THIS LINE! -->/,$d' newsletter.md > .automation/var/cache/templates/newsletter.md
-		echo '<!-- DO NOT REMOVE THIS LINE! DO NOT EDIT BELOW THIS LINE! -->' >> .automation/var/cache/templates/newsletter.md
+if [[ -f Newsletter.md ]]; then
+	if [[ $(grep -c '<!-- DO NOT REMOVE THIS LINE! DO NOT EDIT BELOW THIS LINE! -->' Newsletter.md) -eq 1 ]]; then
+		sed '/<!-- DO NOT REMOVE THIS LINE! DO NOT EDIT BELOW THIS LINE! -->/,$d' Newsletter.md > .automation/var/cache/templates/Newsletter.md
+		echo '<!-- DO NOT REMOVE THIS LINE! DO NOT EDIT BELOW THIS LINE! -->' >> .automation/var/cache/templates/Newsletter.md
 	fi
 fi
 
-if [[ -f writings.md ]]; then
-	if [[ $(grep -c '<!-- DO NOT REMOVE THIS LINE! DO NOT EDIT BELOW THIS LINE! -->' newsletter.md) -eq 1 ]]; then
-		sed '/<!-- DO NOT REMOVE THIS LINE! DO NOT EDIT BELOW THIS LINE! -->/,$d' writings.md > .automation/var/cache/templates/writings.md
-		echo '<!-- DO NOT REMOVE THIS LINE! DO NOT EDIT BELOW THIS LINE! -->' >> .automation/var/cache/templates/writings.md
+if [[ -f Writings.md ]]; then
+	if [[ $(grep -c '<!-- DO NOT REMOVE THIS LINE! DO NOT EDIT BELOW THIS LINE! -->' Newsletter.md) -eq 1 ]]; then
+		sed '/<!-- DO NOT REMOVE THIS LINE! DO NOT EDIT BELOW THIS LINE! -->/,$d' Writings.md > .automation/var/cache/templates/Writings.md
+		echo '<!-- DO NOT REMOVE THIS LINE! DO NOT EDIT BELOW THIS LINE! -->' >> .automation/var/cache/templates/Writings.md
 	fi
 fi
 
-# Update newsletter.md from Planet Pluto SQLite cache.
+# Update Newsletter.md from Planet Pluto SQLite cache.
 #
-echo "[$(date)] Updating newsletter.md..."
+echo "[$(date)] Updating Newsletter.md..."
 
 DB=".automation/var/lib/pluto/newsletter.db"
 MIN_YEAR="$(sqlite3 $DB "SELECT STRFTIME('%Y', MIN(published)) FROM items;")"
 MAX_YEAR="$(sqlite3 $DB "SELECT STRFTIME('%Y', MAX(published)) FROM items;")"
 
-cat .automation/var/cache/templates/newsletter.md > newsletter.md
+cat .automation/var/cache/templates/Newsletter.md > Newsletter.md
 for YEAR in $(seq $MAX_YEAR -1 $MIN_YEAR); do
 	POST_COUNT="$(sqlite3 $DB "SELECT COUNT(*) FROM items WHERE STRFTIME('%Y', published) = '$YEAR';")"
 
 	if [[ $POST_COUNT -gt 0 ]]; then
-		echo "" >> newsletter.md
-		echo "## $YEAR" >> newsletter.md
+		echo "" >> Newsletter.md
+		echo "## $YEAR" >> Newsletter.md
 
-		sqlite3 $DB "SELECT '**\`' || STRFTIME('%d', published) || ' month' || STRFTIME('%m', published) || ':\`** *[' || REPLACE(REPLACE(title, '[', '\['), ']', '\]') || '](' || REPLACE(REPLACE(url, '(', '%28'), ')', '%29') || ')*  ' FROM items WHERE STRFTIME('%Y', published) = '$YEAR' ORDER BY published DESC;" | sed 's/month01/Jan/;s/month02/Feb/;s/month03/Mar/;s/month04/Apr/;s/month05/May/;s/month06/Jun/;s/month07/Jul/;s/month08/Aug/;s/month09/Sep/;s/month10/Oct/;s/month11/Nov/;s/month12/Dec/' >> newsletter.md
+		sqlite3 $DB "SELECT '**\`' || STRFTIME('%d', published) || ' month' || STRFTIME('%m', published) || ':\`** *[' || REPLACE(REPLACE(title, '[', '\['), ']', '\]') || '](' || REPLACE(REPLACE(url, '(', '%28'), ')', '%29') || ')*  ' FROM items WHERE STRFTIME('%Y', published) = '$YEAR' ORDER BY published DESC;" | sed 's/month01/Jan/;s/month02/Feb/;s/month03/Mar/;s/month04/Apr/;s/month05/May/;s/month06/Jun/;s/month07/Jul/;s/month08/Aug/;s/month09/Sep/;s/month10/Oct/;s/month11/Nov/;s/month12/Dec/' >> Newsletter.md
 	fi
 done
 
-sed 's/<!-- DO NOT REMOVE THIS LINE! DO NOT EDIT BELOW THIS LINE! -->/- TOC style seed\n{:toc}/' newsletter.md > .automation/var/cache/build/newsletter.md
+sed 's/<!-- DO NOT REMOVE THIS LINE! DO NOT EDIT BELOW THIS LINE! -->/- TOC style seed\n{:toc}/' Newsletter.md > .automation/var/cache/build/Newsletter.md
 
-# Update writings.md from Planet Pluto SQLite cache.
+# Update Writings.md from Planet Pluto SQLite cache.
 #
-echo "[$(date)] Updating writings.md..."
+echo "[$(date)] Updating Writings.md..."
 
 DB=".automation/var/lib/pluto/writings.db"
 MIN_YEAR="$(sqlite3 $DB "SELECT STRFTIME('%Y', MIN(published)) FROM items;")"
 MAX_YEAR="$(sqlite3 $DB "SELECT STRFTIME('%Y', MAX(published)) FROM items;")"
 
-cat .automation/var/cache/templates/writings.md > writings.md
+cat .automation/var/cache/templates/Writings.md > Writings.md
 for YEAR in $(seq $MAX_YEAR -1 $MIN_YEAR); do
 	POST_COUNT="$(sqlite3 $DB "SELECT COUNT(*) FROM items WHERE STRFTIME('%Y', published) = '$YEAR';")"
 
 	if [[ $POST_COUNT -gt 0 ]]; then
-		echo "" >> writings.md
-		echo "## $YEAR" >> writings.md
+		echo "" >> Writings.md
+		echo "## $YEAR" >> Writings.md
 
 		FIRST_MONTH="yes"
 
@@ -141,13 +141,13 @@ for YEAR in $(seq $MAX_YEAR -1 $MIN_YEAR); do
 
 			if [[ $POST_COUNT -gt 0 ]]; then
 				if [[ "$FIRST_MONTH" == "no" ]]; then
-					echo "" >> writings.md
+					echo "" >> Writings.md
 				fi
-				echo "### $MONTH_NAME" >> writings.md
+				echo "### $MONTH_NAME" >> Writings.md
 
 				FIRST_MONTH="no"
 
-				sqlite3 $DB "SELECT '**\`' || STRFTIME('%d', items.published) || ' month' || STRFTIME('%m', items.published) || ':\`** [name' || feeds.key || '](/members/' || feeds.key || '.html), *[' || REPLACE(REPLACE(items.title, '[', '\['), ']', '\]') || '](' || REPLACE(REPLACE(items.url, '(', '%28'), ')', '%29') || ')*  ' FROM items JOIN feeds ON feeds.id = items.feed_id WHERE STRFTIME('%Y', items.published) = '$YEAR' AND STRFTIME('%m', items.published) = '$MONTH' ORDER BY items.published DESC;" | sed 's/month01/Jan/;s/month02/Feb/;s/month03/Mar/;s/month04/Apr/;s/month05/May/;s/month06/Jun/;s/month07/Jul/;s/month08/Aug/;s/month09/Sep/;s/month10/Oct/;s/month11/Nov/;s/month12/Dec/' >> writings.md
+				sqlite3 $DB "SELECT '**\`' || STRFTIME('%d', items.published) || ' month' || STRFTIME('%m', items.published) || ':\`** [name' || feeds.key || '](/members/' || feeds.key || '.html), *[' || REPLACE(REPLACE(items.title, '[', '\['), ']', '\]') || '](' || REPLACE(REPLACE(items.url, '(', '%28'), ')', '%29') || ')*  ' FROM items JOIN feeds ON feeds.id = items.feed_id WHERE STRFTIME('%Y', items.published) = '$YEAR' AND STRFTIME('%m', items.published) = '$MONTH' ORDER BY items.published DESC;" | sed 's/month01/Jan/;s/month02/Feb/;s/month03/Mar/;s/month04/Apr/;s/month05/May/;s/month06/Jun/;s/month07/Jul/;s/month08/Aug/;s/month09/Sep/;s/month10/Oct/;s/month11/Nov/;s/month12/Dec/' >> Writings.md
 			fi
 		done
 	fi
@@ -157,13 +157,13 @@ while read -r RECORD; do
 	MEMBER_ID="$(echo "$RECORD" | cut -f 1)"
 	NAME="$(echo "$RECORD" | cut -s -f 2 | sed -e 's#|#/#g')"
 	if [[ -n "$NAME" ]]; then
-		sed -i -e "s|name$MEMBER_ID|$NAME|" writings.md
+		sed -i -e "s|name$MEMBER_ID|$NAME|" Writings.md
 	else
-		sed -i -e "s|name$MEMBER_ID|Anonymous Contributor #$MEMBER_ID|" writings.md
+		sed -i -e "s|name$MEMBER_ID|Anonymous Contributor #$MEMBER_ID|" Writings.md
 	fi
 done < <(jq -r '.records[] | [.field_101_raw, .field_97_raw?] | @tsv' .automation/var/cache/build/_data/knack_yaks.json | sed -e 's/^\s*//;s/\s*$//')
 
-sed 's/<!-- DO NOT REMOVE THIS LINE! DO NOT EDIT BELOW THIS LINE! -->/- TOC style seed\n{:toc}/' writings.md > .automation/var/cache/build/writings.md
+sed 's/<!-- DO NOT REMOVE THIS LINE! DO NOT EDIT BELOW THIS LINE! -->/- TOC style seed\n{:toc}/' Writings.md > .automation/var/cache/build/Writings.md
 
 # Generate writings.xml from Planet Pluto SQLite cache.
 #

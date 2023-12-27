@@ -1,12 +1,10 @@
----
----
 # Join the Yak Collective
 
-The Yak Collective is an online space for collaborative tinkering. You can learn more about the what, why, and how on the [About page](/about.html).
+The Yak Collective is an online space for collaborative tinkering. You can learn more about the what, why, and how on the [[About|About page]].
 
 If this interests you, take a moment to read our [code of conduct](https://roamresearch.com/#/app/ArtOfGig/page/CF_GEWrWq) before joining, and then answer a couple of simple questions (all <span class="required">*</span> fields are required) to access our Discord link.
 
-_If you are already a member, you can update your profile anytime in the [Yak Member Portal](https://yak.knack.com/yaks#yak-profile/)._
+*If you are already a member, you can update your profile anytime in the [Yak Member Portal](https://yak.knack.com/yaks#yak-profile/).*
 
 <div>
 	<script type="text/javascript">

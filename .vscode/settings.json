@@ -29,5 +29,30 @@
   "markdown.extension.toc.orderedList": true,
   "workbench.colorTheme": "Gray Matter Light",
   "workbench.preferredDarkColorTheme": "Gray Matter Dark",
-  "workbench.preferredLightColorTheme": "Gray Matter Light"
+  "workbench.preferredLightColorTheme": "Gray Matter Light",
+  "foam.graph.titleMaxLength": 0,
+  "foam.orphans.exclude": [
+      ".automation/**/*",
+      ".git/**/*",
+      ".github/**/*",
+      ".gitignore",
+      ".vscode/**/*",
+      "img/.originals/**/*"
+  ],
+  "foam.placeholders.exclude": [
+      ".automation/**/*",
+      ".git/**/*",
+      ".github/**/*",
+      ".gitignore",
+      ".vscode/**/*",
+      "img/.originals/**/*"
+  ],
+  "foam.files.ignore": [
+      ".automation/**/*",
+      ".git/**/*",
+      ".github/**/*",
+      ".gitignore",
+      ".vscode/**/*",
+      "img/.originals/**/*"
+  ]
 }
