@@ -1,6 +1,9 @@
 name: Update website and social media feeds
 
 on:
+  push:
+    branches:
+      - production
   schedule:
     - cron: '0 */1 * * *'
 
