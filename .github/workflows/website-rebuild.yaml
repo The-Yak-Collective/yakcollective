@@ -1,0 +1,43 @@
+name: Update website on content change
+
+on:
+  push:
+    branches:
+      - productions
+
+jobs:
+  automation:
+    name: Update website on content change
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Set up environment
+        env:
+          KNACK_APP_ID: ${{ secrets.KNACK_APP_ID }}
+          KNACK_API_KEY: ${{ secrets.KNACK_API_KEY }}
+          KNACK_OBJECT: ${{ secrets.KNACK_OBJECT }}
+        run: |
+          ./.automation/bin/common-init.sh
+      - name: Update RSS feeds
+        run: |
+          ./.automation/bin/rss-pull-feeds.sh
+      - name: Update Newsletter & Writings pages
+        run: |
+          ./.automation/bin/update-lists.sh
+      - name: Rebuild website
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_TOKEN }}
+          NETLIFY_SITE: ${{ secrets.NETLIFY_SITE }}
+        run: |
+          ./.automation/bin/build.sh
+          ./.automation/var/cache/build/node_modules/.bin/netlify deploy --dir .automation/var/cache/build/_site --site $NETLIFY_SITE --message "Automatic deploy from GitHub Actions $(date -u +"%Y%m%d%H%M%S")" --prod
+      - name: Commit changes to repository
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add -A -v
+          git commit -m "Automation run $(date -u +"%Y%m%d%H%M%S")" || true
+          git push
