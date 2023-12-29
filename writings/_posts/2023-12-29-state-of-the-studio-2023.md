@@ -18,7 +18,7 @@ A couple of editorial notes before we get into it.
 
 3. If you want to introduce other people to this newsletter, this would be a good issue to forward. By way of introduction, if you don’t know who I am, you can get the basic dossier at [venkateshrao.com](https://venkateshrao.com/).
 
-4. For those who came in late, this newsletter is an offshoot of an ancient (founded in 2007) WordPress blog with a separate, elderly track of writing on it, [Ribbonfarm](https://ribbonfarm.com/). It has its own (free, auto-generated from RSS) email list. You’ll find a broader roundup of my extended universe activities there.
+4. For those who came in late, this newsletter is an offshoot of an ancient (founded in 2007) WordPress blog with a separate, elderly track of writing on it, [Ribbonfarm](https://ribbonfarm.com/). It has its own (free, auto-generated from RSS) email list. You’ll find a [broader roundup of my extended universe activities there](https://www.ribbonfarm.com/2023/12/28/2023-ribbonfarm-extended-universe-roundup/).
 
 On to the 2023 roundup.
 
