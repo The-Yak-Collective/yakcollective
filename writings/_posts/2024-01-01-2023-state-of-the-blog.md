@@ -6,9 +6,9 @@ original_link: https://person-al.github.io/%F0%9F%8C%B1/2024/01/01/2023-state-of
 author: 100646
 ---
 
-Note: This is a rough draft.
+**[Assumed Audience](/%F0%9F%8C%B0/2024/01/02/list-your-assumed-audience-at-the-beginning-of-blog-posts.html):** Folks interested in the details of having an extremely small blog. How it feels, what traffic looks like, and the early process of finding an audience.
 
-I started this blog on June 21st 2021, with the first post hitting your screens on the 23rd. Thanks to [Goatcounter](https://www.goatcounter.com), a privacy-conscious analytics system, I have some numbers I can use to reflect on the last year and a half.
+I started this blog on June 21st 2021, with the first post hitting your screens on the 23rd. Thanks to [Goatcounter](https://www.goatcounter.com), a slightly more privacy-aware analytics system, I have some numbers I can use to reflect on the last year and a half.
 
 For starters, here’s what Goatcounter can tell me:
 
@@ -43,10 +43,11 @@ When I started blogging, I had four questions:
 After 2.5 years I’ve found:
 
 1. It’s an opportunity for structured thinking that I haven’t had in a while. I don’t think I’m regular enough that improves “clarity” of thought when I’m not writing. But it does increase the number of times I think through something semi-rigorously. And that’s directionally what I wanted.
-2. No. But I don’t think it’s gotten worse either. The lack of improvement is partially lack of writing and perhaps partially…
+2. No. But I think it’s too early to see improvement. Right now, I want low barriers to publishing in service of thinking practice. As I establish a consistent writing practice, I can focus on this more. That aside, the lack of improvement is partially lack of writing and perhaps partially…
 3. I haven’t gotten significant feedback on my ideas, which is understandable. I’ve done a few things to get feedback, the most granular of which was a small feedback circle I started with a few other bloggers. But as my writing frequency decreased, that flywheel stopped as well. 
   - Conversation is also _slower_ on blogs. Most conversation still happens on social media because it’s friction-less. As easy as I’ve made replying to my posts, few-to-none have done it yet. And how often do I see meaningful replies to other peoples’ posts via web mentions?
-4. Anonymity is fascinatingly difficult. It’s easier to get eyes and ears and ideas from friends who are already invested in you. When you start anonymous, you start from 0, which takes much longer (I suspect). Additionally, there’s the issue of de-anonymiz-ability. How much information about myself do I want to put out there? After a few years, could someone put enough blog posts together to recognize me? And am I okay with that?
+  - LLMs could be an interesting tool for feedback, but there are pitfalls there as well, including how to access on anonymously? Which leads us to…
+4. Anonymity is fascinatingly difficult. It’s easier to get eyes and ears and ideas from friends who are already invested in you. When you start anonymous, you start from 0, which takes much longer (I suspect). Additionally, there’s the issue of de-anonymiz-ability. How much information about myself do I want to put out there? After a few years, could someone put enough blog posts together to recognize me? And am I okay with that? What tools can I use if I can’t pay in an anonymous way?
 
 ## the numbers
 
@@ -60,7 +61,7 @@ The largest post is [🌳 how I publish my Zettelkasten](/%F0%9F%8C%B3/2022/05/0
 
 I published the most 🌰 posts with 15,437 words across 33 posts. 🌱 and 🌳 both contain 9k+ words, though the former is spread over 16 posts and the latter only 6. I have not yet posted my first 🌲 post.
 
-Okay, now let’s talk traffic. If you just want a quick summary, I recommend skipping to “[[🌱 2023 State of the Blog#putting it all together|putting it all together]]”:
+Okay, now let’s talk traffic. If you just want a quick summary, I recommend skipping to “[putting it all together](#putting-it-all-together)”:
 
 ### 2021
 
@@ -68,13 +69,13 @@ In the first 6 months after I created this blog, the site got 154 visits. While 
 
 At this point, I was only sharing my posts on Twitter with reasonable payoff– it was the largest known referrer.
 
-My top two[^1] posts were:
+My top two[1](#fn:1) posts were:
 
 1. [🌳 Ethereum is Killing Your Startup](/%F0%9F%8C%B3/2021/09/22/ethereum-is-killing-your-startup.html) with 41 views 
   - While 51% of the views came from an unknown source, it looks like only 2% came from the homepage. Most of the known traffic came from Twitter or Telegram.
   - Also interesting to note that this page did not seem to drive many readers to the homepage. 77% of the homepage views are untraceable. But none of the traceable views were referred from this post.
 2. [🌳 Flow](/%F0%9F%8C%B3/2021/03/21/flow.html) with 4 views 
-  - All views in this case came from the homepage. [^1]:Too many posts tied for third, so I won’t discuss any of them.
+  - All views in this case came from the homepage.
 
 One interesting fact: only 45% of visits came from phones or small tablets. The rest came from large tablets or computers of some kind. I do most of my reading on mobile, and I suspect most of the average reader does too, so that surprised me. Do fewer people read on their phones than I think? Is my blog less mobile-friendly than I think?
 
@@ -84,7 +85,7 @@ In 2022, we had 1170 visits, 47% from unknown origin and roughly 15% from me sha
 
 By now, I was actively sharing posts wherever I felt made sense. And while the traffic numbers suggest people read what I posted, very few substantive conversations resulted from it.
 
-Top four[^2] posts/pages:
+Top four[2](#fn:2) posts/pages:
 
 1. [🌳 how I publish my Zettelkasten](/%F0%9F%8C%B3/2022/05/08/how-i-publish-my-zettelkasten.html) with 113 views 
   - I share this the most widely: in the Obsidian discord, IndieNews, and so on.
@@ -93,7 +94,7 @@ Top four[^2] posts/pages:
 3. [Pathfinder](http://person-al.github.io/pathfinder) - 52 views 
   - This project is still in stealth(ish) mode on the website, though I’ve shared it broadly within crypto contexts. It’s a collaborative poetry art piece on the blockchain currently on the test net.
 4. [❔ will Google’s self-importance be its downfall](/%E2%9D%94/2022/07/28/will-google-s-self-importance-be-its-downfall.html) - 40 views 
-  - This is another post I shared with the Indieweb with strong results– 27% of traffic came from there. Comparatively: 55% of traffic is anonymous and 21% came from the homepage. [^2]: Pathfinder is more of a project than a post, so I’ll list top 4 instead of just the top 3.
+  - This is another post I shared with the Indieweb with strong results– 27% of traffic came from there. Comparatively: 55% of traffic is anonymous and 21% came from the homepage.
 
 Again, like the previous six months, 44% of traffic came from phones and small tablets.
 
@@ -130,21 +131,22 @@ Over the last 2.5 years, here’s how it comes together:
   - 4% 512kb.club
   - 4% yandex.ru
   - 4% t.co (Twitter)
-- 44% of readers were using phones or small tablets. 
+- 44% of readers were using phones or small tablets.
+
 ## so what does any of this mean
 
 Here are a few things I’ve learned from this experience so far:
 
-  1. Intrinsic benefits from blogging are the most important.
-
-  - While it makes sense that my blog is too new to seed much conversation, the possibility for conversation is the primary difference between a file on my computer and a file on the web. That said: it can’t be the primary motivator for a new blog. Focusing on the other benefits will likely be more motivating. (And, frankly, are more likely to be positive. We all know that attention on the internet can be the worst.) 
-    1. One “popular enough” article gets you in the door with search engines.
-  - Rightly or wrongly, looking at the traffic I suspect [🌳 how I publish my Zettelkasten](/%F0%9F%8C%B3/2022/05/08/how-i-publish-my-zettelkasten.html) proved to Google that I wasn’t spam. And now Google sends traffic (albeit tiny amounts) to other posts of mine as well.
+1. Intrinsic benefits from blogging are the most important. 
+  - While it makes sense that my blog is too new to seed much conversation, the possibility for conversation is the primary difference between a file on my computer and a file on the web. That said: it can’t be the primary motivator for a new blog. Focusing on the other benefits will likely be more motivating. (And, frankly, are more likely to be positive. We all know that attention on the internet can be the worst.)
+2. One “popular enough” article gets you in the door with search engines. 
+  - Looking at the traffic, I suspect [🌳 how I publish my Zettelkasten](/%F0%9F%8C%B3/2022/05/08/how-i-publish-my-zettelkasten.html) proved to Google that I wasn’t spam. And now Google sends traffic (albeit tiny amounts) to other posts of mine as well.
   - Again, I haven’t dug into the day-by-day numbers enough to prove this hypothesis. But Yandex also sends traffic to more than my poetry post.
-  - Worth calling out that my traffic is super low. When I say “2% of views from the last 2.5 years came from Google”, I’m talking 42 entire views. 
-    1. Sharing your blog with philosophically-aligned communities and aggregators is a valuable way to get your blog in front of people. In the last 2.5 years, the 512KB and 1MB clubs combined have sent 141 readers to this site. That’s slightly more than Google and Yandex combined!
-  - This makes me wonder how much of the 44% unknown traffic over the last 2.5 years is coming from other blogrolls, search engines, and aggregators without attribution. 
-    1. Either more people read on their laptops than I thought or there’s something specific about my content or format that appeals more to folks on a laptop? Would love to hear thoughts on this. 
+  - Worth calling out that my traffic is super low. When I say “2% of views from the last 2.5 years came from Google”, I’m talking 42 entire views.
+3. Sharing your blog with philosophically-aligned communities and aggregators is a valuable way to get your blog in front of people. In the last 2.5 years, the 512KB and 1MB clubs combined have sent 141 readers to this site. That’s slightly more than Google and Yandex combined! 
+  - This makes me wonder how much of the 44% unknown traffic over the last 2.5 years is coming from other blogrolls, search engines, and aggregators without attribution.
+4. Either more people read on their laptops than I thought or there’s something specific about my content or format that appeals more to folks on a laptop? Would love to hear thoughts on this.
+
 ## thoughts for the future
 
 Here’s what I’d like to see from myself in 2024:
@@ -155,3 +157,10 @@ Here’s what I’d like to see from myself in 2024:
   - I will continue sharing snippets where appropriate, but I will no longer expect conversation to arise from it.
   - I’d like to add attribution to links I share to Mastodon, just so I can track the effectiveness of that medium compared to Twitter.
   - I also may choose to stop sharing altogether, just to focus on the intrinsic value of blogging 🤔.
+
+Digging into and documenting my numbers like this is fun. It gives me the opportunity to look back on what resonated with folks, think critically about where people like me spend time on the internet, and re-assess how _I_ spend _my_ time. If there are other angles you’d like to hear a tiny blogger reflect on, let me know!
+
+1. Too many posts tied for third, so I won’t discuss any of them. [↩](#fnref:1)
+
+2. Pathfinder is more of a project than a post, so I’ll list top 4 instead of just the top 3. [↩](#fnref:2)
+
