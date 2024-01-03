@@ -74,5 +74,19 @@ From a [Trapital podcast episode](https://trapital.co/2022/09/09/tiktok-wants-to
 
 (Related: a [twitter thread showing how tiktok is used for search](https://twitter.com/AdriSheares/status/1557885461154111490))
 
+## in passing, in a piece about LLMs
+
+> This prediction ability seems like a simple party trick but it’s what makes models so good at answering our random questions in the way Google used to be.
+> 
+> - [Squish Meets Structure: Designing with Language Models](https://maggieappleton.com/squish-structure)
+
+## Potential Updates
+
+- 2023: Do LLMs change anything about this? 
+  - It’s interesting to consider the idea that whoever can sift through the noise best is the winner. Do LLMs give Google an advantage or disadvantage in that?
+  - The idea of what you’re selling being information vs a good/service. If you’re selling a good or service, it’s good for your ideas to get rolled into an LLM: in order to be useful, Google must link the user back to you. If you’re selling information, Google doesn’t need to link back to you to be useful.
+  - The idea that LLMs will settle with publishers and pay to train their models on publisher paywalled data. All of a sudden, it’s a private web. The only way to access the NYT, WSJ _and_ FT is by paying $$$/month (subscribe to each) or subscribe to 1 LLM trained on them all. You can’t fact-check anything the LLM tells you.
+- [on Google getting worse](https://www.tumblr.com/shadykit/737969942786392064)
+
 1. Thanks to Tracy Durnell for surfacing this story in [Trusted Information Sources](https://tracydurnell.com/2022/07/20/trusted-information-sources/) [↩](#fnref:1)
 

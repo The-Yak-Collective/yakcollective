@@ -1,0 +1,26 @@
+---
+title: Worn Out Pieces
+date: 2024-01-03 00:52:57.000000000 Z
+layout: post-external
+original_link: https://summerlightning.substack.com/p/worn-out-pieces
+author: 100013
+---
+
+I was in a vintage clothing store in New York City. The kind that had a ten-dollar white undershirt from the 1930s on display. The type of thing that someone would look at and say, "Oh, that's cool, and it was only ten dollars", and the woman behind the counter would reply, "I know, but ten dollars in the 1930s was kind of a lot". This exchange happened several times a day. A chatty woman was trying on a pair of Levi's jeans and remarked on how worn in it felt. The woman behind the counter said, "I know. It has a lot of character. I love the imprint of the wallet on the back pocket". The potential buyer turned her back to the mirror, felt the imprint with her palm, and said, "Oh, that's so cool. I think I've found what I'm looking for".
+
+I imagine the Levi’s was owned by someone who owned two pairs of jeans their whole life. He kept his wallet in the same right back pocket every day. There was a long commute to work where the wallet had enough time to get pressed down on the denim. The original owner is now walking around with a wallet imprint on his ass, or perhaps he's dead. His wife decided to move in with the kids and held an estate sale. Now, the pair of jeans are adorned by someone who did not earn the struggles it had been through.
+
+Americans, particularly those in my age group, are obsessed with vintage clothing and objects. Several explanations have been offered for this, ranging from economic conditions to the quality of old clothes being better. I did not know the extent of this obsession until I went to an estate sale.
+
+I showed up on the second day of the estate sale of Kerry O Quinn in Austin. He was the editor of the horror magazine Fangoria and had decided to decamp to Los Angeles in the later years of his life. I was told at the door that all items with blue tape on them had already been sold. There was blue tape everywhere, sometimes only revealed on close examination - like the person who bought the object wanted to tease you with the possibilities. The only items without blue tape were a war chest of gay porn VHS tapes and tall stacks of Fangoria magazine - his life's work and what he did in his free time, both of which no one cared for anymore. I decided to show up early the next time there was an estate sale.
+
+The second estate sale was in the same upscale neighborhood. It's an estate sale only when the square footage of the house is above 2500 square feet. Otherwise, it's called a garage sale - that is the middle-class tier. The lower tier, where I belong, is when you fill up garbage bags haphazardly and drive to the back of a Goodwill. Here, an old man will roll out a big cart to dump your things. He will look away and avoid eye contact - so that you are not overcome with shame when your old underwear with little holes in it that you had packed by mistake falls into the cart. I've found this is more dignified than going to a vintage store frequented by 20-somethings. There, some girl who only started wearing adult clothes two years ago will judge how current your garb is and if it's in or out this year. Then, they'll pay you less than the hourly wage of an Amazon warehouse worker for your barely worn Carhartt pants and the hour you spent waiting in line. I digress. I got to the second estate sale an hour and a half before the doors opened, only to find a line that stretched several blocks. I realized I was competing with people who bought things professionally - Etsy sellers, vintage store owners, and hoarders. The type of person who finds denim with wallet imprints and marks them up by 20%. They had smug smiles that were hard to hide when they walked out the door with the day's loot. Just another day at the office for them.
+
+Surprisingly, there was plenty left when I got in. The house brimmed with objects. When I got to a room that only housed miniature figures whose stares made my skin crawl, I realized the house belonged to hoarders. Everything in the house seemed to have been acquired in haste and without consideration of the objects themselves - they did not matter, what mattered more was acquiring them. Now, they were being scoured and bought to be infused with nostalgia for a bygone era, to be sold alongside tote bags and such.
+
+Hoarding is perhaps a hobby that is acquired when you live in isolation, and away from other people, with a lot of space to fill things with. If you live in New York, for example, you are more likely to dream about finding an extra drawer in your cupboard than have an impulse to hoard. Perhaps this is why all the deranged hoarding stories I know, such as the one about an old woman who steals underwear at the laundromat that a friend once told me about, occur in the south and southwest of the United States.
+
+I live in a time when acquiring space is expensive so we developed obscure tastes instead - such as finding old denim, likely worn by a dead construction worker who owned a bigger house than us, and had a wallet thick enough to imprint his jeans.
+
+Summer Lightning is a reader-supported publication. To receive new posts and support my work, consider becoming a free or paid subscriber.
+
