@@ -1,5 +1,5 @@
 /*
-  Content-Security-Policy: default-src 'self'; object-src 'none'; font-src 'self' https://fonts.gstatic.com https://unpkg.com; script-src 'self' 'unsafe-inline' https://loader.knack.com https://cdn1.cloud-database.co; style-src 'self' https://fonts.googleapis.com https://unpkg.com; frame-src 'self' https://open.spotify.com; frame-ancestors 'self'; upgrade-insecure-requests; block-all-mixed-content;
+  Content-Security-Policy: default-src 'self'; object-src 'none'; font-src 'self' https://fonts.gstatic.com https://unpkg.com; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://loader.knack.com https://*.cloud-database.co; style-src 'self' https://fonts.googleapis.com https://unpkg.com; frame-src 'self' https://open.spotify.com; frame-ancestors 'self'; upgrade-insecure-requests; block-all-mixed-content;
   Referrer-Policy: strict-origin
   X-Content-Type-Options: nosniff
   X-Frame-Options: DENY
