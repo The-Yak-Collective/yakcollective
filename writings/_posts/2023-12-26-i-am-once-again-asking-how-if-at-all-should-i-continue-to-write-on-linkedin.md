@@ -6,6 +6,8 @@ original_link: https://chosen-path.org/2023/12/26/i-am-once-again-asking-how-if-
 author: 100047
 ---
 
+[Join the discussion on Linkedin.](https://www.linkedin.com/posts/antlerboy_2023-how-if-at-all-should-i-continue-activity-7145318305279500290-vKJO)
+
 ![](https://chosenpath.files.wordpress.com/2023/12/image-4.png?w=1920)
 
 Season’s greetings, everyone, and wishes for peace.
