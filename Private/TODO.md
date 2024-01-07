@@ -1,4 +1,4 @@
-# TODO
+# Website Foam Migration Tasks
 
 - [x] Remove `_post` subdirectories (requires modifications to the Pluto RSS feed pull scripts)
 - [x] Finish `update-lists.sh` (generate lists for `Newsletter.md` and `Writings.md` from Planet Pluto databases)
@@ -7,10 +7,19 @@
 - [x] Merge [Foam](https://foambubble.github.io/foam/) VS Code template and set up wiki
 - [ ] Foam-ify all `.md` files
 	- This includes moving to files with spaces in their names!
+- [ ] Make sure that all all pages are linked to each other
+- [ ] Update `update-lists.sh` to be able to handle Foam wikilink targets
+- [ ] Auto-generate content list page content, similar to how `Newsletter.md` and `Writings.md` is handled (should be able to order by date and have a concept of active/inactive; maybe as a git commit hook for some of these?)
+	- [ ] `Study Groups.md`
+	- [ ] `Projects.md`
+	- [ ] `Work Groups.md`
+	- [ ] `README.md`
+	- [ ] `Members.md`
+		- Is the `Knack Member ID Map.md` necessary if we have this?
+- [ ] Can I create a page that automatically pulls in recordings? Or alternately, stub pages that link out to those?
 - [ ] Implement [`foam janitor`](https://github.com/foambubble/foam-cli) as an on-commit GitHub Action
 - [ ] New, simpler, Foam-compatible theme
 	- Return to using "Yak Gold" as our default accent color
-	- Return to light/dark automatic theming
 	- Allow overrides *but no Jekyll-isms in `.md` files*!
 		- Custom accent color
 		- Custom banners
@@ -25,5 +34,6 @@
 - [ ] Move [IT infrastructure map](https://roamresearch.com/#/app/ArtOfGig/page/w6uAG9Pig) from DOT/Graphviz to something like Mermaid
 	- The goal here is Foam/GitHub compatability
 	- Add it to the `/Private` directory
+	- Probably should rebuild SVG on update...
 	- Archive the [current repo](https://github.com/The-Yak-Collective/infrastructure-map) when done
 	- Not *technically* part of this project, but makes sense to slot in here...
