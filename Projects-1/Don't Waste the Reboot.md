@@ -46,7 +46,7 @@ credits:
 			</div>
 		</figure>
 		<figcaption class="yak-content">
-			<p><a href="dont-waste-the-reboot/dont-waste-the-reboot-2020-10-28.pdf"><img class="h1" src="../img/pdf.webp" alt="Download PDF"> Download PDF</a></p>
+			<p><a href="dont-waste-the-reboot/dont-waste-the-reboot-2020-10-28.pdf"><img class="h1" src="../Assets/PDF.webp" alt="Download PDF"> Download PDF</a></p>
 		</figcaption>
 	</div></div>
 </div>
@@ -59,7 +59,7 @@ credits:
 			</div>
 		</figure>
 		<figcaption class="yak-content">
-			<p><a href="dont-waste-the-reboot/dont-waste-the-reboot-2020-10-28.pdf"><img class="h1" src="../img/pdf.webp" alt="Download PDF"> Download PDF</a></p>
+			<p><a href="dont-waste-the-reboot/dont-waste-the-reboot-2020-10-28.pdf"><img class="h1" src="../Assets/PDF.webp" alt="Download PDF"> Download PDF</a></p>
 		</figcaption>
 	</div></div>
 </div>

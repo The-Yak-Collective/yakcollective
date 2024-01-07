@@ -102,10 +102,10 @@ jq -n '{records: [inputs.records] | add}' $TEMP_DIR/knack-yaks-* > .automation/v
 			curl -sS -o "members/${MEMBER_ID}-og.webp" "$OG_URL"
 		fi
 		if [[ ! -s "members/${MEMBER_ID}.webp" ]]; then
-			cp "img/yak.webp" "members/${MEMBER_ID}.webp"
+			cp "Assets/Yak.webp" "members/${MEMBER_ID}.webp"
 		fi
 		if [[ ! -s "members/${MEMBER_ID}-og.webp" ]]; then
-			cp "img/yak-og.webp" "members/${MEMBER_ID}-og.webp"
+			cp "Assets/Yak Trail.webp" "members/${MEMBER_ID}-og.webp"
 		fi
 	done <<< "$(jq -r '.records[] | [.field_101_raw, .field_44_raw.url?] | @tsv' _data/knack_yaks.json | sed -e 's/^\s*//;s/\s*$//')"
 )

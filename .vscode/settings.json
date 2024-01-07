@@ -23,7 +23,7 @@
   ],
   "foam.preview.embedNoteType": "content-inline",
   "markdown.extension.list.indentationSize": "inherit",
-  "markdown.extension.preview.autoShowPreviewToSide": true,
+  "markdown.extension.preview.autoShowPreviewToSide": false,
   "markdown.extension.print.imgToBase64": true,
   "markdown.extension.print.absoluteImgPath": false,
   "markdown.extension.toc.orderedList": true,
@@ -37,7 +37,7 @@
       ".github/**/*",
       ".gitignore",
       ".vscode/**/*",
-      "img/.originals/**/*"
+      "Private/Hi-Res & Original Assets/*"
   ],
   "foam.placeholders.exclude": [
       ".automation/**/*",
@@ -45,7 +45,7 @@
       ".github/**/*",
       ".gitignore",
       ".vscode/**/*",
-      "img/.originals/**/*"
+      "Private/Hi-Res & Original Assets/*"
   ],
   "foam.files.ignore": [
       ".automation/**/*",
@@ -53,6 +53,6 @@
       ".github/**/*",
       ".gitignore",
       ".vscode/**/*",
-      "img/.originals/**/*"
+      "Private/Hi-Res & Original Assets/*"
   ]
 }

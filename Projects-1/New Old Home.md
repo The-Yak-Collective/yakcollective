@@ -44,7 +44,7 @@ credits:
 			</div>
 		</figure>
 		<figcaption class="yak-content">
-			<p><a href="the-new-old-home/the-new-old-home-2020-10-28.pdf"><img class="h1" src="../img/pdf.webp" alt="Download PDF"> Download PDF</a></p>
+			<p><a href="the-new-old-home/the-new-old-home-2020-10-28.pdf"><img class="h1" src="../Assets/PDF.webp" alt="Download PDF"> Download PDF</a></p>
 		</figcaption>
 	</div></div>
 </div>
@@ -57,7 +57,7 @@ credits:
 			</div>
 		</figure>
 		<figcaption class="yak-content">
-			<p><a href="the-new-old-home/the-new-old-home-2020-10-28.pdf"><img class="h1" src="../img/pdf.webp" alt="Download PDF"> Download PDF</a></p>
+			<p><a href="the-new-old-home/the-new-old-home-2020-10-28.pdf"><img class="h1" src="../Assets/PDF.webp" alt="Download PDF"> Download PDF</a></p>
 		</figcaption>
 	</div></div>
 </div>
