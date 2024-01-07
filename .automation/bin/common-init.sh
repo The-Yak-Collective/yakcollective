@@ -18,11 +18,11 @@ if [[ ! -f .automation/var/state/common-init ]]; then
 
 	while IFS= read -d '' -r SRC_DIR; do
 		mkdir -p ".automation/var/cache/build/$SRC_DIR"
-	done < <(find . -mindepth 1 \( -path "*/.*" -o -ipath "./private" \) -prune -o -type d -print0)
+	done < <(find . -mindepth 1 \( -path "*/.*" -o -ipath "./Private" \) -prune -o -type d -print0)
 
 	while IFS= read -d '' -r SRC_FILE; do
 		cp -apf "$SRC_FILE" ".automation/var/cache/build/$SRC_FILE"
-	done < <(find . -mindepth 1 \( -path "*/.*" -o -ipath "./private" \) -prune -o -type f -print0)
+	done < <(find . -mindepth 1 \( -path "*/.*" -o -ipath "./Private" \) -prune -o -type f -print0)
 
 	while IFS= read -d '' -r SKEL_DIR; do
 		CACHE_DIR="$(echo "$SKEL_DIR" | sed -e "s#^\.automation/etc/skel#.automation/var/cache/build#")"

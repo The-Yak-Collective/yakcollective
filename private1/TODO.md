@@ -18,12 +18,12 @@
 		- Additional headers
 	- How to handle RSS feeds? Maybe GitHub created/updated? Specially marked pages?
 	- Can this be made GitHub-compatible, [100 Rabbits](https://100r.co/site/home.html)-style?
-- [x] Create a page in `/private` providing a mapping between Yak Collective member names and IDs
+- [x] Create a page in `/Private` providing a mapping between Yak Collective member names and IDs
 - [ ] Create an `.automation/etc/overlay` directory containing Yak Collective customizations
 	- The goal is to make everything generalizable
 	- Scripts in `.automation/bin` will also require some generalization... Or maybe a custom config file?
 - [ ] Move [IT infrastructure map](https://roamresearch.com/#/app/ArtOfGig/page/w6uAG9Pig) from DOT/Graphviz to something like Mermaid
 	- The goal here is Foam/GitHub compatability
-	- Add it to the `/private` directory
+	- Add it to the `/Private` directory
 	- Archive the [current repo](https://github.com/The-Yak-Collective/infrastructure-map) when done
 	- Not *technically* part of this project, but makes sense to slot in here...

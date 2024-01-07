@@ -122,7 +122,7 @@ echo "[$(date)] Updating member mapping convenience file..."
 
 source .automation/lib/libalign.sh # Shell "library" for aligning UTF8 strings; doesn't truncate!
 
-MEMBER_MAP="./private/Knack Member ID Map.md"
+MEMBER_MAP="./Private/Knack Member ID Map.md"
 
 mkdir -p "$(dirname "$MEMBER_MAP")"
 
