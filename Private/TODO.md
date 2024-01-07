@@ -7,6 +7,7 @@
 - [x] Merge [Foam](https://foambubble.github.io/foam/) VS Code template and set up wiki
 - [ ] Foam-ify all `.md` files
 	- This includes moving to files with spaces in their names!
+- [ ] Move away from using `[[custom|naming]]` for better GitHub compatability
 - [ ] Make sure that all all pages are linked to each other
 - [ ] Update `update-lists.sh` to be able to handle Foam wikilink targets
 - [ ] Auto-generate content list page content, similar to how `Newsletter.md` and `Writings.md` is handled (should be able to order by date and have a concept of active/inactive; maybe as a git commit hook for some of these?)
