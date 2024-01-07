@@ -27,7 +27,7 @@ Check out our [[Members|members]] and [[Projects|projects]], read some of [[
 [Projects|projects]: Projects.md "Yak Collective Projects"
 [Writings|our latest thoughts]: Writings.md "The Yak Collective's Writings"
 [Yak Robotics Garage]: Study%20Groups%2FYak%20Robotics%20Garage.md "Yak Rover"
-[Infrstructure]: Work%20Groups%2FInfrstructure.md "Infrastructure"
+[Infrastructure]: Work%20Groups%2FInfrastructure.md "Infrastructure"
 [Online Governance Primer]: Projects%2FOnline%20Governance%20Primer.md "The Yak Online Governance Primer"
 [Future Frontiers]: Projects%2FFuture%20Frontiers.md "Future Frontiers"
 [Astonishing Stories]: Projects%2FAstonishing%20Stories.md "Astonishing Stories"
