@@ -12,7 +12,7 @@ The first writer, Alex, sets a fixed goal: they aim to grow their newsletter to 
 
 The second writer, Jordan, also recognizes the value of consistency but approaches the challenge in an experimental way. They commit to publishing one article every week, but they explore different formats (listicles versus long-form essays), different times to write (morning versus evening), even different places to work from (at home versus a coffee shop). Along the way, Jordan takes notes about how they feel and how the audience responds.
 
-Alex is laser-focused on sticking to their plan. In contrast, Emily focuses on discovering the best approach—the ‘creative ikigai’ that fulfills them while benefiting their audience.
+Alex is laser-focused on sticking to their plan. In contrast, Jordan focuses on discovering the best approach—the ‘creative ikigai’ that fulfills them while benefiting their audience.
 
 Before you keep on reading, take a second to ask yourself: Who do you think will succeed? Who will stick to their project for the longer? And, crucially, who will have the most fun?
 
@@ -24,7 +24,7 @@ In some rare cases, we know exactly what we ought to do next, and it’s just a 
 
 For instance, let’s say you want to lose weight. You may think that how to do it is clear enough: reduce your calorie intake and increase your physical activity.
 
-But you’re actually missing lots of information that you won’t find packaged in a neat framework. When do _you_ tend to crave sugar the most? What are your emotional triggers that make _you_ turn to food as a coping mechanism? What are the best healthy recipes that _you_ find tasty?
+But you’re actually missing lots of information that you won’t find packaged in a neat framework. When do _you_ tend to crave sugar the most? What are the emotional triggers that make _you_ turn to food as a coping mechanism? What are the best healthy recipes that _you_ find tasty?
 
 The only way to find the answers to these questions is through personal experimentation. And yet, most diet programs advocate rigid meal plans and strict exercise routines.
 
@@ -48,7 +48,7 @@ It’s like building a laboratory for your personal growth, and it only requires
 
 ### 1. Assess the current situation
 
-First, you need to understand where you currently stand. A quick way to do this is to capture [field notes](https://nesslabs.com/self-anthropology-field-notes) for a day or two. Just link an anthropologist, you want to keep a log of your experiences. Whenever you take a break or switch between tasks, write down the time and anything you noticed. This could be your reaction after a conversation, moments of procrastination, or ideas that gave you energy.
+First, you need to understand where you currently stand. A quick way to do this is to capture [field notes](https://nesslabs.com/self-anthropology-field-notes) for a day or two. Just like an anthropologist, you want to keep a log of your experiences. Whenever you take a break or switch between tasks, write down the time and anything you noticed. This could be your reaction after a conversation, moments of procrastination, or ideas that gave you energy.
 
 ### 2. Formulate a research question
 
