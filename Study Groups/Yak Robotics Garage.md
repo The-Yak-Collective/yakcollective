@@ -1,44 +1,54 @@
 ---
-title: Yak Rover
+title: Yak Robotics Garage
 date: 2021-03-28 00:00:00
-tagline: Mars rovers for everybody
+tagline: Robotics research for everyone!
 type: Program
 sequence: covid-19
-hero_image: /projects/yak-rover/yak-rover.webp
-page_css: /projects/yak-rover/yak-rover.css
+hero_image: /projects/yarg/yarg.webp
+page_css: /projects/yarg/yarg.css
 summary: |
-  <img src="/projects/yak-rover/yak-rover.webp" alt="Yak Rover" />
+  <img src="/projects/yarg/yarg.webp" alt="The Yak Robotics Garage" class="w-40 fl mr3 mb3">
 
-  The Yak Rover project is an effort by the Yak Collective to create an open-source rover design capable of actually being deployed on Mars by 2031. We are betting that radically declining launch costs, and increasingly capable infrastructure on Mars and the Moon (such as shared communications relay or charging facilities) could open up the possibility of an open-source space program based on low-cost rovers. 
+  The Yak Robotics Garage (YaRG) is an informal robotics research group with a relatively mature focus on rovers, with an aspirational goal of deploying open-source rovers on Mars, starting with rovers in living rooms on Earth. In 2024, we are starting to explore other verticals besides rovers.
 
-  Rover technology is also strongly aligned with terrestrial autonomous robot technology, in applications such as package delivery, search-and-rescue, and elder-care. The inputs required for these applications, such as efficient batteries, advanced motors, and robust software stacks, are increasingly becoming commoditized and low-cost, lowering barriers to entry. We believe open-source pursuit of the demanding engineering capabilities required for space applications will have significant spin-off benefits for these other applications, and allow independent makers and consultants to develop the kinds of skills that are currently limited to members of advanced corporate and government research laboratories.
+  Since 2021, we have been tinkering with a variety of both from-scratch and kit-based rovers and robots, and simultaneously exploring current cutting-edge technological trends such as machine-learning and RISC-V based robotics. Rovers we have built or tinkered with include spiderbots, rocker-bogie rovers based on NASA and ESA missions,car-like 4-wheelers, and various simple 2-wheel rovers, such as the Elegoo Tumbller (recommended if you want an easy starting point for joining us as a builder). 
 
-  ## Pilot Year: Five Hobby-Scale Builds
+  Currently, our main collaborative activity is designing and deploying a rover called [the Yakasaur](https://github.com/The-Yak-Collective/yakasaur), a 2-wheel rover for desert environments built around a “small-brain/big-brain” compute architecture, possibly with some onboard machine-learning elements. Our goal is to build and deploy this in the Mojave desert by 2025.
 
-  Our Pilot Year is devoted to exploration, learning and discovery in the form of a “build party.”  Individual Yak Rover team members are aiming to build a set of simple hobby-scale rovers of varied designs, and meeting weekly to share learnings and discuss technical challenges. The goal is to build a foundation of knowledge and hands-on practical skills. Meet the five Yak Rovers (YRs) taking shape in 2021!
+  <img src="/projects/yarg/yarg-mars.webp" alt="The Yak Robotics Garage" class="w-40 fr ml3 mv3">
 
-  - YR Infinity and Beyond: Based on the ESA model rover
-  - YR Go and See: A pair of simple PiCars
-  - YR Nature is Murder: A from-scratch rocker-bogie design
-  - YR Abio Flex Wanderer: A spider-bot
-  - YR Wonderful Wandering Growth: Another spider-bot
+  Our group meets weekly online. Meetings alternate between strategizing or coworking around specific builds we are developing (individually or collectively) and exploring frontier tools and topics via peer learning sessions. Periodically, we also do special events such as the spider-bot teleoperated rover race we did in Tokyo in 2021, and the rover-themed hackathon we did in 2022. You can join our activities via the [`#yak-rover`](https://discord.com/channels/692111190851059762/779070653122084864) channel on our Discord ([join here](/join.html)). All are welcome regardless of level and nature of skills/interests. Roverics requires many skills and each YaRGer approaches the subject in their own way. You can check out recordings of our past meetings on our YouTube channel. 
 
-  ## Interested?
+  ### Current Research Threads (2024)
+  - Machine-vision based robotics navigation (using an LMM in a loop to guide behaviors)
+  - Blockchains on rovers (Ethereum light node on a low-compute rover)
+  - Social roverics: community of rovers in a domain
+  - Hobbyist-friendly rover design
+  - RISC-V based robotics
+  - Power electronics and solar power
+  - Languages for rover operations
 
-  Join us: <a href="https://YakCollective.org/join">YakCollective.org/join</a>.
+  ### Past Research Threads (2021 – 2023)
+  - Mechanical modeling of rover designs and morphologies
+  - New kinds of wheels
+  - Speculative design of weird rover designs
+  - Machine learning based proprioception
+  - Simulation technologies for rovers (Gazebo etc.)
+  - Robot communications (VPNs, remote access, and tele-operation)
+  - Rover operating systems and software architectures
 
-  We meet every Monday night in the \#yak-rover Discord channel. We have plenty of ways you can contribute to the ongoing builds, or independently. We need you.
+  <center><img src="/projects/yarg/yarg-hokusai.webp" alt="Mars Rover, Hokusai Style" class="w-60 mt4"></center>
 credits:
-  build_leaders:
-    - 100037
-    - 100039
+  current_roboticists:
     - 100020
-    - 100067
     - 100041
-  technical_experts:
+    - Rhett Garber
+    - 100037
     - 100005
-  collaborators:
-    - 100013
-    - 100079
+    - 100039
+  alumni:
+    - 100067
+    - 100143
+    - 101073
 ---
 {% include widget-project-header.html %}

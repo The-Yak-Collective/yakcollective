@@ -7,11 +7,11 @@ Check out our [[Members|members]] and [[Projects|projects]], read some of [[
 
 <!-- DO NOT REMOVE THIS LINE! DO NOT EDIT BELOW THIS LINE! -->
 
-## Active Groups
+## Active Groups & Projects
 - [[Yak Robotics Garage]]
 - [[Infrastructure]]
 
-## Projects
+## Past Projects
 - [[Online Governance Primer]]
 - [[Future Frontiers]]
 - [[Astonishing Stories]]
