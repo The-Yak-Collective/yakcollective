@@ -15,7 +15,7 @@ summary: |
 
   Currently, our main collaborative activity is designing and deploying a rover called [the Yakasaur](https://github.com/The-Yak-Collective/yakasaur), a 2-wheel rover for desert environments built around a “small-brain/big-brain” compute architecture, possibly with some onboard machine-learning elements. Our goal is to build and deploy this in the Mojave desert by 2025.
 
-  <img src="/projects/yarg/yarg-mars.webp" alt="The Yak Robotics Garage" class="w-40 fr ml3 mv3">
+  <img src="/projects/yarg/yarg-venkat.webp" alt="Venkatesh Rao" class="w-40 fr ml3 mv3">
 
   Our group meets weekly online. Meetings alternate between strategizing or coworking around specific builds we are developing (individually or collectively) and exploring frontier tools and topics via peer learning sessions. Periodically, we also do special events such as [the spider-bot teleoperated rover race we did in Tokyo in 2021](https://www.youtube.com/watch?v=Wro96wL-HMQ), and the rover-themed hackathon we did in 2022. You can join our activities via the [`#yak-rover`](https://discord.com/channels/692111190851059762/779070653122084864) channel on our Discord ([join here](/join.html)). All are welcome regardless of level and nature of skills/interests. Roverics requires many skills and each YaRGer approaches the subject in their own way. You can check out recordings of our past meetings on our YouTube channel. 
 
@@ -37,7 +37,7 @@ summary: |
   - Robot communications (VPNs, remote access, and tele-operation)
   - Rover operating systems and software architectures
 
-  <center><img src="/projects/yarg/yarg-hokusai.webp" alt="Mars Rover, Hokusai Style" class="w-60 mt4"></center>
+  <center><img src="/projects/yarg/yarg-rhett.webp" alt="Rhett Garber" class="w-60 mt4"></center>
 credits:
   current_roboticists:
     - 100020
