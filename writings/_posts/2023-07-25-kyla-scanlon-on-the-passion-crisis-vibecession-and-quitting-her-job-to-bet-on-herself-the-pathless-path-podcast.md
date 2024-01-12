@@ -57,7 +57,7 @@ We talk about this all and also talk about how she thinks of designing her Reels
 * * *
  ![](https://i1.wp.com/think-boundless.com/wp-content/uploads/2022/01/Picture2.png?resize=140%2C175&ssl=1)
 
-**33k+ Sold! (Top 1% Book)** The Pathless Path is Paul's book about walking away from a "perfect" job with a promising future and starting over again. Through painstaking experiments, living in different countries, and a deep dive into the history of our work beliefs, Paul pieces together a set of ideas and principles that guide him from unfulfilled and burned out to what he calls "the pathless path" - a new story for thinking about work in our lives. [Learn More & Buy The Book Here](https://think-boundless.com/the-pathless-path/)
+**41k+ Sold! (Top 1% Book)** The Pathless Path is Paul's book about walking away from a "perfect" job with a promising future and starting over again. Through painstaking experiments, living in different countries, and a deep dive into the history of our work beliefs, Paul pieces together a set of ideas and principles that guide him from unfulfilled and burned out to what he calls "the pathless path" - a new story for thinking about work in our lives. [Learn More & Buy The Book Here](https://think-boundless.com/the-pathless-path/)
 
 [contact-form-7]
 
