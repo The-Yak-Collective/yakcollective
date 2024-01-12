@@ -22,7 +22,7 @@ Check out our [study groups](/study-groups.html) and [projects](/projects.html)
                                     | sort: "date"
                                     | reverse %}
 
-{% for study_group in study_grou
+{% for study_group in study_groups %}
     {% assign study_group_id = study_group.name | replace: ".md", "" | replace: ".html", "" %}
     {% include widget-study-group-box.html study_group=study_group_id %}
 {% endfor %}
