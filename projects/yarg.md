@@ -1,7 +1,7 @@
 ---
 title: Yak Robotics Garage
 date: 2021-03-28 00:00:00
-tagline: Robotics research for everyone!
+tagline: Robotics tinkering for everyone
 type: Program
 sequence: covid-19
 hero_image: /projects/yarg/yarg.webp
@@ -17,7 +17,7 @@ summary: |
 
   <img src="/projects/yarg/yarg-mars.webp" alt="The Yak Robotics Garage" class="w-40 fr ml3 mv3">
 
-  Our group meets weekly online. Meetings alternate between strategizing or coworking around specific builds we are developing (individually or collectively) and exploring frontier tools and topics via peer learning sessions. Periodically, we also do special events such as the spider-bot teleoperated rover race we did in Tokyo in 2021, and the rover-themed hackathon we did in 2022. You can join our activities via the [`#yak-rover`](https://discord.com/channels/692111190851059762/779070653122084864) channel on our Discord ([join here](/join.html)). All are welcome regardless of level and nature of skills/interests. Roverics requires many skills and each YaRGer approaches the subject in their own way. You can check out recordings of our past meetings on our YouTube channel. 
+  Our group meets weekly online. Meetings alternate between strategizing or coworking around specific builds we are developing (individually or collectively) and exploring frontier tools and topics via peer learning sessions. Periodically, we also do special events such as [the spider-bot teleoperated rover race we did in Tokyo in 2021](https://www.youtube.com/watch?v=Wro96wL-HMQ), and the rover-themed hackathon we did in 2022. You can join our activities via the [`#yak-rover`](https://discord.com/channels/692111190851059762/779070653122084864) channel on our Discord ([join here](/join.html)). All are welcome regardless of level and nature of skills/interests. Roverics requires many skills and each YaRGer approaches the subject in their own way. You can check out recordings of our past meetings on our YouTube channel. 
 
   ### Current Research Threads (2024)
   - Machine-vision based robotics navigation (using an LMM in a loop to guide behaviors)
