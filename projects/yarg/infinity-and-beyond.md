@@ -1,7 +1,7 @@
 ---
 author: 100039
 hidden: false
-page_css: /projects/yak-rover/yr-infinity-and-beyond.css
+page_css: /projects/yarg/infinity-and-beyond.css
 ---
 # Infinity and Beyond
 

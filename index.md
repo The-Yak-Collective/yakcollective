@@ -28,12 +28,13 @@ Check out our [study groups](/study-groups.html) and [projects](/projects.html)
 {% endfor %}
 {% endcomment %}
 
-## Most Recent Project
+## Most Recent Projects
 
-{% assign project = site.pages | where: "layout", "page-project"
+{% assign projects = site.pages | where: "layout", "page-project"
                                | where_exp: "project", "project.date <= site.time or site.future == true"
                                | sort: "date"
-                               | reverse
-                               | first %}
-{% assign project_id = project.name | replace: ".md", "" | replace: ".html", "" %}
-{% include widget-project-box.html project=project_id %}
+                               | reverse %}
+{% for project in projects limit:2 %}
+    {% assign project_id = project.name | replace: ".md", "" | replace: ".html", "" %}
+    {% include widget-project-box.html project=project_id %}
+{% endfor %}
