@@ -42,7 +42,7 @@ credits:
   current_roboticists:
     - 100020
     - 100041
-    - Rhett Garber
+    - 101470
     - 100037
     - 100005
     - 100039
