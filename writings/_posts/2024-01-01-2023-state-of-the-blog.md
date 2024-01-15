@@ -6,7 +6,7 @@ original_link: https://person-al.github.io/%F0%9F%8C%B1/2024/01/01/2023-state-of
 author: 100646
 ---
 
-**[Assumed Audience](/%F0%9F%8C%B0/2024/01/02/list-your-assumed-audience-at-the-beginning-of-blog-posts.html):** Folks interested in the details of having an extremely small blog. How it feels, what traffic looks like, and the early process of finding an audience.
+**[Assumed Audience](/%F0%9F%8C%B1/2024/01/02/assumed-audiences-make-you-a-better-writer.html):** Folks interested in the details of having an extremely small blog. How it feels, what traffic looks like, and the early process of finding an audience.
 
 I started this blog on June 21st 2021, with the first post hitting your screens on the 23rd. Thanks to [Goatcounter](https://www.goatcounter.com), a slightly more privacy-aware analytics system, I have some numbers I can use to reflect on the last year and a half.
 
@@ -42,11 +42,11 @@ When I started blogging, I had four questions:
 
 After 2.5 years I’ve found:
 
-1. It’s an opportunity for structured thinking that I haven’t had in a while. I don’t think I’m regular enough that improves “clarity” of thought when I’m not writing. But it does increase the number of times I think through something semi-rigorously. And that’s directionally what I wanted.
+1. It’s an opportunity for structured thinking that I haven’t had in a while. I don’t think I’m regular enough to improve “clarity” of thought when I’m not writing. But it does increase the number of times I think through something semi-rigorously. And that’s directionally what I wanted.
 2. No. But I think it’s too early to see improvement. Right now, I want low barriers to publishing in service of thinking practice. As I establish a consistent writing practice, I can focus on this more. That aside, the lack of improvement is partially lack of writing and perhaps partially…
 3. I haven’t gotten significant feedback on my ideas, which is understandable. I’ve done a few things to get feedback, the most granular of which was a small feedback circle I started with a few other bloggers. But as my writing frequency decreased, that flywheel stopped as well. 
   - Conversation is also _slower_ on blogs. Most conversation still happens on social media because it’s friction-less. As easy as I’ve made replying to my posts, few-to-none have done it yet. And how often do I see meaningful replies to other peoples’ posts via web mentions?
-  - LLMs could be an interesting tool for feedback, but there are pitfalls there as well, including how to access on anonymously? Which leads us to…
+  - LLMs could be an interesting tool for feedback, but there are pitfalls there as well, including how to access one anonymously? Which leads us to…
 4. Anonymity is fascinatingly difficult. It’s easier to get eyes and ears and ideas from friends who are already invested in you. When you start anonymous, you start from 0, which takes much longer (I suspect). Additionally, there’s the issue of de-anonymiz-ability. How much information about myself do I want to put out there? After a few years, could someone put enough blog posts together to recognize me? And am I okay with that? What tools can I use if I can’t pay in an anonymous way?
 
 ## the numbers
@@ -57,9 +57,9 @@ I didn’t commit internally to a publishing schedule and it shows. It’s been 
 
 Some more fun facts:
 
-The largest post is [🌳 how I publish my Zettelkasten](/%F0%9F%8C%B3/2022/05/08/how-i-publish-my-zettelkasten.html) at 2,250 words and the smallest is [🗨️ Northrop Grumman wins a contract to build astronaut homes orbiting the moon](/%F0%9F%97%A8%EF%B8%8F/2021/07/25/northrop-grumman-wins-a-contract-to-build-astronaut-homes-orbiting-the-moon.html) with 1 single word!
+The largest post is [🌳 how I publish my Zettelkasten](/%F0%9F%8C%B3/2022/05/08/how-i-publish-my-zettelkasten.html) at 2,250 words and the smallest is [🗨️ Northrop Grumman wins a contract to build astronaut homes orbiting the moon](/%F0%9F%97%A8%EF%B8%8F/2021/07/25/northrop-grumman-wins-a-contract-to-build-astronaut-homes-orbiting-the-moon.html) with only 1 word!
 
-I published the most 🌰 posts with 15,437 words across 33 posts. 🌱 and 🌳 both contain 9k+ words, though the former is spread over 16 posts and the latter only 6. I have not yet posted my first 🌲 post.
+I published the most 🌰 posts with 15,437 words across 33 posts. 🌱 and 🌳 both contain 9k+ words, though the former is spread over 16 posts and the latter only 6. I have not yet written my first 🌲 post.
 
 Okay, now let’s talk traffic. If you just want a quick summary, I recommend skipping to “[putting it all together](#putting-it-all-together)”:
 
@@ -88,7 +88,7 @@ By now, I was actively sharing posts wherever I felt made sense. And while the t
 Top four[2](#fn:2) posts/pages:
 
 1. [🌳 how I publish my Zettelkasten](/%F0%9F%8C%B3/2022/05/08/how-i-publish-my-zettelkasten.html) with 113 views 
-  - I share this the most widely: in the Obsidian discord, IndieNews, and so on.
+  - I shared this the most widely: in the Obsidian discord, IndieNews, and so on.
 2. [🛠️ quicksidian](/%F0%9F%9B%A0%EF%B8%8F/2022/07/28/quicksidian.html) - 75 views 
   - This only got shared in the Obsidian discord (and 75% of its traffic came from there). But it still got lots of traffic from the homepage (16%) and IndieWeb somehow (3%). Only 7% of the traffic to this page was from an unknown source.
 3. [Pathfinder](http://person-al.github.io/pathfinder) - 52 views 
@@ -102,7 +102,7 @@ Again, like the previous six months, 44% of traffic came from phones and small t
 
 In the second year of this blog’s existence there were 647 visits to the website. Note that at this point, I was not promoting the blog myself too much. I shared some links on Mastodon and Twitter, though Twitter usage shrank dramatically this year.
 
-In this year of pause, the highest referrer to the site was yandex.ru, the Russian search engine at 12%[^3]. 4% of traffic went specifically from yandex.ru to [🌰 random poetry generator](/%F0%9F%8C%B0/2022/06/15/random-poetry-generator.html). Apparently there are 28 Russian poetry enthusiasts that Yandex was happy to connect with that little tool. I hope they enjoyed playing with it! [^3]: unknown at 39%, next highest was Yandex.
+In this year of pause, the highest referrer to the site was yandex.ru, the Russian search engine at 12%[3](#fn:3). 4% of traffic went specifically from yandex.ru to [🌰 random poetry generator](/%F0%9F%8C%B0/2022/06/15/random-poetry-generator.html). Apparently there are 28 Russian poetry enthusiasts that Yandex was happy to connect with that little tool. I hope they enjoyed playing with it!
 
 The 512KB and 1MB clubs combined were responsible for 10% of views and Google, surprisingly, sent 5% of readers. I guess the algorithm finally decided I wasn’t spam.
 
@@ -143,8 +143,10 @@ Here are a few things I’ve learned from this experience so far:
   - Looking at the traffic, I suspect [🌳 how I publish my Zettelkasten](/%F0%9F%8C%B3/2022/05/08/how-i-publish-my-zettelkasten.html) proved to Google that I wasn’t spam. And now Google sends traffic (albeit tiny amounts) to other posts of mine as well.
   - Again, I haven’t dug into the day-by-day numbers enough to prove this hypothesis. But Yandex also sends traffic to more than my poetry post.
   - Worth calling out that my traffic is super low. When I say “2% of views from the last 2.5 years came from Google”, I’m talking 42 entire views.
-3. Sharing your blog with philosophically-aligned communities and aggregators is a valuable way to get your blog in front of people. In the last 2.5 years, the 512KB and 1MB clubs combined have sent 141 readers to this site. That’s slightly more than Google and Yandex combined! 
-  - This makes me wonder how much of the 44% unknown traffic over the last 2.5 years is coming from other blogrolls, search engines, and aggregators without attribution.
+3. Sharing your blog with philosophically-aligned communities and aggregators is a valuable way to get your blog in front of people. 
+  - “Organic” searches on Google and Yandex combined are responsible for 6% of known reads. Me sharing my work on social media or with specific communities or blogrolls, by contrast, account for 17%.
+  - Even _just_ submitting your blog to like-minded blogrolls can be powerful. 7% of known reads in the last 2.5 years have come from submitting my blog to the 512KB and 1MB clubs. Again, that’s slightly more than “organic” searches.
+  - (This makes me wonder how much of the 44% unknown traffic over the last 2.5 years is coming from other blogrolls, search engines, and aggregators without attribution.)
 4. Either more people read on their laptops than I thought or there’s something specific about my content or format that appeals more to folks on a laptop? Would love to hear thoughts on this.
 
 ## thoughts for the future
@@ -155,7 +157,7 @@ Here’s what I’d like to see from myself in 2024:
   - The reason I’m not publishing more frequently is because I haven’t been writing as frequently. I’ve spent less time on my personal computer in the last year, in part because I spend so many working hours on a computer. I’ll need to brainstorm what an ideal version of this looks like.
 - fewer internal expectations on sharing 
   - I will continue sharing snippets where appropriate, but I will no longer expect conversation to arise from it.
-  - I’d like to add attribution to links I share to Mastodon, just so I can track the effectiveness of that medium compared to Twitter.
+  - I’d like to add attribution to links I share to Mastodon, just so I can track the effectiveness of that medium compared to past!Twitter.
   - I also may choose to stop sharing altogether, just to focus on the intrinsic value of blogging 🤔.
 
 Digging into and documenting my numbers like this is fun. It gives me the opportunity to look back on what resonated with folks, think critically about where people like me spend time on the internet, and re-assess how _I_ spend _my_ time. If there are other angles you’d like to hear a tiny blogger reflect on, let me know!
@@ -163,4 +165,6 @@ Digging into and documenting my numbers like this is fun. It gives me the opport
 1. Too many posts tied for third, so I won’t discuss any of them. [↩](#fnref:1)
 
 2. Pathfinder is more of a project than a post, so I’ll list top 4 instead of just the top 3. [↩](#fnref:2)
+
+3. unknown at 39%, next highest was Yandex. [↩](#fnref:3)
 
