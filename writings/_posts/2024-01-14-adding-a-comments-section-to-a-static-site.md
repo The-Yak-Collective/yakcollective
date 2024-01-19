@@ -41,12 +41,12 @@ Aaron Parecki has a [great post](https://aaronparecki.com/2018/06/30/11/your-fir
 If your username for webmention.io is x.com, visit `https://webmention.io/x.com/webmention`. You’ll see a form nearly identical to what you want on your site. With some slight tweaking of the html, you can get something like this:
 
 ```
-<form action="\{\{site.webmention_link\}\}" method="post" target="_blank" style="margin-top: 16px;">
+<form action="{{site.webmention_link}}" method="post" target="_blank" style="margin-top: 16px;">
 <label for="source">Comment by responding wherever you'd like and send me the URL:</label>
 <input type="url" name="source" id="source" placeholder="The link to your comment" style="margin-bottom: 14px; width: 90%; display: block;">
 <div hidden>
 <label for="target">Link to the page you're commenting on:</label>
-<input type="url" name="target" id="target" value="\{\{site.url | append: page.url\}\}" placeholder="The page your webmention is about (probably this page)" style="margin-bottom: 14px; width: 90%; display: block;">
+<input type="url" name="target" id="target" value="{{site.url | append: page.url}}" placeholder="The page your webmention is about (probably this page)" style="margin-bottom: 14px; width: 90%; display: block;">
 </div>
 <div style="margin-top: 16px;">
 <input type="submit" class="button" value="Send Webmention">
