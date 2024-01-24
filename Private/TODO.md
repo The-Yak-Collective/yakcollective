@@ -1,15 +1,15 @@
 # Website Foam Migration Tasks
 
 - [x] Remove `_post` subdirectories (requires modifications to the Pluto RSS feed pull scripts)
-- [x] Finish `update-lists.sh` (generate lists for `Newsletter.md` and `Writings.md` from Planet Pluto databases)
+- [x] Finish `update-pluto-lists.sh` (generate lists for `Newsletter.md` and `Writings.md` from Planet Pluto databases)
 - [x] Add RSS feed creation for "writings" to `update-list.sh`
 - [x] Make sure that everything builds right still
 - [x] Merge [Foam](https://foambubble.github.io/foam/) VS Code template and set up wiki
+- [x] Change template "not below" line to include `----` borders
 - [ ] Foam-ify all `.md` files
 	- This includes moving to files with spaces in their names!
-- [ ] Move away from using `[[custom|naming]]` for better GitHub compatability
+- [x] Move away from using `[[custom|naming]]` for better GitHub compatability
 - [ ] Make sure that all all pages are linked to each other
-- [ ] Update `update-lists.sh` to be able to handle Foam wikilink targets
 - [ ] Auto-generate content list page content, similar to how `Newsletter.md` and `Writings.md` is handled (should be able to order by date and have a concept of active/inactive; maybe as a git commit hook for some of these?)
 	- [ ] `Study Groups.md`
 	- [ ] `Projects.md`
@@ -33,6 +33,7 @@
 	- The goal is to make everything generalizable
 	- Scripts in `.automation/bin` will also require some generalization... Or maybe a custom config file?
 - [ ] Move [IT infrastructure map](https://roamresearch.com/#/app/ArtOfGig/page/w6uAG9Pig) from DOT/Graphviz to something like Mermaid
+	- ChatGPT makes a decent first-pass, but it doesn't really understand multi-path commands
 	- The goal here is Foam/GitHub compatability
 	- Add it to the `/Private` directory
 	- Probably should rebuild SVG on update...

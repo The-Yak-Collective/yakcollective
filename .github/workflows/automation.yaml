@@ -25,7 +25,7 @@ jobs:
           ./.automation/bin/rss-pull-feeds.sh
       - name: Update Newsletter & Writings pages
         run: |
-          ./.automation/bin/update-lists.sh
+          ./.automation/bin/update-pluto-lists.sh
       - name: Rebuild website
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_TOKEN }}

@@ -15,7 +15,7 @@ fi
 # Make sure that lists have been generated.
 #
 if [[ ! -f .automation/var/cache/build/writings.xml ]]; then
-	source ./.automation/bin/update-lists.sh
+	source ./.automation/bin/update-pluto-lists.sh
 fi
 
 # Everything that follows needs to happen in the automation cache

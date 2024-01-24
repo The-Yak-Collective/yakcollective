@@ -28,16 +28,22 @@ echo "[$(date)] Updating templates..."
 mkdir -p .automation/var/cache/templates
 
 if [[ -f Newsletter.md ]]; then
-	if [[ $(grep -c '<!-- DO NOT REMOVE THIS LINE! DO NOT EDIT BELOW THIS LINE! -->' Newsletter.md) -eq 1 ]]; then
-		sed '/<!-- DO NOT REMOVE THIS LINE! DO NOT EDIT BELOW THIS LINE! -->/,$d' Newsletter.md > .automation/var/cache/templates/Newsletter.md
+	if [[ $(grep -c '<!-- DO NOT REMOVE THIS LINE! DO NOT EDIT BELOW THIS LINE! -->' Newsletter.md) -eq 1 ]] \
+	&& [[ $(grep -c '<!-- ----------------------------------------------------- -->' Newsletter.md) -eq 2 ]]; then
+		sed '/<!-- DO NOT REMOVE THIS LINE! DO NOT EDIT BELOW THIS LINE! -->/,$d' Newsletter.md | head -n -1 > .automation/var/cache/templates/Newsletter.md
+		echo '<!-- ----------------------------------------------------- -->' >> .automation/var/cache/templates/Newsletter.md
 		echo '<!-- DO NOT REMOVE THIS LINE! DO NOT EDIT BELOW THIS LINE! -->' >> .automation/var/cache/templates/Newsletter.md
+		echo '<!-- ----------------------------------------------------- -->' >> .automation/var/cache/templates/Newsletter.md
 	fi
 fi
 
 if [[ -f Writings.md ]]; then
-	if [[ $(grep -c '<!-- DO NOT REMOVE THIS LINE! DO NOT EDIT BELOW THIS LINE! -->' Newsletter.md) -eq 1 ]]; then
-		sed '/<!-- DO NOT REMOVE THIS LINE! DO NOT EDIT BELOW THIS LINE! -->/,$d' Writings.md > .automation/var/cache/templates/Writings.md
+	if [[ $(grep -c '<!-- DO NOT REMOVE THIS LINE! DO NOT EDIT BELOW THIS LINE! -->' Writings.md) -eq 1 ]] \
+	&& [[ $(grep -c '<!-- ----------------------------------------------------- -->' Writings.md) -eq 2 ]]; then
+		sed '/<!-- DO NOT REMOVE THIS LINE! DO NOT EDIT BELOW THIS LINE! -->/,$d' Writings.md | head -n -1 > .automation/var/cache/templates/Writings.md
+		echo '<!-- ----------------------------------------------------- -->' >> .automation/var/cache/templates/Writings.md
 		echo '<!-- DO NOT REMOVE THIS LINE! DO NOT EDIT BELOW THIS LINE! -->' >> .automation/var/cache/templates/Writings.md
+		echo '<!-- ----------------------------------------------------- -->' >> .automation/var/cache/templates/Writings.md
 	fi
 fi
 
