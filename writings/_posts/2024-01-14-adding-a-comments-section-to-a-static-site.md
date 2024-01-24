@@ -18,9 +18,29 @@ A webmention is a simple way to notify any URL when you mention it on your site.
 
 ### How does it work?
 
-When you @ someone on Twitter, your device sends a message to Twitter’s computers and says “Hey, I mentioned this person.” Twitter’s computers say “Cool, I’ll let them know.” Then, when the other person opens up Twitter on _their_ device asks Twitter’s computers “Yo, anything I should know?” and Twitter says “Yeah! Someone @-ed you.”
+The [Webmention site](https://indieweb.org/Webmention-developer#Protocol_Summary) has a clear walkthrough, but in the context of commenting[1](#fn:1) you can think of it like this:
 
-Webmentions works the same way, except its across _all_ websites, not just Twitter’s. So it takes one additional step. It doesn’t _know_ which computers store your mentions. So let’s say I want to mention your site funthings.com. My device will go to funthings.com and say “Aha! I see listed here that their mentions are stored at computer X.” Then my device goes to computer X and says “Hey, I mentioned this person.” Computer X says “Cool, I’ll let them know.” And the rest goes as you imagine. So in order for this to work, you need a computer that’s constantly running and listening to anyone who wants to send a mention.
+[![Diagram of the above](https://mermaid.ink/img/pako:eNp1kTFPw0AMhf-K64WBlAEEww1FlRhgyEQXpCzWxSWn5s7hzkcVVf3vXAgUEKon68l-n_x8QCsto8HEb5mD5QdHr5F8E6DUuneWLxIMnQRerlaXm71T5VikxPGdYzLwyHEa8SNY8Z6DggQYJCnc3F7fLWajf3vFbPnH3cCmo7BLXwu1oxP3LHiswFKAp6LxD_L-HHJi_vI18JKHBdS0Y0g5MqgA9UkgdbIH7Vw6XbSN4ucwrrBCz9GTa0tohwnVoHbsuUFT2pa3lHttsAnHMkpZ5XkMFo3GzBXmoSX9zhjNtvCKyq1TifX8iM9_HD8AmXeIiw?type=png)](https://mermaid.live/edit#pako:eNp1kTFPw0AMhf-K64WBlAEEww1FlRhgyEQXpCzWxSWn5s7hzkcVVf3vXAgUEKon68l-n_x8QCsto8HEb5mD5QdHr5F8E6DUuneWLxIMnQRerlaXm71T5VikxPGdYzLwyHEa8SNY8Z6DggQYJCnc3F7fLWajf3vFbPnH3cCmo7BLXwu1oxP3LHiswFKAp6LxD_L-HHJi_vI18JKHBdS0Y0g5MqgA9UkgdbIH7Vw6XbSN4ucwrrBCz9GTa0tohwnVoHbsuUFT2pa3lHttsAnHMkpZ5XkMFo3GzBXmoSX9zhjNtvCKyq1TifX8iM9_HD8AmXeIiw)
+
+Let’s say Alice uses her phone to comment on Janet’s tweet.
+
+1. Alice’s phone talks to Twitter’s computers and says “Hey! I’m Alice, here’s my comment on post 3526.”
+2. Twitter’s computers say “Got it, thanks!”
+3. Later, when Mia’s phone goes to look at her tweet, it asks Twitter’s computers “Hey, I’d like to look at post 3526.”
+4. Twitter’s computers say “Okay! Here’s the text and here are all the comments, including this one from Alice!”
+
+[Webmentions](https://indieweb.org/Webmention-developer#Protocol_Summary) works the same way, except its across _all_ websites, not just Twitter’s. So it needs to take one additional step. Let’s assume again that Alice is using her phone to send a webmention:
+
+[![Diagram of what's shown above](https://mermaid.ink/img/pako:eNp1kkFvwjAMhf-Km8sOA3bvgWnSDtskTuywSb2ExKVhTdwl7lCF-O9z6YqAQU-R7b73_Mk7ZciiylXC7xaDwWen11H7IoB8T7UzeJegqSjgdD6_f9MBWQpbXCXHmMMLdhOwBB21oI3Bhvuex8COQnocZC7-EqHpmXIOn5gyWGKw4BiY5Bl_MMLHjRhj-8-_wti3fQeGfO8NJcWja0OJQUuu7Xa26WszmXroZhX7etAf5a4Ee690-ErZMLdw-pjiNg2jA7xCQoTB4yaEyzXWJDlDdwrwsMiZzGlW-BdAOB5xSEooI_kBX3Y9RS9zstY50ME4Ewg4kk2gI_Y0WWorYiYvymqiPEavnZVL2vVOhZIBj4XK5Wmx1G3NhSrCXkZ1y7TsglE5xxYnqm2s5vHwVF7qOkkVrWOKi-E6D0e6_wUnmuPs?type=png)](https://mermaid.live/edit#pako:eNp1kkFvwjAMhf-Km8sOA3bvgWnSDtskTuywSb2ExKVhTdwl7lCF-O9z6YqAQU-R7b73_Mk7ZciiylXC7xaDwWen11H7IoB8T7UzeJegqSjgdD6_f9MBWQpbXCXHmMMLdhOwBB21oI3Bhvuex8COQnocZC7-EqHpmXIOn5gyWGKw4BiY5Bl_MMLHjRhj-8-_wti3fQeGfO8NJcWja0OJQUuu7Xa26WszmXroZhX7etAf5a4Ee690-ErZMLdw-pjiNg2jA7xCQoTB4yaEyzXWJDlDdwrwsMiZzGlW-BdAOB5xSEooI_kBX3Y9RS9zstY50ME4Ewg4kk2gI_Y0WWorYiYvymqiPEavnZVL2vVOhZIBj4XK5Wmx1G3NhSrCXkZ1y7TsglE5xxYnqm2s5vHwVF7qOkkVrWOKi-E6D0e6_wUnmuPs)
+
+1. Alice’s phone goes to Janet’s website and says “We have a comment! Does your site support webmentions?”
+2. Janet’s website replies “Yes! Send them to computer X”
+3. Alice’s phone then goes to Computer X and says “Here is my comment for Janet’s post at url `www.janet.com/y.html`”.
+4. Computer X says “Got it, thanks!”
+5. Mia goes to Janet’s website and asks “Can you render `www.janet.com/y.html`?”
+6. Janet’s website quickly goes to Computer X: “Hey, got any webmentions for me?”
+7. Computer X: “Yup! Alice wrote this.”
+8. Janet’s website then responds to Mia’s phone: “Yup! Here’s `www.janet.com/y.html`! I’ve rendered the comments at the bottom.”
 
 If you have a static site, you probably _don’t_ have a computer X that’s always available to store messages from random people. This site currently runs on Github Pages which just serves files, it doesn’t accept new messages. So if you’re running a static site like I am, you need a slightly different approach.
 
@@ -36,7 +56,7 @@ That’s all you need to do to _receive_ webmentions. But how do you support peo
 
 ### 3. Create a comments section
 
-Aaron Parecki has a [great post](https://aaronparecki.com/2018/06/30/11/your-first-webmention) on sending your first webmention and making it render right. At the bottom of his post, you’ll notice a little form. It says “Have you written a [response](https://indieweb.org/responses) to this? Let me know the URL:” and then has a place for you to paste your comment. While I haven’t seen any tutorials on how to do this, it’s actually something webmention.io supports for you.
+Aaron Parecki has a [great post](https://aaronparecki.com/2018/06/30/11/your-first-webmention) on sending your first webmention and making it render right. At the bottom of his post, you’ll notice a little form. It says “Have you written a [response](https://indieweb.org/responses) to this? Let me know the URL:” and then has a place for you to paste your comment. While I haven’t seen any tutorials on how to do this, it’s actually something webmention.io supports for you! You can see my version at the bottom of this page.
 
 If your username for webmention.io is x.com, visit `https://webmention.io/x.com/webmention`. You’ll see a form nearly identical to what you want on your site. With some slight tweaking of the html, you can get something like this:
 
@@ -67,3 +87,6 @@ I’ve personally not chosen to do this yet. But there are a few tutorials onlin
   - [🌱 how to comment](/%F0%9F%8C%B1/2022/05/19/how-to-comment.html)
   - [[🌰 it’s not about writing, it’s about thinking]]
 - [Also posted on IndieNews](https://news.indieweb.org/en)
+
+1. Webmentions allow you to do everything from comment to like to bookmark, and more! We’ll talk strictly about commenting for now, but if you replace the word “comment” with “like” in this section, it’s all still true. [↩](#fnref:1)
+
