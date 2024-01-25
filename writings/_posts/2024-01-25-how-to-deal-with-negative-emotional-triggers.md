@@ -8,7 +8,7 @@ author: 100071
 
 It’s easy to stay calm when things are under control. But, sometimes, life happens. A deadline is moved up. Your train is canceled. Your luggage gets lost. Then, your heartbeat goes faster. You can feel the tension in your muscles. Your breathing accelerates. That’s it: You’re stressed.
 
-Psychologists often say that our freedom lies in the gap between stimulus and response (this quote is [often](https://www.viktorfrankl.org/quote_stimulus.html) misattributed to Viktor Frankl). Although you cannot control many of the external events that impact your life, that liminal space offers an opportunity to choose how you react to negative triggers and to regulate your emotions.
+Psychologists often say that our freedom lies in the gap between stimulus and response (this quote is [often](https://www.viktorfrankl.org/quote_stimulus.html) misattributed to Viktor Frankl). Although you cannot control many of the external events that impact your life, that [liminal space](https://nesslabs.com/liminal-creativity) offers an opportunity to choose how you react to negative triggers and to regulate your emotions.
 
 ![How to deal with your negative emotional triggers - 3 Steps by Ness Labs](https://nesslabs.com/wp-content/uploads/2024/01/negative-emotional-triggers-banner-1024x574.png)
 
@@ -20,7 +20,7 @@ Neuroscientist Antonio Damasio [explains](https://amzn.to/2GkMjrm) how the relat
 
 By becoming aware of these patterns, a skill called [interoceptive awareness](https://nesslabs.com/interoception), we can gain back control over the corresponding emotions.
 
-It’s easier than it sounds to get started. Here are the five main categories of negative emotions:
+Start by considering the five main categories of negative emotions:
 
 - **Anxiety:** worry, fear, nervosity, panic, etc.
 - **Anger:** irritation, frustration, rage, etc.
@@ -32,7 +32,7 @@ Try and find the closest word possible to describe how you feel. This is not abo
 
 ## 2. Analyze the emotional trigger
 
-While the trigger may seem obvious at first glance. Maybe someone was rude to you or canceled on you last minute. Still, it is crucial to take the time to go deeper and understand the underlying mechanics that connect the trigger to the negative emotion.
+The trigger may seem obvious at first glance. Maybe someone was rude to you or canceled on you last minute. Still, it is crucial to take the time to go deeper and understand the underlying mechanics that connect the trigger to the negative emotion.
 
 You need to approach this step from a place of [genuine curiosity](https://nesslabs.com/science-of-curiosity). Be honest with yourself. What are the things you feel you are not getting? What is the need that isn’t met?
 
@@ -67,11 +67,15 @@ Dr. Reynolds recommends choosing three unmet needs from this list. These unmet n
 
 For instance, let’s say that your client suddenly moved up a deadline without consulting with you. Your equation could look something like this:
 
+```
 trigger = lack of consistency + respect + feeling included
+```
 
 Or, if you’ve been suddenly asked to deliver a big presentation without much time to prepare, it could look like this:
 
+```
 trigger = lack of predictability + peacefulness + being in control
+```
 
 Think about a recent stressful experience, and see if you can come up with your equation for this specific event.
 
