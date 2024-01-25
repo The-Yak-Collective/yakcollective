@@ -81,13 +81,15 @@ Think about a recent stressful experience, and see if you can come up with your 
 
 ## 3. Shift your emotional state
 
-Now that you’ve recognised your emotional state and analyzed the trigger, you can actively shift your emotional state. Remember the gap between stimulus and response? This step is about _choosing_ to feel something different.
+Now that you’ve recognised your emotional state and analyzed the trigger, you can actively shift your emotional state by regulating your nervous system. Remember the gap between stimulus and response? The third step is about exploring this space with curiosity and self-compassion.
 
-Depending on where you are, you can use one of the following exercises to effectively change your mood:
+Depending on where you are, you can use one of the following exercises to effectively regulate your emotions:
 
 - **Walking meditation.** Find a quiet place with enough room to walk around — a place as small as 10 by 10 feet / 3 by 3 meters is enough — and start to walk slowly while letting go of the emotions attached to the negative trigger. Focus on the sensations of standing and the movements that keep your balance.
-- **Conscious breathing.** Breath to relax your body and clear your mind, developing a soft awareness of your breath as it moves in and out of your body. To replace the negative emotional trigger with something positive, it can be helpful to focus on one word which represents how you want to feel, and to keep breathing in and out while visualizing the word.
+- **Conscious breathing.** Breath to relax your body and clear your mind, developing a soft awareness of your breath as it moves in and out of your body. Let your breath direct the flow of your emotions and release the tension in your body.
 - **Gratitude practice:** Gratitude has [many benefits](https://nesslabs.com/gratitude), including a positive impact on relationships, work performance, and even physical health. Think about three things you’re grateful for and write them down in your notes or your journal.
+- **Stretching:** Clench and release your fists. Roll your head around. Allow for the full range of motion across various muscle groups. Gentle stretches will increases blood flow and circulation to your muscles and your brain, helping regulation your emotions.
+- **Doing nothing:** Sometimes, the best you can do is simply feel whatever needs to be felt. You can lay down, close your eyes, hug yourself — just listen to what your body needs to process those emotions.
 
 As always, there’s no quick hack that applies to everyone. Just [like a scientist](https://nesslabs.com/personal-experiments), try different techniques and see which ones work best for you.
 
