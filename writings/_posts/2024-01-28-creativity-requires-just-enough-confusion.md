@@ -45,7 +45,7 @@ The problem is that they can be very oblique. “Courage!” is hard to parse in
 
 One way I’ve started to experiment with this is by creating a prompt for Bard or ChatGPT like the following:
 
-Pretend you are Brian Eno and need to create a new Oblique Strategy deck of cards. The people that need to use the cards aren’t able to understand the obliqueness as much and need something that is more appropriate for their domain. You will create at least 20 provocations that would cause them to reconsider their current framing of a problem or solution. I’d like you to create the custom Oblique Strategies deck for cross-functional teams of product managers, engineers, and designers building a consumer video calling service.
+> Pretend you are Brian Eno and need to create a new Oblique Strategy deck of cards. The people that need to use the cards aren’t able to understand the obliqueness as much and need something that is more appropriate for their domain. You will create at least 20 provocations that would cause them to reconsider their current framing of a problem or solution. I’d like you to create the custom Oblique Strategies deck for cross-functional teams of product managers, engineers, and designers building a consumer video calling service.
 
 The first five the service offers are ([check out the full list of 20 here](https://chat.openai.com/share/af1f399b-4287-464c-b8c9-f9d5bd13cf4e)):
 
