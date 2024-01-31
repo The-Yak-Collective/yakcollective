@@ -31,9 +31,11 @@ if [[ -f Newsletter.md ]]; then
 	if [[ $(grep -c '<!-- DO NOT REMOVE THIS LINE! DO NOT EDIT BELOW THIS LINE! -->' Newsletter.md) -eq 1 ]] \
 	&& [[ $(grep -c '<!-- ----------------------------------------------------- -->' Newsletter.md) -eq 2 ]]; then
 		sed '/<!-- DO NOT REMOVE THIS LINE! DO NOT EDIT BELOW THIS LINE! -->/,$d' Newsletter.md | head -n -1 > .automation/var/cache/templates/Newsletter.md
-		echo '<!-- ----------------------------------------------------- -->' >> .automation/var/cache/templates/Newsletter.md
-		echo '<!-- DO NOT REMOVE THIS LINE! DO NOT EDIT BELOW THIS LINE! -->' >> .automation/var/cache/templates/Newsletter.md
-		echo '<!-- ----------------------------------------------------- -->' >> .automation/var/cache/templates/Newsletter.md
+		cat >> .automation/var/cache/templates/Newsletter.md <<- EOF
+		<!-- ----------------------------------------------------- -->
+		<!-- DO NOT REMOVE THIS LINE! DO NOT EDIT BELOW THIS LINE! -->
+		<!-- ----------------------------------------------------- -->
+		EOF
 	fi
 fi
 
@@ -41,9 +43,11 @@ if [[ -f Writings.md ]]; then
 	if [[ $(grep -c '<!-- DO NOT REMOVE THIS LINE! DO NOT EDIT BELOW THIS LINE! -->' Writings.md) -eq 1 ]] \
 	&& [[ $(grep -c '<!-- ----------------------------------------------------- -->' Writings.md) -eq 2 ]]; then
 		sed '/<!-- DO NOT REMOVE THIS LINE! DO NOT EDIT BELOW THIS LINE! -->/,$d' Writings.md | head -n -1 > .automation/var/cache/templates/Writings.md
-		echo '<!-- ----------------------------------------------------- -->' >> .automation/var/cache/templates/Writings.md
-		echo '<!-- DO NOT REMOVE THIS LINE! DO NOT EDIT BELOW THIS LINE! -->' >> .automation/var/cache/templates/Writings.md
-		echo '<!-- ----------------------------------------------------- -->' >> .automation/var/cache/templates/Writings.md
+		cat >> .automation/var/cache/templates/Writings.md <<- EOF
+		<!-- ----------------------------------------------------- -->
+		<!-- DO NOT REMOVE THIS LINE! DO NOT EDIT BELOW THIS LINE! -->
+		<!-- ----------------------------------------------------- -->
+		EOF
 	fi
 fi
 
