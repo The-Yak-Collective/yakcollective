@@ -1,5 +1,4 @@
 # Yak Collective Work Groups
-
 Yak Collective work groups maintain the environment necessary for [study groups](Study%20Groups.md) and [projects](Projects.md) to function. This is everything from building [Discord](https://discord.com/) bots and [this website](https://github.com/The-Yak-Collective/yakcollective) to providing proofing, layout, and artwork.
 
 <!-- ----------------------------------------------------- -->

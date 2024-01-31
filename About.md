@@ -1,6 +1,4 @@
 # About the Yak Collective
-{% include widget-toc.md %}
-
 ## The What
 The Yak Collective is an online space for collaborative tinkering. We do this by creatively curating a slow-lane, long-term temporal orientation. If you want to muddle away slowly but steadily at a 10-year goal, this is a place for you. It is a space where you can work with others on gardening your indie or weekends-and-evenings life in collaboration with others who share some of your priorities/interests.
 
@@ -17,11 +15,4 @@ The Yak Collective maintains a constantly evolving, cobbled-together pragmatic s
 The main thing it takes to be a yak is a willingness to simply show up reliably, week after week. If you reliably drop by one of our regular weekly chats for a month or so, while being open to both joining existing activities and starting your own, you’ll like it here. If you are expecting to jump in, propose your pet project and get a dozen excited recruits on Day 1, it’s unlikely to happen. But your chances increase if you bring some collaborators with you. A simpler approch is to just show up regularly, and start working slowly but steadily on something. Working in public in our spaces on something interesting means people will likely join you. **You don’t so much join the Yak Collective as make it a habit. [Come join us.](Join.md)**
 
 ## Some History
-
 The Yak Collective didn’t start out in its current shape. In early 2020, it began as a network for indie consultants. The initial impetus came from wanting to do something productive together in response to covid, and that morphed into the idea of seeking consulting gigs together. That original mission didn’t quite work out as planned, but several other surprising things we *didn’t* plan on *did* work out, and the Yak Collective began evolving towards its current shape and form. We’re sure it will continue evolving and this page will look different this time next year. We like to think we now have a better idea of what we’re doing than when we started. 
-
-<details>
-    <summary>Website Colophon</summary>
-    <p>Site version {{ site.version }}.</p>
-    <p>Built by <a href="/members/100007.html">Nathan Acks</a> using <a href="https://fontawesome.com/">Font Awesome</a>, <a href="https://jekyllrb.com/">Jekyll</a>, <a href="https://github.com/">GitHub</a>, <a href="https://ifttt.com/">IFTTT</a>, and <a href="https://www.netlify.com/">Netlify</a>. Additional contributions by <a href="/members/100020.html">Maier Fenster</a> and <a href="/members/100063.html">Tom Critchlow</a>.</p>
-</details>

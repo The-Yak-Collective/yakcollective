@@ -23,7 +23,7 @@ Each main ingredient was in a distinct pile; foie gras, unagi, avocado, and stur
   layout="left"
   image=page.hero_image
   alt="Wholeness in a Timeless Activity"
-  caption="Illustration by [Justice](/members/100048.html)."
+  caption="Illustration by [Justice](https://www.yakcollective.org/members/100048/)."
 %}
 
 Despite knowing no one was watching, Koichi nodded in approval. He was gazing at the final dish when colorful boxes popped into his vision, surrounding the sushi.[^1] They showed the source of several ingredients; the farm where the avocado was picked, the facility where the sturgeon was bred. Koichi angrily blinked thrice and the advertisements disappeared. He was annoyed — his new AR lenses meant everything was a QR code now. Let’s just get it over with, he thought.  

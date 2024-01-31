@@ -163,7 +163,7 @@ for YEAR in $(seq $MAX_YEAR -1 $MIN_YEAR); do
 
 				FIRST_MONTH="no"
 
-				sqlite3 $DB "SELECT '**\`' || STRFTIME('%d', items.published) || ' month' || STRFTIME('%m', items.published) || ':\`** [name' || feeds.key || '](/members/' || feeds.key || '.html), *[' || REPLACE(REPLACE(items.title, '[', '\['), ']', '\]') || '](' || REPLACE(REPLACE(items.url, '(', '%28'), ')', '%29') || ')*  ' FROM items JOIN feeds ON feeds.id = items.feed_id WHERE STRFTIME('%Y', items.published) = '$YEAR' AND STRFTIME('%m', items.published) = '$MONTH' ORDER BY items.published DESC;" | sed 's/month01/Jan/;s/month02/Feb/;s/month03/Mar/;s/month04/Apr/;s/month05/May/;s/month06/Jun/;s/month07/Jul/;s/month08/Aug/;s/month09/Sep/;s/month10/Oct/;s/month11/Nov/;s/month12/Dec/' >> Writings.md
+				sqlite3 $DB "SELECT '**\`' || STRFTIME('%d', items.published) || ' month' || STRFTIME('%m', items.published) || ':\`** [name' || feeds.key || '](/members/' || feeds.key || '/), *[' || REPLACE(REPLACE(items.title, '[', '\['), ']', '\]') || '](' || REPLACE(REPLACE(items.url, '(', '%28'), ')', '%29') || ')*  ' FROM items JOIN feeds ON feeds.id = items.feed_id WHERE STRFTIME('%Y', items.published) = '$YEAR' AND STRFTIME('%m', items.published) = '$MONTH' ORDER BY items.published DESC;" | sed 's/month01/Jan/;s/month02/Feb/;s/month03/Mar/;s/month04/Apr/;s/month05/May/;s/month06/Jun/;s/month07/Jul/;s/month08/Aug/;s/month09/Sep/;s/month10/Oct/;s/month11/Nov/;s/month12/Dec/' >> Writings.md
 			fi
 		done
 	fi

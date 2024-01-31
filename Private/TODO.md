@@ -1,5 +1,4 @@
 # Website Foam Migration Tasks
-
 - [x] Remove `_post` subdirectories (requires modifications to the Pluto RSS feed pull scripts)
 - [x] Finish `update-pluto-lists.sh` (generate lists for `Newsletter.md` and `Writings.md` from Planet Pluto databases)
 - [x] Add RSS feed creation for "writings" to `update-list.sh`

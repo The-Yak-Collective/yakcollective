@@ -19,7 +19,7 @@ Vijayan looked down in pain at his [programmable forearm tattoo](https://roamres
   layout="left"
   image=page.hero_image
   alt="Out of the Loop"
-  caption="Illustration by [Justice](/members/100048.html)."
+  caption="Illustration by [Justice](https://www.yakcollective.org/members/100048/)."
 %}
 
 It all goes back a few months. After five years of not asking anyone out, he finally asked out the barista at the local hipster cafe. On their first date, he quickly realized that they had nothing in common, but he liked her Roam microbot tattoo — a neat graph of interconnected lines, almost too neat for a natural note-taking system.

@@ -19,7 +19,7 @@ Sometimes I just marvel at the world we live in. People always bitch about the g
   layout="right"
   image=page.hero_image
   alt="Agglomerizing the Aesthetic"
-  caption="Illustration by [Justice](/members/100048.html)."
+  caption="Illustration by [Justice](https://www.yakcollective.org/members/100048/)."
 %}
 
 “Hi, this is JoAnne, your Medium-Length Men’s Hair consultant. First, can I get your hair profile?” I turned my head from side to side so that the camera on my computer could capture all the angles of my head. “Thank you. While that’s processing, what can I help you with today?”

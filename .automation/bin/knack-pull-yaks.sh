@@ -128,15 +128,15 @@ mkdir -p "$(dirname "$MEMBER_MAP")"
 
 cat > "$MEMBER_MAP" << EOF
 # Knack Member ID Map
-| Yak Collective Member          | Knack ID |
-|:------------------------------ | --------:|
+| Yak Collective Member          | Knack ID | URL                                             |
+|:------------------------------ | --------:|:----------------------------------------------- |
 EOF
 
 while read -r RECORD; do
 	MEMBER_ID="$(echo "$RECORD" | cut -f 1)"
 	NAME="$(echo "$RECORD" | cut -s -f 2 | sed -e 's#|#/#g')"
 
-	printf "| %s | %8.8s |\n" "$(align::left 30 "$NAME")" "$MEMBER_ID" >> "$MEMBER_MAP"
+	printf "| %s | %8.8s | <https://www.yakcollective.org/members/%s/> |\n" "$(align::left 30 "$NAME")" "$MEMBER_ID" "$MEMBER_ID" >> "$MEMBER_MAP"
 done < <(jq -r '.records[] | [.field_101_raw, .field_97_raw?] | @tsv' .automation/var/cache/build/_data/knack_yaks.json | sed -e 's/^\s*//;s/\s*$//;s/([^()]\+)//g;s/@.*//;s/ \+/ /g')
 
 echo "" >> "$MEMBER_MAP"
