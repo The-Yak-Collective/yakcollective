@@ -23,6 +23,12 @@ fi
 #
 #     https://stackoverflow.com/questions/45125826/delete-everything-after-a-certain-line-in-bash/69868184#69868184
 #
+# FIXME - The test for the multi-line divider isn't very robust. We
+# should use a multiline regex instead to determine if this string
+# exists (and ideally to remove everything below it). One big
+# restriction is that we CANNOT guarantee the presence of GNU grep or
+# pcregrep... This will probably need to be done with awk or perl.
+#
 echo "[$(date)] Updating templates..."
 
 mkdir -p .automation/var/cache/templates
