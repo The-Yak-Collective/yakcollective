@@ -54,13 +54,15 @@ In addition to the four main winners, and thanks to Andrew’s generosity, we al
 
 **Grant winner: Yaa Addae from Ghana –** “Who is treated as worthy of care and in what ways does design, from architecture to public transport routes, reinforce this? ‘Designing Care Futures’ is a workbook for imagining both new and strengthening pre-existing infrastructures of care. A mixture of essays, case studies, and exercises, this is a key resource for designers and people invested in integrating a care ethic into their decision-making.”
 
-**Grant winner: Natalia Talkowska from the UK –** “The essence of my project is the creation of a unique line of “How are You?” cards, each intricately designed to foster emotional well-being and deeper personal connections. Unlike typical greeting cards, these are specifically crafted to encourage genuine communication about one’s mental state in a thoughtful, engaging manner. The long-term objective is to establish a sustainable model where the sales of the cards support ongoing production, distribution, and charitable contributions. The project will adapt and evolve based on feedback, potentially expanding into digital versions or interactive online platforms.”
+**Grant winner: Natalia Talkowska from the UK –** “The essence of my project is the creation of a unique line of ‘How are You?’ cards, each intricately designed to foster emotional well-being and deeper personal connections. Unlike typical greeting cards, these are specifically crafted to encourage genuine communication about one’s mental state in a thoughtful, engaging manner. The long-term objective is to establish a sustainable model where the sales of the cards support ongoing production, distribution, and charitable contributions. The project will adapt and evolve based on feedback, potentially expanding into digital versions or interactive online platforms.”
 
 **Grant winner: Jonathan Fisher from the USA –** “Studies have found that people who tell highly coherent stories (ones with foreshadowing and without extraneous details) tend to be happier two years later. Participation in storytelling is good for everyone, not just the ones that make a living out of it. Using an LLM to map the layout of time-dependent stories at scale. I will use an LLM to map the layout of time-dependent stories at scale. exploring how the story structures across a number of films relate, studying the similarity in the rhythm of the story beats, understanding the trends between them and assessing how the estimates compare to actual film, and creating a paper.”
 
 ## Full list of finalists
 
-I was blown away by the quality of the applications, and wish I could have supported more experiments. Everyone who applied was considered a finalist, and my shortlist was actually a very long list.
+There were 100+ applications from 30+ countries. I was blown away by the quality of the applications, and wish I could have supported more experiments. Everyone who applied was considered a finalist, and my shortlist was actually a very long list.
+
+![Countries of applicants for Ness Labs Experimental Grants 2024](https://nesslabs.com/wp-content/uploads/2024/02/countries-experimental-grants-2024-1024x523.png)
 
 To support their vision, encourage them to keep on exploring their curiosity, and help them connect with fellow curious minds, all finalists received a one-year pass to the Ness Labs private community.
 
