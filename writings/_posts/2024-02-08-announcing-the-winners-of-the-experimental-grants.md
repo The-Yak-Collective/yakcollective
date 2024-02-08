@@ -73,7 +73,7 @@ I will let you be the judge of the diversity, creativity, and ingenuity of these
 - Building an app where people can post their works in progress. – [@mathurahravi](https://twitter.com/mathurahravi) (United States)
 - Sharing essays and stories in handwritten form technology to bring people into the story. – [@nicholasgoodey](https://twitter.com/nicholasgoodey) (Germany)
 - Making a movie about practicing self mastery and cultivating healthy human relations using AI tech. – [@epiphaniesmovie](https://twitter.com/epiphaniesmovie) (Mexico)
-- Starting a YouTube channel to empower and encourage people to take their power in many areas of life. – [@satyalights](https://www.instagram.com/satyalights/?hl=en) (USA)
+- Starting a YouTube channel to empower and encourage people to take their power in many areas of life. – [@satyalights](https://www.instagram.com/satyalights/?hl=en) (United States)
 - Launching a digital media platform documenting African struggles, resilience and triumphs. – [@gideonruhara](https://twitter.com/gideonruhara?lang=en-GB) (Kenya)
 - Conducting comparative research on Islamic architecture to build a strong evidence base about the wide-ranging ways architecture impacts our well-being. – [@mimbar360\_](https://twitter.com/mimbar360_) (London)
 - Exploring Taenaris butterfly chemical defenses and presenting the results at a major scientific conference. – [@belkissa](http://youtube.com/@belkissa) (United States)
@@ -94,8 +94,7 @@ I will let you be the judge of the diversity, creativity, and ingenuity of these
 - Building a community for skilled amateurs to connect and find projects. – [@kempy487](https://www.instagram.com/kempy487/) (United Kingdom)
 - Launching a podcast about the body/mind connection and embodied healing arts. – [@maelyslepeutrec](https://www.instagram.com/maelyslepeutrec) (France)
 - Creating a dynamic media platform fostering cross-disciplinary discussions among emerging leaders to address cultural, technological, ethical, and spiritual challenges. – [@christinasatory](https://twitter.com/christinasatory?lang=en) (United States)
-- “Offering crafting kits as hobby that doubles as a tool to feel more centered while relaxing.
--  – [@katyfitz222](https://www.instagram.com/katyfitz222/) (Netherlands)”
+- “Offering crafting kits as hobby that doubles as a tool to feel more centered while relaxing. – [@katyfitz222](https://www.instagram.com/katyfitz222/) (The Netherlands)
 - Translating cutting-edge science into easy tips for native English speakers who wish to achieve fluency in French. – [@céline-guerreiro](https://www.linkedin.com/in/c%C3%A9line-guerreiro/) (France)
 - Making quality videos to share my love of reading. – [@DebbieDoesBooks](https://instagram.com/DebbieDoesBooks) (United States)
 - Connecting an indigenous ‘white’ elder with indigenous Aboriginal Australian elders in a filmed podcast / cultural documentary. – [@tim\_adalin](https://twitter.com/tim_adalin) (Australia)
@@ -124,7 +123,7 @@ I will let you be the judge of the diversity, creativity, and ingenuity of these
 - Maintaining a safe place for Ukrainian refugees where they could find friends, books and their native language. – [@milightning](https://twitter.com/Milightning) (Ukraine)
 - Developing a captivating story concept for a sci-fi epic film and release a teaser using advanced AI tools and engines. – [@nuarnoir](https://www.instagram.com/nuarnoir/) (Germany)
 - Creating a visual story telling platform for journalists, artists, influencers and people who enjoy documenting life. – [@dm3i](https://www.instagram.com/dm3i/) (Germany)
-- Producting a docuseries exploring the history and meaning of hair across time, geographies and cultures. – [@dianacfmnunes](https://www.linkedin.com/in/dianacfmnunes/) (Netherlands )
+- Producting a docuseries exploring the history and meaning of hair across time, geographies and cultures. – [@dianacfmnunes](https://www.linkedin.com/in/dianacfmnunes/) (Netherlands)
 - Exploring how the salience effect shapes financial decisions across the different states of the economy. – [@Busra\_Eroglu1](https://twitter.com/Busra_Eroglu1) (Germany)
 - Launching a sustainable fashion blog that focuses on conscious consumerism with an accompanying ebook. – [@hmodamensch](https://twitter.com/modamensch) (United States)
 - Kickstarting a project blending neuroscience, psychology, and spirituality in newsletters and a blog. – [@SpiritualSacredSpace](https://www.instagram.com/SpiritualSacredSpace) (United Kingdom)
