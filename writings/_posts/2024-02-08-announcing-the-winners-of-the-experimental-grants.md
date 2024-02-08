@@ -30,7 +30,7 @@ First, we have the four main winners, who will each receive $850 to bring their 
 
 **Why:** I have experienced firsthand the power of psychedelics, which have helped me overcome a lifelong struggle with depression and alcohol abuse. I’m excited to support a project that will hopefully increase awareness of the benefits of psilocybin mushrooms.
 
-_Grant Winner: Citra Cas (Indonesia)_
+### _Grant Winner: Citra Cas (Indonesia)_
 
 “I saw so many pets having to endure pain for years because the current prosthetic solutions, even the 3D printed ones, are too expensive. They are expensive for pet owners, even more so for those which are living in animal shelters. 3D printed materials offer wider and cheaper alternatives, allowing for faster design iterations to finetune the mechanics and design of the model. It unlocks physical properties that conventional materials couldn’t achieve, and I’m experimenting with that.
 
@@ -38,19 +38,19 @@ I made the preliminary 3D models of the designs, and I’m currently in the phas
 
 **Why:** I love animals and I had no idea this was a problem. I like that this is a clever use of 3D technology. More affordable 3D printed prosthetics for pets who need them sounds like a great product to help bring to the world.
 
-_Grant Winner: Chloe Loose, with a little help from Dad (United Kingdom)_
+### _Grant Winner: Chloe Loose, with a little help from Dad (United Kingdom)_
 
 “Open source air purification for me and other kids. With my dad, I will be taking my existing paint box and adding sensors in places to measure the particles at different points inside the box. We will change the box from having just a fan to having a filter box that I can remove to change filters and add more fans to the inside. I will add different filters and collect data from the sensors to see how the different filters change the air. One of the sensors that we will make will be hand held so I can measure the effect outside the box as well. I then want to make a bigger version of my filter to see if it can filter the air in an entire room. I will use the money to buy parts to make the sensors and different filters and fans. All project files will be available for kids on GitHub.” — Chloe is 8 years old so she doesn’t have any social media.
 
 **Why:** Air quality is an issue I recently started paying attention to [thanks to my friend Steph Smith](https://twitter.com/stephsmithio/status/1740525376315838618). I was already intrigued but then I clicked on the video pitch Chloe included, where she gives a proper presentation with a slides deck, and realized that she was probably the youngest applicant! I love how curious and creative she is, and I’m delighted to support this project. Also, kudos to her dad for encouraging her to apply.
 
-_Grant Winner: Monica Deu (Spain)_
+### _Grant Winner: Monica Deu (Spain)_
 
 “I will create a digital meta-space to share resources, tools and reflections for navigating the process of grieving. I would also like to create a community around the platform for those who are more alone or accompany each other, sharing moments, feelings, through a platform like Discord or Slack. Finally, I am starting to write a book about everything I have been writing and reading about grief, learning about how my brain was processing the pain. For this book, I am interviewing people who are grieving or have grieved and also experts in the field, and I would like to be able to use part of the money to pay them something symbolic for their contribution. My idea is to create a book that collects all the interviews as well as some first chapters about my own grief process and what science, arts and other cultures know about what is involved in living through grief.”
 
 **Why:** I have lost a few people close to my heart the past few years, and found the process of grieving both difficult and beautiful. I’m curious to see what a place where people can explore grief in a more generative way may look like.
 
-In addition to the four main winners, and thanks to Andrew’s generosity, we also have 3 additional winners, who will receive a smaller grant of $200:
+In addition to the four main winners, and thanks to Andrew’s generosity, we also have 3 additional winners, who will receive a smaller of $200 each:
 
 **Grant winner: Yaa Addae from Ghana –** “Who is treated as worthy of care and in what ways does design, from architecture to public transport routes, reinforce this? ‘Designing Care Futures’ is a workbook for imagining both new and strengthening pre-existing infrastructures of care. A mixture of essays, case studies, and exercises, this is a key resource for designers and people invested in integrating a care ethic into their decision-making.”
 
