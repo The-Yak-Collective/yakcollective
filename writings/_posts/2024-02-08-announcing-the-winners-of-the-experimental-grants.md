@@ -10,7 +10,7 @@ _Posted on February 8th, 2024_
 
 A month ago, I [announced](https://twitter.com/neuranne/status/1742602163954593808) that I would celebrate my 34th birthday by giving away $3400 to help four people become scientists of their own life. I encouraged people to [submit](https://nesslabs.com/grants) proposals for a personal experiment they wanted to run, where $850 would help make it happen.
 
-The format could be a collection of essays, a podcast miniseries, a research paper, a simple web app, a series of illustrations or video, an in-person conference… To maximize positive impact, I asked that there would ideally be some form of artifact people can consume at scale.
+To maximize positive impact, I asked that there would ideally be some form of artifact people can consume at scale.
 
 Then, my friend [Andrew Nalband](https://twitter.com/nalband) said he’d add $600 to the grant to celebrate his own 42th birthday, which meant we could have three additional smaller grants to give away.
 
@@ -48,15 +48,15 @@ I made the preliminary 3D models of the designs, and I’m currently in the phas
 
 “I will create a digital meta-space to share resources, tools and reflections for navigating the process of grieving. I would also like to create a community around the platform for those who are more alone or accompany each other, sharing moments, feelings, through a platform like Discord or Slack. Finally, I am starting to write a book about everything I have been writing and reading about grief, learning about how my brain was processing the pain. For this book, I am interviewing people who are grieving or have grieved and also experts in the field, and I would like to be able to use part of the money to pay them something symbolic for their contribution. My idea is to create a book that collects all the interviews as well as some first chapters about my own grief process and what science, arts and other cultures know about what is involved in living through grief.”
 
-**Why:** I have lost a few people close to my heart the past few years, and found the process of grieving both difficult and beautiful. I’m curious to see what a place where people can explore grief in a more generative way may look like.
+**Why:** I have lost a few people close to my heart the past few years, and found the process of grieving both difficult and beautiful. I’m curious to see what a place where people can explore grief in a more generative way might look like.
 
-In addition to the four main winners, and thanks to Andrew’s generosity, we also have 3 additional winners, who will receive a smaller of $200 each:
+In addition to the four main winners, and thanks to Andrew’s generosity, we also have three additional winners, who will receive a $200 grant each:
 
 **Grant winner: Yaa Addae from Ghana –** “Who is treated as worthy of care and in what ways does design, from architecture to public transport routes, reinforce this? ‘Designing Care Futures’ is a workbook for imagining both new and strengthening pre-existing infrastructures of care. A mixture of essays, case studies, and exercises, this is a key resource for designers and people invested in integrating a care ethic into their decision-making.”
 
 **Grant winner: Natalia Talkowska from the UK –** “The essence of my project is the creation of a unique line of ‘How are You?’ cards, each intricately designed to foster emotional well-being and deeper personal connections. Unlike typical greeting cards, these are specifically crafted to encourage genuine communication about one’s mental state in a thoughtful, engaging manner. The long-term objective is to establish a sustainable model where the sales of the cards support ongoing production, distribution, and charitable contributions. The project will adapt and evolve based on feedback, potentially expanding into digital versions or interactive online platforms.”
 
-**Grant winner: Jonathan Fisher from the USA –** “Studies have found that people who tell highly coherent stories (ones with foreshadowing and without extraneous details) tend to be happier two years later. Participation in storytelling is good for everyone, not just the ones that make a living out of it. Using an LLM to map the layout of time-dependent stories at scale. I will use an LLM to map the layout of time-dependent stories at scale. exploring how the story structures across a number of films relate, studying the similarity in the rhythm of the story beats, understanding the trends between them and assessing how the estimates compare to actual film, and creating a paper.”
+**Grant winner: Jonathan Fisher from the USA –** “Studies have found that people who tell highly coherent stories (ones with foreshadowing and without extraneous details) tend to be happier two years later. Participation in storytelling is good for everyone, not just the ones that make a living out of it. I will use an LLM to map the layout of time-dependent stories at scale, exploring how the story structures across a number of films relate, studying the similarity in the rhythm of the story beats, understanding the trends between them and assessing how the estimates compare to actual film, and creating a paper.”
 
 ## Full list of finalists
 
@@ -66,7 +66,7 @@ There were 100+ applications from 30+ countries. I was blown away by the quality
 
 To support their vision, encourage them to keep on exploring their curiosity, and help them connect with fellow curious minds, all finalists received a one-year pass to the Ness Labs private community.
 
-In addition, I’m sharing the full list of experiments below so if you see something you like and have some disposable income you’d like to use to help bring one to life, you can contact the finalists directly via their social media profile.
+In addition, I’m sharing the full list of experiments below so if you see something you like and have some disposable income you want to use to help bring an idea to life, you can contact the finalists directly via their social media profile.
 
 I will let you be the judge of the diversity, creativity, and ingenuity of these applications:
 
