@@ -16,7 +16,7 @@ However, many of us struggle to turn that knowledge into action. This is because
 
 ## Why we fear talking to the camera
 
-Our instinctive fear of being judged has served for millions of years as a way to maintain social cohesiveness. In a very real way, being rejected by the group used to mean death. 
+Our instinctive fear of being judged has served for millennia as a way to maintain social cohesiveness. In a very real way, being rejected by the group used to mean death. 
 
 When you say something to a friend, to colleagues, or to a crowd, whether it’s online or in-person, your brain automatically analyzes the cues communicated through their facial expressions.
 
