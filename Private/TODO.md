@@ -7,6 +7,7 @@
 - [x] Change template "not below" line to include `----` borders
 - [ ] Foam-ify all `.md` files
 	- This includes moving to files with spaces in their names!
+	- **Currently on:** 
 - [x] Move away from using `[[custom|naming]]` for better GitHub compatability
 - [ ] Make sure that all all pages are linked to each other
 - [ ] Auto-generate content list page content, similar to how `Newsletter.md` and `Writings.md` is handled (should be able to order by date and have a concept of active/inactive; maybe as a git commit hook for some of these?)
