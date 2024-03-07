@@ -60,11 +60,11 @@ Here is how I use the writing habit loop to write a new article every week:
 3. **Choose an idea.** Go through your list of ideas and pick a topic that feels alive and aligned with your current aspirations.
 4. **Create an outline.** Start by writing a few bullet points based on your initial thoughts about the topic. Nobody will see this, so, again, kill your inner critic and just let your imagination flow. Ideally, you want to have 3-5 bullet points touching on different aspects of the idea. These bullet points could be as simple as: What is it about? What’s good about it? What could be better?
 5. **(optional) Conduct extra research.** Depending on the topic, you may be able to just write about the topic without any further help, but often it’s useful to look it up. This is great for your readers, since you can link to further resources. But, importantly, it’s great for you: you’ll get to learn new things in the process of writing.
-6. **Re-read it once.** Yes, only once. I usually re-read my articles in preview mode on my website, because seeing it with a different font and format makes it look brand new to my eyes. Just give it one good, focused re-reading. Fix any typos and re-phrase anything that doesn’t sound right. But do not spend too much time trying to make it perfect. 
+6. **Re-read it once.** Yes, only once. I usually re-read my articles in preview mode on my website, because seeing it with a different font and format makes it look brand new to my eyes. Just give it one good, focused re-reading, but do not spend too much time trying to make it perfect. 
 7. **Hit publish.** Don’t look back. Bring that baby into the world.
 8. **Share it.** Try to get as much feedback as you can. Don’t be shy. Share your article with friends, on social media, or through your mailing list. Take notes whenever you receive feedback, and make sure to implement what makes sense in your subsequent articles.
 
-That’s it! You have now built a writing habit loop. Keep on showing up and improving through each [cycle of experimentation](https://nesslabs.com/growth-loops). Keep on exploring ideas that feel alive and align with your aspirations.
+That’s it! You have now turned writing into a habit loop. Keep on showing up and improving through each [cycle of experimentation](https://nesslabs.com/growth-loops). Keep on exploring ideas that feel alive and align with your aspirations.
 
 When you look back in a few months or a few year, you’ll be amazed to see how much your thinking has evolved thanks to your writing habit. And maybe you’ll even make a few friends along the way.
 
