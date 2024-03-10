@@ -110,36 +110,32 @@ jq -n '{records: [inputs.records] | add}' $TEMP_DIR/knack-yaks-* > .automation/v
 	done <<< "$(jq -r '.records[] | [.field_101_raw, .field_44_raw.url?] | @tsv' _data/knack_yaks.json | sed -e 's/^\s*//;s/\s*$//')"
 )
 
-# Update Knack member mapping convenience file.
+# Update members page.
 #
-# FIXME: Right now we hard-cap the length of a name at 30 characters and
-# the length of a Knack ID to 8 characters. It would be better to
-# dynamically determine the maximum lengths for these values first (with
-# a floor of 21 and 8, respectively), and then dynamically resize the
-# table...
-#
-echo "[$(date)] Updating member mapping convenience file..."
+echo "[$(date)] Updating members page..."
 
-source .automation/lib/libalign.sh # Shell "library" for aligning UTF8 strings; doesn't truncate!
+mkdir -p .automation/var/cache/templates
 
-MEMBER_MAP="./Private/Knack Member ID Map.md"
+if [[ -f Members.md ]]; then
+	if [[ $(grep -c '<!-- DO NOT REMOVE THIS LINE! DO NOT EDIT BELOW THIS LINE! -->' Members.md) -eq 1 ]] \
+	&& [[ $(grep -c '<!-- ----------------------------------------------------- -->' Members.md) -eq 2 ]]; then
+		sed '/<!-- DO NOT REMOVE THIS LINE! DO NOT EDIT BELOW THIS LINE! -->/,$d' Members.md | head -n -1 > .automation/var/cache/templates/Members.md
+		cat >> .automation/var/cache/templates/Members.md <<- EOF
+		<!-- ----------------------------------------------------- -->
+		<!-- DO NOT REMOVE THIS LINE! DO NOT EDIT BELOW THIS LINE! -->
+		<!-- ----------------------------------------------------- -->
+		EOF
+	fi
+fi
 
-mkdir -p "$(dirname "$MEMBER_MAP")"
-
-cat > "$MEMBER_MAP" << EOF
-# Knack Member ID Map
-| Yak Collective Member          | Knack ID | URL                                             |
-|:------------------------------ | --------:|:----------------------------------------------- |
-EOF
+cat .automation/var/cache/templates/Members.md > Members.md
 
 while read -r RECORD; do
-	MEMBER_ID="$(echo "$RECORD" | cut -f 1)"
-	NAME="$(echo "$RECORD" | cut -s -f 2 | sed -e 's#|#/#g')"
+	MEMBER_ID="$(echo "$RECORD" | cut -f 1 | sed -e 's/^\s*//;s/\s*$//')"
+	NAME="$(echo "$RECORD" | cut -s -f 2 | sed -e 's#^\s*##;s#\s*$##;s#|#/#g')"
 
-	printf "| %s | %8.8s | <https://www.yakcollective.org/members/%s/> |\n" "$(align::left 30 "$NAME")" "$MEMBER_ID" "$MEMBER_ID" >> "$MEMBER_MAP"
-done < <(jq -r '.records[] | [.field_101_raw, .field_97_raw?] | @tsv' .automation/var/cache/build/_data/knack_yaks.json | sed -e 's/^\s*//;s/\s*$//;s/([^()]\+)//g;s/@.*//;s/ \+/ /g')
-
-echo "" >> "$MEMBER_MAP"
+	echo "- [$NAME](https://www.yakcollective.org/members/${MEMBER_ID}/)" >> Members.md
+done < <(jq -r '.records[] | [.field_102_raw, .field_101_raw, .field_97_raw?] | @tsv' .automation/var/cache/build/_data/knack_yaks.json | grep -E '^true' | sed -e 's/^true\s\+//;s/^\s*//;s/\s*$//;s/([^()]\+)//g;s/@.*//;s/ \+/ /g' | sort -uR)
 
 # Cleanup.
 #

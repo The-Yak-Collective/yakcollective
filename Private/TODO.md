@@ -6,8 +6,29 @@
 - [x] Merge [Foam](https://foambubble.github.io/foam/) VS Code template and set up wiki
 - [x] Change template "not below" line to include `----` borders
 - [ ] Foam-ify all `.md` files
-	- This includes moving to files with spaces in their names!
-	- **Currently on:** 
+	- `Projects/Astonishing Stories.md`
+	- `Projects/Astonishing Stories/Agglomerizing the Aesthetic.md`
+	- `Projects/Astonishing Stories/Department of Restoration.md`
+	- `Projects/Astonishing Stories/Mechanical Turks All the Way Down.md`
+	- `Projects/Astonishing Stories/Out of the Loop.md`
+	- `Projects/Astonishing Stories/Wholeness in a Timeless Activity.md`
+	- `Projects/Astonishing Stories/Your Payment is Ready.md`
+	- `Projects/Don't Waste the Reboot.md`
+	- `Projects/Future Frontiers.md`
+	- `Projects/Future Frontiers/01.01.01 On Horizons.md`
+	- `Projects/Future Frontiers/02.01.01 Democratized Underwater Exploration.md`
+	- `Projects/Future Frontiers/02.01.02 Democratized Underwater Exploration.md`
+	- `Projects/Future Frontiers/02.01.03 Democratized Underwater Exploration.md`
+	- `Projects/Future Frontiers/02.01.04 Democratized Underwater Exploration.md`
+	- `Projects/Future Frontiers/02.02.01 The Promise of Nanosatellites for Developing Nations.md`
+	- `Projects/Future Frontiers/02.02.02 The Promise of Nanosatellites for Developing Nations.md`
+	- `Projects/Future Frontiers/02.02.03 The Promise of Nanosatellites for Developing Nations.md`
+	- `Projects/Future Frontiers/03.01.01 Starship Gold Rush.md`
+	- `Projects/Future Frontiers/03.01.02 Starship Gold Rush.md`
+	- `Projects/Future Frontiers/05.01.01 Designer Metabolism and Minds.md`
+	- `Projects/Future Frontiers/05.01.02 Designer Metabolism and Minds.md`
+	- `Projects/Future Frontiers/99.99.99 Contribute to Future Frontiers.md`
+	- `Projects/New Old Home.md`
 - [x] Move away from using `[[custom|naming]]` for better GitHub compatability
 - [ ] Make sure that all all pages are linked to each other
 - [ ] Auto-generate content list page content, similar to how `Newsletter.md` and `Writings.md` is handled (should be able to order by date and have a concept of active/inactive; maybe as a git commit hook for some of these?)
@@ -15,8 +36,7 @@
 	- [ ] `Projects.md`
 	- [ ] `Work Groups.md`
 	- [ ] `README.md`
-	- [ ] `Members.md`
-		- Is the `Knack Member ID Map.md` necessary if we have this?
+	- [x] `Members.md`
 - [ ] Can I create a page that automatically pulls in recordings? Or alternately, stub pages that link out to those?
 - [ ] Implement [`foam janitor`](https://github.com/foambubble/foam-cli) as an on-commit GitHub Action
 - [ ] New, simpler, Foam-compatible theme

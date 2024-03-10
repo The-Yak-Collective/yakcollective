@@ -12,6 +12,18 @@
     "esbenp.prettier-vscode",
 
     // Understated grayscale theme (light and dark variants)
-    "philipbe.theme-gray-matter"
+    "philipbe.theme-gray-matter",
+
+    // Additional plugins, selected from
+    // https://github.com/foambubble/foam/blob/master/docs/user/getting-started/recommended-extensions.md
+
+    // Markdown Footnotes
+    "bierner.markdown-footnotes",
+
+    // Mermaid Markdown Syntax Highlighting
+    "bpruitt-goddard.mermaid-markdown-syntax-highlighting",
+
+    // Markdown Preview Mermaid Support
+    "bierner.markdown-mermaid"
   ]
 }

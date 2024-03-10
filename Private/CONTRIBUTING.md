@@ -4,7 +4,7 @@
 ## Editing the Website
 This site is actually a [Foam](https://foambubble.github.io/foam/) wiki; to edit, clone the repository, open it in [VS Code](https://code.visualstudio.com/), and then install the recommended extensions.
 
-Files in this `/Private` directory are *not* included in the final website build; the [[README]] file becomes the site homepage in the final build. Note that when referring to a Yak Collective member, it's important to use their ID in a full link (`[Nathan Acks](https://www.yakcollective.org/members/100007/)`); this is an unfortunate limitation of having member data stored off-site (for GDPR compliance), but a quick [reference](Knack%20Member%20ID%20Map.md) is provided to make things a little bit easier.
+Files in this `/Private` directory are *not* included in the final build, while the [[README]] file becomes the site homepage. Note that when referring to a Yak Collective member, it's important to use their ID in a full link (`[Nathan Acks](https://www.yakcollective.org/members/100007/)`). Tthis is an unfortunate limitation of having member data stored off-site (for GDPR compliance), but the [members page](../Members.md) can be used as a quick reference.
 
 ## Local Website and Automation Testing
 ```bash
