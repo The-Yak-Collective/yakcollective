@@ -28,7 +28,7 @@ Because your ikigai is less of a theory and more of a way of living, it can have
 
 In short, there’s quite a bit of research suggesting that a sense of ikigai will contribute to your overall well-being. So, how can you leverage the power of ikigai?
 
-## Leverage the Power of Ikigai
+## Leverage the Actual Power of Ikigai
 
 The concept of ikigai has often been misunderstood in the Western world largely due to the popularity of the below Venn diagram:
 
@@ -49,9 +49,9 @@ Your ikigai can be found in small daily rituals, side projects, and deep convers
 3. **Let go of lofty financial goals.** Ikigai also doesn’t have anything to do with money. Of course, we all need enough money to live a comfortable life, and money can help explore projects and ideas that bring you pleasure in life, but beyond the point of comfort, financial success should be seen as a potential byproduct of living a meaningful life.
 4. **Don’t try to save the world.** Instead, focus on the positive impact you can have on your friends, family, colleagues, and community. Ask yourself how you can connect with people in meaningful ways and which changes you want to bring to life. This is how we save the world — when everyone contributes at their own human scale.
 
-As psychiatrist Mieko Kamiya [puts it](https://www.amazon.co.jp/%E7%94%9F%E3%81%8D%E3%81%8C%E3%81%84%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6-%E7%A5%9E%E8%B0%B7%E7%BE%8E%E6%81%B5%E5%AD%90%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3-%E7%A5%9E%E8%B0%B7-%E7%BE%8E%E6%81%B5%E5%AD%90/dp/4622081814), ikigai is closer in meaning to the “power necessary to live in this world” or the “happiness to be alive”, which unfortunately gets translated to a life “worth living” in English, when the original concept doesn’t ascribe value nor measures of meaning in our lives.
+As psychiatrist Mieko Kamiya [puts it](https://www.amazon.co.jp/%E7%94%9F%E3%81%8D%E3%81%8C%E3%81%84%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6-%E7%A5%9E%E8%B0%B7%E7%BE%8E%E6%81%B5%E5%AD%90%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3-%E7%A5%9E%E8%B0%B7-%E7%BE%8E%E6%81%B5%E5%AD%90/dp/4622081814), ikigai is closer in Japanese to the “power necessary to live in this world” or the “happiness to be alive”, which unfortunately is often translated to “a life worth living” in English, when the original concept doesn’t ascribe measurable value to our lives.
 
-Instead of pursuing linear goals, optimize for wanting to wake up in the morning. Live a life of curiosity and connection. Trust that success will be a byproduct of the meaning you find in daily experiences.
+Instead of pursuing a grand life purpose, optimize for wanting to wake up in the morning. Live a life of curiosity and connection. Trust that success will be a byproduct of the meaning you find in daily experiences.
 
 The post [Rediscovering Ikigai: What We Got Wrong and How to Find Meaning in Life](https://nesslabs.com/ikigai) appeared first on [Ness Labs](https://nesslabs.com).
 
