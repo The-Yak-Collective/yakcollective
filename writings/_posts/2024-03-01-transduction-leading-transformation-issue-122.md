@@ -6,7 +6,7 @@ original_link: https://chosen-path.org/2024/03/01/transduction-leading-transform
 author: 100047
 ---
 
-![](https://chosenpath.files.wordpress.com/2024/03/342630211_217376077695893_1934794498166091882_n.jpg?w=1536)
+![](https://chosen-path.org/wp-content/uploads/2024/03/342630211_217376077695893_1934794498166091882_n.jpg?w=1536)
 
 This week:
 

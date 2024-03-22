@@ -32,4 +32,4 @@ This calls for relationships — conversations not processes, strategic part
 
 What change would you like to see in how procurement works?
 
-[benjamin-taylor-psta-transforming-public-procurement-maximising-the-opportunity-presented-by-the-act](https://chosenpath.files.wordpress.com/2024/03/benjamin-taylor-psta-transforming-public-procurement-maximising-the-opportunity-presented-by-the-act.pdf)[Download](https://chosenpath.files.wordpress.com/2024/03/benjamin-taylor-psta-transforming-public-procurement-maximising-the-opportunity-presented-by-the-act.pdf)
+[benjamin-taylor-psta-transforming-public-procurement-maximising-the-opportunity-presented-by-the-act](https://chosen-path.org/wp-content/uploads/2024/03/benjamin-taylor-psta-transforming-public-procurement-maximising-the-opportunity-presented-by-the-act.pdf)[Download](https://chosen-path.org/wp-content/uploads/2024/03/benjamin-taylor-psta-transforming-public-procurement-maximising-the-opportunity-presented-by-the-act.pdf)

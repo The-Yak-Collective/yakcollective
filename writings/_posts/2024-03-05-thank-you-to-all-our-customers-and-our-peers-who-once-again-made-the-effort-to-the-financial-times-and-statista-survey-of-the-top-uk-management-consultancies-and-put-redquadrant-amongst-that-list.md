@@ -8,7 +8,7 @@ original_link: https://chosen-path.org/2024/03/05/thank-you-to-all-our-customers
 author: 100047
 ---
 
-![](https://chosenpath.files.wordpress.com/2024/03/367d1-1pg_igc-iqkr8x7hhnkfnoa.png)
+![](https://chosen-path.org/wp-content/uploads/2024/03/367d1-1pg_igc-iqkr8x7hhnkfnoa.png)
 
 Join the discussion on LinkedIn: [https://www.linkedin.com/posts/antlerboy\_thank-you-to-all-our-customers-and-our-peers-activity-7170688540727463936-Jdag](https://www.linkedin.com/posts/antlerboy_thank-you-to-all-our-customers-and-our-peers-activity-7170688540727463936-Jdag) What core principles have helped you to succeed?
 

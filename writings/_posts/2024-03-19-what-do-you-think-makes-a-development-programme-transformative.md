@@ -44,10 +44,10 @@ If you know someone who could benefit — let them know!
 
 And if you just think this is a good thing for  **#publicservices**  in the UK, please like, comment, save, share, and generally help us to spread the word  ![🙂](https://s0.wp.com/wp-content/mu-plugins/wpcom-smileys/twemoji/2/72x72/1f642.png)
 
-[2024-03-19-commissioning-ten-step-introduction-flyer-cohort-eight-v1.0t](https://chosenpath.files.wordpress.com/2024/03/2024-03-19-commissioning-ten-step-introduction-flyer-cohort-eight-v1.0t.pdf)[Download](https://chosenpath.files.wordpress.com/2024/03/2024-03-19-commissioning-ten-step-introduction-flyer-cohort-eight-v1.0t.pdf)
+[2024-03-19-commissioning-ten-step-introduction-flyer-cohort-eight-v1.0t](https://chosen-path.org/wp-content/uploads/2024/03/2024-03-19-commissioning-ten-step-introduction-flyer-cohort-eight-v1.0t.pdf)[Download](https://chosen-path.org/wp-content/uploads/2024/03/2024-03-19-commissioning-ten-step-introduction-flyer-cohort-eight-v1.0t.pdf)
 
-[2024-02-12-marketing-flyer-national-commissioning-academy-may-2024](https://chosenpath.files.wordpress.com/2024/03/2024-02-12-marketing-flyer-national-commissioning-academy-may-2024.pdf)[Download](https://chosenpath.files.wordpress.com/2024/03/2024-02-12-marketing-flyer-national-commissioning-academy-may-2024.pdf)
+[2024-02-12-marketing-flyer-national-commissioning-academy-may-2024](https://chosen-path.org/wp-content/uploads/2024/03/2024-02-12-marketing-flyer-national-commissioning-academy-may-2024.pdf)[Download](https://chosen-path.org/wp-content/uploads/2024/03/2024-02-12-marketing-flyer-national-commissioning-academy-may-2024.pdf)
 
-[2023-08-18-contract-management-2023-cohort-three-brochure-dates-tbc](https://chosenpath.files.wordpress.com/2024/03/2023-08-18-contract-management-2023-cohort-three-brochure-dates-tbc.pdf)[Download](https://chosenpath.files.wordpress.com/2024/03/2023-08-18-contract-management-2023-cohort-three-brochure-dates-tbc.pdf)
+[2023-08-18-contract-management-2023-cohort-three-brochure-dates-tbc](https://chosen-path.org/wp-content/uploads/2024/03/2023-08-18-contract-management-2023-cohort-three-brochure-dates-tbc.pdf)[Download](https://chosen-path.org/wp-content/uploads/2024/03/2023-08-18-contract-management-2023-cohort-three-brochure-dates-tbc.pdf)
 
-[the-commissioning-academy-spring-2024-offers](https://chosenpath.files.wordpress.com/2024/03/the-commissioning-academy-spring-2024-offers.pdf)[Download](https://chosenpath.files.wordpress.com/2024/03/the-commissioning-academy-spring-2024-offers.pdf)
+[the-commissioning-academy-spring-2024-offers](https://chosen-path.org/wp-content/uploads/2024/03/the-commissioning-academy-spring-2024-offers.pdf)[Download](https://chosen-path.org/wp-content/uploads/2024/03/the-commissioning-academy-spring-2024-offers.pdf)

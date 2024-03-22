@@ -36,5 +36,5 @@ How – if at all – does your organisation integrate these insights into pract
 
 Don’t forget, if time is short, click the three dots at the top right of this post to save and revisit later. Your insights are invaluable!  **#Innovation**   **#Leadership**
 
-[learning-and-development-horizon-scanning](https://chosenpath.files.wordpress.com/2024/02/learning-and-development-horizon-scanning.pdf)[Download](https://chosenpath.files.wordpress.com/2024/02/learning-and-development-horizon-scanning.pdf)
+[learning-and-development-horizon-scanning](https://chosen-path.org/wp-content/uploads/2024/02/learning-and-development-horizon-scanning.pdf)[Download](https://chosen-path.org/wp-content/uploads/2024/02/learning-and-development-horizon-scanning.pdf)
 
