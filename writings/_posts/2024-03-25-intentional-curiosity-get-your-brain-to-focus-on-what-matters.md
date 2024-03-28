@@ -44,7 +44,9 @@ Navigating your attentional field can be challenging, with countless stimuli com
 
 **5. Strengthen your curiosity.** Make it a [habit to be curious](https://nesslabs.com/curiosity-matrix) about everything in your life—your inner landscape, external events, new interests, and the people around you. By drawing connections between all these areas of your life, you’ll notice that what may seem like a distraction on the surface can be the seed of a project.
 
-Intentional curiosity is not about never losing your focus—which would be unrealistic—but about monitoring your attention and using simple strategies to bring it back to the task at hand when you get distracted, while keeping track of recurring sources of curiosity so you can explore them further in a deliberate way.
+Most importantly, remember that intentional curiosity is not about never losing your focus—which would be unrealistic—but about monitoring your attention and using simple strategies to bring it back to the task at hand when you get distracted, while keeping track of recurring sources of curiosity so you can explore them further in a deliberate way.
+
+It requires both self-awareness and self-compassion to gently bring your focus back to the task at hand while embracing serendipitous creativity and the generative potential of so-called distractions.
 
 The post [Intentional Curiosity: Get your Brain to Focus on What Matters](https://nesslabs.com/intentional-curiosity) appeared first on [Ness Labs](https://nesslabs.com).
 
