@@ -36,7 +36,10 @@ credits:
     - 100047
     - 100051
 ---
-{% include widget-project-header.html %}
+# Don't Waste the Reboot
+The inaugural report by the Yak Collective, _Don't Waste the Reboot_ offers organizations a smorgasbord of 25 creative and unexpected provocations, ideas, and action frameworks to navigate the COVID-19 crisis.
+  
+Authored by 21 diverse contributors from around the world -- most of whom are working together for the first time -- we believe this report will get you thinking about your reboot efforts in a bolder, more imaginative way. Let us know what you think!
 
 <div id="pdf-slideshow" class="center-box pdf-slideshow-wrapper">
 	<div class="box-interior"><div>
