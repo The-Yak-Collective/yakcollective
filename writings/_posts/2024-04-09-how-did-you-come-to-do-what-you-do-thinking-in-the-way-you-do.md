@@ -6,6 +6,8 @@ original_link: https://chosen-path.org/2024/04/09/how-did-you-come-to-do-what-yo
 author: 100047
 ---
 
+![](https://chosen-path.org/wp-content/uploads/2024/04/baen-berserker-cover.jpg?w=606)
+
 Join the discussion on LinkedIn: [https://www.linkedin.com/posts/antlerboy\_how-did-you-come-to-do-what-you-do-thinking-activity-7183355907437699072-Z65J?utm\_source=share&utm\_medium=member\_desktop](https://www.linkedin.com/posts/antlerboy_how-did-you-come-to-do-what-you-do-thinking-activity-7183355907437699072-Z65J?utm_source=share&utm_medium=member_desktop)
 
 Something starts for me with reading my dad’s Sci-Fi collection – I was a voracious, early reader but I don’t think Saberhagen’s Berserker books, Asimov, Heinlein, Bester, Niven, Clarke, and the many apocalypses of Wyndham were susposed to be read by pre-teens. Those – and my mum’s books from her time at Sussex University – Fly and the Fly Bottle, Stokely Carmichael, and all the fiction of the anti-apartheid movement – warped my tiny little mind. And Star Wars.  
@@ -26,3 +28,6 @@ And the opportunity to be to perform, to be free, to have to think, as a consult
 
 So I guess that’s my story – what’s yours? That’s a big ask for a LinkedIn post – so maybe just one pivotal influence that has shaped who you are and what you do?
 
+![](https://chosen-path.org/wp-content/uploads/2024/04/a-mans-work-is-nothing-but.png?w=734)
+
+![](https://chosen-path.org/wp-content/uploads/2024/04/saberhagen-berserker.jpg?w=1143)
