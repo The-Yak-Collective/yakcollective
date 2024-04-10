@@ -13,7 +13,6 @@
 	- `Projects/Astonishing Stories/Out of the Loop.md`
 	- `Projects/Astonishing Stories/Wholeness in a Timeless Activity.md`
 	- `Projects/Astonishing Stories/Your Payment is Ready.md`
-	- `Projects/Don't Waste the Reboot.md`
 	- `Projects/Future Frontiers.md`
 	- `Projects/Future Frontiers/01.01.01 On Horizons.md`
 	- `Projects/Future Frontiers/02.01.01 Democratized Underwater Exploration.md`
