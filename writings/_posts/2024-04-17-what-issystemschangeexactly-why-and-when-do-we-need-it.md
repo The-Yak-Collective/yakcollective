@@ -32,3 +32,4 @@ Whether it’s in public services, business models, or global economies, it asks
 
 This is all I can fit in a LinkedIn update, and probably begs more questions than it answers — feel free to ask more if interested!
 
+[2023-06-28-benjamin-taylor-for-ou-systems-community-systems-leadership-change-theory-and-practice-v0.6bt17](https://chosen-path.org/wp-content/uploads/2024/04/2023-06-28-benjamin-taylor-for-ou-systems-community-systems-leadership-change-theory-and-practice-v0.6bt17.pdf)[Download](https://chosen-path.org/wp-content/uploads/2024/04/2023-06-28-benjamin-taylor-for-ou-systems-community-systems-leadership-change-theory-and-practice-v0.6bt17.pdf)
