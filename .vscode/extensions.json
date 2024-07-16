@@ -11,8 +11,8 @@
     // Prettier for auto formatting code
     "esbenp.prettier-vscode",
 
-    // Understated grayscale theme (light and dark variants)
-    "philipbe.theme-gray-matter",
+    // Pleasant off-white/gray theme (light and dark variants)
+    "sainnhe.everforest",
 
     // Additional plugins, selected from
     // https://github.com/foambubble/foam/blob/master/docs/user/getting-started/recommended-extensions.md
