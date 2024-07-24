@@ -29,6 +29,7 @@
 	- `Projects/Future Frontiers/99.99.99 Contribute to Future Frontiers.md`
 	- `Projects/New Old Home.md`
 - [x] Move away from using `[[custom|naming]]` for better GitHub compatability
+- [ ] Move to using sentence-case filenames and headings
 - [ ] Make sure that all all pages are linked to each other
 - [ ] Auto-generate content list page content, similar to how `Newsletter.md` and `Writings.md` is handled (should be able to order by date and have a concept of active/inactive; maybe as a git commit hook for some of these?)
 	- [ ] `Study Groups.md`
