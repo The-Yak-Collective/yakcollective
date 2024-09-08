@@ -1,0 +1,11 @@
+/*
+li:has(> div.list-bullet:only-child) {
+	display: none;
+}
+*/
+
+.inline-embed .markdown-embed-content div:has(+ div:last-child:empty) > p:last-child,
+.inline-embed .markdown-embed-content div:has(+ div:last-child:empty) > ol:last-child,
+.inline-embed .markdown-embed-content div:has(+ div:last-child:empty) > ul:last-child {
+	margin-block-end: 2px;
+}

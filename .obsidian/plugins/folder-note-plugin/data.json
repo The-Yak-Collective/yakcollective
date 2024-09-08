@@ -1,0 +1,9 @@
+{
+  "folderNoteHide": true,
+  "folderNoteType": "index",
+  "folderNoteName": "index",
+  "folderNoteKey": "ctrl",
+  "folderNoteAutoRename": true,
+  "folderDelete2Note": false,
+  "folderNoteStrInit": "---\ntitle: {{FOLDER_NAME}}\naliases:\n  - {{FOLDER_NAME}}\n---\n==Write a description of what this folder represents and/or the files it contains.==\n\n```ccard\ntype: folder_brief_live\nbriefMax: 118\nnoteOnly: true\nimagePrefix: 'assets/'\nstyle: strip\n```\n"
+}

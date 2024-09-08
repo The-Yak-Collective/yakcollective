@@ -1,0 +1,12 @@
+{
+  "theme": "moonstone",
+  "baseFontSize": 14,
+  "enabledCssSnippets": [
+    "Hiding Helpers",
+    "Markdown Embed Tweaks",
+    "Yak Collective Callouts",
+    "Callout Tweaks"
+  ],
+  "cssTheme": "Minimal",
+  "accentColor": "#d28400"
+}

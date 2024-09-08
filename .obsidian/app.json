@@ -1,0 +1,12 @@
+{
+  "showLineNumber": true,
+  "autoPairBrackets": false,
+  "autoPairMarkdown": false,
+  "alwaysUpdateLinks": true,
+  "newFileLocation": "current",
+  "showUnsupportedFiles": true,
+  "attachmentFolderPath": "Assets",
+  "showInlineTitle": false,
+  "newLinkFormat": "relative",
+  "useMarkdownLinks": true
+}

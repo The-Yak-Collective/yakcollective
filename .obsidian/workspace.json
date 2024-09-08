@@ -1,0 +1,154 @@
+{
+  "main": {
+    "id": "1728aab0a616dfd0",
+    "type": "split",
+    "children": [
+      {
+        "id": "35292904d249b22e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "46a48553157d0228",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "README.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "8b09728f3e1b71f3",
+    "type": "split",
+    "children": [
+      {
+        "id": "5f5621cef182210d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ed28a492f4db7385",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "ad3a746834f2e0fc",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 244.5
+  },
+  "right": {
+    "id": "a492d05944390c5c",
+    "type": "split",
+    "children": [
+      {
+        "id": "fba861c06fe20afb",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "125c8de5c6859749",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "README.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "7e616579797a8728",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "README.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "18e46ed678b14109",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "README.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "graph:Open graph view": false,
+      "command-palette:Open command palette": false,
+      "omnisearch:Omnisearch": false
+    }
+  },
+  "active": "ed28a492f4db7385",
+  "lastOpenFiles": [
+    "private/TODO.md",
+    "README.md",
+    "members_DELETE_ME.md",
+    "newsletter.md",
+    "about.md",
+    "index.md",
+    "join.md",
+    "yakcon 2023.md",
+    "study groups/index.md",
+    "study groups/yak robotics garage.md",
+    "study groups/fermi gym.md",
+    "assets/Yak Robotics Garage (Rhett Garber 2).webp",
+    "assets/Yak Robotics Garage (Rhett Garber 4).webp",
+    "projects/Astonishing Stories/Out of the Loop.md",
+    "work groups/infrastructure.md",
+    "projects/Future Frontiers/02.01.04 Democratized Underwater Exploration.md",
+    "work groups/index.md",
+    "projects/Don't Waste the Reboot.md",
+    "projects/New Old Home.md",
+    "projects/Astonishing Stories/index.md",
+    "projects/Future Frontiers/index.md",
+    "projects/Online Governance Primer.md",
+    "Writings.md"
+  ]
+}

@@ -27,9 +27,9 @@
   "markdown.extension.print.imgToBase64": true,
   "markdown.extension.print.absoluteImgPath": false,
   "markdown.extension.toc.orderedList": true,
-  "workbench.colorTheme": "Solarized Light",
-  "workbench.preferredDarkColorTheme": "Solarized Dark",
-  "workbench.preferredLightColorTheme": "Solarized Light",
+  "workbench.colorTheme": "Default Light Modern",
+  "workbench.preferredDarkColorTheme": "Default Dark Modern",
+  "workbench.preferredLightColorTheme": "Default Light Modern",
   "foam.graph.titleMaxLength": 0,
   "foam.orphans.exclude": [
       ".automation/**/*",

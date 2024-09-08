@@ -1,0 +1,35 @@
+.callout[data-callout="project"] {
+	--callout-color: 210, 132, 0;
+	--callout-icon: lucide-library;
+}
+
+.callout[data-callout="study-group"] {
+	--callout-color: 210, 132, 0;
+	--callout-icon: lucide-users;
+}
+
+.callout[data-callout="work-group"] {
+	--callout-color: 210, 132, 0;
+	--callout-icon: lucide-cog;
+}
+
+/*
+ * Inactive projects. Every block above needs to be duplicated below,
+ * but with an "inactive-" prefix and using "158, 158, 158" for
+ * --callout-color rather than "210, 132, 0".
+ */
+
+.callout[data-callout="inactive-project"] {
+	--callout-color: 158, 158, 158;
+	--callout-icon: lucide-library;
+}
+
+.callout[data-callout="inactive-study-group"] {
+	--callout-color: 158, 158, 158;
+	--callout-icon: lucide-users;
+}
+
+.callout[data-callout="inactive-work-group"] {
+	--callout-color: 158, 158, 158;
+	--callout-icon: lucide-cog;
+}

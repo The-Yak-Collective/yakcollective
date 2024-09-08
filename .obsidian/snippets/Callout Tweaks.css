@@ -1,0 +1,7 @@
+/* Fix links in callout headers */
+
+.callout .callout-title a {
+	font-weight: inherit;
+	color: inherit !important;
+	text-decoration: inherit;
+}
