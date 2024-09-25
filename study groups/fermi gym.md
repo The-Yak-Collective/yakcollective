@@ -8,7 +8,7 @@ quartsRssFeed: true
 **Contributors:** Open to all
 **Discord Channel:** [⌗fermi-gym](https://discord.com/channels/692111190851059762/977352527995625492)
 
-![Enrico Fermi. Image from the Atomic Heritage Foundation.](../assets/Enrico%20Fermi.webp)
+![Enrico Fermi. Image from the Atomic Heritage Foundation.](../assets/enrico%20fermi.webp)
 
 How many trees are there on Earth? What is the weight of the atmosphere? How tall can a mountain be? What is the total length of DNA in a human cell? Questions like this are perfect fodder for the art of *Fermi estimation*, the cultivated skill of posing and answering arbitrary quantitative questions using a variety of rough and ready estimation, assumption, and approximation techniques, informed guesswork, tasteful googling, and high-school mathematics. The art is named for physicist Enrico Fermi, who was famously skilled at it. A good introductory text is *The Art of Estimation in Science and Engineering* by Sanjoy Mahajan (recommended, but not required reading if you'd like to join us).
 

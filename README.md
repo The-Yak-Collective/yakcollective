@@ -23,9 +23,6 @@ Conversations happen on [the Discord ⌗infrastructure channel](https://discord.
 ## TODO
 
 - [ ] Foam/Obsidian/Quartz-ify all files
-	- `assets/*`
-	- `private/*`
-	- `projects/Don't Waste the Reboot.md`
 	- `projects/New Old Home.md`
 	- `projects/Online Governance Primer.md`
 	- `projects/Astonishing Stories/index.md`

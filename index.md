@@ -1,7 +1,6 @@
 ---
 title: The Yak Collective
 ---
-
 The Yak Collective is an online space for collaborative tinkering. Here you can find an eclectic group of people working together on technology, research, writing, and art projects, and occasionally trying to make money together as well.
 
 Current experiments include: **building** open-source rovers, **crafting** experimental web infrastructures, **publishing** speculative fiction, and **studying** emerging decentralization. Learn more about us on the [about page](about.md).
@@ -30,5 +29,5 @@ Check out our [study](study%20groups/index.md) and [work](work%20groups/index.m
 > [!work-group] [Infrastructure](work%20groups/infrastructure.md)
 > The Yak Collective Infrastructure team maintains this website, as well as a variety of Discord bots and related infrastructure. All development of our custom code is available publicly on GitHub. If you know a bit of coding (or want to learn!) or prefer to contribute in a more behind-the-scenes fashion, consider joining us!
 
-> [!inactive-project]- [Don’t Waste the Reboot](projects/Don't%20Waste%20the%20Reboot.md)
+> [!inactive-project]- [Don’t Waste the Reboot](projects/dont%20waste%20the%20reboot.md)
 > The inaugural report by the Yak Collective, *Don't Waste the Reboot* offers organizations a smorgasbord of 25 creative and unexpected provocations, ideas, and action frameworks to navigate the COVID-19 crisis.

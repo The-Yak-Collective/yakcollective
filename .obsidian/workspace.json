@@ -16,7 +16,72 @@
                 "file": "README.md",
                 "mode": "source",
                 "backlinks": true,
-                "source": true
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "b47fec03bddacc4c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "projects/dont waste the reboot.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "28688a5da0ac7f10",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "projects/New Old Home.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "d67f778dff02938e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "projects/Online Governance Primer.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "3d95d63ab80aa465",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "projects/Astonishing Stories/index.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "0dffd5590b4f7a26",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "projects/Future Frontiers/index.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
               }
             }
           }
@@ -62,7 +127,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 244.5
+    "width": 405.5
   },
   "right": {
     "id": "a492d05944390c5c",
@@ -125,30 +190,42 @@
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "ed28a492f4db7385",
+  "active": "46a48553157d0228",
   "lastOpenFiles": [
-    "private/TODO.md",
-    "README.md",
-    "members_DELETE_ME.md",
-    "newsletter.md",
-    "about.md",
-    "index.md",
-    "join.md",
-    "yakcon 2023.md",
-    "study groups/index.md",
-    "study groups/yak robotics garage.md",
-    "study groups/fermi gym.md",
-    "assets/Yak Robotics Garage (Rhett Garber 2).webp",
-    "assets/Yak Robotics Garage (Rhett Garber 4).webp",
-    "projects/Astonishing Stories/Out of the Loop.md",
-    "work groups/infrastructure.md",
-    "projects/Future Frontiers/02.01.04 Democratized Underwater Exploration.md",
-    "work groups/index.md",
-    "projects/Don't Waste the Reboot.md",
-    "projects/New Old Home.md",
-    "projects/Astonishing Stories/index.md",
+    "projects/dont waste the reboot.md",
     "projects/Future Frontiers/index.md",
+    "projects/Astonishing Stories/index.md",
     "projects/Online Governance Primer.md",
+    "README.md",
+    "projects/New Old Home.md",
+    "about.md",
+    "assets/dont waste the reboot.pdf",
+    "assets/dont waste the reboot.webp",
+    "projects/index.md",
+    "index.md",
+    "newsletter.md",
+    "work groups/index.md",
+    "study groups/index.md",
+    "join.md",
+    "assets/new old home placeholder.webp",
+    "assets/new old home.pdf",
+    "assets/new old home.webp",
+    "assets/online governance primer.pdf",
+    "assets/online governance primer 0 four governance regimes.webp",
+    "assets/online governance primer.webp",
+    "assets/favicon.webp",
+    "assets/yak coin.webp",
+    "assets/yak head.webp",
+    "assets/yak head white.webp",
+    "assets/yakcon 2023.webp",
+    "study groups/fermi gym.md",
+    "work groups/infrastructure.md",
+    "yakcon 2023.md",
+    "study groups/yak robotics garage.md",
+    "private/TODO.md",
+    "members_DELETE_ME.md",
+    "projects/Astonishing Stories/Out of the Loop.md",
+    "projects/Future Frontiers/02.01.04 Democratized Underwater Exploration.md",
     "Writings.md"
   ]
 }

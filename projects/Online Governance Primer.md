@@ -2,14 +2,14 @@
 date: 2022-02-02
 ---
 # The Yak Online Governance Primer
-![The Yak Online Governance Primer](../assets/Online%20Governance%20Primer%20(Banner).webp)
+![The Yak Online Governance Primer](../assets/online%20governance%20primer.webp)
 
 ***How do you do online governance?** This primer is intended as a guided tour through a curated set of readings — based on a year of study by the [Yak Collective](../index.md)[^a] — that can help groups and organizations navigate this question. In selecting the readings we cast a wide net, but in our discussions we made an effort to consider them from the specific perspective of online governance challenges. We believe the ideas surveyed here are applicable to groups and organizations with widely varied purposes, levels of autonomy, degrees of decentralization, and technological sophistication.*
 
 [^a]: The Yak Collective started in early 2020 as an online network of indie consultants and people interested in new modes of collaboration. The principles and patterns discussed in this paper shape how we govern and make decisions within the Yak Collective.
 
 - [Collect this paper as an NFT](https://yakcollective.mirror.xyz/aJdO_SO3gw34cLtwBwNC2OD3s0YT3us9C-C2NNPQ_us)
-- [Download as a PDF](../assets/Online%20Governance%20Primer.pdf)
+- [Download as a PDF](../assets/online%20governance%20primer.pdf)
 
 **How should online communities and virtual organizations be governed?** Every organization that has gone virtual to even a small degree should be interested in this question. The range of possible answers spans the gamut from conservative to radical. Online digital technologies allow you to either make incremental tweaks to selected bits and pieces of an organization, or radically rethink every part of it. The fate of your organization depends on making the right choices for the specific challenges it faces.
 
@@ -41,7 +41,7 @@ The studies in our first year led us to develop a shared map of the territory. T
 
 The 2x2 diagram that results suggests that there are four relatively distinct regimes of online governance, which we have dubbed *Hobbesian*, *Gaia*, *Muddler*, and *Citadel*.
 
-![The Four Online Governance Regimes](../assets/Four%20Governance%20Regimes.webp)
+![The Four Online Governance Regimes](../assets/online%20governance%20primer%200%20four%20governance%20regimes.webp)
 
 In the following sections we discuss each of the four regimes in turn, roughly in order of strength of governance forces:
 
@@ -61,7 +61,7 @@ The Hobbesian governance regime is personified by the archetype of the anarch, e
 
 Hobbesian groups tend to be relatively low in energy and cohesion. As a result, a functional Hobbesian regime takes time to build and faces many risks along the way. One major risk is of individuals being isolated, scapegoated, and persecuted. Junger himself was persecuted by both the Allies and Nazis through World War II.
 
-![Hobbesian Regimes: Wild and Low Alignment](../assets/Four%20Governance%20Regimes%20(Hobbesian%20Highlight).webp)
+![Hobbesian Regimes: Wild and Low Alignment](../assets/online%20governance%20primer%201%20hobbesian%20regime.webp)
 
 Early in its history, a wild and low alignment governance regime has to solve for *trust* and *common knowledge*. *Trust* is generally low among individuals who are suspicious of prevailing ideologies and exhibit an inclination towards doing their own research. *Common knowledge*[^2] is needed for a governance regime to be functional and Hobbesian regimes typically suffer from a strong deficit.
 
@@ -108,7 +108,7 @@ Gaia, the Greek goddess who personified the Earth, also personifies the fifteen 
 
 The overarching governance question in a Gaia regime is this: will the strong tendency toward organic coevolution make the organization resistant to any form of designed structure, even when it improves functioning or addresses possibly fatal weaknesses? In contrast to the Hobbesian regime, which shares the basic suspicion of formal structure, the presence of high alignment makes different outcomes possible.
 
-![Gaia Regimes: Wild and High Alignment](../assets/Four%20Governance%20Regimes%20(Gaia%20Highlight).webp)
+![Gaia Regimes: Wild and High Alignment](../assets/online%20governance%20primer%202%20gaia%20regime.webp)
 
 It is important to understand the distaste for designed structures that drives organizations in the Gaia quadrant. Ivan Illich, arguably a Gaian philosopher, exhibited a particularly refined form of this distaste. Illich’s work was marked by a tension between progressive, libertarian, and anarchist impulses.
 
@@ -161,7 +161,7 @@ The Muddler governance regime represents a condition of shared and commonly ackn
 
 When a group sees itself as *ordinary people muddling through in ignorance*, doing their mediocre best rather than as *Chosen Ones constructing a utopia*, things are seen in realistic proportions. The seven readings of this section help foster and anchor the attitudes necessary to govern in the Muddler regime.
 
-![Muddler Regimes: Managed and Low Alignment](../assets/Four%20Governance%20Regimes%20(Muddler%20Highlight).webp)
+![Muddler Regimes: Managed and Low Alignment](../assets/online%20governance%20primer%203%20muddler%20regime.webp)
 
 The quadrant label comes from Charles Lindblom’s 1959 article, *The Science of Muddling Through*[^27]. In it, Lindblom identifies the method of successive approximations (which bears a strong resemblance to modern agile management methods) as a characteristic of successful organizations. The muddling-through organization is the opposite of the efficient, machine-like organization. Frederick Laloux[^28] characterizes this condition in terms of loosened optimality criteria, and heightened appreciation for the benefits of “fatter” unoptimized systems. An example can be found in the interview with Tobi Lüttke, founder of Shopify[^29]. The key is understanding the organization as a complex system, and being non-deterministically in harmony with, and attuned to, what’s going on. But this posture must also be oriented toward a purpose, and resist simply surrendering to the system’s natural evolutionary tendencies.
 
@@ -194,7 +194,7 @@ The sixteen readings in this section revolve around organizations that are usual
 
 Platforms and ecosystems are ubiquitous today, but are still confusing even for their participants. An ecosystem can be defined as “a dynamic group of largely independent economic players that create products or services that together constitute a coherent solution”[^20]. The significant questions in the Citadel quadrant revolve around why and how exactly these independent players can collaborate, what keeps them together, and how their products and services compete.
 
-![Citadel Regimes: Managed and High Alignment](../assets/Four%20Governance%20Regimes%20(Citadel%20Highlight).webp)
+![Citadel Regimes: Managed and High Alignment](../assets/online%20governance%20primer%204%20citadel%20regime.webp)
 
 One of the problems most platform builders face is that intuitions developed while running a traditional organization frequently fails them. For example, hoarding power and value is often adaptive in traditional organizations but can drive platforms to failure. Intelligent ways to distribute power and value can be hard to discover.
 
