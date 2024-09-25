@@ -55,7 +55,6 @@ Conversations happen on [the Discord ⌗infrastructure channel](https://discord.
 - [ ] Recreate build and automation infrastructure using [Quartz](https://github.com/jackyzha0/quartz)
 	- `.automation`
 	- `.github`
-- [ ] Implement [`foam janitor`](https://github.com/foambubble/foam-cli) as an on-commit GitHub Action
 - [ ] Reimplement join page form using [Netlify Forms](https://docs.netlify.com/forms/setup/)
 - [ ] Move [IT infrastructure map](https://roamresearch.com/#/app/ArtOfGig/page/w6uAG9Pig) from DOT/Graphviz to something like Mermaid
 	- ChatGPT makes a decent first-pass, but it doesn't really understand multi-path commands
