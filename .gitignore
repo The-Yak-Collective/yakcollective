@@ -9,7 +9,6 @@
 .automation/var/state/common-init
 
 # Ignore Planet Pluto files that are regularly regenerated
-#
 .automation/var/lib/pluto/*.db
 .automation/var/lib/pluto/bluesky/*
 .automation/var/lib/pluto/discord/*
@@ -18,3 +17,7 @@
 .automation/var/lib/pluto/twitter/*
 .automation/var/lib/pluto/writings/*
 .automation/var/lib/pluto/writings.ini
+
+# Ignore some Obsidian files that shouldn't be synced
+.trash
+.nomedia
