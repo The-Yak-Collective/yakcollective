@@ -7,7 +7,7 @@ author: 100047
 original_link: https://antlerboy.medium.com/is-systems-convening-a-thing-2ba7cc8f8169?source=rss-97852f5a56ae------2
 ---
 ![](https://cdn-images-1.medium.com/max/920/0*x_Ga94XmDm-SUBtg)
-_a wordle of the reasons why people signed up for the launch event_
+_a wordle of the reasons why people signed up for the launch event_
 
 The book, _Systems convening: a crucial form of leadership for the 21st Century_ was published just over a month ago; the launch event, for which over a thousand people signed up, took place on 2 September. All the information about the book and community is hosted by the authors, Bev and Etienne Wenger-Trayner, at [https://wenger-trayner.com/systems-convening/](https://wenger-trayner.com/systems-convening/)
 

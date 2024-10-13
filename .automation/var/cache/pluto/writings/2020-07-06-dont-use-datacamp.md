@@ -7,7 +7,7 @@ author: 101274
 ---
 
 ![](https://cdn-images-1.medium.com/max/576/0*6iMs0ks5RFUiXOkh)
-_credit: https://twitter.com/winsontang/status/1118062617661071360 (via Noam Ross?)_
+_credit: https://twitter.com/winsontang/status/1118062617661071360 (via Noam Ross?)_
 
 #### A timeline of transgressions & community response
 
@@ -165,7 +165,7 @@ Many other DC instructors spoke out & asked the community to boycott their own c
 ![](https://cdn-images-1.medium.com/max/818/1*qSpMg0xhSVPRTYIOA5tQtw.png)
 
 ![](https://cdn-images-1.medium.com/max/816/1*r4j2hx4AoCKR8iVqafbU4g.png)
-_screenshots from Noam Ross’ live link collage of DC instructors urging a boycott of DC_
+_screenshots from Noam Ross’ live link collage of DC instructors urging a boycott of DC_
 
 > **Note what happened here** : **_all of these instructors had to appeal to the community to boycott their own course, because DataCamp would not honor their requests to take down the content they created_**.
 
@@ -359,7 +359,7 @@ _Totally normal non-comicbook-villain stuff._
 ( **June 2021 UPDATE** : this tweet appears to have been deleted, but a snapshot can be found with the wayback machine: [https://web.archive.org/web/20201210164912/https://twitter.com/daveyalba/status/1337070088126681095](https://web.archive.org/web/20201210164912/https://twitter.com/daveyalba/status/1337070088126681095) )
 
 ![](https://cdn-images-1.medium.com/max/1008/0*Auyxp9ImenYY_j3K)
-_wayback machine snapshot_
+_wayback machine snapshot_
 
 - In response, Anaconda Inc [announced](https://twitter.com/anacondainc/status/1337466506276442112) that they “officially terminated our content license agreement with DataCamp”, earning [applause from Dhavide Aruliah](https://twitter.com/dhavidearuliah/status/1337537809242935298), former employee of both companies & DataCamp whistleblower:
 

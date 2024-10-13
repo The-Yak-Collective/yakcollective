@@ -10,7 +10,7 @@ original_link: https://medium.com/agileinsider/okrs-are-networks-not-hierarchies
 #### They don’t cascade, they integrate
 
 ![](https://cdn-images-1.medium.com/max/1024/1*YECeOxlko9KoOJNw8RNm3A.jpeg)
-_Photo by Alina Grubnyak on Unsplash_
+_Photo by Alina Grubnyak on Unsplash_
 
 If you use [objective and key results](https://www.whatmatters.com/faqs/okr-meaning-definition-example/) (OKRs) as part of your practice you have probably struggled to make them fit together across the organization. Many groups use a simple hierarchy of OKRs so that they flow down, up, and meet in the middle to match the way that their organizations are set up.
 
@@ -57,7 +57,7 @@ There are four main ways that dependencies can be built in OKRs:
 Here is an example visualization of a network for OKRs:
 
 ![](https://cdn-images-1.medium.com/max/1024/0*IPk4RLtUsS4i3QfJ)
-_Network of OKRs template, originally from Mauricio Franzoni of nintex and modified by me._
+_Network of OKRs template, originally from Mauricio Franzoni of nintex and modified by me._
 
 As you can see there are a few important dependencies between OKRs:
 

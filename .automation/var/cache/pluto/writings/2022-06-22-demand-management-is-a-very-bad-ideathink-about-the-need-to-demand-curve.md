@@ -9,7 +9,7 @@ author: 100047
 ### Demand management is a very bad idea — think about the need-to-demand curve
 
 ![](https://cdn-images-1.medium.com/max/1024/1*wGOaUt4M65Y-fAwBTAXYlg.png)
-_Simon grižon Super split on a slackline.jpg Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)_
+_Simon grižon Super split on a slackline.jpg Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)_
 
 ### Most of the good ideas in #customerrelations, ‘customer relationship management’, ‘demand management’, #digital and #technology in general are VERY BAD ideas unless you continue to deeply learn what your customers actually need.
 

@@ -10,7 +10,7 @@ original_link: https://medium.com/@antlerboy/the-force-in-organisational-life-an
 ### The Force in organisational life and becoming a Jedi — The Beginning
 
 ![](https://cdn-images-1.medium.com/max/1024/1*FM8sEv6WAcdm9XkitiqC7A.png)
-_Definitely not the opening image of Star Wars part III: A New Hope, with the quote below superimposed over it_
+_Definitely not the opening image of Star Wars part III: A New Hope, with the quote below superimposed over it_
 
 > “Well, the Force is what gives a Jedi his power. It’s an energy field created by all living things. It surrounds us and penetrates us; it binds the galaxy together.”
 

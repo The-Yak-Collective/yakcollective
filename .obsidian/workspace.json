@@ -21,25 +21,12 @@
             }
           },
           {
-            "id": "b47fec03bddacc4c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "projects/dont waste the reboot.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
             "id": "28688a5da0ac7f10",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "projects/New Old Home.md",
+                "file": "projects/new old home.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -47,12 +34,12 @@
             }
           },
           {
-            "id": "d67f778dff02938e",
+            "id": "20f90b61355ca7c2",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "projects/Online Governance Primer.md",
+                "file": "projects/astonishing stories/index.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -60,12 +47,12 @@
             }
           },
           {
-            "id": "3d95d63ab80aa465",
+            "id": "6ad532d5187f9d16",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "projects/Astonishing Stories/index.md",
+                "file": "projects/astonishing stories/Agglomerizing the Aesthetic.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -73,12 +60,64 @@
             }
           },
           {
-            "id": "0dffd5590b4f7a26",
+            "id": "92e12b86beb090ca",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "projects/Future Frontiers/index.md",
+                "file": "projects/astonishing stories/Department of Restoration.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "24a2e6a8d256b69a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "projects/astonishing stories/Mechanical Turks All the Way Down.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "3d4babd7f229ce39",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "projects/astonishing stories/Out of the Loop.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "293cad6bdbd1ac4d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "projects/astonishing stories/Wholeness in a Timeless Activity.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "2af781f5ca153857",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "projects/astonishing stories/Your Payment is Ready.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -127,7 +166,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 405.5
+    "width": 319.5
   },
   "right": {
     "id": "a492d05944390c5c",
@@ -192,21 +231,34 @@
   },
   "active": "46a48553157d0228",
   "lastOpenFiles": [
-    "projects/dont waste the reboot.md",
-    "projects/Future Frontiers/index.md",
-    "projects/Astonishing Stories/index.md",
-    "projects/Online Governance Primer.md",
+    "projects/astonishing stories/Your Payment is Ready.md",
+    "projects/astonishing stories/Wholeness in a Timeless Activity.md",
+    "projects/astonishing stories/Out of the Loop.md",
+    "projects/astonishing stories/Mechanical Turks All the Way Down.md",
+    "projects/astonishing stories/Department of Restoration.md",
+    "projects/astonishing stories/Agglomerizing the Aesthetic.md",
+    "projects/astonishing stories/index.md",
     "README.md",
-    "projects/New Old Home.md",
+    "projects/future frontiers/index.md",
+    "projects/future frontiers/05.01.02 Designer Metabolism and Minds.md",
+    "projects/future frontiers/99.99.99 Contribute to Future Frontiers.md",
+    "projects/future frontiers/02.02.02 The Promise of Nanosatellites for Developing Nations.md",
+    "projects/future frontiers/02.01.04 Democratized Underwater Exploration.md",
+    "projects/future frontiers/02.01.03 Democratized Underwater Exploration.md",
+    "projects/future frontiers/02.01.01 Democratized Underwater Exploration.md",
+    "projects/future frontiers/01.01.01 On Horizons.md",
+    "projects/dont waste the reboot.md",
+    "projects/new old home.md",
+    "projects/online governance primer.md",
+    "study groups/fermi gym.md",
+    "study groups/yak robotics garage.md",
+    "work groups/index.md",
+    "work groups/infrastructure.md",
     "about.md",
+    "index.md",
+    "join.md",
     "assets/dont waste the reboot.pdf",
     "assets/dont waste the reboot.webp",
-    "projects/index.md",
-    "index.md",
-    "newsletter.md",
-    "work groups/index.md",
-    "study groups/index.md",
-    "join.md",
     "assets/new old home placeholder.webp",
     "assets/new old home.pdf",
     "assets/new old home.webp",
@@ -217,15 +269,6 @@
     "assets/yak coin.webp",
     "assets/yak head.webp",
     "assets/yak head white.webp",
-    "assets/yakcon 2023.webp",
-    "study groups/fermi gym.md",
-    "work groups/infrastructure.md",
-    "yakcon 2023.md",
-    "study groups/yak robotics garage.md",
-    "private/TODO.md",
-    "members_DELETE_ME.md",
-    "projects/Astonishing Stories/Out of the Loop.md",
-    "projects/Future Frontiers/02.01.04 Democratized Underwater Exploration.md",
-    "Writings.md"
+    "assets/yakcon 2023.webp"
   ]
 }

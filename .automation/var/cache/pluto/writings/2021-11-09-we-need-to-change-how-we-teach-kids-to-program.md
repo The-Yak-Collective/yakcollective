@@ -9,7 +9,7 @@ author: 101165
 _This is the essay I wrote for my application to Harvard’s Graduate School of Education._
 
 ![](https://cdn-images-1.medium.com/max/1024/0*HUjB_D9PQ9KL4kja.jpg)
-_The Scratch programming platform and community, where I work_
+_The Scratch programming platform and community, where I work_
 
 I am applying to HGSE’s Learning Design, Innovation and Technology program because as a student, educator, and programmer, I have experienced the power of a creative technology education at its best. With the right mix of tools, instruction and exploratory freedom, these programs can be transformative for students of all backgrounds. I have also worked in the trenches to replicate those conditions on a citywide scale, and encountered the considerable challenges those efforts face.
 
@@ -69,4 +69,3 @@ I have developed tools and trainings towards this mission, and seen how they wor
 * * *
 
 [We need to change how we teach kids to program](https://medium.com/robotowl/we-need-to-change-how-we-teach-kids-to-program-e30b9ac0570f) was originally published in [Robot Owl](https://medium.com/robotowl) on Medium, where people are continuing the conversation by highlighting and responding to this story.
-

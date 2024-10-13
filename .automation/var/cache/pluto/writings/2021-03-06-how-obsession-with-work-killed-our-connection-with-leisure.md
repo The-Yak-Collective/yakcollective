@@ -34,7 +34,7 @@ In a world of “total work,” there is no space for contemplation or rest. The
 # The case for an old definition of leisure
 
 ![Image for post](https://miro.medium.com/max/6058/0*l8Uren4m3RgPaTns)
-_Photo by Elijah O’Donnell on Unsplash_
+_Photo by Elijah O’Donnell on Unsplash_
 
 In the book [_Rest: Why You Get More Done When You Work Less_](https://amzn.to/2ycEUWs), Alex Pang examined how challenging it still is to actually take time for leisure:
 

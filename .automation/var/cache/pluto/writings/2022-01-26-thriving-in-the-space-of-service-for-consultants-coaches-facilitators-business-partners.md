@@ -74,7 +74,7 @@ This is what Barry Oshry calls ‘developing a co-learning relationship when you
 ![](https://cdn-images-1.medium.com/max/898/1*Rjy7Pn-N4ItB29dc5Cazbw.png)
 
 ![](https://cdn-images-1.medium.com/max/963/1*hyhoa-_HPI_e4TY0Pwdw2w.png)
-_Barry Oshry — the Space of Service_
+_Barry Oshry — the Space of Service_
 
 ![](https://cdn-images-1.medium.com/max/758/1*gNTiDa_3hfd1tUsfHa0ouQ.png)
 _Peter Block — Flawless Consulting_

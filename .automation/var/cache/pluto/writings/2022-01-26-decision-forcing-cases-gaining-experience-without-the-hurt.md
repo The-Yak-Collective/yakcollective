@@ -9,7 +9,7 @@ author: 100006
 #### Learning about learning from the USMC, applied to product teams
 
 ![](https://cdn-images-1.medium.com/max/1024/1*M1K6xeYlf_sRfnE7lfNKOA.jpeg)
-_Photo by Joel Rivera-Camacho on Unsplash_
+_Photo by Joel Rivera-Camacho on Unsplash_
 
 Product people play an amorphous, [uncertain](https://medium.com/agileinsider/what-is-the-product-mindset-af06e01adf70), and constantly renegotiated role on product teams. To do well in that role requires experience. To become a great product person, you need to be able to understand the signals of a new situation and match it to analogies that have happened in the past.
 
@@ -28,7 +28,7 @@ I first discovered DFCs through [The Decision Game Club](https://teachusmc.blogs
 The DFC, and its cousin the [tactical decision game](https://en.wikipedia.org/wiki/Tactical_decision_game) (TDG), are a story told in a way that you are the protagonist. You are presented with information that is incomplete and ambiguous (like the real world) and are asked to make a decision about what to do next. For the military, this would result in an order to give, a plan to brief, or an action to take. In my mind these are very similar to [chess puzzles](https://chesspuzzle.net/) but in the military domain.
 
 ![](https://cdn-images-1.medium.com/max/1024/0*H89mYVXTdATsJfjf)
-_Graphic from Scenario #1, “Ambush at Dark,” published in Mastering Tactics by John F. Schmitt._
+_Graphic from Scenario #1, “Ambush at Dark,” published in Mastering Tactics by John F. Schmitt._
 
 If you want to see some of the TDGs used by the USMC, there is a book of them available online called [Mastering Tactics](https://mca-marines.org/wp-content/uploads/Mastering-Tactics.pdf) by John F. Schmitt from 1994.
 
@@ -120,7 +120,7 @@ You can find the first DFC I wrote about [Shashir’s case on Google Docs](https
 ### Running the DFC for product people
 
 ![](https://cdn-images-1.medium.com/max/1024/0*BkyDTiqmayTkVZ5c)
-_Photo by Rodeo Project Management Software on Unsplash_
+_Photo by Rodeo Project Management Software on Unsplash_
 
 When running a DFC, you are a combination of a dungeon master (from Dungeons & Dragons) and a facilitator for a workshop. There is no right answer for people to give even if what happened already happened. The goal is to explore people’s mindsets and considerations when applying process/technique/framework/etc.
 
@@ -161,4 +161,3 @@ _Special thanks to_ [_Damien O’Connell_](https://www.linkedin.com/in/damien-o-
 * * *
 
 [Decision-Forcing Cases: Gaining experience without the hurt](https://medium.com/agileinsider/decision-forcing-cases-gaining-experience-without-the-hurt-217a4f846606) was originally published in [Agile Insider](https://medium.com/agileinsider) on Medium, where people are continuing the conversation by highlighting and responding to this story.
-

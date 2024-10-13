@@ -7,7 +7,7 @@ author: 100006
 ---
 
 ![](https://cdn-images-1.medium.com/max/1024/1*FwqPJeZJXcgskVyh_eINsw.jpeg)
-_Photo by Nika Benedictova on Unsplash_
+_Photo by Nika Benedictova on Unsplash_
 
 What if Netflix was a military contractor?
 

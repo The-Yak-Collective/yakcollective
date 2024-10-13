@@ -31,7 +31,7 @@ Luckily, that way of working has been possible in browsers ever since tabs becam
 But there’s a problem, which is that it’s hard to remember what a given window is for! The “Window” menu tries to be helpful, by describing each window using the title of the webpage it currently shows. That’s better than nothing, but it’s hard to decode at a glance:
 
 ![Bad: the Window menu’s auto-generated window titles are not helpful!](https://cdn-images-1.medium.com/max/1024/1*DtH4OvY6lNAU9FGbU6gkBw.png)
-_Bad: these auto-generated window titles are not helpful! Where did I put that form I was filling out…_
+_Bad: these auto-generated window titles are not helpful! Where did I put that form I was filling out…_
 
 Here’s where “Window Naming” comes in. It lets you name each window, so you instead see something like:
 
@@ -45,12 +45,12 @@ Sold? Here’s how to enable the feature.
 First of all, you’ll need to update Chrome to version 88 or later. Go to the “About Google Chrome” menu item:
 
 ![“About Google Chrome” is where you can update your version](https://cdn-images-1.medium.com/max/1024/1*oafobXPXR_O7PhNsbNPzrg.png)
-_“About Google Chrome” is where you can update your version_
+_“About Google Chrome” is where you can update your version_
 
 Here you can see your current Chrome version:
 
 ![Where Chrome shows you its current version, you can update it](https://cdn-images-1.medium.com/max/1024/1*GtgsYOAzNrEev7SgJawraw.png)
-_Where Chrome shows you its current version, you can update it_
+_Where Chrome shows you its current version, you can update it_
 
 If Chrome is at version 88 or later, you’ve got a version that supports “Window Naming”. If not, it’ll give you an option to update; update and relaunch Chrome.
 
@@ -61,7 +61,7 @@ So now you’ve got Chrome up to date. By default, “Window Naming” is not tu
 Go to the URL “chrome://flags”: (if your browser looks different from my screenshots, it’s just cosmetic — I use Chrome’s “dark mode”, different topic!)
 
 ![chrome://flags has advanced features you won’t find in the regular Chrome settings](https://cdn-images-1.medium.com/max/608/1*pLfG3ka462zXmXNegpWQJQ.png)
-_chrome://flags has advanced features you won’t find in the regular Chrome settings_
+_chrome://flags has advanced features you won’t find in the regular Chrome settings_
 
 You’ll see this sorta scary page:
 
@@ -73,12 +73,12 @@ _chrome://flags is experimental_
 In the “Search flags” box, search for “naming”. You should see “Window Naming” come up:
 
 ![Search chrome://flags for “naming”](https://cdn-images-1.medium.com/max/1024/1*FcRuhPeDlRkc2gNzdmxERg.png)
-_Search chrome://flags for “naming”_
+_Search chrome://flags for “naming”_
 
 Click on the “Default” dropdown menu on the right, and select “Enabled”:
 
 ![Enable Window Naming](https://cdn-images-1.medium.com/max/1024/1*f47rDmDCosCfMOD92rzjAw.png)
-_Enable Window Naming_
+_Enable Window Naming_
 
 ### 3. Relaunch Chrome
 
@@ -92,17 +92,17 @@ _Relaunch Chrome_
 Anywhere in the top of the window, in the area next to the tabs, right-click (or control-click) and select “Name Window…”:
 
 ![Right-click the tab bar and choose “Name Window”](https://cdn-images-1.medium.com/max/956/1*5p-3XDiyZmnXe5Vf47DY7Q.png)
-_Right-click the tab bar and choose “Name Window”_
+_Right-click the tab bar and choose “Name Window”_
 
 This will give you a little popup dialog box to set that window’s name:
 
 ![Typing a name for this window](https://cdn-images-1.medium.com/max/1024/1*UfDzykUJXBH7lbw6ZVMgew.png)
-_Type a name for this window_
+_Type a name for this window_
 
 Do that for all your windows!
 
 ![Window menu showing useful window names](https://cdn-images-1.medium.com/max/1024/1*Y--ph5hOsAjXjnfOP-Ki_Q.png)
-_The finished product_
+_The finished product_
 
 ### Tips
 
@@ -123,17 +123,17 @@ One more thing!
 The Window menu now shows window names, but there’s still a problem: the windows themselves don’t show their own names! So when you’re cycling through windows, it can take a moment to recognize them.
 
 ![](https://cdn-images-1.medium.com/max/1024/1*uG_Ql_2_FpVdFK9ep9GYng.png)
-_The window doesn’t show its name_
+_The window doesn’t show its name_
 
 This can be solved using an existing feature in Chrome called “Tab Grouping”. Just right-click on the first tab and select “Add Tab to New Group”:
 
 ![](https://cdn-images-1.medium.com/max/1024/1*yj-wIl86vFw1Vaqq026-QQ.png)
-_You can make a new “Group” for a tab_
+_You can make a new “Group” for a tab_
 
 Now type in the window’s name, and a label will appear to the left of the first tab. You can also select a distinct color if you like.
 
 ![](https://cdn-images-1.medium.com/max/1024/1*RkQ7Y7Xf4c68q2dTZCywLQ.png)
-_Label the group to see a static label in the window_
+_Label the group to see a static label in the window_
 
 (Note that if you close that “grouped” tab, you’ll lose the label and have to add it again. I usually have at least one tab that’s basically permanent in each window, for instance a primary Google Doc for that area of work. For my “Temp” window, I just keep a “New Tab” as my first tab and never close it.)
 

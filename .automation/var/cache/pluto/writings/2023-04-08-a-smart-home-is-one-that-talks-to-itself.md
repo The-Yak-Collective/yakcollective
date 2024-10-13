@@ -36,7 +36,7 @@ If you want to get a full understanding of animisms, how it could be applied to 
 ### Not everything should talk
 
 ![Scene from the movie Beauty and the Beast from “Be our guest” musical number where the clock, plates, napkins, and tea pot are all singing while champaigne sprayed everywhere.](https://cdn-images-1.medium.com/max/720/0*SNweibX2_yjTpoxp)
-_Source: Angela Lansbury in Beauty and the Beast (1991)_
+_Source: Angela Lansbury in Beauty and the Beast (1991)_
 
 In many idealized smart home visions, everything could talk to you. That sounds horrible.
 
@@ -57,7 +57,7 @@ If I said that whenever a member of the household walks into a room the lights s
 If you wanted to understand what rules and exceptions were currently at play, you would have to parse an interface that is focused on regular rules rather than everything that could possibly happen in the home. Consider:
 
 ![Screen for the VeSync app for setting schedules, timers, and away behavior for smart home devices.](https://cdn-images-1.medium.com/max/392/0*LwmFBdk-KagV0B0t)
-_Source: VeSync app_
+_Source: VeSync app_
 
 Not to pick on [VeSync](https://www.vesync.com/) in particular (I have a lot of their devices!) but you wouldn’t be able to get these exceptions handled in this type of interface. Even if you could start to put them there it would quickly get unwieldy to manage the list.
 
@@ -70,7 +70,7 @@ Giving text (or verbal) commands and requests for explanation make much more sen
 When something goes wrong you shouldn’t have to launch a specialty app to figure out what is going on. You should instead be able to jump into the household chat channel and ask what happened. If the wrong context was considered, give the right feedback so that the entire ecosystem of devices could adjust their behaviors. Then we can also have them coordinate with each other. But you shouldn’t have to listen to all of the chatter going on between devices all the time.
 
 ![Hypothetical chat app where different devices are chatting with each other about what they are doing to help the household. They are talking about how turning on the light automatically wasn’t great for the baby napping. And they talk about how a package was just delivered and notifying the person in the house. The message about the be sent is related to the family going on a vacation.](https://cdn-images-1.medium.com/max/814/1*DBiSiI9JtTnNMCGeH_PQHg.png)
-_Prototype by the author_
+_Prototype by the author_
 
 Animistic design allows for devices to act the way we would expect them to (e.g., a video doorbell is welcoming to the people that live there) and even disagree about what is best in certain circumstances (e.g., letting in a familiar face during a dinner party automatically).
 
@@ -116,4 +116,3 @@ Happy smart home hacking.
 * * *
 
 [A smart home is one that talks to itself](https://uxdesign.cc/a-smart-home-is-one-that-talks-to-itself-58bb9222d893) was originally published in [UX Collective](https://uxdesign.cc) on Medium, where people are continuing the conversation by highlighting and responding to this story.
-

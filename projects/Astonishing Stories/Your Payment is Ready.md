@@ -8,6 +8,10 @@ google_doc: https://docs.google.com/document/d/15LRvkKeNMwRgr6Zf8dYLBBAqhpBxIyLP
 description: In an age of pandemics and rolling lockdowns, his dad saw the youth orchestra as an opportunity for kids like his son to get out of the house.
 hidden: false
 page_css: /projects/astonishing-stories/your-payment-is-ready.css
+title: Your Payment is Ready
+aliases:
+  - Your Payment is Ready
+quartsRssFeed: true
 ---
 # Your Payment is Ready
 <time class="db small ttu o-60">{{ page.date | date_to_long_string: "ordinal", "US" }}</time>

@@ -3,7 +3,6 @@ title: Yak Robotics Garage
 aliases:
   - Yak Robotics Garage
 date: 2021-03-28
-quartsRssFeed: true
 ---
 *Robotics tinkering for everyone*
 

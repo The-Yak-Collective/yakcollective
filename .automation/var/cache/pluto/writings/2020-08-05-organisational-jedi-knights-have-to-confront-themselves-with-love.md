@@ -36,7 +36,7 @@ I use 13 elements in much of my core work — for the first four, see here:
 ### How dominant/other cultural patterns create system fragility….
 
 ![](https://cdn-images-1.medium.com/max/1024/1*O_C3wucGOC4Z7AnIGzXExg.png)
-_slogan: ‘an image of dominance — an Imperial Tank in the hold city of Jedha’. The underlying image is the same thing, from the Star Wars film Rogue One_
+_slogan: ‘an image of dominance — an Imperial Tank in the hold city of Jedha’. The underlying image is the same thing, from the Star Wars film Rogue One_
 
 Naturally and instantly, like a reflex, human groups connect — and part of their connection is to see themselves as different from some other group. As soon as the concept of Otherness is introduced — and one group has superior access to resources, rule-setting, and opportunity — the dynamic sets in.
 
@@ -47,7 +47,7 @@ _How do you see this Dominant/Other cycle playing out? In your life? In society?
 ### Human responses in organisation tend to produce patterns of separation and resentment which destroy partnership.
 
 ![](https://cdn-images-1.medium.com/max/1024/1*732fBXUiv5xzRKOCpwvbCw.png)
-_Image of Darth Vader reaching out in Return of the Jedi — caption ‘Darth Vader reaches out’_
+_Image of Darth Vader reaching out in Return of the Jedi — caption ‘Darth Vader reaches out’_
 
 It’s natural, instant. And it builds more… more separation, more resentment. Less and less partnership.
 
@@ -72,7 +72,7 @@ _What would it mean to act in service of the system?_
 ### Are you trapped in a tractor beam of The Force?
 
 ![](https://cdn-images-1.medium.com/max/772/1*Ov-V59zzwV5sqsYY_rmsJg.jpeg)
-_A horse’s rear end with the caption ‘is the Force in organisational life making a horse’s a&%£$ out of you?_
+_A horse’s rear end with the caption ‘is the Force in organisational life making a horse’s a&%£$ out of you?_
 
 Structural coupling is the natural, incremental process by which organisations become better and better fit to their environment — and their environment becomes more and more fit to them.
 
@@ -91,7 +91,7 @@ _Do you like where they’re heading?_
 ### Organisational Jedi Knights have to confront themselves with love
 
 ![](https://cdn-images-1.medium.com/max/934/1*p4FWJdGxG3RaBN2x7bRWLA.png)
-_Picture of aged Luke Skywalker from the Rise of Skywalker, with the caption ‘ultimately, luke is still fighting himself’_
+_Picture of aged Luke Skywalker from the Rise of Skywalker, with the caption ‘ultimately, luke is still fighting himself’_
 
 This is the true Dark Side of The Force in organisational life, which Professor John Raven, in the Freudian tradition, calls the Thanatosian or death urge.
 

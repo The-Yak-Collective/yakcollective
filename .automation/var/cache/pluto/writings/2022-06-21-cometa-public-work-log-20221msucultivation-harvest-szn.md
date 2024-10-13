@@ -65,7 +65,7 @@ But a few snapshots of my provisional metric tracking make that story pretty cle
 ![](https://cdn-images-1.medium.com/max/574/0*UCwFxR0UTdbOBRf4.png)
 
 ![](https://cdn-images-1.medium.com/max/1024/0*UGag2C5mKfitnD3p.png)
-_I’ve more than doubled my original freelance work targets, more or less kept pace with relational & toolmaking work targets (albeit somewhat perfunctorily), all mostly at the expense of content work (& unpictured: social poasting & engagement, on which I’ve got some updated takes in store…)._
+_I’ve more than doubled my original freelance work targets, more or less kept pace with relational & toolmaking work targets (albeit somewhat perfunctorily), all mostly at the expense of content work (& unpictured: social poasting & engagement, on which I’ve got some updated takes in store…)._
 
 And while my [Q1 OKRs](https://github.com/coemeta/open-source-strategy/blob/main/frameworks/okrs.md) landed in a solid place, [Q2](https://docs.google.com/spreadsheets/d/1sdBfK9FYPXAVAoHKcvjufuq5_6Hso2KmdGZGU8ChG8g/edit?usp=sharing) …not so much, mostly due to lack of need (or capacity) for further revenue experiments — plus content creation, social posting, & peer-collaboration getting crowded out by the sudden spike in client demand (which has been greater than planned since month 2 of this journey — for which I’m fortunate & grateful!).
 
@@ -118,4 +118,3 @@ Web: [coemeta.xyz](https://coemeta.xyz/)
 * * *
 
 [Coεmeta Public Work Log 2022.1.MSU — Cultivation & Harvest Szn](https://medium.com/coemeta/co%CE%B5meta-public-work-log-2022-1-msu-cultivation-harvest-szn-ee8db59ddb7c) was originally published in [Coεmeta](https://medium.com/coemeta) on Medium, where people are continuing the conversation by highlighting and responding to this story.
-

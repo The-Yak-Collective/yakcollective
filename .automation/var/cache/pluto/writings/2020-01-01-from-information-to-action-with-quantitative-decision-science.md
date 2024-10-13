@@ -127,7 +127,7 @@ Such is often the world of academic pondering. But what if we treated our questi
 #### NBA Eastern Conference semi-finals: Game 3 approaches
 
 ![](https://cdn-images-1.medium.com/max/775/0*KYihMXhwEG4CWiiU.jpg)
-_Brett Brown, via wip_
+_Brett Brown, via wip_
 
 In order to translate our original wager into a matter of decision analysis, let’s put ourselves in the shoes of our heroes’ head coach, Brett Brown, in the scenario that gave rise to our initial wager: having _lost then won_ the first 2 away games of a best-of-7 playoff series.
 
@@ -152,7 +152,7 @@ _(sometimes requires estimation from data, as well as specifying_ [_loss_](https
 #### Expected value & base rates
 
 ![](https://cdn-images-1.medium.com/max/1000/0*zj53j2f1ANJKKiYJ)
-_via Julian Hochgesang on Unsplash_
+_via Julian Hochgesang on Unsplash_
 
 Assuming we trust the historical record since 1984, we can establish our [base rates](https://en.wikipedia.org/wiki/Base_rate) of expected success. As we’ve repeatedly noted, away teams that _lose then win_ (L\_W) have a 36% historical win rate, while _win then lose_ (W\_L) teams have a 43% win rate.
 
@@ -187,7 +187,7 @@ So what do we  **_do_**?
 #### Actions & Cost functions
 
 ![](https://cdn-images-1.medium.com/max/1000/0*QRaKnW8LLxZI5xOL)
-_via Scott Webb on Unsplash_
+_via Scott Webb on Unsplash_
 
 To answer that, we have to quantify some assumptions about our possible decisions / actions (change strategy or not), & how those decisions will interact with the base rates above to produce ultimate consequences, given potential outcomes (win or lose the series). We call this sort of quantification a “cost” function (among [other things](https://en.wikipedia.org/wiki/Loss_function)).
 
@@ -273,7 +273,7 @@ Thus, 𝔼[L\_W | decision\_n] \> 𝔼[L\_W | decision\_c]
 #### Evaluating multiple “states of nature”
 
 ![](https://cdn-images-1.medium.com/max/1000/0*UOfne5s5FeyI92Fn)
-_via João Silas on Unsplash_
+_via João Silas on Unsplash_
 
 The preceding analysis might strike you as little more than a simple [cost-benefit analysis](https://en.wikipedia.org/wiki/Cost%E2%80%93benefit_analysis) (CBA), where probabilistic _expected value_ is substituted for traditional monetary value. You would be correct, in that CBA can be thought of as a special case of decision analysis. But decision theoretic frameworks provide a much richer extension of this sort of evaluation, through the inclusion of probability theory, alternate decision rules, flexible cost functions & consideration of multiple outcomes or **_states of nature_**.
 
@@ -284,7 +284,7 @@ Referring to outcomes as **_states of nature_** evokes the fact that these outco
 #### NBA states of nature
 
 ![](https://cdn-images-1.medium.com/max/1000/0*lJhYv1PRu1foqKt2)
-_via Dave on Unsplash_
+_via Dave on Unsplash_
 
 So far, we’ve only considered two outcomes:
 
@@ -424,7 +424,7 @@ Since all **_No Change_** payoffs are higher than their **_Change_** counterpart
 #### Selecting a decision criterion under many states of nature
 
 ![](https://cdn-images-1.medium.com/max/1000/0*n-CYKlIAIyoYKoLk)
-_via by Lena Bell on Unsplash_
+_via by Lena Bell on Unsplash_
 
 Let’s pretend these are our payoffs:
 
@@ -610,4 +610,3 @@ Github: [https://github.com/dnlmc](https://github.com/dnlmc)
 * * *
 
 [From Information to Action with Quantitative Decision Science](https://medium.com/coemeta/from-information-to-action-with-quantitative-decision-science-9752b6c969d5) was originally published in [Coεmeta](https://medium.com/coemeta) on Medium, where people are continuing the conversation by highlighting and responding to this story.
-

@@ -22,7 +22,7 @@ Read on for the inspiration for this design fiction and a second piece that is f
 Like [last time](https://medium.com/predict/rotten-tomatoes-meeting-reviews-google-chrome-extension-bab1c2e60b8c), I decided to use a combination of [The Work Kit of Design Fiction](https://nearfuturelaboratory.myshopify.com/products/the-work-kit-of-design-fiction-2023-mj-edition) cards from the [Near Future Laboratories](https://www.nearfuturelaboratory.com/) with the [Tensions and Practices](https://www.theready.com/product/tension-and-practice-cards) cards from [The Ready](https://www.theready.com/).
 
 ![](https://cdn-images-1.medium.com/max/1024/1*EDs-_QdaxWtN0Q00D46QPQ.png)
-_My spread of Work Kit of Design Fiction and Tension cards_
+_My spread of Work Kit of Design Fiction and Tension cards_
 
 When drawing them I got the following combination:
 
@@ -98,4 +98,3 @@ _And I’ve also talked about how_ [_product managers write fiction, starting wi
 * * *
 
 [RiteFeeling behavior modification program to reduce meetings](https://medium.com/predict/ritefeeling-behavior-modification-program-to-reduce-meetings-ccbd06a1cf3b) was originally published in [Predict](https://medium.com/predict) on Medium, where people are continuing the conversation by highlighting and responding to this story.
-

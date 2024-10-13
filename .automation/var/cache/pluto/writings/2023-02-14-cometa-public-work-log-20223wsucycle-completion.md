@@ -33,7 +33,7 @@ A **full year has passed** since embarking on this journey, the first full cycle
 - **But vital** [**pillars**](https://github.com/coemeta/open-source-strategy/blob/main/frameworks/pillars-and-2x2s.md) **of the broader** [**mission**](https://github.com/coemeta/open-source-strategy/blob/main/frameworks/mission-and-vision.md) **went largely neglected** as a consequence, & **the** [**vision itself evolved**](https://roamresearch.com/#/app/coemeta/page/ywwA0T9W4) (as expected) in response to experience gained & lessons learned.
 
 ![](https://cdn-images-1.medium.com/max/1024/0*-ukDXtCk6X1ix8up)
-_screenshot of the Coεmeta Open Source Strategy repo_
+_screenshot of the Coεmeta Open Source Strategy repo_
 
 Regarding the **initial** [**pillars**](https://github.com/coemeta/open-source-strategy/blob/main/frameworks/pillars-and-2x2s.md), a **brief assessment** :
 
@@ -80,4 +80,3 @@ Web: [coemeta.xyz](https://coemeta.xyz/)
 * * *
 
 [Coεmeta Public Work Log 2022.3.WSU — Cycle Completion](https://medium.com/coemeta/co%CE%B5meta-public-work-log-2022-3-wsu-cycle-completion-362a5df08fd6) was originally published in [Coεmeta](https://medium.com/coemeta) on Medium, where people are continuing the conversation by highlighting and responding to this story.
-

@@ -93,7 +93,7 @@ The [**general problem statement**](https://dnlmc.medium.com/barbells-fractals-m
 Or in other words: _produce the feedback loop where the good gets better_
 
 [![](https://cdn-images-1.medium.com/max/1024/1*pUQu4tz7iCPPZU6liuiWJQ.png)](https://twitter.com/Conaw/status/1353260858839687168)
-_yes we’re also getting weird with it_
+_yes we’re also getting weird with it_
 
 We need to concretely define all these terms, but first recall that we have 3 candidate strategies (not necessarily mutually exclusive):
 
@@ -526,7 +526,7 @@ To get a sense of what this did, we can plot our graphs & size by hub score rath
 ![](https://cdn-images-1.medium.com/max/700/1*5x_PX3dm1dg-LC5B7-2E9A.png)
 
 ![](https://cdn-images-1.medium.com/max/700/1*491OdJnqQMDhoQWJt6O8aQ.png)
-_Predictably, nodes with higher hub scores are closer to central cores or nexuses in the networks_
+_Predictably, nodes with higher hub scores are closer to central cores or nexuses in the networks_
 
 We can also plot the hub score distributions & compare to our previously plotted degree distributions (which are obviously related):
 
@@ -786,4 +786,3 @@ Github: [https://github.com/dnlmc](https://github.com/dnlmc)
 * * *
 
 [Barbells, Fractals & Memelords: Scaling Strategies for Ethical Action](https://medium.com/coemeta/barbells-fractals-memelords-scaling-strategies-for-ethical-action-cca9a868b8a1) was originally published in [Coεmeta](https://medium.com/coemeta) on Medium, where people are continuing the conversation by highlighting and responding to this story.
-

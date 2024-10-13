@@ -10,7 +10,7 @@ original_link: https://antlerboy.medium.com/transduction-leading-transformation-
 I’m on leave (umm… ‘working holiday’) — so a special ‘randomised’ version this week. Your version is unique to you, randomly generated like the Subbuteo Rugby Scrum simulator (pictured) — so assume that all serendipities are perfectly arranged by the universe for you :-)
 
 ![](https://cdn-images-1.medium.com/proxy/0*POHMFC-Gm7xSfIYt)
-_The Subbuteo Scrum Simulator — the ball goes in, but where will it come out?_
+_The Subbuteo Scrum Simulator — the ball goes in, but where will it come out?_
 
 ![](https://cdn-images-1.medium.com/proxy/0*Tqwz-EVGYYJlEuZr)
 

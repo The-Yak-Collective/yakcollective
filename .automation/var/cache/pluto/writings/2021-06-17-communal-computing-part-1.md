@@ -10,7 +10,7 @@ original_link: https://chrizbot.medium.com/communal-computing-part-1-f871c6bc525
 #### How do we build devices that are shared by default?
 
 ![](https://cdn-images-1.medium.com/max/1024/1*doLoRusr3ac4jE_6IwJG7w.jpeg)
-_LG Smart Refrigerator, CES 2011. (source: David Berkowitz on Flickr)_
+_LG Smart Refrigerator, CES 2011. (source: David Berkowitz on Flickr)_
 
 Communal computing are devices that you find in your home or office. Anyone within reach (or voice) can use them. I’ve written the first post in a series for the O’Reilly Radar blog on how these devices are framed, designed, and built  **wrong**.
 

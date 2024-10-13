@@ -8,6 +8,10 @@ google_doc: https://docs.google.com/document/d/1989Uffl2bLLia75bX9_EOFpUesuUZ7eZ
 description: He decided then that it was time for him to untangle this mess because no way he was getting laid without a neat graph of thoughts — manufactured or otherwise.
 hidden: false
 page_css: /projects/astonishing-stories/out-of-the-loop.css
+title: Out of the Loop
+aliases:
+  - Out of the Loop
+quartsRssFeed: true
 ---
 # Out of the Loop
 <time class="db small ttu o-60">{{ page.date | date_to_long_string: "ordinal", "US" }}</time>

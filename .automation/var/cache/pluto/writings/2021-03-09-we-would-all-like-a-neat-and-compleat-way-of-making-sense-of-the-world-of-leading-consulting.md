@@ -16,7 +16,7 @@ Bongard games are a brilliant, fun little way to illustrate that you can never h
 It’s simple. You have six postcard-sized images on the left, and six on the right.
 
 ![](https://cdn-images-1.medium.com/max/776/1*EXaJEjjdLOo6gZ6bD9rM_g.png)
-_an example Bongard game_
+_an example Bongard game_
 
 The **game** is to identify the ‘difference that makes a difference’ — the rule that tells you why the ones on the left can be categorised separately from those on the right.
 

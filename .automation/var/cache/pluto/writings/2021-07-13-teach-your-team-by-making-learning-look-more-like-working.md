@@ -7,7 +7,7 @@ author: 100006
 original_link: https://chrizbot.medium.com/teach-your-team-by-making-learning-look-more-like-working-ee20fff6c793?source=rss-ba6349c9c628------2
 ---
 ![](https://cdn-images-1.medium.com/max/1024/1*AbleXbGl1xKHdyNVin6V0A.jpeg)
-_Photo by NeONBRAND on Unsplash_
+_Photo by NeONBRAND on Unsplash_
 
 Do you struggle to help your product team (and product managers) continuously learn?
 

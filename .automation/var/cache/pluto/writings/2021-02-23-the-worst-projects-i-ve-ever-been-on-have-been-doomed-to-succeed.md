@@ -7,7 +7,7 @@ author: 100047
 original_link: https://medium.com/@antlerboy/the-worst-projects-ive-ever-been-on-have-been-doomed-to-succeed-f9b170a8bd4f?source=rss-97852f5a56ae------2
 ---
 ![](https://cdn-images-1.medium.com/max/750/1*g1l7hj-ptAHYo53lDuMCkA.jpeg)
-_Image by Graham Richardson — https://www.flickr.com/photos/didbygraham/537575394 , Creative Commons license (CC BY 2.0) https://creativecommons.org/licenses/by/2.0/_
+_Image by Graham Richardson — https://www.flickr.com/photos/didbygraham/537575394 , Creative Commons license (CC BY 2.0) https://creativecommons.org/licenses/by/2.0/_
 
 We’ve all been there. The leaders and politicians/board have literally put their names to the big IT or transformation contract, it’s all signed off. Celebrated with cigars.
 

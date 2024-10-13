@@ -7,7 +7,7 @@ author: 101165
 ---
 
 ![](https://cdn-images-1.medium.com/max/1024/1*bpOwOiHCygtTcyyUCaa0KA.jpeg)
-_from Stoke by Sam Wade_
+_from Stoke by Sam Wade_
 
 #### My highest recommendations, in a nutshell:
 
@@ -40,7 +40,7 @@ Here are the books I used to connect to the world with, across space and time, w
 #### Always Coming Home by Ursula K. Le Guin and Margaret Chodos-Irvine
 
 ![](https://cdn-images-1.medium.com/max/560/0*RjbuCBBOIg3Hok72)
-_by Margaret Chodos-Irvine, from the book_
+_by Margaret Chodos-Irvine, from the book_
 
 Some novels are like snack food.
 
@@ -51,7 +51,7 @@ And some, like _Always Coming Home_, are like 17-course tasting menus where the 
 I hesitate to explain _Always Coming Home_ — it’s sort of an artifact as much as it is a book, and discovering what it is is part of the fun. Le Guin is generally called a sci-fi writer; there are no space ships here, but this is the most ambitious work of sci-fi-style world-building I’ve ever read. The total effect of reading it is to commune profoundly with the people of Le Guin’s imagined society.
 
 ![](https://cdn-images-1.medium.com/max/830/0*fepmFoYbbHe7cEPW)
-_by Margaret Chodos-Irvine, from the book_
+_by Margaret Chodos-Irvine, from the book_
 
 There’s sort of a tension in Le Guin’s work, as I read it: a tension between her dissatisfaction with human small-mindedness, and her celebration of human foibles. She both loves to tell of superstition and gossip and foolishness, and isn’t afraid to show the abyss of cruelty and danger that come with them.
 
@@ -389,7 +389,7 @@ _Highly recommended._
 #### Golden Shield by Anchuli Felicia King
 
 ![](https://cdn-images-1.medium.com/max/1024/0*RABzzQgx7dILwazO.jpg)
-_Photo by Jeff Busby_
+_Photo by Jeff Busby_
 
 Similar in tone and subject to J.T. Rodgers’s _Blood and Gifts_, which also dealt with international relations and how they play out on a human level. This play features a translator character, and makes creative and clever theatrical use of the role of translator: sometimes the translator is bridging a communication gap, but sometimes they themselves are the the source of a communication gap, and sometimes their role is to comment on our understanding of a communication. I wished these intriguing themes were taken a little deeper and the plot were better crafted; there are a few turns of the story that don’t quite hold up to examination. But it does something with theater I haven’t seen before.
 
@@ -400,7 +400,7 @@ _Recommended._
 #### Trick Mirror by Jia Tolentino
 
 ![](https://cdn-images-1.medium.com/max/488/0*eOLxmt_8S3_KN5Vd)
-_I love the 60s throwback cover design_
+_I love the 60s throwback cover design_
 
 I dogeared dozens of pages of this collection of essays about feminism and its intersection with culture and politics. Tolentino has a deep well of reading, reflection and experience at her fingertips, which she weaves nimbly into her narrative breakdowns of complex topics. She moves lightly between personal exploration and societal exploration, and her observations seem both relatable and incisive.
 
@@ -443,7 +443,7 @@ _Not recommended._
 #### Hunger Makes me a Modern Girl by Carrie Brownstein
 
 ![](https://cdn-images-1.medium.com/max/745/0*iUKdgTAyzoDmlkGp.jpg)
-_I’m not sure who took this photo; source here_
+_I’m not sure who took this photo; source here_
 
 Frustrating and incomplete. I’m a fan of Carrie Brownstein’s music and acting, both of which feel like they have a fierce, unabashed truth. So it’s disappointing that this book feels so poised and polite.
 
@@ -456,7 +456,7 @@ _Not recommended._
 #### Dreams of Earth and Sky by Freeman Dyson
 
 ![](https://cdn-images-1.medium.com/max/1024/1*vTeNKCJ5LIrPpjWETO8hWQ.png)
-_Photo/illustration by Imke Lass/Redux and Marc Yankus_
+_Photo/illustration by Imke Lass/Redux and Marc Yankus_
 
 This is a book of essays that don’t have particular urgency, but do come from an active and experienced mind. The most notable essay is one in which Dyson puts forward his contrarian argument about global warming; he thinks that the cost to our economy of reducing our fossil fuel usage is so expensive that any reduction in warming can’t possibly be worth it.
 

@@ -7,7 +7,7 @@ author: 100006
 ---
 
 ![](https://cdn-images-1.medium.com/max/1024/1*nhluOjzqvy1xGHYAau2wIQ.jpeg)
-_Photo by Brett Jordan on Unsplash_
+_Photo by Brett Jordan on Unsplash_
 
 If a voice platform like Alexa or Google Home Hub doesn’t prioritize communal computing, how should skill developers build for everyone in the home and office?
 

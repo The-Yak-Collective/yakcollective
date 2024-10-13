@@ -39,7 +39,7 @@ As elaborated in the full post, **public work & contributing to knowledge common
 ### 🧬 Strategic Frameworks: sensemaking, planning & evaluation
 
 ![](https://cdn-images-1.medium.com/max/1024/0*pzLlEHVonI4X2VdI.png)
-_a mutant 2x2 of Coεmeta strategic pillars, see full post for details_
+_a mutant 2x2 of Coεmeta strategic pillars, see full post for details_
 
 As a [decision science](https://medium.com/coemeta/from-information-to-action-with-quantitative-decision-science-9752b6c969d5#4054) practitioner & general strategy nerd, I’ve seen how **the right framework can simplify, clarify & streamline the task of making sense of information & (potential) actions** — _as long as we don’t mistake the map for the territory_ ᵋ. So I’ve made ample use of various models & frameworks in the planning & execution of Coεmeta _to date_. This is a short list of the most relevant & cogent.
 
@@ -65,7 +65,7 @@ _A brief timeline of relevant events, from Coεmeta’s conception, to launch in
 ### ꩜ Coda: Eval & Checkout
 
 ![](https://cdn-images-1.medium.com/max/1024/0*iYg4pCKD6qdf9r5H.png)
-_a Wardley Map, see full post for details_
+_a Wardley Map, see full post for details_
 
 #### Vibe Check
 
@@ -115,4 +115,3 @@ Web: [coemeta.xyz](https://coemeta.xyz/)
 * * *
 
 [Coεmeta Public Work Log 2022.0.veu — Foundations & Emergence](https://medium.com/coemeta/co%CE%B5meta-public-work-log-2022-0-veu-foundations-emergence-81408d55407b) was originally published in [Coεmeta](https://medium.com/coemeta) on Medium, where people are continuing the conversation by highlighting and responding to this story.
-

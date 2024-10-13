@@ -8,6 +8,10 @@ google_doc: https://docs.google.com/document/d/15LRvkKeNMwRgr6Zf8dYLBBAqhpBxIyLP
 description: When you needed something, no matter how minor, someone, somewhere in the world could help you with it.
 hidden: false
 page_css: /projects/astonishing-stories/agglomerizing-the-aesthetic.css
+quartsRssFeed: true
+title: Agglomerizing the Aesthetic
+aliases:
+  - Agglomerizing the Aesthetic
 ---
 # Agglomerizing the Aesthetic
 <time class="db small ttu o-60">{{ page.date | date_to_long_string: "ordinal", "US" }}</time>

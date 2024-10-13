@@ -8,6 +8,10 @@ google_doc: https://docs.google.com/document/d/1JrlKrp4C3sy9ByOecAEWc2mxnoodvM5P
 description: "At a certain time, in a certain space, a person may speak or act and find himself under a recent form of judgment: cancellation."
 hidden: false
 page_css: /projects/astonishing-stories/department-of-restoration.css
+title: Department of Restoration
+aliases:
+  - Department of Restoration
+quartsRssFeed: true
 ---
 # Department of Restoration
 <time class="db small ttu o-60">{{ page.date | date_to_long_string: "ordinal", "US" }}</time>

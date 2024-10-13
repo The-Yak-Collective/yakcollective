@@ -9,7 +9,7 @@ author: 100053
 ![▶](https://s0.wp.com/wp-content/mu-plugins/wpcom-smileys/twemoji/2/72x72/25b6.png) ![⏸](https://s0.wp.com/wp-content/mu-plugins/wpcom-smileys/twemoji/2/72x72/23f8.png) ![⏯](https://s0.wp.com/wp-content/mu-plugins/wpcom-smileys/twemoji/2/72x72/23ef.png) ![⏭](https://s0.wp.com/wp-content/mu-plugins/wpcom-smileys/twemoji/2/72x72/23ed.png) ![⏪](https://s0.wp.com/wp-content/mu-plugins/wpcom-smileys/twemoji/2/72x72/23ea.png) ![⏹](https://s0.wp.com/wp-content/mu-plugins/wpcom-smileys/twemoji/2/72x72/23f9.png) ![⏺](https://s0.wp.com/wp-content/mu-plugins/wpcom-smileys/twemoji/2/72x72/23fa.png) ![⏮](https://s0.wp.com/wp-content/mu-plugins/wpcom-smileys/twemoji/2/72x72/23ee.png) ![⏩](https://s0.wp.com/wp-content/mu-plugins/wpcom-smileys/twemoji/2/72x72/23e9.png) ![◀](https://s0.wp.com/wp-content/mu-plugins/wpcom-smileys/twemoji/2/72x72/25c0.png) **Play, Pause, Step Back, Jump Ahead**. [Our iconography for linear navigation](https://en.wikipedia.org/wiki/Media_control_symbols) was lifted from olde technology, the VCR, which borrowed it from audio cassette players like the Sony Walkman that recycled commands from [larger reel to reel audio tape machines](https://en.wikipedia.org/wiki/Wollensak).
 
 ![https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Wollensak_portable_reel-to-reel_tape_recorder.jpg/800px-Wollensak_portable_reel-to-reel_tape_recorder.jpg](https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Wollensak_portable_reel-to-reel_tape_recorder.jpg/800px-Wollensak_portable_reel-to-reel_tape_recorder.jpg)
-_Wollensak portable reel-to-reel tape recorder. Bubba73 (Jud McCranie), CC BY-SA 4.0, via Wikimedia Commons_
+_Wollensak portable reel-to-reel tape recorder. Bubba73 (Jud McCranie), CC BY-SA 4.0, via Wikimedia Commons_
 
 We need a new iconography for identity interaction. Which interactions? What are the identity conversations people want to have with familiar and strange devices?
 
@@ -66,4 +66,3 @@ I expect many media for these conversations. Oral dialogs in hands-free spaces, 
 ![](https://widerteam.files.wordpress.com/2021/06/casiocasetterecorder.png?w=150)
 
 _P.S. We walked through this and a few other ideas at Identiverse 2021. [IoMT At Risk. A Wider Team Critique of Digital Identity Threats to the Internet of Medical Things](https://identiverse.com/idv2021/session/SESBMNB2HOYEIUYFD/). Read [all the posts from our Identiverse talk](https://wider.team/tag/identiverse-2021/)_.
-

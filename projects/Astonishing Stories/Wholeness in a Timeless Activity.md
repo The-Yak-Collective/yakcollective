@@ -8,6 +8,10 @@ google_doc: https://docs.google.com/document/d/1Uke-4h8kYARpFZixBfa5Ht6H-UWa7PyJ
 description: There are some activities the wealthy occasionally lust after. But there is one they will never stop avoiding.
 hidden: false
 page_css: /projects/astonishing-stories/wholeness-in-a-timeless-activity.css
+title: Wholeness in a Timeless Activity
+aliases:
+  - Wholeness in a Timeless Activity
+quartsRssFeed: true
 ---
 # Wholeness in a Timeless Activity
 <time class="db small ttu o-60">{{ page.date | date_to_long_string: "ordinal", "US" }}</time>

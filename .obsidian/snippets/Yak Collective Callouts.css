@@ -33,3 +33,41 @@
 	--callout-color: 158, 158, 158;
 	--callout-icon: lucide-cog;
 }
+
+/*
+ * Astonishing Stories
+ */
+
+ .callout[data-callout="story"] {
+	--callout-color: 158, 158, 158;
+	--callout-icon: lucide-book-marked;
+}
+
+/*
+ * Future Frontiers
+ */
+
+ .callout[data-callout="on-horizons"] {
+	--callout-color: 252, 251, 248;
+	--callout-icon: lucide-book-marked;
+}
+
+.callout[data-callout="democratized-underwater-exploration"] {
+	--callout-color: 25, 150, 175;
+	--callout-icon: lucide-book-marked;
+}
+
+.callout[data-callout="the-promise-of-nanosatellites-for-developing-nations"] {
+	--callout-color: 75, 100, 125;
+	--callout-icon: lucide-book-marked;
+}
+
+.callout[data-callout="starship-gold-rush"] {
+	--callout-color: 175, 100, 125;
+	--callout-icon: lucide-book-marked;
+}
+
+.callout[data-callout="designer-metabolism-and-minds"] {
+	--callout-color: 200, 100, 50;
+	--callout-icon: lucide-book-marked;
+}

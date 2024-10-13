@@ -12,7 +12,7 @@ A friend of mine was charged with analysing empty homes across London — ap
 He found \*very\* odd signals in the data.
 
 ![](https://cdn-images-1.medium.com/max/1024/1*yrDZ3KqR-zQkNvneQ0zdkQ.jpeg)
-_not actual data_
+_not actual data_
 
 Why do you think they occurred?
 

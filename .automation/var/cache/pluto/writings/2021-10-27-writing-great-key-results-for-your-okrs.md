@@ -9,7 +9,7 @@ author: 100006
 #### OKRs are just dreams without grounded key results
 
 ![](https://cdn-images-1.medium.com/max/1024/1*5t3gwpjC4ETCjcendzS2SA.jpeg)
-_Photo by Stephen Dawson on Unsplash_
+_Photo by Stephen Dawson on Unsplash_
 
 You may be struggling with [objectives and key results](https://www.youtube.com/watch?v=mJB83EZtAjc&ab_channel=GV) (OKRs) when getting started. The main reason is that you need to reframe the way that leaders provide direction to those on their teams. It is going from very specific work output to the customer outcomes they want.
 
@@ -42,7 +42,7 @@ This is a common trap to fall into but you shouldn’t. The point of a KR is pro
 The step after initiatives will be to go too far past an outcome and go straight for the business impacting metrics. You skipped right over the outcomes to business impact if you look at the progression that Josh Seiden has developed in his “Outcomes Over Outputs:”
 
 ![](https://cdn-images-1.medium.com/max/1024/0*ViIDMLV7JoLKvGr7)
-_How to measure progress with outcomes by Josh Seiden_
+_How to measure progress with outcomes by Josh Seiden_
 
 For example, the video recommendations team may try to use the following KR:
 
@@ -53,7 +53,7 @@ While this is a great goal to have it will be hard to directly tie the work that
 This [post by Curtis Stanier](https://crstanier.medium.com/measuring-impact-picking-the-right-metrics-in-product-2c3ac26fad29) has a great point to make about how to observe changes you make vs. the end goal, which is usually a business impacting change.
 
 ![](https://cdn-images-1.medium.com/max/1024/0*qKb0x5-WhVzK6fpg)
-_Measuring Impact — Picking the right metrics in Product by Curtis Stanier_
+_Measuring Impact — Picking the right metrics in Product by Curtis Stanier_
 
 You may want to directly impact the share price but you have much more capability to change things like CTR or CVR. Ideally you push towards something that is customer-impacting between these near term metrics and the long term metrics.
 
@@ -121,4 +121,3 @@ I hope that you can use these lessons to create great objectives and key results
 * * *
 
 [Writing great key results for your OKRs](https://medium.com/agileinsider/writing-great-key-results-for-your-okrs-f0213517c79e) was originally published in [Agile Insider](https://medium.com/agileinsider) on Medium, where people are continuing the conversation by highlighting and responding to this story.
-

@@ -42,7 +42,7 @@ The reason why [animism](https://en.wikipedia.org/wiki/Animism) exists is becaus
 Some of the earliest mythology and religion was probably animistic in nature. This includes the religions of the First Nations, many South Asian religions, Japan’s Shintoism, Paganism, and others.
 
 ![](https://cdn-images-1.medium.com/max/1024/0*yFgHbY8DhPGTtC8-.jpeg)
-_Empathy Mapping for the Machine_
+_Empathy Mapping for the Machine_
 
 I’d been thinking about how I can use something like [empathy mapping](https://www.nngroup.com/articles/empathy-mapping/) to understand our expectations for AI and machine learning systems. While I was at Philosophie, a design consultancy, some experimentation turned into [Empathy Mapping for the Machine](https://uxdesign.cc/robots-need-love-too-empathy-mapping-for-ai-59585ad3548d). I’ve found when I run these workshops it allows non-experts to grapple with tricky questions for these systems like value functions, guardrails, ethics, and bias. Without knowing a lot about the specifics of how the technologies work.
 
@@ -88,10 +88,10 @@ This included the following steps:
 When people are setting all of these things they are thinking about what makes a device understandable by them. It is all of the expectations they have included how it could go wrong.
 
 ![](https://cdn-images-1.medium.com/max/1024/0*_MesNrhh5ZZEWOKP)
-_Welcome to devices noname1000, Geni, and Pryla…_
+_Welcome to devices noname1000, Geni, and Pryla…_
 
 ![](https://cdn-images-1.medium.com/max/1024/0*CaGwqdNUQbaxPXxU)
-_…and the meatbags they have to live with._
+_…and the meatbags they have to live with._
 
 Equipped with the animistic worksheets they were ready to start roleplaying!
 
@@ -155,4 +155,3 @@ Communal computing:
 * * *
 
 [How does the Roomba really feel about dog poop?!](https://uxdesign.cc/how-does-the-roomba-really-feel-about-dog-poop-c590bcfb8834) was originally published in [UX Collective](https://uxdesign.cc) on Medium, where people are continuing the conversation by highlighting and responding to this story.
-

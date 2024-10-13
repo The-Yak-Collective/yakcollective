@@ -18,7 +18,7 @@ Do you feel like you can’t make decisions without getting everyone in your org
 For ideation, as before, I’m using a combination of [The Work Kit of Design Fiction](https://nearfuturelaboratory.myshopify.com/products/the-work-kit-of-design-fiction-2023-mj-edition) cards from the [Near Future Laboratories](https://www.nearfuturelaboratory.com/) with the [Tensions and Practices](https://www.theready.com/product/tension-and-practice-cards) cards from [The Ready](https://www.theready.com/).
 
 ![](https://cdn-images-1.medium.com/max/1024/1*R8jFDeoQ0E9zRo7xqd9CQg.png)
-_Another spread of cards_
+_Another spread of cards_
 
 This time I got the following:
 
@@ -69,4 +69,3 @@ _And I’ve also talked about how_ [_product managers write fiction, starting wi
 * * *
 
 [MICROMANAGED? Don’t fight your bureaucracy, insure against it!](https://medium.com/predict/micromanaged-dont-fight-your-bureaucracy-insure-against-it-6c31ad9c33a7) was originally published in [Predict](https://medium.com/predict) on Medium, where people are continuing the conversation by highlighting and responding to this story.
-

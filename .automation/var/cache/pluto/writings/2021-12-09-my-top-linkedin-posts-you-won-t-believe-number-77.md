@@ -1,7 +1,7 @@
 ---
 layout: post-external
 title: |
-  My top LinkedIn posts (you won’t BELIEVE number 77!) ;-)
+  My top LinkedIn posts (you won’t BELIEVE number 77!) ;-)
 date: 2021-12-09 01:40:00 +0000
 author: 100047
 original_link: https://antlerboy.medium.com/my-top-linkedin-posts-you-wont-believe-number-77-eb3f8956fd1?source=rss-97852f5a56ae------2

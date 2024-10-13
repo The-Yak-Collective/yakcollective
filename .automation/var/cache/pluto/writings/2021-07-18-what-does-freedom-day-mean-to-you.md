@@ -14,7 +14,7 @@ We all want freedom — but what does it mean?
 Poll on LinkedIn until 21/7/2021: [https://www.linkedin.com/posts/antlerboy\_future-economy-covidehi19-activity-6822773718541045762-OSO1/](https://www.linkedin.com/posts/antlerboy_future-economy-covidehi19-activity-6822773718541045762-OSO1/)
 
 ![](https://cdn-images-1.medium.com/max/554/1*rkdxZNNO3YdZ22kCNoCBJQ.jpeg)
-_I like this image because everyone believes they are defending freedom with all their might…_
+_I like this image because everyone believes they are defending freedom with all their might…_
 
 The past 18 months have been very very difficult for most of us all around the world, and in the UK, there have been many deaths, many more infections and many more people bereaved, many people who have lost their livelihoods, opportunities, life experiences.
 

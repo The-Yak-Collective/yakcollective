@@ -55,7 +55,7 @@ When we call a situation “risky,“ [we act on the situation using methods tha
 For a lot more detail on how we overload “risk,” how easily formal risk methods sneak into our thinking about “risky” situations, and why this is a problem, check out this essay on [how to think more clearly about risk](https://vaughntan.org/how-to-think-more-clearly-about-risk), this essay on [the insidiousness of the formal risk methods](https://vaughntan.org/the-insidiousness-of-the-formal-risk-mindset), and the [summary of the fourth discussion session on not-knowing](https://vaughntan.org/page/1#:~:text=Not%2Dknowing%20discussion%20%234%3A%20Misnaming%20the%20beasts%20(summary)).
 
 ```
-Overloading “risk” means using “risk” (a word which should have a narrow meaning of “formal risk”) to also describe many situations of not-knowing that are not formally risky. 
+Overloading “risk” means using “risk” (a word which should have a narrow meaning of “formal risk”) to also describe many situations of not-knowing that are not formally risky. 
 ```
 
 [![](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F265e9fc9-eb7e-4116-b26d-7d7574aaa425_1748x1208.png)](https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F265e9fc9-eb7e-4116-b26d-7d7574aaa425_1748x1208.png)
@@ -133,4 +133,3 @@ Best,
 VT
 
 Thanks for reading The Uncertainty Mindset (soon to become tbd)! Subscribe for free to receive new posts and support my work.
-

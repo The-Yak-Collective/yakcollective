@@ -10,7 +10,7 @@ original_link: https://chrizbot.medium.com/communal-computing-part-3-82a1a49d80a
 #### A Way Forward with Communal Computing
 
 ![](https://cdn-images-1.medium.com/max/960/0*9GJ4BmlXH2dhzyJA.jpg)
-_People at a mall (source: StockSnap via Pixabay)_
+_People at a mall (source: StockSnap via Pixabay)_
 
 How do you design devices for the home that don’t have major issues with identity, privacy, security, experience, and ownership? In this [final installment of the communal computing](https://www.oreilly.com/radar/a-way-forward-with-communal-computing/) series O’Reilly Media we give you do’s and don’ts.
 

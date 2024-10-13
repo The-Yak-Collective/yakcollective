@@ -34,12 +34,12 @@ I did things I’m proud of in 2021: I managed a team for the first time in seve
 It wasn’t as hard as 2020. But it was hard. As I write, my partner has COVID—one of these mild, vaccines-doing-their-thing cases—and I’m sleeping in the office room I’ve felt thankful for every day of the pandemic.
 
 ![](https://cdn-images-1.medium.com/max/1024/1*7fqrw7zYPw9e04matsAHJg.png)
-_Megan Hyde, “Xenology Collage”, 2014; from the exhibit “Xenology: Drawing in Response to Octavia Butler’s Dawn”_
+_Megan Hyde, “Xenology Collage”, 2014; from the exhibit “Xenology: Drawing in Response to Octavia Butler’s Dawn”_
 
 This year, I seemed to be more ready than ever before to quit on a book that isn’t working for me. Maybe social media and the constant low-level emergency have eroded my attention span; maybe I just feel like I have no time to waste. At the same time, I found a lot of books—including several nonfiction books—that I truly loved. I want to issue those books to friends, beaming them urgently like an omnidirectional Care Bear belly blast.
 
 ![](https://cdn-images-1.medium.com/max/1024/1*dbOxkzLqxntSd1uVzw0HAg.png)
-_GET YOU SOME COURTNEY MARTIN’S LEARNING IN PUBLIC_
+_GET YOU SOME COURTNEY MARTIN’S LEARNING IN PUBLIC_
 
 The rise of worldwide fascism, and the solidifying of antisocial destructivism in the US into a major political force, are terrifying trends. But more people in the world have enough food and money to live than any time before in human history, and more brilliant art, theater, and music are being made than ever. It’s still a fascinating world, a world where a curious person will never run out of voices worth seeking out, a world rife with hidden histories, worth turning over rocks for.
 
@@ -54,7 +54,7 @@ _Wild Seed_ centers on Anyanwu, a fantastically powerful woman who forms a relat
 The scope of this book, and the balanced propulsion of Butler’s prose, are spectacular. When people recommend books like this, they tend to use words like “lyrical”, “sweeping”, “transcendent”. Especially when written about a female writer with a female protagonist, those words suggest that the prose is pretty, but the portrait of the world is in sepia tones; you might think the book is an uplifting cursive Instagram post, in book form. Words like this tell you this is a book a mother can press into her daughter’s hands with a smile and a knowing glance of sisterhood.
 
 ![](https://cdn-images-1.medium.com/max/1024/1*B__6W2GrgMZP7Zk5KshUsg.png)
-_What this book isn’t_
+_What this book isn’t_
 
 That’s ain’t this shit at all! This book takes a blowtorch to its characters’ hearts and to readers’ comfort. Its characters mostly exist in a state of mind-numbing frustration and helplessness; the sense of foreclosed possibilities is heartbreaking. This isn’t the rolling hills of Tuscany, this is the narcissistic boyfriend who inducts your best friend into NXIVM.
 
@@ -87,7 +87,7 @@ _Highly recommended._
 This is a famously difficult novel, and I’m not the first to give up after a dozen pages. I’ve enjoyed every Neal Stephenson book I’ve read, but I’ve stuck to the ones written for a popular audience (_The Diamond Age, Snow Crash, Cryptonomicon, REAMDE, Seveneves_), and haven’t taken a crack at the notoriously challenging doorstops before. Friends assure me that once you get into it, this one is great, but the opening felt so devoid of believable characters and scenarios that I just couldn’t go on.
 
 ![](https://cdn-images-1.medium.com/max/1024/1*iRUrMqwRDDrny97Z08hVOw.png)
-_The Reddit consensus on Anathem_
+_The Reddit consensus on Anathem_
 
 In addition, I know Stephenson is a genius and all, but I found some of his world-building surprisingly flimsy. It opens with a monk badgering a handyman with outlandish questions about his heathen ways. Even the most zealous believer wouldn’t accost every outsider who crosses his path this way; it just doesn’t seem believable, on its own terms.
 
@@ -205,7 +205,7 @@ _Highly recommended._
 #### How the Other Half Learns by Robert Pondiscio
 
 ![](https://cdn-images-1.medium.com/max/1024/1*uH3LL86mkoQ_73rx3isiXw.png)
-_Success Academy in session; photo by Rafael Infante_
+_Success Academy in session; photo by Rafael Infante_
 
 Pondiscio spent a year inside Success Academy, the charter school network in New York City. Success Academy is controversial for many reasons, and Pondiscio compares it to a Rorschach test: when people look at it, they tend to see what they want to see.
 
@@ -256,7 +256,7 @@ _Highly recommended._
 I used to run a creative technology afterschool program in Brooklyn where we used simple, cheap components—coin cell batteries, LEDs, wires, binder clips, paper clips, and cardboard—to explore circuitry and to create interactive quizzes and greeting cards.
 
 ![](https://cdn-images-1.medium.com/max/1024/1*42Ckvv-5ATWM1bgQX7Z4xw.png)
-_One of my young technologists, with her very “scrappy” and very wonderful circuit quiz game_
+_One of my young technologists, with her very “scrappy” and very wonderful circuit quiz game_
 
 _Scrappy Circuits_ is very much in that vein, and I loved the approach here, even if this book doesn’t quite make for a turnkey solution. It is sometimes difficult to parse the text and visuals; I would have preferred less use of photography and more drawings, which might distort proportions in service to clarity. I also would have loved a specific project that could use several of these components, and really show off what they enable.
 
@@ -323,7 +323,7 @@ _Recommended._
 #### Essentialism by Greg McKeown
 
 ![](https://cdn-images-1.medium.com/max/512/0*CMu-j4H0fbcObkr8)
-_The minimalists’ home in Ab Fab_
+_The minimalists’ home in Ab Fab_
 
 There’s a scene in the British comedy sitcom _Absolutely Fabulous_ where the fashionista lead characters remember visiting a couple who identify as “minimalists.” In a flashback, they go to the minimalists’ home for dinner and bring a bottle of wine, which the minimalists recoil from, not knowing what to do with such a disturbance to their austere absence of objects.
 
@@ -378,7 +378,7 @@ _Not recommended._
 #### The Charisma Machine by Morgan Ames
 
 ![](https://cdn-images-1.medium.com/max/1024/0*wH4LryU-Fnet7Q-9.jpg)
-_The OLPC XO_
+_The OLPC XO_
 
 An opinionated history of the One Laptop Per Child (OLPC) project, which grew out of the MIT Media Lab, where I used to work.
 
@@ -391,7 +391,7 @@ But is that really so bad? Don’t movements that seek to change the world need 
 Ames invites the reader to view OLPC through the lens of gender norms, which illuminates some of the powerful forces at work under the surface. She lays a stinging charge at the feet of OLPC, and the proponents of constructionism at the Media Lab: that they are fixated on what she calls “the myth of the technically precocious boy”, a boy who needs only be given the chance to seize control of his own digital exploration, and will then pursue computer creativity obsessively and under his own steam.
 
 ![](https://cdn-images-1.medium.com/max/640/0*VOqQTdLZMJnqUyHH)
-_The Logo programming language in action. Y’all don’t even know how thrilling this was._
+_The Logo programming language in action. Y’all don’t even know how thrilling this was._
 
 I should pause to make clear that I am precisely such a technically precocious boy, and Ames’s description matches me perfectly. I too came to the MIT Media Lab in large part because I wanted to offer all children the chance to dive obsessively into creative computer programming, as I did as an elementary school student in the 1980s using Apple II computers, the BASIC programming language, and the Logo language developed by Papert, Cynthia Solomon, and others at MIT. You could trace my work back to the obsessive creators of Logo in the Apple computer, and back further to the original computer hackers at MIT, and back further to Alan Turing. It would be a tour of mostly men (though that’s certainly not all—in particular, I wish Solomon were recognized for her huge role!).
 
@@ -402,7 +402,7 @@ I sometimes worry that in our analysis of existing social patterns, we risk sett
 I see OLPC has having failed in a few ways, and succeeded in others. It assumed, wrongly, that computers in the near future would be primarily used as tools, rather than as entertainment. In the 21st century’s market-driven race for eyeballs, well-intentioned creative apps face long odds against the attention industry’s weapons of mass destruction. I pine for the vision of Seymour Papert and Alan Kay, of a computer as something that enables its user to “think about thinking”, a sort of meta-tool that you build and rebuild, even as you use it to build other things. The fact that my own children use computers so much, but use them _creatively_ so seldom, is a testament to the changing terrain that made this aspect of OLPC’s founders’ vision more of a challenge than they realized.
 
 ![](https://cdn-images-1.medium.com/max/389/0*RTHUZbHoyOqaIpEK.jpg)
-_OLPCs in Paraguay. Are they being used the way they were originally intended? If not, is that bad?_
+_OLPCs in Paraguay. Are they being used the way they were originally intended? If not, is that bad?_
 
 Ames mentions that in her observations in Paraguay, only about forty OLPC-using children per thousand seem to have developed this sort of creative relationship. But while Ames means this figure as a condemnation, I long to know more about that 4%. The odds against creative computing are long, but they are not insurmountable. Even in deeply flawed tools, there can be enough to spark a cycle of imaginative play and discovery. Can we learn from this 4%, and from adjacent children who do not fall into extended creative play, in order to reinvent our tools and processes, and expand these numbers?
 
@@ -417,10 +417,10 @@ Around 1993, when I was entering high school, I stumbled upon a curious comic, n
 (In fact, the English publishers had arranged for Miyazaki and Moebius to meet, for the first time; the two became friends, and Moebius even named his daughter Nausicaä!)
 
 ![](https://cdn-images-1.medium.com/max/640/0*RR3oE7K4_jT5Gmzd.jpg)
-_Coming upon the holy city of Shuwa, on fire; from Nausicaä by Miyazaki_
+_Coming upon the holy city of Shuwa, on fire; from Nausicaä by Miyazaki_
 
 ![](https://cdn-images-1.medium.com/max/1024/1*6s-TWy5RoLScIqKUFAI38w.png)
-_A Moebius vista, showing his combination of grainy textures and smooth, organic forms_
+_A Moebius vista, showing his combination of grainy textures and smooth, organic forms_
 
 Miyazaki worked on _Nausicaä_, singlehandedly, on and off throughout the 1980s and early 1990s. But I wouldn’t hear Miyazaki’s name again until Disney distributed an English dubbed version of his 1997 film _Princess Mononoke,_ which has much in common with _Nausicaä_. _Mononoke_ further develops _Nausicaä_’s themes of human-caused ecological disaster, communion with nature, strength through harmony, and authority gained by example rather than by charisma. In the meantime, Miyazaki had founded a studio, Studio Ghibli, on the strength of _Nausicaä_’s success as a manga and a feature film, and he had also designed, directed and partially written the masterpieces _My Neighbor Totoro_ and _Kiki’s Delivery Service._
 
@@ -490,7 +490,7 @@ Daredevil also has a romantic drive that feels core to his character. He is draw
 _Recommended._
 
 ![](https://cdn-images-1.medium.com/max/1024/1*NbW02Rd6gcOMlaHLWJVttQ.png)
-_From the action-packed TMNT #10_
+_From the action-packed TMNT #10_
 
 #### Teenage Mutant Ninja Turtles Book 2 and Omnibus 2, by Kevin Eastman and Peter Laird
 
@@ -550,7 +550,7 @@ _Not recommended._
 #### Dotter of Her Father’s Eyes by Mary M. Talbot and Bryan Talbot
 
 ![](https://cdn-images-1.medium.com/max/718/1*aXHobmBb_5m178AI7_nx8A.png)
-_James Joyce was a patriarchal douche, now I’m proud I can’t read two pages of Ulysses_
+_James Joyce was a patriarchal douche, now I’m proud I can’t read two pages of Ulysses_
 
 The motivation for this book is clear: the author grew up as the daughter of a prominent scholar of James Joyce, and learned much about Joyce—and about Joyce’s daughter Lucia. Like author Mary Talbot’s own father, James Joyce was oppressive and controlling of his daughter.
 

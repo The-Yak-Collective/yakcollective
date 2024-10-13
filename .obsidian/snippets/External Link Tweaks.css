@@ -1,0 +1,9 @@
+.external-link {
+	background-size: 11px;
+	padding-inline-end: 13px;
+}
+
+.HyperMD-footnote.cm-line .external-link {
+	background-size: 10px;
+	padding-inline-end: 12px;
+}

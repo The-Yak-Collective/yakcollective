@@ -28,7 +28,7 @@ This article is the first in a series of how to use and apply more speculative p
 There are two key sections of the [PRFAQ](https://commoncog.com/putting-amazons-pr-faq-to-practice/): 1) the press release (PR) that talks about a future state of the world where our product helps someone, and 2) the frequently asked questions (FAQ) that people inside and outside the organization might have. Ideally, these documents are no longer than six pages but there are plenty of anti-patterns that make them huge documents. For a deeper dive into why Amazon has embraced this type of document see the book [Working Backwards](https://www.workingbackwards.com/).
 
 ![Book cover of “Working Backwards” by Colin Bryar and Bill Carr](https://cdn-images-1.medium.com/max/1000/0*wOmj7m7IdvXUzgfW.png)
-_Working Backwards by Colin Bryar and Bill Carr_
+_Working Backwards by Colin Bryar and Bill Carr_
 
 After spending some time learning about the format, using it, and advising others I think it is a great way for product managers to get alignment on a project before starting talking about how we might execute it. I see it as a replacement for what PMs would call “one pagers” that really end up being a super-short version of the PRD you want to write eventually.
 
@@ -55,7 +55,7 @@ In a discussion with Julian Bleecker of [Near Future Laboratory](https://www.nea
 This led me to fiction that might allow for more commentary. A forwarded internal newsletter that opens with a casual and direct highlight of the feature from one person to another. Or a polished press release being redlined by someone in the company with scathing feedback. This would allow people inside the organization to metaphorically roll their eyes, question the shininess of the statements, be concerned with the legality of the statements, and even show how politics might play internally alongside the more idealized statements.
 
 ![DALL-E prompt “fantasy setting with a wizard. red lining a manuscript as an editor.”](https://cdn-images-1.medium.com/max/1024/1*wKEOVENTNPRab6OzYNxSAg.png)
-_A wizard red lining a spell by DALL-E_
+_A wizard red lining a spell by DALL-E_
 
 We always need to push to have hard conversations (and document them for others) when we are proposing a new functionality. What matters the most is the conversation and discourse when trying to decide if something is worth investing in. We can do this by getting more controversial in the statements we make in artifacts like the PRFAQ and help show resolution as a statement of agreement when moving forward.
 
@@ -77,4 +77,3 @@ _I’ve also recently written some (organizational) design fiction. You can chec
 * * *
 
 [How to write good product management fiction](https://medium.com/agileinsider/how-to-write-good-product-management-fiction-bf03793fd789) was originally published in [Agile Insider](https://medium.com/agileinsider) on Medium, where people are continuing the conversation by highlighting and responding to this story.
-

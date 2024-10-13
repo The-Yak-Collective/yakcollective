@@ -10,7 +10,7 @@ original_link: https://chrizbot.medium.com/communal-computing-part-2-f9f74087d92
 #### Communal Computing’s Many Problems
 
 ![](https://cdn-images-1.medium.com/max/1024/0*0MOHmHJ-0wqxkOOU.jpg)
-_Microscopio de tres cuerpos (source: Biblioteca General Antonio Machado)_
+_Microscopio de tres cuerpos (source: Biblioteca General Antonio Machado)_
 
 If the devices aren’t designed with communal computing expectations in mind, they’re destined for the landfill.
 

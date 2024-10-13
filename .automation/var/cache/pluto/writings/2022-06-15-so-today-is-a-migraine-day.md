@@ -9,12 +9,12 @@ author: 100047
 And it’s another one of those personal posts, I’m afraid.
 
 ![](https://cdn-images-1.medium.com/max/1024/1*e4awuWNdNOkEGVU0jJvNjA.png)
-_Tudor Barker, https://www.flickr.com/photos/tudedude/4072769769 (CC BY-NC-ND 2.0)_
+_Tudor Barker, https://www.flickr.com/photos/tudedude/4072769769 (CC BY-NC-ND 2.0)_
 
 Is the lesson ‘feel sorry for me, for I am afflicted (and possibly sorry for myself)?’ or ‘don’t feel sorry for me, for I am strong and self-reliant — but obviously \*especially\* strong and self-reliant because I have this extra special thing’ — or is it just a general ‘I’m quite special’, or ‘everyone has something going on that you don’t know about’? Read on to find out…
 
 ![](https://cdn-images-1.medium.com/max/1024/1*s6xHYJX2imHRs0_N56kkdw.png)
-_Oh bloody hell, making the migraine-free period a ‘phase of migraine’ is a bit grim!_
+_Oh bloody hell, making the migraine-free period a ‘phase of migraine’ is a bit grim!_
 
 It started about aged eleven. I remember at a particularly sunny school sports day, glancing at the sun and getting a long-lasting white spot, which transitioned into a raging headache. Then, surprisingly regularly, I’d notice scary blind spots in my vision and sometimes flashing jagged bands of scintillating light and colour. Inevitably these ended with me being sent to the school nurse for aspirin. Which, to be honest, was a welcome relief from the classroom at times — a good reason to suspect psychological elements to my malady. It was the crushing headache which didn’t go away until the next day which got me.
 
@@ -32,7 +32,7 @@ I am a little bitter that it took until I was 19 to diagnose symptoms. Just like
 Please don’t offer advice — I’ve tried 30% of everything, and given up on the journey. Yes, triggers include citrus, chocolate, marmite, cheese, alcohol, dehydration, coffee, too little sleep, too much sleep, extreme stress or guilt, relief of stress (one doctor said ‘hmmm, well one option is to maintain stress levels’, which I have taken to heart), flashing lights, and on and on and on. But, whatever I do, I get about two a week, usually on the weekend or days after big deadlines or the working week.
 
 ![](https://cdn-images-1.medium.com/max/1024/1*r8xkQN9SMlNM6iNHyV9t4Q.png)
-_JoanDragonfly https://www.flickr.com/photos/joandragonfly/39384099454 (CC BY-SA 2.0)_
+_JoanDragonfly https://www.flickr.com/photos/joandragonfly/39384099454 (CC BY-SA 2.0)_
 
 It was much much better when I followed an extreme, extremely healthy, diet and regime. And quite a lot better when I work long hours and take a coffee as soon as I wake up.
 

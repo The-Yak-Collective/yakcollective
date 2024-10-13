@@ -16,13 +16,13 @@ Way back in a different world, before the pandemic and in the first UK lockdown,
 For two connected podcasts:
 
 ![](https://cdn-images-1.medium.com/max/496/0*ycb9k8ccGKk9SMrG)
-_systems | cybernetics | complexityI have come to sing songs to your cat_
+_systems | cybernetics | complexityI have come to sing songs to your cat_
 
 -\> **transduction** (I have come to sing songs to your cat)  
 demonstrating the deep insights and value from the systems | cybernetics | complexity field
 
 ![](https://cdn-images-1.medium.com/max/496/0*gnhbBQf75c1oJIuS)
-_public | service | transformationFind the real work, find the joy_
+_public | service | transformationFind the real work, find the joy_
 
 -\> joy and work (find the work, find the joy)  
 a podast about (public) service transformation and the value of actually supporting customer/citizen/user purpose
@@ -40,7 +40,7 @@ And this is just the beginning. Watch this space for the podcast feed and the bo
 _(PS bonus secret photos of the said street puppy)!_
 
 ![](https://cdn-images-1.medium.com/max/610/0*0VQegW9Jcab6uIKN)
-_Doggle (Ollie Farfel Taylor-Krajinovic) as we first met him_
+_Doggle (Ollie Farfel Taylor-Krajinovic) as we first met him_
 
 ![](https://cdn-images-1.medium.com/max/1024/0*FALKIICZpN9kqDHB)
 

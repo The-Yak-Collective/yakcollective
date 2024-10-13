@@ -1,7 +1,7 @@
 ---
 layout: post-external
 title: |
-  Award: Next Generation Foresight Practitioner – Innovative Methods
+  Award: Next Generation Foresight Practitioner – Innovative Methods
 date: 2021-09-14 21:14:00 +0000
 author: 100074
 original_link: https://blog.randylubin.com/award-next-generation-foresight-practitioner-innovative-methods

@@ -7,7 +7,7 @@ author: 100006
 original_link: https://chrizbot.medium.com/product-operations-is-about-incentivizing-glue-work-5c79df949083?source=rss-ba6349c9c628------2
 ---
 ![](https://cdn-images-1.medium.com/max/1024/1*b18AcGzpeoo5zb8Ne1yzCA.jpeg)
-_Photo by Charles Deluvio on Unsplash_
+_Photo by Charles Deluvio on Unsplash_
 
 What is core work that should be incentivized for product operations?
 

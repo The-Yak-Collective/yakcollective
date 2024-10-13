@@ -7,7 +7,7 @@ author: 100047
 original_link: https://antlerboy.medium.com/do-systems-exist-dca472ede75f?source=rss-97852f5a56ae------2
 ---
 ![](https://cdn-images-1.medium.com/max/640/1*V8WEtK1gIyBpWn755YI4mA.gif)
-_to understand is to know what to do_
+_to understand is to know what to do_
 
 As soon as you really think about it, boundaries dissolve, connections appear. Everything is nebulous.
 

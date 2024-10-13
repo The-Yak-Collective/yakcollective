@@ -66,7 +66,7 @@ The numbers don’t add much to the story here, but for completeness & continuit
 _NB: my diligence re: non-billable time tracking also wavered a bit in the annotated client glut & burnout epochs, so everything but freelance is likely a bit understated_
 
 ![](https://cdn-images-1.medium.com/max/1024/0*j1e404oNzmEUugz4.png)
-_(annual targets are prorated / to-date)_
+_(annual targets are prorated / to-date)_
 
 ### Vibe Check
 

@@ -36,7 +36,7 @@ So, four quotations from music/poetry which are truly subversive are below. Each
 ### Is it a success to make billions and destroy the planet?
 
 ![](https://cdn-images-1.medium.com/max/1024/1*RrsUTH8Mr3FK8X7oYDTXRw.png)
-_“We need more masks” — Bob Dylan “You only tell the truth when you’re wearing a mask” Dylan, photographed in his Rolling Thunder Revue face paint, Netflix_
+_“We need more masks” — Bob Dylan “You only tell the truth when you’re wearing a mask” Dylan, photographed in his Rolling Thunder Revue face paint, Netflix_
 
 ### Is it a failure to be sincere in a world that sneers at anything but irony?
 

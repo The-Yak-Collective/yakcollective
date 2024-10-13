@@ -29,7 +29,7 @@ It’s easy to get focused on ‘the purchase’, ‘the deal’, category manag
 Those are vitally important. But remember that government commercial guidance has always pointed out that the investment, the focus, is all magnetically drawn to the moment of purchase — the deal. And that the real value is not there — the real value is in the broader thinking, the problem framing, the market and relationship building, the specification work we do up front — then in the relationship, the contract management, the learning, the adaptation after.
 
 ![](https://cdn-images-1.medium.com/max/804/0*_9iZSFS2GeC2k576)
-_Where value is created in procurement — and where effort is placed_
+_Where value is created in procurement — and where effort is placed_
 
 So, I encourage you today to realise the vital importance of procurement in _playing on a wider stage_, to think about the sessions and to question our speakers from the perspective of all the many ways we can use our purchasing and our procurement as part of a commissioning approach.
 

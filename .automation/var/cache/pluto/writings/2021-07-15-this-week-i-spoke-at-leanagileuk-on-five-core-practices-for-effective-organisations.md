@@ -10,7 +10,7 @@ original_link: https://antlerboy.medium.com/this-week-i-spoke-at-leanagileuk-on-
 Thanks to [Matt Turner](https://www.linkedin.com/feed/#) — and [Dinah Turner](https://www.linkedin.com/feed/#) did this great piece of graphic facilitation.
 
 ![](https://cdn-images-1.medium.com/max/800/1*D7CJI5S0p6pbHCm0NtaDzw.jpeg)
-_Graphic facilitation by Dinah Turner_
+_Graphic facilitation by Dinah Turner_
 
 These are five \*generous\* practices — they work well for novices and sophisticates alike.
 

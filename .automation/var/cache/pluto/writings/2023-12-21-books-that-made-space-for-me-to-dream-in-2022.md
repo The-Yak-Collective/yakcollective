@@ -7,7 +7,7 @@ author: 101165
 ---
 
 ![](https://cdn-images-1.medium.com/proxy/1*Y82AWvkPTz31zPe1tyJG4A.png)
-_from “Everything is Beautiful, and I’m Not Afraid” by Yao Xiao_
+_from “Everything is Beautiful, and I’m Not Afraid” by Yao Xiao_
 
 2022 was a year of both promise and frustration for me. I started the year in my last semester of grad school, taking inspiring courses where for example, I created a [curriculum unit combining computer science and body movement](https://docs.google.com/document/d/1JFeRblVUlpQMRXHNHVJYqu8jIcpnt_uZdNamhjpc_ew/edit).
 
@@ -170,7 +170,7 @@ _Highest recommendation._
 #### Klara and the Sun by Kazuo Ishiguro
 
 ![](https://cdn-images-1.medium.com/max/1024/0*lsIbj4GLJ_WceYPD.png)
-_illustration by Midjourney, and thousands of artists_
+_illustration by Midjourney, and thousands of artists_
 
 In the science fiction writer Philip K. Dick’s essay [“How to Build a Universe That Doesn’t Fall Apart Two Days Later”](https://urbigenous.net/library/how_to_build.html), he gives this summary:
 
@@ -195,7 +195,7 @@ _Highest recommendation._
 #### The Wind-Up Bird Chronicle by Haruki Murakami
 
 ![](https://cdn-images-1.medium.com/max/994/0*CFCfGgDeEaizitqt)
-_illustration by Midjourney, and thousands of artists_
+_illustration by Midjourney, and thousands of artists_
 
 I generally like Murakami’s books, and his _Hard-Boiled Wonderland and the End of the World_ is one of my favorites. I’d been meaning to read _The Wind-Up Bird Chronicle_ forever, but it was an uneven experience. At times, it reads like a John Irving novel: engaging, crowd-pleasing, plot-driven, easy to make meaning of. At other times, the stilted prose and meandering mix of realism and magic seem purposeless—so pointless that I suspect he’s trolling the reader.
 
@@ -250,21 +250,21 @@ As with all memoirs by phenomenal people, the question is, how do we scale his b
 
 [https://medium.com/media/b09f2e0603c119dd3ac2c4a2c5d3e771/href](https://medium.com/media/b09f2e0603c119dd3ac2c4a2c5d3e771/href)
 ![](https://cdn-images-1.medium.com/max/1024/1*U12pLlz0jFoSHpTUUbWJgA.png)
-_Six drafts of a drawing of a tiger swallowtail butterfly, by a first grader named Austin_
+_Six drafts of a drawing of a tiger swallowtail butterfly, by a first grader named Austin_
 
 _Highest recommendation._
 
 #### The Periodic Table by Primo Levi
 
 ![](https://cdn-images-1.medium.com/max/1024/0*IJ4YMqx9ad8mDasN.png)
-_illustration by Midjourney, and thousands of artists_
+_illustration by Midjourney, and thousands of artists_
 
 One of my favorite books. Primo Levi was a chemist with an insatiable curiosity about both atomic interactions and human interactions, and in this episodic memoir he dances among these interests in equal part. Each chapter takes its title from an atomic element, and touches somehow on that element’s properties as they weigh on human affairs. Mixed in are two short stories, each with one foot in historical fiction and one in speculative fiction; in each case, the story’s headline element plays a crucial role.
 
 Levi was imprisoned at Auschwitz, and recounted those bleak horrors in his book _If This Is a Man_ (published in the US under the inferior title _Survival at Auschwitz_). He doesn’t discuss that time here, but it is present in his sense of loss in remembering the Piedmontese Jewish community of his youth, and the friends and comrades he’ll never see again. In one remembered episode, the lost thing is merely a chance at love that he didn’t seize; but somehow, in the light of all the more material loss, this missed chance echoes especially profoundly.
 
 ![](https://cdn-images-1.medium.com/max/465/0*1EnjEAA-G0HLF6L-)
-_Young Primo Levi_
+_Young Primo Levi_
 
 Levi’s empathetic imagination makes him an extraordinary teacher. Even though Levi only employs chemistry knowledge on the page to give context for his stories, I learned more than I’ve ever known before about how a chemist sees the physical world, and what their work consists of. I long for more books like this, which take us inside the worldview of a curious mind with deep subject expertise.
 
@@ -285,7 +285,7 @@ What is left over, that the grizzled world-traveler knows, but the protected tee
 _Moral Mazes_ contains such understandings. Robert Jackall embedded as a researcher for several years with two corporations, conducted hundreds of interviews, and assembled an ethnographic portrait of the American corporate manager that is unflinching. God, how I wish I had read this before I worked within a company of more than 10 people. I lost count of the number of times it felt like a Jackall was specifically talking about my personal history.
 
 ![](https://cdn-images-1.medium.com/max/799/1*K8Wb27uVM5VVSy0-I_MLpA.jpeg)
-_A 2014 installation inside Washington DC’s National Building Museum; photo by Aaron Webb_
+_A 2014 installation inside Washington DC’s National Building Museum; photo by Aaron Webb_
 
 To give just one example: he describes the inner life of the corporate manager as a state of neverending, pervasive insecurity and fear. Because their value is so difficult to measure, there is little to determine their place in the hierarchy besides loyalty, perceived political allegiance, and the sense that unpredictable things don’t happen when they’re overseeing people.
 
@@ -319,7 +319,7 @@ At various points it seemed like the core of Farmer’s genius could be all sort
 But halfway through the book, I started to feel inspired. I think just spending so much time in the imagined presence of Farmer, with his hungry mind, his bottomless well of compassion, and his crystal clear purpose, made me feel more capable, and more forgiving of my own flaws. Farmer is not without his foibles, in particular his need for constant praise by others. But he seems to truly know that his best efforts are needed, and worth pushing past obstacles and weaknesses in himself or others.
 
 ![](https://cdn-images-1.medium.com/max/1024/0*40PQEO8lkrkE6nYx)
-_Arcade Fire’s Paul Beaubrun, performing with a guitar on which he has written “Sak vide pa kanpe” — an empty sack cannot stand, a Haitian proverb that warns that democracy is impossible without public health. Photo by me._
+_Arcade Fire’s Paul Beaubrun, performing with a guitar on which he has written “Sak vide pa kanpe” — an empty sack cannot stand, a Haitian proverb that warns that democracy is impossible without public health. Photo by me._
 
 I left this book having soaked for a while in Farmer’s persistence; he is absolutely patient in the face of obstacles he has no control over (war, street violence, disease itself), and absolutely _im_patient in the face of obstacles that he and his colleagues actually have the power to make better.
 
@@ -330,21 +330,21 @@ The biggest reason seems to be that Farmer is so unquestionably useful. Others m
 Another reason is that Farmer’s litany of correctives is always delivered with charm, usually with an open hand offering help instead of a fist, and always with a bit of poetry in his delivery. “Nobody lays a guilt trip like I do”, he comments at one point, while inscribing a copy of his book to a public health official with a manipulative note that coerces them towards funding more AIDS work in Haiti. But he seems to instinctively inflect his moral urging with a warmth that disarms those whose previous decisions he is criticizing.
 
 ![](https://cdn-images-1.medium.com/max/600/0*pwc4FQu-WAxRjnvU)
-_The Cuban AIDS internment center at Los Cocos. Photo by Miguel Angel Fraga_
+_The Cuban AIDS internment center at Los Cocos. Photo by Miguel Angel Fraga_
 
 It’s also crucial that he has done his homework when he calls for change; this often means not merely reviewing existing literature, but doing firsthand experimental research on a scale that starts almost laughably small. Farmer will take a thorny problem, and ask a series of questions that strip the thorns and branches down to the the fundamental trunk. Each question might require months of grant applications and hands-on work with a handful of patients, but everything that he and his crew learn can be walked back up the chain and used to justify broader initiatives. Since all of this work is done with integrity and involves no self-protective political nonsense, it is entirely novel, and eventually the relative absence of dead bodies in Farmer’s care can’t be explained away by his opponents, and his approach becomes national (and international) policy.
 
 Having done this in a short amount of time, but with steady, deliberate progress, he’ll become an expert in the problem and its solutions. There’s a breathtaking chapter where he and his team do this with multi-drug-resistant tuberculosis, or “MDR”, starting with a single patient in Peru, finagling intentional (and unintentional; sometimes basically stealing) cooperation from first-world hospitals, coaxing the occasional high-integrity nurse to share documents that undermine the official narrative, and unraveling what is basically an international conspiracy of willful blindness about the ways that standard TB treatment in poor countries breeds MDR and sets the stage for what could potentially be an apocalyptic global pandemic of untreatable TB.
 
 ![](https://cdn-images-1.medium.com/max/1024/0*78LYRzSlXr0bXaNF.jpg)
-_Eduardo Martinez, a drag performer in Havana who began performing while interned at Los Cocos. Photo by Rebecca Sananes for NPR_
+_Eduardo Martinez, a drag performer in Havana who began performing while interned at Los Cocos. Photo by Rebecca Sananes for NPR_
 
 To get through all of this muck, Farmer must be stubborn and zealous, and he refuses to hear objections that are sometimes worth considering. One of the most fascinating parts of the book is when he and Kidder—the book’s author—visit one of Cuba’s internment centers, where AIDS patients are forced to live. Kidder sees oppression here, while Farmer sees only a social investment that saves lives; he’s unimpressed by the interpretation of “freedom” by educated White liberals in the first world. Moreover, he throws a bit of a fit at Kidder’s insistence that Cubans might not appreciate being forced by armed government agents to leave their homes and live in prison camps, no matter how well-appointed they are. In his totalizing pragmatism, he is ideological; and he will not agree to disagree.
 
 Another fascinating thread is how often Farmer embraces acts of care that don’t scale. Kidder notes that Farmer, like so many phenomenal doctors, seems to abhor utilitarian thinking. It’s as though the calling of medicine requires a certain empathetic madness, a delusion by choice to believe that the odds don’t matter. Farmer bristles when Kidder brings this up; it’s almost as though Kidder is a religious nonbeliever, questioning Farmer’s faith.
 
 ![](https://cdn-images-1.medium.com/max/760/0*6-vpRgGkzdyaPcbs.jpg)
-_Jean-Bertrand Aristide, preaching in Haiti before he was elected president. Photo by Jean Max Benjamin for AP_
+_Jean-Bertrand Aristide, preaching in Haiti before he was elected president. Photo by Jean Max Benjamin for AP_
 
 A wonderful thing about growing up in Cambridge, MA in the shadow of Harvard and MIT was the way the world would come to my doorstep, and in high school I snuck into a Harvard event where Farmer appeared along with Haitian president Jean-Bertrand Aristide. Aristide had survived a good dozen assassination attempts by that point, and when I shook his hand in the receiving line at the end of the event, his enormous bodyguard had him absolutely enveloped in a protective bearhug. I barely remember Farmer, but that’s how Farmer wanted it; mustering support for Aristide was the focus of the show, and Farmer was always, always focused.
 
@@ -355,7 +355,7 @@ _Highly recommended._
 #### Lot Six by David Adjmi
 
 ![](https://cdn-images-1.medium.com/max/600/0*KfKlYKN_qMdQDqC2)
-_Adjmi’s play “Stunning”. Photo by Sara Krulwich for The New York Times_
+_Adjmi’s play “Stunning”. Photo by Sara Krulwich for The New York Times_
 
 I struggle to get into memoirs. They so often strain under the burden of the memoirist’s completism, or they confuse memories that matter to the author from stories that others will find interesting.
 
@@ -412,7 +412,7 @@ _Not recommended._
 #### Ain’t No Makin’ It by Jay MacLeod
 
 ![](https://cdn-images-1.medium.com/max/799/0*GYXvkJAxRjD1wuPX)
-_“Two teenagers smoking against wall” (photo by former CRLS photography teacher Olive Pierce, 1984)_
+_“Two teenagers smoking against wall” (photo by former CRLS photography teacher Olive Pierce, 1984)_
 
 I can’t believe I never knew this book existed! A social researcher named Jay MacLeod conducted ethnographic research interviews for two decades with a small group of working-class and poor young men in my hometown of Cambridge, MA, from the 1980s through the 2000s. This book summarizes his findings, with tons of quotes and verrryyyy dated slang. MacLeod has a politically progressive viewpoint, and he hopes that by documenting the ways that children from the American underclass see their lives — often, as devoid of any desirable possible future — he can make the case that it is the boundaries of their class situation, not their choices, that bar them from social mobility as they become adults.
 
@@ -433,7 +433,7 @@ I see my own “elaborated” parenting speech as the result of an immense inves
 Many aspects of financial privilege are not just one cultural choice among many—to pretend otherwise does nothing to challenge our system’s malign neglect of poor kids.
 
 ![](https://cdn-images-1.medium.com/max/800/0*qyzpC8vRa9nxCIsf)
-_“Bodybuilders” (Olive Pierce, 1984)_
+_“Bodybuilders” (Olive Pierce, 1984)_
 
 At other points, I felt that MacLeod was falling for simple explanatory stories. McLeod references author Paul Willis’s book _Learning to Labor_, and blames patriarchy for the tendency of the young men Willis studied to reject mental labor and scholastic achievement as feminine, and therefore inferior. But “patriarchy” is not a static or insurmountable force, and its effects are complex, not fixed. For example, take law school and the legal profession. Not long ago, the great majority of law students were men, and most liberal observers would have, correctly, identified patriarchy at play in that fact. But wouldn’t that mean that this major form of scholastic achievement was male-coded, not female-coded? And in recent years, law schools have enrolled a majority-female student population. Has patriarchy reversed? Or, is male-dominant power part of a more twisty and unpredictable system of gender roles in our society?
 
@@ -448,7 +448,7 @@ Most mystifying is that many of MacLeod’s own subjects seem to be ahead of him
 I’m not sure what combination of multi-generational theft, institutional racism, and personal responsibility combined to limit these kids. But I do think it’s notable that MacLeod dismisses their perspective entirely as foolish. But what if these kids aren’t mere dupes? What if they are communicating that they are eager to invest in themselves, but don’t know how? What if they really do prefer to focus on making the most of what they have, rather than seeing themselves primarily through a “deficit” lens? McLeod laments their talk of achievement as indicating that they have “swallowed the achievement ideology”. But given the injustice of their disadvantages, is this really a bad thing? I found myself worrying that MacLeod would rather see kids like these as hopeless than help them seize the opportunities they do have. He never entertains the idea that these boys’ understanding could have value—let alone that it might be a testament to the flexibility and importance of their culture. If the Black adults and children in this community have established shared understandings and expectations of their agency and access to power, isn’t it they who deserve the credit?
 
 ![](https://cdn-images-1.medium.com/max/800/0*E2zti-pDP9v8VPYH)
-_“Group clowning for the camera” (Olive Pierce, 1984)_
+_“Group clowning for the camera” (Olive Pierce, 1984)_
 
 What most distinguishes the prospects for a working-class child from those of a middle-class child? MacLeod sees differences only in treatment external to the child’s family and community, and refuses to see these kids as incapable of excellence; he derides any focus on problems with their actual abilities or behavior patterns as coming from an assumption that “lower class children are inferior”. But I think he’s got it the wrong way around. Lower class children _aren’t_ inferior — and that is why it’s so important to acknowledge, with alarm, that they really are behind in terms of demonstrated intellectual ability, beyond what can be accounted for by the structural biases across their many years of school (as evidenced, for example, by the fact that this gap exists in kindergarten).
 
@@ -553,7 +553,7 @@ A slice of life picture book that recounts the author’s memories of growing up
 There’s no dramatic question driving this as a story; what drives it instead is a pervasive sense of love, safety, and joy that infuses every page. The protagonist loves spending time with her father; she loves her city and its characters; she loves her community’s past, and loves its future.
 
 ![](https://cdn-images-1.medium.com/max/1024/1*kN-hW_w3M0UZxg7TGt_7gQ.png)
-_Peña’s blend of realism and cartoonish minimalism fill the pages with life and warmth._
+_Peña’s blend of realism and cartoonish minimalism fill the pages with life and warmth._
 
 Peña’s masterful art perfectly captures the texture of this world, from its architecture to the dogs running in the street to the wind rippling through the protagonist’s hair. With a light touch, he plays with layout, setting the characters in multiple temporal places within a scene; placing imagined elements alongside real ones; and finding endless ways to illustrate movement and speed.
 
@@ -709,21 +709,21 @@ _Highly recommended._
 Barry Windsor-Smith is one of my favorite comics artists and writers. His classic issues of Marvel comics — the standalone stories Iron Man #232, Uncanny X-Men #s 186 and 198, are all-time favorites of mine.
 
 ![](https://cdn-images-1.medium.com/max/640/0*3166ttqre2-UqTf7)
-_The iconic Uncanny X-Men #186, “Lifedeath: a Love Story”_
+_The iconic Uncanny X-Men #186, “Lifedeath: a Love Story”_
 
 There have been some common themes to “BWS” stories, whether written by him or by collaborators like comics legend Chris Claremont. One theme is the circular structure of fate, where causality can wrap around from the future to the past. Another is the irrepressible nature of human identity in the face of institutional evil, and the ability for humanistic values to transcend oppressive systems. A third is the ability for dreams to be more real than physical reality.
 
 These themes come together in _Monsters_, which Windsor-Smith spent nearly a decade writing and drawing. The result is a haunting, disturbing, and beautiful book that draws directly on his work for Marvel, and investigates it again.
 
 ![](https://cdn-images-1.medium.com/max/400/0*jcWPPVLx7A_fBLiA)
-_Barry Windsor-Smith’s Weapon X_
+_Barry Windsor-Smith’s Weapon X_
 
 The exploration of body horror and institutional evil are clearly inspired by the work Windsor-Smith did in his _Weapon X,_ a telling of the origin of Wolverine that beguiled readers with its circular form. Also present in both _Monsters_ and _Weapon X_ is the updating of the Frankenstein myth.
 
 In another thematic connection to his past work, the power of death to be transformational— to be, potentially, a good thing — echoes his X-Men stories in which the weather superhero Storm explores suicide. This was a controversial direction to take a popular series sold in supermarket checkout lanes, and Windsor-Smith essentially told this story twice, revisiting it with his own slightly altered version of the character in his book-length masterpiece _Adastra in Africa._
 
 ![](https://cdn-images-1.medium.com/max/1024/1*p9Zl_jxasyhhuCsYsryUdA.png)
-_Adastra, BWS’s homegrown version of Storm_
+_Adastra, BWS’s homegrown version of Storm_
 
 The result, _Monsters_, is a breathtaking masterwork, but a flawed one. There are transcendent themes and sequences, and several unforgettable characters and scenarios.
 
@@ -748,7 +748,7 @@ _Highly recommended._
 #### Sara by Garth Ennis
 
 ![](https://cdn-images-1.medium.com/max/1024/0*TMse2cNV4mDW568E)
-_A soldier who is too good at her job might be appreciated, but she will not be liked._
+_A soldier who is too good at her job might be appreciated, but she will not be liked._
 
 A neat and satisfying war story, with art that conveys the discomforts and visceral terrors of war. The artist’s faces, in particular, are superb; the lead character Sara’s hypnotic eyes, fixed on the horizon, help make her an unforgettable character.
 
@@ -794,7 +794,7 @@ _Book 1: highly recommended; book 3: recommended._
 #### Homunculus by Joe Sparrow
 
 ![](https://cdn-images-1.medium.com/max/1024/1*TJk3vnHxGLoMmXeIJWReuQ.png)
-_Sparrow cleverly exploits comics’s unique ability to jump in time from panel to panel._
+_Sparrow cleverly exploits comics’s unique ability to jump in time from panel to panel._
 
 A story of raising an AI like a child, told with sweetness, a memorable visual style, and creative use of comics’s unique ability to jump in time from panel to panel. Joe Sparrow has said he loves “little stories happening on the periphery of a bigger world”, and part of the fun here is what you surmise from the clues Sparrow metes out through the AI’s narrow view of the world.
 
@@ -821,7 +821,7 @@ Jeff Lemire’s _Black Hammer_ overlaps conceptually with the brilliant _Watchme
 There are dozens of little references to past artists, characters and story lines, both well-known and obscure. Part of the fun is the sense of inside baseball, like a character who clearly recapitulates Superman’s (best-forgotten) episode as an urban vigilante called “Gangbuster” in the 80s.
 
 ![](https://cdn-images-1.medium.com/max/435/0*BZ6yoBxHbJ_PmADV.png)
-_Yeah, this was Superman for a little while. The 80s, man._
+_Yeah, this was Superman for a little while. The 80s, man._
 
 That said, there are so many godlike powers that character decisions have few consequences, and the wackiness of the tone in some sequences clashes with the pathos of others. But I did feel a thrill at the end of the second volume, anticipating the final page and its payoff.
 
@@ -850,7 +850,7 @@ _Recommended._
 #### Daredevil Vol. 1 by Mark Waid, Paolo Manuel Rivera, and Marcos Martin
 
 ![](https://cdn-images-1.medium.com/max/583/0*5TGJfEN7eoeHjdyR.jpg)
-_I love the contour lines in Rivera & Martin’s take on Daredevil’s spatial sensing_
+_I love the contour lines in Rivera & Martin’s take on Daredevil’s spatial sensing_
 
 A fun, rollicking take on Daredevil, in contrast to the self-flagellating Catholic guilt of takes like Kevin Smith’s. Waid has said that he wanted to lean into the “man without fear” catchphrase, and challenged himself in each issue to make Daredevil do something that others wouldn’t dare. Some of these experiments are compelling, especially when Waid gives Daredevil a bit of flirtatious swagger.
 
@@ -859,7 +859,7 @@ _Recommended._
 #### Daredevil Vol. 2: No Devils, Only God by Chip Zdarsky and Lalit Kumar Sharma
 
 ![](https://cdn-images-1.medium.com/max/1024/1*IkYRbTxh0slrXdCP4E_NMw.png)
-_Matt Murdock and Reed Richards have a cute chess date and debate theology_
+_Matt Murdock and Reed Richards have a cute chess date and debate theology_
 
 …And here, seven years after the Mark Waid run above, is the more brooding Daredevil, the one who is compelled to punish himself even harder than he punishes others. Interestingly, in contrast to the first volume by Zdarsky, this one features a more prominent role for romance. It gets more deeply into political and police corruption and organized crime, and though the plot and scene writing are a bit circuitous and wordy, Zdarsky finds lots of clever touches.
 
@@ -900,7 +900,7 @@ _Not recommended._
 #### Immortal Hulk, Vol. 5: Breaker of Worlds by Al Ewing, Joe Bennett, Ruy José
 
 ![](https://cdn-images-1.medium.com/max/1024/0*3y5m9UhzuyfZDC8I.png)
-_Stan Lee could never_
+_Stan Lee could never_
 
 Immortal Hulk is a wildly popular comic with a brilliant premise: it reconsiders the Hulk’s essential invincibility through the lens of the horror genre. Being essentially unkillable is a common quality of many superheroes—but if you think about what that might mean for surviving an exploding bomb or being crushed under a mountain, the consequences are grotesque.
 

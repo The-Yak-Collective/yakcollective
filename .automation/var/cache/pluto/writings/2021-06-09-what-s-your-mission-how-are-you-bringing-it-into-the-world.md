@@ -18,7 +18,7 @@ I have three passions:
 I’m very lucky — my work allows me to combine these together — and they fit!
 
 ![](https://cdn-images-1.medium.com/max/500/0*6WlEV-J-syI-U0Zl.gif)
-_It’s worth remembering that we decide our missions_
+_It’s worth remembering that we decide our missions_
 
 My mission is something like ‘sharing the joy of insight to allow us all to improve our lives’.
 

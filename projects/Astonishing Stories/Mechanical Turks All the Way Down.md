@@ -9,6 +9,10 @@ google_doc: https://docs.google.com/document/d/1HpnU_k_Q3xulIfwiEtdpfMycZeTRvR-c
 description: Can't be too eager on your first day of the job.
 hidden: false
 page_css: /projects/astonishing-stories/mechanical-turks-all-the-way-down.css
+title: Mechanical Turks All the Way Down
+aliases:
+  - Mechanical Turks All the Way Down
+quartsRssFeed: true
 ---
 # Mechanical Turks All the Way Down
 <time class="db small ttu o-60">{{ page.date | date_to_long_string: "ordinal", "US" }}</time>

@@ -7,7 +7,7 @@ author: 100047
 original_link: https://medium.com/@antlerboy/three-tribes-are-contesting-for-the-futureofwork-which-one-will-you-join-6c2cb84cdb8b?source=rss-97852f5a56ae------2
 ---
 ![](https://cdn-images-1.medium.com/max/640/1*nnqJtALlgKtXw-kIoM_o8w.gif)
-_slideshow on the future of work_
+_slideshow on the future of work_
 
 ### BLUE tribe is the continuation of the machine — big, high-profile, high-status corporate organisation
 

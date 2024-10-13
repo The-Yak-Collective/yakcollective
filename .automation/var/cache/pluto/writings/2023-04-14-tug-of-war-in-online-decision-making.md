@@ -7,7 +7,7 @@ author: 100006
 ---
 
 ![A brown dog and a black dog pulling in opposite directions on a rope toy](https://cdn-images-1.medium.com/max/1024/1*L4cycQ1Qqm2P1tqAu55c3Q.jpeg)
-_Photo by Meritt Thomas on Unsplash_
+_Photo by Meritt Thomas on Unsplash_
 
 Have you found that you don’t tackle the key disagreements during workshops? Do they end up in the “parking lot” but never get talked about again? You aren’t focusing on discourse or allowing it to happen enough. It isn’t all your fault though, most of the tools aren’t set up to allow disagreement by default.
 
@@ -20,7 +20,7 @@ In this article, I want to talk about the times I’ve found disagreement to be 
 In a recent talk I gave at the Product Operations Summit about “[Deciding How to Decide](https://world.productledalliance.com/location/popsnewyork/speaker/chrisbutler)” ([talk available to PLA members](https://www.productledalliance.com/product-operations-summit-new-york-2023-non-members/)) we focused on the way that groups of people make decisions. The most important aspect is the discourse before we make the decision.
 
 ![A process of group decision making from identification, discourse, decision, communication, and feedback](https://cdn-images-1.medium.com/max/907/0*Cb-kKO_piVr_0qTl)
-_Source: author’s presentation on “Deciding how to decide”_
+_Source: author’s presentation on “Deciding how to decide”_
 
 The discourse is why we can be bad at individual decision making due to different cognitive biases but much better when in a group. A recent post by Tom Stafford talking in more depth about the [benefits of discourse in decision making and avoiding cognitive biases](https://tomstafford.substack.com/p/a-lens-on-the-magic-of-deliberation).
 
@@ -74,4 +74,3 @@ Give people more opportunities to play a safe game of tug-of-war.
 * * *
 
 [Tug of war in online decision making](https://medium.com/agileinsider/tug-of-war-in-online-decision-making-148439884380) was originally published in [Agile Insider](https://medium.com/agileinsider) on Medium, where people are continuing the conversation by highlighting and responding to this story.
-

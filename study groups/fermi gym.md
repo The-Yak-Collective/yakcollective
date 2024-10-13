@@ -3,7 +3,6 @@ title: Fermi Gym
 aliases:
   - Fermi Gym
 date: 2022-11-14
-quartsRssFeed: true
 ---
 **Contributors:** Open to all
 **Discord Channel:** [⌗fermi-gym](https://discord.com/channels/692111190851059762/977352527995625492)

@@ -10,7 +10,7 @@ original_link: https://medium.com/agileinsider/how-to-write-great-okr-objectives
 #### Objectives are the hardest and most important part of OKRs to get right
 
 ![](https://cdn-images-1.medium.com/max/1024/1*mHcX40IziDGa7LWUOgpR4A.jpeg)
-_Photo by Garrett Sears on Unsplash_
+_Photo by Garrett Sears on Unsplash_
 
 [Objectives and key results](https://www.whatmatters.com/faqs/okr-meaning-definition-example) (OKRs) are a great way for you to align and provide feedback to teams about how they fit into the strategy of your organization. While I’ve seen them implemented many times both well and not well, the difference is usually based on where your organization is in the “journey” of using OKRs.
 
@@ -58,7 +58,7 @@ The first question I would ask if “why” are you doing this? This will usuall
 ### As a business impacting metric
 
 ![](https://cdn-images-1.medium.com/max/1024/0*xTWjvrqh03C9whsi)
-_Photo by Mikail McVerry on Unsplash_
+_Photo by Mikail McVerry on Unsplash_
 
 Objectives are commonly mistaken as something that will make the leaders of an organization happy. Those leaders often talk about the business impact that features will have in all-hands. This includes more revenue, less cost, more customers. They are all the business impacts that you and your executives want but aren’t good objectives.
 
@@ -101,7 +101,7 @@ This is way too broad for their ability. They need to focus it down to what is a
 ### As inspirational end state outcome
 
 ![](https://cdn-images-1.medium.com/max/1024/0*DxUh33mLtJWBrY5R)
-_Photo by Joshua Earle on Unsplash_
+_Photo by Joshua Earle on Unsplash_
 
 The last step is often overlooked but very important. We need to make our objectives be inspirational and aspirational to motivate teams. We need these objectives to be something that is memorable in prioritization discussions and part of the regular consideration of whether they are working on the right “thing.”
 

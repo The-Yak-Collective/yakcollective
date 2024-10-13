@@ -24,6 +24,9 @@ credits:
     - 100059
     - 100070
     - 100085
+aliases:
+  - Future Frontiers
+quartsRssFeed: true
 ---
 {% include widget-project-header.html %}
 

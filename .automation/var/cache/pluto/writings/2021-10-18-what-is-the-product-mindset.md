@@ -9,7 +9,7 @@ author: 100006
 #### Learning to navigate an uncertain world
 
 ![](https://cdn-images-1.medium.com/max/1024/1*xD2mCk0DBjyV6PRLUqZ82A.jpeg)
-_Photo by Greg Rakozy on Unsplash_
+_Photo by Greg Rakozy on Unsplash_
 
 _Chris Butler will be hosting the_ [_“The Product Mindset”_](https://festival2021.productledalliance.com/talks/product-mindset/) _at the_ [_Product-Led Festival_](https://festival2021.productledalliance.com/)_, October 19–21, 2021._
 
@@ -43,7 +43,7 @@ This is a great start and can improve any practice. However, there is something 
 ### The Idea Maze
 
 ![](https://cdn-images-1.medium.com/max/1024/0*kbxaWhRWt_uZyzrx)
-_Source and credit: Market Research, Wireframing, and Design_
+_Source and credit: Market Research, Wireframing, and Design_
 
 The Idea Maze is a concept from a 2013 paper [Market Research, Wireframing, and Design](https://spark-public.s3.amazonaws.com/startup/lecture_slides/lecture5-market-wireframing-design.pdf) by Balaji S. Srinivasan. This paper is used as an important concept by various product thinkers like [Chris Dixon](https://cdixon.org/2013/08/04/the-idea-maze), [Benedict Evans](https://www.ben-evans.com/benedictevans/2016/4/13/the-vr-idea-maze), and others.
 
@@ -69,7 +69,7 @@ Stanley and Lehman take this to the case of vacuum tubes eventually leading to c
 They state that this is like trying to cross a lake using stones:
 
 ![](https://cdn-images-1.medium.com/max/960/0*xyxW0HBiax3-TqWS)
-_Image source and credit: Stepping Stones Over Water With Sky_
+_Image source and credit: Stepping Stones Over Water With Sky_
 
 The reality is that it looks like this:
 
@@ -167,4 +167,3 @@ _Reserve your ticket for the_ [_Product-Led Festival_](https://festival2021.prod
 * * *
 
 [What is the Product Mindset?](https://medium.com/agileinsider/what-is-the-product-mindset-af06e01adf70) was originally published in [Agile Insider](https://medium.com/agileinsider) on Medium, where people are continuing the conversation by highlighting and responding to this story.
-

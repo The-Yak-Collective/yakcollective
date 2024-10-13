@@ -9,7 +9,7 @@ author: 100006
 #### Many mistakenly believe strategic thinking is about the future
 
 ![](https://cdn-images-1.medium.com/max/1024/1*Z2ec9MNIqjS6O_p-UU8rcA.jpeg)
-_Photo by Andre Benz on Unsplash_
+_Photo by Andre Benz on Unsplash_
 
 How often have you made a decision thinking it was about the future?
 
@@ -87,4 +87,3 @@ Strategy is decision making for the team. Make better decisions. Make strategic 
 * * *
 
 [Strategy is now](https://medium.com/agileinsider/strategy-is-now-5c0201c7e10a) was originally published in [Agile Insider](https://medium.com/agileinsider) on Medium, where people are continuing the conversation by highlighting and responding to this story.
-

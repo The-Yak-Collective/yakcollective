@@ -65,7 +65,7 @@ And again for [continuity](https://github.com/coemeta/public-work-log/blob/main/
 - NB also: I’m still struggling a bit to be at ease with [hyperopic balance](https://github.com/coemeta/public-work-log/blob/main/2023.1.msu.md#-timeline), still some psychic hangups & lingering feelings I should be doing more conventional “work” at most times. So having frameworks & rituals like this to zoom out & recalibrate has been invaluable.
 
 ![](https://cdn-images-1.medium.com/max/1024/0*Xu_gTrMf27GFQVa-.png)
-_(targets are not prorated …still lacking in tool & content output…but finally working on it)_
+_(targets are not prorated …still lacking in tool & content output…but finally working on it)_
 
 … & a glance at the [recently rebooted OKRs](https://github.com/coemeta/public-work-log/blob/main/2023.0.veu.md#-timeline) for completeness:
 
@@ -100,4 +100,3 @@ Web: [coemeta.xyz](https://coemeta.xyz/)
 * * *
 
 [Coεmeta Public Work Log 2023.1.MSU — Reinvesting the Harvest](https://medium.com/coemeta/co%CE%B5meta-public-work-log-2023-1-msu-reinvesting-the-harvest-1e92b535472b) was originally published in [Coεmeta](https://medium.com/coemeta) on Medium, where people are continuing the conversation by highlighting and responding to this story.
-

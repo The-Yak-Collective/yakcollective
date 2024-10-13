@@ -5,7 +5,7 @@ aliases:
 ---
 The Yak Collective is an online space for collaborative tinkering. You can learn more about the what, why, and how on the [about page](about.md).
 
-If this interests you, take a moment to read our [code of conduct](https://roamresearch.com/#/app/ArtOfGig/page/CF_GEWrWq) before joining, and then answer a couple of simple questions (all fields are required) to access our Discord link.
+If this interests you, take a moment to read our [code of conduct](https://roamresearch.com/#/app/ArtOfGig/page/CF_GEWrWq) before joining, and then answer a couple of simple questions (all fields are required) to access our Discord link.
 
 <form id="join" name="join" method="post" netlify>
 	<p>

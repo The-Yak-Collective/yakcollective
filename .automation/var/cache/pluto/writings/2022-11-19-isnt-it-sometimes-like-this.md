@@ -9,7 +9,7 @@ author: 100047
 One time in the North, there were three moose hunters.
 
 ![](https://cdn-images-1.medium.com/max/512/0*z-4--9S6BPQlzaIE.png)
-_The Midjourney art didn’t go as well for this one…_
+_The Midjourney art didn’t go as well for this one…_
 
 They hire one of those planes that lands on water, to take them out into the wilderness to go moose hunting.
 
