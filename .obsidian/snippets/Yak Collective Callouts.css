@@ -40,7 +40,7 @@
 
  .callout[data-callout="story"] {
 	--callout-color: 158, 158, 158;
-	--callout-icon: lucide-book-marked;
+	--callout-icon: lucide-book-open-text;
 }
 
 /*
@@ -48,26 +48,26 @@
  */
 
  .callout[data-callout="on-horizons"] {
-	--callout-color: 252, 251, 248;
-	--callout-icon: lucide-book-marked;
+	--callout-color: 191, 169, 105;
+	--callout-icon: lucide-sparkles;
 }
 
 .callout[data-callout="democratized-underwater-exploration"] {
 	--callout-color: 25, 150, 175;
-	--callout-icon: lucide-book-marked;
+	--callout-icon: lucide-waves;
 }
 
 .callout[data-callout="the-promise-of-nanosatellites-for-developing-nations"] {
 	--callout-color: 75, 100, 125;
-	--callout-icon: lucide-book-marked;
+	--callout-icon: lucide-satellite;
 }
 
 .callout[data-callout="starship-gold-rush"] {
 	--callout-color: 175, 100, 125;
-	--callout-icon: lucide-book-marked;
+	--callout-icon: lucide-rocket;
 }
 
 .callout[data-callout="designer-metabolism-and-minds"] {
 	--callout-color: 200, 100, 50;
-	--callout-icon: lucide-book-marked;
+	--callout-icon: lucide-brain;
 }

@@ -5,3 +5,7 @@
 	color: inherit !important;
 	text-decoration: inherit;
 }
+
+.callout .internal-embed.media-embed.image-embed.is-loaded {
+	margin-top: var(--p-spacing);
+}

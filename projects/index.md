@@ -8,7 +8,7 @@ Yak Collective projects are collaborations and explorations from the community.
 > [!inactive-project]- [online governance primer](online%20governance%20primer.md)
 > This primer is intended as a guided tour through a curated set of readings that can help groups and organizations navigate this question. In selecting the readings we cast a wide net, but in our discussions we made an effort to consider them from the specific perspective of online governance challenges. We believe the ideas surveyed here are applicable to groups and organizations with widely varied purposes, levels of autonomy, degrees of decentralization, and technological sophistication.
 
-> [!inactive-project]- [Future Frontiers](future%20frontiers/index.md)
+> [!inactive-project]- [Future Frontiers](future%20frontiers.md)
 > In the wake of Covid19, could an era of democratized access to frontiers be the key to a renewed sense of larger purpose in the universe for humanity? In this continuously evolving project, members of the Yak Collective ponder our future as an exploratory species.
 
 > [!inactive-project]- [Astonishing Stories](astonishing%20stories/index.md)

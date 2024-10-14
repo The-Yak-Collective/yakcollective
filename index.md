@@ -17,7 +17,7 @@ Check out our [study](study%20groups/index.md) and [work](work%20groups/index.md
 > [!study-group] [Yak Robotics Garage](study%20groups/yak%20robotics%20garage.md)
 > The Yak Robotics Garage (YaRG) is an informal robotics research group with a relatively mature focus on rovers, with an aspirational goal of deploying open-source rovers on Mars, starting with rovers in living rooms on Earth. In 2024, we are starting to explore other verticals besides rovers.
 
-> [!inactive-project]- [Future Frontiers](projects/future%20frontiers/index.md)
+> [!inactive-project]- [Future Frontiers](projects/future%20frontiers.md)
 > In the wake of Covid19, could an era of democratized access to frontiers be the key to a renewed sense of larger purpose in the universe for humanity? In this continuously evolving project, members of the Yak Collective ponder our future as an exploratory species.
 
 > [!inactive-project]- [Astonishing Stories](projects/astonishing%20stories/index.md)
