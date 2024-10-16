@@ -6,7 +6,7 @@
   "newFileLocation": "current",
   "showUnsupportedFiles": true,
   "attachmentFolderPath": "Assets",
-  "showInlineTitle": false,
+  "showInlineTitle": true,
   "newLinkFormat": "relative",
   "useMarkdownLinks": true
 }

@@ -23,7 +23,6 @@ Conversations happen on [the Discord ⌗infrastructure channel](https://discord.
 ## TODO
 
 - [ ] Foam/Obsidian/Quartz-ify all files
-	- `projects/astonishing stories/index.md`
 	- `projects/astonishing stories/Agglomerizing the Aesthetic.md`
 	- `projects/astonishing stories/Department of Restoration.md`
 	- `projects/astonishing stories/Mechanical Turks All the Way Down.md`

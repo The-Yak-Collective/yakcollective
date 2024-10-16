@@ -21,19 +21,6 @@
             }
           },
           {
-            "id": "28688a5da0ac7f10",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "projects/future frontiers.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
             "id": "46a48553157d0228",
             "type": "leaf",
             "state": {
@@ -231,16 +218,18 @@
   },
   "active": "81b85c616f45e6c6",
   "lastOpenFiles": [
+    "projects/astonishing stories/index.md",
+    "projects/dont waste the reboot.md",
+    "projects/future frontiers.md",
+    "projects/new old home.md",
+    "projects/online governance primer.md",
+    "README.md",
     "projects/astonishing stories/Your Payment is Ready.md",
     "projects/astonishing stories/Wholeness in a Timeless Activity.md",
     "projects/astonishing stories/Out of the Loop.md",
     "projects/astonishing stories/Mechanical Turks All the Way Down.md",
     "projects/astonishing stories/Department of Restoration.md",
     "projects/astonishing stories/Agglomerizing the Aesthetic.md",
-    "README.md",
-    "projects/astonishing stories/index.md",
-    "projects/new old home.md",
-    "projects/future frontiers.md",
     "projects/future frontiers/05.01.02 Designer Metabolism and Minds.md",
     "projects/future frontiers/05.01.01 Designer Metabolism and Minds.md",
     "projects/future frontiers/99.99.99 Contribute to Future Frontiers.md",
@@ -255,8 +244,6 @@
     "projects/future frontiers/02.01.01 Democratized Underwater Exploration.md",
     "projects/future frontiers/01.01.01 On Horizons.md",
     "index.md",
-    "projects/index.md",
-    "projects/dont waste the reboot.md",
     "assets/dont waste the reboot.pdf",
     "assets/dont waste the reboot.webp",
     "assets/new old home placeholder.webp",

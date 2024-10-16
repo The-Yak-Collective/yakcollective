@@ -3,7 +3,7 @@ title: Future Frontiers
 aliases:
   - Future Frontiers
 googleDoc: https://docs.google.com/presentation/d/1oIziqtVM878uRG-JOfrQNvGFsQWKP_S_W8cLkhQlXvA/edit
-date: 2020-12-01 00:00:00
+date: 2020-12-01
 quartsRssFeed: true
 ---
 ![Future Frontiers: An ongoing exploration of contemporary frontiers by members of the Yak Collective.](../assets/future%20frontiers%2000.00.00%20table%20of%20contents.webp)
