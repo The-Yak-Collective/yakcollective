@@ -1,34 +1,20 @@
 ---
 date: 2020-10-30 00:00:00
-hero_image: /projects/astonishing-stories/your-payment-is-ready.webp
-hero_attach_vertical: center
-hero_attach_horizontal: center
-author: 100046
-google_doc: https://docs.google.com/document/d/15LRvkKeNMwRgr6Zf8dYLBBAqhpBxIyLP_WBE16H-PCg/edit
-description: In an age of pandemics and rolling lockdowns, his dad saw the youth orchestra as an opportunity for kids like his son to get out of the house.
-hidden: false
-page_css: /projects/astonishing-stories/your-payment-is-ready.css
+googleDoc: https://docs.google.com/document/d/15LRvkKeNMwRgr6Zf8dYLBBAqhpBxIyLP_WBE16H-PCg/edit
 title: Your Payment is Ready
 aliases:
   - Your Payment is Ready
 quartsRssFeed: true
 ---
-# Your Payment is Ready
-<time class="db small ttu o-60">{{ page.date | date_to_long_string: "ordinal", "US" }}</time>
+*October 30th 2020* • [Benjamin Smith](https://bens.substack.com/)
 
-> _…my algorithm finds that you are currently at the 46th percentile amongst clarinetists in your peer competition group. Practice your arpeggios to improve your score before the final evaluation! 16-year-olds in your city with finely articulated arpeggios generally rank in the top quartile. Those with a strong swing-eighths style generally rank in the top decile. Say ‘practice arpeggios’ or ‘practice swing-eighths’ for a lesson._
+> …my algorithm finds that you are currently at the 46th percentile amongst clarinetists in your peer competition group. Practice your arpeggios to improve your score before the final evaluation! 16-year-olds in your city with finely articulated arpeggios generally rank in the top quartile. Those with a strong swing-eighths style generally rank in the top decile. Say ‘practice arpeggios’ or ‘practice swing-eighths’ for a lesson.
 
 “Judd!” His father yelled as he walked into the garage. “Why the hell is your Clarinet-MLv2 in pieces? How are you going to make regional youth orchestra with a broken machine learning clarinet?” In-person socializing among children had become another luxury good, doled out to high achievers and those who could afford the best virtual instruction. In an age of pandemics and rolling lockdowns, his dad saw the youth orchestra as an opportunity for kids like his son to get out of the house.
 
 “Whoa!” Judd put up his hands to deflect his father’s anger, “I can explain.” Shunting his father to the corner of the garage and away from the decomposed clarinet, he began breathlessly, “so I’m practicing yesterday like normal, getting feedback from Clarence, the clarinet’s evaluation algorithm. But I notice it just keeps repeating the same thing, in the same patronizing British accent. And I mean, No. Matter. What. I. Played. I practiced my arpeggios for two hours, and it tells me I’m 46th percentile. I play a series of high-pitched squeals: ‘Practice your arpeggios…’ I even take the thing apart and remove the analog-to-digital converter so I can feed it recordings of Benny Goodman. “You’re at the 46th percentile. Practice your arpeggios.” Judd throws up his hands in exasperation.  
 
-{%
-  include widget-image.html
-  layout="right"
-  image=page.hero_image
-  alt="Your Payment Is Ready"
-  caption="Illustration by [Justice](https://www.yakcollective.org/members/100048/)."
-%}
+![Justice — https://asterisques.com/](../../assets/astonishing%20stories%202%20your%20payment%20is%20ready.webp)
 
 Listening, Judd’s dad pursed his lips and thought back to how lucky he’d felt to snag an early-model machine learning clarinet in the lottery his son’s public school ran last year. Judd had zero musical aptitude but he received one of the few instruments they had available for enhanced musical instruction. Even though the spit valve was rusted shut and the software was crude, he’d been happy to put down the hefty deposit. He looked over his son’s shoulder at the dismembered clarinet with, as the commercial advertisements claimed, “built-in machine learning software that provides personalized teaching and testing with no dangerous human interaction necessary!” He worried they might lose it if Judd was unable to put the thing back together.
 

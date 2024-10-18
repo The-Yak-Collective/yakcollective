@@ -1,20 +1,12 @@
 ---
 date: 2020-10-23 00:00:00
-hero_image: /projects/astonishing-stories/wholeness-in-a-timeless-activity.webp
-hero_attach_vertical: top
-hero_attach_horizontal: center
-author: 100015
-google_doc: https://docs.google.com/document/d/1Uke-4h8kYARpFZixBfa5Ht6H-UWa7PyJar9Iqq8-rCE/edit
-description: There are some activities the wealthy occasionally lust after. But there is one they will never stop avoiding.
-hidden: false
-page_css: /projects/astonishing-stories/wholeness-in-a-timeless-activity.css
+googleDoc: https://docs.google.com/document/d/1Uke-4h8kYARpFZixBfa5Ht6H-UWa7PyJar9Iqq8-rCE/edit
 title: Wholeness in a Timeless Activity
 aliases:
   - Wholeness in a Timeless Activity
 quartsRssFeed: true
 ---
-# Wholeness in a Timeless Activity
-<time class="db small ttu o-60">{{ page.date | date_to_long_string: "ordinal", "US" }}</time>
+*October 23rd 2020* • [Nathan Chen](https://nchen13.github.io/)
 
 There are some activities the wealthy occasionally lust after. But there is one they will never stop avoiding.
 
@@ -22,13 +14,7 @@ Koichi gripped his chef’s hat as the metal hand centered itself above the ingr
 
 Each main ingredient was in a distinct pile; foie gras, unagi, avocado, and sturgeon black caviar. A sheet of dried seaweed and a bowl of rice sat to the side. As the hovering hand lowered, steel blades emerged out of the point of its fingers. In a series of surprisingly deft and fluid movements, the ingredients were portioned, squeezed together, rolled, and cut. The set of sushi was pushed in front of Koichi, the pieces themselves in a straight line with their faces tilted away from him. Koichi knew if he measured the angle of their tilt, he would find it to be a perfect 45 degrees.
 
-{%
-  include widget-image.html
-  layout="left"
-  image=page.hero_image
-  alt="Wholeness in a Timeless Activity"
-  caption="Illustration by [Justice](https://www.yakcollective.org/members/100048/)."
-%}
+![Justice — https://asterisques.com/](../../assets/astonishing%20stories%201%20wholeness%20in%20a%20timeless%20activity.webp)
 
 Despite knowing no one was watching, Koichi nodded in approval. He was gazing at the final dish when colorful boxes popped into his vision, surrounding the sushi.[^1] They showed the source of several ingredients; the farm where the avocado was picked, the facility where the sturgeon was bred. Koichi angrily blinked thrice and the advertisements disappeared. He was annoyed — his new AR lenses meant everything was a QR code now. Let’s just get it over with, he thought.  
 
@@ -40,11 +26,11 @@ _Better to help build the machine than become one._ As he walked toward the faci
 
 A large advertisement suddenly overtook his vision.
 
-> **_Farmed by the nourished. Find wholeness in a timeless activity._**
+> **Farmed by the nourished. Find wholeness in a timeless activity.**
 
 His fingers broke through the skin of the avocado in surprise. He began to blink rapidly — then stopped. It was the farm that the avocado came from. It seemed to also be some sort of luxury retreat for city dwellers.[^2] But it was the text at the bottom that had caused Koichi to stop:
 
-> _Chefs wanted._
+> Chefs wanted.
 
 The ad used an image of a chef standing next to the table of a young, smiling couple. Koichi chuckled. He placed the avocado in the pocket of his apron and walked out the door.
 

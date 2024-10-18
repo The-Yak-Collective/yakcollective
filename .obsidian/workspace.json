@@ -19,97 +19,6 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "46a48553157d0228",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "projects/astonishing stories/index.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "167c4780d3c128eb",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "projects/astonishing stories/Agglomerizing the Aesthetic.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "b77c11e59313269f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "projects/astonishing stories/Department of Restoration.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "ab222da1707e2129",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "projects/astonishing stories/Mechanical Turks All the Way Down.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "3da43973bb197456",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "projects/astonishing stories/Out of the Loop.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "14b2e5034e654c3b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "projects/astonishing stories/Wholeness in a Timeless Activity.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "59c6d79890e2cec2",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "projects/astonishing stories/Your Payment is Ready.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
           }
         ]
       }
@@ -219,17 +128,17 @@
   "active": "81b85c616f45e6c6",
   "lastOpenFiles": [
     "projects/astonishing stories/index.md",
-    "projects/dont waste the reboot.md",
+    "projects/astonishing stories/Wholeness in a Timeless Activity.md",
+    "projects/astonishing stories/Your Payment is Ready.md",
+    "projects/astonishing stories/Department of Restoration.md",
+    "projects/astonishing stories/Mechanical Turks All the Way Down.md",
+    "projects/astonishing stories/Out of the Loop.md",
+    "projects/astonishing stories/Agglomerizing the Aesthetic.md",
+    "README.md",
     "projects/future frontiers.md",
+    "projects/dont waste the reboot.md",
     "projects/new old home.md",
     "projects/online governance primer.md",
-    "README.md",
-    "projects/astonishing stories/Your Payment is Ready.md",
-    "projects/astonishing stories/Wholeness in a Timeless Activity.md",
-    "projects/astonishing stories/Out of the Loop.md",
-    "projects/astonishing stories/Mechanical Turks All the Way Down.md",
-    "projects/astonishing stories/Department of Restoration.md",
-    "projects/astonishing stories/Agglomerizing the Aesthetic.md",
     "projects/future frontiers/05.01.02 Designer Metabolism and Minds.md",
     "projects/future frontiers/05.01.01 Designer Metabolism and Minds.md",
     "projects/future frontiers/99.99.99 Contribute to Future Frontiers.md",

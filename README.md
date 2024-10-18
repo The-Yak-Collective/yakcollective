@@ -22,13 +22,6 @@ Conversations happen on [the Discord ⌗infrastructure channel](https://discord.
 
 ## TODO
 
-- [ ] Foam/Obsidian/Quartz-ify all files
-	- `projects/astonishing stories/Agglomerizing the Aesthetic.md`
-	- `projects/astonishing stories/Department of Restoration.md`
-	- `projects/astonishing stories/Mechanical Turks All the Way Down.md`
-	- `projects/astonishing stories/Out of the Loop.md`
-	- `projects/astonishing stories/Wholeness in a Timeless Activity.md`
-	- `projects/astonishing stories/Your Payment is Ready.md`
 - [ ] Integrate in newsletters from `.automation/var/cache/pluto/newsletter/*`
 - [ ] Make sure that all all pages are linked to each other
 - [ ] Make sure text works well everywhere

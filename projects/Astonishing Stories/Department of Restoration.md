@@ -1,20 +1,12 @@
 ---
 date: 2020-11-06 00:00:00
-hero_image: /projects/astonishing-stories/department-of-restoration.webp
-hero_attach_vertical: center
-hero_attach_horizontal: center
-author: 100022
-google_doc: https://docs.google.com/document/d/1JrlKrp4C3sy9ByOecAEWc2mxnoodvM5PWVAqpGVFhVY/edit
-description: "At a certain time, in a certain space, a person may speak or act and find himself under a recent form of judgment: cancellation."
-hidden: false
-page_css: /projects/astonishing-stories/department-of-restoration.css
+googleDoc: https://docs.google.com/document/d/1JrlKrp4C3sy9ByOecAEWc2mxnoodvM5PWVAqpGVFhVY/edit
 title: Department of Restoration
 aliases:
   - Department of Restoration
 quartsRssFeed: true
 ---
-# Department of Restoration
-<time class="db small ttu o-60">{{ page.date | date_to_long_string: "ordinal", "US" }}</time>
+*November 6th 2020* • [Scott Garlinger](https://twitter.com/scott_garlinger)
 
 +
 
@@ -22,13 +14,7 @@ At a certain time, in a certain space, a person may speak or act and find himsel
 
 Indeed, this algorithmic tribunal stands watch over many, many occurrences and its decrees hold unforeseen consequences. Those people, those consequences, still navigate day-to-day life but haven’t the chance to go back or go forward.
 
-{%
-  include widget-image.html
-  layout="left"
-  image=page.hero_image
-  alt="Department of Restoration"
-  caption="Illustration by [Justice](https://www.yakcollective.org/members/100048/)."
-%}
+![Justice — https://asterisques.com/](../../assets/astonishing%20stories%203%20department%20of%20restoration.webp)
 
 This growing body of consequences now finally sees a new option, an outlet for moving forward. A select team, carrying rites handed down by religious sects, futurists, and ancient literature, service a series of practices. They elucidate practicable ways: making amends, settling disputes, and beginning again for a new time and place.
 

@@ -1,30 +1,16 @@
 ---
 date: 2020-11-20 00:00:00
-hero_image: /projects/astonishing-stories/out-of-the-loop.webp
-hero_attach_vertical: center
-hero_attach_horizontal: center
-author: 100013
-google_doc: https://docs.google.com/document/d/1989Uffl2bLLia75bX9_EOFpUesuUZ7eZpcr56SA6Clg/edit
-description: He decided then that it was time for him to untangle this mess because no way he was getting laid without a neat graph of thoughts — manufactured or otherwise.
-hidden: false
-page_css: /projects/astonishing-stories/out-of-the-loop.css
+googleDoc: https://docs.google.com/document/d/1989Uffl2bLLia75bX9_EOFpUesuUZ7eZpcr56SA6Clg/edit
 title: Out of the Loop
 aliases:
   - Out of the Loop
 quartsRssFeed: true
 ---
-# Out of the Loop
-<time class="db small ttu o-60">{{ page.date | date_to_long_string: "ordinal", "US" }}</time>
+*November 20th 2020* • [Sachin Benny](https://sachinbenny.notion.site/I-m-Sachin-Benny-7391ec1aafa94af28599a2b089c4bf35)
 
 Vijayan looked down in pain at his [programmable forearm tattoo](https://roamresearch.com/#/app/Astonishing_Stories/page/6jX2RXOls) after finishing his last note. The microbots in his arm etched a new web of nodes, mirroring his notetaking system on a Roam graph. His mind had become a tangled graph since his father’s death, now reflected on his arm as a messy graph of interconnected lines for all to see. He gazed into his coffee and cursed under his breath while he thought about the decision to get the Roam microbots. He was now stuck living with nanotechnology that etched a continuously evolving tattoo on his arm.
 
-{%
-  include widget-image.html
-  layout="left"
-  image=page.hero_image
-  alt="Out of the Loop"
-  caption="Illustration by [Justice](https://www.yakcollective.org/members/100048/)."
-%}
+![Justice — https://asterisques.com/](../../assets/astonishing%20stories%205%20out%20of%20the%20loop.webp)
 
 It all goes back a few months. After five years of not asking anyone out, he finally asked out the barista at the local hipster cafe. On their first date, he quickly realized that they had nothing in common, but he liked her Roam microbot tattoo — a neat graph of interconnected lines, almost too neat for a natural note-taking system.
 
@@ -42,21 +28,21 @@ He invested in a nice bucket from Home Depot so that he could put his face under
 
 In the meantime, Vijayan had managed to lose his job. For the third time in 5 years. He decided this was it, employment was not for him. Thankfully the state had him covered. Universal Basic Income provided everyone with USD 2,500 a month. It began during the pandemic years to quell riots as people struggled to put food on the table. But the provision kept expanding to cover other issues.
 
-One of the most controversial expansions, the ignominiously titled the _Joker Act_, covered anyone, mostly men aged 18 to 35, who had become “not interested in pursuing employment in exchange for fair value.” The trigger for the act to be put in place was the murder of a popular pitch-fork feminist by a guy named Bryce from Arkansas who said he was inspired by “Joaquin Phoenix’s Joker to revolt against the oppression of the average male.”
+One of the most controversial expansions, the ignominiously titled the *Joker Act*, covered anyone, mostly men aged 18 to 35, who had become “not interested in pursuing employment in exchange for fair value.” The trigger for the act to be put in place was the murder of a popular pitch-fork feminist by a guy named Bryce from Arkansas who said he was inspired by “Joaquin Phoenix’s Joker to revolt against the oppression of the average male.”
 
 Although someone soon found out that Bryce was just a 28-year-old addicted to porn and let go from his last six jobs, it did not stop the act from coming into place.
 
 “Less reliable than a dog and a big mistake” was exactly how his father had described Vijayan, so taking advantage of this program felt ironically appropriate.
 
-Part of the _Joker Act_ was a rehabilitation program called _Love the Land_ that Vijayan had to attend if he was to get the $2,500/mo UBI.
+Part of the *Joker Act* was a rehabilitation program called *Love the Land* that Vijayan had to attend if he was to get the $2,500/mo UBI.
 
 The program was started by a few tech executives with a guilty conscience and was funded by profits from online advertising.
 
-Sell the problem and the cure, Vijayan had thought to himself the first time he saw an ad for it while he was on the 5th hour of an 8 hour TV binge. But there he was signing up for the mandatory program. Two days later the people from the LLE (_Love the Land_ enforcement) picked Vijayan up in a van and had taken away all of his electronic devices, including his internet-connected implants, and put him on the road to a homestead in the West Texas desert.
+Sell the problem and the cure, Vijayan had thought to himself the first time he saw an ad for it while he was on the 5th hour of an 8 hour TV binge. But there he was signing up for the mandatory program. Two days later the people from the LLE (*Love the Land* enforcement) picked Vijayan up in a van and had taken away all of his electronic devices, including his internet-connected implants, and put him on the road to a homestead in the West Texas desert.
 
-Two days later Vijayan was sweating through his eyes as he plowed land in a greenhouse in the middle of the desert. Although painful and extremely boring, _Love the Land_ exposed Vijayan to the joys of doing something mundane and routine that made him sweat. He understood why rich people came here for a couple of months every spring to roleplay as carpenters or farmers. Chop wood, carry water, quite literally, Vijayan thought. The idea of being stuck with himself and his thoughts for the next four weeks nearly gave him an anxiety attack.
+Two days later Vijayan was sweating through his eyes as he plowed land in a greenhouse in the middle of the desert. Although painful and extremely boring, *Love the Land* exposed Vijayan to the joys of doing something mundane and routine that made him sweat. He understood why rich people came here for a couple of months every spring to roleplay as carpenters or farmers. Chop wood, carry water, quite literally, Vijayan thought. The idea of being stuck with himself and his thoughts for the next four weeks nearly gave him an anxiety attack.
 
-Every evening at _Love the Land_, Vijayan was subjected to what felt like the worst kind of sensory deprivation that a man can go through: they called it mandatory walks. No music, no AirPods, just walking along an oasis in the desert like a lunatic. He was also off any kind of substances, including coffee, which meant he could not induce euphoria the way he had for such a long time. He was left to figure out a way to deal with his thoughts.
+Every evening at *Love the Land*, Vijayan was subjected to what felt like the worst kind of sensory deprivation that a man can go through: they called it mandatory walks. No music, no AirPods, just walking along an oasis in the desert like a lunatic. He was also off any kind of substances, including coffee, which meant he could not induce euphoria the way he had for such a long time. He was left to figure out a way to deal with his thoughts.
 
 The sky is big in West Texas and the other inmates usually gathered at the observatory situated within the 100-acre plot to watch the pinkish-red hues of the sky in the evening. Vijayan looked at the wind turbines lined across the horizon and wondered when his mind would cease to become an endless loop of the same thoughts going round and round. Late at night, he would stare at the wall in his room and the slight imperfections on the wall would remind him of life during the pandemic years.
 
@@ -64,11 +50,11 @@ Vijayan had spent most of the pandemic in his room, staring at the wall, imagini
 
 His father had said that Vijayan should stay in his room at all times, which now meant all the fucking time. That’s apparently what happens when you are just a B student in school. He knew something was wrong with where he was and what was happening to him, but he could never put his finger on exactly what. His father was a well-respected man at work and among family, so clearly something must be horribly wrong with himself, Vijayan thought. He tried to pray on it, thinking of the immigrant kids in cages on the border. If he tried hard, he could empathize with them and even cry. This ended up being a fairly useful disassociation technique although he doubted if he actually cared about any of those kids.
 
-In the evenings his parents would go for their daily walk, and Vijayan would emerge from his room, an old iPod in hand. His mom had secretly bought it for him when he was 11. He would grab it from a nook in the storeroom in the kitchen where he usually kept things that he wanted to hide from his father. And he headed to the second floor to stand by a window from which he could see the road along which his parents would return after their walk. He would watch the pinkish-red hues of the Houston sky and admire how the leaves of the trees rustled in the hot evening breeze. It was the quietest moment of his day. He did not like thinking back to those moments by the window anymore and now he hated the Texas evening sky. Do people come to this purgatory to relive high school over and over? Vijayan thought to himself as he glanced at the crowd at the observatory in _Love the Land_. He looked for familiar faces, as he often did when he became anxious, and his eyes stopped at the only man who could pull off a tweed hat in the middle of the desert. The man, Reggie, was waving toward him to join the small group conversation he had going in the northeast corner of the observatory.
+In the evenings his parents would go for their daily walk, and Vijayan would emerge from his room, an old iPod in hand. His mom had secretly bought it for him when he was 11. He would grab it from a nook in the storeroom in the kitchen where he usually kept things that he wanted to hide from his father. And he headed to the second floor to stand by a window from which he could see the road along which his parents would return after their walk. He would watch the pinkish-red hues of the Houston sky and admire how the leaves of the trees rustled in the hot evening breeze. It was the quietest moment of his day. He did not like thinking back to those moments by the window anymore and now he hated the Texas evening sky. Do people come to this purgatory to relive high school over and over? Vijayan thought to himself as he glanced at the crowd at the observatory in *Love the Land*. He looked for familiar faces, as he often did when he became anxious, and his eyes stopped at the only man who could pull off a tweed hat in the middle of the desert. The man, Reggie, was waving toward him to join the small group conversation he had going in the northeast corner of the observatory.
 
 Vijayan never really understood why Reggie was here. He walked the earth like he had a divine purpose and he made sure to put everyone around at ease. If someone committed murder they would most likely feel comfortable confessing to Reggie. Vijayan found this attractive and envied it at the same time.
 
-This was their 4th and final week at _Love the Land_ and Vijayan tried to muster the courage to ask Reggie why he was here. After making some lackadaisical conversation with the group, Vijayan turned to Reggie and went “So Reggie, why the fuck are you here?” and then mumbled the rest under his breath as he felt the energy of the group shifting “I mean… sorry for asking… but if you can talk about it,”
+This was their 4th and final week at *Love the Land* and Vijayan tried to muster the courage to ask Reggie why he was here. After making some lackadaisical conversation with the group, Vijayan turned to Reggie and went “So Reggie, why the fuck are you here?” and then mumbled the rest under his breath as he felt the energy of the group shifting “I mean… sorry for asking… but if you can talk about it,”
 
 Reggie paused for less than a second and replied, “I tried to change the world and went too far.” Vijayan was unimpressed but the rest of the group seemed to be lapping it up.
 
@@ -88,9 +74,9 @@ Great. Another thought to chew on for the next couple of days, Vijayan sighed as
 
 For the next couple of weeks Vijayan felt like the opposite of one of those old dolls that shut their eyes when you laid them down. When his eyes were open he wanted them to be shut and when he wanted them to shut his mind was racing.
 
-The first thing Vijayan did after getting back from _Love the Land_ was google who Reggie was and how much he was worth. Reggie Laudrop was a millionaire, well, close to a billionaire, after he sold his start-up _Perfect Father_ to _Match.com_. The app started as a platform where you could hire someone to be your father and then logically expand into other family members.
+The first thing Vijayan did after getting back from *Love the Land* was google who Reggie was and how much he was worth. Reggie Laudrop was a millionaire, well, close to a billionaire, after he sold his start-up *Perfect Father* to *Match.com*. The app started as a platform where you could hire someone to be your father and then logically expand into other family members.
 
-He had heard of the app a couple of times before but had dismissed it as some dystopian fetish that hipsters with premium mediocre money were into. That is, hipsters with more than enough money, but not enough to buy a yacht and fill it with women. He decided to give it a shot because he had no other plans, and, in the back of Vijayan’s mind, he couldn’t stop thinking about Reggie and his millions. The dude must know something that I don’t, Vijayan thought. Despite the _Joker Act_ money, doing nothing was really hard, especially in a country where people’s idea of relaxing was doing more things.
+He had heard of the app a couple of times before but had dismissed it as some dystopian fetish that hipsters with premium mediocre money were into. That is, hipsters with more than enough money, but not enough to buy a yacht and fill it with women. He decided to give it a shot because he had no other plans, and, in the back of Vijayan’s mind, he couldn’t stop thinking about Reggie and his millions. The dude must know something that I don’t, Vijayan thought. Despite the *Joker Act* money, doing nothing was really hard, especially in a country where people’s idea of relaxing was doing more things.
 
 Vijayan spent the next couple of days browsing profiles. They went into details from the relevant — has this person traumatized someone in the past — to the mundane such as did they share any annoying ticks as the user’s real parents. Vijayan eventually ended up matching with an older man with a slightly disappointed resting face to be his father. His profile simply read Mr. Vader and Vijayan knew right away this was the sadomasochistic experience he wanted to spend some government bucks on.
 
@@ -118,7 +104,7 @@ More family dinners followed and although Vijayan called him “Dad” with the 
 
 The fuck am I supposed to do with this feeling? Vijayan thought to himself and it probably reflected on his face too.
 
-In the following weeks, Mr. Vader introduced Vijayan to the concept of _reparenting_. The act of imagining being a parent to your younger self, the way you would have liked to be parented and coached. For Vijayan, the whole thing had a chaotic energy to it. On some days he would feel like he was on the cusp of a breakthrough of some kind, be euphoric about it, and then forget what made him euphoric. On other days he would feel fragile and burst out in tears at the random high note of a song. Vijayan was also scared that he was rewiring his brain in ways that he did not understand — what does he do with all these memories of events he had forgotten? What if Mr. Vader’s incentive was to keep Vijayan as a client forever? Mr. Vader had a stoic disposition about him. Vijayan distrusted stoics, pussies who just want to cope with life and not live it, he thought to himself.
+In the following weeks, Mr. Vader introduced Vijayan to the concept of *reparenting*. The act of imagining being a parent to your younger self, the way you would have liked to be parented and coached. For Vijayan, the whole thing had a chaotic energy to it. On some days he would feel like he was on the cusp of a breakthrough of some kind, be euphoric about it, and then forget what made him euphoric. On other days he would feel fragile and burst out in tears at the random high note of a song. Vijayan was also scared that he was rewiring his brain in ways that he did not understand — what does he do with all these memories of events he had forgotten? What if Mr. Vader’s incentive was to keep Vijayan as a client forever? Mr. Vader had a stoic disposition about him. Vijayan distrusted stoics, pussies who just want to cope with life and not live it, he thought to himself.
 
 At the end of a session over apple strudel and cappuccino in the same cafe that Vijayan had met his ex-girlfriend, Mr. Vader reminded Vijayan that he had missed his last payment.
 
@@ -166,6 +152,6 @@ Vijayan flashed back to all the times this happened to him with his father, then
 
 Today, a year later, Vijayan is at the hipster coffee shop and finally able to make eye contact with his ex-girlfriend barista. For a split second, his mind momentarily leaves and he feels like he is inhabiting the body of his self from a year ago. Weirdly enough, Vijayan recognizes him.
 
-He pulled to refresh the top listings page on the app store. _GPT-51 Pre-Fab Dad_ had done well since their last update which gave users the option to add voice filters to their critical parent voice. The most popular filter these days was the high-pitched voice of Brian’s mother from Monty Python’s _Life of Brian_. The page updated and there it was — undeniable proof that they had hit a goldmine of first-world problems, _GPT-51 Pre-Fab Dad_ was the ⌗1 paid app.
+He pulled to refresh the top listings page on the app store. *GPT-51 Pre-Fab Dad* had done well since their last update which gave users the option to add voice filters to their critical parent voice. The most popular filter these days was the high-pitched voice of Brian’s mother from Monty Python’s *Life of Brian*. The page updated and there it was — undeniable proof that they had hit a goldmine of first-world problems, *GPT-51 Pre-Fab Dad* was the ⌗1 paid app.
 
-He looked down at his forearm tattoo which right now resembled the beautiful constellations he had observed on that dreadful _Love the Land_ escapade.
+He looked down at his forearm tattoo which right now resembled the beautiful constellations he had observed on that dreadful *Love the Land* escapade.
