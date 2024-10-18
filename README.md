@@ -23,7 +23,7 @@ Conversations happen on [the Discord ⌗infrastructure channel](https://discord.
 ## TODO
 
 - [ ] Integrate in newsletters from `.automation/var/cache/pluto/newsletter/*`
-- [ ] Make sure that all all pages are linked to each other
+- [ ] Make sure that all all pages are linked to each other (and remove unused pages)
 - [ ] Make sure text works well everywhere
 	- [ ] Obsidian
 	- [ ] Foam
