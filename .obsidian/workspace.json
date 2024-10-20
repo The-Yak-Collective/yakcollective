@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "newsletters/2020-06-15-announcing-yak-talk.md",
+                "file": "README.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -78,7 +78,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "newsletters/2020-06-15-announcing-yak-talk.md",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -95,7 +95,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "newsletters/2020-06-15-announcing-yak-talk.md",
+                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -107,7 +107,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "newsletters/2020-06-15-announcing-yak-talk.md"
+                "file": "README.md"
               }
             }
           }
@@ -127,8 +127,9 @@
   },
   "active": "81b85c616f45e6c6",
   "lastOpenFiles": [
-    "newsletters/2020-10-23-took-a-break-now-were-back.md",
+    "newsletters/2020-06-15-announcing-yak-talk.md",
     "members_DELETE_ME.md",
+    "newsletters/2020-10-23-took-a-break-now-were-back.md",
     "index.md",
     "newsletters/index.md",
     "work groups/index.md",
@@ -152,7 +153,6 @@
     "newsletters/2021-05-30-yak-trails-2021-05-30.md",
     "newsletters/2021-05-23-yak-trails-2021-05-23.md",
     "newsletters/2021-02-05-new-year-newsletter.md",
-    "newsletters/2020-12-10-first-yc-annual-meeting.md",
     "newsletters",
     "assets/dont waste the reboot.pdf",
     "assets/dont waste the reboot.webp",
