@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "projects/astonishing stories1/your payment is ready.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -78,7 +78,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "projects/astonishing stories1/your payment is ready.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -95,7 +95,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
+                "file": "projects/astonishing stories1/your payment is ready.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -107,7 +107,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md"
+                "file": "projects/astonishing stories1/your payment is ready.md"
               }
             }
           }
@@ -125,16 +125,17 @@
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "81b85c616f45e6c6",
+  "active": "ed28a492f4db7385",
   "lastOpenFiles": [
-    "projects/astonishing stories/index.md",
-    "projects/astonishing stories/Wholeness in a Timeless Activity.md",
-    "projects/astonishing stories/Your Payment is Ready.md",
-    "projects/astonishing stories/Department of Restoration.md",
-    "projects/astonishing stories/Mechanical Turks All the Way Down.md",
-    "projects/astonishing stories/Out of the Loop.md",
-    "projects/astonishing stories/Agglomerizing the Aesthetic.md",
+    "projects/astonishing stories1/wholeness in a timeless activity.md",
+    "projects/astonishing stories1/out of the loop.md",
+    "projects/astonishing stories1/mechanical turks all the way down.md",
+    "projects/astonishing stories1/department of restoration.md",
+    "projects/astonishing stories1/agglomerizing the aesthetic.md",
     "README.md",
+    "newsletter.md",
+    "projects/astonishing stories1/index.md",
+    "projects/astonishing stories1/your payment is ready.md",
     "projects/future frontiers.md",
     "projects/dont waste the reboot.md",
     "projects/new old home.md",
@@ -152,7 +153,6 @@
     "projects/future frontiers/02.01.02 Democratized Underwater Exploration.md",
     "projects/future frontiers/02.01.01 Democratized Underwater Exploration.md",
     "projects/future frontiers/01.01.01 On Horizons.md",
-    "index.md",
     "assets/dont waste the reboot.pdf",
     "assets/dont waste the reboot.webp",
     "assets/new old home placeholder.webp",

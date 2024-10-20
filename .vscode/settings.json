@@ -19,7 +19,7 @@
   },
   "files.insertFinalNewline": true,
   "markdown.styles": [
-    ".vscode/custom-tag-style.css"
+    ".vscode/yak-collective.css"
   ],
   "foam.preview.embedNoteType": "content-inline",
   "markdown.extension.list.indentationSize": "inherit",
@@ -37,7 +37,7 @@
       ".github/**/*",
       ".gitignore",
       ".vscode/**/*",
-      "Private/Hi-Res and Original Assets/*"
+      "private/original assets/*"
   ],
   "foam.placeholders.exclude": [
       ".automation/**/*",
@@ -45,7 +45,7 @@
       ".github/**/*",
       ".gitignore",
       ".vscode/**/*",
-      "Private/Hi-Res and Original Assets/*"
+      "private/original assets/*"
   ],
   "foam.files.ignore": [
       ".automation/**/*",
@@ -53,6 +53,6 @@
       ".github/**/*",
       ".gitignore",
       ".vscode/**/*",
-      "Private/Hi-Res and Original Assets/*"
+      "private/original assets/*"
   ]
 }
