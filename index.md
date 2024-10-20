@@ -20,7 +20,7 @@ Check out our [study](study%20groups/index.md) and [work](work%20groups/index.md
 > [!inactive-project]- [Future Frontiers](projects/future%20frontiers.md)
 > In the wake of Covid19, could an era of democratized access to frontiers be the key to a renewed sense of larger purpose in the universe for humanity? In this continuously evolving project, members of the Yak Collective ponder our future as an exploratory species.
 
-> [!inactive-project]- [Astonishing Stories](projects/astonishing%20stories1/index.md)
+> [!inactive-project]- [Astonishing Stories](projects/astonishing%20stories/index.md)
 > The upside of an extremely uncertain environment is that we have been free to indulge in pure speculation about the known knowns and unknown unknowns of the future. The result is Astonishing Stories, an anthology of short vignettes from the future developed from the networked thoughts of over 30 indie consultants.
 
 > [!inactive-project]- [new old home](projects/new%20old%20home.md)
