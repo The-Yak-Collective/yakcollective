@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "projects/astonishing stories/your payment is ready.md",
+                "file": "newsletters/2020-06-15-announcing-yak-talk.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -78,7 +78,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "projects/astonishing stories/your payment is ready.md",
+                "file": "newsletters/2020-06-15-announcing-yak-talk.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -95,7 +95,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "projects/astonishing stories/your payment is ready.md",
+                "file": "newsletters/2020-06-15-announcing-yak-talk.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -107,7 +107,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "projects/astonishing stories/your payment is ready.md"
+                "file": "newsletters/2020-06-15-announcing-yak-talk.md"
               }
             }
           }
@@ -125,34 +125,35 @@
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "ed28a492f4db7385",
+  "active": "81b85c616f45e6c6",
   "lastOpenFiles": [
-    "projects/astonishing stories/wholeness in a timeless activity.md",
-    "projects/astonishing stories/out of the loop.md",
-    "projects/astonishing stories/mechanical turks all the way down.md",
-    "projects/astonishing stories/department of restoration.md",
-    "projects/astonishing stories/agglomerizing the aesthetic.md",
-    "README.md",
-    "newsletter.md",
-    "projects/astonishing stories/index.md",
+    "newsletters/2020-10-23-took-a-break-now-were-back.md",
+    "members_DELETE_ME.md",
+    "index.md",
+    "newsletters/index.md",
+    "work groups/index.md",
     "projects/astonishing stories/your payment is ready.md",
-    "projects/future frontiers.md",
-    "projects/dont waste the reboot.md",
-    "projects/new old home.md",
-    "projects/online governance primer.md",
-    "projects/future frontiers/05.01.02 Designer Metabolism and Minds.md",
-    "projects/future frontiers/05.01.01 Designer Metabolism and Minds.md",
-    "projects/future frontiers/99.99.99 Contribute to Future Frontiers.md",
-    "projects/future frontiers/03.01.02 Starship Gold Rush.md",
-    "projects/future frontiers/03.01.01 Starship Gold Rush.md",
-    "projects/future frontiers/02.02.03 The Promise of Nanosatellites for Developing Nations.md",
-    "projects/future frontiers/02.02.02 The Promise of Nanosatellites for Developing Nations.md",
-    "projects/future frontiers/02.02.01 The Promise of Nanosatellites for Developing Nations.md",
-    "projects/future frontiers/02.01.04 Democratized Underwater Exploration.md",
-    "projects/future frontiers/02.01.03 Democratized Underwater Exploration.md",
-    "projects/future frontiers/02.01.02 Democratized Underwater Exploration.md",
-    "projects/future frontiers/02.01.01 Democratized Underwater Exploration.md",
-    "projects/future frontiers/01.01.01 On Horizons.md",
+    "newsletters/2023-06-30-archetypes.md",
+    "newsletters/2023-05-13-rules.md",
+    "newsletters/2023-05-05-yak-governance-studies-sequence-intro.md",
+    "newsletters/2023-01-15-yakcon-part-2.md",
+    "newsletters/2023-01-09-yakcon-part-1-review-part-2-preview.md",
+    "newsletters/2023-01-03-come-join-us-at-yakcon.md",
+    "newsletters/2022-11-25-calling-all-yaks-yak-collective-pop-up-project.md",
+    "newsletters/2022-03-08-the-yak-online-governance-primer.md",
+    "newsletters/2022-01-24-tonight-rovers-101-session.md",
+    "newsletters/2021-12-15-yc-annual-survey.md",
+    "newsletters/2021-12-06-yc-annual-meeting-yak-rover-demo-day.md",
+    "newsletters/2021-07-04-yak-trails-2021-07-04.md",
+    "newsletters/2021-06-27-yak-trails-2021-06-27.md",
+    "newsletters/2021-06-20-yak-trails-2021-06-20.md",
+    "newsletters/2021-06-13-yak-trails-2021-06-13.md",
+    "newsletters/2021-06-06-yak-trails-2021-06-06.md",
+    "newsletters/2021-05-30-yak-trails-2021-05-30.md",
+    "newsletters/2021-05-23-yak-trails-2021-05-23.md",
+    "newsletters/2021-02-05-new-year-newsletter.md",
+    "newsletters/2020-12-10-first-yc-annual-meeting.md",
+    "newsletters",
     "assets/dont waste the reboot.pdf",
     "assets/dont waste the reboot.webp",
     "assets/new old home placeholder.webp",
