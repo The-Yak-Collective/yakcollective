@@ -1,6 +1,6 @@
 {
   "theme": "moonstone",
-  "baseFontSize": 14,
+  "baseFontSize": 16,
   "enabledCssSnippets": [
     "Hiding Helpers",
     "Markdown Embed Tweaks",
