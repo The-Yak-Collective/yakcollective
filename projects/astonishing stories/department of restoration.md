@@ -1,5 +1,5 @@
 ---
-date: 2020-11-06 00:00:00
+date: 2020-11-06
 googleDoc: https://docs.google.com/document/d/1JrlKrp4C3sy9ByOecAEWc2mxnoodvM5PWVAqpGVFhVY/edit
 title: Department of Restoration
 aliases:

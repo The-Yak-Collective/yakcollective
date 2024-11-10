@@ -1,11 +1,12 @@
 ---
-title: Took a break, now we're back!
-date: 2020-10-23 22:07:22.000000000 Z
-layout: post-external
-original_link: https://yakcollective.substack.com/p/took-a-break-now-were-back
+title: "Took a break, now we're back!"
+aliases:
+  - "Took a break, now we're back!"
+quartsRssFeed: true
+date: 2020-10-23
+substack: https://yakcollective.substack.com/p/took-a-break-now-were-back
 ---
-
- **Updates**
+**Updates**
 
 This newsletter, Yak Talk, is now being led by Praful Mathur and we’re looking for people who want to discuss what’s impacting Yak Collective members. The ultimate goal of our newsletter is to help consultants and gig workers connect with one another and help facilitate exchange of ideas and increase commerce.
 
@@ -60,4 +61,3 @@ Footnotes
 **[1] [Grandma Flair](https://roamresearch.com/#/app/Astonishing_Stories/page/OIvmf9Icx)**[:](https://roamresearch.com/#/app/Astonishing_Stories/page/OIvmf9Icx) A food advertisement that delights you about the real food that you are eating. If the food you are eating has fewer than five ingredients or ingredients that you can pronounce, it fills the space with colorful delight.
 
 **[2] [Farming Retreats](https://roamresearch.com/#/app/Astonishing_Stories/page/C1YocTLLb):** In the year 2025, as the "always-on" mode of being constantly connected to work (via smartphone, internet, etc.) becomes passe and low-class, large midwest farms place full page advertisements in the New York Times for wealthy urbanites to come pick fruit and other crops as a type of retreat from busy urban life.
-

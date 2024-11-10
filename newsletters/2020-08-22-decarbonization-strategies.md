@@ -1,10 +1,11 @@
 ---
 title: Decarbonization Strategies
-date: 2020-08-22 14:00:35.000000000 Z
-layout: post-external
-original_link: https://yakcollective.substack.com/p/decarbonization-strategies
+aliases:
+  - Decarbonization Strategies
+quartsRssFeed: true
+date: 2020-08-22
+substack: https://yakcollective.substack.com/p/decarbonization-strategies
 ---
-
 In this week’s _Yak Talk_, we interview fellow Yak **[Varun Adibhatla](https://twitter.com/vr00n?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor)**.
 
 Varun works as a deployment strategist at [Urbint](https://medium.com/urbint-engineering/out-on-the-range-a-recap-of-sgas-natural-gas-connect-2019-c11e35dd22ea), and also founded [ARGO](http://www.argolabs.org/)(Advanced Research in Government Operations), with a mission to research and deliver data infrastructure to transform how basic public services are delivered.
@@ -118,4 +119,3 @@ Apply to **[become a Yak here](https://www.yakcollective.org/join/)**.
 Interested in hiring the Yak Collective? Send a message to **[vgr@ribbonfarm.com](mailto:vgr@ribbonfarm.com)**.
 
 _The Yak Talk team for this week’s edition is: [Alex Wagner](https://twitter.com/alexdw5), [Shreeda Segan](https://shreeda.substack.com/), [Praful Mathur](http://twitter.com/prafulfillment), [Matthew Sweet](https://twitter.com/Matthew_Sweet), [Joseph Ensminger](https://twitter.com/EnsmingerJoseph), and [Grigori Milov](https://twitter.com/grigorimilov)._
-

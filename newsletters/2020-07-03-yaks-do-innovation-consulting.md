@@ -1,11 +1,11 @@
 ---
-layout: post-external
-title: |
-  Yaks Do Innovation Consulting
-date: 2020-07-03 11:08:00 +0000
-original_link: https://yakcollective.substack.com/p/yaks-do-innovation-consulting
+title: Yaks Do Innovation Consulting
+aliases:
+  - Yaks Do Innovation Consulting
+quartsRssFeed: true
+date: 2020-07-03
+substack: https://yakcollective.substack.com/p/yaks-do-innovation-consulting
 ---
-
 ## “The Dog Daies”
 
 It’s been a relatively quiet week at Yak as we lope into the Dog Days of Summer: Pandemic Edition.

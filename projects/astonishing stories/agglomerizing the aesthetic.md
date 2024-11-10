@@ -1,5 +1,5 @@
 ---
-date: 2020-11-29 00:00:00
+date: 2020-11-29
 googleDoc: https://docs.google.com/document/d/15LRvkKeNMwRgr6Zf8dYLBBAqhpBxIyLP_WBE16H-PCg/edit
 quartsRssFeed: true
 title: Agglomerizing the Aesthetic

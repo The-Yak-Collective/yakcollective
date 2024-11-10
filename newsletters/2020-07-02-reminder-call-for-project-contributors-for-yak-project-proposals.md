@@ -1,11 +1,11 @@
 ---
-layout: post-external
-title: |
-  Reminder: Call for Project Contributors for Yak Project Proposals
-date: 2020-07-03 11:43:00 +0000
-original_link: https://yakcollective.substack.com/p/reminder-call-for-project-contributors
+title: "Reminder: Call for Project Contributors for Yak Project Proposals"
+aliases:
+  - "Reminder: Call for Project Contributors for Yak Project Proposals"
+quartsRssFeed: true
+date: 2020-07-02
+substack: https://yakcollective.substack.com/p/reminder-call-for-project-contributors
 ---
-
 Sending out a quick reminder that **Yak Collective is seeking project contributors for its second round of project ideas.**
 
 Here’s what you need to know:
@@ -21,4 +21,3 @@ Here’s what you need to know:
 You can access the form to review the projects and express your interest in one or more of them via the button below.
 
 [View Projects and Sign Up](https://forms.gle/ZaxN1cRafS4LyZHw6)
-

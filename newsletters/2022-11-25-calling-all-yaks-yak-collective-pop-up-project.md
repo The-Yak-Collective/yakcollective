@@ -1,10 +1,12 @@
 ---
-title: "\U0001F6A8 Calling All Yaks: Yak Collective Pop-Up Project"
-date: 2022-11-25 23:00:17.000000000 Z
-layout: post-external
-original_link: https://yakcollective.substack.com/p/calling-all-yaks-yak-collective-pop
+title: "🚨 Calling All Yaks: Yak Collective Pop-Up Project"
+aliases:
+  - "Calling All Yaks: Yak Collective Pop-Up Project"
+  - "🚨 Calling All Yaks: Yak Collective Pop-Up Project"
+quartsRssFeed: true
+date: 2022-11-25
+substack: https://yakcollective.substack.com/p/calling-all-yaks-yak-collective-pop
 ---
-
 One of the strengths of the Yak Collective is the diversity of people, skills, and opinions here. We have a client willing to pay to tap this.
 
 [
@@ -39,4 +41,3 @@ And if you’re not already a member, new participants welcome to apply to parti
 * * *
 
 Thanks for reading Yak Talk! Subscribe for free to receive new posts and support my work.
-

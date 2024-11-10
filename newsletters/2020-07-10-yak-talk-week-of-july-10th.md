@@ -1,11 +1,11 @@
 ---
-layout: post-external
-title: |
-  Yak Talk: Week of July 10th
-date: 2020-07-10 11:06:00 +0000
-original_link: https://yakcollective.substack.com/p/yak-talk-week-of-july-10th
+title: "Yak Talk: Week of July 10th"
+aliases:
+  - "Yak Talk: Week of July 10th"
+quartsRssFeed: true
+date: 2020-07-10
+substack: https://yakcollective.substack.com/p/yak-talk-week-of-july-10th
 ---
-
 In the fourth issue of Yak Talk, we continue to practice an experimental, but iterative approach to the Yak Collective newsletter. We are in this process of shaping a project that began as a weekly digest into something that is more editorial, engaging and reflective of Yak as a whole, although not necessarily comprehensive.
 
 Going forward, Yak Talk writers will be covering specific “tracks”, which are topics that are informed by specific chat rooms in the YC Discord channel.

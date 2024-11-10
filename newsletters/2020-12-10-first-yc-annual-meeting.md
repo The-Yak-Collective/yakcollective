@@ -1,10 +1,11 @@
 ---
-title: First YC Annual Meeting!
-date: 2020-12-10 00:17:48.000000000 Z
-layout: post-external
-original_link: https://yakcollective.substack.com/p/first-yc-annual-meeting
+title: "First YC Annual Meeting!"
+aliases:
+  - "First YC Annual Meeting!"
+quartsRssFeed: true
+date: 2020-12-10
+substack: https://yakcollective.substack.com/p/first-yc-annual-meeting
 ---
-
 Reminder, the annual meeting of the Yak Collective will be held **tomorrow,** Thursday December 10th at 8 AM Pacific. It’s a public Zoom event, so do drop by if you’re curious to hear what we’ve been up to and what we are hoping to do next year. We’ll talk old projects, new projects, our rapidly evolving infrastructure and production capabilities,
 
 Here is the [public calendar invite](https://calendar.google.com/event?action=TEMPLATE&tmeid=NWoyOThhOWVtNWg1ZzlnMmtrYTZ0ZHNscTEgbzk5NW00MzE3M2Jwc2xtaGg0OW5tcnA1aTRAZw&tmsrc=o995m43173bpslmhh49nmrp5i4%40group.calendar.google.com).  
@@ -101,4 +102,3 @@ Another job flashed on the surface immediately. I accepted it eagerly to push of
 While starting to scan the details, a part of my mind was stuck on the last job. I wondered when the bots could better calculate human behavior and recommend the same tasteful gifts as I did. Maybe the novelty of a minimum viable human picking gifts would wear off.
 
 Then I had to turn up the distraction cancellation as I could hear the breakfast ordeal escalating.
-

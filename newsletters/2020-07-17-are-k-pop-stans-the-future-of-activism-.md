@@ -1,11 +1,11 @@
 ---
-layout: post-external
-title: |
-  Are K-Pop Stans the Future of Activism?
-date: 2020-07-17 13:00:00 +0000
-original_link: https://yakcollective.substack.com/p/are-k-pop-stans-the-future-of-activism
+title: "Are K-Pop Stans the Future of Activism?"
+aliases:
+  - "Are K-Pop Stans the Future of Activism?"
+quartsRssFeed: true
+date: 2020-07-17
+substack: https://yakcollective.substack.com/p/are-k-pop-stans-the-future-of-activism
 ---
-
 This week we continue our _#trends-and-futures_, and _#complexity_ tracks in the newsletter. Next week, we will return with our regular _#online-governance-studies_ track, as well.
 
 ## #trends-and-futures

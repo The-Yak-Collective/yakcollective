@@ -1,10 +1,11 @@
 ---
 title: The Yak Online Governance Primer
-date: 2022-03-08 01:13:08.000000000 Z
-layout: post-external
-original_link: https://yakcollective.substack.com/p/the-yak-online-governance-primer
+aliases:
+  - The Yak Online Governance Primer
+quartsRssFeed: true
+date: 2022-03-08
+substack: https://yakcollective.substack.com/p/the-yak-online-governance-primer
 ---
-
 A couple of weeks ago, the Yak Collective published the **[Yak Online Governance Primer](https://yakcollective.mirror.xyz/aJdO_SO3gw34cLtwBwNC2OD3s0YT3us9C-C2NNPQ_us)**. It is one of our most ambitious collaborative projects to date.
 
 [![](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2Fc044dd91-f219-4ce8-a316-e2e6504d1721_863x900.png)](https://yakcollective.mirror.xyz/aJdO_SO3gw34cLtwBwNC2OD3s0YT3us9C-C2NNPQ_us)
@@ -54,4 +55,3 @@ While most NFTs are published as “1/1” single items via auctions, we used th
 [2](#footnote-anchor-2)
 
 The primer is published using what is known as a split contract on the Ethereum blockchain, which allows funds to be automatically distributed to multiple accounts. We’ve set things up so about 75% goes to contributors, and 25% to the Yak Collective. We’ve taken our cue from the indirect-cost support model used in government-funded university research.
-

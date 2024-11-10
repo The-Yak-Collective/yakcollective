@@ -1,10 +1,11 @@
 ---
 title: Podcasting Needs Cognitive Hooks
-date: 2020-09-04 15:30:05.000000000 Z
-layout: post-external
-original_link: https://yakcollective.substack.com/p/podcasting-needs-cognitive-hooks
+aliases:
+  - Podcasting Needs Cognitive Hooks
+quartsRssFeed: true
+date: 2020-09-04
+substack: https://yakcollective.substack.com/p/podcasting-needs-cognitive-hooks
 ---
-
 ## In This Week’s Yak Talk:
 
 - _Podcasting Needs Cognitive Hooks_
@@ -147,4 +148,3 @@ Apply to **[become a Yak here](https://www.yakcollective.org/join/)**.
 Interested in hiring the Yak Collective? Send a message to **[vgr@ribbonfarm.com](mailto:vgr@ribbonfarm.com)**.
 
 _The Yak Talk team for this week’s edition is: [Alex Wagner](https://twitter.com/alexdw5), [Shreeda Segan](https://shreeda.substack.com/), [Praful Mathur](http://twitter.com/prafulfillment), [Matthew Sweet](https://twitter.com/Matthew_Sweet), [Joseph Ensminger](https://twitter.com/EnsmingerJoseph), and [Grigori Milov](https://twitter.com/grigorimilov)._
-

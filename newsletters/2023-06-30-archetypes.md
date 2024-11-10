@@ -1,10 +1,11 @@
 ---
 title: Archetypes
-date: 2023-06-30 18:33:41.000000000 Z
-layout: post-external
-original_link: https://yakcollective.substack.com/p/archetypes
+aliases:
+  - Archetypes
+quartsRssFeed: true
+date: 2023-06-30
+substack: https://yakcollective.substack.com/p/archetypes
 ---
-
 We encountered many types of characters in our Season 2 readings, often embodying recurring tropes. Regular attendees used a lightweight group process to sort these character types into a handful of archetypes. The archetypes — _benevolent dictator_, _backstopper_, _shapeshifter_, and _anarch_ — can be found in two modes, Mature (_–_), an underdeveloped or corrupt version of the archetype, and Mature (+), a thriving, purposefully actualizing version.
 
 ## **Our archetypes**
@@ -94,4 +95,3 @@ _Mature (+): Frontier opener._ The sovereign who has seen and studied enough of 
 Ex: Marc Andreessen, who often invests in experimental writing and projects
 
 Thanks for reading Yak Talk! Subscribe for free to receive new posts and support our work.
-

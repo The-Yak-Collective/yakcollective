@@ -1,11 +1,11 @@
 ---
-layout: post-external
-title: |
-  Announcing Yak Talk
-date: 2020-06-15 12:35:00 +0000
-original_link: https://yakcollective.substack.com/p/announcing-yak-talk
+title: Announcing Yak Talk
+aliases:
+  - Announcing Yak Talk
+quartsRssFeed: true
+date: 2020-06-15
+substack: https://yakcollective.substack.com/p/announcing-yak-talk
 ---
-
 Welcome to the Yak Collective Weekly Digest, _Yak Talk._  
 
 Released every Friday at 12p EST, _Yak Talk_ will contain a digest of Yak Collective updates, project launches, and other announcements.  

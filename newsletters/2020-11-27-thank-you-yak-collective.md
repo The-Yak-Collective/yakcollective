@@ -1,10 +1,11 @@
 ---
-title: Thank you Yak Collective!
-date: 2020-11-27 20:00:04.000000000 Z
-layout: post-external
-original_link: https://yakcollective.substack.com/p/thank-you-yak-collective
+title: "Thank you Yak Collective!"
+aliases:
+  - "Thank you Yak Collective!"
+quartsRssFeed: true
+date: 2020-11-27
+substack: https://yakcollective.substack.com/p/thank-you-yak-collective
 ---
-
 Thank you Yak Collective for such an interesting year! Especially in studying how to develop assets within a decentralized large-online community.
 
 This newsletter has evolved and changed hands within the year and will continue to ebb & flow as we work on formalizing its structure.
@@ -89,4 +90,3 @@ Judd’s father’s eyes brightened in surprise. “Really?”
 “Judd, that’s wonderful.” His skepticism took a sudden backseat to the prospect of reduced tuition. Maybe Judd _wasn’t_ just fooling around out here.
 
 “I know! They said they’d send a cheque. All we have to do is deposit it in the bank, then wire half of it to a numbered account which they’ll provide separately. That will cover tuition and I can keep the other half for living expenses.”
-

@@ -1,10 +1,11 @@
 ---
 title: YakCon Part 2
-date: 2023-01-15 04:04:39.000000000 Z
-layout: post-external
-original_link: https://yakcollective.substack.com/p/yakcon-part-2
+aliases:
+  - YakCon Part 2
+quartsRssFeed: true
+date: 2023-01-15
+substack: https://yakcollective.substack.com/p/yakcon-part-2
 ---
-
 The talk that Kilian Butler gave to kick off Part 1, on productising machine learning research, is online now. You can check it out on our YouTube channel here:
 
 Async week is a wrap, and we head into Part 2 on Sunday, 15th at 1600 UTC. Here’s what we have lined up.
@@ -44,4 +45,3 @@ But even the most unrealistic sim games speak directly to this ever-present, ess
 And that's just the speakers.
 
 YakCon Part Two is shaping up to be as fun as Part One. Come and join the party. Register for Part Two [here](https://lu.ma/yakcon) and go [here](https://www.yakcollective.org/join.html) to access to the YC Discord.
-

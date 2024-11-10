@@ -1,10 +1,11 @@
 ---
 title: The Objective of the Innards
-date: 2020-09-18 11:01:01.000000000 Z
-layout: post-external
-original_link: https://yakcollective.substack.com/p/the-objective-of-the-innards
+aliases:
+  - The Objective of the Innards
+quartsRssFeed: true
+date: 2020-09-18
+substack: https://yakcollective.substack.com/p/the-objective-of-the-innards
 ---
-
 A complex latticework of ideas, concepts, frameworks, idioms, neologisms and inspirations swirls around the Yak Collective (and its Yaks). Like so many storms insistent on performing the _loudest_ thunderclap and the _brightest_ flash of lightning, they both clash and complement.
 
 Here’s one such inspiration (full quote is, I assure you, _definitely_ necessary here):
@@ -64,4 +65,3 @@ Apply to **[become a Yak here](https://www.yakcollective.org/join/)**.
 Interested in hiring the Yak Collective? Send a message to **[vgr@ribbonfarm.com](mailto:vgr@ribbonfarm.com)**.
 
 _The Yak Talk team for this week’s edition is: [Praful Mathur](http://twitter.com/prafulfillment), [Matthew Sweet](https://twitter.com/Matthew_Sweet) and [Grigori Milov](https://twitter.com/grigorimilov)._
-

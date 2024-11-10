@@ -1,10 +1,11 @@
 ---
 title: YakCon Part 1 Review, Part 2 Preview
-date: 2023-01-09 21:51:49.000000000 Z
-layout: post-external
-original_link: https://yakcollective.substack.com/p/yakcon-part-1-review-part-2-preview
+aliases:
+  - YakCon Part 1 Review, Part 2 Preview
+quartsRssFeed: true
+date: 2023-01-09
+substack: https://yakcollective.substack.com/p/yakcon-part-1-review-part-2-preview
 ---
-
 - **YakCon Part One is done!** We had around thirty participants (+/- 5) for the full four-hour session. If you missed it, but still want to attend Part 2, read on to get caught up, and look for the sign-up link at the bottom.
 
 ## Part 1 Review
@@ -40,4 +41,3 @@ original_link: https://yakcollective.substack.com/p/yakcon-part-1-review-part-2-
 - We'll also be hearing from **Dan Grover** ([personal site](http://dangrover.com/), [LinkedIn](https://www.linkedin.com/in/dangrover/)). Dan—designer, engineer, entrepreneur—will be exploring the possibility that simulation games might be what the world needs right now.
 
 - Sounds good, right? So get to it. **Register for YakCon Part Two [here](https://lu.ma/yakcon) and go [here](https://www.yakcollective.org/join.html) to access to the YC Discord.**
-

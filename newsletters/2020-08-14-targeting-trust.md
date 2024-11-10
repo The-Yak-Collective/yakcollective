@@ -1,10 +1,11 @@
 ---
 title: Targeting Trust
-date: 2020-08-14 17:37:38.000000000 Z
-layout: post-external
-original_link: https://yakcollective.substack.com/p/targeting-trust
+aliases:
+  - Targeting Trust
+quartsRssFeed: true
+date: 2020-08-14
+substack: https://yakcollective.substack.com/p/targeting-trust
 ---
-
 ## Editor’s Note
 
 This is the ninth issue of _Yak Talk_, Yak Collective’s weekly email newsletter.
@@ -165,4 +166,3 @@ Apply to **[become a Yak here](https://www.yakcollective.org/join/)**.
 Interested in hiring the Yak Collective? Send a message to **[vgr@ribbonfarm.com](mailto:vgr@ribbonfarm.com)**.
 
 _The Yak Talk team for this weeks edition is: [Alex Wagner](https://twitter.com/alexdw5), [Shreeda Segan](https://shreeda.substack.com), [Praful Mathur](http://twitter.com/prafulfillment), [Matthew Sweet](https://twitter.com/Matthew_Sweet), [Joseph Ensminger](https://twitter.com/EnsmingerJoseph), and [Grigori Milov](https://twitter.com/grigorimilov)._
-

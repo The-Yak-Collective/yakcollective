@@ -1,5 +1,5 @@
 ---
-date: 2020-10-23 00:00:00
+date: 2020-10-23
 googleDoc: https://docs.google.com/document/d/1Uke-4h8kYARpFZixBfa5Ht6H-UWa7PyJar9Iqq8-rCE/edit
 title: Wholeness in a Timeless Activity
 aliases:

@@ -1,11 +1,11 @@
 ---
-layout: post-external
-title: |
-  GPT-3 and "The New Fake Intelligence
-date: 2020-07-24 09:31:00 +0000
-original_link: https://yakcollective.substack.com/p/gpt-3-and-the-new-fake-intelligence
+title: GPT-3 and “The New Fake Intelligence”
+aliases:
+  - GPT-3 and “The New Fake Intelligence”
+quartsRssFeed: true
+date: 2020-07-24
+substack: https://yakcollective.substack.com/p/gpt-3-and-the-new-fake-intelligence
 ---
-
 # In This Week’s Yak Talk:
 
 - The Democratization of Simulation

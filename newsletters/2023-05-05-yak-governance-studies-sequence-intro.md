@@ -1,10 +1,11 @@
 ---
-title: 'Yak Governance Studies Sequence: Intro'
-date: 2023-05-05 19:30:12.000000000 Z
-layout: post-external
-original_link: https://yakcollective.substack.com/p/yak-governance-studies-sequence-intro
+title: "Yak Governance Studies Sequence: Intro"
+aliases:
+  - "Yak Governance Studies Sequence: Intro"
+quartsRssFeed: true
+date: 2023-05-05
+substack: https://yakcollective.substack.com/p/yak-governance-studies-sequence-intro
 ---
-
 The Yak Collective engages in collaborative tinkering. The tinkering can be practical and involve Mars rovers, infrastructure, or indie career acceleration. It could be creative, with pop-up poetry jams and speculative fiction. And sometimes it’s conceptual, with Fermi estimation practice, studies of distributed systems, old- and new-wave AI workshopping, and governance. What follows concerns the Yak Collective’s ongoing studies of governance, perhaps the longest running activity track within YC.
 
 [![](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F8de6dcd3-9ae0-400e-8903-24721abae5aa_670x671.jpeg)](https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F8de6dcd3-9ae0-400e-8903-24721abae5aa_670x671.jpeg)
@@ -61,4 +62,3 @@ A little illegible, multiplayer by design, born of wholesome intentions, mostly 
 Tune in next week for the first riff.
 
 Thanks for reading Yak Talk! Subscribe for free to receive new posts and support my work.
-

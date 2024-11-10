@@ -1,11 +1,11 @@
 ---
-layout: post-external
-title: |
-  Yak Talk: Week of June 12th
-date: 2020-06-19 09:03:00 +0000
-original_link: https://yakcollective.substack.com/p/yak-talk-week-of-june-12th
+title: "Yak Talk: Week of June 12th"
+aliases:
+  - "Yak Talk: Week of June 12th"
+quartsRssFeed: true
+date: 2020-06-19
+substack: https://yakcollective.substack.com/p/yak-talk-week-of-june-12th
 ---
-
 Greetings Yaks and fans of Yak, here’s the latest from Yak Collective.
 
 [![](https://cdn.substack.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https#3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F8b146693-ff03-49bb-9458-73e1f285e3f0_1600x1234.jpeg)](https://www.yakcollective.org)
@@ -34,4 +34,3 @@ Greetings Yaks and fans of Yak, here’s the latest from Yak Collective.
 Apply to [become a Yak here](https://www.yakcollective.org/join/).
 
 Interested in hiring the Yak Collective? Send a message to [vgr@ribbonfarm.com](mailto:vgr@ribbonfarm.com).
-

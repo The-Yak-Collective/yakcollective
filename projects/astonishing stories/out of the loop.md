@@ -1,5 +1,5 @@
 ---
-date: 2020-11-20 00:00:00
+date: 2020-11-20
 googleDoc: https://docs.google.com/document/d/1989Uffl2bLLia75bX9_EOFpUesuUZ7eZpcr56SA6Clg/edit
 title: Out of the Loop
 aliases:

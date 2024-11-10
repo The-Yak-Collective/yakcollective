@@ -13,13 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "work groups/infrastructure.md",
+                "file": "newsletters/index.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "infrastructure"
+              "title": "index"
             }
           }
         ]
@@ -139,13 +139,17 @@
   },
   "active": "81b85c616f45e6c6",
   "lastOpenFiles": [
+    "newsletters/2022-11-25-calling-all-yaks-yak-collective-pop-up-project.md",
+    "newsletters/index.md",
+    "newsletters/2020-07-24-gpt-3-and-the-new-fake-intelligence.md",
+    "newsletters/2020-07-02-reminder-call-for-project-contributors-for-yak-project-proposals.md",
+    "work groups/infrastructure.md",
     "work groups/index.md",
     "README.md",
     "newsletters/2020-06-15-announcing-yak-talk.md",
     "members_DELETE_ME.md",
     "newsletters/2020-10-23-took-a-break-now-were-back.md",
     "index.md",
-    "newsletters/index.md",
     "projects/astonishing stories/your payment is ready.md",
     "newsletters/2023-06-30-archetypes.md",
     "newsletters/2023-05-13-rules.md",
@@ -153,7 +157,6 @@
     "newsletters/2023-01-15-yakcon-part-2.md",
     "newsletters/2023-01-09-yakcon-part-1-review-part-2-preview.md",
     "newsletters/2023-01-03-come-join-us-at-yakcon.md",
-    "newsletters/2022-11-25-calling-all-yaks-yak-collective-pop-up-project.md",
     "newsletters/2022-03-08-the-yak-online-governance-primer.md",
     "newsletters/2022-01-24-tonight-rovers-101-session.md",
     "newsletters/2021-12-15-yc-annual-survey.md",
@@ -162,9 +165,6 @@
     "newsletters/2021-06-27-yak-trails-2021-06-27.md",
     "newsletters/2021-06-20-yak-trails-2021-06-20.md",
     "newsletters/2021-06-13-yak-trails-2021-06-13.md",
-    "newsletters/2021-06-06-yak-trails-2021-06-06.md",
-    "newsletters/2021-05-30-yak-trails-2021-05-30.md",
-    "newsletters/2021-05-23-yak-trails-2021-05-23.md",
     "newsletters",
     "assets/dont waste the reboot.pdf",
     "assets/dont waste the reboot.webp",

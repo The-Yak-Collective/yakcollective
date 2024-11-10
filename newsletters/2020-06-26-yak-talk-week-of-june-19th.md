@@ -1,11 +1,11 @@
 ---
-layout: post-external
-title: |
-  Yak Talk: Week of June 19th
-date: 2020-06-26 12:05:00 +0000
-original_link: https://yakcollective.substack.com/p/yak-talk-week-of-june-19th
+title: "Yak Talk: Week of June 19th"
+aliases:
+  - "Yak Talk: Week of June 19th"
+quartsRssFeed: true
+date: 2020-06-26
+substack: https://yakcollective.substack.com/p/yak-talk-week-of-june-19th
 ---
-
 As we meander through [the doldrums of the pandemic](https://kneelingbus.substack.com/p/129-gray-sunset), the general mood of many, irl and online, seems to be a two-fold acceptance of current events.   
 
 One, that the pandemic has cozily settled in for the summer, bringing with it second wave of infections and deaths(you could also argue that [the first never left](https://www.npr.org/sections/health-shots/2020/06/12/876224115/coronavirus-second-wave-nope-were-still-stuck-in-the-first-one)).  

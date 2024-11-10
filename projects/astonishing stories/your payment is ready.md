@@ -1,5 +1,5 @@
 ---
-date: 2020-10-30 00:00:00
+date: 2020-10-30
 googleDoc: https://docs.google.com/document/d/15LRvkKeNMwRgr6Zf8dYLBBAqhpBxIyLP_WBE16H-PCg/edit
 title: Your Payment is Ready
 aliases:

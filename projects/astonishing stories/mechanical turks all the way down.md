@@ -1,5 +1,5 @@
 ---
-date: 2020-11-13 00:00:00
+date: 2020-11-13
 roam: https://roamresearch.com/#/app/Astonishing_Stories/page/-u1nPZcZu
 googleDoc: https://docs.google.com/document/d/1HpnU_k_Q3xulIfwiEtdpfMycZeTRvR-cPWDl8mA___E/edit
 title: Mechanical Turks All the Way Down

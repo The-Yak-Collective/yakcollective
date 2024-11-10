@@ -1,11 +1,11 @@
 ---
-layout: post-external
-title: |
-  Chasing Tails, Part One
-date: 2020-07-31 11:47:00 +0000
-original_link: https://yakcollective.substack.com/p/chasing-tails-part-one
+title: Chasing Tails, Part One
+aliases:
+  - Chasing Tails, Part One
+quartsRssFeed: true
+date: 2020-07-31
+substack: https://yakcollective.substack.com/p/chasing-tails-part-one
 ---
-
 **This week at Yak Collective:**
 
 - We held regular weekly voice chats for “Online Governance Studies”, “BUILD A RIGHT BRAIN / NATURE THEATRE”, and, Jordan Peacock’s weekly reading group for Reza Negarestani’s book, “[Intelligence and Spirit](https://mitpress.mit.edu/books/intelligence-and-spirit)”.
