@@ -5,5 +5,8 @@
   "text-extractor",
   "cm-chs-patch",
   "obsidian-smart-typography",
-  "folder-note-plugin"
+  "folder-note-plugin",
+  "emoji-autocomplete",
+  "japanese-novel-ruby",
+  "jisage-japanese-indentation"
 ]

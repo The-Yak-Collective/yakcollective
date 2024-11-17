@@ -37,7 +37,3 @@ The contributions solicitations for this second paid client project went live th
 And if you’re not already a member, new participants welcome to apply to participate, [join us here](https://www.yakcollective.org/join.html).
 
 [Join us here](https://www.yakcollective.org/join.html)
-
-* * *
-
-Thanks for reading Yak Talk! Subscribe for free to receive new posts and support my work.

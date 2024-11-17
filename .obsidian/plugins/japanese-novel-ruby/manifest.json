@@ -1,0 +1,11 @@
+{
+	"id": "japanese-novel-ruby",
+	"name": "Japanese Novel Ruby",
+	"version": "1.0.1",
+	"minAppVersion": "1.4.0",
+	"description": "Treat ruby(Furigana) ​​marks commonly used in Japanese novels.",
+	"author": "quels <@k-quels>",
+	"authorUrl": "https://kuma.quels.net/",
+	"fundingUrl": "https://buymeacoffee.com/quels",
+	"isDesktopOnly": false
+}

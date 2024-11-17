@@ -1,0 +1,11 @@
+/*
+   --color-yellow-rgb: 229,181,103;
+   --color-yellow: #e5b567;
+ */
+
+body {
+  --accent-h: 37; /* Accent hue */
+  --accent-s: 71%; /* Accent saturation */
+  --accent-l: 47%; /* Accent lightness - adjusted down from 65% */
+}
+

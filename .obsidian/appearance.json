@@ -6,8 +6,10 @@
     "Markdown Embed Tweaks",
     "Yak Collective Callouts",
     "Callout Tweaks",
-    "External Link Tweaks"
+    "External Link Tweaks",
+    "Minimal Accent",
+    "Font Size Tweaks"
   ],
   "cssTheme": "Minimal",
-  "accentColor": "#db8d06"
+  "accentColor": ""
 }

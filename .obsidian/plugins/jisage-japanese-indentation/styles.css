@@ -1,0 +1,6 @@
+/* 字下げした長文の折り返しを、編集モードで正しく表示させる */
+/* ただし、リストにはスタイルの適用を除外 */
+div.cm-line:not(.HyperMD-list-line) {
+    text-indent: 0 !important;
+    padding-inline-start: 0 !important;
+}
