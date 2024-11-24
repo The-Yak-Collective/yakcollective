@@ -24,11 +24,11 @@ Currently, Yaks are working on:
 
 - _ **Yak-Network-Map** _, which is an internal experiment that which seeks to foster positive interactions in the Yak network. From the proposal, “the core objective of this experiment is to _Let a hundred interesting collisions spark among yaks_.” 
 
-If you’d like to know more about these projects, you can **[join Yak Collective here](http://www.yakcollective.org/join).**
+If you’d like to know more about these projects, you can **[join Yak Collective here](../join.md).**
 
 ## Chasing Tails, Part One
 
-_By [Joseph Ensminger](https://twitter.com/EnsmingerJoseph) and [Matthew Sweet](https://twitter.com/Matthew_Sweet)_
+_By [Joseph Ensminger](https://x.com/EnsmingerJoseph) and [Matthew Sweet](https://x.com/Matthew_Sweet)_
 
 Governments and multinational corporations use thought experiments to wargame, [scenario plan](https://en.wikipedia.org/wiki/Scenario_planning), and reveal risk.
 
@@ -70,8 +70,8 @@ The latter class of tail-chasers is who we are going to focus on over the next f
 
 ### Join/Hire
 
-Apply to [become a Yak here](https://www.yakcollective.org/join/). 
+Apply to [become a Yak here](../join.md). 
 
 Interested in hiring the Yak Collective? Send a message to [vgr@ribbonfarm.com](mailto:vgr@ribbonfarm.com).
 
-_The Yak Talk team for this weeks edition is: [Alex Wagner](https://twitter.com/alexdw5), [Shreeda Segan](https://shreeda.substack.com), [Praful Mathur](https://aionthebeach.com/), [Matthew Sweet](https://twitter.com/Matthew_Sweet), [Joseph Ensminger](https://twitter.com/EnsmingerJoseph), and [Grigori Milov](https://twitter.com/grigorimilov)._
+_The Yak Talk team for this weeks edition is: [Alex Wagner](https://x.com/alexdw5), [Shreeda Segan](https://shreeda.substack.com), [Praful Mathur](https://aionthebeach.com/), [Matthew Sweet](https://x.com/Matthew_Sweet), [Joseph Ensminger](https://x.com/EnsmingerJoseph), and [Grigori Milov](https://x.com/grigorimilov)._

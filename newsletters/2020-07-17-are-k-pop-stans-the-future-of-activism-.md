@@ -12,7 +12,7 @@ This week we continue our _#trends-and-futures_, and _#complexity_ tracks in the
 
 _ **Are K-Pop Stans the Future of Activism?** _
 
-_[By Alex Wagner](http://www.twitter.com/alexdw5)_
+_[By Alex Wagner](http://www.x.com/alexdw5)_
 
 On June 20th, US-based members of the Korean-Pop fan community, colloquially known as “K-Pop [stans](https://www.urbandictionary.com/define.php?term=Stan)”, [trashed a Trump rally in Tulsa, OK](https://www.cnn.com/2020/06/22/opinions/tiktok-kpop-trump-rally-activism-hong/index.html). 
 
@@ -22,7 +22,7 @@ Sadly, this was _not_ the long-awaited first appearance of Antifa supersoldiers,
 
 In this instance(and what has shown to be typical w/r/t “K-Pop activism”), the stans coordinated their efforts completely online. Over the course of weeks, the members of the K-Pop fandom flooded the Trump campaign’s online sign-up forms for the event with fake names, email addresses, and telephone numbers.
 
-[Claire Ryan(@aetherlev)](https://twitter.com/aetherlev/status/1274726592481091587), a technologist with a background in marketing and data analysis, opined that the Trump campaign would likely have to [throw the whole data set out](https://twitter.com/aetherlev/status/1274776852649742337?s=20), as it had been “poisoned” with the false accounts.
+[Claire Ryan(@aetherlev)](https://x.com/aetherlev/status/1274726592481091587), a technologist with a background in marketing and data analysis, opined that the Trump campaign would likely have to [throw the whole data set out](https://x.com/aetherlev/status/1274776852649742337?s=20), as it had been “poisoned” with the false accounts.
 
 [Media](https://www.msn.com/en-us/news/politics/tik-tok-users-26-k-pop-fans-prank-trump-tulsa-rally-organizers/ar-BB15Q7SH) [outlets](https://www.nytimes.com/2020/06/21/style/tiktok-trump-rally-tulsa.html) [lauded](https://www.wired.co.uk/article/k-pop-trump) [the](https://www.vulture.com/2020/06/k-pop-stans-successfully-sabotaged-trumps-tulsa-rally.html) [ingenuity](https://www.wired.com/story/how-k-pop-stans-became-an-activist-force-to-be-reckoned-with/) of the K-Pop stans, and speculated as to whether the stans would make continued appearances leading up to the election, and beyond.
 
@@ -36,7 +36,7 @@ Some facts:
 
 - **Breaking in America:** Remember 2012’s “Gangnam Style”? Although it was the first major K-Pop hit to make a massive splash in the United States, [critics say it’s actually more of a weirdo, one-off hit.](https://www.npr.org/2020/07/13/888933244/start-here-your-guide-to-getting-into-k-pop) Still, worth mentioning because it established a beachhead for US K-Pop fandom to grow into what it is today.
 
-- **Greatest Hits:** Previous to supporting Black Lives Matter protests and shutting down a Trump rally, K-Pop stans have: [rallied to youth protests in Bangladesh](https://twitter.com/anne_sophiiiee/status/1026218200185401344), been blamed for [inciting student protests in Chile](https://www.newsweek.com/chilean-government-blames-k-pop-recent-protests-1479151), and [donated ticket $16k worth of ticket refunds from a canceled BTS concert to COVID relief](https://www.teenvogue.com/story/bts-fans-donate-coronavirus-relief-big-hit-cancels-seoul-concerts).
+- **Greatest Hits:** Previous to supporting Black Lives Matter protests and shutting down a Trump rally, K-Pop stans have: [rallied to youth protests in Bangladesh](https://x.com/anne_sophiiiee/status/1026218200185401344), been blamed for [inciting student protests in Chile](https://www.newsweek.com/chilean-government-blames-k-pop-recent-protests-1479151), and [donated ticket $16k worth of ticket refunds from a canceled BTS concert to COVID relief](https://www.teenvogue.com/story/bts-fans-donate-coronavirus-relief-big-hit-cancels-seoul-concerts).
 
 - **Bigger than the Beatles:** The group _Bangtan Sonyeondan_ (abbreviated as ‘BTS’) are basically [the Beatles of K-Pop](https://www.youtube.com/watch?v=BtLD72Uro8U), far surpassing other acts in terms of sales and popularity. BTS fans are The Army. On June 6th, [BTS donated one million dollars to the Black Lives Matter movement](https://comicbook.com/anime/news/bts-kpop1-million-dollar-donation-to-black-lives-matter/). [One In An Army](https://www.oneinanarmy.org/about), a non-profit charity org comprised of BTS fans, launched a crowdfunding campaign the day after and [matched BTS’ donation within 24 hours.](https://www.oneinanarmy.org/black-lives-matter)
 
@@ -55,7 +55,7 @@ In the future, what other online fandoms will we see entering online public aren
 
 _ **Why Study Complexity?** _
 
-_[By Matthew Sweet](https://twitter.com/Matthew_Sweet)_
+_[By Matthew Sweet](https://x.com/Matthew_Sweet)_
 
 Complexity has been studied for upwards of fifty years. The study of systems goes back even further (to the roots of Eastern and Western philosophy, if we wish to be completely inclusive). There’s already an abundance of maps, frameworks, concepts, models and terms, and even more enter the discourse every day. Additionally, each has its own stubborn champion. 
 
@@ -83,10 +83,10 @@ In the midst of a pandemic, and with climate change on the horizon and great eco
 
 ### Join/Hire
 
-Apply to [become a Yak here](https://www.yakcollective.org/join/). 
+Apply to [become a Yak here](../join.md). 
 
 Interested in hiring the Yak Collective? Send a message to [vgr@ribbonfarm.com](mailto:vgr@ribbonfarm.com).
 
 [Share Yak Talk](https://yakcollective.substack.com/?utm_source=substack&utm_medium=email&utm_content=share&action=share)
 
-_The Yak Talk team for this weeks edition is: [Alex Wagner](https://twitter.com/alexdw5), [Grigori Milov](https://twitter.com/grigorimilov), [Shreeda Segan](https://shreeda.substack.com), [Praful Mathur](https://aionthebeach.com/), and [Matthew Sweet](https://twitter.com/Matthew_Sweet)._
+_The Yak Talk team for this weeks edition is: [Alex Wagner](https://x.com/alexdw5), [Grigori Milov](https://x.com/grigorimilov), [Shreeda Segan](https://shreeda.substack.com), [Praful Mathur](https://aionthebeach.com/), and [Matthew Sweet](https://x.com/Matthew_Sweet)._

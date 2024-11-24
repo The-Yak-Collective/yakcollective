@@ -24,9 +24,9 @@ How are you efficiently managing your distributed groups? Reply in comments.
 
 ### The New Old Home: Fireside Chat Recap
 
-On June 25th, Yak held an online fireside chat for [The New Old Home](https://www.yakcollective.org/projects/the-new-old-home), a YC report that explores emerging trends in returning to the home as a production frontier.
+On June 25th, Yak held an online fireside chat for [The New Old Home](../projects/new%20old%20home.md), a YC report that explores emerging trends in returning to the home as a production frontier.
 
-The panel included project leads [Pamela Hobart](https://twitter.com/amelapay) and [Drew Schorno](https://twitter.com/dschorno), along with contributors [Jordan Peacock](https://twitter.com/hewhocutsdown), [Shreeda Segan](http://www.twitter.com/freeshreeda) and [Venkatesh Rao](https://twitter.com/vgr).
+The panel included project leads [Pamela Hobart](https://x.com/amelapay) and [Drew Schorno](https://x.com/dschorno), along with contributors [Jordan Peacock](https://x.com/hewhocutsdown), [Shreeda Segan](http://x.com/freeshreeda) and [Venkatesh Rao](https://x.com/vgr).
 
 The chat was free and open to the public; 30+ people attended.
 
@@ -38,7 +38,7 @@ Some questions from the chat:
 
 - Is the traditional frat house a prototype model for a specific kind of New Old Home?
 
-[View the recording of the chat here.](https://www.youtube.com/watch?v=Ddr4BayGEsM&feature=youtu.be)
+<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe width="560" height="315" src="https://www.youtube.com/embed/Ddr4BayGEsM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
 
 ### Yak Writings
 
@@ -52,6 +52,6 @@ Some questions from the chat:
 
 - Submissions for current the proposal cycle close today! If you have a project submit to Yak for this cycle, [please submit by 6p PDT today.](https://forms.gle/B7bNEC2fJsp9LiYWA)
 
-- We have recurring weekly voice chats happening every day of the week in our Discord channel. [Join Yak](https://www.yakcollective.org/join/) Collective to attend. [Subscribe to the Yak calendar here.](https://calendar.google.com/calendar/r?cid=bzk5NW00MzE3M2Jwc2xtaGg0OW5tcnA1aTRAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ)
+- We have recurring weekly voice chats happening every day of the week in our Discord channel. [Join the Yak Collective](../join.md) Collective to attend. [Subscribe to the Yak calendar here.](https://calendar.google.com/calendar/r?cid=bzk5NW00MzE3M2Jwc2xtaGg0OW5tcnA1aTRAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ)
 
 _Interested in hiring the Yak Collective? Send a message to [vgr@ribbonfarm.com](mailto:vgr@ribbonfarm.com)._

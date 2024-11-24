@@ -18,7 +18,7 @@ Currently, Yaks are working on:
 
 - _ **Yak-Network-Map** _, which is an internal experiment that which seeks to foster positive interactions in the Yak network. From the proposal, “the core objective of this experiment is to _Let a hundred interesting collisions spark among yaks_.” 
 
-If you’d like to know more about these projects, you can**[join Yak Collective here](http://www.yakcollective.org/join).**
+If you’d like to know more about these projects, you can **[join Yak Collective here](../join.md).**
 
 #### **Yak Writings**
 
@@ -32,11 +32,11 @@ If you’d like to know more about these projects, you can**[join Yak Collective
 
 _By Praful Mathur, with Shreeda Segan, Alex Wagner, and Grigori Milov_
 
-[From the beginning](https://www.yakcollective.org/about/), Yak Collective has operated as a decentralized organization. At Yak, there is no central authority to enforce governance of Yak processes and code of conduct. Yak projects are governed in a somewhat-federated method. 
+[From the beginning](../about.md), Yak Collective has operated as a decentralized organization. At Yak, there is no central authority to enforce governance of Yak processes and code of conduct. Yak projects are governed in a somewhat-federated method. 
 
 By nature, Yak projects are short-lived. These projects function as both texts and use cases to generate ongoing discussion, as well as future projects.
 
-Every couple of months brings a new proposal cycle. Each proposal is led by one or two project leads, who head working groups which work towards the creation of a specific deliverable. For instance, _[The New Old Home](https://www.yakcollective.org/projects/the-new-old-home)_ project sought to envision “the return to the home as a site of production”, essentially asking, ‘how is the home going to change, now that COVID is forcing us to spend most of our waking hours there?’. 
+Every couple of months brings a new proposal cycle. Each proposal is led by one or two project leads, who head working groups which work towards the creation of a specific deliverable. For instance, [*The New Old Home*](../projects/new%20old%20home.md) project sought to envision “the return to the home as a site of production”, essentially asking, ‘how is the home going to change, now that COVID is forcing us to spend most of our waking hours there?’. 
 
 These spontaneously-created groups, such as the one that created the _New Old Home_, are formed to solve problems, critically imagine futures, and otherwise explore complex questions. Often, these projects focus on creating “collisions” in response to a problem or question, and these collisions typically are found at uncharted intersections of various types of domain knowledge. Once the deliverable is created, it’s then handed off to Yak Collective to share, market, and otherwise signal boost.
 
@@ -84,8 +84,8 @@ What problem have you been unable to solve yourself?
 
 ### **Join/Hire**
 
-Apply to **[become a Yak here](https://www.yakcollective.org/join/)**. 
+Apply to **[become a Yak here](../join.md)**. 
 
 Interested in hiring the Yak Collective? Send a message to **[vgr@ribbonfarm.com](mailto:vgr@ribbonfarm.com)**.
 
-_The Yak Talk team for this weeks edition is: [Alex Wagner](https://twitter.com/alexdw5), [Shreeda Segan](https://shreeda.substack.com), [Praful Mathur](https://aionthebeach.com/), [Matthew Sweet](https://twitter.com/Matthew_Sweet), [Joseph Ensminger](https://twitter.com/EnsmingerJoseph), and [Grigori Milov](https://twitter.com/grigorimilov)._
+_The Yak Talk team for this weeks edition is: [Alex Wagner](https://x.com/alexdw5), [Shreeda Segan](https://shreeda.substack.com), [Praful Mathur](https://aionthebeach.com/), [Matthew Sweet](https://x.com/Matthew_Sweet), [Joseph Ensminger](https://x.com/EnsmingerJoseph), and [Grigori Milov](https://x.com/grigorimilov)._

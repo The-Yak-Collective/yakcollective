@@ -14,11 +14,11 @@ substack: https://yakcollective.substack.com/p/gpt-3-and-the-new-fake-intelligen
 
 - GPT-3 and “The New Fake Intelligence”
 
-**Plus:** [Yak Writings published this week.](https://www.yakcollective.org/writings/)
+**Plus:** Yak Writings published this week.
 
 ## The Democratization Of Simulation
 
-_By [Matthew Sweet](https://twitter.com/Matthew_Sweet) and [Joseph Ensminger](https://twitter.com/EnsmingerJoseph)_
+_By [Matthew Sweet](https://x.com/Matthew_Sweet) and [Joseph Ensminger](https://x.com/EnsmingerJoseph)_
 
 From time immemorial, humans have conducted [thought experiments](https://plato.stanford.edu/entries/thought-experiment/) concerning social systems. Some are lofty: a philosopher asking,“How would a society of benevolent humans that attempts to maximise collective wellbeing unfold?” Some are less so: a teen wondering, “How are my friends gonna react when they find out I crashed my truck?” 
 
@@ -80,7 +80,7 @@ Over the last few years, and especially after Trump’s election(not to mention 
 
 Recently, [there’s been a ton of excitement](https://www.forbes.com/sites/forbesfinancecouncil/2018/07/30/the-economics-of-decentralized-organizations-the-end-of-for-profit-corporations/#319c6223966c) around the idea of completely virtual organizations. One seemingly obvious question here is to ask, “Do we have all the necessary pieces to put together a new form of governance?”
 
-A few months after I visited India, [Balaji Srinivasan](http://www.twitter.com/balajis) gave a talk called [Silicon Valley’s Ultimate Exit at Startup School 2013](http://prafulmathur.com/www.youtube.com/watch?v=cOubCHLXT6A):
+A few months after I visited India, [Balaji Srinivasan](http://www.x.com/balajis) gave a talk called [Silicon Valley’s Ultimate Exit at Startup School 2013](http://prafulmathur.com/www.youtube.com/watch?v=cOubCHLXT6A):
 
 [![](https://cdn.substack.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F9d10e0a4-3133-4ec1-81f0-5d44c8886de9_1418x524.png)](https://cdn.substack.com/image/fetch/c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F9d10e0a4-3133-4ec1-81f0-5d44c8886de9_1418x524.png)
 
@@ -92,11 +92,11 @@ One example is 3D printing, which is replacing traditional factories that were o
 
 Bitcoin is a similar case, where governments might use [packet filters](https://www.techopedia.com/definition/4038/packet-filtering) to reduce cross-border transactions instead of antiquated capital controls. In a nutshell, the use of force by a national government will eventually have to be replaced by a non-violent digital alternative, as there’s no practical way to apply force against a geographically-distributed virtual community, where membership can quickly move to different mediums. 
 
-Balaji suggests that we can escape politics by massaging the the laws of states with [isolated “economic zones”](https://twitter.com/balajis/status/1256448901063704579?lang=en), but this may be an incomplete solution. Though by trying to dissolve existing governance structures, communities find themselves MORE involved in political infrastructure development. Silicon Valley suffers from thinking democracy is the antithesis to progress while also advocating for more self-rule thus the tension that always exists in representative politics. Their prescribed ideas always fall to Benevelont Dictatorships instead of expanding self-rule. Though I think that moving in the direction of using open source software and virtual communities composed of different governance hiearchies will actually help move online worlds more towards the American ideal of self-rule while also solving for tragedy of commons.
+Balaji suggests that we can escape politics by massaging the the laws of states with [isolated “economic zones”](https://x.com/balajis/status/1256448901063704579?lang=en), but this may be an incomplete solution. Though by trying to dissolve existing governance structures, communities find themselves MORE involved in political infrastructure development. Silicon Valley suffers from thinking democracy is the antithesis to progress while also advocating for more self-rule thus the tension that always exists in representative politics. Their prescribed ideas always fall to Benevelont Dictatorships instead of expanding self-rule. Though I think that moving in the direction of using open source software and virtual communities composed of different governance hiearchies will actually help move online worlds more towards the American ideal of self-rule while also solving for tragedy of commons.
 
 One wonders how this evolution will occur. It wouldn’t be surprising to see it begin with new [flash movements](http://sopablackout.org/), widespread [creation](https://en.wikipedia.org/wiki/Seasteading) of [economic zones](http://reason.com/blog/2013/05/20/google-ceo-larry-page-supports-free-citi), [mini](http://pando.com/2013/10/03/marc-andreessen-the-world-is-going-to-see-an-explosion-of-countries-in-the-years-ahead/)[countries](https://news.ycombinator.com/item?id=6395148), and [new political parties](https://uspirates.org/faq/), which are “all-global” by design. Currently, it’s difficult to tell how the new politics will evolve.
 
-_This column will continue weekly and will explore a variety of topics in “Online Governance” sphere, using the Yak Collective’s weekly **Online Governance chat** _**(**_ **Friday at 12p EDT** _ **in [Yak Discord channel](https://www.yakcollective.org/join/))** _as a jumping-off point to explore this topic._
+_This column will continue weekly and will explore a variety of topics in “Online Governance” sphere, using the Yak Collective’s weekly **Online Governance chat** _**(**_ **Friday at 12p EDT** _ **in [Yak Discord channel](../join.md))** _as a jumping-off point to explore this topic._
 
 [Leave a comment](https://yakcollective.substack.com/p/gpt-3-and-the-new-fake-intelligence/comments)
 
@@ -106,7 +106,7 @@ _By Alex Wagner_
 
 > _"For me, the big story about #gpt3 is not that it is smart - it is dumb as a pile of rocks - but that piles of rocks can do many things we thought you needed to be smart for. Fake intelligence may be dominant over real intelligence in many domains."_
 > 
-> [– Anders Sandberg, Senior Research Fellow at Oxford University](https://twitter.com/anderssandberg/status/1285104499531698176?s=20)
+> [– Anders Sandberg, Senior Research Fellow at Oxford University](https://x.com/anderssandberg/status/1285104499531698176?s=20)
 
 [OpenAI](https://openai.com/), the AI research lab that created GPT-3, was founded in 2015 by Elon Musk and others. In 2018, Musk left OpenAI’s board in Feb. 2018 over a conflict regarding the company’s direction. Last year, Microsoft invested a billion dollars into the company.
 
@@ -118,25 +118,25 @@ GPT-3 has generated it’s own unbridled fervor with technologists.
 
 > _"The GPT-3 hype is way too much. It’s impressive (thanks for the nice compliments!) but it still has serious weaknesses and sometimes makes very silly mistakes. AI is going to change the world, but GPT-3 is just a very early glimpse. We have a lot still to figure out. "_
 > 
-> [– Sam Altman, CEO of OpenAI](https://twitter.com/sama/status/1284922296348454913?s=20)
+> [– Sam Altman, CEO of OpenAI](https://x.com/sama/status/1284922296348454913?s=20)
 
-If you’re online at all, Twitter especially, you may be wondering [why people are raving so wildly about GPT-3.](https://twitter.com/nicklovescode/status/1284064062880378880?s=20)
+If you’re online at all, Twitter especially, you may be wondering [why people are raving so wildly about GPT-3.](https://x.com/nicklovescode/status/1284064062880378880?s=20)
 
 One generally
 
 Here’s a brief list of notable projects and experiments with GPT-3:
 
-- Nick Cammarata’s [gushing tweet threads](https://twitter.com/nicklovescode/status/1284064062880378880) about GPT-3 as an a “better-than-human” therapist.
+- Nick Cammarata’s [gushing tweet threads](https://x.com/nicklovescode/status/1284064062880378880) about GPT-3 as an a “better-than-human” therapist.
 
 - Kevin Lacker’s blog post “[Giving GPT-3 a Turing Test](https://lacker.io/ai/2020/07/06/giving-gpt-3-a-turing-test.html)” showcases the author’s findings with regards to how well GPT-3 can fake being a human, and is a short, enjoyable read.
 
-- Sharif Shameem created a program with GPT-3 that can [auto-generate JSX code for web pages](https://twitter.com/sharifshameem/status/1282676454690451457?s=20), by using plain english to describe the desired layout.
+- Sharif Shameem created a program with GPT-3 that can [auto-generate JSX code for web pages](https://x.com/sharifshameem/status/1282676454690451457?s=20), by using plain english to describe the desired layout.
 
 - Gwern’s exhaustive list of [“GPT-3 Creative Fiction”](https://www.gwern.net/GPT-3#the-database-prompt) experiments oscillate between academic and opaque to [legitimately weird, and often funny.](https://www.gwern.net/GPT-3#navy-seal-copypasta)
 
 - [OpenAI’s previous projects](https://openai.com/progress/) are worth checking out, as well.
 
-[Probably the most earthy take on GPT-3](https://twitter.com/togelius/status/1284131360857358337?s=20) comes from Julian Togelius, Associate Professor researching AI at NYU:
+[Probably the most earthy take on GPT-3](https://x.com/togelius/status/1284131360857358337?s=20) comes from Julian Togelius, Associate Professor researching AI at NYU:
 
 > _"GPT-3 often performs like a clever student who hasn't done their reading trying to bullshit their way through an exam. Some well-known facts, some half-truths, and some straight lies, strung together in what first looks like a smooth narrative."_
 
@@ -156,7 +156,7 @@ Gwern equates this ability with the creation of a whole [new kind of programming
 
 _The quotes were pulled from Lamda Labs’ excellent post, “[A Hitchhikers Guide to GPT-3](https://lambdalabs.com/blog/gpt-3/)”_
 
-_For a longer, more complete survey of the most interesting critiques and uses of GPT-3, [check out Kaj Sotala’s “thread of threads” on the subject.](https://twitter.com/xuenay/status/1283312640199196673)_
+_For a longer, more complete survey of the most interesting critiques and uses of GPT-3, [check out Kaj Sotala’s “thread of threads” on the subject.](https://x.com/xuenay/status/1283312640199196673)_
 
 [Share Yak Talk](https://yakcollective.substack.com/?utm_source=substack&utm_medium=email&utm_content=share&action=share)
 
@@ -172,8 +172,8 @@ _For a longer, more complete survey of the most interesting critiques and uses o
 
 ### Join/Hire
 
-Apply to [become a Yak here](https://www.yakcollective.org/join/). 
+Apply to [become a Yak here](../join.md). 
 
 Interested in hiring the Yak Collective? Send a message to [vgr@ribbonfarm.com](mailto:vgr@ribbonfarm.com).
 
-_The Yak Talk team for this weeks edition is: [Alex Wagner](https://twitter.com/alexdw5), [Grigori Milov](https://twitter.com/grigorimilov), [Shreeda Segan](https://shreeda.substack.com), [Praful Mathur](https://aionthebeach.com/), and [Matthew Sweet](https://twitter.com/Matthew_Sweet)._
+_The Yak Talk team for this weeks edition is: [Alex Wagner](https://x.com/alexdw5), [Grigori Milov](https://x.com/grigorimilov), [Shreeda Segan](https://shreeda.substack.com), [Praful Mathur](https://aionthebeach.com/), and [Matthew Sweet](https://x.com/Matthew_Sweet)._

@@ -60,8 +60,8 @@ Fortunately, the Yak Collective is not _actually_ an armoured unit dependent on 
 
 ## **Join / Hire**
 
-Apply to **[become a Yak here](https://www.yakcollective.org/join/)**. 
+Apply to **[become a Yak here](../join.md)**. 
 
 Interested in hiring the Yak Collective? Send a message to **[vgr@ribbonfarm.com](mailto:vgr@ribbonfarm.com)**.
 
-_The Yak Talk team for this week’s edition is: [Praful Mathur](http://twitter.com/prafulfillment), [Matthew Sweet](https://twitter.com/Matthew_Sweet) and [Grigori Milov](https://twitter.com/grigorimilov)._
+_The Yak Talk team for this week’s edition is: [Praful Mathur](http://x.com/prafulfillment), [Matthew Sweet](https://x.com/Matthew_Sweet) and [Grigori Milov](https://x.com/grigorimilov)._

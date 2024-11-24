@@ -21,8 +21,13 @@ This `README` and files in the `private` directory are *not* included in the fin
 Conversations happen on [the Discord ⌗infrastructure channel](https://discord.com/channels/692111190851059762/704369362315772044).
 
 ## TODO
-
 - [ ] Integrate in newsletters from `.automation/var/cache/pluto/newsletter/*`
+- [ ] Fix various formatting issues
+	- [ ] Quotes (single and double)
+	- [ ] Dashes (single, n-dash, and m-dash)
+	- [ ] Italics
+	- [ ] Hashes
+	- [ ] Email addresses
 - [ ] Make sure that all all pages are linked to each other (and remove unused pages)
 - [ ] Make sure text works well everywhere
 	- [ ] Obsidian

@@ -98,25 +98,25 @@ There is a valid argument that [the Internet used to be much weirder](https://ww
 
 So, where are these fabled and happening online spaces, you ask?
 
-This piece was inspired by [Devon Zuegel](https://twitter.com/devonzuegel)’s brief, but [excellent tweet thread](https://twitter.com/devonzuegel/status/1280375422413225985), in which she lists a handful of experimental online spaces.
+This piece was inspired by [Devon Zuegel](https://x.com/devonzuegel)’s brief, but [excellent tweet thread](https://x.com/devonzuegel/status/1280375422413225985), in which she lists a handful of experimental online spaces.
 
 It’s worth noting that these are experiments, and none of these are fully thriving communal spaces. To actually play with any of these “spaces”, you’ll want to message a friend to join you. The possible exception being Virus Room, which is designed for serendipitous meetings with strangers online.  
 
-[@devonzuegel](https://twitter.com/devonzuegel):
+[@devonzuegel](https://x.com/devonzuegel):
 
 > Examples that come to mind:
 > 
 > _(Descriptions added for clarity. List is slightly modified from Zuegel’s initial tweet. - ed.)_
 > 
-> - [@feross](https://twitter.com/feross)’ [Virus Cafe](https://virus.cafe) - _Promises “Meet a stranger in 2 minutes”. Fun interface, sounds, and UX._ 
+> - [@feross](https://x.com/feross)’ [Virus Cafe](https://virus.cafe) - _Promises “Meet a stranger in 2 minutes”. Fun interface, sounds, and UX._ 
 > 
-> - [Online Town](https://theonline.town) – _From their site: “Online Town is a video-calling experience that lets multiple people hold separate conversations in parallel and lets you walk in, out and around those conversations just as easily as you would in real life. It’s also fun.” Seems very similar to [@davidguttman](https://twitter.com/davidguttman)'s **[http://rambly.app](https://t.co/uyTvG6PDhe?amp=1)**, in employing 90’s RPG aesthetics into the app’s design._
+> - [Online Town](https://theonline.town) – _From their site: “Online Town is a video-calling experience that lets multiple people hold separate conversations in parallel and lets you walk in, out and around those conversations just as easily as you would in real life. It’s also fun.” Seems very similar to [@davidguttman](https://x.com/davidguttman)'s **[http://rambly.app](https://t.co/uyTvG6PDhe?amp=1)**, in employing 90’s RPG aesthetics into the app’s design._
 > 
 > - [MakeSpace](https://makespace.fun) - _Like if Zoom was created by UX designers. Probably the most ProductHunt friendly of this bunch._
 > 
-> - [Cozy Room](https://twitter.com/cozyroom) – _Allows you to inhabit a two-dimensional room, arrange the furniture, and voice chat with your friends using an anthropomorphic circle as an avatar. Cute semi-spatial chat app._
+> - [Cozy Room](https://x.com/cozyroom) – _Allows you to inhabit a two-dimensional room, arrange the furniture, and voice chat with your friends using an anthropomorphic circle as an avatar. Cute semi-spatial chat app._
 
-This is only a partial list, and some of the newest “online space” apps being built. Weird online spaces are constantly emerging and then fading into the Land of Forgotten Websites. Some others, old and new: [Scuttlebutt](https://scuttlebutt.nz)(a decentralized social network), [wfh.town](https://twitter.com/fionais__online/status/1236004564412665856)(a speculative map created collaboratively in Figma), [Marissa’s Google Doc Quarantine Party](https://www.youtube.com/watch?v=DdbbPNyWvfA&feature=emb_title)(essentially an online stand-up comedy show meets Google Docs)
+This is only a partial list, and some of the newest “online space” apps being built. Weird online spaces are constantly emerging and then fading into the Land of Forgotten Websites. Some others, old and new: [Scuttlebutt](https://scuttlebutt.nz)(a decentralized social network), [wfh.town](https://x.com/fionais__online/status/1236004564412665856)(a speculative map created collaboratively in Figma), [Marissa’s Google Doc Quarantine Party](https://www.youtube.com/watch?v=DdbbPNyWvfA&feature=emb_title)(essentially an online stand-up comedy show meets Google Docs)
 
 **SEE YOU ON THE WEB**
 
@@ -130,7 +130,7 @@ One thing is for certain – many of us are only going to continue to spend more
 
 _By Praful Mathur_
 
-That’s the question that looms over the #complexity channel in the [Yak Collective’s Discord server](https://www.yakcollective.org/join/). What's been most fascinating is how the group is finding examples in the natural world that demonstrate, firsthand, the effects and beauty of complexity. 
+That’s the question that looms over the #complexity channel in the [Yak Collective’s Discord server](../join.md). What's been most fascinating is how the group is finding examples in the natural world that demonstrate, firsthand, the effects and beauty of complexity. 
 
 There have been more intellectual takes on how complexity underlies the [nature of reality](http://johnsalvatier.org/blog/2017/reality-has-a-surprising-amount-of-detail). Yet most of the conversation has meandered into looking for a definition of complexity which truly fits. Similar to Supreme Court Justice Potter Stewart’s [famous remark as a threshold test for obscenity](https://en.wikipedia.org/wiki/I_know_it_when_I_see_it), it seems that complexity is also a matter of “I know it when I see it.” 
 
@@ -150,12 +150,12 @@ Obviously, there is much to explore regarding the topic of complexity, with vast
 
 [Read Shreeda’s report on Internet Writer Workflows, released earlier this week.](https://shreeda.substack.com/p/internet-writer-workflows)
 
-Apply to [become a Yak here](https://www.yakcollective.org/join/). 
+Apply to [become a Yak here](../join.md).
 
 Interested in hiring the Yak Collective? Send a message to [vgr@ribbonfarm.com](mailto:vgr@ribbonfarm.com).
 
 [Share Yak Talk](https://yakcollective.substack.com/?utm_source=substack&utm_medium=email&utm_content=share&action=share)
 
-_The Yak Talk team is: [Alex Wagner](https://twitter.com/alexdw5), [Grigori Milov](https://twitter.com/grigorimilov), [Shreeda Segan](https://shreeda.substack.com), and [Praful Mathur](https://aionthebeach.com/)._
+_The Yak Talk team is: [Alex Wagner](https://x.com/alexdw5), [Grigori Milov](https://x.com/grigorimilov), [Shreeda Segan](https://shreeda.substack.com), and [Praful Mathur](https://aionthebeach.com/)._
 
 _We are currently seeking one more contributor to cover the #complexity track for the newsletter. Comment below or reach out to Alex via Twitter._

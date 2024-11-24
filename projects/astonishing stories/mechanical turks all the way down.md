@@ -7,7 +7,7 @@ aliases:
   - Mechanical Turks All the Way Down
 quartsRssFeed: true
 ---
-*November 13th 2020* • [Chris Butler](https://twitter.com/chrizbot)
+*November 13th 2020* • [Chris Butler](https://x.com/chrizbot)
 
 I jabbed the accept button on one of the many touch surfaces that suddenly popped into reality in my shared office, home, and daycare. Can’t be too eager on your first day of the job.
 

@@ -18,7 +18,7 @@ Two years ago the Yak Collective did the Neurofuturama project, where contributo
 
 A new client wants to do something similar. This company has three products relating to the sustainability world and wants to get wide-ranging sketches for how these products can enter the market.
 
-All three products ideas have an envisioning upcycling plastics theme. No specialized knowledge is necessary. The deliverable will be in the same slide deck format as the [Don’t Waste the Reboot](https://www.yakcollective.org/projects/dont-waste-the-reboot.html) deck.
+All three products ideas have an envisioning upcycling plastics theme. No specialized knowledge is necessary. The deliverable will be in the same slide deck format as the [Don’t Waste the Reboot](../projects/dont%20waste%20the%20reboot.md) deck.
 
 There’s room for 8-15 participants, each of who will make between 200-1,200 USD, depending on the number of contributions. We are targeting 18 contributions. There is also a budget for artwork and graphic design — if you have those skills, please consider applying.
 
@@ -34,6 +34,6 @@ The contributions solicitations for this second paid client project went live th
 
 * * *
 
-And if you’re not already a member, new participants welcome to apply to participate, [join us here](https://www.yakcollective.org/join.html).
+And if you’re not already a member, new participants welcome to apply to participate, [join us here](../join.md).
 
-[Join us here](https://www.yakcollective.org/join.html)
+[Join us here](../join.md)

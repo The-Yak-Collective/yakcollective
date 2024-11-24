@@ -16,7 +16,7 @@ substack: https://yakcollective.substack.com/p/podcasting-needs-cognitive-hooks
 
 ## Podcasting Needs Cognitive Hooks
 
-_by [Joseph Ensminger](https://twitter.com/EnsmingerJoseph)_
+_by [Joseph Ensminger](https://x.com/EnsmingerJoseph)_
 
 **Podcasts could be much more interesting to the audience and the speakers if they had a visual aid that mapped the conversation flow and dubbed points the speakers would like to return to.**
 
@@ -109,7 +109,7 @@ _\*While this idea is loosely developed, I think it has legs. I pulled inspirati
 
 ## How To Become A Tech Contractor
 
-[Jessica Burton](http://www.twitter.com/@ssica3003) recently published an irreverent guide for anyone umm-ing and ahh-ing about moving into contract work.
+[Jessica Burton](http://www.x.com/@ssica3003) recently published an irreverent guide for anyone umm-ing and ahh-ing about moving into contract work.
 
 > …I have heard every excuse under the sun for not yet being a freelancer: lack of experience, mortgage, kids, sick mother, everything. And I have also met successful freelancers with every single one of these burdens that other people use as an excuse. This tendency to make excuses is often a sign that being a freelancer is actually an escape fantasy.
 
@@ -119,7 +119,7 @@ Read the [full article](https://ssica3003.wordpress.com/2020/08/18/how-to-become
 
 ## Emergent Infrastructure
 
-_by [Matthew Sweet](http://twitter.com/@Matthew_Sweet)_
+_by [Matthew Sweet](http://x.com/@Matthew_Sweet)_
 
 The Yak Collective's Discord server features channels related to active projects, themed discussion channels (like #complexity and #gigster-logistics) and channels centered on “bureaucracy” (aka the development and maintenance of YC itself).
 
@@ -143,8 +143,8 @@ I’m inclined to believe at least one of these aims will be realised.
 
 ## **Join / Hire**
 
-Apply to **[become a Yak here](https://www.yakcollective.org/join/)**. 
+Apply to **[become a Yak here](../join.md)**. 
 
 Interested in hiring the Yak Collective? Send a message to **[vgr@ribbonfarm.com](mailto:vgr@ribbonfarm.com)**.
 
-_The Yak Talk team for this week’s edition is: [Alex Wagner](https://twitter.com/alexdw5), [Shreeda Segan](https://shreeda.substack.com/), [Praful Mathur](http://twitter.com/prafulfillment), [Matthew Sweet](https://twitter.com/Matthew_Sweet), [Joseph Ensminger](https://twitter.com/EnsmingerJoseph), and [Grigori Milov](https://twitter.com/grigorimilov)._
+_The Yak Talk team for this week’s edition is: [Alex Wagner](https://x.com/alexdw5), [Shreeda Segan](https://shreeda.substack.com/), [Praful Mathur](http://x.com/prafulfillment), [Matthew Sweet](https://x.com/Matthew_Sweet), [Joseph Ensminger](https://x.com/EnsmingerJoseph), and [Grigori Milov](https://x.com/grigorimilov)._

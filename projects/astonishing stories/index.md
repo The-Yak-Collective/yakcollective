@@ -28,14 +28,14 @@ The stories here are not meant to predict the future but to be imagination exten
 > In an age of pandemics and rolling lockdowns, his dad saw the youth orchestra as an opportunity for kids like his son to get out of the house.
 
 > [!story]- [department of restoration](department%20of%20restoration.md)
-> [November 6th 2020](department%20of%20restoration.md) • [Scott Garlinger](https://twitter.com/scott_garlinger)
+> [November 6th 2020](department%20of%20restoration.md) • [Scott Garlinger](https://x.com/scott_garlinger)
 > 
 > [![Department of Restoration](department%20of%20restoration.md)
 > 
 > At a certain time, in a certain space, a person may speak or act and find himself under a recent form of judgment: cancellation.
 
 > [!story]- [mechanical turks all the way down](mechanical%20turks%20all%20the%20way%20down.md)
-> [November 13th 2020](mechanical%20turks%20all%20the%20way%20down.md) • [Chris Butler](https://twitter.com/chrizbot)
+> [November 13th 2020](mechanical%20turks%20all%20the%20way%20down.md) • [Chris Butler](https://x.com/chrizbot)
 > 
 > [![Mechanical Turks All the Way Down](mechanical%20turks%20all%20the%20way%20down.md)
 > 
@@ -58,4 +58,4 @@ The stories here are not meant to predict the future but to be imagination exten
 ![Justice — https://asterisques.com/](../../assets/astonishing%20stories.webp)
 
 ## The Yak Collective // Astonishing Stories
-**Lead editors** / [Sachin Benny](https://sachinbenny.notion.site/I-m-Sachin-Benny-7391ec1aafa94af28599a2b089c4bf35) and [Amanda Reeves](https://wabisabifutures.com/) // **Co-editors** / [Jenna Dixon](https://twitter.com/jdbb), [Scott Garlinger](https://twitter.com/scott_garlinger), Praful Mathur, [Shreeda Segan](https://twitter.com/freeshreeda) // **Writers** / [Sachin Benny](https://sachinbenny.notion.site/I-m-Sachin-Benny-7391ec1aafa94af28599a2b089c4bf35), [Chris Butler](https://twitter.com/chrizbot), [Nathan Chen](https://nchen13.github.io/), [Scott Garlinger](https://twitter.com/scott_garlinger), [Benjamin Smith](https://bens.substack.com/) // **Illustrator** / [Justice](https://asterisques.com/) // **Website development** / [Nathan Acks](https://www.necopinus.xyz/) // **Additional collaborators** / Maggie Appleton, Tracy Brinkerhoff, Michael de la Maza, Prashant Gandhi, [Zhan Li](https://twitter.com/thezhanly), Murilo Loureiro, Sumit Paul-Choudhury, Claire Peters, [Chris Reid](https://twitter.com/careid0), Erik Sandberg, Mike Wimsatt
+**Lead editors** / [Sachin Benny](https://sachinbenny.notion.site/I-m-Sachin-Benny-7391ec1aafa94af28599a2b089c4bf35) and [Amanda Reeves](https://wabisabifutures.com/) // **Co-editors** / [Jenna Dixon](https://x.com/jdbb), [Scott Garlinger](https://x.com/scott_garlinger), Praful Mathur, [Shreeda Segan](https://x.com/freeshreeda) // **Writers** / [Sachin Benny](https://sachinbenny.notion.site/I-m-Sachin-Benny-7391ec1aafa94af28599a2b089c4bf35), [Chris Butler](https://x.com/chrizbot), [Nathan Chen](https://nchen13.github.io/), [Scott Garlinger](https://x.com/scott_garlinger), [Benjamin Smith](https://bens.substack.com/) // **Illustrator** / [Justice](https://asterisques.com/) // **Website development** / [Nathan Acks](https://www.necopinus.xyz/) // **Additional collaborators** / Maggie Appleton, Tracy Brinkerhoff, Michael de la Maza, Prashant Gandhi, [Zhan Li](https://x.com/thezhanly), Murilo Loureiro, Sumit Paul-Choudhury, Claire Peters, [Chris Reid](https://x.com/careid0), Erik Sandberg, Mike Wimsatt

@@ -6,11 +6,11 @@ quartsRssFeed: true
 date: 2020-08-22
 substack: https://yakcollective.substack.com/p/decarbonization-strategies
 ---
-In this week’s _Yak Talk_, we interview fellow Yak **[Varun Adibhatla](https://twitter.com/vr00n?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor)**.
+In this week’s _Yak Talk_, we interview fellow Yak **[Varun Adibhatla](https://x.com/vr00n?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor)**.
 
 Varun works as a deployment strategist at [Urbint](https://medium.com/urbint-engineering/out-on-the-range-a-recap-of-sgas-natural-gas-connect-2019-c11e35dd22ea), and also founded [ARGO](http://www.argolabs.org/)(Advanced Research in Government Operations), with a mission to research and deliver data infrastructure to transform how basic public services are delivered.
 
-Earlier this month, Varun teamed up with Alex Wagner(also the editor at _Yak Talk_) in response to VC [Chamath Palihapitiya](https://twitter.com/chamath)’s open call to create a proposal for decarbonization, sustainability, and climate change.
+Earlier this month, Varun teamed up with Alex Wagner(also the editor at _Yak Talk_) in response to VC [Chamath Palihapitiya](https://x.com/chamath)’s open call to create a proposal for decarbonization, sustainability, and climate change.
 
 Alex and Varun created [this seven-page proposal](https://drive.google.com/file/d/1ZmrKZpTrCG6yVPhGZFGLSf9pfCME6KQ6/view?usp=sharing) based on Varun’s preexisting ideas about how to create a decarbonization movement.
 
@@ -24,11 +24,11 @@ _The audio recording of [the interview in its entirety is available here.](https
 
 ## **1 .On Behavioral Economics, Government As the Source of Incentives and “Moving the Needle in the Wrong Direction”.**
 
-The first thing is, when you brought this [proposal] to my attention, I kind of forced myself to focus on [Chamath’s prompt](https://twitter.com/chamath/status/1284531841651752960), to focus on these ideas. I think a call to innovate by a public figure is always a good thing.
+The first thing is, when you brought this [proposal] to my attention, I kind of forced myself to focus on [Chamath’s prompt](https://x.com/chamath/status/1284531841651752960), to focus on these ideas. I think a call to innovate by a public figure is always a good thing.
 
 What's interesting about that is I would say. OK, if I was given two minutes with a billionaire to kind of propose any idea,  what would it kind of look like? And so I think the start of this was forcing all the thoughts I had, kind of forced them into a single slide.
 
-Being interested in what I'm calling “[incentive-centered design](https://twitter.com/vr00n/status/1183748167533248515?s=20)” is really accounting for the different incentive mechanisms on individual as well as the institutional level.
+Being interested in what I'm calling “[incentive-centered design](https://x.com/vr00n/status/1183748167533248515?s=20)” is really accounting for the different incentive mechanisms on individual as well as the institutional level.
 
 Some of the work that I've been tracking on behavioral economics, starting with, you know, [the Nobel prize was won in 2017, by Richard Thaler](https://theconversation.com/why-richard-thaler-won-the-2017-economics-nobel-prize-85404). It was a recognition that behavioral economics kind of is _the thing_. As a layperson, who's not an economist, I needed to understand it. 
 
@@ -114,8 +114,8 @@ You need it to be a very inclusive tent and the tent should be appealing so that
 
 ## **Join/Hire**
 
-Apply to **[become a Yak here](https://www.yakcollective.org/join/)**. 
+Apply to **[become a Yak here](../join.md)**. 
 
 Interested in hiring the Yak Collective? Send a message to **[vgr@ribbonfarm.com](mailto:vgr@ribbonfarm.com)**.
 
-_The Yak Talk team for this week’s edition is: [Alex Wagner](https://twitter.com/alexdw5), [Shreeda Segan](https://shreeda.substack.com/), [Praful Mathur](http://twitter.com/prafulfillment), [Matthew Sweet](https://twitter.com/Matthew_Sweet), [Joseph Ensminger](https://twitter.com/EnsmingerJoseph), and [Grigori Milov](https://twitter.com/grigorimilov)._
+_The Yak Talk team for this week’s edition is: [Alex Wagner](https://x.com/alexdw5), [Shreeda Segan](https://shreeda.substack.com/), [Praful Mathur](http://x.com/prafulfillment), [Matthew Sweet](https://x.com/Matthew_Sweet), [Joseph Ensminger](https://x.com/EnsmingerJoseph), and [Grigori Milov](https://x.com/grigorimilov)._

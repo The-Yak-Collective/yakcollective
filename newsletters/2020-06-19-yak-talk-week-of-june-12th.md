@@ -8,10 +8,9 @@ substack: https://yakcollective.substack.com/p/yak-talk-week-of-june-12th
 ---
 Greetings Yaks and fans of Yak, here’s the latest from Yak Collective.
 
-[![](https://cdn.substack.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https#3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F8b146693-ff03-49bb-9458-73e1f285e3f0_1600x1234.jpeg)](https://www.yakcollective.org)
 ### Yak Content This Week:
 
-- [Jordan Peacock on the Founders Live podcast](http://founderslivepodcast.buzzsprout.com/653182/4140872-056-jordan-peacock-of-becoming-machinic-don-t-waste-this-reboot), discussing YC’s _[Don’t Waste the Reboot](https://www.yakcollective.org/projects/dont-waste-the-covid19-reboot)_ project, and his work as CEO and co-founder of [Becoming Machinic](https://www.becomingmachinic.com). 
+- [Jordan Peacock on the Founders Live podcast](http://founderslivepodcast.buzzsprout.com/653182/4140872-056-jordan-peacock-of-becoming-machinic-don-t-waste-this-reboot), discussing YC’s [*Don’t Waste the Reboot*](../projects/dont%20waste%20the%20reboot.md) project, and his work as CEO and co-founder of [Becoming Machinic](https://www.becomingmachinic.com). 
 
 - In _[A New Old Pattern Language](https://shreeda.substack.com/p/a-new-old-pattern-language)_, Shreeda Sagan examines how to create “patterns of living that let us thrive not only alongside, but integrated with, technology”.
 
@@ -31,6 +30,6 @@ Greetings Yaks and fans of Yak, here’s the latest from Yak Collective.
 
 ### Useful Links
 
-Apply to [become a Yak here](https://www.yakcollective.org/join/).
+Apply to [become a Yak here](../join.md).
 
 Interested in hiring the Yak Collective? Send a message to [vgr@ribbonfarm.com](mailto:vgr@ribbonfarm.com).

@@ -15,10 +15,11 @@ Like YC itself, the governance studies origin story involves a sincere intent to
 - Fridays, 1600 UTC, meet on the YC Discord voice channel for a strict hour
 - 15 minutes on silent-mode for the week’s reading
 - 45 minutes for round robin responses and then open-floor conversation
+	- active and “listen mode” participants welcome
 
 Governance studies as an activity within YC operates on a seasonal tempo with the season emerging from the cohering of a theme. This cohering is unpredictable and vibe-led. Season 1 spanned 2021, Season 2 spanned 2022 and early 2023, and we’re now moving into Season 3 —drop by to help us [steer it](../join.md).
 
-For season 1, this process yielded [The Yak Online Governance Primer](../projects/online%20governance%20primer.md) which unpacked four regimes of governance —*Hobbesian*, *Gaia*, *Muddler*, and *Citadel* —and includes an annotated bibliography and a lexicon.
+For season 1, this process yielded [The Yak Online Governance Primer](../projects/online%20governance%20primer.md) which unpacked four regimes of governance — *Hobbesian*, *Gaia*, *Muddler*, and *Citadel* —and includes an annotated bibliography and a lexicon.
 
 Season 2 had a different outcome. Like season 1, the governance weekly reads covered a diverse range and which we think can be bucketed into a few themes:
 

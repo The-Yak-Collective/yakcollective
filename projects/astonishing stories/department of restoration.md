@@ -6,7 +6,7 @@ aliases:
   - Department of Restoration
 quartsRssFeed: true
 ---
-*November 6th 2020* • [Scott Garlinger](https://twitter.com/scott_garlinger)
+*November 6th 2020* • [Scott Garlinger](https://x.com/scott_garlinger)
 
 +
 

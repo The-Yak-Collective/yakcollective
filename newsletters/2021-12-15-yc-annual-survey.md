@@ -16,6 +16,6 @@ Regardless if you were able to attend, we would love to hear from you about your
 
 If you have a LOT of ideas and opinions to share about the Yak Collective, we are also planning a focus group to bring together a diverse group of members in Q1 2022. You can sign up for that in the survey as well.
 
-For those newer to YC, You can learn more about the Yak Collective on our [About](https://www.yakcollective.org/about/) page. If it’s been a while since you last checked in, be aware that our mission has evolved quite significantly since we started out nearly two years ago.
+For those newer to YC, You can learn more about the Yak Collective on our [About](../about.md) page. If it’s been a while since you last checked in, be aware that our mission has evolved quite significantly since we started out nearly two years ago.
 
-And if you haven’t already, you can get on our Discord server via the form on the [Join](https://www.yakcollective.org/join/) page. Thanks for your interest in the Yak Collective!
+And if you haven’t already, you can get on our Discord server via the form on the [Join](../join.md) page. Thanks for your interest in the Yak Collective!

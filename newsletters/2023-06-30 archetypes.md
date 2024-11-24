@@ -46,7 +46,7 @@ Ex: [Glue people](https://www.linkedin.com/pulse/glue-people-one-most-desired-jo
 ### Shapeshifter
 The *shapeshifter* either buys into or enjoys the game that the broader collective is participating in, yet plays it not for the benefit of the group but for their amusement and in a highly individualistic style. 
 
-The shapeshifter has certain strengths. Since they drift from the otherwise centralized, [high-alignment](https://www.yakcollective.org/projects/yak-online-governance-primer.html) core of a collective, they can exploit a cutting-edge schism and exploit it for their advancement — and sometimes this equals a win for the collective as well. They’re the perfect example of a player who has embodied a certain level of [being slightly evil](https://www.ribbonfarm.com/be-slightly-evil/). They’re less concerned with immediate praise (such as from playing teacher’s pet) or the legibility of their behaviors and motives.
+The shapeshifter has certain strengths. Since they drift from the otherwise centralized, [high-alignment](../projects/online%20governance%20primer.md) core of a collective, they can exploit a cutting-edge schism and exploit it for their advancement — and sometimes this equals a win for the collective as well. They’re the perfect example of a player who has embodied a certain level of [being slightly evil](https://www.ribbonfarm.com/be-slightly-evil/). They’re less concerned with immediate praise (such as from playing teacher’s pet) or the legibility of their behaviors and motives.
 
 *Mature (–): Distracted schizoposter.* Their openness to chaos is not masterfully honed and their contributions may challenge the alignment of the group. Or, they have good ideas but have not mastered how to articulate them within the language and frame that the rest of the group occupies. Their ideas come across as vagrant tweets on the collective timeline. Perhaps there is a there there, but it’s not fully articulated or useful to others.
 
@@ -54,7 +54,7 @@ Ex: Bertram Gilfoyle from Silicon Valley
 
 *Mature (+): Master OODA looper.* They may not always be running alongside the group and may occupy a default, low-inertia state where they conserve energy and direct their attention mainly to the observation of the larger game, they are at the same time gathering sufficient context and positioning themselves in time and space. They run a high-tempo [OODA loop](https://en.wikipedia.org/wiki/OODA_loop) and are able to pounce quickly into action to secure a win for not only their group but also for themselves.  
 
-Ex: [Lionel Messi](https://twitter.com/TrungTPhan/status/1428372777594015745)
+Ex: [Lionel Messi](https://x.com/TrungTPhan/status/1428372777594015745)
 
 ### Anarch
 The *anarch* is skeptical of authority and doesn’t agree with either pole of an existing schism in a system. They exist in the system due to some sort of dependency or need that can only be fulfilled by the system or collective, despite their frustrations with it. 

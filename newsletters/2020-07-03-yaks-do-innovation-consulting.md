@@ -22,7 +22,7 @@ For this reason, the dog days of summer have historically been regarded as an ap
 
 _- [John Brady, 1813: Clavis calendaria](http://www.emmitsburg.net/nfs/articles/re/2012/clavis.htm); or, A compendious analysis of the calendar, illustrated with ecclesiastical, historical, and classical anecdotes._
 
-Since forming in March of this year, the Yak Collective has been chugging along, [completing two project cycles](https://www.yakcollective.org/projects/) in a span of four months, as well as completing its first paid project for a client, involving nearly 20 Yak contributors.
+Since forming in March of this year, the Yak Collective has been chugging along, [completing two project cycles](../projects/index.md) in a span of four months, as well as completing its first paid project for a client, involving nearly 20 Yak contributors.
 
 As the collective matures(and as we go deeper into the hottest season of the year), we recognize the need to focus on the quality of projects over the speed at which they are completed, to ensure that all Yak projects are of a high caliber.
 
@@ -32,13 +32,13 @@ As they say, it’s a marathon, not a sprint.
 
 ## Yaks Do Innovation Consulting
 
-Currently, [David McDougall](https://twitter.com/dmcdougall) and [Vaughn Tan](https://twitter.com/vaughn_tan) are leading a to-be-published essay collection at Yak Collective that addresses challenges regarding why corporate executives often fail to foster and implement innovation at their own companies.
+Currently, [David McDougall](https://x.com/dmcdougall) and [Vaughn Tan](https://x.com/vaughn_tan) are leading a to-be-published essay collection at Yak Collective that addresses challenges regarding why corporate executives often fail to foster and implement innovation at their own companies.
 
 The project is currently seeking contributors for the second phase of the project, which is a collection of “solution essays”, in response to the first round of “problem essays”.
 
 The essay collection tentatively will be released in late Summer 2020.
 
-If you’re interested in contributing writing, editing, marketing, or project management to the project, [join Yak Collective via this short sign-up form](https://www.yakcollective.org/join/), or respond in the comments.
+If you’re interested in contributing writing, editing, marketing, or project management to the project, [join Yak Collective via this short sign-up form](../join.md), or respond in the comments.
 
 [Leave a comment](https://yakcollective.substack.com/p/yaks-do-innovation-consulting/comments)
 
@@ -54,8 +54,8 @@ If you’re interested in contributing writing, editing, marketing, or project m
 
 ### **Useful Links**
 
-Apply to [become a Yak here](https://www.yakcollective.org/join/). 
+Apply to [become a Yak here](../join.md).
 
 Interested in hiring the Yak Collective? Send a message to [vgr@ribbonfarm.com](mailto:vgr@ribbonfarm.com).
 
-_This newsletter authored by [Alex Wagner](https://twitter.com/alexdw5), with feedback from [Grigori Milov](https://twitter.com/grigorimilov), [David McDougall](https://twitter.com/dmcdougall), and [Will Schutze](https://twitter.com/mrbonetangles)._
+_This newsletter authored by [Alex Wagner](https://x.com/alexdw5), with feedback from [Grigori Milov](https://x.com/grigorimilov), [David McDougall](https://x.com/dmcdougall), and [Will Schutze](https://x.com/mrbonetangles)._

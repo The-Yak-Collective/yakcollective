@@ -16,11 +16,11 @@ The primer is based on about a year of weekly governance study group meetings on
 
 **Please share widely, tweet, post the images to social media, and so on.**  **We appreciate any and all signal boosting!**
 
-If you need a PDF to forward or print for offline reading, you can find one [here](https://www.yakcollective.org/projects/yak-online-governance-primer/yak-online-governance-primer.pdf).
+If you need a PDF to forward or print for offline reading, you can find one [here](../assets/online%20governance%20primer.pdf).
 
 The primer was authored by **Sachin Benny, Venkatesh Rao, Grigori Milov, and Bryan King** , with **Jenna Dixon** and **Nathan Acks** providing editing and production support. **Grace Witherell** supplied some beautiful illustrations. Other regular members of the the governance chat contributed feedback and comments throughout. NFT proceeds will be shared among the contributors, with a portion going to the Yak Collective for future projects.[2](#footnote-2)
 
-If you are interested in having one of us drop by one of your organization’s meetings to talk about the primer and discuss the ideas, feel free to reach out to any of us. You can tweet at [@yak\_collective](https://twitter.com/yak_collective) to get in touch, or just [join us](https://www.yakcollective.org/join/) in the **#online-goverance** channel of our Discord.
+If you are interested in having one of us drop by one of your organization’s meetings to talk about the primer and discuss the ideas, feel free to reach out to any of us. You can tweet at [@yak\_collective](https://x.com/yak_collective) to get in touch, or just [join us](../join.md) in the **#online-goverance** channel of our Discord.
 
 Some further background, for those of you who are interested.
 
@@ -28,15 +28,15 @@ Some further background, for those of you who are interested.
 
 This NFT project is the first of what we suspect might be many blockchainy activities and projects for the Yak Collective.
 
-Since January 2022, we’ve had a blockchain roadmap working group that meets every Monday at 8 AM Pacific (open to all members, [join us](https://www.yakcollective.org/join/) if interested). We mix readings and discussions with hands-on exploration and evaluation of blockchain tools for potential adoption. Members take turns leading discussions and deep dives on topics of interest, and we also frequently have guests joining us to share their expertise on bleeding-edge Web3 topics.
+Since January 2022, we’ve had a blockchain roadmap working group that meets every Monday at 8 AM Pacific (open to all members, [join us](../join.md) if interested). We mix readings and discussions with hands-on exploration and evaluation of blockchain tools for potential adoption. Members take turns leading discussions and deep dives on topics of interest, and we also frequently have guests joining us to share their expertise on bleeding-edge Web3 topics.
 
 While our main goal with this initiative is to evaluate whether it makes sense to adopt the DAO (Decentralized Autonomous Organization) model for ourselves, we’re casting a wide net, and learning all we can. Whether or not we end up adopting the DAO model, chances are, there’s blockchainy things in the future of the Yak Collective.
 
-Managing our internal finances with a [Gnosis multisig safe](https://gnosis.io/), releasing our work as NFTs on Mirror and elsewhere, adopting Web3-native workflow tools like [Clarity.so](https://www.clarity.so/) and [0xSplits](https://www.0xsplits.xyz/), rebuilding our website in a Web3 way (with wallet-based authentication and a distributed backend like IPFS), putting the rovers from the [Yak Rover](https://www.yakcollective.org/projects/yak-rover/) project on the blockchain — there are many exciting ideas on the table.
+Managing our internal finances with a [Gnosis multisig safe](https://gnosis.io/), releasing our work as NFTs on Mirror and elsewhere, adopting Web3-native workflow tools like [Clarity.so](https://www.clarity.so/) and [0xSplits](https://www.0xsplits.xyz/), rebuilding our website in a Web3 way (with wallet-based authentication and a distributed backend like IPFS), putting the rovers from the [Yak Rover](../study%20groups/yak%20robotics%20garage.md) project on the blockchain — there are many exciting ideas on the table.
 
 Through the course of our explorations, we’ve also been developing productive working relationships with many other groups exploring or developing Web3 technologies. **If you think there is interesting collaboration potential between your group and the Yak Collective, please reach out**. We enjoy meeting other groups and doing crossover things with them.
 
-Web3 has been an interesting topic to explore and experiment with, since views of it are so intense and polarized, even within the Yak Collective. And we don’t shy away from the tough conversations in our discussions. Long-time member [Nathan Acks](https://twitter.com/necopinus) posted this take on our Discord:
+Web3 has been an interesting topic to explore and experiment with, since views of it are so intense and polarized, even within the Yak Collective. And we don’t shy away from the tough conversations in our discussions. Long-time member [Nathan Acks](https://x.com/necopinus) posted this take on our Discord:
 
 > At this point, I'm fairly convinced that most critiques boil down to the question: Do blockchains have a "natural" value \> 0? At this point, I'm pretty convinced that they _do_ because they enable useful things to be done on top of them, though I'm not sure what that is (and I don't think it's based upon cryptocurrency as a hedge against DoOoM). So my point of view is that "what is the value of a blockchain" is similar to the question "what is the value of a road"? The contingent out there who maintains that the natural value of a blockchain is 0 (or often, \< 0 because of externalities) tends, I think, to either assume that our current context is static (same energy mix) or assign a negative moral valence to tech/finance/VC/etc. (rather than having a specific argument about blockchains _per se_). I'm actually sympathetic, but I tend to think the energy directed against blockchains is misplaced (the problem isn't blockchain energy consumption, it's the way we generate power; the problem isn't cryptocurrency speculation, it's a dearth of good productive investment opportunities; etc.). I don't really buy that blockchains make things significantly "worse", rather than just making existing problems more obvious.
 
@@ -44,9 +44,9 @@ Many of us involved in the exploration resonate with this take, but as with any 
 
 One way or another, we’re going to have fun with this.
 
-Once again, please do share the **[Yak Online Governance Primer](https://yakcollective.mirror.xyz/aJdO_SO3gw34cLtwBwNC2OD3s0YT3us9C-C2NNPQ_us)**, tweet, reach out, [join us](https://www.yakcollective.org/join/) (blockchain roadmap meetings on Monday mornings 8 AM Pacific, governance studies meetings on Friday mornings 9 AM Pacific), and of course, [collect our first NFT](https://yakcollective.mirror.xyz/aJdO_SO3gw34cLtwBwNC2OD3s0YT3us9C-C2NNPQ_us) if you’d like to support our shenanigans.
+Once again, please do share the **[Yak Online Governance Primer](https://yakcollective.mirror.xyz/aJdO_SO3gw34cLtwBwNC2OD3s0YT3us9C-C2NNPQ_us)**, tweet, reach out, [join us](../join.md) (blockchain roadmap meetings on Monday mornings 8 AM Pacific, governance studies meetings on Friday mornings 9 AM Pacific), and of course, [collect our first NFT](https://yakcollective.mirror.xyz/aJdO_SO3gw34cLtwBwNC2OD3s0YT3us9C-C2NNPQ_us) if you’d like to support our shenanigans.
 
-If this email is your first glimpse of the Yak Collective, check out **[our main website](https://www.yakcollective.org/)** for more on who we are and what we’re about. We are **[@yak\_collective](https://twitter.com/yak_collective)** on Twitter.
+If this email is your first glimpse of the Yak Collective, check out **[our main website](../index.md)** for more on who we are and what we’re about. We are **[@yak\_collective](https://x.com/yak_collective)** on Twitter.
 
 [1](#footnote-anchor-1)
 

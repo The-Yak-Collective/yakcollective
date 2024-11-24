@@ -14,15 +14,15 @@ The newsletter started mid-June, from an observation that Yak should probably ha
 
 Around the fourth or fifth issue of _Yak Talk_, a team coalesced:
 
-- **[Grigori Milov](https://twitter.com/grigorimilov)**, as our resident senior consultant, and voice of quality control for the publication.
+- **[Grigori Milov](https://x.com/grigorimilov)**, as our resident senior consultant, and voice of quality control for the publication.
 
 - **[Shreeda Sagan](https://shreeda.substack.com)**, as our steadfast, no-bs copy editor.
 
-- **[Praful Mathur](http://twitter.com/prafulfillment)**, our #online-governance beat writer, and analytics man.
+- **[Praful Mathur](http://x.com/prafulfillment)**, our #online-governance beat writer, and analytics man.
 
-- **[Joseph Ensminger](https://twitter.com/EnsmingerJoseph)**, contributing writer to the #complexity beat.
+- **[Joseph Ensminger](https://x.com/EnsmingerJoseph)**, contributing writer to the #complexity beat.
 
-- **[Matthew Sweet](https://twitter.com/Matthew_Sweet)**, beat writer for #complexity track.
+- **[Matthew Sweet](https://x.com/Matthew_Sweet)**, beat writer for #complexity track.
 
 I’m writing this note to our readers because we want your feedback.
 
@@ -32,7 +32,7 @@ If you have questions, critique, pitches, or any other flavor of feedback, **[se
 
 Thanks, and Yak-Speed,
 
-- **[Alex Wagner](https://twitter.com/alexdw5)**, nominal editor of _Yak Talk_
+- **[Alex Wagner](https://x.com/alexdw5)**, nominal editor of _Yak Talk_
 
 ## **This Week at Yak Collective:**
 
@@ -48,13 +48,13 @@ Currently, Yaks are working on:
 
 - _ **Yak-Network-Map** _, which is an internal experiment that which seeks to foster positive interactions in the Yak network. From the proposal, “the core objective of this experiment is to _Let a hundred interesting collisions spark among yaks_.” 
 
-If you’d like to know more about these projects, you can **[join Yak Collective here](http://www.yakcollective.org/join).**
+If you’d like to know more about these projects, you can **[join Yak Collective here](../join.md).**
 
 * * *
 
 # Targeting Trust
 
-_by [Matthew Sweet](https://twitter.com/Matthew_Sweet)_
+_by [Matthew Sweet](https://x.com/Matthew_Sweet)_
 
 As [Kranzberg’s first law of technology](https://en.wikipedia.org/wiki/Melvin_Kranzberg) states, “Technology is neither good nor bad; nor is it neutral.” Bad actors will—somewhere, somehow, somewhen—enter the fray. 
 
@@ -82,7 +82,7 @@ The pattern repeats in other domains. In physical and digital security, for exam
 
 ## **Bitcoin and Blue Ticks**
 
-A couple of weeks ago, many [prominent Twitter accounts were hacked](https://twitter.com/TwitterSupport/status/1283518038445223936). The [perpetrators](https://en.wikipedia.org/wiki/2020_Twitter_bitcoin_scam#Perpetrators) turned out to be two Florida-based teens and a Bognor Regis-based teen. They [socially engineered](https://en.wikipedia.org/wiki/Social_engineering_(security)) access to high profile accounts and posted appeals for Bitcoins. The [“2020 Twitter Bitcoin scam”](https://en.wikipedia.org/wiki/2020_Twitter_bitcoin_scam):
+A couple of weeks ago, many [prominent Twitter accounts were hacked](https://x.com/Support/status/1283518038445223936). The [perpetrators](https://en.wikipedia.org/wiki/2020_Twitter_bitcoin_scam#Perpetrators) turned out to be two Florida-based teens and a Bognor Regis-based teen. They [socially engineered](https://en.wikipedia.org/wiki/Social_engineering_(security)) access to high profile accounts and posted appeals for Bitcoins. The [“2020 Twitter Bitcoin scam”](https://en.wikipedia.org/wiki/2020_Twitter_bitcoin_scam):
 
 > “The scam tweets asked individuals to send bitcoin currency to a specific cryptocurrency wallet, with the promise of the Twitter user that money sent would be doubled and returned as a charitable gesture. Within minutes from the initial tweets, more than 320 transactions had already taken place on one of the wallet addresses, and bitcoin to a value of more than US$110,000 had been deposited in one account before the scam messages were removed by Twitter. In addition, full message history data from eight non-verified accounts was also acquired.”
 
@@ -98,7 +98,7 @@ The first step is the hardest and the prerequisite for the others. In our real-w
 
 ### **Step Two: Who?**
 
-The next question is, “Which accounts?” [@MenanderSoter](https://twitter.com/MenanderSoter) used network graphing techniques to visualise different “communities” active in the Twitterverse ([details here](https://twitterverse.net/faq)). A full list of created graphs is [here](https://twitterverse.net/graph) but this is what the [“supergraph”](https://twitterverse.net/graph/supergraph) looks like:
+The next question is, “Which accounts?” [@MenanderSoter](https://x.com/MenanderSoter) used network graphing techniques to visualise different “communities” active in the Twitterverse ([details here](https://twitterverse.net/faq)). A full list of created graphs is [here](https://twitterverse.net/graph) but this is what the [“supergraph”](https://twitterverse.net/graph/supergraph) looks like:
 
 [![](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F8b33d09b-1478-405c-a1f1-0009dd95e453_1248x842.png)](https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F8b33d09b-1478-405c-a1f1-0009dd95e453_1248x842.png)
 
@@ -137,13 +137,13 @@ What if the tweets were, despite being unusual or representing a shift of positi
 Twitter Support @TwitterSupport
 
 Once we became aware of the incident, we immediately locked down the affected accounts and removed Tweets posted by the attackers.
-](https://twitter.com/TwitterSupport/status/1283591849681342469))[
+](https://x.com/Support/status/1283591849681342469))[
 2:38 AM ∙ Jul 16, 2020
 * * *
 
 6,878Likes1,228Retweets
 
-](https://twitter.com/TwitterSupport/status/1283591849681342469))
+](https://x.com/Support/status/1283591849681342469))
 
 And even if Twitter did respond rapidly, wouldn’t the damage be done? How would limiting the functionality of a key social media platform affect an election? Exactly how would the nominees themselves—and the armies waging political war on their behalf—respond?
 
@@ -161,8 +161,8 @@ _Matthew Sweet is a regular contributing writer for Yak Talk, covering the #comp
 
 ### **Join/Hire**
 
-Apply to **[become a Yak here](https://www.yakcollective.org/join/)**. 
+Apply to **[become a Yak here](../join.md)**. 
 
 Interested in hiring the Yak Collective? Send a message to **[vgr@ribbonfarm.com](mailto:vgr@ribbonfarm.com)**.
 
-_The Yak Talk team for this weeks edition is: [Alex Wagner](https://twitter.com/alexdw5), [Shreeda Segan](https://shreeda.substack.com), [Praful Mathur](http://twitter.com/prafulfillment), [Matthew Sweet](https://twitter.com/Matthew_Sweet), [Joseph Ensminger](https://twitter.com/EnsmingerJoseph), and [Grigori Milov](https://twitter.com/grigorimilov)._
+_The Yak Talk team for this weeks edition is: [Alex Wagner](https://x.com/alexdw5), [Shreeda Segan](https://shreeda.substack.com), [Praful Mathur](http://x.com/prafulfillment), [Matthew Sweet](https://x.com/Matthew_Sweet), [Joseph Ensminger](https://x.com/EnsmingerJoseph), and [Grigori Milov](https://x.com/grigorimilov)._

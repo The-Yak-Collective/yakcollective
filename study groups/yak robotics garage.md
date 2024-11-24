@@ -54,14 +54,14 @@ Our group meets weekly online. Meetings alternate between strategizing or cowork
 
 ## Contributors
 ### Current Roboticists
-- [Maier Fenster](https://www.yakcollective.org/members/100020/)
-- [Venkatesh Rao](https://www.yakcollective.org/members/100041/)
-- [Rhett Garber](https://www.yakcollective.org/members/101470/)
-- [Eric Platon](https://www.yakcollective.org/members/100037/)
-- [Jascha Wilcox](https://www.yakcollective.org/members/100005/)
-- [Anuraj R](https://www.yakcollective.org/members/100039/)
+- [Maier Fenster](https://x.com/maierfenster)
+- [Venkatesh Rao](https://venkateshrao.com/)
+- [Rhett Garber](https://x.com/rhettford)
+- [Eric Platon](https://warpcast.com/ic)
+- [Jascha Wilcox](https://x.com/jaschawilcox)
+- [Anuraj R](https://anurajrp.io/)
 
 ### Alumni
-- [Victor Hill](https://www.yakcollective.org/members/100067/)
-- [Brian Smith](https://www.yakcollective.org/members/100143/)
-- [Ananth](https://www.yakcollective.org/members/101073/)
+- Victor Hill
+- Brian Smith
+- [Ananth](https://x.com/arjunsridhar)

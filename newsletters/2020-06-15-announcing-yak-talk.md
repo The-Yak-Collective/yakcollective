@@ -14,7 +14,7 @@ For those not familiar, the Yak Collective is a loosely coordinated network of o
 
 ### The New Old Home
 
-Last week, we released our second report, [The New Old Home](https://www.yakcollective.org/projects/the-new-old-home), which offers 22 perspectives built around [Pamela Hobart](https://twitter.com/amelapay)’s central thesis: _as work returns to the home, we can turn to historical modes of integrated living to guide our attempts at co-located life and work._
+Last week, we released our second report, [The New Old Home](../projects/new%20old%20home.md), which offers 22 perspectives built around [Pamela Hobart](https://x.com/amelapay)’s central thesis: _as work returns to the home, we can turn to historical modes of integrated living to guide our attempts at co-located life and work._
 
 ### Now Accepting Project Proposals
 

@@ -8,21 +8,37 @@
         "type": "tabs",
         "children": [
           {
-            "id": "81b85c616f45e6c6",
+            "id": "bad589faf44a40e8",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "newsletters/2023-05-05 yak governance studies sequence intro.md",
+                "file": "newsletters/index.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2023-05-05 yak governance studies sequence intro"
+              "title": "index"
+            }
+          },
+          {
+            "id": "81b85c616f45e6c6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "newsletters/2023-01-09 yakcon part 1 review part 2 preview.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "2023-01-09 yakcon part 1 review part 2 preview"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -139,33 +155,34 @@
   },
   "active": "81b85c616f45e6c6",
   "lastOpenFiles": [
-    "newsletters/index.md",
-    "newsletters/2023-06-30 archetypes.md",
-    "newsletters/2023-05-05 yak governance studies sequence intro.md",
-    "newsletters/2022-11-25-calling-all-yaks-yak-collective-pop-up-project.md",
-    "assets/8de6dcd3-9ae0-400e-8903-24721abae5aa_670x671.jpeg",
-    "newsletters/2023-05-13 rules.md",
-    "assets/afb35318-2c39-4041-96d4-18de5834e730_1238x432.png",
-    "work groups/index.md",
-    "about.md",
-    "projects/index.md",
-    "newsletters/2020-07-02-reminder-call-for-project-contributors-for-yak-project-proposals.md",
-    "newsletters/2020-06-19-yak-talk-week-of-june-12th.md",
-    "newsletters/2020-06-26-yak-talk-week-of-june-19th.md",
-    "newsletters/2020-10-23-took-a-break-now-were-back.md",
-    "newsletters/2020-07-24-gpt-3-and-the-new-fake-intelligence.md",
-    "work groups/infrastructure.md",
+    "newsletters/2023-01-15 yakcon part 2.md",
+    "newsletters/2023-01-09 yakcon part 1 review part 2 preview.md",
     "README.md",
-    "newsletters/2020-06-15-announcing-yak-talk.md",
-    "members_DELETE_ME.md",
-    "index.md",
-    "projects/astonishing stories/your payment is ready.md",
-    "newsletters/2023-01-15-yakcon-part-2.md",
-    "newsletters/2023-01-09-yakcon-part-1-review-part-2-preview.md",
-    "newsletters/2023-01-03-come-join-us-at-yakcon.md",
+    "newsletters/2023-05-13 rules.md",
+    "newsletters/2023-06-30 archetypes.md",
     "newsletters/2022-03-08-the-yak-online-governance-primer.md",
+    "newsletters/2022-11-25-calling-all-yaks-yak-collective-pop-up-project.md",
     "newsletters/2022-01-24-tonight-rovers-101-session.md",
     "newsletters/2021-12-15-yc-annual-survey.md",
+    "newsletters/2021-12-06-yc-annual-meeting-yak-rover-demo-day.md",
+    "newsletters/2021-07-04-yak-trails-2021-07-04.md",
+    "newsletters/2021-06-27-yak-trails-2021-06-27.md",
+    "newsletters/2021-06-20-yak-trails-2021-06-20.md",
+    "newsletters/2021-06-13-yak-trails-2021-06-13.md",
+    "projects/future frontiers.md",
+    "newsletters/2021-06-06-yak-trails-2021-06-06.md",
+    "newsletters/2021-05-30-yak-trails-2021-05-30.md",
+    "newsletters/2021-05-23-yak-trails-2021-05-23.md",
+    "newsletters/2020-08-07-presidential-campaign-as-decentralized-org.md",
+    "newsletters/2020-07-24-gpt-3-and-the-new-fake-intelligence.md",
+    "projects/online governance primer.md",
+    "study groups/yak robotics garage.md",
+    "newsletters/2020-09-04-podcasting-needs-cognitive-hooks.md",
+    "newsletters/2020-09-18-the-objective-of-the-innards.md",
+    "newsletters/2020-08-22-decarbonization-strategies.md",
+    "newsletters/2020-08-14-targeting-trust.md",
+    "assets/8de6dcd3-9ae0-400e-8903-24721abae5aa_670x671.jpeg",
+    "assets/afb35318-2c39-4041-96d4-18de5834e730_1238x432.png",
     "newsletters",
     "assets/dont waste the reboot.pdf",
     "assets/dont waste the reboot.webp",

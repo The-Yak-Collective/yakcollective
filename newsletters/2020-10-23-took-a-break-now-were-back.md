@@ -16,7 +16,7 @@ If you have content you want to provide please email: praful.mathur+yaktalk@gmai
 
 **Call for Participation: Yak Network Map**
 
-Yak Collective member, [Vinay Débrou](https://twitter.com/vinaydebrou), is leading the infrastructure project with technical help from [Jenna Dixon](https://twitter.com/jdbb) and [Maier Fenster](https://twitter.com/maierfenster) to create a social graph to facilitate more serendipitous interactions.
+Yak Collective member, [Vinay Débrou](https://x.com/vinaydebrou), is leading the infrastructure project with technical help from [Jenna Dixon](https://x.com/jdbb) and [Maier Fenster](https://x.com/maierfenster) to create a social graph to facilitate more serendipitous interactions.
 
 Fill out the following form by October 25: `https://yak.knack.com/yaks#yakmap-participation-signup`
 
