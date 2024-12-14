@@ -27,9 +27,9 @@
   "markdown.extension.print.imgToBase64": true,
   "markdown.extension.print.absoluteImgPath": false,
   "markdown.extension.toc.orderedList": true,
-  "workbench.colorTheme": "GitHub Light Default",
-  "workbench.preferredDarkColorTheme": "GitHub Dark Default",
-  "workbench.preferredLightColorTheme": "GitHub Light Default",
+  "workbench.colorTheme": "Quiet Light",
+  "workbench.preferredDarkColorTheme": "Monokai Dimmed",
+  "workbench.preferredLightColorTheme": "Quiet Light",
   "foam.graph.titleMaxLength": 0,
   "foam.orphans.exclude": [
       ".automation/**/*",

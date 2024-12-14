@@ -28,13 +28,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "newsletters/2023-01-09 yakcon part 1 review part 2 preview.md",
+                "file": "newsletters/2022-01-24 tonight rovers 101 session.md",
                 "mode": "source",
                 "backlinks": true,
-                "source": true
+                "source": false
               },
               "icon": "lucide-file",
-              "title": "2023-01-09 yakcon part 1 review part 2 preview"
+              "title": "2022-01-24 tonight rovers 101 session"
             }
           }
         ],
@@ -84,7 +84,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 319.5
+    "width": 240.5
   },
   "right": {
     "id": "a492d05944390c5c",
@@ -155,14 +155,29 @@
   },
   "active": "81b85c616f45e6c6",
   "lastOpenFiles": [
-    "newsletters/2023-01-15 yakcon part 2.md",
-    "newsletters/2023-01-09 yakcon part 1 review part 2 preview.md",
+    "assets/yak rover banner.jpg",
+    "newsletters/2022-03-08 the yak online governance primer.md",
+    "newsletters/2022-01-24 tonight rovers 101 session.md",
+    "newsletters/2022-11-25 calling all yaks yak collective pop-up project.md",
+    "yakcon 2023.md",
+    "newsletters/2023-01-03 come join us at yakcon.md",
+    "projects/new old home.md",
     "README.md",
+    "join.md",
+    "newsletters/2023-01-09 yakcon part 1 review part 2 preview.md",
+    "assets/yak left.webp",
+    "assets/yak right.webp",
+    "private/original assets/yak trail.png",
+    "assets/yak trail.webp",
+    "assets/yak head.webp",
+    "assets/yak coin.webp",
+    "assets/favicon.webp",
+    "assets/astonishing stories 4 mechanical turks all the way down.webp",
+    "assets/astonishing stories 3 department of restoration.webp",
+    "assets/astonishing stories 2 your payment is ready.webp",
+    "newsletters/2023-01-15 yakcon part 2.md",
     "newsletters/2023-05-13 rules.md",
     "newsletters/2023-06-30 archetypes.md",
-    "newsletters/2022-03-08-the-yak-online-governance-primer.md",
-    "newsletters/2022-11-25-calling-all-yaks-yak-collective-pop-up-project.md",
-    "newsletters/2022-01-24-tonight-rovers-101-session.md",
     "newsletters/2021-12-15-yc-annual-survey.md",
     "newsletters/2021-12-06-yc-annual-meeting-yak-rover-demo-day.md",
     "newsletters/2021-07-04-yak-trails-2021-07-04.md",
@@ -176,24 +191,9 @@
     "newsletters/2020-08-07-presidential-campaign-as-decentralized-org.md",
     "newsletters/2020-07-24-gpt-3-and-the-new-fake-intelligence.md",
     "projects/online governance primer.md",
-    "study groups/yak robotics garage.md",
-    "newsletters/2020-09-04-podcasting-needs-cognitive-hooks.md",
-    "newsletters/2020-09-18-the-objective-of-the-innards.md",
-    "newsletters/2020-08-22-decarbonization-strategies.md",
-    "newsletters/2020-08-14-targeting-trust.md",
-    "assets/8de6dcd3-9ae0-400e-8903-24721abae5aa_670x671.jpeg",
-    "assets/afb35318-2c39-4041-96d4-18de5834e730_1238x432.png",
     "newsletters",
     "assets/dont waste the reboot.pdf",
-    "assets/dont waste the reboot.webp",
-    "assets/new old home placeholder.webp",
     "assets/new old home.pdf",
-    "assets/new old home.webp",
-    "assets/online governance primer.pdf",
-    "assets/online governance primer 0 four governance regimes.webp",
-    "assets/online governance primer.webp",
-    "assets/favicon.webp",
-    "assets/yak coin.webp",
-    "assets/yak head.webp"
+    "assets/online governance primer.pdf"
   ]
 }
