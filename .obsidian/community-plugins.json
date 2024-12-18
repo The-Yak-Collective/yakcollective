@@ -8,5 +8,9 @@
   "folder-note-plugin",
   "emoji-autocomplete",
   "japanese-novel-ruby",
-  "jisage-japanese-indentation"
+  "jisage-japanese-indentation",
+  "hide-folders",
+  "japanese-word-splitter",
+  "consistent-attachments-and-links",
+  "unique-attachments"
 ]

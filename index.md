@@ -11,7 +11,7 @@ Check out our [study](study%20groups/index.md) and [work](work%20groups/index.md
 > [!inactive-project]- [Fermi Gym](study%20groups/fermi%20gym.md)
 > The Fermi Gym at the Yak Collective is an ongoing activity in our Discord where we take turns posing weekly Fermi estimation problems for each other. The goal is to steadily improve our skills, and develop a better, and more quantitative appreciation for the universe we live in. 
 
-> [!inactive-project]- [online governance primer](projects/online%20governance%20primer.md)
+> [!inactive-project]- [Online Governance Primer](projects/online%20governance%20primer.md)
 > This primer is intended as a guided tour through a curated set of readings that can help groups and organizations navigate this question. In selecting the readings we cast a wide net, but in our discussions we made an effort to consider them from the specific perspective of online governance challenges. We believe the ideas surveyed here are applicable to groups and organizations with widely varied purposes, levels of autonomy, degrees of decentralization, and technological sophistication.
 
 > [!study-group] [Yak Robotics Garage](study%20groups/yak%20robotics%20garage.md)
@@ -23,7 +23,7 @@ Check out our [study](study%20groups/index.md) and [work](work%20groups/index.md
 > [!inactive-project]- [Astonishing Stories](projects/astonishing%20stories/index.md)
 > The upside of an extremely uncertain environment is that we have been free to indulge in pure speculation about the known knowns and unknown unknowns of the future. The result is Astonishing Stories, an anthology of short vignettes from the future developed from the networked thoughts of over 30 indie consultants.
 
-> [!inactive-project]- [new old home](projects/new%20old%20home.md)
+> [!inactive-project]- [New Old Home](projects/new%20old%20home.md)
 > The Yak Collective's second report, *The New Old Home*, offers 22 perspectives built around Pamela Hobart's central thesis: as work returns to the home in the form of remote work opportunities (a trend now dramatically accelerated by pandemic circumstances), we can turn to historical modes of integrated living, reconsidered in light of newer technology, to guide our attempts at co-located life and work.
 
 > [!work-group] [Infrastructure](work%20groups/infrastructure.md)
