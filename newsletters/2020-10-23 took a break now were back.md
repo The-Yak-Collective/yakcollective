@@ -1,20 +1,36 @@
 ---
-date: 2020-10-23
-googleDoc: https://docs.google.com/document/d/1Uke-4h8kYARpFZixBfa5Ht6H-UWa7PyJar9Iqq8-rCE/edit
-title: Wholeness in a Timeless Activity
+title: "Took a break, now we're back!"
 aliases:
-  - Wholeness in a Timeless Activity
+  - "Took a break, now we're back!"
 quartsRssFeed: true
+date: 2020-10-23
+substack: https://yakcollective.substack.com/p/took-a-break-now-were-back
 ---
-*October 23rd 2020* • [Nathan Chen](https://nchen13.github.io/)
+## Updates
+This newsletter, Yak Talk, is now being led by Praful Mathur and we’re looking for people who want to discuss what’s impacting Yak Collective members. The ultimate goal of our newsletter is to help consultants and gig workers connect with one another and help facilitate exchange of ideas and increase commerce.
+
+If you have gigs you need help with please email: <praful.mathur+yakgigs@gmail.com>
+
+If you have content you want to provide please email: <praful.mathur+yaktalk@gmail.com>
+
+## Call for Participation: Yak Network Map
+Yak Collective member, [Vinay Débrou](https://x.com/vinaydebrou), is leading the infrastructure project with technical help from [Jenna Dixon](https://x.com/jdbb) and [Maier Fenster](https://x.com/maierfenster) to create a social graph to facilitate more serendipitous interactions.
+
+Fill out the following form by October 25: <https://yak.knack.com/yaks#yakmap-participation-signup>
+
+## Story Time
+The following story is by [Astonishing Stories Group](../projects/astonishing%20stories/index.md) which is led by [Sachin Benny](https://sachinbenny.notion.site/I-m-Sachin-Benny-7391ec1aafa94af28599a2b089c4bf35) where instead of predicting the future, articulate potential forks in our universe to expand our imagination of what will become. The upside of an extremely uncertain environment like the Global Pandemic is that we have been free to indulge in pure speculation about the known knowns and unknown unknowns of the future. Authors imagine a world in which the pandemic is the background event for other shifts.
+
+### [wholeness in a timeless activity](../projects/astonishing%20stories/wholeness%20in%20a%20timeless%20activity.md)
+Author: Nathan Chen
+
+![5259d577-3dfe-460e-9631-4bafbb4ad47f\_705x1001](../assets/5259d577-3dfe-460e-9631-4bafbb4ad47f_705x1001.jpg)
 
 There are some activities the wealthy occasionally lust after. But there is one they will never stop avoiding.
 
 Koichi gripped his chef’s hat as the metal hand centered itself above the ingredients on the bamboo mat. The fingers twitched with faint whirs as they calibrated. His eyes followed the hand to its arm encased in white plastic, protruding awkwardly from the wall. It was tempting to envision a body on the other side, but Koichi knew from service repairs there were only gears and hydraulics. The mechanical whirs stopped and the hand descended.
 
 Each main ingredient was in a distinct pile; foie gras, unagi, avocado, and sturgeon black caviar. A sheet of dried seaweed and a bowl of rice sat to the side. As the hovering hand lowered, steel blades emerged out of the point of its fingers. In a series of surprisingly deft and fluid movements, the ingredients were portioned, squeezed together, rolled, and cut. The set of sushi was pushed in front of Koichi, the pieces themselves in a straight line with their faces tilted away from him. Koichi knew if he measured the angle of their tilt, he would find it to be a perfect 45 degrees.
-
-![Justice — https://asterisques.com/](../../assets/astonishing%20stories%201%20wholeness%20in%20a%20timeless%20activity.webp)
 
 Despite knowing no one was watching, Koichi nodded in approval. He was gazing at the final dish when colorful boxes popped into his vision, surrounding the sushi.[^1] They showed the source of several ingredients; the farm where the avocado was picked, the facility where the sturgeon was bred. Koichi angrily blinked thrice and the advertisements disappeared. He was annoyed — his new AR lenses meant everything was a QR code now. Let’s just get it over with, he thought.  
 

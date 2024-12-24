@@ -3,7 +3,9 @@
   "suggester": true,
   "considerHistory": true,
   "historyLimit": 25,
-  "history": [],
+  "history": [
+    "de"
+  ],
   "highlightMatches": true,
   "strictTrigger": true,
   "triggerFromFirst": true,
