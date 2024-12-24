@@ -22,7 +22,7 @@ Alex interviewed Varun for _Yak Talk_ a couple of weeks after the proposal was s
 
 _The audio recording of [the interview in its entirety is available here.](https://share.descript.com/view/5f4ab199-0075-41a2-88f5-819d3fa6d85d)_
 
-## **1 .On Behavioral Economics, Government As the Source of Incentives and “Moving the Needle in the Wrong Direction”.**
+## **1. On Behavioral Economics, Government As the Source of Incentives and “Moving the Needle in the Wrong Direction”.**
 
 The first thing is, when you brought this [proposal] to my attention, I kind of forced myself to focus on [Chamath’s prompt](https://x.com/chamath/status/1284531841651752960), to focus on these ideas. I think a call to innovate by a public figure is always a good thing.
 

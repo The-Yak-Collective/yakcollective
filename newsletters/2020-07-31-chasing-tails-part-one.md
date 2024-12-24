@@ -36,7 +36,7 @@ For these thought experiments to be minimally effective, the interweaving of exp
 
 The world is complex and always in flux, much like how our environment is perturbed due to the COVID pandemic. The many variables of our world—and their interconnectivity—make it difficult to reliably predict higher order effects. Even experts, who are great at analysing the “what,” misstep when considering unfolding events and interaction effects.
 
-Never doubt human ingenuity, though...
+Never doubt human ingenuity, though…
 
 ### **What’s In a Tail?**
 

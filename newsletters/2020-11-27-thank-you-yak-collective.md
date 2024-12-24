@@ -25,7 +25,7 @@ In that same vein, I’m interested in YC members who want to contribute to this
 
 Project Proposal Revamped Process (no more google forms and synchronized competitive sign-up)
 
-All you have to do to propose a project is to add a block to [this Roam page](https://roamresearch.com/#/app/ArtOfGig/page/DJVbvHE2_) with the required meta-data, and propose a channel in #create-destroy-channels... that's it. If you get 2-4 participants before your self-declared start date, it goes live. The Friday chats will also serve as a continuous pitching forum going forward, but right now, there's an opportunity to get a bigger audience for a live pitch. If you put in a proposal before Dec 1, you can get a pitching slot at the YC annual meeting on Dec 10. First come first serve for pitching slots. 
+All you have to do to propose a project is to add a block to [this Roam page](https://roamresearch.com/#/app/ArtOfGig/page/DJVbvHE2_) with the required meta-data, and propose a channel in #create-destroy-channels… that's it. If you get 2 –4 participants before your self-declared start date, it goes live. The Friday chats will also serve as a continuous pitching forum going forward, but right now, there's an opportunity to get a bigger audience for a live pitch. If you put in a proposal before Dec 1, you can get a pitching slot at the YC annual meeting on Dec 10. First come first serve for pitching slots. 
 
 # **Indie Consulting Advice**
 

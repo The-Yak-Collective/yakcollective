@@ -11,7 +11,7 @@ substack: https://yakcollective.substack.com/p/yakcon-part-1-review-part-2-previ
 ## Part 1 Review
 - There was a mixture of active and inactive Yaks, as well as some newcomers; approx. 40% of attendees were new to YC or returning from a hiatus.
 - The consensus is that the 4-hour session just whizzed by. Here's a recap that may indicate why.
-	- **Killian Butler** ([LinkedIn](https://www.linkedin.com/mwlite/in/kilianbutler), [Twitter](https://x.com/kilianbutler)) kicked us off with an engaging talk around the theme of productising machine learning research. “Is model failure indicative of product failure?” “Where does margin accrue in the AGI supply chain?” These questions (and more) were explored.
+	- **Killian Butler** ([LinkedIn](https://www.linkedin.com/mwlite/in/kilianbutler), [Twitter](https://x.com/kilianbutler)) kicked us off with an engaging talk around the theme of productising machine learning research. “Is model failure indicative of product failure?” “Where does margin accrue in the AGI supply chain?” These questions (and more) were explored.
 	- We then took a whirlwind tour of sustained YC activity areas — such as **governance** and **distributed system studies**, **infrastructure** and the **Fermi Gym** — as well as an overview of YC's **emerging pop-up consulting methodology.**
 	- Following the all-hands, we had **one breakout session** that allowed participants to:
 		- Enter the Fermi Gym and attempt a **roughly-right answer to a sensor-focused problem**
@@ -38,11 +38,11 @@ substack: https://yakcollective.substack.com/p/yakcon-part-1-review-part-2-previ
 - **YakFit**
 	- **Throughout the week:** a self-paced, health/fitness-focused, week-long experiment (options include lux exposure, a supplement trial and slooooow movement).
 
-***You'll need access to the YC Discord to take part in any of the above. Go [here](../join.md) to get it.***
+***You'll need access to the YC Discord to take part in any of the above. Go [here](../join.md) to get it.***
 
 ## Towards YakCon Part Two
 - After Async Week, we get to **YakCon Part Two.**
 - It follows the same structure as Part One (and it's at the same time; **1600 UTC this coming Sunday, January 15**), and it will be friendly to those who missed Part One and/or Async Week. **We'll have two guest speakers for this session, though.**
-- We'll be hearing from **Mike Casey** ([Farcaster](http://fcast.me/mc), [personal site](https://mcasey.xyz/)). He specialises in investment and entrepreneurship in complex markets facing capital scarcity — whether that's by geography (think Africa) or vertical (think life sciences). He'll be tackling the difficult question: “Can Crypto Close the $4 Trillion SME Financing Gap?”
-- We’ll also be hearing from **Dan Grover** ([personal site](http://dangrover.com/), [LinkedIn](https://www.linkedin.com/in/dangrover/)). Dan — designer, engineer, entrepreneur — will be exploring the possibility that simulation games might be what the world needs right now.
+- We'll be hearing from **Mike Casey** ([Farcaster](http://fcast.me/mc), [personal site](https://mcasey.xyz/)). He specialises in investment and entrepreneurship in complex markets facing capital scarcity — whether that's by geography (think Africa) or vertical (think life sciences). He'll be tackling the difficult question: “Can Crypto Close the $4 Trillion SME Financing Gap?”
+- We’ll also be hearing from **Dan Grover** ([personal site](http://dangrover.com/), [LinkedIn](https://www.linkedin.com/in/dangrover/)). Dan — designer, engineer, entrepreneur — will be exploring the possibility that simulation games might be what the world needs right now.
 - Sounds good, right? So get to it. **Register for YakCon Part Two [here](../yakcon%202023.md) and go [here](../join.md) to access to the YC Discord.**

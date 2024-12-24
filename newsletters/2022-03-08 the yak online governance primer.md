@@ -20,7 +20,7 @@ The primer is based on about a year of weekly governance study group meetings on
 
 If you need a PDF to forward or print for offline reading, you can find one [here](../assets/online%20governance%20primer.pdf).
 
-The primer was authored by **Sachin Benny, Venkatesh Rao, Grigori Milov, and Bryan King** , with **Jenna Dixon** and **Nathan Acks** providing editing and production support. **Grace Witherell** supplied some beautiful illustrations. Other regular members of the the governance chat contributed feedback and comments throughout. NFT proceeds will be shared among the contributors, with a portion going to the Yak Collective for future projects.[^2]
+The primer was authored by **Sachin Benny, Venkatesh Rao, Grigori Milov, and Bryan King**, with **Jenna Dixon** and **Nathan Acks** providing editing and production support. **Grace Witherell** supplied some beautiful illustrations. Other regular members of the the governance chat contributed feedback and comments throughout. NFT proceeds will be shared among the contributors, with a portion going to the Yak Collective for future projects.[^2]
 
 [^2]: The primer is published using what is known as a split contract on the Ethereum blockchain, which allows funds to be automatically distributed to multiple accounts. We’ve set things up so about 75% goes to contributors, and 25% to the Yak Collective. We’ve taken our cue from the indirect-cost support model used in government-funded university research.
 

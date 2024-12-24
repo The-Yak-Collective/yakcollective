@@ -133,4 +133,4 @@ We’ve made a special effort to make this project newbie-contribution friendly.
 When you contribute to *Future Frontiers*, you will make new friends, learn how our projects work, earn a member page on this website, and level up your role from *yak* to *made yak* on our Discord server. All you need is an interesting take on the nature of frontiers that can be captured in a few slides and short notes. If you can’t think of a topic, there is a list of prompts and suggestions available for you on the project page.
 
 ## The Yak Collective // Future Frontiers
-**Lead editor** / [Venkatesh Rao](https://venkateshrao.com/) // **Co-editors** / [Jenna Dixon](https://x.com/jdbb) and Siva Swaroop // **Collaborators** / [Charlie Bilsland](https://x.com/charliebilsland), Jay Kalawar, Kannen Ramsamy
+**Lead editor** / [Venkatesh Rao](https://venkateshrao.com/) // **Co-editors** / [Jenna Dixon](https://x.com/jdbb) and Siva Swaroop // **Collaborators** / [Charlie Bilsland](https://x.com/charliebilsland), Jay Kalawar, Kannen Ramsamy
