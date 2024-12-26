@@ -1,8 +1,5 @@
 ---
 title: Announcing Yak Talk
-aliases:
-  - Announcing Yak Talk
-quartsRssFeed: true
 date: 2020-06-15
 substack: https://yakcollective.substack.com/p/announcing-yak-talk
 ---

@@ -3,17 +3,14 @@ date: 2020-11-13
 roam: https://roamresearch.com/#/app/Astonishing_Stories/page/-u1nPZcZu
 googleDoc: https://docs.google.com/document/d/1HpnU_k_Q3xulIfwiEtdpfMycZeTRvR-cPWDl8mA___E/edit
 title: Mechanical Turks All the Way Down
-aliases:
-  - Mechanical Turks All the Way Down
-quartsRssFeed: true
 ---
-*November 13th 2020* • [Chris Butler](https://x.com/chrizbot)
+*By [Chris Butler](https://x.com/chrizbot)*
 
 I jabbed the accept button on one of the many touch surfaces that suddenly popped into reality in my shared office, home, and daycare. Can’t be too eager on your first day of the job.
 
 There was a low din of my five-year-old arguing again about what xe would or would not eat for breakfast. Thank god for the AR distraction-canceling face mask. It was cranked up to 98% reality canceling. With it on I could safely ignore the mounting skirmish between little Tovio and my partner.
 
-![Justice — https://asterisques.com/](../../assets/cdee9d9d7dec87737b4fc03fcedfe74a.jpg)
+![Justice — asterisques.com](../../assets/cdee9d9d7dec87737b4fc03fcedfe74a.jpg)
 
 This was my second job today. A basic anniversary gig like I’d seen in the training. There were a lot of notes and I quickly scanned them for any red flags, but accepted immediately. Taking jobs fast shows good teamwork which means my teamwork score goes up which, algo willing, will lead to more lucrative jobs.
 

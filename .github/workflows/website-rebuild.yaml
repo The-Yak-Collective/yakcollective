@@ -1,0 +1,26 @@
+name: Update website on content change
+
+on:
+  push:
+    branches:
+      - production
+
+jobs:
+  rebuild:
+    name: Update website on content change
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          submodules: 'recursive'
+      - name: Rebuild website
+        run: |
+          ./.automation/build.sh
+      - name: Publish new version
+        uses: netlify/actions/cli@master
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE }}
+        with:
+          args: deploy --dir .automation/www --prod

@@ -1,8 +1,5 @@
 ---
 title: Podcasting Needs Cognitive Hooks
-aliases:
-  - Podcasting Needs Cognitive Hooks
-quartsRssFeed: true
 date: 2020-09-04
 substack: https://yakcollective.substack.com/p/podcasting-needs-cognitive-hooks
 ---
@@ -47,7 +44,7 @@ Stephen C. Levinson articulates this well in the abstract of [Turn-taking in Hum
 > 
 > This intensive cognitive processing has been largely ignored by the language sciences because psycholinguistics has studied language production and comprehension separately from dialog.”
 
-![f6a6bdbd-591b-419d-819e-c617b6f3f776\_619x527](../assets/96cc7c45a69e0fa4bf10ba3769d9d79a.png)
+![](../assets/96cc7c45a69e0fa4bf10ba3769d9d79a.png)
 
 We need a solution that reduces the cognitive load of all the parties involved without eliminating the *richness* that is created by the complexity of ideas. And I think we can draw inspiration from messaging interfaces to form a framework for what a solution could look like.
 
@@ -56,7 +53,7 @@ We need a solution that reduces the cognitive load of all the parties involved w
 
 For example, think about a traditional messaging format.
 
-[![f9afd0e4-4c22-4a94-9ede-5f1166b02647\_1414x990](../assets/cafb216d0c0909ac17cb9a1a64b16442.jpg)](https://a9.io/glue-comic/)
+[![](../assets/cafb216d0c0909ac17cb9a1a64b16442.jpg)](https://a9.io/glue-comic/)
 
 A live transcription software that *only* maps words to the speaker who said them isn’t of much help to the podcasters. *They just said the words.* It’s mostly for the benefit of the audience; often, they want to go back to some spot in the conversation. It’s common for speakers to want to do this, too.
 
@@ -64,7 +61,7 @@ Remember our phrases, like “Let’s put a pin in that”? We need a functional
 
 The pin should be short; only 3 – 4 words, not unlike a sticky note you would write for yourself. The pin is a reminder to return to the conversation and context that led up to that point. *It indicates an open loop*. The pin should also provide enough context to re-prompt the speaker to expand on it later in the conversation. We want to retain both the “meaning” of the thought in that particular moment *and* have an external memory that reduces cognitive load.
 
-[![55d75d4d-953b-47bf-b908-f04d170cc85b\_1016x1286](../assets/9138d0d3352f51c4ff0df13e46de196b.jpg)](https://a9.io/glue-comic/)
+[![](../assets/9138d0d3352f51c4ff0df13e46de196b.jpg)](https://a9.io/glue-comic/)
 
 As a conversation progresses, focus shifts and “pins” are created. The speakers will have increasing difficulty holding the whole conversation in their head. They’ll forget important points they meant to revisit. This creates loops that are never closed. At some point, it’ll make sense for a speaker to revisit a particular “pin”.
 
@@ -72,13 +69,13 @@ This happens in a couple of situations: when the conversation is ending and you 
 
 **Thus, the “pin” acts as a reminder but also a cognitive hook to hang pieces of the conversation on.** This leads to a lower cognitive load and retains the full complexity and “meaning” of the conversation.
 
-![4722c9d1-fd10-4ee7-9208-4a61a9526ebc\_619x527](../assets/49bf235fddd1aba9bc38bc665138e5dd.png)![faafc649-5793-42a5-9ff7-234d3c5b82ca\_619x527](../assets/770bfb80e0581f544121a7a14bd6fc4e.png)
+![](../assets/49bf235fddd1aba9bc38bc665138e5dd.png)![](../assets/770bfb80e0581f544121a7a14bd6fc4e.png)
 
 Think of it as a visual-spatial aid. Unlike note-taking, it won’t interrupt the natural flow. It acts like a mediator connecting the conversational dots. UX designers would say a feature like this reduces [cognitive friction](https://www.sachinrekhi.com/the-hierarchy-of-user-friction). If implemented right, it’ll allow the conversation to be richer, more valuable, and enjoyable for everyone.
 
 This idea is closely related to Crawford & Dombkowski’s “Nonlinear conversation medium”, but instead of augmenting written dialogue like a text message conversation, it augments auditory conversation.
 
-[![d3866040-6492-4877-bfb8-ea795689985e\_1400x494](../assets/38ebc4259f211db3622426daa00ce37e.jpg)](https://a9.io/glue-comic/)
+[![](../assets/38ebc4259f211db3622426daa00ce37e.jpg)](https://a9.io/glue-comic/)
 
 Traditional messaging systems have a complete memory of the conversation. But most are written conversation, which is procedurally represented one thought after the other. The ideal system would provide a visual aid that takes us from procedural to nonlinear, like a natural verbal conversation.
 
@@ -104,9 +101,9 @@ Read the [full article](https://ssica3003.wordpress.com/2020/08/18/how-to-become
 ## Emergent Infrastructure
 *by [Matthew Sweet](http://x.com/@Matthew_Sweet)*
 
-The Yak Collective’s Discord server features channels related to active projects, themed discussion channels (like \#complexity and \#gigster-logistics) and channels centered on “bureaucracy” (aka the development and maintenance of YC itself).
+The Yak Collective’s Discord server features channels related to active projects, themed discussion channels (like ⌗complexity and ⌗gigster-logistics) and channels centered on “bureaucracy” (aka the development and maintenance of YC itself).
 
-Within the “Bureaucracy” set, the \#infrastructure channel has seen a flurry of activity over the past week. A collection of Yaks (Maier, Darren Kong, Nathan Acks and Jenna Dixon) have been wrangling with further developments to the YC’s IT infrastructure.
+Within the “Bureaucracy” set, the ⌗infrastructure channel has seen a flurry of activity over the past week. A collection of Yaks (Maier, Darren Kong, Nathan Acks and Jenna Dixon) have been wrangling with further developments to the YC’s IT infrastructure.
 
 YC’s website is built on [Jekyll](https://jekyllrb.com); Discord is fundamental to operations; [Roam Research](https://roamresearch.com) is used as both a data tracking tool and a collaborative sense-making tool. Automatic backups of existing Roam databases have just been introduced. Now, the above Yaks are plotting the latest of many rapid iterations that have occurred in the last few months.
 

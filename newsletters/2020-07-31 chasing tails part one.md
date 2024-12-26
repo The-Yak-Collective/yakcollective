@@ -1,8 +1,5 @@
 ---
 title: Chasing Tails, Part One
-aliases:
-  - Chasing Tails, Part One
-quartsRssFeed: true
 date: 2020-07-31
 substack: https://yakcollective.substack.com/p/chasing-tails-part-one
 ---
@@ -34,7 +31,7 @@ Never doubt human ingenuity, though…
 ### What’s In a Tail?
 The tail of a distribution refers to the events or outcomes that aren’t expected to happen.
 
-![8ae83d3a-85aa-4e0d-b5bb-62c447607de7\_1600x1200](../assets/e23a74949ca9e125a30970a40b782c4a.jpg)
+![](../assets/e23a74949ca9e125a30970a40b782c4a.jpg)
 
 In many situations, the unlikeliness of these tail occurrences makes testing and exploring their effects implausible. But with the democratization of simulation technology, methods like [systems dynamics](https://en.wikipedia.org/wiki/System_dynamics) can be used to [edgecraft](https://seths.blog/2013/09/edgecraft-instead-of-brainstorming/) situations, generate ideas, and chase tails. Absurd questions will be asked and tentative possibilities will be born. But who is likely to chase such tails?
 

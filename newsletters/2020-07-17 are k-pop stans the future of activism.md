@@ -1,20 +1,17 @@
 ---
 title: "Are K-Pop Stans the Future of Activism?"
-aliases:
-  - "Are K-Pop Stans the Future of Activism?"
-quartsRssFeed: true
 date: 2020-07-17
 substack: https://yakcollective.substack.com/p/are-k-pop-stans-the-future-of-activism
 ---
-This week we continue our *\#trends-and-futures*, and *\#complexity* tracks in the newsletter. Next week, we will return with our regular *\#online-governance-studies* track, as well.
+This week we continue our *⌗trends-and-futures*, and *⌗complexity* tracks in the newsletter. Next week, we will return with our regular *⌗online-governance-studies* track, as well.
 
-## \#trends-and-futures
+## ⌗trends-and-futures
 ### Are K-Pop Stans the Future of Activism?
 *[By Alex Wagner](http://www.x.com/alexdw5)*
 
 On June 20th, US-based members of the Korean-Pop fan community, colloquially known as “K-Pop [stans](https://www.urbandictionary.com/define.php?term=Stan)”, [trashed a Trump rally in Tulsa, OK](https://www.cnn.com/2020/06/22/opinions/tiktok-kpop-trump-rally-activism-hong/index.html).
 
-![72b46efd-1995-47f4-b5df-5120b874767c\_790x527](../assets/b28686df241f3152b19460f0dfa30434.jpg)
+![](../assets/b28686df241f3152b19460f0dfa30434.jpg)
 
 Sadly, this was *not* the long-awaited first appearance of Antifa supersoldiers, as continually promised by right-wing pundits.
 
@@ -31,7 +28,7 @@ Some facts:
 
 - **Origin Story:** Scholars point to Korea opening its borders to the general public after the 1988 Seoul Olympic Games as the beginning of the cultural cross-pollination that gave birth to K-Pop. [K-Pop started in the early 90’s](https://en.wikipedia.org/wiki/K-pop#1990s:_Development_of_modern_K-pop) as a mix of then-current American R&B styles (think “[new-jack swing](https://www.youtube.com/watch?v=aaFPFqJ6QBw)”) and preexisting Korean traditional music and pop music.
 - **Breaking in America:** Remember 2012’s “Gangnam Style”? Although it was the first major K-Pop hit to make a massive splash in the United States, [critics say it’s actually more of a weirdo, one-off hit.](https://www.npr.org/2020/07/13/888933244/start-here-your-guide-to-getting-into-k-pop) Still, worth mentioning because it established a beachhead for US K-Pop fandom to grow into what it is today.
-- **Greatest Hits:** Previous to supporting Black Lives Matter protests and shutting down a Trump rally, K-Pop stans have: [rallied to youth protests in Bangladesh](https://x.com/anne_sophiiiee/status/1026218200185401344), been blamed for [inciting student protests in Chile](https://www.newsweek.com/chilean-government-blames-k-pop-recent-protests-1479151), and [donated ticket $16k worth of ticket refunds from a canceled BTS concert to COVID relief](https://www.teenvogue.com/story/bts-fans-donate-coronavirus-relief-big-hit-cancels-seoul-concerts).
+- **Greatest Hits:** Previous to supporting Black Lives Matter protests and shutting down a Trump rally, K-Pop stans have: [rallied to youth protests in Bangladesh](https://x.com/anne_sophiiiee/status/1026218200185401344), been blamed for [inciting student protests in Chile](https://www.newsweek.com/chilean-government-blames-k-pop-recent-protests-1479151), and [donated ticket ＄16k worth of ticket refunds from a canceled BTS concert to COVID relief](https://www.teenvogue.com/story/bts-fans-donate-coronavirus-relief-big-hit-cancels-seoul-concerts).
 - **Bigger than the Beatles:** The group *Bangtan Sonyeondan* (abbreviated as ‘BTS’) are basically [the Beatles of K-Pop](https://www.youtube.com/watch?v=BtLD72Uro8U), far surpassing other acts in terms of sales and popularity. BTS fans are The Army. On June 6th, [BTS donated one million dollars to the Black Lives Matter movement](https://comicbook.com/anime/news/bts-kpop1-million-dollar-donation-to-black-lives-matter/). [One In An Army](https://www.oneinanarmy.org/about), a non-profit charity org comprised of BTS fans, launched a crowdfunding campaign the day after and [matched BTS’ donation within 24 hours.](https://www.oneinanarmy.org/black-lives-matter)
 
 It may seem obvious by now, but what makes the politically-active subset of K-Pop fans so cohesive, is that it’s members spend *a lot of time together online*.
@@ -46,7 +43,7 @@ In the last week, the [Trump campaign canceled upcoming rallies in Tallahassee, 
 
 In the future, what other online fandoms will we see entering online public arenas to shape the political futures of nations?
 
-## \#complexity
+## ⌗complexity
 ### Why Study Complexity?
 *[By Matthew Sweet](https://x.com/Matthew_Sweet)*
 

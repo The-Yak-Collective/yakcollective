@@ -7,3 +7,6 @@
 # Ignore some Obsidian files that shouldn't be synced
 .trash
 .nomedia
+
+# Ignore build directory
+.automation/build

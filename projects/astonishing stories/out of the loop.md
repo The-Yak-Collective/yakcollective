@@ -2,15 +2,12 @@
 date: 2020-11-20
 googleDoc: https://docs.google.com/document/d/1989Uffl2bLLia75bX9_EOFpUesuUZ7eZpcr56SA6Clg/edit
 title: Out of the Loop
-aliases:
-  - Out of the Loop
-quartsRssFeed: true
 ---
-*November 20th 2020* • [Sachin Benny](https://sachinbenny.notion.site/I-m-Sachin-Benny-7391ec1aafa94af28599a2b089c4bf35)
+*By [Sachin Benny](https://sachinbenny.notion.site/I-m-Sachin-Benny-7391ec1aafa94af28599a2b089c4bf35)*
 
 Vijayan looked down in pain at his [programmable forearm tattoo](https://roamresearch.com/#/app/Astonishing_Stories/page/6jX2RXOls) after finishing his last note. The microbots in his arm etched a new web of nodes, mirroring his notetaking system on a Roam graph. His mind had become a tangled graph since his father’s death, now reflected on his arm as a messy graph of interconnected lines for all to see. He gazed into his coffee and cursed under his breath while he thought about the decision to get the Roam microbots. He was now stuck living with nanotechnology that etched a continuously evolving tattoo on his arm.
 
-![Justice — https://asterisques.com/](../../assets/a546e6e978ee62702f6741e06675b708.webp)
+![Justice — asterisques.com](../../assets/a546e6e978ee62702f6741e06675b708.webp)
 
 It all goes back a few months. After five years of not asking anyone out, he finally asked out the barista at the local hipster cafe. On their first date, he quickly realized that they had nothing in common, but he liked her Roam microbot tattoo — a neat graph of interconnected lines, almost too neat for a natural note-taking system.
 
@@ -34,7 +31,7 @@ Although someone soon found out that Bryce was just a 28-year-old addicted to po
 
 “Less reliable than a dog and a big mistake” was exactly how his father had described Vijayan, so taking advantage of this program felt ironically appropriate.
 
-Part of the *Joker Act* was a rehabilitation program called *Love the Land* that Vijayan had to attend if he was to get the $2,500/mo UBI.
+Part of the *Joker Act* was a rehabilitation program called *Love the Land* that Vijayan had to attend if he was to get the ＄2,500/mo UBI.
 
 The program was started by a few tech executives with a guilty conscience and was funded by profits from online advertising.
 
@@ -152,6 +149,6 @@ Vijayan flashed back to all the times this happened to him with his father, then
 
 Today, a year later, Vijayan is at the hipster coffee shop and finally able to make eye contact with his ex-girlfriend barista. For a split second, his mind momentarily leaves and he feels like he is inhabiting the body of his self from a year ago. Weirdly enough, Vijayan recognizes him.
 
-He pulled to refresh the top listings page on the app store. *GPT-51 Pre-Fab Dad* had done well since their last update which gave users the option to add voice filters to their critical parent voice. The most popular filter these days was the high-pitched voice of Brian’s mother from Monty Python’s *Life of Brian*. The page updated and there it was — undeniable proof that they had hit a goldmine of first-world problems, *GPT-51 Pre-Fab Dad* was the \#1 paid app.
+He pulled to refresh the top listings page on the app store. *GPT-51 Pre-Fab Dad* had done well since their last update which gave users the option to add voice filters to their critical parent voice. The most popular filter these days was the high-pitched voice of Brian’s mother from Monty Python’s *Life of Brian*. The page updated and there it was — undeniable proof that they had hit a goldmine of first-world problems, *GPT-51 Pre-Fab Dad* was the ⌗1 paid app.
 
 He looked down at his forearm tattoo which right now resembled the beautiful constellations he had observed on that dreadful *Love the Land* escapade.

@@ -2,11 +2,8 @@
 date: 2020-10-30
 googleDoc: https://docs.google.com/document/d/15LRvkKeNMwRgr6Zf8dYLBBAqhpBxIyLP_WBE16H-PCg/edit
 title: Your Payment is Ready
-aliases:
-  - Your Payment is Ready
-quartsRssFeed: true
 ---
-*October 30th 2020* • [Benjamin Smith](https://bens.substack.com/)
+*By [Benjamin Smith](https://bens.substack.com/)*
 
 > …my algorithm finds that you are currently at the 46th percentile amongst clarinetists in your peer competition group. Practice your arpeggios to improve your score before the final evaluation! 16-year-olds in your city with finely articulated arpeggios generally rank in the top quartile. Those with a strong swing-eighths style generally rank in the top decile. Say ‘practice arpeggios’ or ‘practice swing-eighths’ for a lesson.
 
@@ -14,7 +11,7 @@ quartsRssFeed: true
 
 “Whoa!” Judd put up his hands to deflect his father’s anger, “I can explain.” Shunting his father to the corner of the garage and away from the decomposed clarinet, he began breathlessly, “so I’m practicing yesterday like normal, getting feedback from Clarence, the clarinet’s evaluation algorithm. But I notice it just keeps repeating the same thing, in the same patronizing British accent. And I mean, No. Matter. What. I. Played. I practiced my arpeggios for two hours, and it tells me I’m 46th percentile. I play a series of high-pitched squeals: ‘Practice your arpeggios…’ I even take the thing apart and remove the analog-to-digital converter so I can feed it recordings of Benny Goodman. “You’re at the 46th percentile. Practice your arpeggios.” Judd throws up his hands in exasperation.
 
-![Justice — https://asterisques.com/](../../assets/8a0dff58245b821ddc3f45aff7d7bdcf.webp)
+![Justice — asterisques.com](../../assets/8a0dff58245b821ddc3f45aff7d7bdcf.webp)
 
 Listening, Judd’s dad pursed his lips and thought back to how lucky he’d felt to snag an early-model machine learning clarinet in the lottery his son’s public school ran last year. Judd had zero musical aptitude but he received one of the few instruments they had available for enhanced musical instruction. Even though the spit valve was rusted shut and the software was crude, he’d been happy to put down the hefty deposit. He looked over his son’s shoulder at the dismembered clarinet with, as the commercial advertisements claimed, “built-in machine learning software that provides personalized teaching and testing with no dangerous human interaction necessary!” He worried they might lose it if Judd was unable to put the thing back together.
 

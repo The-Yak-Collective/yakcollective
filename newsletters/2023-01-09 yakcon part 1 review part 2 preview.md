@@ -1,8 +1,5 @@
 ---
 title: YakCon Part 1 Review, Part 2 Preview
-aliases:
-  - YakCon Part 1 Review, Part 2 Preview
-quartsRssFeed: true
 date: 2023-01-09
 substack: https://yakcollective.substack.com/p/yakcon-part-1-review-part-2-preview
 ---
@@ -43,6 +40,6 @@ substack: https://yakcollective.substack.com/p/yakcon-part-1-review-part-2-previ
 ## Towards YakCon Part Two
 - After Async Week, we get to **YakCon Part Two.**
 - It follows the same structure as Part One (and it’s at the same time; **1600 UTC this coming Sunday, January 15**), and it will be friendly to those who missed Part One and/or Async Week. **We’ll have two guest speakers for this session, though.**
-- We’ll be hearing from **Mike Casey** ([Farcaster](http://fcast.me/mc), [personal site](https://mcasey.xyz/)). He specialises in investment and entrepreneurship in complex markets facing capital scarcity — whether that’s by geography (think Africa) or vertical (think life sciences). He’ll be tackling the difficult question: “Can Crypto Close the $4 Trillion SME Financing Gap?”
+- We’ll be hearing from **Mike Casey** ([Farcaster](http://fcast.me/mc), [personal site](https://mcasey.xyz/)). He specialises in investment and entrepreneurship in complex markets facing capital scarcity — whether that’s by geography (think Africa) or vertical (think life sciences). He’ll be tackling the difficult question: “Can Crypto Close the ＄4 Trillion SME Financing Gap?”
 - We’ll also be hearing from **Dan Grover** ([personal site](http://dangrover.com/), [LinkedIn](https://www.linkedin.com/in/dangrover/)). Dan — designer, engineer, entrepreneur — will be exploring the possibility that simulation games might be what the world needs right now.
 - Sounds good, right? So get to it. **Register for YakCon Part Two [here](../yakcon%202023.md) and go [here](../join.md) to access to the YC Discord.**

@@ -1,8 +1,5 @@
 ---
 title: New Year, Newsletter
-aliases:
-  - New Year, Newsletter
-quartsRssFeed: true
 date: 2021-02-05
 substack: https://yakcollective.substack.com/p/new-year-newsletter
 ---

@@ -1,8 +1,5 @@
 ---
 title: Archetypes
-aliases:
-  - Archetypes
-quartsRssFeed: true
 date: 2023-06-30
 substack: https://yakcollective.substack.com/p/archetypes
 ---

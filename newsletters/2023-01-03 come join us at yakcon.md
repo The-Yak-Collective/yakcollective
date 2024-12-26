@@ -1,12 +1,9 @@
 ---
 title: Come join us at YakCon
-aliases:
-  - Come join us at YakCon
-quartsRssFeed: true
 date: 2023-01-03
 substack: https://yakcollective.substack.com/p/come-join-us-at-yakcon
 ---
-[![YakCon 2023](../assets/bcbbce2d4c8bd2c56ac9e745729de547.webp)](../yakcon%202023.md)
+[![YakCon 2023 is here!](../assets/bcbbce2d4c8bd2c56ac9e745729de547.webp)](../yakcon%202023.md)
 
 A lot’s changed since early 2020. One thing hasn’t: the Yak Collective continues to slouch steadily into yet another year; its third. To mark the occasion — and to usher in 2023 — we’re holding a week-long interactive tinkering session: **YakCon**. It comprises two consecutive Sunday virtual meetups (on the 8th and 15th) book-ending a week of asynchronous activities (curated by volunteer track leads) on our Discord. YakCon is intended to give both new and returning yaks a chance to learn about and try out one or more of our many ongoing activities.
 

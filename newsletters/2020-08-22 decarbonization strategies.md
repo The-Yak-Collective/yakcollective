@@ -1,8 +1,5 @@
 ---
 title: Decarbonization Strategies
-aliases:
-  - Decarbonization Strategies
-quartsRssFeed: true
 date: 2020-08-22
 substack: https://yakcollective.substack.com/p/decarbonization-strategies
 ---
@@ -14,7 +11,7 @@ Earlier this month, Varun teamed up with Alex Wagner(also the editor at *Yak Tal
 
 Alex and Varun created [this seven-page proposal](https://drive.google.com/file/d/1ZmrKZpTrCG6yVPhGZFGLSf9pfCME6KQ6/view) based on Varun’s preexisting ideas about how to create a decarbonization movement.
 
-![3c167057-09bd-4894-83aa-b7e86c86edd9\_1194x926](../assets/838d43a8e174aaf10ef6d332fd4d71d9.png)
+![](../assets/838d43a8e174aaf10ef6d332fd4d71d9.png)
 
 The essence of the proposal was Varun’s idea of a decarbonization “stack” which included several layers of programs, and a financial instrument called the *Thunberg Bond*, which would function much as a World War Two-era war bond, but would be sold by the United States government to fund large-scale decarbonization projects.
 
@@ -90,7 +87,7 @@ Essentially, we want to choose a “hero”, or heroine, to symbolize the moveme
 ## 5. AWS Marketplace Meets Alibaba – “The Atmospheric Stack”
 And finally, we bring it all back into the stack by introducing this concept of the Atmospheric Web, which is a mashup of the [Amazon Web Services(AWS) marketplace](https://aws.amazon.com/marketplace/) and [Ali Baba](https://www.alibaba.com/).
 
-![b6081b34-7dac-4af4-a001-7a59807e311c\_1600x1504](../assets/da52f45a550a60c22627ca0d854b657e.png)
+![](../assets/da52f45a550a60c22627ca0d854b657e.png)
 
 Ali Baba really kind of showed that you can organize a community of merchants, right, like small businesses and merchants onto a single platform and have them *do* *commerce*. In so many ways, Ali Baba’s is a lot bigger \[than Amazon\], and in the sheer commerce or transactions that it does.
 

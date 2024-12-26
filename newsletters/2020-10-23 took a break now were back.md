@@ -1,8 +1,5 @@
 ---
 title: "Took a break, now we’re back!"
-aliases:
-  - "Took a break, now we’re back!"
-quartsRssFeed: true
 date: 2020-10-23
 substack: https://yakcollective.substack.com/p/took-a-break-now-were-back
 ---
@@ -24,7 +21,7 @@ The following story is by [Astonishing Stories Group](../projects/astonishing%20
 ### [wholeness in a timeless activity](../projects/astonishing%20stories/wholeness%20in%20a%20timeless%20activity.md)
 Author: Nathan Chen
 
-![5259d577-3dfe-460e-9631-4bafbb4ad47f\_705x1001](../assets/305c9b2dda1bb775ec3820901e3b2e3c.jpg)
+![](../assets/305c9b2dda1bb775ec3820901e3b2e3c.jpg)
 
 There are some activities the wealthy occasionally lust after. But there is one they will never stop avoiding.
 

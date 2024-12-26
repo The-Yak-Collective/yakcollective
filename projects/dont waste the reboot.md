@@ -1,9 +1,6 @@
 ---
 date: 2020-04-30
 title: Don’t Waste the Reboot
-aliases:
-  - Don’t Waste the Reboot
-quartsRssFeed: true
 ---
 ## Making the Next Normal Better Than the Last One
 The inaugural report by the Yak Collective, *Don’t Waste the Reboot* offers organizations a smorgasbord of 25 creative and unexpected provocations, ideas, and action frameworks to navigate the COVID-19 crisis.

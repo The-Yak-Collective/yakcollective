@@ -1,8 +1,5 @@
 ---
 title: "YC Annual Survey!"
-aliases:
-  - "YC Annual Survey!"
-quartsRssFeed: true
 date: 2021-12-15
 substack: https://yakcollective.substack.com/p/yc-annual-survey
 ---

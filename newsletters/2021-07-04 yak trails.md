@@ -1,8 +1,5 @@
 ---
 title: Yak trails 2021-07-04
-aliases:
-  - Yak trails 2021-07-04
-quartsRssFeed: true
 date: 2021-07-04
 substack: https://yakcollective.substack.com/p/yak-trails-2021-07-04
 ---
@@ -26,15 +23,15 @@ The Yak Rover project — a project to design a real Mars rover prototype that c
 ## Channel activity
 [Astonishing Stories.](https://discord.com/channels/692111190851059762/709768319108120636/857270681091702804) Fiction study group that occasionally publishes speculative fiction.
 
-> based on the last infra call I’ve come up with an outline for project managing the editing process for stories. I think it would be nice to have a bot that sends notifications on this channel when a story moves from one stage to another, including details of who moved it. Idea would be that once a story is submitted, anyone can pick it up for editing/review/proofreading. And kind of like github it is up to the author to decide whether to accept the changes and move it towards publishing. Can join the infra call this week and explain further. ([\#](https://discord.com/channels/692111190851059762/709768319108120636/858765400756846642))
+> based on the last infra call I’ve come up with an outline for project managing the editing process for stories. I think it would be nice to have a bot that sends notifications on this channel when a story moves from one stage to another, including details of who moved it. Idea would be that once a story is submitted, anyone can pick it up for editing/review/proofreading. And kind of like github it is up to the author to decide whether to accept the changes and move it towards publishing. Can join the infra call this week and explain further. ([⌗](https://discord.com/channels/692111190851059762/709768319108120636/858765400756846642))
 
 [Bot Testbed](https://discord.com/channels/692111190851059762/860920952066277396/860922479588409354). Use this channel for your own bot tests.
 
-> EXPERIMENT Created \#bot-testbed so that yaks can play with bot commands without feeling like they are cluttering up a channel. tk: master doc of yak bot tricks. Commands need to be a standalone post to fire.
+> EXPERIMENT Created ⌗bot-testbed so that yaks can play with bot commands without feeling like they are cluttering up a channel. tk: master doc of yak bot tricks. Commands need to be a standalone post to fire.
 > 
-> @gigayak: $unfurl $agendaadd $readingadd $links $lunks.
+> @gigayak: `$unfurl` `$agendaadd` `$readingadd` `$links` `$lunks`.
 > 
-> @Yakyak aka Carl: !suggestion !quickpoll !rm.
+> @Yakyak aka Carl: `!suggestion` `!quickpoll` `!rm`.
 > 
 > [Carl docs](https://docs.carl.gg/)
 
@@ -49,13 +46,13 @@ The Yak Rover project — a project to design a real Mars rover prototype that c
 
 [General Discussion.](https://discord.com/channels/692111190851059762/725542427229945877/858835041747861564) A place to chat about anything and everything you might find interesting or relevant.
 
-> re stretching the airport metaphor that reminds me of several sci fi stories like Station 11 or films where people get stranded in an airport in a post-apocalyptic or other scenario. There’s also the incredibly true story of all the planes on 9/11 that got routed to that obscure Canadian airport that used to get tons of transatlantic traffic in the pre jet era but then was a minor pitstop thereafter until 9/11 happened. There’s a play about the quiet heroism of the town to shelter, feed and take care of everyone during that crazy time. Cool story and well done. Perhaps [worth a gander](https://en.wikipedia.org/wiki/Come_from_Away) if you’re looking for inspiration to flesh out the metaphor a bit more ([\#](https://discord.com/channels/692111190851059762/725542427229945877/858896504104943647))
+> re stretching the airport metaphor that reminds me of several sci fi stories like Station 11 or films where people get stranded in an airport in a post-apocalyptic or other scenario. There’s also the incredibly true story of all the planes on 9/11 that got routed to that obscure Canadian airport that used to get tons of transatlantic traffic in the pre jet era but then was a minor pitstop thereafter until 9/11 happened. There’s a play about the quiet heroism of the town to shelter, feed and take care of everyone during that crazy time. Cool story and well done. Perhaps [worth a gander](https://en.wikipedia.org/wiki/Come_from_Away) if you’re looking for inspiration to flesh out the metaphor a bit more ([⌗](https://discord.com/channels/692111190851059762/725542427229945877/858896504104943647))
 
-> Any yaks involved in regional economic development work like [this link](https://b3kprosperity.org/) for Bakersfield? ([\#](https://discord.com/channels/692111190851059762/725542427229945877/859170974602362920))
+> Any yaks involved in regional economic development work like [this link](https://b3kprosperity.org/) for Bakersfield? ([⌗](https://discord.com/channels/692111190851059762/725542427229945877/859170974602362920))
 
-> Is there anything happening beyond white papers and press releases though? The ESG wave is taking a stronger hold over the earth observation / data analytics orgs a lot too. But I haven’t come across much beyond vague gesturing at climate change. ([\#](https://discord.com/channels/692111190851059762/725542427229945877/860056964892590101))
+> Is there anything happening beyond white papers and press releases though? The ESG wave is taking a stronger hold over the earth observation / data analytics orgs a lot too. But I haven’t come across much beyond vague gesturing at climate change. ([⌗](https://discord.com/channels/692111190851059762/725542427229945877/860056964892590101))
 
-> It’s real action at one major client company in my case. Sudden shift from talk to action in the last couple of years. ([\#](https://discord.com/channels/692111190851059762/725542427229945877/860165083711012864))
+> It’s real action at one major client company in my case. Sudden shift from talk to action in the last couple of years. ([⌗](https://discord.com/channels/692111190851059762/725542427229945877/860165083711012864))
 
 [Infrastructure.](https://discord.com/channels/692111190851059762/704369362315772044/858029500901097533) Place to talk about the website, twitter, linkedin, facebook, and other bits and pieces of the yak collective shared infrastructure. [Roam](https://roamresearch.com/#/app/ArtOfGig/page/sXVqH6H4T). Standing calls Wednesdays 11am ET
 
@@ -66,11 +63,11 @@ The Yak Rover project — a project to design a real Mars rover prototype that c
 > - It’s still pretty manual for now. In Substack will always be. Buttondown offers the automaticity we are looking for (maybe Mailchimp too).
 > - Would be interested to continue if one of our API-understanding yaks wants to team up, now or in August?
 > 
-> ([\#](https://discord.com/channels/692111190851059762/704369362315772044/859795428144971796))
+> ([⌗](https://discord.com/channels/692111190851059762/704369362315772044/859795428144971796))
 
-> [Jamstack conference](https://docs.google.com/forms/d/e/1FAIpQLSeR5W4m9owqDBJEq2EuRUNXFTOeLCxFPUn0qbuCE15o4SWDFg/viewform?_hsmi=137332582&_hsenc=p2ANqtz--VZBWPx5mn5QZU0ikbZI1uhie4WBOW2o4OgX63OjjyYCZQCeCWLMjE4drN1ztih8tzAYHyNmOsTNOx6z2MIvRDd810zw) and call for short talks in case we’ve done anything innovative here like the knack integration etc ([\#](https://discord.com/channels/692111190851059762/704369362315772044/859847859566280714))
+> [Jamstack conference](https://docs.google.com/forms/d/e/1FAIpQLSeR5W4m9owqDBJEq2EuRUNXFTOeLCxFPUn0qbuCE15o4SWDFg/viewform?_hsmi=137332582&_hsenc=p2ANqtz--VZBWPx5mn5QZU0ikbZI1uhie4WBOW2o4OgX63OjjyYCZQCeCWLMjE4drN1ztih8tzAYHyNmOsTNOx6z2MIvRDd810zw) and call for short talks in case we’ve done anything innovative here like the knack integration etc ([⌗](https://discord.com/channels/692111190851059762/704369362315772044/859847859566280714))
 
-> I think we’re in a nice position to really shore up backend systems over the rest of systems and do a serious membership drive/new activity kickoff effort in fall. we now have both infrastructure and project capabilities at a maturing level and we know how to do it all right… ([\#](https://discord.com/channels/692111190851059762/704369362315772044/860218091567710240))
+> I think we’re in a nice position to really shore up backend systems over the rest of systems and do a serious membership drive/new activity kickoff effort in fall. we now have both infrastructure and project capabilities at a maturing level and we know how to do it all right… ([⌗](https://discord.com/channels/692111190851059762/704369362315772044/860218091567710240))
 
 [New Old Home and Country.](https://discord.com/channels/692111190851059762/709753766076874774) Making a call for interesting case studies in the emergent roles & projects spun up or faltered during the course of the pandemic. This would begin as a slide presentation just like last year’s [The New Old Home](../projects/new%20old%20home.md) and could go for there to multimedia formats.
 
@@ -103,14 +100,14 @@ The Yak Rover project — a project to design a real Mars rover prototype that c
 
 > Agenda:
 > 
-> - complete v1 of new \#get-started-here welcome post
+> - complete v1 of new ⌗get-started-here welcome post
 > - restart newbie onboarding calls in some form
 
 [Yakfit.](https://discord.com/channels/692111190851059762/809318532990500865/857271503175548970) Exploring wearables and fitness goals for yaks.
 
-> WHOOOOOOOP, I cancelled my Whoop membership today. Been flying blind for over a month and wasn’t missing it. Granted, I’m still tracking my workouts, but I’m not missing Whoop’s recovery features nearly as much as I’d thought. ([\#](https://discord.com/channels/692111190851059762/809318532990500865/859125210350878721))
+> WHOOOOOOOP, I cancelled my Whoop membership today. Been flying blind for over a month and wasn’t missing it. Granted, I’m still tracking my workouts, but I’m not missing Whoop’s recovery features nearly as much as I’d thought. ([⌗](https://discord.com/channels/692111190851059762/809318532990500865/859125210350878721))
 
-> Starting on [Zoe](https://joinzoe.com/) tomorrow. ([\#](https://discord.com/channels/692111190851059762/809318532990500865/859896859237810237))
+> Starting on [Zoe](https://joinzoe.com/) tomorrow. ([⌗](https://discord.com/channels/692111190851059762/809318532990500865/859896859237810237))
 
 [Yak Marketing.](https://discord.com/channels/692111190851059762/756113566452678707/861348849478402058) Marketing for and by YC to create a distributed CMO function shared by several Yaks to elevate YakC marketing capability that fuels its growth [Roam](https://roamresearch.com/#/app/ArtOfGig/page/igJqfjUKe).
 
@@ -124,12 +121,12 @@ The Yak Rover project — a project to design a real Mars rover prototype that c
 > - how to build a calendar of expected marketing events, like launches.
 > - discuss potentially presenting our capabilities by vertical sector for better marketing (healthcare, robotics) instead of/in addition to offering type (futures, analysis, trends…) or format (pop-up think tank, whitepaper…).
 > - interactive serendipity engine for yc. We had a good governance chat today around serendipity in interactive social e-commerce and an idea came up — can we build something like an interactive serendipity engine for yc. Something timeboxed and curated like a periodic hackathon or “festival” or “farmers market” but for production/participation rather than consumption/shopping.
-> - discuss whether to have yaks offer packetized work services a la fiverr, operating yak as a platform. So combining vertical, type, and format as a crisply defined, fixed-price, fixed-schedule, specific inputs-outputs product. $95 for a 20 minute coffee zoom to talk over a tactical execution problem in your healthcare technology digital transformation project.
+> - discuss whether to have yaks offer packetized work services a la fiverr, operating yak as a platform. So combining vertical, type, and format as a crisply defined, fixed-price, fixed-schedule, specific inputs-outputs product. ＄95 for a 20 minute coffee zoom to talk over a tactical execution problem in your healthcare technology digital transformation project.
 > - review proposals for coffee with yak and decide how many yaks.
 > - consider: custom URL and email address for shift to Buttondown for Yak trails newsletter.
 > - consider: minimal viable testing for pushing eg tweets and links from Discord to Buttondown via API.
 
-[Yak-Tweet.](https://discord.com/channels/692111190851059762/803272779558420551/861354234100711465) Tweets via Yak Collective Discord with $yaktweet publish here as well. Keep tweets on the short side, \#yakbot will be added. MadeYak Discord role only for now.
+[Yak-Tweet.](https://discord.com/channels/692111190851059762/803272779558420551/861354234100711465) Tweets via Yak Collective Discord with `$yaktweet` publish here as well. Keep tweets on the short side, ⌗yakbot will be added. MadeYak Discord role only for now.
 
 ### Take-gig-leave-gig
 Current gigs. [Details on the server.](https://discord.com/channels/692111190851059762/692816049678057544/856164967811514399)
@@ -152,7 +149,7 @@ Current gigs. [Details on the server.](https://discord.com/channels/692111190851
 
 > A friend of mine is looking for a web designer to help launch a web page for a start-up he’s working with. Scope of work is to help determine overall design style, illustrations, and UI/UX assets; bonus if it can be done in webflow, or even better — implemented end-to-end. The start-up is a fast growing billing infra B2B.
 
-> Looking for a tech lead/collaborator my new startup! *(I’ve coded a good chunk in MERN + GraphQL, but everything is flexible / fine to throw away / plan to transition to Postgres.)* DM for details. Our vision is a world where citizens are empowered to hold large organizations accountable using class action litigation as the vehicle. We’re starting with ClaimClam, a fun consumer web app that aggregates & automates claim filings for existing class action settlements (think AirHelp/MainStreet/TurboTax for claim filing). There’s about $20 billion in ~$5/10/20 checks that almost no one is filing claims for; ClaimClam redistributes corporate dollars and helps people collect on money owed to them.
+> Looking for a tech lead/collaborator my new startup! *(I’ve coded a good chunk in MERN + GraphQL, but everything is flexible / fine to throw away / plan to transition to Postgres.)* DM for details. Our vision is a world where citizens are empowered to hold large organizations accountable using class action litigation as the vehicle. We’re starting with ClaimClam, a fun consumer web app that aggregates & automates claim filings for existing class action settlements (think AirHelp/MainStreet/TurboTax for claim filing). There’s about ＄20 billion in ~＄5/10/20 checks that almost no one is filing claims for; ClaimClam redistributes corporate dollars and helps people collect on money owed to them.
 
 > Software engineer contractors / freelancers in Amsterdam ! Backend Developer proficient in Nodejs+AWS, superstar if you have Typescript for the Backend and Serverless/Lambda (fully remote from anywhere in Europe) ! Tech lead — Java/Kotlin, Microservices, with Kubernetes ! Backend Java with Public cloud, Microservices, ! Android Developers, with Java and Kotlin ! iOS Developer with Swift Contact this recruiter — Leroy Watson on LinkedIn Find more freelance contracts in [Telegram](https://t.me/joinchat/UyFHixAf3uc3NGIy)
 
@@ -200,7 +197,7 @@ Current gigs. [Details on the server.](https://discord.com/channels/692111190851
 - [Hyundai x Boston Dynamics | As mobility evolves so does humanity — YouTube](https://youtu.be/O2_NEy0iDck)
 - [Modern Microprocessors — A 90-Minute Guide!](http://www.lighterra.com/papers/modernmicroprocessors/)
 -  [Unitree — Go1](https://www.unitree.com/products/go1/)
-- [This $2,700 robot dog will carry a single bottle of water for you — The Verge](https://www.theverge.com/2021/6/10/22527413/tiny-robot-dog-unitree-robotics-go1)
+- [This ＄2,700 robot dog will carry a single bottle of water for you — The Verge](https://www.theverge.com/2021/6/10/22527413/tiny-robot-dog-unitree-robotics-go1)
 - [Unitree A1 Quadruped Robot](https://www.trossenrobotics.com/a1-quadruped)
 - [beagleboard — Questions about the battery management circuit of Beaglebone Blue — Electrical Engineering Stack Exchange](https://electronics.stackexchange.com/questions/376491/questions-about-the-battery-management-circuit-of-beaglebone-blue)
 - [Understanding, Using, and Selecting Hot-S — Maxim Integrated](https://www.maximintegrated.com/en/design/technical-documents/app-notes/2/2736.html)
@@ -209,7 +206,7 @@ Current gigs. [Details on the server.](https://discord.com/channels/692111190851
 - [Implementing Robot Waypoint Navigation by David Anderson – DPRG Virtual Monthly Meeting, 6/12/2021 — YouTube](https://youtu.be/nekgAheau9w)
 - [WWG and all is well in the world — Google](https://docs.google.com/presentation/d/1boLilPxI1S49fzfxvRyxnPn7x0CIuyk88z9-vLTaszY/edit)
 - [Yak Rover Weekly Standup](https://docs.google.com/forms/d/e/1FAIpQLSfl01O61dgzQ6qG0VXbvC9daLhFNnNLaTwezRRUTm-mxh_yLw/viewform)
-- [On Rover Languages · Discussion \#3 · rhettg/stubborn · GitHub](https://github.com/rhettg/stubborn/discussions/3)
+- [On Rover Languages · Discussion ⌗3 · rhettg/stubborn · GitHub](https://github.com/rhettg/stubborn/discussions/3)
 - [Maier Fenster’s Personal Meeting Room — Zoom](https://ipatent-co-il.zoom.us/rec/share/UShq0raqBzucdm20ZWnzZdTG2I5VKeLhKJ-u6WvqHZ3JqC5A0qcJDOf0rAm2icqs.N52s6CzUKe7kMfOx)
 - [Starlink review: dreams, not reality — The Verge](https://www.theverge.com/22435030/starlink-satellite-internet-spacex-review?scrolla=5eb6d68b7fedc32c19ef33b4)
 - [Revealed: why animals’ pupils come in different shapes and sizes](https://theconversation.com/amp/revealed-why-animals-pupils-come-in-different-shapes-and-sizes-45796)
@@ -273,7 +270,7 @@ Current gigs. [Details on the server.](https://discord.com/channels/692111190851
 - [Logging — Carl-bot Documentation](https://docs.carl.gg/logging/logging/)
 - [Jamstack Conf 2021: Call for Papers](https://docs.google.com/forms/d/e/1FAIpQLSeR5W4m9owqDBJEq2EuRUNXFTOeLCxFPUn0qbuCE15o4SWDFg/viewform?_hsmi=137332582&_hsenc=p2ANqtz--VZBWPx5mn5QZU0ikbZI1uhie4WBOW2o4OgX63OjjyYCZQCeCWLMjE4drN1ztih8tzAYHyNmOsTNOx6z2MIvRDd810zw)
 - [Scripting News: Wednesday, June 30, 2021](http://scripting.com/2021/06/30.html)
-- [I suck at regular expressions · Issue \#215 · scripting/Scripting-News · GitHub](https://github.com/scripting/Scripting-News/issues/215)
+- [I suck at regular expressions · Issue ⌗215 · scripting/Scripting-News · GitHub](https://github.com/scripting/Scripting-News/issues/215)
 - [Knack](https://yak.knack.com/yaks)
 - [Luma — Activate Your Community](https://lu.ma/)
 - [Is there a way to have new users be automatically logged-in after they register? — Knack Knowledge Base](https://learn.knack.com/article/azyebz627h-is-there-a-way-to-have-new-users-be-automatically-logged-in-after-they-register)
@@ -336,17 +333,17 @@ Current gigs. [Details on the server.](https://discord.com/channels/692111190851
 > 
 > — [Brian Kahn • @blkahn • 9:43 PM • Jul 2, 2021](https://x.com/blkahn/status/1411078040654860289)
 
-> \#roamans, what’s the currently preferred way of reading .epub ebooks, making notes and getting things into Roam on iOS (yes, very specific question 😁)? I’ve been using Marvin but the last update was three years ago and I’m looking for something better.
+> ⌗roamans, what’s the currently preferred way of reading .epub ebooks, making notes and getting things into Roam on iOS (yes, very specific question 😁)? I’ve been using Marvin but the last update was three years ago and I’m looking for something better.
 > 
-> ![934b892a-be83-4325-a86b-569e38d2e574\_1200x630](../assets/787180e13c0bae645ab96d535180a1ac.png)
+> ![](../assets/787180e13c0bae645ab96d535180a1ac.png)
 > 
 > <https://apps.apple.com/us/app/marvin-3/id1086482858>
 > 
 > — [C𐃏rtex Futura 🚢 9/30 Atomic Essays • @cortexfutura • 8:03 AM • Jun 25, 2021](https://x.com/cortexfutura/status/1408335044381392900)
 
-> @cortexfutura Few years ago I used MarginNote for ePub with great success. I also know some \#roamans using it today. I haven’t used it for a while, but it advertises multiple format outputs.
+> @cortexfutura Few years ago I used MarginNote for ePub with great success. I also know some ⌗roamans using it today. I haven’t used it for a while, but it advertises multiple format outputs.
 > 
-> ![ced8622d-9d83-46f6-bbbe-89ff44b11c4d\_1200x630](../assets/b531772e81ba9c1c9eb9054c665da2ef.png)
+> ![](../assets/b531772e81ba9c1c9eb9054c665da2ef.png)
 > 
 > <https://apps.apple.com/us/app/marginnote-3/id1348317163>
 > 
@@ -354,7 +351,7 @@ Current gigs. [Details on the server.](https://discord.com/channels/692111190851
 
 > @cortexfutura Currently using Apple’s Books and @readwiseio to transfer highlights and notes into Roam
 > 
-> ![a175b755-64c0-47b6-8676-2720c0c09ea5\_399x865](../assets/2dd9544827be187df97c8f216aec9310.gif)
+> ![](../assets/2dd9544827be187df97c8f216aec9310.gif)
 > 
 > <https://help.readwise.io/article/35-how-do-i-import-apple-books-highlights-from-my-iphoneipad>
 > 

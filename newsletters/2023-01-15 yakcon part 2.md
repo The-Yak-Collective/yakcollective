@@ -1,8 +1,5 @@
 ---
 title: YakCon Part 2
-aliases:
-  - YakCon Part 2
-quartsRssFeed: true
 date: 2023-01-15
 substack: https://yakcollective.substack.com/p/yakcon-part-2
 ---
@@ -18,7 +15,7 @@ Async week is a wrap, and we head into Part 2 on Sunday, 15th at 1600 UTC. Here�
 
 The difference will be in our guest speakers. For Part Two we have, rather appropriately, two speakers.
 
-Mike Casey ([Farcaster](http://fcast.me/mc), [personal site](https://mcasey.xyz/)) will be tackling the difficult question: “Can Crypto Close the $4 Trillion SME Financing Gap?”
+Mike Casey ([Farcaster](http://fcast.me/mc), [personal site](https://mcasey.xyz/)) will be tackling the difficult question: “Can Crypto Close the ＄4 Trillion SME Financing Gap?”
 
 Mike specializes in investment and entrepreneurship in complex markets facing capital scarcity — whether that’s by geography (think Africa) or vertical (think life sciences). It’s an interesting playspace to be in.
 

@@ -1,7 +1,5 @@
 ---
 title: Yak Talk
-aliases:
-  - Yak Talk
 ---
 Yak Talk was (and may yet still be) an occasional newsletter summarizing the recent goings on of the Yak Collective. [You can also subscribe and browse old editions on Substack.](https://yakcollective.substack.com/)
 

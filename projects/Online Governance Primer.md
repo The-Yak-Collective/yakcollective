@@ -1,9 +1,6 @@
 ---
 title: The Yak Online Governance Primer
-aliases:
-  - The Yak Online Governance Primer
 date: 2022-02-02
-quartsRssFeed: true
 ---
 ![The Yak Online Governance Primer](../assets/0de652330f1836b39f9d3b3ff2f64818.webp)
 

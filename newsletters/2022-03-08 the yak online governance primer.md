@@ -1,12 +1,9 @@
 ---
 title: The Yak Online Governance Primer
-aliases:
-  - The Yak Online Governance Primer
-quartsRssFeed: true
 date: 2022-03-08
 substack: https://yakcollective.substack.com/p/the-yak-online-governance-primer
 ---
-A couple of weeks ago, the Yak Collective published the **[Yak Online Governance Primer](../projects/online%20governance%20primer.md). It is one of our most ambitious collaborative projects to date.
+A couple of weeks ago, the Yak Collective published the **[Yak Online Governance Primer](../projects/online%20governance%20primer.md)**. It is one of our most ambitious collaborative projects to date.
 
 [![](../assets/bca2b2113cf1f74a6bb57850a7eba39c.webp)](https://yakcollective.mirror.xyz/aJdO_SO3gw34cLtwBwNC2OD3s0YT3us9C-C2NNPQ_us)
 
@@ -24,7 +21,7 @@ The primer was authored by **Sachin Benny, Venkatesh Rao, Grigori Milov, and Bry
 
 [^2]: The primer is published using what is known as a split contract on the Ethereum blockchain, which allows funds to be automatically distributed to multiple accounts. We’ve set things up so about 75% goes to contributors, and 25% to the Yak Collective. We’ve taken our cue from the indirect-cost support model used in government-funded university research.
 
-If you are interested in having one of us drop by one of your organization’s meetings to talk about the primer and discuss the ideas, feel free to reach out to any of us. You can tweet at [@yak\_collective](https://x.com/yak_collective) to get in touch, or just [join us](../join.md) in the **\#online-goverance** channel of our Discord.
+If you are interested in having one of us drop by one of your organization’s meetings to talk about the primer and discuss the ideas, feel free to reach out to any of us. You can tweet at [@yak\_collective](https://x.com/yak_collective) to get in touch, or just [join us](../join.md) in the **⌗online-goverance** channel of our Discord.
 
 Some further background, for those of you who are interested.
 

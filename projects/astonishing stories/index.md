@@ -1,7 +1,5 @@
 ---
 title: Astonishing Stories
-aliases:
-  - Astonishing Stories
 date: 2020-10-23
 ---
 ## Weird is part of the job
@@ -55,7 +53,7 @@ The stories here are not meant to predict the future but to be imagination exten
 > 
 > When you needed something, no matter how minor, someone, somewhere in the world could help you with it.
 
-![Justice — https://asterisques.com/](../../assets/b2efefdb8a82648cf42f8b8c4875b0ff.webp)
+![Justice — asterisques.com](../../assets/b2efefdb8a82648cf42f8b8c4875b0ff.webp)
 
 ## The Yak Collective // Astonishing Stories
 **Lead editors** / [Sachin Benny](https://sachinbenny.notion.site/I-m-Sachin-Benny-7391ec1aafa94af28599a2b089c4bf35) and [Amanda Reeves](https://wabisabifutures.com/) // **Co-editors** / [Jenna Dixon](https://x.com/jdbb), [Scott Garlinger](https://x.com/scott_garlinger), Praful Mathur, [Shreeda Segan](https://x.com/freeshreeda) // **Writers** / [Sachin Benny](https://sachinbenny.notion.site/I-m-Sachin-Benny-7391ec1aafa94af28599a2b089c4bf35), [Chris Butler](https://x.com/chrizbot), [Nathan Chen](https://nchen13.github.io/), [Scott Garlinger](https://x.com/scott_garlinger), [Benjamin Smith](https://bens.substack.com/) // **Illustrator** / [Justice](https://asterisques.com/) // **Website development** / [Nathan Acks](https://www.necopinus.xyz/) // **Additional collaborators** / Maggie Appleton, Tracy Brinkerhoff, Michael de la Maza, Prashant Gandhi, [Zhan Li](https://x.com/thezhanly), Murilo Loureiro, Sumit Paul-Choudhury, Claire Peters, [Chris Reid](https://x.com/careid0), Erik Sandberg, Mike Wimsatt

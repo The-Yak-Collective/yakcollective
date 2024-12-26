@@ -1,8 +1,5 @@
 ---
 title: YC Annual Meeting, Yak Rover Demo Day
-aliases:
-  - YC Annual Meeting, Yak Rover Demo Day
-quartsRssFeed: true
 date: 2021-12-06
 substack: https://yakcollective.substack.com/p/yc-annual-meeting-yak-rover-demo
 ---

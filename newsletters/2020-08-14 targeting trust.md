@@ -1,8 +1,5 @@
 ---
 title: Targeting Trust
-aliases:
-  - Targeting Trust
-quartsRssFeed: true
 date: 2020-08-14
 substack: https://yakcollective.substack.com/p/targeting-trust
 ---
@@ -15,9 +12,9 @@ Around the fourth or fifth issue of *Yak Talk*, a team coalesced:
 
 - **[Grigori Milov](https://x.com/grigorimilov)**, as our resident senior consultant, and voice of quality control for the publication.
 - **[Shreeda Sagan](https://shreeda.substack.com)**, as our steadfast, no-bs copy editor.
-- **[Praful Mathur](http://x.com/prafulfillment)**, our \#online-governance beat writer, and analytics man.
-- **[Joseph Ensminger](https://x.com/EnsmingerJoseph)**, contributing writer to the \#complexity beat.
-- **[Matthew Sweet](https://x.com/Matthew_Sweet)**, beat writer for \#complexity track.
+- **[Praful Mathur](http://x.com/prafulfillment)**, our ⌗online-governance beat writer, and analytics man.
+- **[Joseph Ensminger](https://x.com/EnsmingerJoseph)**, contributing writer to the ⌗complexity beat.
+- **[Matthew Sweet](https://x.com/Matthew_Sweet)**, beat writer for ⌗complexity track.
 
 I’m writing this note to our readers because we want your feedback.
 
@@ -45,7 +42,7 @@ If you’d like to know more about these projects, you can **[join Yak Collectiv
 
 As [Kranzberg’s first law of technology](https://en.wikipedia.org/wiki/Melvin_Kranzberg) states, “Technology is neither good nor bad; nor is it neutral.” Bad actors will — somewhere, somehow, somewhen — enter the fray.
 
-![ed51b705-d099-4bc3-9cb6-0722520c1c0f\_600x400](../assets/1d340f9d3dc88f7e9117e2382cc98cec.jpg)
+![](../assets/1d340f9d3dc88f7e9117e2382cc98cec.jpg)
 
 *(Technology empowers full-stack conflict. [Source: Unflattening Hobbes](https://www.ribbonfarm.com/2018/10/18/unflattening-hobbes/).)*
 
@@ -54,13 +51,13 @@ Rogue states, cabals of elites defending the status quo, clandestine orgs determ
 ### Disrupting Trust
 In *Brave New War*, [John Robb](https://globalguerrillas.typepad.com/) talks of “[systems disruption](https://www.google.com/search?client=safari&rls=en&q=systems+disruption&ie=UTF-8&oe=UTF-8).” Systems disruption is a methodology of attack that leverages modernity’s interconnectivity to create self-reinforcing cascades of failure ([or volatility](https://taylorpearson.me/interestingtimes/volatility-clusters/)). In other words, the interconnected nature of society means that things falling apart in one area will “domino effect” into others.
 
-![7c40361f-c922-4648-bb7c-84423e258319\_850x601](../assets/5aa90ca707bf4f761ebfd7d3ca5bd4c2.jpg)
+![](../assets/5aa90ca707bf4f761ebfd7d3ca5bd4c2.jpg)
 
  *(An easily-discoverable overview of infrastructure interdependence. [Source](https://www.google.com/url?q=https://www.researchgate.net/publication/337549204/figure/fig3/AS:829703267024898@1574828082946/The-interdependence-of-the-oil-infrastructure-Source-adapted-from-65.ppm&sa=D&ust=1597325361321000&usg=AFQjCNFvc1DXaxhSPsXOrR5XzK*J*k9J-Q).)*
 
 A key principle of systems disruption is a complex system’s vulnerability to simple, primitive attacks. Robb gives an example:
 
-> “In February 2006, Nigerian guerillas of the amorphous Movement for the Emancipation of the Niger Delta attacked the loading dock on Shell Oil’s Forcados export platform. The attackers escaped without being captured or suffering casualties. The estimated cost of the attack was $2,000 (twenty men at a generous $100 each for the day). The cost to Shell was $400,000 in lost oil exports for an estimated two weeks and the indefinite shutdown of an adjacent oil field. The estimated lost revenue to Shell was over $50 million. The rate of return: 25,000 times the cost of the attack.”
+> “In February 2006, Nigerian guerillas of the amorphous Movement for the Emancipation of the Niger Delta attacked the loading dock on Shell Oil’s Forcados export platform. The attackers escaped without being captured or suffering casualties. The estimated cost of the attack was ＄2,000 (twenty men at a generous ＄100 each for the day). The cost to Shell was ＄400,000 in lost oil exports for an estimated two weeks and the indefinite shutdown of an adjacent oil field. The estimated lost revenue to Shell was over ＄50 million. The rate of return: 25,000 times the cost of the attack.”
 
 Such primitive assaults on oil pipelines and platforms are now mitigated by the ever-presence of heavily armed, aggresively proactive, well-trained (usually ex-special forces) security. However, attackers remain innovative (and audacious) in the face of defensive evolution.
 
@@ -69,7 +66,7 @@ The pattern repeats in other domains. In physical and digital security, for exam
 ### Bitcoin and Blue Ticks
 A couple of weeks ago, many [prominent Twitter accounts were hacked](https://x.com/Support/status/1283518038445223936). The [perpetrators](https://en.wikipedia.org/wiki/2020_Twitter_bitcoin_scam#Perpetrators) turned out to be two Florida-based teens and a Bognor Regis-based teen. They [socially engineered](https://en.wikipedia.org/wiki/Social_engineering_(security)) access to high profile accounts and posted appeals for Bitcoins. The [“2020 Twitter Bitcoin scam”](https://en.wikipedia.org/wiki/2020_Twitter_bitcoin_scam):
 
-> “The scam tweets asked individuals to send bitcoin currency to a specific cryptocurrency wallet, with the promise of the Twitter user that money sent would be doubled and returned as a charitable gesture. Within minutes from the initial tweets, more than 320 transactions had already taken place on one of the wallet addresses, and bitcoin to a value of more than US$110,000 had been deposited in one account before the scam messages were removed by Twitter. In addition, full message history data from eight non-verified accounts was also acquired.”
+> “The scam tweets asked individuals to send bitcoin currency to a specific cryptocurrency wallet, with the promise of the Twitter user that money sent would be doubled and returned as a charitable gesture. Within minutes from the initial tweets, more than 320 transactions had already taken place on one of the wallet addresses, and bitcoin to a value of more than US＄110,000 had been deposited in one account before the scam messages were removed by Twitter. In addition, full message history data from eight non-verified accounts was also acquired.”
 
 Relatively speaking, this was a rather mundane caper that ultimately failed. But let’s imagine it was something far more ambitious.
 
@@ -82,7 +79,7 @@ The first step is the hardest and the prerequisite for the others. In our real-w
 #### Step Two: Who?
 The next question is, “Which accounts?” [@MenanderSoter](https://x.com/MenanderSoter) used network graphing techniques to visualise different “communities” active in the Twitterverse ([details here](https://twitterverse.net/faq)). A full list of created graphs is [here](https://twitterverse.net/graph) but this is what the [“supergraph”](https://twitterverse.net/graph/supergraph) looks like:
 
-![8b33d09b-1478-405c-a1f1-0009dd95e453\_1248x842](../assets/322977932ac1ba5193dad2e0255a8232.jpg)
+![](../assets/322977932ac1ba5193dad2e0255a8232.jpg)
 
 The largest nodes are the accounts with the most “influence”. Our election disruptors would use similar methods to chart the political Twitterverse and classify nodes as either:
 
@@ -123,7 +120,7 @@ The salience of social media in information spread, a decayed trust in tradition
 
 Such a critical security failure coinciding with an election is admittedly unlikely. But it *could* still happen, and this fact raises questions about the outsized impact a simple stack of contemporary technologies can have.
 
-*Matthew Sweet is a regular contributing writer for Yak Talk, covering the \#complexity-studies beat. [Check out his newsletter here.](https://swellandcut.com/mag7/)*
+*Matthew Sweet is a regular contributing writer for Yak Talk, covering the ⌗complexity-studies beat. [Check out his newsletter here.](https://swellandcut.com/mag7/)*
 
 ## Join/Hire
 Apply to **[become a Yak here](../join.md)**.

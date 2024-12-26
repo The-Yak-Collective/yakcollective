@@ -12,23 +12,31 @@ This `README` and files in the `private` directory are *not* included in the fin
 
 ## Building the Website Locally
 ```bash
-# New directions needed...
+# Build the website
+#
+./.automation/build.sh
+
+# Optionally view the website locally via http://127.0.0.1:8080
+#
+./.automation/build.sh serve
+
+# Push the website to Netlify.
+#
+export NETLIFY_AUTH_TOKEN=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+export NETLIFY_SITE_ID=xxxxxxxx-xxxxxxxx-00000000
+
+npx netlify-cli deploy \
+	--dir .automation/www \
+	--message "Local development deploy $(date -u +"%Y%m%d%H%M%S")/${USER}@${HOST}" \
+	--prod
 ```
 
 ## Ways to Contribute
 [Current website issues and projects on GitHub.](https://github.com/The-Yak-Collective/yakcollective/issues) Pull requests and ideas welcome!
 
-Conversations happen on [the Discord \#infrastructure channel](https://discord.com/channels/692111190851059762/704369362315772044).
+Conversations happen on [the Discord ⌗infrastructure channel](https://discord.com/channels/692111190851059762/704369362315772044).
 
 ## TODO
-- [ ] Make sure text works well everywhere
-	- [x] Obsidian
-	- [ ] Foam
-	- [ ] GitHub
-- [ ] Recreate build and automation infrastructure using [Quartz](https://github.com/jackyzha0/quartz)
-	- `.automation`
-	- `.github`
-- [ ] Reimplement join page form using [Netlify Forms](https://docs.netlify.com/forms/setup/)
 - [ ] Move [IT infrastructure map](https://roamresearch.com/#/app/ArtOfGig/page/w6uAG9Pig) from DOT/Graphviz to something like Mermaid
 	- ChatGPT makes a decent first-pass, but it doesn’t really understand multi-path commands
 	- The goal here is Foam/GitHub compatibility

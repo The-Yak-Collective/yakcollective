@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "index.md",
+                "file": "projects/astonishing stories/index.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -23,7 +23,7 @@
             }
           },
           {
-            "id": "81b85c616f45e6c6",
+            "id": "62b3b2467204ff9a",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -119,12 +119,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
+                "file": "yakcon 2023.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from README"
+              "title": "Outgoing links from yakcon 2023"
             }
           },
           {
@@ -133,36 +133,58 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md"
+                "file": "yakcon 2023.md"
               },
               "icon": "lucide-list",
-              "title": "Outline of README"
+              "title": "Outline of yakcon 2023"
             }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
+      "hide-folders:Hide hidden folders again": false,
       "graph:Open graph view": false,
       "command-palette:Open command palette": false,
       "omnisearch:Omnisearch": false,
-      "hide-folders:Show hidden folders": false
+      "obsidian-git:Open Git source control": false
     }
   },
-  "active": "81b85c616f45e6c6",
+  "active": "62b3b2467204ff9a",
   "lastOpenFiles": [
-    "index.md",
-    "newsletters/index.md",
+    "yakcon 2023.md",
     "README.md",
-    "newsletters/2021-05-23 yak trails.md",
-    "projects/astonishing stories/mechanical turks all the way down.md",
+    "welcome.md",
+    "join.md",
+    "projects/index.md",
     "projects/astonishing stories/index.md",
+    "study groups/index.md",
+    "work groups/index.md",
+    "about.md",
+    "work groups/infrastructure.md",
+    "study groups/fermi gym.md",
+    "projects/astonishing stories/your payment is ready.md",
     "projects/astonishing stories/wholeness in a timeless activity.md",
+    "projects/astonishing stories/out of the loop.md",
+    "projects/astonishing stories/mechanical turks all the way down.md",
+    "projects/astonishing stories/department of restoration.md",
+    "projects/astonishing stories/agglomerizing the aesthetic.md",
+    "study groups/yak robotics garage.md",
+    "projects/future frontiers.md",
+    "projects/dont waste the reboot.md",
+    "newsletters/index.md",
+    "newsletters/2020-08-14 targeting trust.md",
+    "newsletters/2021-12-15 yc annual survey.md",
+    "index.md",
+    "newsletters/2021-06-20 yak trails.md",
+    "assets/0dc1051e8495b34b6a728bd411210f17.jpg",
+    "newsletters/2020-07-03 yaks do innovation consulting.md",
+    "private/original assets/og-image.png",
+    "private/original assets/icon.png",
     "assets/ff364ce6ac019c2a7bf71e78d34c9ca2.webp",
     "assets/ff1e298ba58fccbc29a09cc4efa89ff9.jpg",
     "assets/fc7382c6e3c525a72029cdaedb9b978b.jpg",
@@ -170,32 +192,10 @@
     "assets/f1a1910c34bb2841f155469419236ff4.png",
     "assets/f1a04c698b093e9b8b32ba9e72825510.webp",
     "assets/eeda8b90db3f9d131bb3151330e10cab.png",
-    "assets/ee0be785a092d81d62ac2f78b6d7fb6e.jpg",
-    "assets/ea233d0d705d756a5926f8aa74981f1b.jpg",
-    "assets/e34947d4424383417624d8ded66e8ab9.jpg",
     "assets/3080c6f8159a8c3e7818854631efeb0f.pdf",
     "assets/180d8e4e90c3ac50b69eda1b2ca24694.pdf",
     "assets/52b45e4cbd3d4207941fb2ef91005d77.pdf",
-    "study groups/yak robotics garage.md",
-    "yakcon 2023.md",
-    "newsletters/2023-01-03 come join us at yakcon.md",
     "private/original assets copy",
-    "newsletters/2021-06-27 yak trails.md",
-    "newsletters/2023-05-05 yak governance studies sequence intro.md",
-    "projects/index.md",
-    "newsletters/2020-06-15 announcing yak talk.md",
-    "newsletters/2020-06-19 yak talk.md",
-    "newsletters/2020-06-26 yak talk.md",
-    "newsletters/2020-07-02 reminder call for project contributors for yak project proposals.md",
-    "newsletters/2020-07-03 yaks do innovation consulting.md",
-    "newsletters/2020-07-10 yak talk.md",
-    "newsletters/2020-07-17 are k-pop stans the future of activism.md",
-    "newsletters/2020-07-24 gpt-3 and the new fake intelligence.md",
-    "newsletters/2020-07-31 chasing tails part one.md",
-    "newsletters/2020-08-07 presidential campaign as decentralized org.md",
-    "newsletters/2020-08-14 targeting trust.md",
-    "newsletters/2020-08-22 decarbonization strategies.md",
-    "newsletters/2020-09-04 podcasting needs cognitive hooks.md",
     "newsletters"
   ]
 }

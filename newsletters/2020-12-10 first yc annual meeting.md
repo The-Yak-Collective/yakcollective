@@ -1,8 +1,5 @@
 ---
 title: "First YC Annual Meeting!"
-aliases:
-  - "First YC Annual Meeting!"
-quartsRssFeed: true
 date: 2020-12-10
 substack: https://yakcollective.substack.com/p/first-yc-annual-meeting
 ---

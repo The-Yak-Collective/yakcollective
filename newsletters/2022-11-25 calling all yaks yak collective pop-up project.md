@@ -1,9 +1,5 @@
 ---
 title: "🚨 Calling All Yaks: Yak Collective Pop-Up Project"
-aliases:
-  - "Calling All Yaks: Yak Collective Pop-Up Project"
-  - "🚨 Calling All Yaks: Yak Collective Pop-Up Project"
-quartsRssFeed: true
 date: 2022-11-25
 substack: https://yakcollective.substack.com/p/calling-all-yaks-yak-collective-pop
 ---
@@ -23,7 +19,7 @@ We’ve structured the project timeline to be minimally disruptive to December a
 
 * * *
 
-The contributions solicitations for this second paid client project went live this morning in the \#announcements channel on the Yak Collective Discord. You’ll have until November 30 to sign up.
+The contributions solicitations for this second paid client project went live this morning in the ⌗announcements channel on the Yak Collective Discord. You’ll have until November 30 to sign up.
 
 [Jump on the Discord to take see the announcement with links to the project brief and participation form.](https://discord.com/channels/692111190851059762/703615828419018832/1044978538073309234)
 

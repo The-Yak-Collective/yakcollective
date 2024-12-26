@@ -1,19 +1,17 @@
 ---
-title: Join the Yak Collective
-aliases:
-  - Join the Yak Collective
+title: Join
 ---
 The Yak Collective is an online space for collaborative tinkering. You can learn more about the what, why, and how on the [about page](about.md).
 
 If this interests you, take a moment to read our [code of conduct](https://roamresearch.com/#/app/ArtOfGig/page/CF_GEWrWq) before joining, and then answer a couple of simple questions (all fields are required) to access our Discord link.
 
-<form id="join" name="join" method="post" netlify>
+<form id="join" name="join" method="post" action="/welcome" data-netlify="true">
 	<p>
 		<label for="email"><strong>Email</strong></label><br>
 		<input class="input" id="email" name="email" type="email" required>
 	</p>
 	<p>
-		<label for="name"><strong>Professional Name</strong><label><br>
+		<label for="name"><strong>Professional Name</strong></label><br>
 		<input class="input" id="name" name="name" type="text" required><br>
 		<small><em>What name do you go by in professional contexts?</em></small>
 	</p>

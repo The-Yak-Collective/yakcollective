@@ -3,12 +3,12 @@
 	--callout-icon: lucide-library;
 }
 
-.callout[data-callout="study-group"] {
+.callout[data-callout="study_group"] {
 	--callout-color: 210, 132, 0;
 	--callout-icon: lucide-users;
 }
 
-.callout[data-callout="work-group"] {
+.callout[data-callout="work_group"] {
 	--callout-color: 210, 132, 0;
 	--callout-icon: lucide-cog;
 }
@@ -19,17 +19,17 @@
  * --callout-color rather than "210, 132, 0".
  */
 
-.callout[data-callout="inactive-project"] {
+.callout[data-callout="inactive_project"] {
 	--callout-color: 158, 158, 158;
 	--callout-icon: lucide-library;
 }
 
-.callout[data-callout="inactive-study-group"] {
+.callout[data-callout="inactive_study_group"] {
 	--callout-color: 158, 158, 158;
 	--callout-icon: lucide-users;
 }
 
-.callout[data-callout="inactive-work-group"] {
+.callout[data-callout="inactive_work_group"] {
 	--callout-color: 158, 158, 158;
 	--callout-icon: lucide-cog;
 }
@@ -38,7 +38,7 @@
  * Astonishing Stories
  */
 
- .callout[data-callout="story"] {
+.callout[data-callout="story"] {
 	--callout-color: 158, 158, 158;
 	--callout-icon: lucide-book-open-text;
 }
@@ -47,27 +47,27 @@
  * Future Frontiers
  */
 
- .callout[data-callout="on-horizons"] {
+.callout[data-callout="on_horizons"] {
 	--callout-color: 191, 169, 105;
 	--callout-icon: lucide-sparkles;
 }
 
-.callout[data-callout="democratized-underwater-exploration"] {
+.callout[data-callout="democratized_underwater_exploration"] {
 	--callout-color: 25, 150, 175;
 	--callout-icon: lucide-waves;
 }
 
-.callout[data-callout="the-promise-of-nanosatellites-for-developing-nations"] {
+.callout[data-callout="the_promise_of_nanosatellites_for_developing_nations"] {
 	--callout-color: 75, 100, 125;
 	--callout-icon: lucide-satellite;
 }
 
-.callout[data-callout="starship-gold-rush"] {
+.callout[data-callout="starship_gold_rush"] {
 	--callout-color: 175, 100, 125;
 	--callout-icon: lucide-rocket;
 }
 
-.callout[data-callout="designer-metabolism-and-minds"] {
+.callout[data-callout="designer_metabolism_and_minds"] {
 	--callout-color: 200, 100, 50;
 	--callout-icon: lucide-brain;
 }

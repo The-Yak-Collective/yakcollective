@@ -1,7 +1,5 @@
 ---
-title: About the Yak Collective
-aliases:
-  - About the Yak Collective
+title: About
 ---
 ## The What
 The Yak Collective is an online space for collaborative tinkering. We do this by creatively curating a slow-lane, long-term temporal orientation. If you want to muddle away slowly but steadily at a 10-year goal, this is a place for you. It is a space where you can work with others on gardening your indie or weekends-and-evenings life in collaboration with others who share some of your priorities/interests.

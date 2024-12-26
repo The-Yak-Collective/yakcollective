@@ -1,8 +1,5 @@
 ---
 title: Presidential Campaign as Decentralized Org
-aliases:
-  - Presidential Campaign as Decentralized Org
-quartsRssFeed: true
 date: 2020-08-07
 substack: https://yakcollective.substack.com/p/presidential-campaign-as-decentralized
 ---
@@ -17,11 +14,11 @@ Currently, Yaks are working on:
 If you’d like to know more about these projects, you can **[join Yak Collective here](../join.md).**
 
 ### Yak Writings
-- **Vaughn Tan** published, **“[\#40: Trials and Tribulations](https://uncertaintymindset.substack.com/p/40-trials-and-tribulations)”**, on his [Uncertainty Mindset blog](https://uncertaintymindset.substack.com).
+- **Vaughn Tan** published, **“[⌗40: Trials and Tribulations](https://uncertaintymindset.substack.com/p/40-trials-and-tribulations)”**, on his [Uncertainty Mindset blog](https://uncertaintymindset.substack.com).
 - **Benjamin Taylor** published, **“[The Force in organisational life and becoming a Jedi — part 2: the Dark Side](https://medium.com/@antlerboy/organisational-jedi-knights-have-to-confront-themselves-with-love-4caed5c1142c)”**.
 - **Tom Critchlow** published, **“[Creating an Alumni Network for Indies](http://tomcritchlow.com/2020/08/06/indie-alumni/)”**.
 
-## \#Online-Governance: Presidential Campaign as Decentralized Organization
+## ⌗Online-Governance: Presidential Campaign as Decentralized Organization
 *By Praful Mathur, with Shreeda Segan, Alex Wagner, and Grigori Milov*
 
 [From the beginning](../about.md), Yak Collective has operated as a decentralized organization. At Yak, there is no central authority to enforce governance of Yak processes and code of conduct. Yak projects are governed in a somewhat-federated method.
@@ -56,13 +53,13 @@ While online actors have been influencing politics over the years with ever more
 
 Online organizing has accelerated in 2020, and will continue to generate new political alliances oriented-both left and right, both in good faith and bad.
 
-![27849f60-d910-46bb-a8b2-baa4faa6770d\_758x960](../assets/53293c30ea123a9fdca6ede8a03618ca.jpg)
+![](../assets/53293c30ea123a9fdca6ede8a03618ca.jpg)
 
 It’s worth stating that building alliances is no small feat, especially with organizations outside of one’s own. It takes charismatic, shrewd, and dedicated participants to face specific problems that are sufficiently difficult and complex, to the degree that a single org cannot solve them alone.
 
 While Yak Collective has no stated political motive, or mission statement, Yak continues to evolve as a decentralized organization, and as an alliance of brains who gravitate towards solving complex problems.
 
-To quote [Tom Critchlow](https://tomcritchlow.com) in a recent Yak chat in the \#new-to-consulting channel via the Yak Discord:
+To quote [Tom Critchlow](https://tomcritchlow.com) in a recent Yak chat in the ⌗new-to-consulting channel via the Yak Discord:
 
 > One magic question. Goes like this:
 > 

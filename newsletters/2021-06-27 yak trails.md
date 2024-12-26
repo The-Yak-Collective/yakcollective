@@ -1,8 +1,5 @@
 ---
 title: Yak trails 2021-06-27
-aliases:
-  - Yak trails 2021-06-27
-quartsRssFeed: true
 date: 2021-06-27
 substack: https://yakcollective.substack.com/p/yak-trails-2021-06-27
 ---
@@ -60,13 +57,13 @@ Current gigs. [Details on the server.](https://discord.com/channels/692111190851
 ### yaks at work
 - [The Ultimate Guide & Reasons To Take A Sabbatical](https://think-boundless.com/sabbaticals/)
 - [Communal computing, part 1. How do we build devices that are shared… | by Chris Butler | Medium](https://chrizbot.medium.com/communal-computing-part-1-f871c6bc5257)
-- [Transduction — leading transformation — Issue \#2 | by Benjamin P. Taylor | Medium](https://antlerboy.medium.com/transduction-leading-transformation-issue-2-92882b9327dd)
+- [Transduction — leading transformation — Issue ⌗2 | by Benjamin P. Taylor | Medium](https://antlerboy.medium.com/transduction-leading-transformation-issue-2-92882b9327dd)
 - [Links for June, 2021 — What I’m Reading](https://bens.substack.com/p/links-for-june-2021)
 - [Making sense of systems change and systems leadership | by Benjamin P. Taylor | Medium](https://antlerboy.medium.com/making-sense-of-systems-change-and-systems-leadership-d7637cdec91f)
 - [Building a healthier internet with Jeremy Hurst, co-founder of Idenati — Ness Labs](https://nesslabs.com/idenati-featured-tool)
 - [spring-summer-2020](http://subpixel.space/entries/ss20/)
 - [What I learned from 100 intentional LinkedIn posts | by Benjamin P. Taylor | | Medium](https://antlerboy.medium.com/what-i-learned-from-100-intentional-linkedin-posts-fc77b5671dc1)
-- [In world of infinite overlapping possibility and multiple, irreconcilable differences, what does \#education mean? | by Benjamin P. Taylor | Medium](https://antlerboy.medium.com/in-world-of-infinite-overlapping-possibility-and-multiple-irreconcilable-differences-what-does-d06de954822d)
+- [In world of infinite overlapping possibility and multiple, irreconcilable differences, what does ⌗education mean? | by Benjamin P. Taylor | Medium](https://antlerboy.medium.com/in-world-of-infinite-overlapping-possibility-and-multiple-irreconcilable-differences-what-does-d06de954822d)
 - [An ode to slowness: the benefits of slowing down — Ness Labs](https://nesslabs.com/the-benefits-of-slowing-down)
 - [Accidental Designs – 1 — Ribbonfarm Studio](https://studio.ribbonfarm.com/p/accidental-designs-1)
 
@@ -75,7 +72,7 @@ Current gigs. [Details on the server.](https://discord.com/channels/692111190851
 - [Roam Research – A note taking tool for networked thought.](https://roamresearch.com/)
 - [Yak Collective Calendar](https://calendar.google.com/calendar/u/0/embed?src=o995m43173bpslmhh49nmrp5i4@group.calendar.google.com)
 - [Critical Business School](https://www.in-process.net/cbs/)
-- [Playing with RISC-V \#shorts — YouTube](https://www.youtube.com/watch?v=-ktyWCC_kNI)
+- [Playing with RISC-V ⌗shorts — YouTube](https://www.youtube.com/watch?v=-ktyWCC_kNI)
 - [Qiskit Learn](https://qiskit.org/learn)
 - [76: Comparative Analysis of Organizations – Charles Perrow – (1967) Talking About Organizations Podcast | Systems Community of Inquiry](https://stream.syscoi.com/2021/06/20/76-comparative-analysis-of-organizations-charles-perrow-1967-talking-about-organizations-podcast/)
 - [Refactoring](https://martinfowler.com/books/refactoring.html)
@@ -83,7 +80,7 @@ Current gigs. [Details on the server.](https://discord.com/channels/692111190851
 - [Concepts of Programming Languages — Amazon.co.uk](https://www.amazon.co.uk/Concepts-Programming-Languages-Robert-Sebesta/dp/013394302X)
 - [fast.ai · Making neural nets uncool again](https://www.fast.ai/)
 - [The History of Clarus the Dogcow – 512 Pixels](https://512pixels.net/dogcow/)
-- [The Fart Limit \#shorts — YouTube](https://youtu.be/suwg7-y70FQ)
+- [The Fart Limit ⌗shorts — YouTube](https://youtu.be/suwg7-y70FQ)
 - [Facebook](https://www.facebook.com/photo?fbid=10159477677730477&set=pcb.10159477682155477)
 - [Archaeologists recreated three common kinds of Paleolithic cave lighting | Ars Technica](https://arstechnica.com/science/2021/06/archaeologists-recreated-three-common-kinds-of-paleolithic-cave-lighting/)
 - [Twitter Rallies Behind HBO Max Intern Blamed for Test Email Accidentally Sent to Subscribers](https://gizmodo.com/twitter-rallies-behind-hbo-max-intern-blamed-for-test-e-1847133274)
@@ -108,22 +105,22 @@ Current gigs. [Details on the server.](https://discord.com/channels/692111190851
 - [Travis McGee — Wikipedia](https://en.wikipedia.org/wiki/Travis_McGee)
 - [Astonishing Stories](../projects/astonishing%20stories/index.md)
 - [Adactio: Journal — Notified](https://adactio.com/journal/18235)
-- [Company Starts Shipping Its $50,000 Mind-Reading Helmet](https://futurism.com/neoscope/company-shipping-mind-reading-helmet)
+- [Company Starts Shipping Its ＄50,000 Mind-Reading Helmet](https://futurism.com/neoscope/company-shipping-mind-reading-helmet)
 - [michael jantzen unveils five experimental greenhouses from 1972 to 1980](https://www.designboom.com/architecture/michael-jantzen-series-experimental-greenhouses-1972-1980-06-19-2021/)
 - [Weekend Linkages: Regime of Signs | Root Simple](https://www.rootsimple.com/2021/06/weekend-linkages-regime-of-signs/)
 - [inspectAR PCB Tools on the App Store](https://apps.apple.com/fi/app/inspectar-pcb-tools/id1478936899)
 - [Slab — Knowledge Base & Wiki That Democratizes Knowledge](https://slab.com/)
 - [Slab — Your Team’s Long Term Memory](https://yakrover.slab.com/register/ft154a1i/Os-Jv1BdDb_dn0nQqkaqTb0k)
 - [Alison Gopnik on the different (and similar) ways robots and children learn — The Robot Brains Podcast | Podcast on Spotify](https://open.spotify.com/episode/5uwjlHk89wVcz861PS5cj6?si=rJQoEDvrQNufQf1IKwe5Lw&dl_branch=1)
-- [Desoldering Header Pins — Collin’s Lab Notes \#adafruit \#collinslabnotes — YouTube](https://youtu.be/LTQsP5CPmRM)
-- [Small 6V 1W Solar Panel — Silver : ID 3809 : $19.95 : Adafruit Industries, Unique & fun DIY electronics and kits](https://www.adafruit.com/product/3809)
+- [Desoldering Header Pins — Collin’s Lab Notes ⌗adafruit ⌗collinslabnotes — YouTube](https://youtu.be/LTQsP5CPmRM)
+- [Small 6V 1W Solar Panel — Silver : ID 3809 : ＄19.95 : Adafruit Industries, Unique & fun DIY electronics and kits](https://www.adafruit.com/product/3809)
 - [Extending the RISC-V architecture with domain specific accelerators — Embedded.com](https://www.embedded.com/extending-the-risc-v-architecture-with-domain-specific-accelerators/)
 - [Acoustic simultaneous localization and mapping (A-SLAM) of a moving microphone array and its surrounding speakers | IEEE Conference Publication | IEEE Xplore](https://ieeexplore.ieee.org/document/7471626)
 - [To build in public or not… that’s the question, eh? | by Kanika Tibrewala | Jun, 2021 | UX Collective](https://uxdesign.cc/to-build-in-public-or-not-thats-the-question-eh-6f15e4b205d4)
 - [Alison Gopnik The Gardener and the Carpenter](http://alisongopnik.com/TheGardenerAndTheCarpenter.htm)
 - [Buttondown’s API schema](https://api.buttondown.email/v1/schema)
 - [Buttondown Integrations | Connect Your Apps with Zapier](https://zapier.com/apps/buttondown/integrations)
-- [On Rover Languages · Discussion \#3 · rhettg/stubborn · GitHub](https://github.com/rhettg/stubborn/discussions/3)
+- [On Rover Languages · Discussion ⌗3 · rhettg/stubborn · GitHub](https://github.com/rhettg/stubborn/discussions/3)
 - [Embedded EcoSystem for Rovers — Beyond Arduinos — to edit — العروض التقديمية من Google](https://docs.google.com/presentation/d/16Q_pMCctczQjv9ESqzCQ7boQaOvyXbMJ7vnTFD5EBOQ/edit)
 - [Yak Rover Weekly Standup](https://docs.google.com/forms/d/e/1FAIpQLSfl01O61dgzQ6qG0VXbvC9daLhFNnNLaTwezRRUTm-mxh_yLw/viewform)
 - [Record a video meeting — Google Meet Help](https://support.google.com/meet/answer/9308681?p=record_meeting&hl=en&visit_id=637599370714277609-1330697880&rd=1)
@@ -144,7 +141,7 @@ Current gigs. [Details on the server.](https://discord.com/channels/692111190851
 - [Hyundai x Boston Dynamics | As mobility evolves so does humanity — YouTube](https://youtu.be/O2_NEy0iDck)
 - [Modern Microprocessors — A 90-Minute Guide!](http://www.lighterra.com/papers/modernmicroprocessors/)
 - [Unitree — Go1](https://www.unitree.com/products/go1/)
-- [This $2,700 robot dog will carry a single bottle of water for you — The Verge](https://www.theverge.com/2021/6/10/22527413/tiny-robot-dog-unitree-robotics-go1)
+- [This ＄2,700 robot dog will carry a single bottle of water for you — The Verge](https://www.theverge.com/2021/6/10/22527413/tiny-robot-dog-unitree-robotics-go1)
 - [Unitree A1 Quadruped Robot](https://www.trossenrobotics.com/a1-quadruped)
 - [Thermocline — Wikipedia](https://en.wikipedia.org/wiki/Thermocline)
 - [Reterritorialization — Part 2 — The Individual | by Accelerating Meltdown | Bleeding Into Reality | Medium](https://medium.com/bleeding-into-reality/reterritorialization-part-2-the-individual-98174f08eac)
@@ -177,7 +174,7 @@ Current gigs. [Details on the server.](https://discord.com/channels/692111190851
 
 > A bucranium coin minted in Lamponeia, Troad (Troas) in 6th century BC…
 > 
-> ![E4UH681XEAAKmI0](../assets/4bbd01de34245f8be38d6be6b6ea87bb.jpg)
+> ![](../assets/4bbd01de34245f8be38d6be6b6ea87bb.jpg)
 > 
 > <https://en.wikipedia.org/wiki/Lamponeia>  
 > <https://en.wikipedia.org/wiki/Troad>  
@@ -191,7 +188,7 @@ Current gigs. [Details on the server.](https://discord.com/channels/692111190851
 
 > Reports of Organized Fraud in ACM/IEEE Conferences.
 > 
-> ![EaE1s9hXsAA6S3v](../assets/8231b340ade735d7ca048b3849c01bcb.jpg)
+> ![](../assets/8231b340ade735d7ca048b3849c01bcb.jpg)
 > 
 > <https://medium.com/@tnvijayk/potential-organized-fraud-in-acm-ieee-computer-architecture-conferences-ccd61169370d>
 > 
@@ -207,8 +204,8 @@ Current gigs. [Details on the server.](https://discord.com/channels/692111190851
 > 
 > > A popular fishing spot, but not because of the fish.
 > > 
-> > ![E4HbIoVWEAAyZ4U](../assets/8ef6c5f7b5fe7415b6af0eb5b26c5bad.png)
-> > ![E4HbJRfX0AYRN2J](../assets/ee0be785a092d81d62ac2f78b6d7fb6e.jpg)
+> > ![](../assets/8ef6c5f7b5fe7415b6af0eb5b26c5bad.png)
+> > ![](../assets/ee0be785a092d81d62ac2f78b6d7fb6e.jpg)
 > > 
 > > — [GuruAnaerobic • @GuruAnaerobic • 3:56 PM • Jun 17, 2021](https://x.com/GuruAnaerobic/status/1405645522493480967)
 > 
@@ -216,7 +213,7 @@ Current gigs. [Details on the server.](https://discord.com/channels/692111190851
 
 > An ancient giant ‘rhino’ was truly giant. “The 26-foot-long (8 meters) beast had a shoulder height of 16.4 feet (5 m), and it weighed as much as 24 tons (21.7 metric tons).” via @LiveScience
 > 
-> ![E4Kk8o-WYAARfto](../assets/45dc8cc998597b12ce26342facfb4bb4.jpg)
+> ![](../assets/45dc8cc998597b12ce26342facfb4bb4.jpg)
 > 
 > <https://www.realclearscience.com/articles/2021/06/18/ancient_giant_rhino_was_one_of_the_largest_mammals_to_walk_the_earth_781988.html>
 > 
@@ -228,17 +225,17 @@ Current gigs. [Details on the server.](https://discord.com/channels/692111190851
 
 > Idle moments while elevating infected foot and using icepack; playing with a matrix to position various consultants, exorcists and shallow thinkers
 > 
-> ![E4Qer79WEAIZw1g](../assets/ab58f2cb88ac98cd540600f6f0e2074d.jpg)
+> ![](../assets/ab58f2cb88ac98cd540600f6f0e2074d.jpg)
 > 
 > — [ᗪᗩᐯᕮ SᑎOᗯᗪᕮᑎ 🏴󠁧󠁢󠁷󠁬󠁳󠁿 🇪🇺 • @snowded • 4:08 PM • Jun 19, 2021](https://x.com/snowded/status/1406282726945263622)
 
-> Pls share: *Calling Researchers!* We’re looking for a \#researcher to design the \#evaluation approach, data collection & analysis plan for our \#foodventure. 6 week project starting immediately. For more info & how to respond take a look over here 👇
+> Pls share: *Calling Researchers!* We’re looking for a ⌗researcher to design the ⌗evaluation approach, data collection & analysis plan for our ⌗foodventure. 6 week project starting immediately. For more info & how to respond take a look over here 👇
 > 
 > <https://shiftdesign.org/careers/>
 > 
 > — [Shift • @shift\_org • 4:46 PM • Apr 14, 2021](https://x.com/shift_org/status/1382374723447705600)
 
-> We were blown away by the creativity and enthusiasms of \#IBMQuantumChallenge participants! Who knows what might happen if we devised a challenge to tackle an unsolved problem in the research field?
+> We were blown away by the creativity and enthusiasms of ⌗IBMQuantumChallenge participants! Who knows what might happen if we devised a challenge to tackle an unsolved problem in the research field?
 > 
 > <https://research.ibm.com/blog/quantum-challenge-2021-results>
 > 
@@ -246,7 +243,7 @@ Current gigs. [Details on the server.](https://discord.com/channels/692111190851
 
 > Dan Harmon on writer’s block
 > 
-> ![E4HgygpWUAMI8Hs](../assets/d0d52c0a0e719c275bc1eacd65fdf406.jpg)
+> ![](../assets/d0d52c0a0e719c275bc1eacd65fdf406.jpg)
 > 
 > <https://news.ycombinator.com/item?id=23092657>
 > 
@@ -264,7 +261,7 @@ Current gigs. [Details on the server.](https://discord.com/channels/692111190851
 
 > 1/ Just for fun, here’s a thread comparing retrofuturist art from the mid 20th century with the reality today!
 > 
-> ![8610da43-75eb-4366-a141-0a823505d11f\_625x353](../assets/263cee37c47f3be40eaec274f6391bf3.jpg)
+> ![](../assets/263cee37c47f3be40eaec274f6391bf3.jpg)
 > 
 > <https://gizmodo.com/42-visions-for-tomorrow-from-the-golden-age-of-futurism-1683553063>  
 > <https://www.pinterest.com/pin/475270566909183551/>
@@ -281,11 +278,11 @@ Current gigs. [Details on the server.](https://discord.com/channels/692111190851
 > 
 > — [Venkatesh Rao • @vgr • 11:56 PM • Jun 18, 2021](https://x.com/vgr/status/1406038197008703491)
 
-> Tencent officially launched the first complete self-developed multi-modal quadruped robot \#deeplearning \#machinelearning \#datascience \#artificialintelligence \#100DaysOfCode \#BlackTechTwitter \#Microsoft \#30Daysofcode \#Unity初心者 \#arkit \#unity3d \#innovation \#robot \#robotics \#ux
+> Tencent officially launched the first complete self-developed multi-modal quadruped robot ⌗deeplearning ⌗machinelearning ⌗datascience ⌗artificialintelligence ⌗100DaysOfCode ⌗BlackTechTwitter ⌗Microsoft ⌗30Daysofcode ⌗Unity初心者 ⌗arkit ⌗unity3d ⌗innovation ⌗robot ⌗robotics ⌗ux
 > 
 > — [i\_king\_of\_ml • @ikingofml1 • 2:59 AM • Mar 15, 2021](https://x.com/ikingofml1/status/1371295003448778755)
 
-> When did cheap C-flavored microcontroller boards first appear? Was Arduino the first one? How much did an Arduino equivalent boards cost in the 90s and aughts? I remember an Atmel board that was around $300 in 2006.
+> When did cheap C-flavored microcontroller boards first appear? Was Arduino the first one? How much did an Arduino equivalent boards cost in the 90s and aughts? I remember an Atmel board that was around ＄300 in 2006.
 > 
 > — [Venkatesh Rao • @vgr • 1:55 AM • Jun 10, 2021](https://x.com/vgr/status/1402806640768806912)
 
@@ -311,17 +308,17 @@ Current gigs. [Details on the server.](https://discord.com/channels/692111190851
 > 
 > — [David Lang • @davidtlang • 4:18 AM • Jun 26, 2021](https://amazon.com/s?k=underwater+drones)
 
-> \#roamans, what’s the currently preferred way of reading .epub ebooks, making notes and getting things into Roam on iOS (yes, very specific question 😁)? I’ve been using Marvin but the last update was three years ago and I’m looking for something better.
+> ⌗roamans, what’s the currently preferred way of reading .epub ebooks, making notes and getting things into Roam on iOS (yes, very specific question 😁)? I’ve been using Marvin but the last update was three years ago and I’m looking for something better.
 > 
-> ![9598e8f9-4aa4-4fc8-9566-443fceddaf70\_1200x630](../assets/787180e13c0bae645ab96d535180a1ac.png)
+> ![](../assets/787180e13c0bae645ab96d535180a1ac.png)
 > 
 > <https://apps.apple.com/us/app/marvin-3/id1086482858>
 > 
 > — [C𐃏rtex Futura 🚢 9/30 Atomic Essays • @cortexfutura • 8:03 AM • Jun 25, 2021](https://x.com/cortexfutura/status/1408335044381392900)
 
-> @cortexfutura Few years ago I used MarginNote for ePub with great success. I also know some \#roamans using it today. I haven’t used it for a while, but it advertises multiple format outputs.
+> @cortexfutura Few years ago I used MarginNote for ePub with great success. I also know some ⌗roamans using it today. I haven’t used it for a while, but it advertises multiple format outputs.
 > 
-> ![2fae7c90-29ac-4d1b-9df6-b0bff26d70c8\_1200x630](../assets/b531772e81ba9c1c9eb9054c665da2ef.png)
+> ![](../assets/b531772e81ba9c1c9eb9054c665da2ef.png)
 > 
 > <https://apps.apple.com/us/app/marginnote-3/id1348317163>
 > 
@@ -329,7 +326,7 @@ Current gigs. [Details on the server.](https://discord.com/channels/692111190851
 
 > @cortexfutura Currently using Apple’s Books and @readwiseio to transfer highlights and notes into Roam
 > 
-> ![ea0586de-da3c-4148-beb8-65c431bf5dea\_399x865](../assets/2dd9544827be187df97c8f216aec9310.gif)
+> ![](../assets/2dd9544827be187df97c8f216aec9310.gif)
 > 
 > <https://help.readwise.io/article/35-how-do-i-import-apple-books-highlights-from-my-iphoneipad>
 > 

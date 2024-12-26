@@ -1,8 +1,5 @@
 ---
 title: "Reminder: Call for Project Contributors for Yak Project Proposals"
-aliases:
-  - "Reminder: Call for Project Contributors for Yak Project Proposals"
-quartsRssFeed: true
 date: 2020-07-02
 substack: https://yakcollective.substack.com/p/reminder-call-for-project-contributors
 ---

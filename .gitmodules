@@ -1,0 +1,3 @@
+[submodule ".automation/quartz"]
+	path = .automation/quartz
+	url = https://github.com/jackyzha0/quartz.git
