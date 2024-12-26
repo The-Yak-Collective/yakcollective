@@ -12,7 +12,7 @@ quartsRssFeed: true
 
 “Judd!” His father yelled as he walked into the garage. “Why the hell is your Clarinet-MLv2 in pieces? How are you going to make regional youth orchestra with a broken machine learning clarinet?” In-person socializing among children had become another luxury good, doled out to high achievers and those who could afford the best virtual instruction. In an age of pandemics and rolling lockdowns, his dad saw the youth orchestra as an opportunity for kids like his son to get out of the house.
 
-“Whoa!” Judd put up his hands to deflect his father’s anger, “I can explain.” Shunting his father to the corner of the garage and away from the decomposed clarinet, he began breathlessly, “so I’m practicing yesterday like normal, getting feedback from Clarence, the clarinet’s evaluation algorithm. But I notice it just keeps repeating the same thing, in the same patronizing British accent. And I mean, No. Matter. What. I. Played. I practiced my arpeggios for two hours, and it tells me I’m 46th percentile. I play a series of high-pitched squeals: ‘Practice your arpeggios…’ I even take the thing apart and remove the analog-to-digital converter so I can feed it recordings of Benny Goodman. “You’re at the 46th percentile. Practice your arpeggios.” Judd throws up his hands in exasperation.  
+“Whoa!” Judd put up his hands to deflect his father’s anger, “I can explain.” Shunting his father to the corner of the garage and away from the decomposed clarinet, he began breathlessly, “so I’m practicing yesterday like normal, getting feedback from Clarence, the clarinet’s evaluation algorithm. But I notice it just keeps repeating the same thing, in the same patronizing British accent. And I mean, No. Matter. What. I. Played. I practiced my arpeggios for two hours, and it tells me I’m 46th percentile. I play a series of high-pitched squeals: ‘Practice your arpeggios…’ I even take the thing apart and remove the analog-to-digital converter so I can feed it recordings of Benny Goodman. “You’re at the 46th percentile. Practice your arpeggios.” Judd throws up his hands in exasperation.
 
 ![Justice — https://asterisques.com/](../../assets/astonishing%20stories%202%20your%20payment%20is%20ready.webp)
 
@@ -30,6 +30,6 @@ Judd’s father’s eyes brightened in surprise. “Really?”
 
 “Clarence even said I was eligible for a statewide scholarship!”
 
-“Judd, that’s wonderful.” His skepticism took a sudden backseat to the prospect of reduced tuition. Maybe Judd _wasn’t_ just fooling around out here.
+“Judd, that’s wonderful.” His skepticism took a sudden backseat to the prospect of reduced tuition. Maybe Judd *wasn’t* just fooling around out here.
 
 “I know! They said they’d send a cheque. All we have to do is deposit it in the bank, then wire half of it to a numbered account which they’ll provide separately. That will cover tuition and I can keep the other half for living expenses.”

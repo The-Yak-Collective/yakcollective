@@ -18,16 +18,10 @@ This `README` and files in the `private` directory are *not* included in the fin
 ## Ways to Contribute
 [Current website issues and projects on GitHub.](https://github.com/The-Yak-Collective/yakcollective/issues) Pull requests and ideas welcome!
 
-Conversations happen on [the Discord ⌗infrastructure channel](https://discord.com/channels/692111190851059762/704369362315772044).
+Conversations happen on [the Discord \#infrastructure channel](https://discord.com/channels/692111190851059762/704369362315772044).
 
 ## TODO
 - [ ] Integrate in newsletters from `.automation/var/cache/pluto/newsletter/*`
-- [ ] Fix various formatting issues
-	- [ ] Quotes (single and double)
-	- [ ] Dashes (single, n-dash, and m-dash)
-	- [ ] Italics
-	- [ ] Hashes
-	- [ ] Email addresses
 - [ ] Make sure that all all pages are linked to each other (and remove unused pages)
 - [ ] Make sure text works well everywhere
 	- [ ] Obsidian
@@ -38,7 +32,7 @@ Conversations happen on [the Discord ⌗infrastructure channel](https://discord.
 	- `.github`
 - [ ] Reimplement join page form using [Netlify Forms](https://docs.netlify.com/forms/setup/)
 - [ ] Move [IT infrastructure map](https://roamresearch.com/#/app/ArtOfGig/page/w6uAG9Pig) from DOT/Graphviz to something like Mermaid
-	- ChatGPT makes a decent first-pass, but it doesn't really understand multi-path commands
+	- ChatGPT makes a decent first-pass, but it doesn’t really understand multi-path commands
 	- The goal here is Foam/GitHub compatibility
 	- Add it to the `private` directory
 	- Probably should rebuild SVG on update…

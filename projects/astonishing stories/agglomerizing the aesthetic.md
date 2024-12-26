@@ -8,7 +8,7 @@ aliases:
 ---
 *November 29th 2020* • [Benjamin Smith](https://bens.substack.com/)
 
-Sometimes I just marvel at the world we live in. People always bitch about the global, remote workforce—*a race to the bottom, downward pressure on wages*, blah, blah, blah—but here I was getting ready to Virtual HouseGuest with my new girlfriend’s parents for dinner tomorrow, and I was about to get some niche expertise on styling my hair on a Sunday night. When you needed something, no matter how minor, someone, somewhere in the world could help you with it. It was amazing!
+Sometimes I just marvel at the world we live in. People always bitch about the global, remote workforce — *a race to the bottom, downward pressure on wages*, blah, blah, blah — but here I was getting ready to Virtual HouseGuest with my new girlfriend’s parents for dinner tomorrow, and I was about to get some niche expertise on styling my hair on a Sunday night. When you needed something, no matter how minor, someone, somewhere in the world could help you with it. It was amazing!
 
 ![Justice — https://asterisques.com/](../../assets/astonishing%20stories%206%20agglomerizing%20the%20aesthetic.webp)
 
@@ -20,13 +20,13 @@ Sometimes I just marvel at the world we live in. People always bitch about the g
 
 “Whoa, JoAnne! Geez,” Putting my hands up in mock resignation. “I’m trying to get some styling tips, not a security clearance!”  I laughed loudly. The thing about a global labor market was that you had to be on top of your game, because if you weren’t there was always someone else looking to replace you. Customer service had become an art form and that included witty repartee. I loved it.
 
-JoAnne smiled graciously. “Don’t worry. I’ve helped thousands of men with medium-length hair in hundreds of different situations. We’ll figure out exactly what you need.” The survey appeared on my screen. Twenty minutes later I clicked Send.  
+JoAnne smiled graciously. “Don’t worry. I’ve helped thousands of men with medium-length hair in hundreds of different situations. We’ll figure out exactly what you need.” The survey appeared on my screen. Twenty minutes later I clicked Send.
 
 “Read it and weep, JoAnne.” I joked. “Don’t fall in love with me now.”
 
 JoAnne smiled, “No, no, we’ll get right down to it. So first —” JoAnne paused as she read my survey answers. Her brow furrowed and she looked quickly to the screen with my hair profile.
 
-There was an intake of breath through clenched teeth. “Oooh, I’m sorry. It looks like your hair has some potential pH balance issues. I only handle hair in the normal 4.5-5.5 range. Don’t worry though! I’m going to connect you with our pH specialist and she will take care of you.”
+There was an intake of breath through clenched teeth. “Oooh, I’m sorry. It looks like your hair has some potential pH balance issues. I only handle hair in the normal 4.5 – 5.5 range. Don’t worry though! I’m going to connect you with our pH specialist and she will take care of you.”
 
 “Wait, I just need —” the video call disconnects and after a long pause, I see another face appear on-screen.
 

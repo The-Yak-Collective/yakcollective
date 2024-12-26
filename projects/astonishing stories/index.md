@@ -7,7 +7,7 @@ date: 2020-10-23
 ## Weird is part of the job
 The upside of an extremely uncertain environment is that we have been free to indulge in pure speculation about the known knowns and unknown unknowns of the future. The result is Astonishing Stories, an anthology of short vignettes from the future developed from the networked thoughts of over 30 indie consultants.
 
-Our working process is open and visible to all on our [Roam graph](https://roamresearch.com/#/app/Astonishing_Stories/graph) where we developed provoking descriptions of objects from the near and far future using [The Thing From The Future](http://situationlab.org/project/the-thing-from-the-future/). The objects served as jumping off points for our authors as they tried to imagine a world in which the pandemic is the background event for other shifts. 
+Our working process is open and visible to all on our [Roam graph](https://roamresearch.com/#/app/Astonishing_Stories/graph) where we developed provoking descriptions of objects from the near and far future using [The Thing From The Future](http://situationlab.org/project/the-thing-from-the-future/). The objects served as jumping off points for our authors as they tried to imagine a world in which the pandemic is the background event for other shifts.
 
 The stories here are not meant to predict the future but to be imagination extenders for entrepreneurs and consultants navigating a post-COVID landscape.
 

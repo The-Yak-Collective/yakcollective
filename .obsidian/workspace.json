@@ -28,13 +28,28 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "newsletters/2020-09-04-podcasting-needs-cognitive-hooks.md",
+                "file": "newsletters/index.md",
                 "mode": "source",
                 "backlinks": true,
-                "source": true
+                "source": false
               },
               "icon": "lucide-file",
-              "title": "2020-09-04-podcasting-needs-cognitive-hooks"
+              "title": "index"
+            }
+          },
+          {
+            "id": "fdefabc73c204326",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "README.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "README"
             }
           }
         ],
@@ -100,7 +115,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "work groups/infrastructure.md",
+                "file": "newsletters/index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +125,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for infrastructure"
+              "title": "Backlinks for index"
             }
           },
           {
@@ -133,18 +148,18 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "work groups/infrastructure.md"
+                "file": "newsletters/index.md"
               },
               "icon": "lucide-list",
-              "title": "Outline of infrastructure"
+              "title": "Outline of index"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -156,42 +171,41 @@
   },
   "active": "81b85c616f45e6c6",
   "lastOpenFiles": [
-    "newsletters/2020-08-14-targeting-trust.md",
-    "newsletters/2020-08-07-presidential-campaign-as-decentralized-org.md",
-    "newsletters/2020-08-22-decarbonization-strategies.md",
-    "newsletters/2020-09-04-podcasting-needs-cognitive-hooks.md",
+    "newsletters/2020-06-15 announcing yak talk.md",
+    "newsletters/2020-06-19 yak talk.md",
+    "newsletters/2020-06-26 yak talk.md",
+    "newsletters/2020-07-02 reminder call for project contributors for yak project proposals.md",
+    "newsletters/2020-07-03 yaks do innovation consulting.md",
+    "assets/4e728051-8d48-460f-9586-936e82647420_3573x2512.jpg",
+    "newsletters/2020-07-10 yak talk.md",
+    "assets/73ded5a0-e817-4c3d-b67e-e89a5e298227_690x362.jpg",
+    "assets/dae1958f-9ba6-4785-ad5f-d52f83482125_1196x404.jpg",
+    "newsletters/2020-07-17 are k-pop stans the future of activism.md",
+    "assets/72b46efd-1995-47f4-b5df-5120b874767c_790x527.jpg",
+    "newsletters/2020-07-24 gpt-3 and the new fake intelligence.md",
+    "assets/00f1a13b-aab4-49c2-aed7-53ff92567b3c_1182x378.png",
+    "assets/7d60ed6d-e804-4ae8-8820-f5c2446ad294_1552x604.png",
+    "assets/9d10e0a4-3133-4ec1-81f0-5d44c8886de9_1418x524.png",
+    "assets/84706a76-9d5e-42da-a174-ada0c4740e70_1024x537.jpg",
+    "newsletters/2020-07-31 chasing tails part one.md",
+    "assets/8ae83d3a-85aa-4e0d-b5bb-62c447607de7_1600x1200.jpg",
+    "newsletters/2020-08-07 presidential campaign as decentralized org.md",
+    "newsletters/2020-08-14 targeting trust.md",
+    "newsletters/2020-08-22 decarbonization strategies.md",
+    "newsletters/2020-09-04 podcasting needs cognitive hooks.md",
     "newsletters/2020-09-18 the objective of the innards.md",
-    "assets/068f455e-9fb7-483a-adc6-43f23db309ef_1600x1200.jpg",
     "newsletters/2020-10-23 took a break now were back.md",
-    "projects/astonishing stories/wholeness in a timeless activity.md",
-    "assets/5259d577-3dfe-460e-9631-4bafbb4ad47f_705x1001.jpg",
     "newsletters/2020-11-27 thank you yak collective.md",
-    "assets/941a80bd-1983-4afa-b6f3-141df3dab418_1440x1575.jpg",
     "newsletters/2020-12-10 first yc annual meeting.md",
-    "assets/09018843-eafb-4d60-a82a-de64fdfa4616_1440x1440.jpg",
     "newsletters/2021-02-05 new year newsletter.md",
     "newsletters/2021-05-23 yak trails.md",
-    "assets/EFJ4pVwXUAIiDX-.jpg",
-    "assets/ab511979-414b-4bad-b9fc-2713d3a65ddf_1450x1546.jpg",
-    "assets/833f3aee-e4a1-48e5-bae5-f99981488e23_2000x1600.jpg",
-    "assets/90ed0a4c-ad91-475d-80cc-7e6dca56d9a5_2612x880.png",
     "newsletters/2021-05-30 yak trails.md",
-    "assets/E2VtO0zXEAUpFny.jpg",
     "newsletters/2021-06-06 yak trails.md",
-    "assets/E2c3YnTUYAAq2Bo.jpg",
     "newsletters/2021-06-13 yak trails.md",
     "newsletters/2021-06-20 yak trails.md",
     "newsletters/2021-06-27 yak trails.md",
     "newsletters/2021-07-04 yak trails.md",
-    "newsletters/2021-12-06 yc annual meeting yak rover demo day.md",
-    "newsletters/2021-12-15 yc annual survey.md",
-    "newsletters/2022-01-24 tonight rovers 101 session.md",
-    "newsletters/index.md",
-    "work groups/index.md",
-    "projects/astonishing stories/index.md",
-    "index.md",
-    "projects/future frontiers.md",
-    "study groups/index.md",
+    "assets/27849f60-d910-46bb-a8b2-baa4faa6770d_758x960.jpg",
     "newsletters",
     "assets/dont waste the reboot.pdf",
     "assets/new old home.pdf",

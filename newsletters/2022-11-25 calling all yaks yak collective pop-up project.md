@@ -17,13 +17,13 @@ A new client wants to do something similar. This company has three products rela
 
 All three products ideas have an envisioning upcycling plastics theme. No specialized knowledge is necessary. The deliverable will be in the same slide deck format as the [Don’t Waste the Reboot](../projects/dont%20waste%20the%20reboot.md) deck.
 
-There’s room for 8-15 participants, each of who will make between 200-1,200 USD, depending on the number of contributions. We are targeting 18 contributions. There is also a budget for artwork and graphic design — if you have those skills, please consider applying.
+There’s room for 8 – 15 participants, each of who will make between 200 – 1,200 USD, depending on the number of contributions. We are targeting 18 contributions. There is also a budget for artwork and graphic design — if you have those skills, please consider applying.
 
-We've structured the project timeline to be minimally disruptive to December and holiday plans and will also be giving dibs on participation to people who have contributed to previous or ongoing projects and/or have done significant volunteer work on infrastructure/backend, etc.
+We’ve structured the project timeline to be minimally disruptive to December and holiday plans and will also be giving dibs on participation to people who have contributed to previous or ongoing projects and/or have done significant volunteer work on infrastructure/backend, etc.
 
 * * *
 
-The contributions solicitations for this second paid client project went live this morning in the ⌗announcements channel on the Yak Collective Discord. You’ll have until November 30 to sign up.
+The contributions solicitations for this second paid client project went live this morning in the \#announcements channel on the Yak Collective Discord. You’ll have until November 30 to sign up.
 
 [Jump on the Discord to take see the announcement with links to the project brief and participation form.](https://discord.com/channels/692111190851059762/703615828419018832/1044978538073309234)
 

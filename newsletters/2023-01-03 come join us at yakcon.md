@@ -8,7 +8,7 @@ substack: https://yakcollective.substack.com/p/come-join-us-at-yakcon
 ---
 [![YakCon 2023](../assets/yakcon%202023.webp)](../yakcon%202023.md)
 
-A lot's changed since early 2020. One thing hasn’t: the Yak Collective continues to slouch steadily into yet another year; its third. To mark the occasion — and to usher in 2023 — we’re holding a week-long interactive tinkering session: **YakCon**. It comprises two consecutive Sunday virtual meetups (on the 8th and 15th) book-ending a week of asynchronous activities (curated by volunteer track leads) on our Discord. YakCon is intended to give both new and returning yaks a chance to learn about and try out one or more of our many ongoing activities.
+A lot’s changed since early 2020. One thing hasn’t: the Yak Collective continues to slouch steadily into yet another year; its third. To mark the occasion — and to usher in 2023 — we’re holding a week-long interactive tinkering session: **YakCon**. It comprises two consecutive Sunday virtual meetups (on the 8th and 15th) book-ending a week of asynchronous activities (curated by volunteer track leads) on our Discord. YakCon is intended to give both new and returning yaks a chance to learn about and try out one or more of our many ongoing activities.
 
 [**You can register here.**](../yakcon%202023.md)
 
@@ -18,7 +18,7 @@ Right now, we have activity tracks going in robotics, governance studies, distri
 
 The core of the Yak Collective is synchronous study, collaboration, and tinkering sessions with asynchronous research and communication. Both occur at a light, sustainable tempo with an infinite-game outlook.
 
-YakCon reflects this, and aims to give you a taste of our regular activities. It's a week-long interactive tinkering session. It isn't a broadcast. It's not your typical Annual Meeting. It's a participatory open house.
+YakCon reflects this, and aims to give you a taste of our regular activities. It’s a week-long interactive tinkering session. It isn’t a broadcast. It’s not your typical Annual Meeting. It’s a participatory open house.
 
 [**Come by and check it out.**](../yakcon%202023.md)
 

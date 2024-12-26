@@ -7,7 +7,7 @@ quartsRssFeed: true
 ---
 ## Making the Next Normal Better Than the Last One
 The inaugural report by the Yak Collective, *Don’t Waste the Reboot* offers organizations a smorgasbord of 25 creative and unexpected provocations, ideas, and action frameworks to navigate the COVID-19 crisis.
-  
+
 Authored by 21 diverse contributors from around the world — most of whom are working together for the first time — we believe this report will get you thinking about your reboot efforts in a bolder, more imaginative way. Let us know what you think!
 
 ![Making the next normal better than the last one](../assets/dont%20waste%20the%20reboot.pdf)
@@ -25,5 +25,5 @@ This deck is just the first of what we hope will be a series of studies the Yak 
 
 **Want to hang out with us *live* as we work these problems?** [Join our Discord server](../join.md). Our working process is literally open. Any independent consultant from anywhere in the world who has ideas is welcome to join our efforts, contribute to and lead collaborative projects. Any prospective client is welcome to hang out as well.
 
-## The Yak Collective // Don't Waste the Reboot
+## The Yak Collective // Don’t Waste the Reboot
 **Lead editors** / [Paul Millerd](https://think-boundless.com/) and [Venkatesh Rao](https://venkateshrao.com/) // **Collaborators** / Jordan Allen, [Martha Balaile](https://www.mythologystudio.com/), [Nita Baum](https://www.bfree.live/), [Sachin Benny](https://sachinbenny.notion.site/I-m-Sachin-Benny-7391ec1aafa94af28599a2b089c4bf35), [Tom Critchlow](https://tomcritchlow.com/), [Vinay Débrou](https://x.com/vinaydebrou), [Alex Dobrenko](https://x.com/Dobrenkz), [Darren Kong](https://varietal.xyz/home/), [Anne-Laure Le Cunff](https://nesslabs.com/), [Randy Lubin](https://randylubin.com/), [David McDougall](https://x.com/dmcdougall), [Vlad Mehakovic](https://x.com/vladiim), [Ben Mosior](https://hiredthought.com/), [Jordan Peacock](https://www.becomingmachinic.com/), [Rodrigo Pinto](https://www.linkedin.com/in/rodrigopedroso/), Harry Pottash, [Amanda Reeves](https://wabisabifutures.com/), [Vaughn Tan](https://vaughntan.org/), [Benjamin Taylor](https://www.antlerboy.com/), [Thomas Verhagen](https://www.linkedin.com/in/thomasverhagen/)

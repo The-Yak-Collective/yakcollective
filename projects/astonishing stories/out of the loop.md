@@ -152,6 +152,6 @@ Vijayan flashed back to all the times this happened to him with his father, then
 
 Today, a year later, Vijayan is at the hipster coffee shop and finally able to make eye contact with his ex-girlfriend barista. For a split second, his mind momentarily leaves and he feels like he is inhabiting the body of his self from a year ago. Weirdly enough, Vijayan recognizes him.
 
-He pulled to refresh the top listings page on the app store. *GPT-51 Pre-Fab Dad* had done well since their last update which gave users the option to add voice filters to their critical parent voice. The most popular filter these days was the high-pitched voice of Brian’s mother from Monty Python’s *Life of Brian*. The page updated and there it was — undeniable proof that they had hit a goldmine of first-world problems, *GPT-51 Pre-Fab Dad* was the ⌗1 paid app.
+He pulled to refresh the top listings page on the app store. *GPT-51 Pre-Fab Dad* had done well since their last update which gave users the option to add voice filters to their critical parent voice. The most popular filter these days was the high-pitched voice of Brian’s mother from Monty Python’s *Life of Brian*. The page updated and there it was — undeniable proof that they had hit a goldmine of first-world problems, *GPT-51 Pre-Fab Dad* was the \#1 paid app.
 
 He looked down at his forearm tattoo which right now resembled the beautiful constellations he had observed on that dreadful *Love the Land* escapade.

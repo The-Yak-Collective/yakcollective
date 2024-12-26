@@ -8,15 +8,13 @@ substack: https://yakcollective.substack.com/p/first-yc-annual-meeting
 ---
 Reminder, the annual meeting of the Yak Collective will be held **tomorrow,** Thursday December 10th at 8 AM Pacific. It’s a public Zoom event, so do drop by if you’re curious to hear what we’ve been up to and what we are hoping to do next year. We’ll talk old projects, new projects, our rapidly evolving infrastructure and production capabilities,
 
-Here is the [public calendar invite](https://calendar.google.com/event?action=TEMPLATE&tmeid=NWoyOThhOWVtNWg1ZzlnMmtrYTZ0ZHNscTEgbzk5NW00MzE3M2Jwc2xtaGg0OW5tcnA1aTRAZw&tmsrc=o995m43173bpslmhh49nmrp5i4%40group.calendar.google.com).  
+Here is the [public calendar invite](https://calendar.google.com/event?action=TEMPLATE&tmeid=NWoyOThhOWVtNWg1ZzlnMmtrYTZ0ZHNscTEgbzk5NW00MzE3M2Jwc2xtaGg0OW5tcnA1aTRAZw&tmsrc=o995m43173bpslmhh49nmrp5i4%40group.calendar.google.com).
 
 **Topic:** Yak Collective Annual Meeting and Holiday Party  
-**Time:** Dec 10, 2020 08:00 AM Pacific Time (US and Canada)  
-**Zoom Meeting:** <https://us02web.zoom.us/j/87558263911>  
-**Meeting ID:** 875 5826 3911
+**Time:** Dec 10, 2020 08:00 AM Pacific Time (US and Canada)
 
-# Astonishing Story
-## Mechanical Turks All the Way Down
+## Astonishing Story
+### Mechanical Turks All the Way Down
 I jabbed the accept button on one of the many touch surfaces that suddenly popped into reality in my shared office, home, and daycare. Can’t be too eager on your first day of the job.
 
 There was a low din of my five-year-old arguing again about what xe would or would not eat for breakfast. Thank god for the AR distraction-canceling face mask. It was cranked up to 98% reality canceling. With it on I could safely ignore the mounting skirmish between little Tovio and my partner.

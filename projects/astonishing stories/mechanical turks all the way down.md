@@ -37,7 +37,7 @@ That’s exactly what I was thinking.
 
 Was this a corp test? How did I know this requester was a real person? I’ve been warned by a friend who also works this gig that they will slip these in every now and then to make sure I’m not using personal algos to do my work.
 
-While I was trying to orient myself, three windows filled with top-10 lists for presents for managers of 3 to 5 years. One window included a sock collection that matched shoes this group had bought, another popped up a guided meditation app focused on dealing with the uncertainty of life, and the third suggested a wine-flavored powdered alcohol collection of the best wines ever made. 
+While I was trying to orient myself, three windows filled with top-10 lists for presents for managers of 3 to 5 years. One window included a sock collection that matched shoes this group had bought, another popped up a guided meditation app focused on dealing with the uncertainty of life, and the third suggested a wine-flavored powdered alcohol collection of the best wines ever made.
 
 The sock collection had already been suggested to the client by the algo.
 
@@ -85,7 +85,7 @@ I said as fast as I could:
 I recommend the Chupa Chups reproduction taste machine. It gets at something that your ‘principal’ posted a long time ago in the archives.
 ```
 
-It was a long-shot item on the list that the system had spit out with low confidence and high uncertainty. 
+It was a long-shot item on the list that the system had spit out with low confidence and high uncertainty.
 
 I got a quick reply:
 

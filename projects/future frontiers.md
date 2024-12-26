@@ -16,7 +16,7 @@ While mass participation in frontier exploratory activities is still not a reali
 In the wake of Covid19, could an era of democratized access to frontiers be the key to a renewed sense of larger purpose in the universe for humanity? In this continuously evolving project, members of the Yak Collective ponder our future as an exploratory species.
 
 > [!on-horizons] On Horizons
-> Venkatesh Rao #philosophy
+> Venkatesh Rao `#philosophy`
 > 
 > ![On Horizons :: 1/1](../assets/future%20frontiers%2001.01.01%20on%20horizons.webp)
 > *Carse photo from [Simon & Schuster](https://www.simonandschuster.biz/authors/James-Carse/313085); collage by Jenna Dixon*
@@ -28,7 +28,7 @@ In the wake of Covid19, could an era of democratized access to frontiers be the 
 > Frontiers are essential food for the psyche, for a species with the temporal imagination to see past the limits of individual mortality. Frontiers are spaces where moving towards horizons results reliably, if not predictably, in encounters with novelty. And it is the endless supply of novelty flowing across the frontier horizons of humanity that makes it possible to play what philosopher James Carse called the infinite game, where the goal is not to win, but to continue the play.
 
 > [!democratized-underwater-exploration] Democratized Underwater Exploration
-> Venkatesh Rao #trends
+> Venkatesh Rao `#trends`
 > 
 > > [!democratized-underwater-exploration] State-of-the-art consumer-class submersible
 > > ![Democratized Underwater Exploration :: 1/4](../assets/future%20frontiers%2002.01.01%20democratized%20underwater%20exploration.webp)
@@ -36,13 +36,13 @@ In the wake of Covid19, could an era of democratized access to frontiers be the 
 > > 
 > > Consumer-priced ocean exploration products are just beginning to emerge, creating unprecedented opportunities for democratized participation in ocean exploration. Companies like [Sofar](https://www.sofarocean.com/) (created via merger of OpenROV and Spoondrift) now offer consumer-priced ocean exploration gear capable of serious research and exploration activities. The development is similar to the impact of low-cost, high-power amateur telescopes such as large-aperture Dobsonian telescopes in amateur astronomy. But the stack required for true democratization remains incomplete.
 > 
-> > [!democratized-underwater-exploration] Capability gap 
+> > [!democratized-underwater-exploration] Capability gap
 > > ![Democratized Underwater Exploration :: 2/4](../assets/future%20frontiers%2002.01.02%20democratized%20underwater%20exploration.webp)
 > > *[MBARI](https://www.mbari.org/) (left) and [Sofar](https://www.sofarocean.com/products/trident) (right)*
 > > 
-> > **Consumer-scale products** have limited range, endurance, depth limit, modest sensor payload, low autonomy capabilities, and a limited stack. **Bespoke research equipment** like the MBARI _Tethys_ above are capable of long range endurance missions and are supported by a deeper stack of support technologies.
+> > **Consumer-scale products** have limited range, endurance, depth limit, modest sensor payload, low autonomy capabilities, and a limited stack. **Bespoke research equipment** like the MBARI *Tethys* above are capable of long range endurance missions and are supported by a deeper stack of support technologies.
 > 
-> > [!democratized-underwater-exploration] Dimensions of the gap 
+> > [!democratized-underwater-exploration] Dimensions of the gap
 > > ![Democratized Underwater Exploration :: 3/4](../assets/future%20frontiers%2002.01.03%20democratized%20underwater%20exploration.webp)
 > > *[MBARI](https://www.mbari.org/) (left) and [Sofar](https://www.sofarocean.com/products/trident) (right)*
 > > 
@@ -53,7 +53,7 @@ In the wake of Covid19, could an era of democratized access to frontiers be the 
 > > - **Legal:** Can amateurs handle lawless international waters and regulation choked territorial waters?
 > > - **Ecological:** Will amateurs help protect threatened marine ecosystems or become part of the threat?
 > 
-> > [!democratized-underwater-exploration] Democratized stack 
+> > [!democratized-underwater-exploration] Democratized stack
 > > ![Democratized Underwater Exploration :: 4/4](../assets/future%20frontiers%2002.01.04%20democratized%20underwater%20exploration.webp)
 > > *[Sofar](https://www.sofarocean.com/products/trident)*
 > > 
@@ -62,18 +62,18 @@ In the wake of Covid19, could an era of democratized access to frontiers be the 
 > > - **Grand challenges and missions:** Suited to democratized exploration
 > > - **Strong explorer community:** Comparable to open source, maker movement, astronomy
 > > - **Open-source software tools:** To process data from community oceanic infrastructure
-> > - **Infrastructure relations:** With research institutions, commercial shipping, military 
+> > - **Infrastructure relations:** With research institutions, commercial shipping, military
 > > - **Piggyback capabilities:** For opportunistic staging, deployment, communications, and telemetry
 > > - **Hardware foundation:** High-quality, low-cost, high-variety hardware with greater range, endurance, and sensor payloads
 
 > [!the-promise-of-nanosatellites-for-developing-nations] The Promise of Nanosatellites for Developing Nations
-> Kannen Ramsamy #trends
+> Kannen Ramsamy `#trends`
 > 
 > > [!the-promise-of-nanosatellites-for-developing-nations] Nanosatellites and developing nations
 > > ![The Promise of Nanosatellites for Developing Nations :: 1/3](../assets/future%20frontiers%2002.02.01%20the%20promise%20of%20nanosatellites%20for%20developing%20nations.webp)
 > > *[Mönch Publishing Group](https://www.monch.com/mpg/news/space/1261-nano-sat.html)*
 > > 
-> > The modern-age space industry has long been dominated by global superpowers. Today nanosatellites offer significant promise for **developing nations to engage with the space industry on their own terms, in a way that directly benefits _their_ populations**. Domestic universities, public sector bodies, and businesses can begin to come to grips with space tech without necessarily turning to wealthier nations to import technological insight and expertise. Younger generations pursuing interests in space will also have increased opportunities to realize these interests at home rather than abroad.
+> > The modern-age space industry has long been dominated by global superpowers. Today nanosatellites offer significant promise for **developing nations to engage with the space industry on their own terms, in a way that directly benefits *their* populations**. Domestic universities, public sector bodies, and businesses can begin to come to grips with space tech without necessarily turning to wealthier nations to import technological insight and expertise. Younger generations pursuing interests in space will also have increased opportunities to realize these interests at home rather than abroad.
 > 
 > > [!the-promise-of-nanosatellites-for-developing-nations] Nanosatellite launch rate growth
 > > ![The Promise of Nanosatellites for Developing Nations :: 2/3](../assets/future%20frontiers%2002.02.02%20the%20promise%20of%20nanosatellites%20for%20developing%20nations.webp)
@@ -94,7 +94,7 @@ In the wake of Covid19, could an era of democratized access to frontiers be the 
 > > Those which rely heavily on natural resources will benefit from nanosatellite data, *e.g.*, understanding how rapid growth in human populations could impact agricultural and geological spaces. Improved signal monitoring will help navigate the impact of natural disasters and support effective relief mobilization. Developing nations will also start to leverage their data/expertise/manufacturing capacity emerging from nanosatellite usage.
 
 > [!starship-gold-rush] Starship Gold Rush
-> Charlie Bilsland #exploitation
+> Charlie Bilsland `#exploitation`
 > 
 > > [!starship-gold-rush] SpaceX Starship’s success could rewrite the rules of space…
 > > ![Starship Gold Rush :: 1/2](../assets/future%20frontiers%2003.01.01%20starship%20gold%20rush.webp)
@@ -109,7 +109,7 @@ In the wake of Covid19, could an era of democratized access to frontiers be the 
 > > One future vision, enabled by the SpaceX Starship, could be the U.S. gaining strategic control of the orbital environment, as well as tactical control of Shackleton Crater on the South Pole of the moon by 2030. Shackleton Crater, with both the largest amount of water ice on the moon and peaks of eternal light, enables the U.S. to crack water ice into rocket fuel, further consolidating its dominance over the cislunar sphere. China predictably responds in kind, expanding its lunar base, and the orbital environment becomes increasingly militarized. Europe and Russia are working together to restrain the expansion of these superpowers, with little success so far.
 
 > [!designer-metabolism-and-minds] Designer Metabolism and Minds
-> Jay Kalawar #lifestyles
+> Jay Kalawar `#lifestyles`
 > 
 > > [!designer-metabolism-and-minds] Advancing Torpor Inducing Transfer Habitats for Human Stasis to Mars
 > > ![Designer Metabolism and Minds :: 1/2](../assets/future%20frontiers%2005.01.01%20designer%20metabolism%20and%20minds.webp)

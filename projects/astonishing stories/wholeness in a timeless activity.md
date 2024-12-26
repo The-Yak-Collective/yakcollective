@@ -16,7 +16,7 @@ Each main ingredient was in a distinct pile; foie gras, unagi, avocado, and stur
 
 ![Justice — https://asterisques.com/](../../assets/astonishing%20stories%201%20wholeness%20in%20a%20timeless%20activity.webp)
 
-Despite knowing no one was watching, Koichi nodded in approval. He was gazing at the final dish when colorful boxes popped into his vision, surrounding the sushi.[^1] They showed the source of several ingredients; the farm where the avocado was picked, the facility where the sturgeon was bred. Koichi angrily blinked thrice and the advertisements disappeared. He was annoyed — his new AR lenses meant everything was a QR code now. Let’s just get it over with, he thought.  
+Despite knowing no one was watching, Koichi nodded in approval. He was gazing at the final dish when colorful boxes popped into his vision, surrounding the sushi.[^1] They showed the source of several ingredients; the farm where the avocado was picked, the facility where the sturgeon was bred. Koichi angrily blinked thrice and the advertisements disappeared. He was annoyed — his new AR lenses meant everything was a QR code now. Let’s just get it over with, he thought.
 
 Koichi placed one of the slices in his mouth. It was faultless like the many others before it. He dolefully gazed down the line, at the hundred-or-so disconnected arms. Picking up a trash bin, he swept the remaining sushi off the table. His work here was done.
 

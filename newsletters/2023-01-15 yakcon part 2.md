@@ -18,9 +18,9 @@ Async week is a wrap, and we head into Part 2 on Sunday, 15th at 1600 UTC. Here�
 
 The difference will be in our guest speakers. For Part Two we have, rather appropriately, two speakers.
 
-Mike Casey ([Farcaster](http://fcast.me/mc), [personal site](https://mcasey.xyz/)) will be tackling the difficult question: "Can Crypto Close the $4 Trillion SME Financing Gap?"
+Mike Casey ([Farcaster](http://fcast.me/mc), [personal site](https://mcasey.xyz/)) will be tackling the difficult question: “Can Crypto Close the $4 Trillion SME Financing Gap?”
 
-Mike specializes in investment and entrepreneurship in complex markets facing capital scarcity — whether that's by geography (think Africa) or vertical (think life sciences). It's an interesting playspace to be in.
+Mike specializes in investment and entrepreneurship in complex markets facing capital scarcity — whether that’s by geography (think Africa) or vertical (think life sciences). It’s an interesting playspace to be in.
 
 For example, in [this piece](https://porticoadvisers.com/2022/09/14/four-dynamics/) Mike highlighted four dynamics shaping global private markets today:
 
@@ -29,7 +29,7 @@ For example, in [this piece](https://porticoadvisers.com/2022/09/14/four-dynamic
 - The difficult macro environment is necessitating novel liquidity solutions
 - Crypto is emerging as an institutional asset class
 
-Mike will be providing some insight into how these dynamics—and others—are unfolding and the impact they're having.
+Mike will be providing some insight into how these dynamics — and others — are unfolding and the impact they’re having.
 
 Our second speaker is Dan Grover ([personal site](http://dangrover.com/), [LinkedIn](https://www.linkedin.com/in/dangrover/)). Dan — designer, engineer, entrepreneur — will be expanding upon and contextualizing his essay, [Simulation Games Might Be What The World Needs Now](http://dangrover.com/blog/2022/09/24/sim-games.html).
 
@@ -39,6 +39,6 @@ Spoiler alert, but my favorite snippet from this piece is as follows:
 > 
 > But even the most unrealistic sim games speak directly to this ever-present, essential, structural truth to the reality we inhabit. These games reenforce that the world is always more complicated than it looks. They teach us that the laws governing the material outcomes we live with don’t care at all about our virtue or intentions — that the Covid virus doesn’t care whether you trust Tony Fauci and the supply chain doesn’t care whether you’d prefer the items you purchase be made in your own country. And most importantly, they teach us how to model, analyze, and problem-solve in the face of such a complex, cruel, and indifferent world and ignore hucksters offering us easy remedies.
 
-And that's just the speakers.
+And that’s just the speakers.
 
 YakCon Part Two is shaping up to be as fun as Part One. Come and join the party. Register for Part Two [here](../yakcon%202023.md) and go [here](../join.md) to access to the YC Discord.

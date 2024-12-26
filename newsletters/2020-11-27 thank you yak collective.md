@@ -13,16 +13,15 @@ This newsletter has evolved and changed hands within the year and will continue 
 In that same vein, I’m interested in YC members who want to contribute to this newsletter, please contact me at <praful.mathur+yaktalk@gmail.com>.
 
 ## Announcements
-### Yak C Holiday Meetup 
+### Yak C Holiday Meetup
 **When:** Thursday, December 10th, 8AM-10AM Pacific  
 **Topic:** Yak Collective Annual Meeting and Holiday Party  
-**Where:** [Zoom Meeting.](https://us02web.zoom.us/j/87558263911)  Meeting ID: 875 5826 3911  
 **What:** [Agenda](https://roamresearch.com/#/app/ArtOfGig/page/TInL3Z7vF)
 
 ### Revamped Project Proposal Update
 Project Proposal Revamped Process (no more google forms and synchronized competitive sign-up)
 
-All you have to do to propose a project is to add a block to [this Roam page](https://roamresearch.com/#/app/ArtOfGig/page/DJVbvHE2_) with the required meta-data, and propose a channel in \#create-destroy-channels… that's it. If you get 2 – 4 participants before your self-declared start date, it goes live. The Friday chats will also serve as a continuous pitching forum going forward, but right now, there's an opportunity to get a bigger audience for a live pitch. If you put in a proposal before Dec 1, you can get a pitching slot at the YC annual meeting on Dec 10. First come first serve for pitching slots.
+All you have to do to propose a project is to add a block to [this Roam page](https://roamresearch.com/#/app/ArtOfGig/page/DJVbvHE2_) with the required meta-data, and propose a channel in \#create-destroy-channels… that’s it. If you get 2 – 4 participants before your self-declared start date, it goes live. The Friday chats will also serve as a continuous pitching forum going forward, but right now, there’s an opportunity to get a bigger audience for a live pitch. If you put in a proposal before Dec 1, you can get a pitching slot at the YC annual meeting on Dec 10. First come first serve for pitching slots.
 
 ## Indie Consulting Advice
 ### How I Billed This
@@ -38,17 +37,17 @@ PS: Experimental design seems hard to do right. All first year Stanford psych gr
 
 **Case study win?**
 
-PS: A fintech company, Varo, pitched to VCs a (then novel) use of a conversational interface. I designed an experiment, run in Mechanical Turk, to test 3 different styles for apologizing when the chat bot failed. The experiment sent Turkers to a Slack channel to interact with a chatbot, programmed in Python. The bot was designed to fail, and then used one of three apologies (A- taking responsibility for its limits; B- promising to learn next time; C- committing to update the programmers). 
+PS: A fintech company, Varo, pitched to VCs a (then novel) use of a conversational interface. I designed an experiment, run in Mechanical Turk, to test 3 different styles for apologizing when the chat bot failed. The experiment sent Turkers to a Slack channel to interact with a chatbot, programmed in Python. The bot was designed to fail, and then used one of three apologies (A- taking responsibility for its limits; B- promising to learn next time; C- committing to update the programmers).
 
 **How did you first connect with the client? What was your pitch?**
 
-PS: I’d previously worked with the chief product officer, who introduced me to the CTO. I agreed to deliver the experiment and data analysis for $10K. Since the results were used in their pitch deck, we agreed to structure a bonus (up to 250%) based on the amount they raised. 
+PS: I’d previously worked with the chief product officer, who introduced me to the CTO. I agreed to deliver the experiment and data analysis for $10K. Since the results were used in their pitch deck, we agreed to structure a bonus (up to 250%) based on the amount they raised.
 
 **Did the contract lead to an ongoing relationship?**
 
-PS: I did develop a year-long monthly retainer gig with the Design group (Robots & Pencils) that was working on their screens. 
+PS: I did develop a year-long monthly retainer gig with the Design group (Robots & Pencils) that was working on their screens.
 
-**What is the one thing you haven't done enough of to market your consultancy?**
+**What is the one thing you haven’t done enough of to market your consultancy?**
 
 PS: Spec behavioral research in advance of cementing a contract. Many companies can’t directly “experiment on their customers”, nor do they want to directly commission research about sensitive areas such as emotional engagement. I’ve put off doing a benchmark study on intrinsic motivation (‘flow’) to evaluate the different experience in big software workflows.
 
@@ -78,6 +77,6 @@ Judd’s father’s eyes brightened in surprise. “Really?”
 
 “Clarence even said I was eligible for a statewide scholarship!”
 
-“Judd, that’s wonderful.” His skepticism took a sudden backseat to the prospect of reduced tuition. Maybe Judd _wasn’t_ just fooling around out here.
+“Judd, that’s wonderful.” His skepticism took a sudden backseat to the prospect of reduced tuition. Maybe Judd *wasn’t* just fooling around out here.
 
 “I know! They said they’d send a cheque. All we have to do is deposit it in the bank, then wire half of it to a numbered account which they’ll provide separately. That will cover tuition and I can keep the other half for living expenses.”

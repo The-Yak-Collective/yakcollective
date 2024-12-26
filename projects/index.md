@@ -15,7 +15,7 @@ Yak Collective projects are collaborations and explorations from the community.
 > The upside of an extremely uncertain environment is that we have been free to indulge in pure speculation about the known knowns and unknown unknowns of the future. The result is Astonishing Stories, an anthology of short vignettes from the future developed from the networked thoughts of over 30 indie consultants.
 
 > [!inactive-project]- [New Old Home](new%20old%20home.md)
-> The Yak Collective's second report, *The New Old Home*, offers 22 perspectives built around Pamela Hobart's central thesis: as work returns to the home in the form of remote work opportunities (a trend now dramatically accelerated by pandemic circumstances), we can turn to historical modes of integrated living, reconsidered in light of newer technology, to guide our attempts at co-located life and work.
+> The Yak Collective’s second report, *The New Old Home*, offers 22 perspectives built around Pamela Hobart’s central thesis: as work returns to the home in the form of remote work opportunities (a trend now dramatically accelerated by pandemic circumstances), we can turn to historical modes of integrated living, reconsidered in light of newer technology, to guide our attempts at co-located life and work.
 
 > [!inactive-project]- [Don’t Waste the Reboot](dont%20waste%20the%20reboot.md)
-> The inaugural report by the Yak Collective, *Don't Waste the Reboot* offers organizations a smorgasbord of 25 creative and unexpected provocations, ideas, and action frameworks to navigate the COVID-19 crisis.
+> The inaugural report by the Yak Collective, *Don’t Waste the Reboot* offers organizations a smorgasbord of 25 creative and unexpected provocations, ideas, and action frameworks to navigate the COVID-19 crisis.

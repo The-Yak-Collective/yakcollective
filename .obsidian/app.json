@@ -9,8 +9,5 @@
   "showInlineTitle": true,
   "newLinkFormat": "relative",
   "useMarkdownLinks": true,
-  "userIgnoreFilters": [
-    "/[aA][sS][sS][eE][tT][sS]/",
-    "/[pP][rR][iI][vV][aA][tT][eE]/"
-  ]
+  "userIgnoreFilters": []
 }

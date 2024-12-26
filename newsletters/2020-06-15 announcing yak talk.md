@@ -1,0 +1,23 @@
+---
+title: Announcing Yak Talk
+aliases:
+  - Announcing Yak Talk
+quartsRssFeed: true
+date: 2020-06-15
+substack: https://yakcollective.substack.com/p/announcing-yak-talk
+---
+Welcome to the Yak Collective Weekly Digest, *Yak Talk*.
+
+Released every Friday at 12p EST, *Yak Talk* will contain a digest of Yak Collective updates, project launches, and other announcements.
+
+For those not familiar, the Yak Collective is a loosely coordinated network of over 300 independent consultants, coaches, and freelancers with varied technical and creative skills.
+
+## The New Old Home
+Last week, we released our second report, [The New Old Home](../projects/new%20old%20home.md), which offers 22 perspectives built around [Pamela Hobart](https://x.com/amelapay)’s central thesis: *as work returns to the home, we can turn to historical modes of integrated living to guide our attempts at co-located life and work.*
+
+## Now Accepting Project Proposals
+Beginning today, Yak Collective is accepting proposals for collaborative projects. Submission deadline is Friday, June 26th.
+
+For more information, and to apply, [click here](https://docs.google.com/forms/d/e/1FAIpQLSeOWZaEPtrCF_nOQpEF8_2PCtA4Eoi1SfYhH-WiaTDcoYe09g/viewform).
+
+You can also subscribe to this newsletter below.
