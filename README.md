@@ -8,7 +8,7 @@ This site is actually a [Foam](https://foambubble.github.io/foam/)/[Obsidian](ht
 
 You can also open the site directly in [VS Code on the web](https://vscode.dev/) by simply typing `.` (“period”) when viewing this file in GitHub.
 
-This `README` and files in the `private` directory are *not* included in the final build, while [index.md](../index.md) file becomes the site homepage.
+This `README` and files in the `private` directory are *not* included in the final build, while [index.md](index.md) file becomes the site homepage.
 
 ## Building the Website Locally
 ```bash
