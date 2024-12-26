@@ -28,21 +28,6 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "newsletters/index.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "index"
-            }
-          },
-          {
-            "id": "fdefabc73c204326",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
                 "file": "README.md",
                 "mode": "source",
                 "backlinks": true,
@@ -115,7 +100,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "newsletters/index.md",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -125,7 +110,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for index"
+              "title": "Backlinks for README"
             }
           },
           {
@@ -148,10 +133,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "newsletters/index.md"
+                "file": "README.md"
               },
               "icon": "lucide-list",
-              "title": "Outline of index"
+              "title": "Outline of README"
             }
           }
         ],
@@ -169,26 +154,32 @@
       "hide-folders:Show hidden folders": false
     }
   },
-  "active": "81b85c616f45e6c6",
+  "active": "ed28a492f4db7385",
   "lastOpenFiles": [
+    "newsletters/2021-06-27 yak trails.md",
+    "assets/7ca22e67a1b698b3c391ad694c6989c0.webp",
+    "assets/9296582d58247b313df04fccf6fc9fe5.webp",
+    "assets/6abf5cdcb48cb0ff049141563bc24349.webp",
+    "assets/f001002539b4dfc792dfe39204433de5.webp",
+    "assets/691fa41899bd4f72279aa19ec2e91533.webp",
+    "assets/9377641f25a6ea8e0cc579874e82e237.webp",
+    "assets/e04acbb1dc1b1e772ae34b6ada43eaef.webp",
+    "assets/940b84c39846542f9a7135c98e7f678a.webp",
+    "assets/7419cf68447e08dc82c2e8c504125f06.webp",
+    "assets/ab61184b448e11a0b91f8e07701931a3.webp",
+    "newsletters/2023-05-05 yak governance studies sequence intro.md",
+    "projects/index.md",
+    "README.md",
+    "newsletters/index.md",
     "newsletters/2020-06-15 announcing yak talk.md",
     "newsletters/2020-06-19 yak talk.md",
     "newsletters/2020-06-26 yak talk.md",
     "newsletters/2020-07-02 reminder call for project contributors for yak project proposals.md",
     "newsletters/2020-07-03 yaks do innovation consulting.md",
-    "assets/4e728051-8d48-460f-9586-936e82647420_3573x2512.jpg",
     "newsletters/2020-07-10 yak talk.md",
-    "assets/73ded5a0-e817-4c3d-b67e-e89a5e298227_690x362.jpg",
-    "assets/dae1958f-9ba6-4785-ad5f-d52f83482125_1196x404.jpg",
     "newsletters/2020-07-17 are k-pop stans the future of activism.md",
-    "assets/72b46efd-1995-47f4-b5df-5120b874767c_790x527.jpg",
     "newsletters/2020-07-24 gpt-3 and the new fake intelligence.md",
-    "assets/00f1a13b-aab4-49c2-aed7-53ff92567b3c_1182x378.png",
-    "assets/7d60ed6d-e804-4ae8-8820-f5c2446ad294_1552x604.png",
-    "assets/9d10e0a4-3133-4ec1-81f0-5d44c8886de9_1418x524.png",
-    "assets/84706a76-9d5e-42da-a174-ada0c4740e70_1024x537.jpg",
     "newsletters/2020-07-31 chasing tails part one.md",
-    "assets/8ae83d3a-85aa-4e0d-b5bb-62c447607de7_1600x1200.jpg",
     "newsletters/2020-08-07 presidential campaign as decentralized org.md",
     "newsletters/2020-08-14 targeting trust.md",
     "newsletters/2020-08-22 decarbonization strategies.md",
@@ -201,14 +192,9 @@
     "newsletters/2021-05-23 yak trails.md",
     "newsletters/2021-05-30 yak trails.md",
     "newsletters/2021-06-06 yak trails.md",
-    "newsletters/2021-06-13 yak trails.md",
-    "newsletters/2021-06-20 yak trails.md",
-    "newsletters/2021-06-27 yak trails.md",
-    "newsletters/2021-07-04 yak trails.md",
-    "assets/27849f60-d910-46bb-a8b2-baa4faa6770d_758x960.jpg",
     "newsletters",
-    "assets/dont waste the reboot.pdf",
-    "assets/new old home.pdf",
-    "assets/online governance primer.pdf"
+    "assets/52b45e4cbd3d4207941fb2ef91005d77.pdf",
+    "assets/3080c6f8159a8c3e7818854631efeb0f.pdf",
+    "assets/180d8e4e90c3ac50b69eda1b2ca24694.pdf"
   ]
 }

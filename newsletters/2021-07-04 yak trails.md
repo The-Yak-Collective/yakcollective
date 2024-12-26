@@ -13,7 +13,7 @@ The Yak Rover project — a project to design a real Mars rover prototype that c
 
 [This week‘s meeting notes — How and why I connected Wonderful Wandering Growth to the world.](https://ipatent-co-il.zoom.us/rec/play/gcUfRMdk4WyAaknoJPLk-6EPaLe3kmga8X3gw7ONq1VhB-U7e4hz6s5MCiJE0F-5nQpTPKg7ALibXKvc.leCDkfrg2wU5t7zn?continueMode=true&_x_zm_rtaid=rqxYEQxJQhauxFG20XRrsw.1625422801755.8e12920971fdfd876150a91042f89e34&_x_zm_rhtaid=418)
 
-![](../assets/8c491740-e53c-4b9f-a889-6c8d4225f377_2774x1652.jpg)
+![](../assets/5b24be67c23aa65cdcfd20ae6483ff89.jpg)
 
 **Nature is Murder.**  Finally booted up the Beaglebone Blue and configured it and got to led blinking. Get to first servo control test on the board. Driver snafus under MacOS Catalina so having to use my wife’s Macbook on High Sierra. Realized that embedded software ecosystems evolve much more slowly than personal computing. Many things are years old. You’re living in slower time.
 
@@ -328,7 +328,7 @@ Current gigs. [Details on the server.](https://discord.com/channels/692111190851
 
 > Some thoughts about Github Copilot and copyright (I am not a lawyer). Copilot uses a version of GPT3 trained on GPL licensed code. GPL give everyone the right to copy and make derivatives. Derivatives inherit GPL. Copilot can sometimes memorize and repeat snippets of code.
 > 
-> ![](../assets/E5InYdNXEAcAANt.jpg)
+> ![](../assets/2b612ce1586e8d6af9e5232e324f3718.jpg)
 > 
 > — [Mark O. Riedl ∙ @mark\_riedl ∙ 2:13 PM ∙ Jun 30, 2021](https://x.com/mark_riedl/status/1410240122776440836)
 
@@ -338,7 +338,7 @@ Current gigs. [Details on the server.](https://discord.com/channels/692111190851
 
 > \#roamans, what’s the currently preferred way of reading .epub ebooks, making notes and getting things into Roam on iOS (yes, very specific question 😁)? I’ve been using Marvin but the last update was three years ago and I’m looking for something better.
 > 
-> ![934b892a-be83-4325-a86b-569e38d2e574\_1200x630](../assets/934b892a-be83-4325-a86b-569e38d2e574_1200x630.png)
+> ![934b892a-be83-4325-a86b-569e38d2e574\_1200x630](../assets/787180e13c0bae645ab96d535180a1ac.png)
 > 
 > <https://apps.apple.com/us/app/marvin-3/id1086482858>
 > 
@@ -346,7 +346,7 @@ Current gigs. [Details on the server.](https://discord.com/channels/692111190851
 
 > @cortexfutura Few years ago I used MarginNote for ePub with great success. I also know some \#roamans using it today. I haven’t used it for a while, but it advertises multiple format outputs.
 > 
-> ![ced8622d-9d83-46f6-bbbe-89ff44b11c4d\_1200x630](../assets/ced8622d-9d83-46f6-bbbe-89ff44b11c4d_1200x630.png)
+> ![ced8622d-9d83-46f6-bbbe-89ff44b11c4d\_1200x630](../assets/b531772e81ba9c1c9eb9054c665da2ef.png)
 > 
 > <https://apps.apple.com/us/app/marginnote-3/id1348317163>
 > 
@@ -354,7 +354,7 @@ Current gigs. [Details on the server.](https://discord.com/channels/692111190851
 
 > @cortexfutura Currently using Apple’s Books and @readwiseio to transfer highlights and notes into Roam
 > 
-> ![a175b755-64c0-47b6-8676-2720c0c09ea5\_399x865](../assets/a175b755-64c0-47b6-8676-2720c0c09ea5_399x865.gif)
+> ![a175b755-64c0-47b6-8676-2720c0c09ea5\_399x865](../assets/2dd9544827be187df97c8f216aec9310.gif)
 > 
 > <https://help.readwise.io/article/35-how-do-i-import-apple-books-highlights-from-my-iphoneipad>
 > 

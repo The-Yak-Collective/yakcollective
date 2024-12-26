@@ -10,8 +10,8 @@ The Yak Collective’s second report, *The New Old Home*, offers 22 perspectives
 
 Many of our contributors are balancing the needs of our children, our parents and grandparents, our partners, and ourselves as we adapt to this *unprecedented* situation. We offer our ideas freely in the hope that they might help us to design a better future for our homes and families.
 
-![Rediscovering the home as a production frontier](../assets/new%20old%20home.pdf)
-[**Download PDF**](../assets/new%20old%20home.pdf)
+![Rediscovering the home as a production frontier](../assets/3080c6f8159a8c3e7818854631efeb0f.pdf)
+[**Download PDF**](../assets/3080c6f8159a8c3e7818854631efeb0f.pdf)
 
 ## The Yak Wisdom Project
 This deck is the **second** in a series of studies the Yak Collective is undertaking over the coming months. If you find this report interesting, be sure to check out our first, [*Don’t Waste the Reboot*](dont%20waste%20the%20reboot.md). We aim to generate a body of Covid-19 reboot intelligence that is fundamentally different from anything you might see anywhere else, not just in terms of content, but in terms of the process of getting to it.

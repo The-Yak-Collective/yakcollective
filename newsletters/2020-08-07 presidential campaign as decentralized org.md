@@ -56,7 +56,7 @@ While online actors have been influencing politics over the years with ever more
 
 Online organizing has accelerated in 2020, and will continue to generate new political alliances oriented-both left and right, both in good faith and bad.
 
-![27849f60-d910-46bb-a8b2-baa4faa6770d\_758x960](../assets/27849f60-d910-46bb-a8b2-baa4faa6770d_758x960.jpg)
+![27849f60-d910-46bb-a8b2-baa4faa6770d\_758x960](../assets/53293c30ea123a9fdca6ede8a03618ca.jpg)
 
 It’s worth stating that building alliances is no small feat, especially with organizations outside of one’s own. It takes charismatic, shrewd, and dedicated participants to face specific problems that are sufficiently difficult and complex, to the degree that a single org cannot solve them alone.
 

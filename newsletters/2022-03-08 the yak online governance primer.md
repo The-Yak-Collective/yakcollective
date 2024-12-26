@@ -8,7 +8,7 @@ substack: https://yakcollective.substack.com/p/the-yak-online-governance-primer
 ---
 A couple of weeks ago, the Yak Collective published the **[Yak Online Governance Primer](../projects/online%20governance%20primer.md). It is one of our most ambitious collaborative projects to date.
 
-[![](../assets/online%20governance%20primer%200%20four%20governance%20regimes.webp)](https://yakcollective.mirror.xyz/aJdO_SO3gw34cLtwBwNC2OD3s0YT3us9C-C2NNPQ_us)
+[![](../assets/bca2b2113cf1f74a6bb57850a7eba39c.webp)](https://yakcollective.mirror.xyz/aJdO_SO3gw34cLtwBwNC2OD3s0YT3us9C-C2NNPQ_us)
 
 The primer is based on about a year of weekly governance study group meetings on the Yak Collective Discord. It explores and synthesizes a curated set of 49 readings, and is intended as a resource for individuals, groups and organizations trying to develop a solid foundation of governance tools and practices in a virtual-first world.
 
@@ -18,7 +18,7 @@ The primer is based on about a year of weekly governance study group meetings on
 
 **Please share widely, tweet, post the images to social media, and so on.**  **We appreciate any and all signal boosting!**
 
-If you need a PDF to forward or print for offline reading, you can find one [here](../assets/online%20governance%20primer.pdf).
+If you need a PDF to forward or print for offline reading, you can find one [here](../assets/180d8e4e90c3ac50b69eda1b2ca24694.pdf).
 
 The primer was authored by **Sachin Benny, Venkatesh Rao, Grigori Milov, and Bryan King**, with **Jenna Dixon** and **Nathan Acks** providing editing and production support. **Grace Witherell** supplied some beautiful illustrations. Other regular members of the the governance chat contributed feedback and comments throughout. NFT proceeds will be shared among the contributors, with a portion going to the Yak Collective for future projects.[^2]
 

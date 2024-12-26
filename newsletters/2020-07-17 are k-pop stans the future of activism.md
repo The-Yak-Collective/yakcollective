@@ -14,7 +14,7 @@ This week we continue our *\#trends-and-futures*, and *\#complexity* tracks in t
 
 On June 20th, US-based members of the Korean-Pop fan community, colloquially known as “K-Pop [stans](https://www.urbandictionary.com/define.php?term=Stan)”, [trashed a Trump rally in Tulsa, OK](https://www.cnn.com/2020/06/22/opinions/tiktok-kpop-trump-rally-activism-hong/index.html).
 
-![72b46efd-1995-47f4-b5df-5120b874767c\_790x527](../assets/72b46efd-1995-47f4-b5df-5120b874767c_790x527.jpg)
+![72b46efd-1995-47f4-b5df-5120b874767c\_790x527](../assets/b28686df241f3152b19460f0dfa30434.jpg)
 
 Sadly, this was *not* the long-awaited first appearance of Antifa supersoldiers, as continually promised by right-wing pundits.
 

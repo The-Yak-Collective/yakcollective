@@ -13,7 +13,7 @@ Historically, the “dog daies”, as medieval scribes called them, begin on Jul
 
 To the ancient eye, this seemed to be the reason summer was the hottest at this period: the brightest star in the night sky at it’s closest point to the sun, augmenting the power (read: *the heat*) of the sun. In fact, *Sirius* is 8.7 light years away.
 
-![4e728051-8d48-460f-9586-936e82647420\_3573x2512](../assets/4e728051-8d48-460f-9586-936e82647420_3573x2512.jpg)
+![4e728051-8d48-460f-9586-936e82647420\_3573x2512](../assets/e7a7074d99b47a21380f0df8c4587da0.jpg)
 
 For this reason, the dog days of summer have historically been regarded as an apocalyptic and unlucky time of the year.
 

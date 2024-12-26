@@ -8,7 +8,7 @@ substack: https://yakcollective.substack.com/p/yak-governance-studies-sequence-i
 ---
 The Yak Collective engages in collaborative tinkering. The tinkering can be practical and involve Mars rovers, infrastructure, or indie career acceleration. It could be creative, with pop-up poetry jams and speculative fiction. And sometimes it’s conceptual, with Fermi estimation practice, studies of distributed systems, old- and new-wave AI workshopping, and governance. What follows concerns the Yak Collective’s ongoing studies of governance, perhaps the longest running activity track within YC.
 
-![From physarum by Sage Jenson — https://cargocollective.com/sagejenson/physarum](../assets/8de6dcd3-9ae0-400e-8903-24721abae5aa_670x671.jpeg)
+![From physarum by Sage Jenson — https://cargocollective.com/sagejenson/physarum](../assets/38efa35b591874e680aa54203b4ddeeb.jpg)
 
 Like YC itself, the governance studies origin story involves a sincere intent to do one thing —evaluate governance patterns in relation to YC —and a trajectory that shifted to be about a more interesting adjacency —the why, what, and how of governance in general. Explorations of the various why’s, what’s, and how’s follow a simple format:
 

@@ -6,7 +6,7 @@ quartsRssFeed: true
 date: 2021-05-23
 substack: https://yakcollective.substack.com/p/yak-trails-2021-05-23-df9
 ---
-![Yak Collective logo](../assets/90ed0a4c-ad91-475d-80cc-7e6dca56d9a5_2612x880.png)
+![Yak Collective logo](../assets/b48d26a74f1857beba8099d24abfb574.png)
 
 Hello and welcome to Yak Trails, a new occasional roundup of what hundreds of Yak Collective independent consultants have been up to recently in projects and on the Discord server.
 
@@ -40,7 +40,7 @@ The Yak Rover project includes five independent rover builds.
 	- **nw** — see if i can use some type of AGC or maybe glasses to reduce light levels and maybe help with the blooming problem. if time permits, start on some type of image processing and maybe look up a suitable SLAM
 	- **bl** — only %life
 
-![833f3aee-e4a1-48e5-bae5-f99981488e23\_2000x1600](../assets/833f3aee-e4a1-48e5-bae5-f99981488e23_2000x1600.jpg)
+![833f3aee-e4a1-48e5-bae5-f99981488e23\_2000x1600](../assets/c15380d46f59fe6cdbc6e94e48705434.jpg)
 
 #### [\#gig list](https://discord.com/channels/692111190851059762/692816049678057544/845740816269574176)
 The \#take-gig-leave-gig channel on the server is where yaks share openings.
@@ -125,7 +125,7 @@ Many channels on the server maintain a shared working agenda. The channel name b
 	- fire up new community server Welcome Screen
 	- fire up new community server \#get-started-here channel
 
-![Discord Welcome Screen](../assets/ab511979-414b-4bad-b9fc-2713d3a65ddf_1450x1546.jpg)
+![Discord Welcome Screen](../assets/839ebb0228e036649e86144bc4d0b3db.jpg)
 
 #### \#links shared
 Yaks have a pretty wide range of interests and lots of links get shared on the server. Here’s a recent sampler. Jump on the server to join the conversations.
@@ -162,6 +162,6 @@ Yaks have a pretty wide range of interests and lots of links get shared on the s
 - SEC.gov | Werewolves of Change: Remarks before the ISDA Derivatives Trading Forum Regulatory Change / [\#](https://www.sec.gov/news/speech/werewolves-of-change)
 - Two Elements of Pair Programming Skill / [\#](https://arxiv.org/pdf/2102.06460.pdf)
 
-> ![EFJ4pVwXUAIiDX-](../assets/EFJ4pVwXUAIiDX-.jpg)
+> ![EFJ4pVwXUAIiDX-](../assets/16f8f3328196e3f744c443a808c94f5d.jpg)
 > 
 > — [Rachel Cole ∙ @rmartincole ∙ 2:03 PM ∙ Sep 23, 2019](https://x.com/rmartincole/status/1176135108996280320)

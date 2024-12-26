@@ -10,6 +10,6 @@ If you’ve been looking for the right opportunity to join the [Yak Rover](../st
 
 **This is part of our regular weekly meeting track on Mondays at 9:45 PM US Pacific (Tuesdays 0545 AM UTC).** To join tonight’s session, [join our Discord](../join.md) and then drop in to the **\#yak-rover** channel where we hang out. The zoom link will be posted there shortly before we start.
 
-![yak rover banner](../assets/yak%20rover%20banner.jpg)
+![yak rover banner](../assets/ea233d0d705d756a5926f8aa74981f1b.jpg)
 
 **The Yak Rover project is an initiative of the Yak Collective. You can learn more about the collective and our other activities [here](../about.md).**

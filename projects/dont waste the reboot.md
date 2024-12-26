@@ -10,8 +10,8 @@ The inaugural report by the Yak Collective, *Don’t Waste the Reboot* offers or
 
 Authored by 21 diverse contributors from around the world — most of whom are working together for the first time — we believe this report will get you thinking about your reboot efforts in a bolder, more imaginative way. Let us know what you think!
 
-![Making the next normal better than the last one](../assets/dont%20waste%20the%20reboot.pdf)
-[**Download PDF**](../assets/dont%20waste%20the%20reboot.pdf)
+![Making the next normal better than the last one](../assets/52b45e4cbd3d4207941fb2ef91005d77.pdf)
+[**Download PDF**](../assets/52b45e4cbd3d4207941fb2ef91005d77.pdf)
 
 ## The Yak Wisdom Project
 This deck is just the first of what we hope will be a series of studies the Yak Collective will be undertaking over the coming months. We aim to generate a body of Covid-19 reboot intelligence that is fundamentally different from anything you might see anywhere else, not just in terms of content, but in terms of the process of getting to it.

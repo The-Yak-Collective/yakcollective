@@ -16,46 +16,46 @@ The stories here are not meant to predict the future but to be imagination exten
 > [!story]- [Wholeness in a Timeless Activity](wholeness%20in%20a%20timeless%20activity.md)
 > [October 23rd 2020](wholeness%20in%20a%20timeless%20activity.md) • [Nathan Chen](https://nchen13.github.io/)
 > 
-> [![Wholeness in a Timeless Activity](../../assets/astonishing%20stories%201%20wholeness%20in%20a%20timeless%20activity.webp)](wholeness%20in%20a%20timeless%20activity.md)
+> [![Wholeness in a Timeless Activity](../../assets/82394c43e58d95d24595a2a08800ea02.webp)](wholeness%20in%20a%20timeless%20activity.md)
 > 
 > There are some activities the wealthy occasionally lust after. But there is one they will never stop avoiding.
 
 > [!story]- [Your Payment is Ready](your%20payment%20is%20ready.md)
 > [October 30th 2020](your%20payment%20is%20ready.md) • [Benjamin Smith](https://bens.substack.com/)
 > 
-> [![Your Payment is Ready](../../assets/astonishing%20stories%202%20your%20payment%20is%20ready.webp)](your%20payment%20is%20ready.md)
+> [![Your Payment is Ready](../../assets/8a0dff58245b821ddc3f45aff7d7bdcf.webp)](your%20payment%20is%20ready.md)
 > 
 > In an age of pandemics and rolling lockdowns, his dad saw the youth orchestra as an opportunity for kids like his son to get out of the house.
 
 > [!story]- [Department of Restoration](department%20of%20restoration.md)
 > [November 6th 2020](department%20of%20restoration.md) • [Scott Garlinger](https://x.com/scott_garlinger)
 > 
-> [![Department of Restoration](../../assets/astonishing%20stories%203%20department%20of%20restoration.webp)](department%20of%20restoration.md)
+> [![Department of Restoration](../../assets/a20e7a74a940e302eac2678c32c8019c.webp)](department%20of%20restoration.md)
 > 
 > At a certain time, in a certain space, a person may speak or act and find himself under a recent form of judgment: cancellation.
 
 > [!story]- [Mechanical Turks All the Way Down](mechanical%20turks%20all%20the%20way%20down.md)
 > [November 13th 2020](mechanical%20turks%20all%20the%20way%20down.md) • [Chris Butler](https://x.com/chrizbot)
 > 
-> [![Mechanical Turks All the Way Down](../../assets/astonishing%20stories%204%20mechanical%20turks%20all%20the%20way%20down.webp)](mechanical%20turks%20all%20the%20way%20down.md)
+> [![Mechanical Turks All the Way Down](../../assets/0eaae4b8fcf7ec28d25db930ce386a8d.webp)](mechanical%20turks%20all%20the%20way%20down.md)
 > 
 > Can’t be too eager on your first day of the job.
 
 > [!story]- [Out of the Loop](out%20of%20the%20loop.md)
 > [November 20th 2020](out%20of%20the%20loop.md) • [Sachin Benny](https://sachinbenny.notion.site/I-m-Sachin-Benny-7391ec1aafa94af28599a2b089c4bf35)
 > 
-> [![Out of the Loop](../../assets/astonishing%20stories%205%20out%20of%20the%20loop.webp)](out%20of%20the%20loop.md)
+> [![Out of the Loop](../../assets/a546e6e978ee62702f6741e06675b708.webp)](out%20of%20the%20loop.md)
 > 
 > He decided then that it was time for him to untangle this mess because no way he was getting laid without a neat graph of thoughts — manufactured or otherwise.
 
 > [!story]- [Agglomerizing the Aesthetic](agglomerizing%20the%20aesthetic.md)
 > [November 29th 2020](agglomerizing%20the%20aesthetic.md) • [Benjamin Smith](https://bens.substack.com/)
 > 
-> [![Agglomerizing the Aesthetic](../../assets/astonishing%20stories%206%20agglomerizing%20the%20aesthetic.webp)](agglomerizing%20the%20aesthetic.md)
+> [![Agglomerizing the Aesthetic](../../assets/480032c0c8345e954ba4821208cc4afc.webp)](agglomerizing%20the%20aesthetic.md)
 > 
 > When you needed something, no matter how minor, someone, somewhere in the world could help you with it.
 
-![Justice — https://asterisques.com/](../../assets/astonishing%20stories.webp)
+![Justice — https://asterisques.com/](../../assets/b2efefdb8a82648cf42f8b8c4875b0ff.webp)
 
 ## The Yak Collective // Astonishing Stories
 **Lead editors** / [Sachin Benny](https://sachinbenny.notion.site/I-m-Sachin-Benny-7391ec1aafa94af28599a2b089c4bf35) and [Amanda Reeves](https://wabisabifutures.com/) // **Co-editors** / [Jenna Dixon](https://x.com/jdbb), [Scott Garlinger](https://x.com/scott_garlinger), Praful Mathur, [Shreeda Segan](https://x.com/freeshreeda) // **Writers** / [Sachin Benny](https://sachinbenny.notion.site/I-m-Sachin-Benny-7391ec1aafa94af28599a2b089c4bf35), [Chris Butler](https://x.com/chrizbot), [Nathan Chen](https://nchen13.github.io/), [Scott Garlinger](https://x.com/scott_garlinger), [Benjamin Smith](https://bens.substack.com/) // **Illustrator** / [Justice](https://asterisques.com/) // **Website development** / [Nathan Acks](https://www.necopinus.xyz/) // **Additional collaborators** / Maggie Appleton, Tracy Brinkerhoff, Michael de la Maza, Prashant Gandhi, [Zhan Li](https://x.com/thezhanly), Murilo Loureiro, Sumit Paul-Choudhury, Claire Peters, [Chris Reid](https://x.com/careid0), Erik Sandberg, Mike Wimsatt

@@ -15,7 +15,7 @@ Herewith a roundup of what Yak Collective indies have been up to this past week.
 
 > Last night @vgr was explaining Reubleaux triangles and I almost fell out of my chair trying to show off my sweet clock.
 > 
-> ![E2zvgqNVUAEnB0G](../assets/E2zvgqNVUAEnB0G.jpg)
+> ![E2zvgqNVUAEnB0G](../assets/cf2958ff81b8b4551910592e958f8bfc.jpg)
 > 
 > — [Rhett Garber ∙ @rhettford ∙ 3:57 PM ∙ Jun 1, 2021](https://x.com/rhettford/status/1399756932370485251)
 
@@ -90,12 +90,12 @@ Two channels on the server focus on what folks use to get stuff done as an indie
 
 > One of my favorite scientific figures is this one of the entropy levels of 100 world cities by the orientation of streets. The cities with most ordered streets: Chicago, Miami, & Minneapolis. Most disordered: Charlotte, Sao Paulo, Rome & Singapore. Paper: <https://appliednetsci.springeropen.com/articles/10.1007/s41109-019-0189-1>
 > 
-> ![E3DxNT6XIAMIVR9](../assets/E3DxNT6XIAMIVR9.jpg)
+> ![E3DxNT6XIAMIVR9](../assets/9e72df202a399f789c182a397218db2f.jpg)
 > 
 > — [Ethan Mollick ∙ @emollick ∙ 6:41 PM ∙ Jun 4, 2021](https://x.com/emollick/status/1400885452261974020)
 
 > When you generate images with VQGAN + CLIP, the image quality dramatically improves if you add “unreal engine” to your prompt. People are now calling this “unreal engine trick” lol e.g. “the angel of air. unreal engine”
 > 
-> ![E2c3YnTUYAAq2Bo](../assets/E2c3YnTUYAAq2Bo.jpg)
+> ![E2c3YnTUYAAq2Bo](../assets/55a4298f536d4737d937a651e76bf1f7.jpg)
 > 
 > — [Aran Komatsuzaki ∙ @arankomatsuzaki ∙ 9:02 PM ∙ May 31, 2021](https://x.com/arankomatsuzaki/status/1399471244760649729)

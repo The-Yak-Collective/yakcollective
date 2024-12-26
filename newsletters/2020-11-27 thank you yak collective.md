@@ -59,7 +59,7 @@ PS: Spec behavioral research in advance of cementing a contract. Many companies 
 
 “Whoa!” Judd put up his hands to deflect his father’s anger, “I can explain.” Shunting his father to the corner of the garage and away from the decomposed clarinet, he began breathlessly, “so I’m practicing yesterday like normal, getting feedback from Clarence, the clarinet’s evaluation algorithm. But I notice it just keeps repeating the same thing, in the same patronizing British accent. And I mean, No. Matter. What. I. Played. I practiced my arpeggios for two hours, and it tells me I’m 46th percentile. I play a series of high-pitched squeals: ‘Practice your arpeggios…’ I even take the thing apart and remove the analog-to-digital converter so I can feed it recordings of Benny Goodman. “You’re at the 46th percentile. Practice your arpeggios.” Judd throws up his hands in exasperation.
 
-![Your Payment Is Ready](../assets/941a80bd-1983-4afa-b6f3-141df3dab418_1440x1575.jpg)
+![Your Payment Is Ready](../assets/0f60cbdf06f689aaf98a923065bebf1f.jpg)
 
 *Illustration by Justice.*
 

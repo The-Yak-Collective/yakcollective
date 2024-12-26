@@ -26,11 +26,11 @@ A to-be-automated roundup of what the Yak Collective was up to this week. Yaks �
 ## [\#yak rover updates](../study%20groups/yak%20robotics%20garage.md)
 [Weekly work call notes](https://roamresearch.com/#/app/ArtOfGig/page/dEHRA-jcd) | [Go and See Build Snapshot 2021-06-13](https://docs.google.com/presentation/d/1ug3vkDoDGSGTB2PZ0etH7OPhEZ1wZaRuayvIovF6iW4/edit#slide=id.gdfc7ca8d1e_2_11)
 
-![6fc2fa33-8cf2-4726-8e0c-9dca4869c385\_1890x1074](../assets/6fc2fa33-8cf2-4726-8e0c-9dca4869c385_1890x1074.jpg)
+![6fc2fa33-8cf2-4726-8e0c-9dca4869c385\_1890x1074](../assets/0dc1051e8495b34b6a728bd411210f17.jpg)
 
 **Go and See.** For this third rover iteration, researched use cases for an earth-based rover that are accessible to me without a lot of added overhead. Settled on the perspective of the rover being a field research unit that does things that I am curious about but don’t have the patience, senses, computational capacity, or memory to do; and prepared to discuss this and associated mission and technology related topics in the Yak Rover Meeting. Determine the fundamental operations that this rover iteration needs to be able to do, distill those down into capabilities that the technologies involved need to provide, and then begin research into what will provide them, with intent to be able to eventually generate a BOM and then proceed from there. This rover will will be performing much more complex operations in a much less constrained environment than my previous indoors kit robots, so I don’t expect this to be a fast process. Realizing that there are many potential uses for rovers in field research here on Earth beyond what I’ve seen in the existing literature. I definitely want to explore this further!
 
-![67927971-a33d-4720-b344-21698fdaf043\_529x401](../assets/67927971-a33d-4720-b344-21698fdaf043_529x401.jpg)
+![67927971-a33d-4720-b344-21698fdaf043\_529x401](../assets/f848e3f5ec6a895bd39fe050207b8bd7.jpg)
 
 *Gravel is standardized size numbers.*
 
@@ -124,13 +124,13 @@ A to-be-automated roundup of what the Yak Collective was up to this week. Yaks �
 
 > I’ve gone down a rabbit hole of reading about the life of Yellowstone wolf 21, who seems to have been the wolf equivalent of the Buddha crossed with Batman. In his entire life he never lost a fight & never killed a defeated enemy. What a legend.
 > 
-> ![E30NOv9UYAQPIDO](../assets/E30NOv9UYAQPIDO.jpg)
+> ![E30NOv9UYAQPIDO](../assets/fc7382c6e3c525a72029cdaedb9b978b.jpg)
 > 
 > — [Zack Stentz ∙ @MuseZack ∙ 4:24 AM ∙ Jun 14, 2021](https://x.com/MuseZack/status/1404293557087707137)
 
 > Dan Harmon on writer’s block
 > 
-> ![E4HgygpWUAMI8Hs](../assets/E4HgygpWUAMI8Hs.jpg)
+> ![E4HgygpWUAMI8Hs](../assets/d0d52c0a0e719c275bc1eacd65fdf406.jpg)
 > 
 > <https://news.ycombinator.com/item?id=23092657>
 > 
@@ -144,13 +144,13 @@ A to-be-automated roundup of what the Yak Collective was up to this week. Yaks �
 
 > Idle moments while elevating infected foot and using icepack; playing with a matrix to position various consultants, exorcists and shallow thinkers
 > 
-> ![E4Qer79WEAIZw1g](../assets/E4Qer79WEAIZw1g.jpg)
+> ![E4Qer79WEAIZw1g](../assets/ab58f2cb88ac98cd540600f6f0e2074d.jpg)
 > 
 > — [ᗪᗩᐯᕮ SᑎOᗯᗪᕮᑎ 🏴󠁧󠁢󠁷󠁬󠁳󠁿 🇪🇺 ∙ @snowded ∙ 4:08 PM ∙ Jun 19, 2021](https://x.com/snowded/status/1406282726945263622)
 
 > An ancient giant ‘rhino’ was truly giant. “The 26-foot-long (8 meters) beast had a shoulder height of 16.4 feet (5 m), and it weighed as much as 24 tons (21.7 metric tons).” via @LiveScience
 > 
-> ![E4Kk8o-WYAARfto](../assets/E4Kk8o-WYAARfto.jpg)
+> ![E4Kk8o-WYAARfto](../assets/45dc8cc998597b12ce26342facfb4bb4.jpg)
 > 
 > <https://www.realclearscience.com/articles/2021/06/18/ancient_giant_rhino_was_one_of_the_largest_mammals_to_walk_the_earth_781988.html>
 > 
@@ -162,7 +162,7 @@ A to-be-automated roundup of what the Yak Collective was up to this week. Yaks �
 
 > Reports of Organized Fraud in ACM/IEEE Conferences.
 > 
-> ![EaE1s9hXsAA6S3v](../assets/EaE1s9hXsAA6S3v.jpg)
+> ![EaE1s9hXsAA6S3v](../assets/8231b340ade735d7ca048b3849c01bcb.jpg)
 > 
 > <https://medium.com/@tnvijayk/potential-organized-fraud-in-acm-ieee-computer-architecture-conferences-ccd61169370d>
 > 
@@ -170,7 +170,7 @@ A to-be-automated roundup of what the Yak Collective was up to this week. Yaks �
 
 > A bucranium coin minted in Lamponeia, Troad (Troas) in 6th century BC…
 > 
-> ![E4UH681XEAAKmI0](../assets/E4UH681XEAAKmI0.jpg)
+> ![E4UH681XEAAKmI0](../assets/4bbd01de34245f8be38d6be6b6ea87bb.jpg)
 > 
 > <https://en.wikipedia.org/wiki/Lamponeia>  
 > <https://en.wikipedia.org/wiki/Troad>  

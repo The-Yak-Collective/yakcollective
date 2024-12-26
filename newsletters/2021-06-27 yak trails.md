@@ -177,7 +177,7 @@ Current gigs. [Details on the server.](https://discord.com/channels/692111190851
 
 > A bucranium coin minted in Lamponeia, Troad (Troas) in 6th century BC…
 > 
-> ![E4UH681XEAAKmI0](../assets/E4UH681XEAAKmI0.jpg)
+> ![E4UH681XEAAKmI0](../assets/4bbd01de34245f8be38d6be6b6ea87bb.jpg)
 > 
 > <https://en.wikipedia.org/wiki/Lamponeia>  
 > <https://en.wikipedia.org/wiki/Troad>  
@@ -191,7 +191,7 @@ Current gigs. [Details on the server.](https://discord.com/channels/692111190851
 
 > Reports of Organized Fraud in ACM/IEEE Conferences.
 > 
-> ![EaE1s9hXsAA6S3v](../assets/EaE1s9hXsAA6S3v.jpg)
+> ![EaE1s9hXsAA6S3v](../assets/8231b340ade735d7ca048b3849c01bcb.jpg)
 > 
 > <https://medium.com/@tnvijayk/potential-organized-fraud-in-acm-ieee-computer-architecture-conferences-ccd61169370d>
 > 
@@ -207,8 +207,8 @@ Current gigs. [Details on the server.](https://discord.com/channels/692111190851
 > 
 > > A popular fishing spot, but not because of the fish.
 > > 
-> > ![E4HbIoVWEAAyZ4U](../assets/E4HbIoVWEAAyZ4U.png)
-> > ![E4HbJRfX0AYRN2J](../assets/E4HbJRfX0AYRN2J.jpeg)
+> > ![E4HbIoVWEAAyZ4U](../assets/8ef6c5f7b5fe7415b6af0eb5b26c5bad.png)
+> > ![E4HbJRfX0AYRN2J](../assets/ee0be785a092d81d62ac2f78b6d7fb6e.jpg)
 > > 
 > > — [GuruAnaerobic ∙ @GuruAnaerobic ∙ 3:56 PM ∙ Jun 17, 2021](https://x.com/GuruAnaerobic/status/1405645522493480967)
 > 
@@ -216,7 +216,7 @@ Current gigs. [Details on the server.](https://discord.com/channels/692111190851
 
 > An ancient giant ‘rhino’ was truly giant. “The 26-foot-long (8 meters) beast had a shoulder height of 16.4 feet (5 m), and it weighed as much as 24 tons (21.7 metric tons).” via @LiveScience
 > 
-> ![E4Kk8o-WYAARfto](../assets/E4Kk8o-WYAARfto.jpg)
+> ![E4Kk8o-WYAARfto](../assets/45dc8cc998597b12ce26342facfb4bb4.jpg)
 > 
 > <https://www.realclearscience.com/articles/2021/06/18/ancient_giant_rhino_was_one_of_the_largest_mammals_to_walk_the_earth_781988.html>
 > 
@@ -228,7 +228,7 @@ Current gigs. [Details on the server.](https://discord.com/channels/692111190851
 
 > Idle moments while elevating infected foot and using icepack; playing with a matrix to position various consultants, exorcists and shallow thinkers
 > 
-> ![E4Qer79WEAIZw1g](../assets/E4Qer79WEAIZw1g.jpg)
+> ![E4Qer79WEAIZw1g](../assets/ab58f2cb88ac98cd540600f6f0e2074d.jpg)
 > 
 > — [ᗪᗩᐯᕮ SᑎOᗯᗪᕮᑎ 🏴󠁧󠁢󠁷󠁬󠁳󠁿 🇪🇺 ∙ @snowded ∙ 4:08 PM ∙ Jun 19, 2021](https://x.com/snowded/status/1406282726945263622)
 
@@ -246,7 +246,7 @@ Current gigs. [Details on the server.](https://discord.com/channels/692111190851
 
 > Dan Harmon on writer’s block
 > 
-> ![E4HgygpWUAMI8Hs](../assets/E4HgygpWUAMI8Hs.jpg)
+> ![E4HgygpWUAMI8Hs](../assets/d0d52c0a0e719c275bc1eacd65fdf406.jpg)
 > 
 > <https://news.ycombinator.com/item?id=23092657>
 > 
@@ -264,7 +264,7 @@ Current gigs. [Details on the server.](https://discord.com/channels/692111190851
 
 > 1/ Just for fun, here’s a thread comparing retrofuturist art from the mid 20th century with the reality today!
 > 
-> ![8610da43-75eb-4366-a141-0a823505d11f\_625x353](../assets/8610da43-75eb-4366-a141-0a823505d11f_625x353.jpg)
+> ![8610da43-75eb-4366-a141-0a823505d11f\_625x353](../assets/263cee37c47f3be40eaec274f6391bf3.jpg)
 > 
 > <https://gizmodo.com/42-visions-for-tomorrow-from-the-golden-age-of-futurism-1683553063>  
 > <https://www.pinterest.com/pin/475270566909183551/>
@@ -313,7 +313,7 @@ Current gigs. [Details on the server.](https://discord.com/channels/692111190851
 
 > \#roamans, what’s the currently preferred way of reading .epub ebooks, making notes and getting things into Roam on iOS (yes, very specific question 😁)? I’ve been using Marvin but the last update was three years ago and I’m looking for something better.
 > 
-> ![9598e8f9-4aa4-4fc8-9566-443fceddaf70\_1200x630](../assets/9598e8f9-4aa4-4fc8-9566-443fceddaf70_1200x630.png)
+> ![9598e8f9-4aa4-4fc8-9566-443fceddaf70\_1200x630](../assets/787180e13c0bae645ab96d535180a1ac.png)
 > 
 > <https://apps.apple.com/us/app/marvin-3/id1086482858>
 > 
@@ -321,7 +321,7 @@ Current gigs. [Details on the server.](https://discord.com/channels/692111190851
 
 > @cortexfutura Few years ago I used MarginNote for ePub with great success. I also know some \#roamans using it today. I haven’t used it for a while, but it advertises multiple format outputs.
 > 
-> ![2fae7c90-29ac-4d1b-9df6-b0bff26d70c8\_1200x630](../assets/2fae7c90-29ac-4d1b-9df6-b0bff26d70c8_1200x630.png)
+> ![2fae7c90-29ac-4d1b-9df6-b0bff26d70c8\_1200x630](../assets/b531772e81ba9c1c9eb9054c665da2ef.png)
 > 
 > <https://apps.apple.com/us/app/marginnote-3/id1348317163>
 > 
@@ -329,7 +329,7 @@ Current gigs. [Details on the server.](https://discord.com/channels/692111190851
 
 > @cortexfutura Currently using Apple’s Books and @readwiseio to transfer highlights and notes into Roam
 > 
-> ![ea0586de-da3c-4148-beb8-65c431bf5dea\_399x865](../assets/ea0586de-da3c-4148-beb8-65c431bf5dea_399x865.gif)
+> ![ea0586de-da3c-4148-beb8-65c431bf5dea\_399x865](../assets/2dd9544827be187df97c8f216aec9310.gif)
 > 
 > <https://help.readwise.io/article/35-how-do-i-import-apple-books-highlights-from-my-iphoneipad>
 > 
