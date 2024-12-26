@@ -292,49 +292,49 @@ Current gigs. [Details on the server.](https://discord.com/channels/692111190851
 > 
 > <https://www.vice.com/en/article/bullshitting-sign-intelligence-psychology-lying/>
 > 
-> — [Scott Hanselman ∙ @shanselman ∙ 3:27 AM ∙ Jun 29, 2021](https://x.com/shanselman/status/1409715241261277184)
+> — [Scott Hanselman • @shanselman • 3:27 AM • Jun 29, 2021](https://x.com/shanselman/status/1409715241261277184)
 
 > wonder if there are no new genres of fiction because there is no longer a need for sublimation of beliefs through fiction. Whatever crazy/taboo thing you believe you would have better luck finding other people by starting a subreddit or a conspiracy theory
 > 
-> — [Sachin ∙ @SachinB91 ∙ 7:11 PM ∙ Jun 24, 2021](https://x.com/SachinB91/status/1408140834659352577)
+> — [Sachin • @SachinB91 • 7:11 PM • Jun 24, 2021](https://x.com/SachinB91/status/1408140834659352577)
 
 > A few Wednesday morning thoughts on creative methodologies — in particular the use of fiction — in national security policy analysis.
 > 
-> — [Kathleen J. McInnis ∙ @kjmcinnis1 ∙ 11:14 AM ∙ Jun 30, 2021](https://x.com/kjmcinnis1/status/1410195127948218368)
+> — [Kathleen J. McInnis • @kjmcinnis1 • 11:14 AM • Jun 30, 2021](https://x.com/kjmcinnis1/status/1410195127948218368)
 
 > @meekaale @visakanv @michaelcurzi Alexander has a number of pieces in APL which allude to intergenerationality like Teenager’s Cottage. There is an emergent typology of dualfrontdoor homes serving the grannyflat + boomerangkids + airbnbsublet. I’d like to see this APL’d.
 > 
-> — [Phil Pawlett Jackson ∙ @ppawlettjackson ∙ 11:17 AM ∙ Jun 25, 2021](https://x.com/ppawlettjackson/status/1408383958983794694)
+> — [Phil Pawlett Jackson • @ppawlettjackson • 11:17 AM • Jun 25, 2021](https://x.com/ppawlettjackson/status/1408383958983794694)
 
 > The Modular Robotic Vehicle developed by NASA is well-suited for busy urban environments. The driver relies on control inputs being converted to electrical signals and transmitted by wire to the motors within the vehicle <https://technology.nasa.gov/patent/MSC-TOPS-74>
 > 
 > video: <https://www.youtube.com/watch?v=eE0KwnDYYh8>
 > 
-> — [Massimo ∙ @Rainmaker1973 ∙ 6:00 AM ∙ Jun 25, 2021](https://x.com/rainmaker1973/status/1408303945089495042)
+> — [Massimo • @Rainmaker1973 • 6:00 AM • Jun 25, 2021](https://x.com/rainmaker1973/status/1408303945089495042)
 
 > @vgr @inaturalist Long story! Short story is knockoffs flooded the market: <https://amazon.com/s?k=underwater+drones>
 > 
 > They got better very fast, and much cheaper. But underwater drones are now more accessible than ever, which was the goal!
 > 
-> — [David Lang ∙ @davidtlang ∙ 4:18 AM ∙ Jun 26, 2021](https://x.com/davidtlang/status/1408640829690765317)
+> — [David Lang • @davidtlang • 4:18 AM • Jun 26, 2021](https://x.com/davidtlang/status/1408640829690765317)
 
 > Off to an inauspicious start with the Beaglebone Blue. The network drivers won’t install on MacOS Catalina. Apparently the packages, HoRNDIS and EnergiaFTDIDrivers (no idea what they do… ELI5?) do shady shit at system level so Catalina sez no.
 > 
-> — [Venkatesh Rao ∙ @vgr ∙ 5:05 PM ∙ Jun 28, 2021](https://x.com/vgr/status/1409558475999350786)
+> — [Venkatesh Rao • @vgr • 5:05 PM • Jun 28, 2021](https://x.com/vgr/status/1409558475999350786)
 
 > github copilot has, by their own admission, been trained on mountains of gpl code, so i’m unclear on how it’s not a form of laundering open source code into commercial works. the handwave of “it usually doesn’t reproduce exact chunks” is not very satisfying
 > 
-> — [eevee ∙ @eevee ∙ 12:47 AM ∙ Jun 30, 2021](https://x.com/eevee/status/1410037309848752128)
+> — [eevee • @eevee • 12:47 AM • Jun 30, 2021](https://x.com/eevee/status/1410037309848752128)
 
 > Some thoughts about Github Copilot and copyright (I am not a lawyer). Copilot uses a version of GPT3 trained on GPL licensed code. GPL give everyone the right to copy and make derivatives. Derivatives inherit GPL. Copilot can sometimes memorize and repeat snippets of code.
 > 
 > ![](../assets/2b612ce1586e8d6af9e5232e324f3718.jpg)
 > 
-> — [Mark O. Riedl ∙ @mark\_riedl ∙ 2:13 PM ∙ Jun 30, 2021](https://x.com/mark_riedl/status/1410240122776440836)
+> — [Mark O. Riedl • @mark\_riedl • 2:13 PM • Jun 30, 2021](https://x.com/mark_riedl/status/1410240122776440836)
 
 > I know this might sound controversial, but maybe extracting fossil fuels from the seafloor (or anywhere really) is a bad idea
 > 
-> — [Brian Kahn ∙ @blkahn ∙ 9:43 PM ∙ Jul 2, 2021](https://x.com/blkahn/status/1411078040654860289)
+> — [Brian Kahn • @blkahn • 9:43 PM • Jul 2, 2021](https://x.com/blkahn/status/1411078040654860289)
 
 > \#roamans, what’s the currently preferred way of reading .epub ebooks, making notes and getting things into Roam on iOS (yes, very specific question 😁)? I’ve been using Marvin but the last update was three years ago and I’m looking for something better.
 > 
@@ -342,7 +342,7 @@ Current gigs. [Details on the server.](https://discord.com/channels/692111190851
 > 
 > <https://apps.apple.com/us/app/marvin-3/id1086482858>
 > 
-> — [C𐃏rtex Futura 🚢 9/30 Atomic Essays ∙ @cortexfutura ∙ 8:03 AM ∙ Jun 25, 2021](https://x.com/cortexfutura/status/1408335044381392900)
+> — [C𐃏rtex Futura 🚢 9/30 Atomic Essays • @cortexfutura • 8:03 AM • Jun 25, 2021](https://x.com/cortexfutura/status/1408335044381392900)
 
 > @cortexfutura Few years ago I used MarginNote for ePub with great success. I also know some \#roamans using it today. I haven’t used it for a while, but it advertises multiple format outputs.
 > 
@@ -350,7 +350,7 @@ Current gigs. [Details on the server.](https://discord.com/channels/692111190851
 > 
 > <https://apps.apple.com/us/app/marginnote-3/id1348317163>
 > 
-> — [RoamHacker — exploring PKM and its future ∙ @roamhacker ∙ 8:09 AM ∙ Jun 25, 2021](https://x.com/roamhacker/status/1408336566267924480)
+> — [RoamHacker — exploring PKM and its future • @roamhacker • 8:09 AM • Jun 25, 2021](https://x.com/roamhacker/status/1408336566267924480)
 
 > @cortexfutura Currently using Apple’s Books and @readwiseio to transfer highlights and notes into Roam
 > 
@@ -358,4 +358,4 @@ Current gigs. [Details on the server.](https://discord.com/channels/692111190851
 > 
 > <https://help.readwise.io/article/35-how-do-i-import-apple-books-highlights-from-my-iphoneipad>
 > 
-> — [Federico Gaggio @federicogg 8:31 AM ∙ Jun 25, 2021](https://x.com/federicogg/status/1408341972235046913)
+> — [Federico Gaggio @federicogg 8:31 AM • Jun 25, 2021](https://x.com/federicogg/status/1408341972235046913)

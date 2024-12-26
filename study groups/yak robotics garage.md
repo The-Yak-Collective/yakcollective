@@ -6,7 +6,7 @@ date: 2021-03-28
 ---
 *Robotics tinkering for everyone*
 
-![The Yak Robotics Garage](../assets/c8fbed2168c91c9341bd7d2b36193e4c.webp)
+![The Yak Robotics Garage](../assets/803fb6d199f854ba249281f198401666.png)
 
 The Yak Robotics Garage (YaRG) is an informal robotics research group with a relatively mature focus on rovers, with an aspirational goal of deploying open-source rovers on Mars, starting with rovers in living rooms on Earth. In 2024, we are starting to explore other verticals besides rovers.
 
@@ -14,21 +14,21 @@ Since 2021, we have been tinkering with a variety of both from-scratch and kit-b
 
 Currently, our main collaborative activity is designing and deploying a rover called [the Yakasaur](https://github.com/The-Yak-Collective/yakasaur), a 2-wheel rover for desert environments built around a “small-brain/big-brain” compute architecture, possibly with some onboard machine-learning elements. Our goal is to build and deploy this in the Mojave desert by 2025.
 
-![Venkatesh Rao](../assets/263bcb68e834e9d80f1221fe7717fb53.webp)
-![Venkatesh Rao](../assets/e4596230703caa1d507ba0d97ded3362.webp)
+![Venkatesh Rao](../assets/14e269a52581b638ad1a43564785b6dc.png)
+![Venkatesh Rao](../assets/b5b758cdca24e07871e87bd8767207e2.jpg)
 
-![Venkatesh Rao](../assets/c29200010728ffc8c9782fe29e47865d.webp)
-![Venkatesh Rao](../assets/87baecdcc8390ff09185cf9ad3a4678f.webp)
+![Venkatesh Rao](../assets/d6c5913f03768b1f1c237f519f9a6d70.jpg)
+![Venkatesh Rao](../assets/0dc06abae5ece9451ffa94f1c92f441c.jpg)
 
-![Rhett Garber](../assets/3502dc11822a33b3661b6663e3044a27.webp)
-![Rhett Garber](../assets/4a1e0eaec42834df35b4e0eb6d6b5ce6.webp)
-![Rhett Garber](../assets/013d0dce677504551356ac0be05a3c94.webp)
+![Rhett Garber](../assets/ff1e298ba58fccbc29a09cc4efa89ff9.jpg)
+![Rhett Garber](../assets/19810d54f042b09e3cfe249ab3f502d3.jpg)
+![Rhett Garber](../assets/59fc31a2a4f26c2b608e09ce0a8c460a.jpg)
 
-![Rhett Garber](../assets/ddc019d8488aecf319fd8558c19cbb5b.webp)
-![Rhett Garber](../assets/a0d3ac881cbc60cfc9e06a57786b2350.webp)
-![Rhett Garber](../assets/c01d1a98ebc25e1a8f1af7244e648ea6.webp)
+![Rhett Garber](../assets/e34947d4424383417624d8ded66e8ab9.jpg)
+![Rhett Garber](../assets/a8bbda966749385c8419a7d98699926e.jpg)
+![Rhett Garber](../assets/6b50e461b30a9a7854966ada92acbb53.png)
 
-![Rhett Garber](../assets/8b18e1b17dd5af8fa8032e4025e2c9f1.webp)
+![Rhett Garber](../assets/f1a1910c34bb2841f155469419236ff4.png)
 
 Our group meets weekly online. Meetings alternate between strategizing or coworking around specific builds we are developing (individually or collectively) and exploring frontier tools and topics via peer learning sessions. Periodically, we also do special events such as [the spider-bot teleoperated rover race we did in Tokyo in 2021](https://www.youtube.com/watch?v=Wro96wL-HMQ), and the rover-themed hackathon we did in 2022. You can join our activities via the [\#yak-rover](https://discord.com/channels/692111190851059762/779070653122084864) channel on our Discord ([join here](../join.md)). All are welcome regardless of level and nature of skills/interests. Roverics requires many skills and each YaRGer approaches the subject in their own way. You can check out recordings of our past meetings on our YouTube channel.
 
@@ -50,7 +50,7 @@ Our group meets weekly online. Meetings alternate between strategizing or cowork
 - Robot communications (VPNs, remote access, and tele-operation)
 - Rover operating systems and software architectures
 
-![Curiosity, Hokusai style](../assets/55d409a248bbeffe28128f1c4d26ad92.webp)
+![Curiosity, Hokusai style](../assets/eeda8b90db3f9d131bb3151330e10cab.png)
 
 ## Contributors
 ### Current Roboticists

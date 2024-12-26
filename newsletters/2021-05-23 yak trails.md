@@ -6,7 +6,7 @@ quartsRssFeed: true
 date: 2021-05-23
 substack: https://yakcollective.substack.com/p/yak-trails-2021-05-23-df9
 ---
-![Yak Collective logo](../assets/b48d26a74f1857beba8099d24abfb574.png)
+![Yak Collective logo](../assets/0fdd58fc788d8c81097c53b2c4ed931f.png)
 
 Hello and welcome to Yak Trails, a new occasional roundup of what hundreds of Yak Collective independent consultants have been up to recently in projects and on the Discord server.
 
@@ -164,4 +164,4 @@ Yaks have a pretty wide range of interests and lots of links get shared on the s
 
 > ![EFJ4pVwXUAIiDX-](../assets/16f8f3328196e3f744c443a808c94f5d.jpg)
 > 
-> — [Rachel Cole ∙ @rmartincole ∙ 2:03 PM ∙ Sep 23, 2019](https://x.com/rmartincole/status/1176135108996280320)
+> — [Rachel Cole • @rmartincole • 2:03 PM • Sep 23, 2019](https://x.com/rmartincole/status/1176135108996280320)

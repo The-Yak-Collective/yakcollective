@@ -16,7 +16,7 @@ The stories here are not meant to predict the future but to be imagination exten
 > [!story]- [Wholeness in a Timeless Activity](wholeness%20in%20a%20timeless%20activity.md)
 > [October 23rd 2020](wholeness%20in%20a%20timeless%20activity.md) • [Nathan Chen](https://nchen13.github.io/)
 > 
-> [![Wholeness in a Timeless Activity](../../assets/82394c43e58d95d24595a2a08800ea02.webp)](wholeness%20in%20a%20timeless%20activity.md)
+> [![Wholeness in a Timeless Activity](../../assets/305c9b2dda1bb775ec3820901e3b2e3c.jpg)](wholeness%20in%20a%20timeless%20activity.md)
 > 
 > There are some activities the wealthy occasionally lust after. But there is one they will never stop avoiding.
 
@@ -37,7 +37,7 @@ The stories here are not meant to predict the future but to be imagination exten
 > [!story]- [Mechanical Turks All the Way Down](mechanical%20turks%20all%20the%20way%20down.md)
 > [November 13th 2020](mechanical%20turks%20all%20the%20way%20down.md) • [Chris Butler](https://x.com/chrizbot)
 > 
-> [![Mechanical Turks All the Way Down](../../assets/0eaae4b8fcf7ec28d25db930ce386a8d.webp)](mechanical%20turks%20all%20the%20way%20down.md)
+> [![Mechanical Turks All the Way Down](../../assets/cdee9d9d7dec87737b4fc03fcedfe74a.jpg)](mechanical%20turks%20all%20the%20way%20down.md)
 > 
 > Can’t be too eager on your first day of the job.
 

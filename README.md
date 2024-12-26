@@ -21,10 +21,8 @@ This `README` and files in the `private` directory are *not* included in the fin
 Conversations happen on [the Discord \#infrastructure channel](https://discord.com/channels/692111190851059762/704369362315772044).
 
 ## TODO
-- [ ] Deduplicate assets
-- [ ] Make sure that all pages and assets are in use and linked to each other (remove unused assets)
 - [ ] Make sure text works well everywhere
-	- [ ] Obsidian
+	- [x] Obsidian
 	- [ ] Foam
 	- [ ] GitHub
 - [ ] Recreate build and automation infrastructure using [Quartz](https://github.com/jackyzha0/quartz)

@@ -17,7 +17,7 @@ Herewith a roundup of what Yak Collective indies have been up to this past week.
 > 
 > ![E2zvgqNVUAEnB0G](../assets/cf2958ff81b8b4551910592e958f8bfc.jpg)
 > 
-> — [Rhett Garber ∙ @rhettford ∙ 3:57 PM ∙ Jun 1, 2021](https://x.com/rhettford/status/1399756932370485251)
+> — [Rhett Garber • @rhettford • 3:57 PM • Jun 1, 2021](https://x.com/rhettford/status/1399756932370485251)
 
 ## \#infrastructure project updates
 - we started on the idea of a YakCollective legal layer (licensing, IP protection, confidentiality, YakC incorporation). an intention of **\#coffee-with-a-yak** was to facilitate casual, pre-formal conversations with potential team-mates and potential clients
@@ -92,10 +92,10 @@ Two channels on the server focus on what folks use to get stuff done as an indie
 > 
 > ![E3DxNT6XIAMIVR9](../assets/9e72df202a399f789c182a397218db2f.jpg)
 > 
-> — [Ethan Mollick ∙ @emollick ∙ 6:41 PM ∙ Jun 4, 2021](https://x.com/emollick/status/1400885452261974020)
+> — [Ethan Mollick • @emollick • 6:41 PM • Jun 4, 2021](https://x.com/emollick/status/1400885452261974020)
 
 > When you generate images with VQGAN + CLIP, the image quality dramatically improves if you add “unreal engine” to your prompt. People are now calling this “unreal engine trick” lol e.g. “the angel of air. unreal engine”
 > 
 > ![E2c3YnTUYAAq2Bo](../assets/55a4298f536d4737d937a651e76bf1f7.jpg)
 > 
-> — [Aran Komatsuzaki ∙ @arankomatsuzaki ∙ 9:02 PM ∙ May 31, 2021](https://x.com/arankomatsuzaki/status/1399471244760649729)
+> — [Aran Komatsuzaki • @arankomatsuzaki • 9:02 PM • May 31, 2021](https://x.com/arankomatsuzaki/status/1399471244760649729)

@@ -100,4 +100,4 @@ Yaks can use `$agendalist` to view channel agenda and `$agendaadd` to add to the
 > 
 > ![E2VtO0zXEAUpFny](../assets/c0c6e3976d57656145c955685a3ed492.jpg)
 > 
-> — [YakRover Z ∙ @yakrover ∙ 7:58 PM ∙ May 26, 2021](https://x.com/yakrover/status/1397643364787441670)
+> — [YakRover Z • @yakrover • 7:58 PM • May 26, 2021](https://x.com/yakrover/status/1397643364787441670)

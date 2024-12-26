@@ -112,7 +112,7 @@ What if the tweets were, despite being unusual or representing a shift of positi
 
 > Once we became aware of the incident, we immediately locked down the affected accounts and removed Tweets posted by the attackers.
 > 
-> — [Twitter Support ∙ @TwitterSupport ∙ 2:38 AM ∙ Jul 16, 2020](https://x.com/Support/status/1283591849681342469)
+> — [Twitter Support • @TwitterSupport • 2:38 AM • Jul 16, 2020](https://x.com/Support/status/1283591849681342469)
 
 And even if Twitter did respond rapidly, wouldn’t the damage be done? How would limiting the functionality of a key social media platform affect an election? Exactly how would the nominees themselves — and the armies waging political war on their behalf — respond?
 

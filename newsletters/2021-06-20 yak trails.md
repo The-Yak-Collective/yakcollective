@@ -21,7 +21,7 @@ A to-be-automated roundup of what the Yak Collective was up to this week. Yaks �
 
 > My patience for project management level of procedural meta thinking is at a lifetime low… just wanna fingerspiutzengefuhl my way through shit in a well-appointed environment that magically translates vague intentions into quality output with nothing in between
 > 
-> — [Venkatesh Rao ∙ @vgr ∙ 6:08 PM ∙ Jun 17, 2021](https://x.com/vgr/status/1405588247556739076)
+> — [Venkatesh Rao • @vgr • 6:08 PM • Jun 17, 2021](https://x.com/vgr/status/1405588247556739076)
 
 ## [\#yak rover updates](../study%20groups/yak%20robotics%20garage.md)
 [Weekly work call notes](https://roamresearch.com/#/app/ArtOfGig/page/dEHRA-jcd) | [Go and See Build Snapshot 2021-06-13](https://docs.google.com/presentation/d/1ug3vkDoDGSGTB2PZ0etH7OPhEZ1wZaRuayvIovF6iW4/edit#slide=id.gdfc7ca8d1e_2_11)
@@ -44,7 +44,7 @@ A to-be-automated roundup of what the Yak Collective was up to this week. Yaks �
 
 > We make progress, designing the real rover… this is like 6 hours of CAD work :D
 > 
-> — [Venkatesh Rao ∙ @vgr ∙ 5:40 AM ∙ Jun 20, 2021](https://x.com/vgr/status/1406487021380521987)
+> — [Venkatesh Rao • @vgr • 5:40 AM • Jun 20, 2021](https://x.com/vgr/status/1406487021380521987)
 
 ## [\#take-gig-leave-gig](https://discord.com/channels/692111190851059762/692816049678057544/856164967811514399)
 @gigayak list of outstanding gigs. details on the server
@@ -120,13 +120,13 @@ A to-be-automated roundup of what the Yak Collective was up to this week. Yaks �
 > 
 > <https://blog.glitch.com/post/what-kind-of-simple>
 > 
-> — [Anil Dash 💉💉 ∙ @anildash ∙ 8:47 PM ∙ Jun 15, 2021](https://x.com/anildash/status/1404903318787403779)
+> — [Anil Dash 💉💉 • @anildash • 8:47 PM • Jun 15, 2021](https://x.com/anildash/status/1404903318787403779)
 
 > I’ve gone down a rabbit hole of reading about the life of Yellowstone wolf 21, who seems to have been the wolf equivalent of the Buddha crossed with Batman. In his entire life he never lost a fight & never killed a defeated enemy. What a legend.
 > 
 > ![E30NOv9UYAQPIDO](../assets/fc7382c6e3c525a72029cdaedb9b978b.jpg)
 > 
-> — [Zack Stentz ∙ @MuseZack ∙ 4:24 AM ∙ Jun 14, 2021](https://x.com/MuseZack/status/1404293557087707137)
+> — [Zack Stentz • @MuseZack • 4:24 AM • Jun 14, 2021](https://x.com/MuseZack/status/1404293557087707137)
 
 > Dan Harmon on writer’s block
 > 
@@ -134,19 +134,19 @@ A to-be-automated roundup of what the Yak Collective was up to this week. Yaks �
 > 
 > <https://news.ycombinator.com/item?id=23092657>
 > 
-> — [Rob Henderson ∙ @robkhenderson ∙ 10:21 PM ∙ Jun 17, 2021](https://x.com/robkhenderson/status/1405651723222388739)
+> — [Rob Henderson • @robkhenderson • 10:21 PM • Jun 17, 2021](https://x.com/robkhenderson/status/1405651723222388739)
 
 > Really happy to launch my first podcast series, “Overmorrow’s Library”! Each episode in the library for “the day after tomorrow” presents a book that engages with the challenge of world-making, with the end-time of a world, or with the eternal unworldly.
 > 
 > <https://e-flux.com/announcements/306323/overmorrow-s-library/>
 > 
-> — [Federico Campagna ∙ @FedCampagna ∙ 3:53 PM ∙ Nov 19, 2020](https://x.com/fedcampagna/status/1329452782638796802)
+> — [Federico Campagna • @FedCampagna • 3:53 PM • Nov 19, 2020](https://x.com/fedcampagna/status/1329452782638796802)
 
 > Idle moments while elevating infected foot and using icepack; playing with a matrix to position various consultants, exorcists and shallow thinkers
 > 
 > ![E4Qer79WEAIZw1g](../assets/ab58f2cb88ac98cd540600f6f0e2074d.jpg)
 > 
-> — [ᗪᗩᐯᕮ SᑎOᗯᗪᕮᑎ 🏴󠁧󠁢󠁷󠁬󠁳󠁿 🇪🇺 ∙ @snowded ∙ 4:08 PM ∙ Jun 19, 2021](https://x.com/snowded/status/1406282726945263622)
+> — [ᗪᗩᐯᕮ SᑎOᗯᗪᕮᑎ 🏴󠁧󠁢󠁷󠁬󠁳󠁿 🇪🇺 • @snowded • 4:08 PM • Jun 19, 2021](https://x.com/snowded/status/1406282726945263622)
 
 > An ancient giant ‘rhino’ was truly giant. “The 26-foot-long (8 meters) beast had a shoulder height of 16.4 feet (5 m), and it weighed as much as 24 tons (21.7 metric tons).” via @LiveScience
 > 
@@ -154,11 +154,11 @@ A to-be-automated roundup of what the Yak Collective was up to this week. Yaks �
 > 
 > <https://www.realclearscience.com/articles/2021/06/18/ancient_giant_rhino_was_one_of_the_largest_mammals_to_walk_the_earth_781988.html>
 > 
-> — [RealClearScience ∙ @RCScience ∙ 1:30 PM ∙ Jun 18, 2021](https://x.com/RCScience/status/1405880479673323520)
+> — [RealClearScience • @RCScience • 1:30 PM • Jun 18, 2021](https://x.com/RCScience/status/1405880479673323520)
 
 > “Those lucky enough to have become full professors — supposedly the light at the end of the tunnel for struggling junior scholars — spend just 17 per cent of their time on their own research.”
 > 
-> — [Paul Graham ∙ @paulg ∙ 5:03 PM ∙ Jun 13, 2021](https://x.com/paulg/status/1404122183799029761)
+> — [Paul Graham • @paulg • 5:03 PM • Jun 13, 2021](https://x.com/paulg/status/1404122183799029761)
 
 > Reports of Organized Fraud in ACM/IEEE Conferences.
 > 
@@ -166,7 +166,7 @@ A to-be-automated roundup of what the Yak Collective was up to this week. Yaks �
 > 
 > <https://medium.com/@tnvijayk/potential-organized-fraud-in-acm-ieee-computer-architecture-conferences-ccd61169370d>
 > 
-> — [Chase Saunders ∙ @MaineFrameworks ∙ 2:02 PM ∙ Jun 9, 2020](https://x.com/maineframeworks/status/1270355624317063171)
+> — [Chase Saunders • @MaineFrameworks • 2:02 PM • Jun 9, 2020](https://x.com/maineframeworks/status/1270355624317063171)
 
 > A bucranium coin minted in Lamponeia, Troad (Troas) in 6th century BC…
 > 
@@ -176,4 +176,4 @@ A to-be-automated roundup of what the Yak Collective was up to this week. Yaks �
 > <https://en.wikipedia.org/wiki/Troad>  
 > <https://en.wikipedia.org/wiki/Bucranium>
 > 
-> — [oldeuropeanculture ∙ @serbiaireland ∙ 9:16 AM ∙ Jun 20, 2021](https://x.com/serbiaireland/status/1406541346689761281)
+> — [oldeuropeanculture • @serbiaireland • 9:16 AM • Jun 20, 2021](https://x.com/serbiaireland/status/1406541346689761281)

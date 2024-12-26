@@ -36,7 +36,7 @@ A mostly automated roundup of what the Yak Collective was up to this week. Yaks 
 
 > Hehe triple-hybrid test assembly: CAD printout, pen lines on paper, some actual components. This could be an art form.
 > 
-> — [Venkatesh Rao ∙ @vgr ∙ 8:50 PM ∙ Jun 20, 2021](https://x.com/vgr/status/1406716207156252672)
+> — [Venkatesh Rao • @vgr • 8:50 PM • Jun 20, 2021](https://x.com/vgr/status/1406716207156252672)
 
 ### take-gig-leave-gig
 Current gigs. [Details on the server.](https://discord.com/channels/692111190851059762/692816049678057544/856164967811514399)
@@ -183,11 +183,11 @@ Current gigs. [Details on the server.](https://discord.com/channels/692111190851
 > <https://en.wikipedia.org/wiki/Troad>  
 > <https://en.wikipedia.org/wiki/Bucranium>
 > 
-> — [oldeuropeanculture ∙ @serbiaireland ∙ 9:16 AM ∙ Jun 20, 2021](https://x.com/serbiaireland/status/1406541346689761281)
+> — [oldeuropeanculture • @serbiaireland • 9:16 AM • Jun 20, 2021](https://x.com/serbiaireland/status/1406541346689761281)
 
 > My patience for project management level of procedural meta thinking is at a lifetime low… just wanna fingerspiutzengefuhl my way through shit in a well-appointed environment that magically translates vague intentions into quality output with nothing in between
 > 
-> — [Venkatesh Rao ∙ @vgr ∙ 6:08 PM ∙ Jun 17, 2021](https://x.com/vgr/status/1405588247556739076)
+> — [Venkatesh Rao • @vgr • 6:08 PM • Jun 17, 2021](https://x.com/vgr/status/1405588247556739076)
 
 > Reports of Organized Fraud in ACM/IEEE Conferences.
 > 
@@ -195,13 +195,13 @@ Current gigs. [Details on the server.](https://discord.com/channels/692111190851
 > 
 > <https://medium.com/@tnvijayk/potential-organized-fraud-in-acm-ieee-computer-architecture-conferences-ccd61169370d>
 > 
-> — [Chase Saunders ∙ @MaineFrameworks ∙ 2:02 PM ∙ Jun 9, 2020](https://x.com/maineframeworks/status/1270355624317063171)
+> — [Chase Saunders • @MaineFrameworks • 2:02 PM • Jun 9, 2020](https://x.com/maineframeworks/status/1270355624317063171)
 
 > “Those lucky enough to have become full professors — supposedly the light at the end of the tunnel for struggling junior scholars — spend just 17 per cent of their time on their own research.”
 > 
 > <https://www.timeshighereducation.com/blog/if-you-love-research-academia-may-not-be-you>
 > 
-> — [Paul Graham ∙ @paulg ∙ 5:03 PM ∙ Jun 13, 2021](https://x.com/paulg/status/1404122183799029761)
+> — [Paul Graham • @paulg • 5:03 PM • Jun 13, 2021](https://x.com/paulg/status/1404122183799029761)
 
 > @paulg Academia is a “good spot for research” (as per the parable below)
 > 
@@ -210,9 +210,9 @@ Current gigs. [Details on the server.](https://discord.com/channels/692111190851
 > > ![E4HbIoVWEAAyZ4U](../assets/8ef6c5f7b5fe7415b6af0eb5b26c5bad.png)
 > > ![E4HbJRfX0AYRN2J](../assets/ee0be785a092d81d62ac2f78b6d7fb6e.jpg)
 > > 
-> > — [GuruAnaerobic ∙ @GuruAnaerobic ∙ 3:56 PM ∙ Jun 17, 2021](https://x.com/GuruAnaerobic/status/1405645522493480967)
+> > — [GuruAnaerobic • @GuruAnaerobic • 3:56 PM • Jun 17, 2021](https://x.com/GuruAnaerobic/status/1405645522493480967)
 > 
-> — [Luca Dellanna ∙ @DellAnnaLuca ∙ 8:19 AM ∙ Jun 18, 2021](https://x.com/DellAnnaLuca/status/1405802323411181568)
+> — [Luca Dellanna • @DellAnnaLuca • 8:19 AM • Jun 18, 2021](https://x.com/DellAnnaLuca/status/1405802323411181568)
 
 > An ancient giant ‘rhino’ was truly giant. “The 26-foot-long (8 meters) beast had a shoulder height of 16.4 feet (5 m), and it weighed as much as 24 tons (21.7 metric tons).” via @LiveScience
 > 
@@ -220,29 +220,29 @@ Current gigs. [Details on the server.](https://discord.com/channels/692111190851
 > 
 > <https://www.realclearscience.com/articles/2021/06/18/ancient_giant_rhino_was_one_of_the_largest_mammals_to_walk_the_earth_781988.html>
 > 
-> — [RealClearScience ∙ @RCScience ∙ 1:30 PM ∙ Jun 18, 2021](https://x.com/RCScience/status/1405880479673323520)
+> — [RealClearScience • @RCScience • 1:30 PM • Jun 18, 2021](https://x.com/RCScience/status/1405880479673323520)
 
 > 🧵: One like = one piece of advice from Wine Mom Sarah to the youths (Specific questions also welcome)
 > 
-> — [Sarah Constantin ∙ @s\_r\_constantin ∙ 9:20 PM ∙ Jun 16, 2021](https://x.com/s_r_constantin/status/1405274155218464769)
+> — [Sarah Constantin • @s\_r\_constantin • 9:20 PM • Jun 16, 2021](https://x.com/s_r_constantin/status/1405274155218464769)
 
 > Idle moments while elevating infected foot and using icepack; playing with a matrix to position various consultants, exorcists and shallow thinkers
 > 
 > ![E4Qer79WEAIZw1g](../assets/ab58f2cb88ac98cd540600f6f0e2074d.jpg)
 > 
-> — [ᗪᗩᐯᕮ SᑎOᗯᗪᕮᑎ 🏴󠁧󠁢󠁷󠁬󠁳󠁿 🇪🇺 ∙ @snowded ∙ 4:08 PM ∙ Jun 19, 2021](https://x.com/snowded/status/1406282726945263622)
+> — [ᗪᗩᐯᕮ SᑎOᗯᗪᕮᑎ 🏴󠁧󠁢󠁷󠁬󠁳󠁿 🇪🇺 • @snowded • 4:08 PM • Jun 19, 2021](https://x.com/snowded/status/1406282726945263622)
 
 > Pls share: *Calling Researchers!* We’re looking for a \#researcher to design the \#evaluation approach, data collection & analysis plan for our \#foodventure. 6 week project starting immediately. For more info & how to respond take a look over here 👇
 > 
 > <https://shiftdesign.org/careers/>
 > 
-> — [Shift ∙ @shift\_org ∙ 4:46 PM ∙ Apr 14, 2021](https://x.com/shift_org/status/1382374723447705600)
+> — [Shift • @shift\_org • 4:46 PM • Apr 14, 2021](https://x.com/shift_org/status/1382374723447705600)
 
 > We were blown away by the creativity and enthusiasms of \#IBMQuantumChallenge participants! Who knows what might happen if we devised a challenge to tackle an unsolved problem in the research field?
 > 
 > <https://research.ibm.com/blog/quantum-challenge-2021-results>
 > 
-> — [Junye Huang ∙ @HuangJunye ∙ 4:28 PM ∙ Jun 18, 2021](https://x.com/HuangJunye/status/1405925304074338304)
+> — [Junye Huang • @HuangJunye • 4:28 PM • Jun 18, 2021](https://x.com/HuangJunye/status/1405925304074338304)
 
 > Dan Harmon on writer’s block
 > 
@@ -250,17 +250,17 @@ Current gigs. [Details on the server.](https://discord.com/channels/692111190851
 > 
 > <https://news.ycombinator.com/item?id=23092657>
 > 
-> — [Rob Henderson ∙ @robkhenderson ∙ 10:21 PM ∙ Jun 17, 2021](https://x.com/robkhenderson/status/1405651723222388739)
+> — [Rob Henderson • @robkhenderson • 10:21 PM • Jun 17, 2021](https://x.com/robkhenderson/status/1405651723222388739)
 
 > Really happy to launch my first podcast series, “Overmorrow’s Library”! Each episode in the library for “the day after tomorrow” presents a book that engages with the challenge of world-making, with the end-time of a world, or with the eternal unworldly.
 > 
 > <https://e-flux.com/announcements/306323/overmorrow-s-library/>
 > 
-> — [Federico Campagna ∙ @FedCampagna ∙ 3:53 PM ∙ Nov 19, 2020](https://x.com/fedcampagna/status/1329452782638796802)
+> — [Federico Campagna • @FedCampagna • 3:53 PM • Nov 19, 2020](https://x.com/fedcampagna/status/1329452782638796802)
 
 > wonder if there are no new genres of fiction because there is no longer a need for sublimation of beliefs through fiction. Whatever crazy/taboo thing you believe you would have better luck finding other people by starting a subreddit or a conspiracy theory
 > 
-> — [Sachin ∙ @SachinB91 ∙ 7:11 PM ∙ Jun 24, 2021](https://x.com/SachinB91/status/1408140834659352577)
+> — [Sachin • @SachinB91 • 7:11 PM • Jun 24, 2021](https://x.com/SachinB91/status/1408140834659352577)
 
 > 1/ Just for fun, here’s a thread comparing retrofuturist art from the mid 20th century with the reality today!
 > 
@@ -269,31 +269,31 @@ Current gigs. [Details on the server.](https://discord.com/channels/692111190851
 > <https://gizmodo.com/42-visions-for-tomorrow-from-the-golden-age-of-futurism-1683553063>  
 > <https://www.pinterest.com/pin/475270566909183551/>
 > 
-> — [Noah Smith 🐇 ∙ @Noahpinion ∙ 4:12 PM ∙ Jun 20, 2021](https://x.com/Noahpinion/status/1406646116024602627)
+> — [Noah Smith 🐇 • @Noahpinion • 4:12 PM • Jun 20, 2021](https://x.com/Noahpinion/status/1406646116024602627)
 
 > @meekaale @visakanv @michaelcurzi Alexander has a number of pieces in APL which allude to intergenerationality like Teenager’s Cottage. There is an emergent typology of dualfrontdoor homes serving the grannyflat + boomerangkids + airbnbsublet. I’d like to see this APL’d.
 > 
-> — [Phil Pawlett Jackson ∙ @ppawlettjackson ∙ 11:17 AM ∙ Jun 25, 2021](https://x.com/ppawlettjackson/status/1408383958983794694)
+> — [Phil Pawlett Jackson • @ppawlettjackson • 11:17 AM • Jun 25, 2021](https://x.com/ppawlettjackson/status/1408383958983794694)
 
 > Little thread on what’s one of the harder hands-on engineering things I’ve done in my life. A real test of dexterity and eyesight: crimping a wire to put in a connector. A JST PH connector to be precise. What’s crimping? Here is an expert tutorial
 > 
 > <https://iotexpert.com/jst-connector-crimping-insanity/>
 > 
-> — [Venkatesh Rao ∙ @vgr ∙ 11:56 PM ∙ Jun 18, 2021](https://x.com/vgr/status/1406038197008703491)
+> — [Venkatesh Rao • @vgr • 11:56 PM • Jun 18, 2021](https://x.com/vgr/status/1406038197008703491)
 
 > Tencent officially launched the first complete self-developed multi-modal quadruped robot \#deeplearning \#machinelearning \#datascience \#artificialintelligence \#100DaysOfCode \#BlackTechTwitter \#Microsoft \#30Daysofcode \#Unity初心者 \#arkit \#unity3d \#innovation \#robot \#robotics \#ux
 > 
-> — [i\_king\_of\_ml ∙ @ikingofml1 ∙ 2:59 AM ∙ Mar 15, 2021](https://x.com/ikingofml1/status/1371295003448778755)
+> — [i\_king\_of\_ml • @ikingofml1 • 2:59 AM • Mar 15, 2021](https://x.com/ikingofml1/status/1371295003448778755)
 
 > When did cheap C-flavored microcontroller boards first appear? Was Arduino the first one? How much did an Arduino equivalent boards cost in the 90s and aughts? I remember an Atmel board that was around $300 in 2006.
 > 
-> — [Venkatesh Rao ∙ @vgr ∙ 1:55 AM ∙ Jun 10, 2021](https://x.com/vgr/status/1402806640768806912)
+> — [Venkatesh Rao • @vgr • 1:55 AM • Jun 10, 2021](https://x.com/vgr/status/1402806640768806912)
 
 > Intel to Create RISC-V Development Platform with SiFive P550 Cores on 7nm in 2022
 > 
 > <https://www.anandtech.com/show/16780/intel-to-create-riscv-development-platform-with-sifive-p550-cores-on-7nm-in-2022>
 > 
-> — [AnandTech ∙ @anandtech ∙ 1:20 PM ∙ Jun 22, 2021](https://x.com/anandtech/status/1407327598452133888)
+> — [AnandTech • @anandtech • 1:20 PM • Jun 22, 2021](https://x.com/anandtech/status/1407327598452133888)
 
 > The Modular Robotic Vehicle developed by NASA is well-suited for busy urban environments. The driver relies on control inputs being converted to electrical signals and transmitted by wire to the motors within the vehicle
 > 
@@ -301,7 +301,7 @@ Current gigs. [Details on the server.](https://discord.com/channels/692111190851
 > 
 > video: <https://www.youtube.com/watch?v=eE0KwnDYYh8>
 > 
-> — [Massimo ∙ @Rainmaker1973 ∙ 6:00 AM ∙ Jun 25, 2021](https://x.com/rainmaker1973/status/1408303945089495042)
+> — [Massimo • @Rainmaker1973 • 6:00 AM • Jun 25, 2021](https://x.com/rainmaker1973/status/1408303945089495042)
 
 > @vgr @inaturalist Long story! Short story is knockoffs flooded the market:
 > 
@@ -309,7 +309,7 @@ Current gigs. [Details on the server.](https://discord.com/channels/692111190851
 > 
 > They got better very fast, and much cheaper. But underwater drones are now more accessible than ever, which was the goal!
 > 
-> — [David Lang ∙ @davidtlang ∙ 4:18 AM ∙ Jun 26, 2021](https://amazon.com/s?k=underwater+drones)
+> — [David Lang • @davidtlang • 4:18 AM • Jun 26, 2021](https://amazon.com/s?k=underwater+drones)
 
 > \#roamans, what’s the currently preferred way of reading .epub ebooks, making notes and getting things into Roam on iOS (yes, very specific question 😁)? I’ve been using Marvin but the last update was three years ago and I’m looking for something better.
 > 
@@ -317,7 +317,7 @@ Current gigs. [Details on the server.](https://discord.com/channels/692111190851
 > 
 > <https://apps.apple.com/us/app/marvin-3/id1086482858>
 > 
-> — [C𐃏rtex Futura 🚢 9/30 Atomic Essays ∙ @cortexfutura ∙ 8:03 AM ∙ Jun 25, 2021](https://x.com/cortexfutura/status/1408335044381392900)
+> — [C𐃏rtex Futura 🚢 9/30 Atomic Essays • @cortexfutura • 8:03 AM • Jun 25, 2021](https://x.com/cortexfutura/status/1408335044381392900)
 
 > @cortexfutura Few years ago I used MarginNote for ePub with great success. I also know some \#roamans using it today. I haven’t used it for a while, but it advertises multiple format outputs.
 > 
@@ -325,7 +325,7 @@ Current gigs. [Details on the server.](https://discord.com/channels/692111190851
 > 
 > <https://apps.apple.com/us/app/marginnote-3/id1348317163>
 > 
-> — [RoamHacker — exploring PKM and its future ∙ @roamhacker ∙ 8:09 AM ∙ Jun 25, 2021](https://x.com/roamhacker/status/1408336566267924480)
+> — [RoamHacker — exploring PKM and its future • @roamhacker • 8:09 AM • Jun 25, 2021](https://x.com/roamhacker/status/1408336566267924480)
 
 > @cortexfutura Currently using Apple’s Books and @readwiseio to transfer highlights and notes into Roam
 > 
@@ -333,4 +333,4 @@ Current gigs. [Details on the server.](https://discord.com/channels/692111190851
 > 
 > <https://help.readwise.io/article/35-how-do-i-import-apple-books-highlights-from-my-iphoneipad>
 > 
-> — [Federico Gaggio ∙ @federicogg ∙ 8:31 AM ∙ Jun 25, 2021](https://x.com/federicogg/status/1408341972235046913)
+> — [Federico Gaggio • @federicogg • 8:31 AM • Jun 25, 2021](https://x.com/federicogg/status/1408341972235046913)

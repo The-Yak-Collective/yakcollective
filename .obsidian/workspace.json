@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "newsletters/index.md",
+                "file": "index.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -119,12 +119,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "work groups/infrastructure.md",
+                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from infrastructure"
+              "title": "Outgoing links from README"
             }
           },
           {
@@ -139,12 +139,12 @@
               "title": "Outline of README"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -154,23 +154,35 @@
       "hide-folders:Show hidden folders": false
     }
   },
-  "active": "ed28a492f4db7385",
+  "active": "81b85c616f45e6c6",
   "lastOpenFiles": [
+    "index.md",
+    "newsletters/index.md",
+    "README.md",
+    "newsletters/2021-05-23 yak trails.md",
+    "projects/astonishing stories/mechanical turks all the way down.md",
+    "projects/astonishing stories/index.md",
+    "projects/astonishing stories/wholeness in a timeless activity.md",
+    "assets/ff364ce6ac019c2a7bf71e78d34c9ca2.webp",
+    "assets/ff1e298ba58fccbc29a09cc4efa89ff9.jpg",
+    "assets/fc7382c6e3c525a72029cdaedb9b978b.jpg",
+    "assets/f848e3f5ec6a895bd39fe050207b8bd7.jpg",
+    "assets/f1a1910c34bb2841f155469419236ff4.png",
+    "assets/f1a04c698b093e9b8b32ba9e72825510.webp",
+    "assets/eeda8b90db3f9d131bb3151330e10cab.png",
+    "assets/ee0be785a092d81d62ac2f78b6d7fb6e.jpg",
+    "assets/ea233d0d705d756a5926f8aa74981f1b.jpg",
+    "assets/e34947d4424383417624d8ded66e8ab9.jpg",
+    "assets/3080c6f8159a8c3e7818854631efeb0f.pdf",
+    "assets/180d8e4e90c3ac50b69eda1b2ca24694.pdf",
+    "assets/52b45e4cbd3d4207941fb2ef91005d77.pdf",
+    "study groups/yak robotics garage.md",
+    "yakcon 2023.md",
+    "newsletters/2023-01-03 come join us at yakcon.md",
+    "private/original assets copy",
     "newsletters/2021-06-27 yak trails.md",
-    "assets/7ca22e67a1b698b3c391ad694c6989c0.webp",
-    "assets/9296582d58247b313df04fccf6fc9fe5.webp",
-    "assets/6abf5cdcb48cb0ff049141563bc24349.webp",
-    "assets/f001002539b4dfc792dfe39204433de5.webp",
-    "assets/691fa41899bd4f72279aa19ec2e91533.webp",
-    "assets/9377641f25a6ea8e0cc579874e82e237.webp",
-    "assets/e04acbb1dc1b1e772ae34b6ada43eaef.webp",
-    "assets/940b84c39846542f9a7135c98e7f678a.webp",
-    "assets/7419cf68447e08dc82c2e8c504125f06.webp",
-    "assets/ab61184b448e11a0b91f8e07701931a3.webp",
     "newsletters/2023-05-05 yak governance studies sequence intro.md",
     "projects/index.md",
-    "README.md",
-    "newsletters/index.md",
     "newsletters/2020-06-15 announcing yak talk.md",
     "newsletters/2020-06-19 yak talk.md",
     "newsletters/2020-06-26 yak talk.md",
@@ -184,17 +196,6 @@
     "newsletters/2020-08-14 targeting trust.md",
     "newsletters/2020-08-22 decarbonization strategies.md",
     "newsletters/2020-09-04 podcasting needs cognitive hooks.md",
-    "newsletters/2020-09-18 the objective of the innards.md",
-    "newsletters/2020-10-23 took a break now were back.md",
-    "newsletters/2020-11-27 thank you yak collective.md",
-    "newsletters/2020-12-10 first yc annual meeting.md",
-    "newsletters/2021-02-05 new year newsletter.md",
-    "newsletters/2021-05-23 yak trails.md",
-    "newsletters/2021-05-30 yak trails.md",
-    "newsletters/2021-06-06 yak trails.md",
-    "newsletters",
-    "assets/52b45e4cbd3d4207941fb2ef91005d77.pdf",
-    "assets/3080c6f8159a8c3e7818854631efeb0f.pdf",
-    "assets/180d8e4e90c3ac50b69eda1b2ca24694.pdf"
+    "newsletters"
   ]
 }
