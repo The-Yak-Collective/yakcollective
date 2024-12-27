@@ -99,6 +99,24 @@ hr {
 .page-header header .breadcrumb-container {
 	margin: 0;
 	font-weight: bold;
+	height: 2rem;
+}
+.page-header header .breadcrumb-container .breadcumb-element {
+	height: 2rem;
+}
+.breadcrumb-container > .breadcrumb-element:first-of-type::before {
+	content: '';
+	display: inline-block;
+	width: 2rem;
+	height: 2rem;
+	margin-right: 8px;
+	background-size: contain;
+}
+:root[saved-theme=light] .breadcrumb-container > .breadcrumb-element:first-of-type::before {
+	background-image: url('/static/logo-black.png');
+}
+:root[saved-theme=dark] .breadcrumb-container > .breadcrumb-element:first-of-type::before {
+	background-image: url('/static/logo-white.png');
 }
 
 /*
@@ -117,7 +135,7 @@ hr {
 .content-meta[show-comma=true] > :not(:last-child):after {
 	margin-left: 8px;
 	margin-right: 8px;
-	content: "•";
+	content: '•';
 }
 .page-header ul.tags {
 	margin: 1rem 0 1.4rem;

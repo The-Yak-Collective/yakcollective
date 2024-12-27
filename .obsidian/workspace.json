@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "projects/astonishing stories/index.md",
+                "file": "index.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -52,8 +52,7 @@
               "title": "index"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -115,7 +114,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -125,7 +124,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for README"
+              "title": "Backlinks for index"
             }
           },
           {
@@ -168,16 +167,17 @@
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "62b3b2467204ff9a",
+  "active": "bad589faf44a40e8",
   "lastOpenFiles": [
+    "work groups/index.md",
+    "study groups/index.md",
     "projects/index.md",
+    "index.md",
     "projects/astonishing stories/index.md",
     "README.md",
-    "study groups/index.md",
     "yakcon 2023.md",
     "welcome.md",
     "join.md",
-    "work groups/index.md",
     "about.md",
     "work groups/infrastructure.md",
     "study groups/fermi gym.md",
@@ -193,7 +193,6 @@
     "newsletters/index.md",
     "newsletters/2020-08-14 targeting trust.md",
     "newsletters/2021-12-15 yc annual survey.md",
-    "index.md",
     "newsletters/2021-06-20 yak trails.md",
     "assets/0dc1051e8495b34b6a728bd411210f17.jpg",
     "newsletters/2020-07-03 yaks do innovation consulting.md",
