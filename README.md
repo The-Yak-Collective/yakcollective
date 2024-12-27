@@ -35,12 +35,3 @@ npx netlify-cli deploy \
 [Current website issues and projects on GitHub.](https://github.com/The-Yak-Collective/yakcollective/issues) Pull requests and ideas welcome!
 
 Conversations happen on [the Discord ⌗infrastructure channel](https://discord.com/channels/692111190851059762/704369362315772044).
-
-## TODO
-- [ ] Move [IT infrastructure map](https://roamresearch.com/#/app/ArtOfGig/page/w6uAG9Pig) from DOT/Graphviz to something like Mermaid
-	- ChatGPT makes a decent first-pass, but it doesn’t really understand multi-path commands
-	- The goal here is Foam/GitHub compatibility
-	- Add it to the `private` directory
-	- Probably should rebuild SVG on update…
-	- Archive the [current repo](https://github.com/The-Yak-Collective/infrastructure-map) when done
-	- Not *technically* part of this project, but makes sense to slot in here…

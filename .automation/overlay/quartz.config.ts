@@ -14,7 +14,7 @@ const config: QuartzConfig = {
     enablePopovers:      false,
     analytics:           null,
     locale:              "en-US",
-    baseUrl:             "www.yakcollective.org/",
+    baseUrl:             "www.yakcollective.org",
     ignorePatterns:      [],
     defaultDateType:     "created",
     generateSocialImages: true,
@@ -97,7 +97,6 @@ const config: QuartzConfig = {
         rssFullHtml:       true,
         includeEmptyFiles: false
       }),
-      Plugin.AliasRedirects(),
       Plugin.Assets(),
       Plugin.Static(),
       Plugin.NotFoundPage()
