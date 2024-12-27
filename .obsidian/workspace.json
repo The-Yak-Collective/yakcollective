@@ -37,7 +37,8 @@
               "title": "README"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -99,7 +100,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "index.md",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -109,7 +110,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for index"
+              "title": "Backlinks for README"
             }
           },
           {
@@ -152,14 +153,15 @@
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "ed28a492f4db7385",
+  "active": "62b3b2467204ff9a",
   "lastOpenFiles": [
+    "join.md",
+    "index.md",
     "README.md",
     "newsletters/2020-06-26 yak talk.md",
     "projects/new old home.md",
     "projects/index.md",
     "newsletters/index.md",
-    "index.md",
     "newsletters/2020-07-10 yak talk.md",
     "newsletters/2020-07-03 yaks do innovation consulting.md",
     "newsletters/2020-07-02 reminder call for project contributors for yak project proposals.md",
@@ -181,7 +183,6 @@
     "projects/astonishing stories/index.md",
     "yakcon 2023.md",
     "welcome.md",
-    "join.md",
     "about.md",
     "work groups/infrastructure.md",
     "study groups/fermi gym.md",
