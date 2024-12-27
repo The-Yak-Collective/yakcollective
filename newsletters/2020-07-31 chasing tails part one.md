@@ -31,7 +31,7 @@ Never doubt human ingenuity, though…
 ### What’s In a Tail?
 The tail of a distribution refers to the events or outcomes that aren’t expected to happen.
 
-![](../assets/e23a74949ca9e125a30970a40b782c4a.jpg)
+![](../assets/f13f09606493c35fe23e1bf9afce07d7.jpg)
 
 In many situations, the unlikeliness of these tail occurrences makes testing and exploring their effects implausible. But with the democratization of simulation technology, methods like [systems dynamics](https://en.wikipedia.org/wiki/System_dynamics) can be used to [edgecraft](https://seths.blog/2013/09/edgecraft-instead-of-brainstorming/) situations, generate ideas, and chase tails. Absurd questions will be asked and tentative possibilities will be born. But who is likely to chase such tails?
 

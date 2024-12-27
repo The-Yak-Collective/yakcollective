@@ -17,7 +17,7 @@ From time immemorial, humans have conducted [thought experiments](https://plato.
 
 Until the mid 20th century, many of these experiments were confined to the realm of thought. But then [simulation modelling](https://en.wikipedia.org/wiki/Simulation_modeling) was born. Suddenly, it was conceivable for *digital* prototypes to be stress-tested instead of *physical* products. Engineering became easier, cheaper, faster and less risky as a result.
 
-![](../assets/79fbecfe88d8fdddbece00a6c5a2ff76.jpg)
+![](../assets/df9c20146a9f56daf66a4c3659b07068.jpg)
 
 Something else was realised: we could simulate the behavior of complex adaptive systems. [Agents within a model](https://en.wikipedia.org/wiki/Agent-based_model) of a complex adaptive system could be assigned simple heuristics or decision-making rules. Then they could be allowed to interact with other agents, and within the sandbox of the model itself. Many of these simulations could then be run in parallel, allowing us to generate an otherwise unattainable tail distribution of outcomes.
 
@@ -66,7 +66,7 @@ Recently, [there’s been a ton of excitement](https://www.forbes.com/sites/forb
 
 A few months after I visited India, [Balaji Srinivasan](http://www.x.com/balajis) gave a talk called [Silicon Valley’s Ultimate Exit at Startup School 2013](http://prafulmathur.com/www.youtube.com/watch?v=cOubCHLXT6A):
 
-![](../assets/e10be10618ccee21533d7e2921fa2815.png)
+![](../assets/45348a53cec51a42beacce1a407d91d9.png)
 
 *Technology, Government role, Technology regulation*
 
@@ -119,13 +119,13 @@ Interestingly, it appears that one major weakness of GPT-3 is that it can’t te
 
 [From Kevin Lacker’s post:](https://lacker.io/ai/2020/07/06/giving-gpt-3-a-turing-test.html)
 
-![](../assets/20d9d76b0dd3f051738eb6f34d4b827c.png)
+![](../assets/f588a3d16b0ba87cd3a71f6c8762b06d.png)
 
 GPT-3 can “think”, in that it will often pause to factor in new input. It “learns” in an unprecedented way from user input, and therefore, can bullshit, magically creating something out of seemingly nothing(read: 1.75 Billion parameters).
 
 Gwern equates this ability with the creation of a whole [new kind of programming](https://www.gwern.net/GPT-3#prompts-as-programming):
 
-![](../assets/aa640f3b8361ca30e92ee25c2d14d31e.png)
+![](../assets/65733e4064995005ae7a58eb29980eba.png)
 
 **All hail the New Fake Intelligence.**
 

@@ -174,7 +174,7 @@ Current gigs. [Details on the server.](https://discord.com/channels/692111190851
 
 > A bucranium coin minted in Lamponeia, Troad (Troas) in 6th century BC…
 > 
-> ![](../assets/4bbd01de34245f8be38d6be6b6ea87bb.jpg)
+> ![](../assets/2891290cd2e7375f38956fbd29d093f8.jpg)
 > 
 > <https://en.wikipedia.org/wiki/Lamponeia>  
 > <https://en.wikipedia.org/wiki/Troad>  
@@ -188,7 +188,7 @@ Current gigs. [Details on the server.](https://discord.com/channels/692111190851
 
 > Reports of Organized Fraud in ACM/IEEE Conferences.
 > 
-> ![](../assets/8231b340ade735d7ca048b3849c01bcb.jpg)
+> ![](../assets/293d5676961c10792ff7bd4d514562ab.jpg)
 > 
 > <https://medium.com/@tnvijayk/potential-organized-fraud-in-acm-ieee-computer-architecture-conferences-ccd61169370d>
 > 
@@ -204,7 +204,7 @@ Current gigs. [Details on the server.](https://discord.com/channels/692111190851
 > 
 > > A popular fishing spot, but not because of the fish.
 > > 
-> > ![](../assets/8ef6c5f7b5fe7415b6af0eb5b26c5bad.png)
+> > ![](../assets/068bd61388d6647f50e52b4f1662ca50.png)
 > > ![](../assets/ee0be785a092d81d62ac2f78b6d7fb6e.jpg)
 > > 
 > > — [GuruAnaerobic • @GuruAnaerobic • 3:56 PM • Jun 17, 2021](https://x.com/GuruAnaerobic/status/1405645522493480967)
@@ -213,7 +213,7 @@ Current gigs. [Details on the server.](https://discord.com/channels/692111190851
 
 > An ancient giant ‘rhino’ was truly giant. “The 26-foot-long (8 meters) beast had a shoulder height of 16.4 feet (5 m), and it weighed as much as 24 tons (21.7 metric tons).” via @LiveScience
 > 
-> ![](../assets/45dc8cc998597b12ce26342facfb4bb4.jpg)
+> ![](../assets/b9fd4c839e1ed6282e8f017ddbd0fc73.jpg)
 > 
 > <https://www.realclearscience.com/articles/2021/06/18/ancient_giant_rhino_was_one_of_the_largest_mammals_to_walk_the_earth_781988.html>
 > 
@@ -225,7 +225,7 @@ Current gigs. [Details on the server.](https://discord.com/channels/692111190851
 
 > Idle moments while elevating infected foot and using icepack; playing with a matrix to position various consultants, exorcists and shallow thinkers
 > 
-> ![](../assets/ab58f2cb88ac98cd540600f6f0e2074d.jpg)
+> ![](../assets/8115c7b3edd3b26637da0bb45904398d.jpg)
 > 
 > — [ᗪᗩᐯᕮ SᑎOᗯᗪᕮᑎ 🏴󠁧󠁢󠁷󠁬󠁳󠁿 🇪🇺 • @snowded • 4:08 PM • Jun 19, 2021](https://x.com/snowded/status/1406282726945263622)
 
@@ -243,7 +243,7 @@ Current gigs. [Details on the server.](https://discord.com/channels/692111190851
 
 > Dan Harmon on writer’s block
 > 
-> ![](../assets/d0d52c0a0e719c275bc1eacd65fdf406.jpg)
+> ![](../assets/45b90510d2293d0a6eb0739ebb6c35c5.jpg)
 > 
 > <https://news.ycombinator.com/item?id=23092657>
 > 
@@ -261,7 +261,7 @@ Current gigs. [Details on the server.](https://discord.com/channels/692111190851
 
 > 1/ Just for fun, here’s a thread comparing retrofuturist art from the mid 20th century with the reality today!
 > 
-> ![](../assets/263cee37c47f3be40eaec274f6391bf3.jpg)
+> ![](../assets/cf185de1f2921e33d9a5174f5c12bce2.jpg)
 > 
 > <https://gizmodo.com/42-visions-for-tomorrow-from-the-golden-age-of-futurism-1683553063>  
 > <https://www.pinterest.com/pin/475270566909183551/>
@@ -310,7 +310,7 @@ Current gigs. [Details on the server.](https://discord.com/channels/692111190851
 
 > ⌗roamans, what’s the currently preferred way of reading .epub ebooks, making notes and getting things into Roam on iOS (yes, very specific question 😁)? I’ve been using Marvin but the last update was three years ago and I’m looking for something better.
 > 
-> ![](../assets/787180e13c0bae645ab96d535180a1ac.png)
+> ![](../assets/305e03f02aeded4cf1d52ae776d86753.png)
 > 
 > <https://apps.apple.com/us/app/marvin-3/id1086482858>
 > 
@@ -318,7 +318,7 @@ Current gigs. [Details on the server.](https://discord.com/channels/692111190851
 
 > @cortexfutura Few years ago I used MarginNote for ePub with great success. I also know some ⌗roamans using it today. I haven’t used it for a while, but it advertises multiple format outputs.
 > 
-> ![](../assets/b531772e81ba9c1c9eb9054c665da2ef.png)
+> ![](../assets/f72bbcd1f1b4c5f36acc4ef57cc52e99.png)
 > 
 > <https://apps.apple.com/us/app/marginnote-3/id1348317163>
 > 

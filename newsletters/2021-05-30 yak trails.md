@@ -95,6 +95,6 @@ Yaks can use `$agendalist` to view channel agenda and `$agendaadd` to add to the
 
 > ⌗WWG: collecting data for stereo testing
 > 
-> ![](../assets/c0c6e3976d57656145c955685a3ed492.jpg)
+> ![](../assets/a6320915f6a3f0c4638db0c796413fbd.jpg)
 > 
 > — [YakRover Z • @yakrover • 7:58 PM • May 26, 2021](https://x.com/yakrover/status/1397643364787441670)

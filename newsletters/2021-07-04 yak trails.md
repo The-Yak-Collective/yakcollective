@@ -10,7 +10,7 @@ The Yak Rover project — a project to design a real Mars rover prototype that c
 
 [This week‘s meeting notes — How and why I connected Wonderful Wandering Growth to the world.](https://ipatent-co-il.zoom.us/rec/play/gcUfRMdk4WyAaknoJPLk-6EPaLe3kmga8X3gw7ONq1VhB-U7e4hz6s5MCiJE0F-5nQpTPKg7ALibXKvc.leCDkfrg2wU5t7zn?continueMode=true&_x_zm_rtaid=rqxYEQxJQhauxFG20XRrsw.1625422801755.8e12920971fdfd876150a91042f89e34&_x_zm_rhtaid=418)
 
-![](../assets/5b24be67c23aa65cdcfd20ae6483ff89.jpg)
+![](../assets/6bb70255eafa3549504b9c67ad203352.jpg)
 
 **Nature is Murder.**  Finally booted up the Beaglebone Blue and configured it and got to led blinking. Get to first servo control test on the board. Driver snafus under MacOS Catalina so having to use my wife’s Macbook on High Sierra. Realized that embedded software ecosystems evolve much more slowly than personal computing. Many things are years old. You’re living in slower time.
 
@@ -335,7 +335,7 @@ Current gigs. [Details on the server.](https://discord.com/channels/692111190851
 
 > ⌗roamans, what’s the currently preferred way of reading .epub ebooks, making notes and getting things into Roam on iOS (yes, very specific question 😁)? I’ve been using Marvin but the last update was three years ago and I’m looking for something better.
 > 
-> ![](../assets/787180e13c0bae645ab96d535180a1ac.png)
+> ![](../assets/305e03f02aeded4cf1d52ae776d86753.png)
 > 
 > <https://apps.apple.com/us/app/marvin-3/id1086482858>
 > 
@@ -343,7 +343,7 @@ Current gigs. [Details on the server.](https://discord.com/channels/692111190851
 
 > @cortexfutura Few years ago I used MarginNote for ePub with great success. I also know some ⌗roamans using it today. I haven’t used it for a while, but it advertises multiple format outputs.
 > 
-> ![](../assets/b531772e81ba9c1c9eb9054c665da2ef.png)
+> ![](../assets/f72bbcd1f1b4c5f36acc4ef57cc52e99.png)
 > 
 > <https://apps.apple.com/us/app/marginnote-3/id1348317163>
 > 

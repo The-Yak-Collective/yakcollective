@@ -34,7 +34,7 @@ A “single point of leadership failure” is similar in nature but is more spec
 
 A “single wringable neck” is an Agile-derived term for someone whose role involves (formally or informally) stating, “[The buck stops here.](https://en.wikipedia.org/wiki/Buck_passing#%22The_buck_stops_here%22)” In the Scrum framework, the Product Owner is the person with the single wringable neck. Another lens: in a nation state, the President, Prime Minister or monarch is sometimes the *actual* and sometimes the *symbolic* wringable neck. A visual summary:
 
-![](../assets/8c07c492f65337c2fca722a55f4314fe.jpg)
+![](../assets/2bbae9e6810e88b97a8aa0995605eab7.jpg)
 
 The Yak Collective is:
 

@@ -16,7 +16,7 @@ I jabbed the accept button on one of the many touch surfaces that suddenly poppe
 
 There was a low din of my five-year-old arguing again about what xe would or would not eat for breakfast. Thank god for the AR distraction-canceling face mask. It was cranked up to 98% reality canceling. With it on I could safely ignore the mounting skirmish between little Tovio and my partner.
 
-![Mechanical Turks All the Way Down](../assets/cdee9d9d7dec87737b4fc03fcedfe74a.jpg)
+![Mechanical Turks All the Way Down](../assets/b4a34b983d4f9e0f5cc9fda0b7566742.jpg)
 
 *Illustration by Justice.*
 

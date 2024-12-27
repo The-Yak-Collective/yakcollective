@@ -21,7 +21,7 @@ The following story is by [Astonishing Stories Group](../projects/astonishing%20
 ### [wholeness in a timeless activity](../projects/astonishing%20stories/wholeness%20in%20a%20timeless%20activity.md)
 Author: Nathan Chen
 
-![](../assets/305c9b2dda1bb775ec3820901e3b2e3c.jpg)
+![](../assets/20b58678396dd832c77bb28354fa48be.jpg)
 
 There are some activities the wealthy occasionally lust after. But there is one they will never stop avoiding.
 

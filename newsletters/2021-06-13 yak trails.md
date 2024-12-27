@@ -35,7 +35,7 @@ Herewith a roundup of what the Yak Collective is up to this week.
 ## ⌗yakstack
 This week’s highlight — from [Upcoming Changes: The newsletter is metamorphosing, reorienting, pivoting](https://breakingsmart.substack.com/p/upcoming-changes), the tools [Venkatesh Rao](https://breakingsmart.substack.com/p/upcoming-changes) using in writing and publishing work.
 
-![](../assets/4ae9516b4fbadc3d5db300d0ca254aa9.png)
+![](../assets/350a7c49337f7024056b31f3d8ec68cb.png)
 
 *“Here is a diagram of what unfortunately has the ominously managerial look of a pipeline diagram. The grey boxes are my critical path.”*
 
@@ -110,6 +110,6 @@ This week’s highlight — from [Upcoming Changes: The newsletter is metamorpho
 - [Tools for Thought](https://www.forthought.tools/). *2021-06-08 ⌗tool-time*
 - [Create 2021-06-05 links.md by evanwolf · Pull Request #97 · The-Yak-Collective/yakcollective · GitHub](https://github.com/The-Yak-Collective/yakcollective/pull/97). *2021-06-04 ⌗yak-marketing*
 
-![](../assets/5abfa5b74da1beb88697c40daca0b255.jpg)
+![](../assets/eba8eec2743abf844f5a5f4d3e450ec0.jpg)
 
 *The Iron Triangle via Bruce Sterling*

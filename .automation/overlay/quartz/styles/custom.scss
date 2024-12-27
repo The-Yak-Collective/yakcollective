@@ -160,6 +160,10 @@ h2 ~ blockquote.transclude h2 ~ blockquote.transclude h2 { /* h4, h5, h6 */
 	margin-bottom: 1rem;
 	font-size: 1rem;
 }
+iframe {
+	border: 1px solid var(--gray);
+	border-radius: 5px;
+}
 
 /*
  * Callouts
