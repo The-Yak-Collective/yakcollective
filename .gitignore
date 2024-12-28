@@ -8,5 +8,6 @@
 .trash
 .nomedia
 
-# Ignore build directory
+# Ignore build directories
 .automation/build
+.automation/www
