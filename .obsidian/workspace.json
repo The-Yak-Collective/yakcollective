@@ -28,13 +28,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "index.md",
                 "mode": "preview",
                 "backlinks": true,
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "index"
             }
           }
         ],
@@ -100,7 +100,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for README"
+              "title": "Backlinks for index"
             }
           },
           {
@@ -155,13 +155,13 @@
   },
   "active": "62b3b2467204ff9a",
   "lastOpenFiles": [
+    "README.md",
     "study groups/fermi gym.md",
     "study groups/yak robotics garage.md",
     "study groups/index.md",
     "yakcon 2023.md",
     "welcome.md",
     "projects/index.md",
-    "README.md",
     "join.md",
     "index.md",
     "newsletters/2020-06-26 yak talk.md",
