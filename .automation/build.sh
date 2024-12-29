@@ -2,10 +2,15 @@
 
 set -e
 
-# Make sure yarn and gawk are available.
+# Make sure npm, npx, and gawk are available.
 #
-if [[ -z "$(which yarn 2> /dev/null)" ]]; then
-	echo "Could not find yarn in your system's PATH!"
+if [[ -z "$(which npm 2> /dev/null)" ]]; then
+	echo "Could not find npm in your system's PATH!"
+	exit 1
+fi
+
+if [[ -z "$(which npx 2> /dev/null)" ]]; then
+	echo "Could not find npx in your system's PATH!"
 	exit 1
 fi
 
@@ -30,6 +35,7 @@ if [[ "$1" == "clean" ]]; then
 		cd "$SCRIPT_DIR"
 
 		[[ -e build ]] && rm -rf build
+		[[ -e www ]] && rm -rf www
 	)
 	exit
 fi
@@ -71,9 +77,7 @@ fi
 
 	cp -af ../overlay/* quartz/
 	cd quartz
-	[[ -e .git ]] && rm -rf .git
-	[[ -e package-lock.json ]] && rm -f package-lock.json
-	yarn install
+	npm install
 )
 
 # Build the site!
@@ -86,12 +90,12 @@ fi
 
 	cd build/quartz
 	if [[ "$1" == "serve" ]]; then
-		yarn run quartz build \
+		npx quartz build \
 			--directory ../src \
 			--output ../../www \
 			--serve
 	else
-		yarn run quartz build \
+		npx quartz build \
 			--directory ../src \
 			--output ../../www
 

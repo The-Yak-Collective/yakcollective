@@ -28,13 +28,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "index.md",
+                "file": "README.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "index"
+              "title": "README"
             }
           }
         ],
@@ -100,7 +100,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "index.md",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for index"
+              "title": "Backlinks for README"
             }
           },
           {
@@ -155,9 +155,9 @@
   },
   "active": "62b3b2467204ff9a",
   "lastOpenFiles": [
+    "index.md",
     "study groups/index.md",
     "study groups/composable and distributed systems.md",
-    "index.md",
     "study groups/yak robotics garage.md",
     "anuraj yak-o-rama.md",
     "README.md",
