@@ -8,6 +8,9 @@ Current experiments include: **building** open-source rovers, **crafting** exper
 Check out our [study](study%20groups/index.md) and [work](work%20groups/index.md) groups, read through out past [projects](projects/index.md), and then take a moment to [join us](join.md)!
 
 ## Active Projects and Groups
+> [!study_group] [Composable and Distributed Systems](composable%20and%20distributed%20systems.md)
+> This study group discusses composable and distributed systems throughout the world. Details on this Roam Page: <https://roamresearch.com/#/app/ArtOfGig/page/OysfzGNKT>
+
 > [!study_group] [Yak Robotics Garage](study%20groups/yak%20robotics%20garage.md)
 > The Yak Robotics Garage (YaRG) is an informal robotics research group with a relatively mature focus on rovers, with an aspirational goal of deploying open-source rovers on Mars, starting with rovers in living rooms on Earth. In 2024, we are starting to explore other verticals besides rovers.
 

@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "index.md",
+                "file": "study groups/index.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -29,7 +29,7 @@
               "type": "markdown",
               "state": {
                 "file": "index.md",
-                "mode": "preview",
+                "mode": "source",
                 "backlinks": true,
                 "source": false
               },
@@ -155,15 +155,17 @@
   },
   "active": "62b3b2467204ff9a",
   "lastOpenFiles": [
+    "study groups/index.md",
+    "study groups/composable and distributed systems.md",
+    "index.md",
+    "study groups/yak robotics garage.md",
+    "anuraj yak-o-rama.md",
     "README.md",
     "study groups/fermi gym.md",
-    "study groups/yak robotics garage.md",
-    "study groups/index.md",
     "yakcon 2023.md",
     "welcome.md",
     "projects/index.md",
     "join.md",
-    "index.md",
     "newsletters/2020-06-26 yak talk.md",
     "projects/new old home.md",
     "newsletters/index.md",
@@ -189,8 +191,6 @@
     "projects/astonishing stories/your payment is ready.md",
     "projects/astonishing stories/wholeness in a timeless activity.md",
     "projects/astonishing stories/out of the loop.md",
-    "projects/astonishing stories/mechanical turks all the way down.md",
-    "projects/astonishing stories/department of restoration.md",
     "assets/cccf2cb93f4f3b9741fd330d1e134879.jpg",
     "private/original assets/og-image.png",
     "private/original assets/icon.png",
