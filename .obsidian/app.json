@@ -1,0 +1,13 @@
+{
+  "showLineNumber": true,
+  "autoPairBrackets": false,
+  "autoPairMarkdown": false,
+  "alwaysUpdateLinks": true,
+  "newFileLocation": "current",
+  "showUnsupportedFiles": true,
+  "attachmentFolderPath": "assets",
+  "showInlineTitle": true,
+  "newLinkFormat": "relative",
+  "useMarkdownLinks": true,
+  "userIgnoreFilters": []
+}

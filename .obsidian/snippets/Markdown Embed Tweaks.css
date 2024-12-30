@@ -1,0 +1,151 @@
+.embed-title {
+	display: none;
+}
+
+.inline-embed .markdown-embed-content {
+	max-height: none;
+	padding-right: calc(24px + var(--size-2-2));
+}
+
+.inline-embed .markdown-preview-sizer {
+	padding-top: 2px;
+}
+
+.markdown-embed .markdown-preview-section div:last-child > p,
+.markdown-embed .markdown-preview-section div:last-child > ol,
+.markdown-embed .markdown-preview-section div:last-child > ul {
+	margin-block-end: var(--p-spacing);
+}
+
+.markdown-embed .markdown-preview-section div:last-child > p:last-child,
+.markdown-embed .markdown-preview-section div:last-child > ol:last-child,
+.markdown-embed .markdown-preview-section div:last-child > ul:last-child {
+	margin-block-end: 2px;
+}
+
+.markdown-embed .markdown-preview-section ul li p:first-of-type,
+.markdown-embed .markdown-preview-section ol li p:first-of-type,
+.markdown-embed .markdown-preview-section ol li ul,
+.markdown-embed .markdown-preview-section ol li ol,
+.markdown-embed .markdown-preview-section ul li ul,
+.markdown-embed .markdown-preview-section ul li ol {
+	margin-block-start: 0;
+	margin-top: auto;
+}
+
+.markdown-embed .markdown-preview-section ul li p:last-of-type,
+.markdown-embed .markdown-preview-section ol li p:last-of-type,
+.markdown-embed .markdown-preview-section ol li ul,
+.markdown-embed .markdown-preview-section ol li ol,
+.markdown-embed .markdown-preview-section ul li ul,
+.markdown-embed .markdown-preview-section ul li ol {
+	margin-block-end: 0;
+	margin-bottom: auto;
+}
+
+.markdown-preview-view .markdown-preview-sizer.markdown-preview-sizer {
+	min-height: auto !important;
+}
+
+.inline-embed .markdown-preview-section > div:first-child + div + div + div > h1:first-child,
+.inline-embed .markdown-preview-section > div:first-child + div + div + div > h2:first-child,
+.inline-embed .markdown-preview-section > div:first-child + div + div + div > h3:first-child,
+.inline-embed .markdown-preview-section > div:first-child + div + div + div > h4:first-child,
+.inline-embed .markdown-preview-section > div:first-child + div + div + div > h5:first-child,
+.inline-embed .markdown-preview-section > div:first-child + div + div + div > h6:first-child,
+.inline-embed .markdown-preview-section > div:first-child + div + div + div > ol:first-child,
+.inline-embed .markdown-preview-section > div:first-child + div + div + div > ul:first-child {
+	margin-top: 0;
+}
+
+.inline-embed .markdown-embed-content p:first-child {
+	margin-top: var(--p-spacing);
+}
+
+.inline-embed .markdown-preview-section > div:first-child + div + div > p:first-child,
+.inline-embed .markdown-preview-section div:has(pre.frontmatter) + div > p:first-child {
+	margin-top: 0;
+}
+
+.inline-embed .markdown-preview-section pre.frontmatter {
+	display: none;
+}
+
+.inline-embed .markdown-preview-section .callout {
+	margin: 1em 0;
+}
+
+.inline-embed h1 {
+	font-variant: var(--h2-variant);
+	line-height: var(--h2-line-height);
+	font-size: var(--h2-size);
+	color: var(--h2-color);
+	font-weight: var(--h2-weight);
+	font-style: var(--h2-style);
+	font-family: var(--h2-font);
+}
+
+.inline-embed h2,
+.inline-embed .inline-embed h1 {
+	font-variant: var(--h3-variant);
+	line-height: var(--h3-line-height);
+	font-size: var(--h3-size);
+	color: var(--h3-color);
+	font-weight: var(--h3-weight);
+	font-style: var(--h3-style);
+	font-family: var(--h3-font);
+}
+
+.inline-embed h3,
+.inline-embed .inline-embed h2,
+.inline-embed .inline-embed .inline-embed h1 {
+	font-variant: var(--h4-variant);
+	line-height: var(--h4-line-height);
+	font-size: var(--h4-size);
+	color: var(--h4-color);
+	font-weight: var(--h4-weight);
+	font-style: var(--h4-style);
+	font-family: var(--h4-font);
+}
+
+.inline-embed h4,
+.inline-embed .inline-embed h3,
+.inline-embed .inline-embed .inline-embed h2,
+.inline-embed .inline-embed .inline-embed .inline-embed h1 {
+	font-variant: var(--h5-variant);
+	font-size: var(--h5-size);
+	line-height: var(--h5-line-height);
+	color: var(--h5-color);
+	font-weight: var(--h5-weight);
+	font-style: var(--h5-style);
+	font-family: var(--h5-font);
+}
+
+.inline-embed h5,
+.inline-embed h6,
+.inline-embed .inline-embed h4,
+.inline-embed .inline-embed h5,
+.inline-embed .inline-embed h6,
+.inline-embed .inline-embed .inline-embed h3,
+.inline-embed .inline-embed .inline-embed h4,
+.inline-embed .inline-embed .inline-embed h5,
+.inline-embed .inline-embed .inline-embed h6,
+.inline-embed .inline-embed .inline-embed .inline-embed h2,
+.inline-embed .inline-embed .inline-embed .inline-embed h3,
+.inline-embed .inline-embed .inline-embed .inline-embed h4,
+.inline-embed .inline-embed .inline-embed .inline-embed h5,
+.inline-embed .inline-embed .inline-embed .inline-embed h6,
+.inline-embed .inline-embed .inline-embed .inline-embed .inline-embed h1,
+.inline-embed .inline-embed .inline-embed .inline-embed .inline-embed h2,
+.inline-embed .inline-embed .inline-embed .inline-embed .inline-embed h3,
+.inline-embed .inline-embed .inline-embed .inline-embed .inline-embed h4,
+.inline-embed .inline-embed .inline-embed .inline-embed .inline-embed h5,
+.inline-embed .inline-embed .inline-embed .inline-embed .inline-embed h6 {
+	font-variant: var(--h6-variant);
+	font-size: var(--h6-size);
+	line-height: var(--h6-line-height);
+	color: var(--h6-color);
+	font-weight: var(--h6-weight);
+	font-style: var(--h6-style);
+	font-family: var(--h6-font);
+}

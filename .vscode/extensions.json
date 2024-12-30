@@ -1,0 +1,26 @@
+{
+  // See http://go.microsoft.com/fwlink/?LinkId=827846
+  // for the documentation about the extensions.json format
+  "recommendations": [
+    // Foam's own extension
+    "foam.foam-vscode",
+
+    // Tons of markdown goodies (lists, tables of content, so much more)
+    "yzhang.markdown-all-in-one",
+
+    // Prettier for auto formatting code
+    "esbenp.prettier-vscode",
+
+    // Additional plugins, selected from
+    // https://github.com/foambubble/foam/blob/master/docs/user/getting-started/recommended-extensions.md
+
+    // Markdown Footnotes
+    "bierner.markdown-footnotes",
+
+    // Mermaid Markdown Syntax Highlighting
+    "bpruitt-goddard.mermaid-markdown-syntax-highlighting",
+
+    // Markdown Preview Mermaid Support
+    "bierner.markdown-mermaid"
+  ]
+}

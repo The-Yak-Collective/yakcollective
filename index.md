@@ -1,40 +1,34 @@
 ---
+title: The Yak Collective
 ---
-# The Yak Collective
-
 The Yak Collective is an online space for collaborative tinkering. Here you can find an eclectic group of people working together on technology, research, writing, and art projects, and occasionally trying to make money together as well.
 
-Current experiments include: **building** open-source rovers, **crafting** experimental web infrastructures, **publishing** speculative fiction, and **studying** emerging decentralization. Learn more about us on the [About page](/about.html).
+Current experiments include: **building** open-source rovers, **crafting** experimental web infrastructures, **publishing** speculative fiction, and **studying** emerging decentralization. Learn more about us on the [about page](about.md).
 
-Check out our [study groups](/study-groups.html) and [projects](/projects.html), read some of [our latest thoughts](/writings.html), and get in touch with any of us if you’d like to learn more.
+Check out our [study](study%20groups/index.md) and [work](work%20groups/index.md) groups, read through out past [projects](projects/index.md), and then take a moment to [join us](join.md)!
 
-{% comment %}
-	FIXME 2023-12-24 - Highlighting of study groups are temporarily
-	disabled until we have content pages for actually ACTIVE study
-	groups.
-{% endcomment %}
-{% comment %}
-## Active Study Groups
+## Active Projects and Groups
+> [!study_group] [Composable and Distributed Systems](composable%20and%20distributed%20systems.md)
+> This study group discusses composable and distributed systems throughout the world. Details on this Roam Page: <https://roamresearch.com/#/app/ArtOfGig/page/OysfzGNKT>
 
-{% assign study_groups = site.pages | where: "layout", "page-study-group"
-                                    | where: "ended", false
-                                    | where_exp: "study_group", "study_group.date <= site.time or site.future == true"
-                                    | sort: "date"
-                                    | reverse %}
+> [!study_group] [Yak Robotics Garage](study%20groups/yak%20robotics%20garage.md)
+> The Yak Robotics Garage (YaRG) is an informal robotics research group with a relatively mature focus on rovers, with an aspirational goal of deploying open-source rovers on Mars, starting with rovers in living rooms on Earth. In 2024, we are starting to explore other verticals besides rovers.
 
-{% for study_group in study_groups %}
-    {% assign study_group_id = study_group.name | replace: ".md", "" | replace: ".html", "" %}
-    {% include widget-study-group-box.html study_group=study_group_id %}
-{% endfor %}
-{% endcomment %}
+> [!work_group] [Infrastructure](work%20groups/infrastructure.md)
+> The Yak Collective Infrastructure team maintains this website, as well as a variety of Discord bots and related infrastructure. All development of our custom code is available publicly on GitHub. If you know a bit of coding (or want to learn!) or prefer to contribute in a more behind-the-scenes fashion, consider joining us!
 
-## Most Recent Projects
+## Past Projects
+> [!inactive_project]- [Online Governance Primer](projects/online%20governance%20primer.md)
+> This primer is intended as a guided tour through a curated set of readings that can help groups and organizations navigate this question. In selecting the readings we cast a wide net, but in our discussions we made an effort to consider them from the specific perspective of online governance challenges. We believe the ideas surveyed here are applicable to groups and organizations with widely varied purposes, levels of autonomy, degrees of decentralization, and technological sophistication.
 
-{% assign projects = site.pages | where: "layout", "page-project"
-                               | where_exp: "project", "project.date <= site.time or site.future == true"
-                               | sort: "date"
-                               | reverse %}
-{% for project in projects limit:2 %}
-    {% assign project_id = project.name | replace: ".md", "" | replace: ".html", "" %}
-    {% include widget-project-box.html project=project_id %}
-{% endfor %}
+> [!inactive_project]- [Future Frontiers](projects/future%20frontiers.md)
+> In the wake of Covid19, could an era of democratized access to frontiers be the key to a renewed sense of larger purpose in the universe for humanity? In this continuously evolving project, members of the Yak Collective ponder our future as an exploratory species.
+
+> [!inactive_project]- [Astonishing Stories](projects/astonishing%20stories/index.md)
+> The upside of an extremely uncertain environment is that we have been free to indulge in pure speculation about the known knowns and unknown unknowns of the future. The result is Astonishing Stories, an anthology of short vignettes from the future developed from the networked thoughts of over 30 indie consultants.
+
+> [!inactive_project]- [New Old Home](projects/new%20old%20home.md)
+> The Yak Collective’s second report, *The New Old Home*, offers 22 perspectives built around Pamela Hobart’s central thesis: as work returns to the home in the form of remote work opportunities (a trend now dramatically accelerated by pandemic circumstances), we can turn to historical modes of integrated living, reconsidered in light of newer technology, to guide our attempts at co-located life and work.
+
+> [!inactive_project]- [Don’t Waste the Reboot](projects/dont%20waste%20the%20reboot.md)
+> The inaugural report by the Yak Collective, *Don’t Waste the Reboot* offers organizations a smorgasbord of 25 creative and unexpected provocations, ideas, and action frameworks to navigate the COVID-19 crisis.

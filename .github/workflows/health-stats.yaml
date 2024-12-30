@@ -1,4 +1,4 @@
-name: Health check
+name: Website infrastructure health checks
 
 on:
   schedule:
@@ -6,13 +6,10 @@ on:
 
 jobs:
   health-stats:
-    name: Health check
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-      - name: Push health stats to Discord
-        env:
+      - uses: actions/checkout@v4
+      - env:
           DISCORD_CHANNEL_URL: ${{ secrets.DISCORD_WEBHOOK_WEBSITE_HEALTH }}
           GH_ACCOUNT_SLUG: ${{ secrets.GH_ACCOUNT_SLUG }}
           GH_TOKEN: ${{ secrets.GH_ROBOT_ACCESS_TOKEN }}
@@ -20,4 +17,4 @@ jobs:
           NETLIFY_ACCOUNT_SLUG: ${{ secrets.NETLIFY_ACCOUNT_SLUG }}
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_TOKEN }}
         run: |
-          ./_bin/stats-to-discord.sh
+          ./.automation/heartbeat.sh

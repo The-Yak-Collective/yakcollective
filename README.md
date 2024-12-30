@@ -1,77 +1,37 @@
-# Yak Collective Website
+# The Yak Collective’s Website
+![Netlify Status|100](https://api.netlify.com/api/v1/badges/943ff646-41b6-4b4b-ab86-a891698c72c7/deploy-status)
 
-![Netlify Status](https://api.netlify.com/api/v1/badges/943ff646-41b6-4b4b-ab86-a891698c72c7/deploy-status)
+Currently in a significant state of flux.
 
-Every collective needs a website. This is ours. It isn't much to look at, but it gets the job done.
+## Editing the Website
+This site is actually a [Foam](https://foambubble.github.io/foam/)/[Obsidian](https://obsidian.md) wiki; to edit, clone the repository, open it in the appropriate application, enable/install the recommended extensions, and go!
 
-## Local Website and Automation Testing
+You can also open the site directly in [VS Code on the web](https://vscode.dev/) by simply typing `.` (“period”) when viewing this file in GitHub.
 
+This `README` and files in the `private` directory are *not* included in the final build, while [index.md](index.md) file becomes the site homepage.
+
+## Building the Website Locally
 ```bash
-# Make sure that the environment is set.
+# Build the website
 #
-export KNACK_APP_ID=XXXXXXXXXXXXXXX
-export KNACK_API_KEY=XXXXXXXXXXXXXXX
-export KNACK_OBJECT=XXXXXXXXXXXXXXX
-[[ ! -f pyvenv.cfg ]] && python3 -m venv .
-. ./bin/activate
-[[ -f .common-init ]] && rm .common-init
-./_bin/common-init.sh
+./.automation/build.sh
 
-# Pull RSS feed update.
+# Optionally view the website locally via http://127.0.0.1:8080
 #
-./_bin/rss-pull-feeds.sh
-
-# Build the actual website.
-#
-./_bin/build.sh
-
-# View the website locally via http://127.0.0.1:4000.
-#
-bundle exec jekyll serve
+./.automation/build.sh serve
 
 # Push the website to Netlify.
 #
-export NETLIFY_AUTH_TOKEN=XXXXXXXXXXXXXXX
-export NETLIFY_SITE=XXXXXXXXXXXXXXX
-./node_modules/.bin/netlify deploy --dir _site --site $NETLIFY_SITE --message "Local development deploy $(date -u +"%Y%m%d%H%M%S")/${USER}@${HOST}" --prod
+export NETLIFY_AUTH_TOKEN=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+export NETLIFY_SITE_ID=xxxxxxxx-xxxxxxxx-00000000
 
-# Push an update to Twitter.
-#
-export IFTTT_MAKER_KEY=XXXXXXXXXXXXXXX
-./_bin/push-to-twitter.sh
-
-# Push an update to Bluesky.
-#
-export BLUESKY_APP_PASSWORD=XXXXXXXXXXXXXXX
-./_bin/push-to-bluesky.sh
-
-# Push an update to Farcaster.
-#
-export FARCASTER_MNEMONIC="XXXXXXXXXXXXXXX"
-./_bin/push-to-farcaster.sh
-
-# Run the #yaks-at-work update script.
-#
-export DISCORD_CHANNEL_URL=https://discord.com/api/webhooks/0000000000000000/XXXXXXXXXXXXXXX
-./_bin/push-to-discord.sh
-
-# Push website health stats to Discord.
-#
-export DISCORD_CHANNEL_URL=https://discord.com/api/webhooks/0000000000000000/XXXXXXXXXXXXXXX
-export GH_ACCOUNT_SLUG=XXXXXXXXXXXXXXX
-export GH_TOKEN=XXXXXXXXXXXXXXX
-export NETLIFY_ACCOUNT_EMAIL=XXXXXXXXXXXXXXX@XXXXXXXXXXXXXXX
-export NETLIFY_ACCOUNT_SLUG=XXXXXXXXXXXXXXX
-export NETLIFY_AUTH_TOKEN=XXXXXXXXXXXXXXX
-./_bin/stats-to-discord.sh
-
-# Leave Python virtual environment.
-#
-deactivate
+npx netlify-cli deploy \
+	--dir .automation/www \
+	--message "Local development deploy $(date -u +"%Y%m%d%H%M%S")/${USER}@${HOST}" \
+	--prod
 ```
 
 ## Ways to Contribute
-
 [Current website issues and projects on GitHub.](https://github.com/The-Yak-Collective/yakcollective/issues) Pull requests and ideas welcome!
 
-Conversations happen on [the Discord #infrastructure channel](https://discord.com/channels/692111190851059762/704369362315772044).
+Conversations happen on [the Discord ⌗infrastructure channel](https://discord.com/channels/692111190851059762/704369362315772044).
