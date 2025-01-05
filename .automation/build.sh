@@ -98,11 +98,5 @@ fi
 		npx quartz build \
 			--directory ../src \
 			--output ../../www
-
-		cd ../../www
-		while IFS= read -d '' -r DIR; do
-			DIR_NAME="$(basename "$DIR")"
-			sed -i'' "s#href=\"\./$DIR_NAME/\.\./\.\./#href=\"./$DIR_NAME/../#g" index.html
-		done < <(find . -mindepth 1 -maxdepth 1 -type d -print0)
 	fi
 )
