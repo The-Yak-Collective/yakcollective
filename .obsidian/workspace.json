@@ -28,13 +28,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "study groups/composable and distributed systems.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "composable and distributed systems"
             }
           }
         ],
@@ -100,7 +100,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "study groups/composable and distributed systems.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for README"
+              "title": "Backlinks for composable and distributed systems"
             }
           },
           {
@@ -155,20 +155,20 @@
   },
   "active": "62b3b2467204ff9a",
   "lastOpenFiles": [
-    "index.md",
-    "study groups/index.md",
-    "study groups/composable and distributed systems.md",
-    "study groups/yak robotics garage.md",
-    "anuraj yak-o-rama.md",
-    "README.md",
     "study groups/fermi gym.md",
+    "study groups/yak robotics garage.md",
+    "study groups/composable and distributed systems.md",
+    "study groups/index.md",
+    "newsletters/index.md",
     "yakcon 2023.md",
     "welcome.md",
+    "index.md",
+    "README.md",
+    "anuraj yak-o-rama.md",
     "projects/index.md",
     "join.md",
     "newsletters/2020-06-26 yak talk.md",
     "projects/new old home.md",
-    "newsletters/index.md",
     "newsletters/2020-07-10 yak talk.md",
     "newsletters/2020-07-03 yaks do innovation consulting.md",
     "newsletters/2020-07-02 reminder call for project contributors for yak project proposals.md",

@@ -8,15 +8,15 @@ import * as Plugin from "./quartz/plugins"
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle:           "The Yak Collective",
-    pageTitleSuffix:     " :: The Yak Collective",
-    enableSPA:           true,
-    enablePopovers:      false,
-    analytics:           null,
-    locale:              "en-US",
-    baseUrl:             "www.yakcollective.org",
-    ignorePatterns:      [],
-    defaultDateType:     "created",
+    pageTitle:            "The Yak Collective",
+    pageTitleSuffix:      " :: The Yak Collective",
+    enableSPA:            false,
+    enablePopovers:       false,
+    analytics:            null,
+    locale:               "en-US",
+    baseUrl:              "www.yakcollective.org",
+    ignorePatterns:       [],
+    defaultDateType:      "created",
     generateSocialImages: true,
     theme: {
       fontOrigin: "googleFonts",
