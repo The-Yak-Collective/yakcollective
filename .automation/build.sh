@@ -99,4 +99,5 @@ fi
 			--directory ../src \
 			--output ../../www
 	fi
+	sed -i'' -e 's#href=\&quot;[\./]\+/#href=\&quot;https://cardboard-iguana.com/grimoire/#g;s#src=\&quot;[\./]\+/#src=\&quot;https://cardboard-iguana.com/grimoire/#g;' ../../www/index.xml
 )
