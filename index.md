@@ -8,7 +8,7 @@ Current experiments include: **building** open-source rovers, **crafting** exper
 Check out our [study](study%20groups/index.md) and [work](work%20groups/index.md) groups, read through out past [projects](projects/index.md), and then take a moment to [join us](join.md)!
 
 ## Active Projects and Groups
-> [!study_group] [Composable and Distributed Systems](composable%20and%20distributed%20systems.md)
+> [!study_group] [Composable and Distributed Systems](study%20groups/composable%20and%20distributed%20systems.md)
 > This study group discusses composable and distributed systems throughout the world.
 
 > [!study_group] [Yak Robotics Garage](study%20groups/yak%20robotics%20garage.md)
