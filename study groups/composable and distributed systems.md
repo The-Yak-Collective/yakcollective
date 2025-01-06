@@ -11,4 +11,6 @@ This study group discusses composable and distributed systems throughout the wor
 
 The goal is to have a track complementary to the Governance Studies track, with a more technological focus.
 
+In 2025, the group will focus on readings in cyberwarfare, bio-inspired systems, and physical infrastructure
+
 [You can read more about this group and our previous study sessions on Roam.](https://roamresearch.com/#/app/ArtOfGig/page/aiPq3ZZCp)
