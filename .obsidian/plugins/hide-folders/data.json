@@ -1,5 +1,5 @@
 {
-  "areFoldersHidden": false,
+  "areFoldersHidden": true,
   "matchCaseInsensitive": true,
   "addHiddenFoldersToObsidianIgnoreList": true,
   "hideBottomStatusBarIndicatorText": false,
