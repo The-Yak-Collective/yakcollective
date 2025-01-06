@@ -50,6 +50,50 @@ var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__ge
 ));
 var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
 
+// node_modules/obsidian-dev-utils/dist/lib/DocumentFragment.cjs
+var require_DocumentFragment = __commonJS({
+  "node_modules/obsidian-dev-utils/dist/lib/DocumentFragment.cjs"(exports2, module2) {
+    function __extractDefault(module22) {
+      return module22 && module22.__esModule && module22.default ? module22.default : module22;
+    }
+    (function patchRequireEsmDefault() {
+      const __require = require;
+      require = Object.assign((id) => {
+        const module22 = __require(id) ?? {};
+        return __extractDefault(module22);
+      }, __require);
+    })();
+    var __defProp2 = Object.defineProperty;
+    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
+    var __getOwnPropNames2 = Object.getOwnPropertyNames;
+    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
+    var __export2 = (target, all2) => {
+      for (var name in all2)
+        __defProp2(target, name, { get: all2[name], enumerable: true });
+    };
+    var __copyProps2 = (to, from, except, desc) => {
+      if (from && typeof from === "object" || typeof from === "function") {
+        for (let key of __getOwnPropNames2(from))
+          if (!__hasOwnProp2.call(to, key) && key !== except)
+            __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
+      }
+      return to;
+    };
+    var __toCommonJS2 = (mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod);
+    var DocumentFragment_exports = {};
+    __export2(DocumentFragment_exports, {
+      appendCodeBlock: () => appendCodeBlock3
+    });
+    module2.exports = __toCommonJS2(DocumentFragment_exports);
+    function appendCodeBlock3(fragment, code2) {
+      fragment.appendChild(createSpan({ cls: "markdown-rendered code" }, (span) => {
+        span.style.fontWeight = "bold";
+        span.appendChild(createEl("code", { text: code2 }));
+      }));
+    }
+  }
+});
+
 // node_modules/obsidian-dev-utils/dist/lib/Function.cjs
 var require_Function = __commonJS({
   "node_modules/obsidian-dev-utils/dist/lib/Function.cjs"(exports2, module2) {
@@ -1233,14 +1277,14 @@ var require_RegExp = __commonJS({
     var __toCommonJS2 = (mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod);
     var RegExp_exports = {};
     __export2(RegExp_exports, {
-      escapeRegExp: () => escapeRegExp,
-      isValidRegExp: () => isValidRegExp
+      escapeRegExp: () => escapeRegExp2,
+      isValidRegExp: () => isValidRegExp2
     });
     module2.exports = __toCommonJS2(RegExp_exports);
-    function escapeRegExp(str) {
+    function escapeRegExp2(str) {
       return str.replaceAll(/[.*+?^${}()|[\]\\]/g, "\\$&");
     }
-    function isValidRegExp(str) {
+    function isValidRegExp2(str) {
       try {
         new RegExp(str);
         return true;
@@ -1345,7 +1389,7 @@ var require_String = __commonJS({
     });
     module2.exports = __toCommonJS2(String_exports);
     var import_Error = require_Error();
-    var import_RegExp = require_RegExp();
+    var import_RegExp3 = require_RegExp();
     var import_ValueProvider = require_ValueProvider();
     var ESCAPE_MAP = {
       "\n": "\\n",
@@ -1381,7 +1425,7 @@ var require_String = __commonJS({
       return str.replace(/\u00A0|\u202F/g, " ").normalize("NFC");
     }
     function replace(str, replacementsMap) {
-      const regExp = new RegExp(Object.keys(replacementsMap).map((source) => (0, import_RegExp.escapeRegExp)(source)).join("|"), "g");
+      const regExp = new RegExp(Object.keys(replacementsMap).map((source) => (0, import_RegExp3.escapeRegExp)(source)).join("|"), "g");
       return str.replaceAll(regExp, (source) => replacementsMap[source] ?? (0, import_Error.throwExpression)(new Error(`Unexpected replacement source: ${source}`)));
     }
     async function replaceAllAsync(str, searchValue, replacer) {
@@ -1568,14 +1612,14 @@ var require_FileSystem = __commonJS({
       getFileOrNull: () => getFileOrNull3,
       getFolder: () => getFolder,
       getFolderOrNull: () => getFolderOrNull,
-      getMarkdownFiles: () => getMarkdownFiles,
+      getMarkdownFiles: () => getMarkdownFiles2,
       getOrCreateFile: () => getOrCreateFile2,
       getOrCreateFolder: () => getOrCreateFolder,
       getPath: () => getPath,
       isAbstractFile: () => isAbstractFile,
       isCanvasFile: () => isCanvasFile,
       isFile: () => isFile,
-      isFolder: () => isFolder,
+      isFolder: () => isFolder2,
       isMarkdownFile: () => isMarkdownFile2,
       isNote: () => isNote2,
       trimMarkdownExtension: () => trimMarkdownExtension
@@ -1655,12 +1699,12 @@ var require_FileSystem = __commonJS({
     }
     function getFolderOrNull(app, pathOrFolder, isCaseInsensitive) {
       const folder = getAbstractFileOrNull(app, pathOrFolder, isCaseInsensitive);
-      if (isFolder(folder)) {
+      if (isFolder2(folder)) {
         return folder;
       }
       return null;
     }
-    function getMarkdownFiles(app, pathOrFolder, isRecursive) {
+    function getMarkdownFiles2(app, pathOrFolder, isRecursive) {
       const folder = getFolder(app, pathOrFolder);
       let markdownFiles = [];
       if (!isRecursive) {
@@ -1710,7 +1754,7 @@ var require_FileSystem = __commonJS({
     function isFile(file) {
       return file instanceof import_obsidian5.TFile;
     }
-    function isFolder(file) {
+    function isFolder2(file) {
       return file instanceof import_obsidian5.TFolder;
     }
     function isMarkdownFile2(app, pathOrFile) {
@@ -2480,6 +2524,8 @@ var require_Object = __commonJS({
       assignWithNonEnumerableProperties: () => assignWithNonEnumerableProperties,
       cloneWithNonEnumerableProperties: () => cloneWithNonEnumerableProperties,
       deepEqual: () => deepEqual,
+      deleteProperties: () => deleteProperties,
+      deleteProperty: () => deleteProperty,
       getNestedPropertyValue: () => getNestedPropertyValue,
       getPrototypeOf: () => getPrototypeOf,
       nameof: () => nameof,
@@ -2519,6 +2565,20 @@ var require_Object = __commonJS({
           return false;
         }
       }
+      return true;
+    }
+    function deleteProperties(obj, propertyNames) {
+      let ans = false;
+      for (const propertyName of propertyNames) {
+        ans = deleteProperty(obj, propertyName) || ans;
+      }
+      return ans;
+    }
+    function deleteProperty(obj, propertyName) {
+      if (!Object.prototype.hasOwnProperty.call(obj, propertyName)) {
+        return false;
+      }
+      delete obj[propertyName];
       return true;
     }
     function getNestedPropertyValue(obj, path) {
@@ -14106,7 +14166,7 @@ var require_Vault = __commonJS({
       const fullOptions = { ...DEFAULT_RETRY_OPTIONS, ...options };
       await (0, import_Async.retryWithTimeout)(async () => {
         const oldContent = await readSafe(app, pathOrFile);
-        if (!oldContent) {
+        if (oldContent === null) {
           return handleMissingFile();
         }
         const newContent = await (0, import_ValueProvider.resolveValue)(newContentProvider, oldContent);
@@ -15032,9 +15092,9 @@ var require_Link = __commonJS({
         targetPathOrFile: targetFile
       })) ? void 0 : link2.displayText;
       if (shouldUpdateFilenameAlias ?? true) {
-        if (alias?.toLowerCase() === (0, import_Path4.basename)(oldTargetPath, (0, import_Path4.extname)(oldTargetPath)).toLowerCase()) {
+        if (alias === (0, import_Path4.basename)(oldTargetPath, (0, import_Path4.extname)(oldTargetPath))) {
           alias = targetFile.basename;
-        } else if (alias?.toLowerCase() === (0, import_Path4.basename)(oldTargetPath).toLowerCase()) {
+        } else if (alias === (0, import_Path4.basename)(oldTargetPath)) {
           alias = targetFile.name;
         }
       }
@@ -15317,11 +15377,11 @@ var require_RenameDeleteHandler = __commonJS({
         const newSettings = settingsBuilder();
         settings.shouldDeleteConflictingAttachments ||= newSettings.shouldDeleteConflictingAttachments ?? false;
         settings.shouldDeleteEmptyFolders ||= newSettings.shouldDeleteEmptyFolders ?? false;
-        settings.shouldDeleteOrphanAttachments ||= newSettings.shouldDeleteOrphanAttachments ?? false;
+        settings.shouldHandleDeletions ||= newSettings.shouldHandleDeletions ?? false;
+        settings.shouldHandleRenames ||= newSettings.shouldHandleRenames ?? false;
         settings.shouldRenameAttachmentFiles ||= newSettings.shouldRenameAttachmentFiles ?? false;
         settings.shouldRenameAttachmentFolder ||= newSettings.shouldRenameAttachmentFolder ?? false;
         settings.shouldUpdateFilenameAliases ||= newSettings.shouldUpdateFilenameAliases ?? false;
-        settings.shouldUpdateLinks ||= newSettings.shouldUpdateLinks ?? false;
         const isPathIgnored = settings.isPathIgnored;
         settings.isPathIgnored = (path) => isPathIgnored?.(path) ?? newSettings.isPathIgnored?.(path) ?? false;
       }
@@ -15333,7 +15393,7 @@ var require_RenameDeleteHandler = __commonJS({
         return;
       }
       const settings = getSettings(app);
-      if (!settings.shouldDeleteOrphanAttachments) {
+      if (!settings.shouldHandleDeletions) {
         return;
       }
       if (settings.isPathIgnored?.(path)) {
@@ -15377,7 +15437,7 @@ var require_RenameDeleteHandler = __commonJS({
       if (settings.isPathIgnored?.(file.path)) {
         return;
       }
-      if (!settings.shouldDeleteOrphanAttachments) {
+      if (!settings.shouldHandleDeletions) {
         return;
       }
       if ((0, import_FileSystem4.isMarkdownFile)(app, file) && prevCache) {
@@ -15398,7 +15458,7 @@ var require_RenameDeleteHandler = __commonJS({
         return;
       }
       const settings = getSettings(app);
-      if (settings.isPathIgnored?.(oldPath) || settings.isPathIgnored?.(newPath)) {
+      if (!settings.shouldHandleRenames || settings.isPathIgnored?.(oldPath) || settings.isPathIgnored?.(newPath)) {
         return;
       }
       const cache = app.metadataCache.getCache(oldPath) ?? app.metadataCache.getCache(newPath);
@@ -15820,6 +15880,7 @@ module.exports = __toCommonJS(main_exports);
 
 // src/ConsistentAttachmentsAndLinksPlugin.ts
 var import_obsidian4 = require("obsidian");
+var import_DocumentFragment2 = __toESM(require_DocumentFragment(), 1);
 var import_Function = __toESM(require_Function(), 1);
 var import_FileSystem3 = __toESM(require_FileSystem(), 1);
 var import_Loop = __toESM(require_Loop(), 1);
@@ -15831,6 +15892,9 @@ var import_Path3 = __toESM(require_Path(), 1);
 
 // src/ConsistentAttachmentsAndLinksPluginSettings.ts
 var import_PluginSettingsBase = __toESM(require_PluginSettingsBase(), 1);
+var import_RegExp = __toESM(require_RegExp(), 1);
+var ALWAYS_MATCH_REG_EXP = /(?:)/;
+var NEVER_MATCH_REG_EXP = /$./;
 var ConsistentAttachmentsAndLinksPluginSettings = class extends import_PluginSettingsBase.PluginSettingsBase {
   autoCollectAttachments = false;
   changeNoteBacklinksAlt = true;
@@ -15838,24 +15902,80 @@ var ConsistentAttachmentsAndLinksPluginSettings = class extends import_PluginSet
   deleteAttachmentsWithNote = true;
   deleteEmptyFolders = true;
   deleteExistFilesWhenMoveNote = true;
-  ignoreFiles = ["consistency\\-report\\.md"];
-  ignoreFolders = [".git/", ".obsidian/"];
   moveAttachmentsWithNote = true;
   showWarning = true;
   updateLinks = true;
+  get excludePaths() {
+    return this.#excludePaths;
+  }
+  set excludePaths(value) {
+    this.#excludePaths = value.filter(Boolean);
+    this.#excludePathsRegExp = makeRegExp(this.#excludePaths, NEVER_MATCH_REG_EXP);
+  }
+  get includePaths() {
+    return this.#includePaths;
+  }
+  set includePaths(value) {
+    this.#includePaths = value.filter(Boolean);
+    this.#includePathsRegExp = makeRegExp(this.#includePaths, ALWAYS_MATCH_REG_EXP);
+  }
+  #excludePaths = [];
+  #excludePathsRegExp = NEVER_MATCH_REG_EXP;
+  #includePaths = [];
+  #includePathsRegExp = ALWAYS_MATCH_REG_EXP;
   constructor(data) {
     super();
+    this.excludePaths = ["/consistency-report\\.md$/"];
     this.init(data);
   }
-  getIgnoreFilesRegex() {
-    return this.ignoreFiles.map((file) => RegExp(file));
+  initFromRecord(record) {
+    const legacySettings = record;
+    if (legacySettings.ignoreFiles || legacySettings.ignoreFolders) {
+      const excludePaths = legacySettings.excludePaths ?? [];
+      for (const ignoreFileRegExpStr of legacySettings.ignoreFiles ?? []) {
+        excludePaths.push(`/${ignoreFileRegExpStr}$/`);
+      }
+      for (const ignoreFolder of legacySettings.ignoreFolders ?? []) {
+        excludePaths.push(ignoreFolder);
+      }
+      if (excludePaths.length > 0) {
+        legacySettings.excludePaths = excludePaths;
+      }
+      delete legacySettings.ignoreFiles;
+      delete legacySettings.ignoreFolders;
+    }
+    super.initFromRecord(legacySettings);
+  }
+  isPathIgnored(path) {
+    return !this.#includePathsRegExp.test(path) || this.#excludePathsRegExp.test(path);
+  }
+  toJSON() {
+    return {
+      ...super.toJSON(),
+      excludePaths: this.excludePaths,
+      includePaths: this.includePaths
+    };
   }
 };
+function makeRegExp(paths, defaultRegExp) {
+  if (paths.length === 0) {
+    return defaultRegExp;
+  }
+  const regExpStrCombined = paths.map((path) => {
+    if (path.startsWith("/") && path.endsWith("/")) {
+      return path.slice(1, -1);
+    }
+    return `^${(0, import_RegExp.escapeRegExp)(path)}`;
+  }).map((regExpStr) => `(${regExpStr})`).join("|");
+  return new RegExp(regExpStrCombined);
+}
 
 // src/ConsistentAttachmentsAndLinksPluginSettingsTab.ts
 var import_obsidian = require("obsidian");
+var import_DocumentFragment = __toESM(require_DocumentFragment(), 1);
 var import_PluginSettingsTabBase = __toESM(require_PluginSettingsTabBase(), 1);
 var import_ValueComponent = __toESM(require_ValueComponent(), 1);
+var import_RegExp2 = __toESM(require_RegExp(), 1);
 var ConsistentAttachmentsAndLinksPluginSettingsTab = class extends import_PluginSettingsTabBase.PluginSettingsTabBase {
   display() {
     this.containerEl.empty();
@@ -15865,25 +15985,46 @@ var ConsistentAttachmentsAndLinksPluginSettingsTab = class extends import_Plugin
     new import_obsidian.Setting(this.containerEl).setName("Delete Empty Folders").setDesc("Automatically remove empty folders after moving notes with attachments.").addToggle((toggle) => (0, import_ValueComponent.extend)(toggle).bind(this.plugin, "deleteEmptyFolders"));
     new import_obsidian.Setting(this.containerEl).setName("Delete Duplicate Attachments on Note Move").setDesc("Automatically delete attachments when moving a note if a file with the same name exists in the destination folder. If disabled, the file will be renamed and moved.").addToggle((toggle) => (0, import_ValueComponent.extend)(toggle).bind(this.plugin, "deleteExistFilesWhenMoveNote"));
     new import_obsidian.Setting(this.containerEl).setName("Update Backlink Text on Note Rename").setDesc("When a note is renamed, its linked references are automatically updated. If this option is enabled, the text of backlinks to this note will also be modified.").addToggle((toggle) => (0, import_ValueComponent.extend)(toggle).bind(this.plugin, "changeNoteBacklinksAlt"));
-    new import_obsidian.Setting(this.containerEl).setName("Ignore Folders").setDesc("Specify a list of folders to ignore. Enter each folder on a new line.").addTextArea(
-      (textArea) => (0, import_ValueComponent.extend)(textArea).bind(this.plugin, "ignoreFolders", {
-        componentToPluginSettingsValueConverter: (value) => value.trim().split("\n").map((value2) => this.getNormalizedPath(value2) + "/"),
-        pluginSettingsToComponentValueConverter: (value) => value.join("\n")
-      }).setPlaceholder("Example: .git, .obsidian")
-    );
-    new import_obsidian.Setting(this.containerEl).setName("Ignore Files").setDesc("Specify a list of files to ignore. Enter each file on a new line.").addTextArea(
-      (textArea) => (0, import_ValueComponent.extend)(textArea).bind(this.plugin, "ignoreFiles", {
-        componentToPluginSettingsValueConverter: (value) => value.trim().split("\n"),
-        pluginSettingsToComponentValueConverter: (value) => value.join("\n")
-      }).setPlaceholder("Example: consistent-report.md")
-    );
     new import_obsidian.Setting(this.containerEl).setName("Consistency Report Filename").setDesc("Specify the name of the file for the consistency report.").addText(
       (text4) => (0, import_ValueComponent.extend)(text4).bind(this.plugin, "consistencyReportFile").setPlaceholder("Example: consistency-report.md")
     );
+    const pathBindSettings = {
+      componentToPluginSettingsValueConverter: (value) => value.split("\n").filter(Boolean),
+      pluginSettingsToComponentValueConverter: (value) => value.join("\n"),
+      valueValidator: (value) => {
+        const paths = value.split("\n");
+        for (const path of paths) {
+          if (path.startsWith("/") && path.endsWith("/")) {
+            const regExp = path.slice(1, -1);
+            if (!(0, import_RegExp2.isValidRegExp)(regExp)) {
+              return `Invalid regular expression ${path}`;
+            }
+          }
+        }
+        return null;
+      }
+    };
     new import_obsidian.Setting(this.containerEl).setName("Auto Collect Attachments").setDesc("Automatically collect attachments when the note is edited.").addToggle((toggle) => (0, import_ValueComponent.extend)(toggle).bind(this.plugin, "autoCollectAttachments"));
-  }
-  getNormalizedPath(path) {
-    return path.length == 0 ? path : (0, import_obsidian.normalizePath)(path);
+    new import_obsidian.Setting(this.containerEl).setName("Include paths").setDesc(createFragment((f) => {
+      f.appendText("Include notes from the following paths");
+      f.createEl("br");
+      f.appendText("Insert each path on a new line");
+      f.createEl("br");
+      f.appendText("You can use path string or ");
+      (0, import_DocumentFragment.appendCodeBlock)(f, "/regular expression/");
+      f.createEl("br");
+      f.appendText("If the setting is empty, all notes are included");
+    })).addTextArea((textArea) => (0, import_ValueComponent.extend)(textArea).bind(this.plugin, "includePaths", pathBindSettings));
+    new import_obsidian.Setting(this.containerEl).setName("Exclude paths").setDesc(createFragment((f) => {
+      f.appendText("Exclude notes from the following paths");
+      f.createEl("br");
+      f.appendText("Insert each path on a new line");
+      f.createEl("br");
+      f.appendText("You can use path string or ");
+      (0, import_DocumentFragment.appendCodeBlock)(f, "/regular expression/");
+      f.createEl("br");
+      f.appendText("If the setting is empty, no notes are excluded");
+    })).addTextArea((textArea) => (0, import_ValueComponent.extend)(textArea).bind(this.plugin, "excludePaths", pathBindSettings));
   }
 };
 
@@ -15952,17 +16093,15 @@ No problems found
   }
 };
 var LinksHandler = class {
-  constructor(app, consoleLogPrefix = "", ignoreFolders = [], ignoreFilesRegex = []) {
-    this.app = app;
+  constructor(plugin, consoleLogPrefix = "") {
+    this.plugin = plugin;
     this.consoleLogPrefix = consoleLogPrefix;
-    this.ignoreFolders = ignoreFolders;
-    this.ignoreFilesRegex = ignoreFilesRegex;
   }
   async checkConsistency(note, badLinks, badEmbeds, wikiLinks, wikiEmbeds) {
-    if (this.isPathIgnored(note.path)) {
+    if (this.plugin.settingsCopy.isPathIgnored(note.path)) {
       return;
     }
-    const cache = await (0, import_MetadataCache.getCacheSafe)(this.app, note.path);
+    const cache = await (0, import_MetadataCache.getCacheSafe)(this.plugin.app, note.path);
     if (!cache) {
       return;
     }
@@ -15992,11 +16131,11 @@ var LinksHandler = class {
     return this.convertAllNoteRefPathsToRelative(notePath, false);
   }
   async getCachedNotesThatHaveLinkToFile(filePath) {
-    const file = (0, import_FileSystem.getFileOrNull)(this.app, filePath);
+    const file = (0, import_FileSystem.getFileOrNull)(this.plugin.app, filePath);
     if (!file) {
       return [];
     }
-    const backlinks = await (0, import_MetadataCache.getBacklinksForFileSafe)(this.app, file);
+    const backlinks = await (0, import_MetadataCache.getBacklinksForFileSafe)(this.plugin.app, file);
     return backlinks.keys();
   }
   getFullPathForLink(link2, owningNotePath) {
@@ -16006,22 +16145,22 @@ var LinksHandler = class {
     return fullPath;
   }
   async replaceAllNoteWikilinksWithMarkdownLinks(notePath, embedOnlyLinks) {
-    if (this.isPathIgnored(notePath)) {
+    if (this.plugin.settingsCopy.isPathIgnored(notePath)) {
       return 0;
     }
-    const noteFile = (0, import_FileSystem.getFileOrNull)(this.app, notePath);
+    const noteFile = (0, import_FileSystem.getFileOrNull)(this.plugin.app, notePath);
     if (!noteFile) {
       console.warn(this.consoleLogPrefix + "can't update wikilinks in note, file not found: " + notePath);
       return 0;
     }
-    const cache = await (0, import_MetadataCache.getCacheSafe)(this.app, noteFile);
+    const cache = await (0, import_MetadataCache.getCacheSafe)(this.plugin.app, noteFile);
     if (!cache) {
       return 0;
     }
     const links = (embedOnlyLinks ? cache.embeds : cache.links) ?? [];
     const result = links.filter((link2) => (0, import_Link.testWikilink)(link2.original)).length;
     await (0, import_Link.updateLinksInFile)({
-      app: this.app,
+      app: this.plugin.app,
       newSourcePathOrFile: noteFile,
       shouldForceMarkdownLinks: true,
       shouldUpdateEmbedOnlyLinks: embedOnlyLinks
@@ -16029,10 +16168,10 @@ var LinksHandler = class {
     return result;
   }
   async updateChangedPathsInNote(notePath, changedLinks) {
-    if (this.isPathIgnored(notePath)) {
+    if (this.plugin.settingsCopy.isPathIgnored(notePath)) {
       return;
     }
-    const note = (0, import_FileSystem.getFileOrNull)(this.app, notePath);
+    const note = (0, import_FileSystem.getFileOrNull)(this.plugin.app, notePath);
     if (!note) {
       console.warn(this.consoleLogPrefix + "can't update links in note, file not found: " + notePath);
       return;
@@ -16044,16 +16183,16 @@ var LinksHandler = class {
     await this.updateLinks(note, note.path, pathChangeMap);
   }
   async convertAllNoteRefPathsToRelative(notePath, isEmbed) {
-    if (this.isPathIgnored(notePath)) {
+    if (this.plugin.settingsCopy.isPathIgnored(notePath)) {
       return [];
     }
-    const note = (0, import_FileSystem.getFileOrNull)(this.app, notePath);
+    const note = (0, import_FileSystem.getFileOrNull)(this.plugin.app, notePath);
     if (!note) {
       return [];
     }
     const changedRefs = [];
-    await (0, import_FileChange.applyFileChanges)(this.app, note, async () => {
-      const cache = await (0, import_MetadataCache.getCacheSafe)(this.app, note);
+    await (0, import_FileChange.applyFileChanges)(this.plugin.app, note, async () => {
+      const cache = await (0, import_MetadataCache.getCacheSafe)(this.plugin.app, note);
       if (!cache) {
         return [];
       }
@@ -16086,40 +16225,24 @@ var LinksHandler = class {
     pathChangeMap
   }) {
     const { linkPath, subpath } = (0, import_Link.splitSubpath)(link2.link);
-    const oldLinkPath = (0, import_Link.extractLinkFile)(this.app, link2, oldNotePath)?.path ?? (0, import_Path.join)((0, import_Path.dirname)(oldNotePath), linkPath);
-    const newLinkPath = pathChangeMap ? pathChangeMap.get(oldLinkPath) : (0, import_Link.extractLinkFile)(this.app, link2, note.path)?.path ?? (0, import_Path.join)((0, import_Path.dirname)(note.path), linkPath);
+    const oldLinkPath = (0, import_Link.extractLinkFile)(this.plugin.app, link2, oldNotePath)?.path ?? (0, import_Path.join)((0, import_Path.dirname)(oldNotePath), linkPath);
+    const newLinkPath = pathChangeMap ? pathChangeMap.get(oldLinkPath) : (0, import_Link.extractLinkFile)(this.plugin.app, link2, note.path)?.path ?? (0, import_Path.join)((0, import_Path.dirname)(note.path), linkPath);
     if (!newLinkPath) {
       return link2.original;
     }
-    const targetPathOrFile = (0, import_FileSystem.getFileOrNull)(this.app, oldLinkPath) ?? (0, import_FileSystem.getFileOrNull)(this.app, newLinkPath);
+    const targetPathOrFile = (0, import_FileSystem.getFileOrNull)(this.plugin.app, oldLinkPath) ?? (0, import_FileSystem.getFileOrNull)(this.plugin.app, newLinkPath);
     if (!targetPathOrFile) {
       return link2.original;
     }
     return (0, import_Link.generateMarkdownLink)((0, import_Object.normalizeOptionalProperties)({
       alias: link2.displayText,
-      app: this.app,
+      app: this.plugin.app,
       originalLink: link2.original,
       shouldForceRelativePath: forceRelativePath,
       sourcePathOrFile: note.path,
       subpath,
       targetPathOrFile
     }));
-  }
-  isPathIgnored(path) {
-    if (path.startsWith("./")) {
-      path = path.slice(2);
-    }
-    for (const folder of this.ignoreFolders) {
-      if (path.startsWith(folder)) {
-        return true;
-      }
-    }
-    for (const fileRegex of this.ignoreFilesRegex) {
-      if (fileRegex.test(path)) {
-        return true;
-      }
-    }
-    return false;
   }
   async isValidLink(link2, notePath) {
     const { linkPath, subpath } = (0, import_Link.splitSubpath)(link2.link);
@@ -16131,7 +16254,7 @@ var LinksHandler = class {
     } else {
       fullLinkPath = (0, import_Path.join)((0, import_Path.dirname)(notePath), linkPath);
     }
-    const file = (0, import_FileSystem.getFileOrNull)(this.app, fullLinkPath);
+    const file = (0, import_FileSystem.getFileOrNull)(this.plugin.app, fullLinkPath);
     if (!file) {
       return false;
     }
@@ -16145,7 +16268,7 @@ var LinksHandler = class {
     if (ext !== import_FileSystem.MARKDOWN_FILE_EXTENSION) {
       return false;
     }
-    const cache = await (0, import_MetadataCache.getCacheSafe)(this.app, file);
+    const cache = await (0, import_MetadataCache.getCacheSafe)(this.plugin.app, file);
     if (!cache) {
       return false;
     }
@@ -16156,8 +16279,8 @@ var LinksHandler = class {
     }
   }
   async updateLinks(note, oldNotePath, pathChangeMap) {
-    await (0, import_FileChange.applyFileChanges)(this.app, note, async () => {
-      const cache = await (0, import_MetadataCache.getCacheSafe)(this.app, note);
+    await (0, import_FileChange.applyFileChanges)(this.plugin.app, note, async () => {
+      const cache = await (0, import_MetadataCache.getCacheSafe)(this.plugin.app, note);
       if (!cache) {
         return [];
       }
@@ -16174,23 +16297,20 @@ var LinksHandler = class {
 
 // src/files-handler.ts
 var FilesHandler = class {
-  constructor(app, lh, consoleLogPrefix = "", ignoreFolders = [], ignoreFilesRegex = [], shouldDeleteEmptyFolders = false) {
-    this.app = app;
+  constructor(plugin, lh, consoleLogPrefix = "") {
+    this.plugin = plugin;
     this.lh = lh;
     this.consoleLogPrefix = consoleLogPrefix;
-    this.ignoreFolders = ignoreFolders;
-    this.ignoreFilesRegex = ignoreFilesRegex;
-    this.shouldDeleteEmptyFolders = shouldDeleteEmptyFolders;
   }
   async collectAttachmentsForCachedNote(notePath, deleteExistFiles, deleteEmptyFolders) {
-    if (this.isPathIgnored(notePath)) {
+    if (this.plugin.settingsCopy.isPathIgnored(notePath)) {
       return { movedAttachments: [], renamedFiles: [] };
     }
     const result = {
       movedAttachments: [],
       renamedFiles: []
     };
-    const cache = await (0, import_MetadataCache2.getCacheSafe)(this.app, notePath);
+    const cache = await (0, import_MetadataCache2.getCacheSafe)(this.plugin.app, notePath);
     if (!cache) {
       return result;
     }
@@ -16203,7 +16323,7 @@ var FilesHandler = class {
       if (result.movedAttachments.findIndex((x) => x.oldPath == fullPathLink) != -1) {
         continue;
       }
-      const file = (0, import_Link2.extractLinkFile)(this.app, link2, notePath);
+      const file = (0, import_Link2.extractLinkFile)(this.plugin.app, link2, notePath);
       if (!file) {
         const type = (0, import_Link2.testEmbed)(link2.original) ? "embed" : "link";
         console.warn(`${this.consoleLogPrefix}${notePath} has bad ${type} (file does not exist): ${linkPath}`);
@@ -16212,7 +16332,7 @@ var FilesHandler = class {
       if (!this.isAttachment(file)) {
         continue;
       }
-      const newPath = await (0, import_AttachmentPath.getAttachmentFilePath)(this.app, file.path, notePath);
+      const newPath = await (0, import_AttachmentPath.getAttachmentFilePath)(this.plugin.app, file.path, notePath);
       if ((0, import_Path2.dirname)(newPath) === (0, import_Path2.dirname)(file.path)) {
         continue;
       }
@@ -16223,24 +16343,24 @@ var FilesHandler = class {
     return result;
   }
   async deleteEmptyFolders(dirName) {
-    if (this.isPathIgnored(dirName)) {
+    if (this.plugin.settingsCopy.isPathIgnored(dirName)) {
       return;
     }
     if (dirName.startsWith("./")) {
       dirName = dirName.slice(2);
     }
-    let list4 = await (0, import_Vault.listSafe)(this.app, dirName);
+    let list4 = await (0, import_Vault.listSafe)(this.plugin.app, dirName);
     for (const folder of list4.folders) {
       await this.deleteEmptyFolders(folder);
     }
-    list4 = await (0, import_Vault.listSafe)(this.app, dirName);
+    list4 = await (0, import_Vault.listSafe)(this.plugin.app, dirName);
     if (list4.files.length == 0 && list4.folders.length == 0) {
       console.log(this.consoleLogPrefix + "delete empty folder: \n   " + dirName);
-      if (await this.app.vault.exists(dirName)) {
+      if (await this.plugin.app.vault.exists(dirName)) {
         try {
-          await this.app.vault.adapter.rmdir(dirName, false);
+          await this.plugin.app.vault.adapter.rmdir(dirName, false);
         } catch (e) {
-          if (await this.app.vault.adapter.exists(dirName)) {
+          if (await this.plugin.app.vault.adapter.exists(dirName)) {
             throw e;
           }
         }
@@ -16248,37 +16368,20 @@ var FilesHandler = class {
     }
   }
   async createFolderForAttachmentFromPath(filePath) {
-    await (0, import_Vault.createFolderSafe)(this.app, (0, import_Path2.dirname)(filePath));
+    await (0, import_Vault.createFolderSafe)(this.plugin.app, (0, import_Path2.dirname)(filePath));
   }
   async deleteFile(file, deleteEmptyFolders) {
-    await this.app.fileManager.trashFile(file);
+    await this.plugin.app.fileManager.trashFile(file);
     if (deleteEmptyFolders) {
       let dir = file.parent;
       while (dir && dir.children.length === 0) {
-        await this.app.fileManager.trashFile(dir);
+        await this.plugin.app.fileManager.trashFile(dir);
         dir = dir.parent;
       }
     }
   }
   isAttachment(file) {
-    return !(0, import_FileSystem2.isNote)(this.app, file);
-  }
-  isPathIgnored(path) {
-    if (path.startsWith("./")) {
-      path = path.slice(2);
-    }
-    for (const folder of this.ignoreFolders) {
-      if (path.startsWith(folder)) {
-        return true;
-      }
-    }
-    for (const fileRegex of this.ignoreFilesRegex) {
-      const testResult = fileRegex.test(path);
-      if (testResult) {
-        return true;
-      }
-    }
-    return false;
+    return !(0, import_FileSystem2.isNote)(this.plugin.app, file);
   }
   async moveAttachment(file, newLinkPath, parentNotePaths, deleteExistFiles, deleteEmptyFolders) {
     const path = file.path;
@@ -16286,7 +16389,7 @@ var FilesHandler = class {
       movedAttachments: [],
       renamedFiles: []
     };
-    if (this.isPathIgnored(path)) {
+    if (this.plugin.settingsCopy.isPathIgnored(path)) {
       return result;
     }
     if (!this.isAttachment(file)) {
@@ -16307,42 +16410,42 @@ var FilesHandler = class {
     }
     const oldFolder = file.parent;
     if (linkedNotes.length == 0) {
-      const existFile = (0, import_FileSystem2.getFileOrNull)(this.app, newLinkPath);
+      const existFile = (0, import_FileSystem2.getFileOrNull)(this.plugin.app, newLinkPath);
       if (!existFile) {
         console.log(this.consoleLogPrefix + "move file [from, to]: \n   " + path + "\n   " + newLinkPath);
         result.movedAttachments.push({ newPath: newLinkPath, oldPath: path });
-        await (0, import_Vault.renameSafe)(this.app, file, newLinkPath);
+        await (0, import_Vault.renameSafe)(this.plugin.app, file, newLinkPath);
       } else {
         if (deleteExistFiles) {
           console.log(this.consoleLogPrefix + "delete file: \n   " + path);
           result.movedAttachments.push({ newPath: newLinkPath, oldPath: path });
           await this.deleteFile(file, deleteEmptyFolders);
         } else {
-          const newFileCopyName = (0, import_Vault.getAvailablePath)(this.app, newLinkPath);
+          const newFileCopyName = (0, import_Vault.getAvailablePath)(this.plugin.app, newLinkPath);
           console.log(this.consoleLogPrefix + "copy file with new name [from, to]: \n   " + path + "\n   " + newFileCopyName);
           result.movedAttachments.push({ newPath: newFileCopyName, oldPath: path });
-          await (0, import_Vault.renameSafe)(this.app, file, newFileCopyName);
+          await (0, import_Vault.renameSafe)(this.plugin.app, file, newFileCopyName);
           result.renamedFiles.push({ newPath: newFileCopyName, oldPath: newLinkPath });
         }
       }
     } else {
-      const existFile = (0, import_FileSystem2.getFileOrNull)(this.app, newLinkPath);
+      const existFile = (0, import_FileSystem2.getFileOrNull)(this.plugin.app, newLinkPath);
       if (!existFile) {
         console.log(this.consoleLogPrefix + "copy file [from, to]: \n   " + path + "\n   " + newLinkPath);
         result.movedAttachments.push({ newPath: newLinkPath, oldPath: path });
-        await (0, import_Vault.renameSafe)(this.app, file, newLinkPath);
-        await (0, import_Vault.copySafe)(this.app, file, path);
+        await (0, import_Vault.renameSafe)(this.plugin.app, file, newLinkPath);
+        await (0, import_Vault.copySafe)(this.plugin.app, file, path);
       } else if (!deleteExistFiles) {
-        const newFileCopyName = (0, import_Vault.getAvailablePath)(this.app, newLinkPath);
+        const newFileCopyName = (0, import_Vault.getAvailablePath)(this.plugin.app, newLinkPath);
         console.log(this.consoleLogPrefix + "copy file with new name [from, to]: \n   " + path + "\n   " + newFileCopyName);
         result.movedAttachments.push({ newPath: newFileCopyName, oldPath: file.path });
-        await (0, import_Vault.renameSafe)(this.app, file, newFileCopyName);
-        await (0, import_Vault.copySafe)(this.app, file, path);
+        await (0, import_Vault.renameSafe)(this.plugin.app, file, newFileCopyName);
+        await (0, import_Vault.copySafe)(this.plugin.app, file, path);
         result.renamedFiles.push({ newPath: newFileCopyName, oldPath: newLinkPath });
       }
     }
-    if (this.shouldDeleteEmptyFolders) {
-      await (0, import_VaultEx.deleteEmptyFolderHierarchy)(this.app, oldFolder);
+    if (this.plugin.settingsCopy.deleteEmptyFolders) {
+      await (0, import_VaultEx.deleteEmptyFolderHierarchy)(this.plugin.app, oldFolder);
     }
     return result;
   }
@@ -16361,17 +16464,13 @@ var ConsistentAttachmentsAndLinksPlugin = class extends import_PluginBase.Plugin
   async saveSettings(newSettings) {
     await super.saveSettings(newSettings);
     this.lh = new LinksHandler(
-      this.app,
-      "Consistent Attachments and Links: ",
-      this.settings.ignoreFolders,
-      this.settings.getIgnoreFilesRegex()
+      this,
+      "Consistent Attachments and Links: "
     );
     this.fh = new FilesHandler(
-      this.app,
+      this,
       this.lh,
-      "Consistent Attachments and Links: ",
-      this.settings.ignoreFolders,
-      this.settings.getIgnoreFilesRegex()
+      "Consistent Attachments and Links: "
     );
   }
   createPluginSettings(data) {
@@ -16384,11 +16483,11 @@ var ConsistentAttachmentsAndLinksPlugin = class extends import_PluginBase.Plugin
     if (this.settings.showWarning) {
       const notice = new import_obsidian4.Notice(createFragment((f) => {
         f.appendText("Starting from ");
-        appendCodeBlock(f, "v3.0.0");
+        (0, import_DocumentFragment2.appendCodeBlock)(f, "v3.0.0");
         f.appendText(", the plugin ");
-        appendCodeBlock(f, "Consistent Attachments and Links");
+        (0, import_DocumentFragment2.appendCodeBlock)(f, "Consistent Attachments and Links");
         f.appendText(" has setting ");
-        appendCodeBlock(f, "Attachment Subfolder");
+        (0, import_DocumentFragment2.appendCodeBlock)(f, "Attachment Subfolder");
         f.appendText(" removed. This is a BREAKING CHANGE.");
         f.appendChild(createEl("br"));
         f.appendChild(createEl("a", { href: "https://github.com/dy-sh/obsidian-consistent-attachments-and-links?tab=readme-ov-file#attachment-subfolder-setting", text: "Read more" }));
@@ -16412,12 +16511,13 @@ var ConsistentAttachmentsAndLinksPlugin = class extends import_PluginBase.Plugin
     );
     (0, import_RenameDeleteHandler.registerRenameDeleteHandlers)(this, () => {
       const settings = {
+        isPathIgnored: (path) => this.settings.isPathIgnored(path),
         shouldDeleteConflictingAttachments: this.settings.deleteExistFilesWhenMoveNote,
         shouldDeleteEmptyFolders: this.settings.deleteEmptyFolders,
-        shouldDeleteOrphanAttachments: this.settings.deleteAttachmentsWithNote,
+        shouldHandleDeletions: this.settings.deleteAttachmentsWithNote,
+        shouldHandleRenames: this.settings.updateLinks,
         shouldRenameAttachmentFolder: this.settings.moveAttachmentsWithNote,
-        shouldUpdateFilenameAliases: this.settings.changeNoteBacklinksAlt,
-        shouldUpdateLinks: this.settings.updateLinks
+        shouldUpdateFilenameAliases: this.settings.changeNoteBacklinksAlt
       };
       return settings;
     });
@@ -16425,6 +16525,11 @@ var ConsistentAttachmentsAndLinksPlugin = class extends import_PluginBase.Plugin
       callback: () => this.collectAllAttachments(),
       id: "collect-all-attachments",
       name: "Collect All Attachments"
+    });
+    this.addCommand({
+      checkCallback: (checking) => this.collectAttachmentsCurrentFolder(checking),
+      id: "collect-attachments-current-folder",
+      name: "Collect Attachments in Current Folder"
     });
     this.addCommand({
       checkCallback: this.collectAttachmentsCurrentNote.bind(this),
@@ -16489,19 +16594,17 @@ var ConsistentAttachmentsAndLinksPlugin = class extends import_PluginBase.Plugin
     this.registerEvent(this.app.metadataCache.on("changed", (file) => {
       (0, import_Queue.addToQueue)(this.app, () => this.handleMetadataCacheChanged(file));
     }));
+    this.registerEvent(this.app.workspace.on("file-menu", (menu, file) => {
+      this.handleFileMenu(menu, file);
+    }));
     this.lh = new LinksHandler(
-      this.app,
-      "Consistent Attachments and Links: ",
-      this.settings.ignoreFolders,
-      this.settings.getIgnoreFilesRegex()
+      this,
+      "Consistent Attachments and Links: "
     );
     this.fh = new FilesHandler(
-      this.app,
+      this,
       this.lh,
-      "Consistent Attachments and Links: ",
-      this.settings.ignoreFolders,
-      this.settings.getIgnoreFilesRegex(),
-      this.settings.deleteEmptyFolders
+      "Consistent Attachments and Links: "
     );
   }
   async checkConsistency() {
@@ -16535,15 +16638,60 @@ var ConsistentAttachmentsAndLinksPlugin = class extends import_PluginBase.Plugin
     }
   }
   async collectAllAttachments() {
+    await this.collectAttachmentsInFolder("/");
+  }
+  async collectAttachments(note, isVerbose = true) {
+    if (this.settings.isPathIgnored(note.path)) {
+      new import_obsidian4.Notice("Note path is ignored");
+      return;
+    }
+    await this.saveAllOpenNotes();
+    const result = await this.fh.collectAttachmentsForCachedNote(
+      note.path,
+      this.settings.deleteExistFilesWhenMoveNote,
+      this.settings.deleteEmptyFolders
+    );
+    if (result.movedAttachments.length > 0) {
+      await this.lh.updateChangedPathsInNote(note.path, result.movedAttachments);
+    }
+    if (result.movedAttachments.length == 0) {
+      if (isVerbose) {
+        new import_obsidian4.Notice("No files found that need to be moved");
+      }
+    } else {
+      new import_obsidian4.Notice(`Moved ${result.movedAttachments.length.toString()} attachment${result.movedAttachments.length > 1 ? "s" : ""}`);
+    }
+  }
+  collectAttachmentsCurrentFolder(checking) {
+    const note = this.app.workspace.getActiveFile();
+    if (!note || !(0, import_FileSystem3.isMarkdownFile)(this.app, note)) {
+      return false;
+    }
+    if (!checking) {
+      (0, import_Queue.addToQueue)(this.app, () => this.collectAttachmentsInFolder(note.parent?.path ?? "/"));
+    }
+    return true;
+  }
+  collectAttachmentsCurrentNote(checking) {
+    const note = this.app.workspace.getActiveFile();
+    if (!note || !(0, import_FileSystem3.isMarkdownFile)(this.app, note)) {
+      return false;
+    }
+    if (!checking) {
+      (0, import_Queue.addToQueue)(this.app, () => this.collectAttachments(note));
+    }
+    return true;
+  }
+  async collectAttachmentsInFolder(folderPath) {
     let movedAttachmentsCount = 0;
     let processedNotesCount = 0;
     await this.saveAllOpenNotes();
     await (0, import_Loop.loop)({
       abortSignal: this.abortSignal,
       buildNoticeMessage: (note, iterationStr) => `Collecting attachments ${iterationStr} - ${note.path}`,
-      items: (0, import_Vault2.getMarkdownFilesSorted)(this.app),
+      items: (0, import_FileSystem3.getMarkdownFiles)(this.app, folderPath, true),
       processItem: async (note) => {
-        if (this.isPathIgnored(note.path)) {
+        if (this.settings.isPathIgnored(note.path)) {
           return;
         }
         const result = await this.fh.collectAttachmentsForCachedNote(
@@ -16565,38 +16713,6 @@ var ConsistentAttachmentsAndLinksPlugin = class extends import_PluginBase.Plugin
       new import_obsidian4.Notice(`Moved ${movedAttachmentsCount.toString()} attachment${movedAttachmentsCount > 1 ? "s" : ""} from ${processedNotesCount.toString()} note${processedNotesCount > 1 ? "s" : ""}`);
     }
   }
-  async collectAttachments(note, isVerbose = true) {
-    if (this.isPathIgnored(note.path)) {
-      new import_obsidian4.Notice("Note path is ignored");
-      return;
-    }
-    await this.saveAllOpenNotes();
-    const result = await this.fh.collectAttachmentsForCachedNote(
-      note.path,
-      this.settings.deleteExistFilesWhenMoveNote,
-      this.settings.deleteEmptyFolders
-    );
-    if (result.movedAttachments.length > 0) {
-      await this.lh.updateChangedPathsInNote(note.path, result.movedAttachments);
-    }
-    if (result.movedAttachments.length == 0) {
-      if (isVerbose) {
-        new import_obsidian4.Notice("No files found that need to be moved");
-      }
-    } else {
-      new import_obsidian4.Notice(`Moved ${result.movedAttachments.length.toString()} attachment${result.movedAttachments.length > 1 ? "s" : ""}`);
-    }
-  }
-  collectAttachmentsCurrentNote(checking) {
-    const note = this.app.workspace.getActiveFile();
-    if (!note || !(0, import_FileSystem3.isMarkdownFile)(this.app, note)) {
-      return false;
-    }
-    if (!checking) {
-      (0, import_Queue.addToQueue)(this.app, () => this.collectAttachments(note));
-    }
-    return true;
-  }
   async convertAllEmbedsPathsToRelative() {
     await this.saveAllOpenNotes();
     let changedEmbedCount = 0;
@@ -16606,7 +16722,7 @@ var ConsistentAttachmentsAndLinksPlugin = class extends import_PluginBase.Plugin
       buildNoticeMessage: (note, iterationStr) => `Converting embed paths to relative ${iterationStr} - ${note.path}`,
       items: (0, import_Vault2.getMarkdownFilesSorted)(this.app),
       processItem: async (note) => {
-        if (this.isPathIgnored(note.path)) {
+        if (this.settings.isPathIgnored(note.path)) {
           return;
         }
         const result = await this.lh.convertAllNoteEmbedsPathsToRelative(note.path);
@@ -16642,7 +16758,7 @@ var ConsistentAttachmentsAndLinksPlugin = class extends import_PluginBase.Plugin
       buildNoticeMessage: (note, iterationStr) => `Converting link paths to relative ${iterationStr} - ${note.path}`,
       items: (0, import_Vault2.getMarkdownFilesSorted)(this.app),
       processItem: async (note) => {
-        if (this.isPathIgnored(note.path)) {
+        if (this.settings.isPathIgnored(note.path)) {
           return;
         }
         const result = await this.lh.convertAllNoteLinksPathsToRelative(note.path);
@@ -16673,10 +16789,18 @@ var ConsistentAttachmentsAndLinksPlugin = class extends import_PluginBase.Plugin
     await this.fh.deleteEmptyFolders("/");
   }
   handleDeletedMetadata(file, prevCache) {
-    if (!this.settings.deleteAttachmentsWithNote || this.isPathIgnored(file.path) || !(0, import_FileSystem3.isMarkdownFile)(this.app, file)) {
+    if (!this.settings.deleteAttachmentsWithNote || this.settings.isPathIgnored(file.path) || !(0, import_FileSystem3.isMarkdownFile)(this.app, file)) {
       return;
     }
     this.deletedNoteCache.set(file.path, prevCache);
+  }
+  handleFileMenu(menu, file) {
+    if (!(0, import_FileSystem3.isFolder)(file)) {
+      return;
+    }
+    menu.addItem((item) => {
+      item.setTitle("Collect attachments in folder").setIcon("download").onClick(() => this.collectAttachmentsInFolder(file.path));
+    });
   }
   async handleMetadataCacheChanged(file) {
     if (!this.settings.autoCollectAttachments) {
@@ -16687,22 +16811,6 @@ var ConsistentAttachmentsAndLinksPlugin = class extends import_PluginBase.Plugin
       return;
     }
     await this.collectAttachments(file, false);
-  }
-  isPathIgnored(path) {
-    if (path.startsWith("./")) {
-      path = path.slice(2);
-    }
-    for (const folder of this.settings.ignoreFolders) {
-      if (path.startsWith(folder)) {
-        return true;
-      }
-    }
-    for (const fileRegex of this.settings.getIgnoreFilesRegex()) {
-      if (fileRegex.test(path)) {
-        return true;
-      }
-    }
-    return false;
   }
   async reorganizeVault() {
     await this.saveAllOpenNotes();
@@ -16723,7 +16831,7 @@ var ConsistentAttachmentsAndLinksPlugin = class extends import_PluginBase.Plugin
       buildNoticeMessage: (note, iterationStr) => `Replacing wiki embeds with markdown embeds ${iterationStr} - ${note.path}`,
       items: (0, import_Vault2.getMarkdownFilesSorted)(this.app),
       processItem: async (note) => {
-        if (this.isPathIgnored(note.path)) {
+        if (this.settings.isPathIgnored(note.path)) {
           return;
         }
         const result = await this.lh.replaceAllNoteWikilinksWithMarkdownLinks(note.path, true);
@@ -16757,7 +16865,7 @@ var ConsistentAttachmentsAndLinksPlugin = class extends import_PluginBase.Plugin
       buildNoticeMessage: (note, iterationStr) => `Replacing wikilinks with markdown links ${iterationStr} - ${note.path}`,
       items: (0, import_Vault2.getMarkdownFilesSorted)(this.app),
       processItem: async (note) => {
-        if (this.isPathIgnored(note.path)) {
+        if (this.settings.isPathIgnored(note.path)) {
           return;
         }
         const result = await this.lh.replaceAllNoteWikilinksWithMarkdownLinks(note.path, false);
@@ -16790,12 +16898,6 @@ var ConsistentAttachmentsAndLinksPlugin = class extends import_PluginBase.Plugin
     }
   }
 };
-function appendCodeBlock(fragment, text4) {
-  fragment.appendChild(createSpan({ cls: "markdown-rendered code" }, (span) => {
-    span.style.fontWeight = "bold";
-    span.appendChild(createEl("code", { text: text4 }));
-  }));
-}
 
 // src/main.ts
 var main_default = ConsistentAttachmentsAndLinksPlugin;
