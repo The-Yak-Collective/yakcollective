@@ -5,15 +5,14 @@
   "deleteAttachmentsWithNote": true,
   "deleteEmptyFolders": true,
   "deleteExistFilesWhenMoveNote": true,
-  "ignoreFiles": [
-    "private/consistency report.md"
-  ],
-  "ignoreFolders": [
+  "moveAttachmentsWithNote": false,
+  "showBackupWarning": false,
+  "updateLinks": true,
+  "excludePaths": [
+    "/private/consistency report.md$/",
     ".git/",
     ".obsidian/",
     "private/"
   ],
-  "moveAttachmentsWithNote": false,
-  "showWarning": false,
-  "updateLinks": true
+  "includePaths": []
 }
