@@ -13,13 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "study groups/composable and distributed systems.md",
+                "file": "README.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "composable and distributed systems"
+              "title": "README"
             }
           }
         ]
@@ -84,7 +84,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "study groups/composable and distributed systems.md",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +94,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for composable and distributed systems"
+              "title": "Backlinks for README"
             }
           },
           {
@@ -139,9 +139,9 @@
   },
   "active": "bad589faf44a40e8",
   "lastOpenFiles": [
+    "study groups/composable and distributed systems.md",
     "study groups/yak robotics garage.md",
     "assets/0b4fee32bf093f6e915d71f235cd295f.png",
-    "study groups/composable and distributed systems.md",
     "assets/6440727e4ee4e980ef320e7effba7574.png",
     "README.md",
     "index.md",
