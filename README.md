@@ -4,7 +4,7 @@
 Currently in a significant state of flux.
 
 ## Editing the Website
-This site is actually a [Foam](https://foambubble.github.io/foam/)/[Obsidian](https://obsidian.md) wiki; to edit, clone the repository, open it in the appropriate application, enable/install the recommended extensions, and go!
+This site is actually a [Foam](https://foambubble.github.io/foam/)/[Obsidian](https://obsidian.md) wiki; to edit, clone the repository (use `git clone --recurse-submodules` to make sure you pull in the [Quartz](https://quartz.jzhao.xyz/) submodule!), open it in the appropriate application, enable/install the recommended extensions, and go!
 
 You can also open the site directly in [VS Code on the web](https://vscode.dev/) by simply typing `.` (“period”) when viewing this file in GitHub.
 
