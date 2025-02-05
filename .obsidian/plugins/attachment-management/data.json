@@ -1,0 +1,33 @@
+{
+  "attachPath": {
+    "attachmentRoot": "",
+    "saveAttE": "obsFolder",
+    "attachmentPath": "",
+    "attachFormat": "${md5}",
+    "type": "GLOBAL",
+    "extensionOverride": [
+      {
+        "extension": ".*",
+        "attachmentRoot": "",
+        "saveAttE": "obsFolder",
+        "attachmentPath": "",
+        "attachFormat": "${md5}"
+      }
+    ]
+  },
+  "dateFormat": "YYYYMMDDHHmmssSSS",
+  "excludeExtensionPattern": "",
+  "autoRenameAttachment": true,
+  "excludedPaths": ".automation;.git;.github;.obsidian;.vscode",
+  "excludePathsArray": [
+    ".automation",
+    ".git",
+    ".github",
+    ".obsidian",
+    ".vscode"
+  ],
+  "excludeSubpaths": true,
+  "originalNameStorage": [],
+  "overridePath": {},
+  "disableNotification": false
+}

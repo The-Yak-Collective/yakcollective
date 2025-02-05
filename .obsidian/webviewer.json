@@ -1,0 +1,6 @@
+{
+  "openExternalURLs": true,
+  "enableAdblocking": true,
+  "customSearchEngine": "https://www.perplexity.ai/search?q=%s",
+  "searchEngine": "custom"
+}
