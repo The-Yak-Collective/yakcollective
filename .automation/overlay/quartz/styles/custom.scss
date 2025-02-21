@@ -55,13 +55,13 @@ hr {
 .page #quartz-body {
 	grid-template: "grid-header grid-sidebar-right""grid-center grid-sidebar-right""grid-footer grid-sidebar-right"/auto 320px;
 }
-@media (min-width:800px) and (max-width:1200px) {
+@media (min-width: 800px) and (max-width: 1200px) {
 	.page #quartz-body {
 		//grid-template: "grid-header grid-sidebar-right""grid-center grid-sidebar-right""grid-footer grid-sidebar-right"/auto 320px;
 		grid-template: "grid-header""grid-center""grid-sidebar-right""grid-footer"/auto;
 	}
 }
-@media (max-width:800px) {
+@media (max-width: 800px) {
 	.page #quartz-body {
 		grid-template:"grid-header""grid-center""grid-sidebar-right""grid-footer"/auto;
 	}
@@ -69,7 +69,7 @@ hr {
 .page #quartz-body .page-header {
 	margin-top: 2rem;
 }
-@media (max-width:800px) {
+@media (max-width: 800px) {
 	.page #quartz-body .page-header {
 		margin-top: 0;
 	}
