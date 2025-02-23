@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "80775d384fcad22e",
+        "id": "3e905231941b2f51",
         "type": "tabs",
         "children": [
           {
-            "id": "bad589faf44a40e8",
+            "id": "77dace9bb0a2da5c",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -133,14 +133,14 @@
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "bad589faf44a40e8",
+  "active": "77dace9bb0a2da5c",
   "lastOpenFiles": [
+    "index.md",
+    "README.md",
     "study groups/composable and distributed systems.md",
     "study groups/yak robotics garage.md",
     "assets/0b4fee32bf093f6e915d71f235cd295f.png",
     "assets/6440727e4ee4e980ef320e7effba7574.png",
-    "README.md",
-    "index.md",
     "study groups/index.md",
     "yakcon 2023.md",
     "join.md",
