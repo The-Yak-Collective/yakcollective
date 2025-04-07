@@ -58,8 +58,15 @@ export const defaultListPageLayout: PageLayout = {
     Component.Darkmode(),
     Component.Search()
   ],
-  beforeBody: [],
-  afterBody: [],
+  beforeBody: [
+    Component.ContentMeta()
+  ],
+  afterBody: [
+    Component.Backlinks()
+  ],
   left: [],
-  right: []
+  right: [
+    Component.Graph(),
+    Component.DesktopOnly(Component.TableOfContents())
+  ]
 }

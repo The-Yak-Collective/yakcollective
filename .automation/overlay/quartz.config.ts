@@ -92,6 +92,7 @@ const config: QuartzConfig = {
     emitters: [
       Plugin.ComponentResources(),
       Plugin.ContentPage(),
+      Plugin.FolderPage(),
       Plugin.ContentIndex({
         rssLimit:          1024,
         rssFullHtml:       true,

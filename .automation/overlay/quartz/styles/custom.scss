@@ -209,6 +209,13 @@ footer a:hover,
 }
 
 /*
+ * Hide folder lists
+ */
+div.page-listing {
+	display: none;
+}
+
+/*
  * Join form
  */
 form#join label {
