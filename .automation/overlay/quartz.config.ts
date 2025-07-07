@@ -17,7 +17,6 @@ const config: QuartzConfig = {
     baseUrl:              "www.yakcollective.org",
     ignorePatterns:       [],
     defaultDateType:      "created",
-    generateSocialImages: true,
     theme: {
       fontOrigin: "googleFonts",
       cdnCaching: true,
