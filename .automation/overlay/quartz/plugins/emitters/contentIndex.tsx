@@ -59,7 +59,7 @@ function generateRSSFeed(cfg: GlobalConfiguration, idx: ContentIndexMap, limit?:
     <title>${escapeHTML(content.title)}</title>
     <link>https://${joinSegments(base, encodeURI(slug))}</link>
     <guid>https://${joinSegments(base, encodeURI(slug))}</guid>
-    <description>${content.richContent ?? content.description}</description>
+    <description><![CDATA[ ${content.richContent ?? content.description} ]]></description>
     <pubDate>${content.date?.toUTCString()}</pubDate>
   </item>`
 
@@ -88,7 +88,7 @@ function generateRSSFeed(cfg: GlobalConfiguration, idx: ContentIndexMap, limit?:
       <description>The latest from ${escapeHTML(
         cfg.pageTitle,
       )}</description>
-      <generator>Quartz — quartz.jzhao.xyz</generator>
+      <generator>Quartz -- quartz.jzhao.xyz</generator>
       ${items}
     </channel>
   </rss>`
