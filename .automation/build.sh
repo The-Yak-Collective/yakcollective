@@ -2,15 +2,10 @@
 
 set -e
 
-# Make sure npm, npx, and gawk are available.
+# Make sure npm and gawk are available.
 #
 if [[ -z "$(which npm 2> /dev/null)" ]]; then
 	echo "Could not find npm in your system's PATH!"
-	exit 1
-fi
-
-if [[ -z "$(which npx 2> /dev/null)" ]]; then
-	echo "Could not find npx in your system's PATH!"
 	exit 1
 fi
 
@@ -90,14 +85,14 @@ fi
 
 	cd build/quartz
 	if [[ "$1" == "serve" ]]; then
-		npx quartz build \
-			--directory ../src \
-			--output ../../www \
-			--serve
+		npm exec -- quartz build \
+		          --directory ../src \
+		          --output ../../www \
+		          --serve
 	else
-		npx quartz build \
-			--directory ../src \
-			--output ../../www
+		npm exec -- quartz build \
+		          --directory ../src \
+		          --output ../../www
 	fi
 	sed -i'' -e 's#href=\&quot;[\./]\+/#href=\&quot;https://cardboard-iguana.com/grimoire/#g;s#src=\&quot;[\./]\+/#src=\&quot;https://cardboard-iguana.com/grimoire/#g;' ../../www/index.xml
 )

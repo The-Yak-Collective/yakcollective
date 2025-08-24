@@ -27,10 +27,10 @@ __export(main_exports, {
   default: () => AttachmentManagementPlugin
 });
 module.exports = __toCommonJS(main_exports);
-var import_obsidian11 = require("obsidian");
+var import_obsidian12 = require("obsidian");
 
 // src/settings/settings.ts
-var import_obsidian3 = require("obsidian");
+var import_obsidian4 = require("obsidian");
 
 // src/lib/constant.ts
 var SETTINGS_VARIABLES_DATES = "${date}";
@@ -44,10 +44,70 @@ var SETTINGS_ROOT_INFOLDER = "inFolderBelow";
 var SETTINGS_ROOT_NEXTTONOTE = "nextToNote";
 
 // src/model/extensionOverride.ts
-var import_obsidian2 = require("obsidian");
+var import_obsidian3 = require("obsidian");
 
 // src/utils.ts
+var import_obsidian2 = require("obsidian");
+
+// src/i18n/index.ts
 var import_obsidian = require("obsidian");
+var currentLanguage = "en";
+var translations = {
+  "en": {},
+  "zh-cn": {}
+};
+function setLanguage(language) {
+  currentLanguage = language;
+}
+function getCurrentLanguage() {
+  return currentLanguage;
+}
+function registerTranslations(language, translationMap) {
+  translations[language] = { ...translations[language], ...translationMap };
+}
+function t(key, params) {
+  const keys = key.split(".");
+  let value = translations[currentLanguage];
+  for (const k of keys) {
+    if (value && typeof value === "object" && k in value) {
+      value = value[k];
+    } else {
+      if (currentLanguage !== "en") {
+        let fallbackValue = translations["en"];
+        for (const fk of keys) {
+          if (fallbackValue && typeof fallbackValue === "object" && fk in fallbackValue) {
+            fallbackValue = fallbackValue[fk];
+          } else {
+            fallbackValue = key;
+            break;
+          }
+        }
+        value = fallbackValue;
+      } else {
+        value = key;
+      }
+      break;
+    }
+  }
+  let result = typeof value === "string" ? value : key;
+  if (params) {
+    Object.entries(params).forEach(([paramKey, paramValue]) => {
+      result = result.replace(new RegExp(`\\{${paramKey}\\}`, "g"), String(paramValue));
+    });
+  }
+  return result;
+}
+function detectLanguage() {
+  const locale = import_obsidian.moment.locale();
+  if (locale.startsWith("zh")) {
+    return "zh-cn";
+  }
+  return "en";
+}
+function initI18n(language) {
+  const initialLanguage = language || detectLanguage();
+  setLanguage(initialLanguage);
+}
 
 // node_modules/ts-md5/dist/esm/md5.js
 var Md5 = class {
@@ -410,7 +470,7 @@ function isCanvasFile(extension) {
   return extension === "canvas";
 }
 function isPastedImage(file) {
-  if (file instanceof import_obsidian.TFile) {
+  if (file instanceof import_obsidian2.TFile) {
     if (file.name.startsWith(PASTED_IMAGE_PREFIX)) {
       return true;
     }
@@ -452,12 +512,12 @@ function matchExtension(extension, pattern) {
 }
 function isAttachment(settings, filePath) {
   let file = null;
-  if (filePath instanceof import_obsidian.TAbstractFile) {
+  if (filePath instanceof import_obsidian2.TAbstractFile) {
     file = filePath;
   } else {
     file = this.app.vault.getAbstractFileByPath(filePath);
   }
-  if (file === null || !(file instanceof import_obsidian.TFile)) {
+  if (file === null || !(file instanceof import_obsidian2.TFile)) {
     return false;
   }
   if (isMarkdownFile(file.extension) || isCanvasFile(file.extension)) {
@@ -509,15 +569,15 @@ function validateExtensionEntry(setting, plugin) {
 }
 function generateErrorExtensionMessage(type) {
   if (type === "canvas") {
-    new import_obsidian.Notice("Canvas is not supported as an extension override.");
+    new import_obsidian2.Notice(t("errors.canvasNotSupported"));
   } else if (type === "md") {
-    new import_obsidian.Notice("Markdown is not supported as an extension override.");
+    new import_obsidian2.Notice(t("errors.markdownNotSupported"));
   } else if (type === "empty") {
-    new import_obsidian.Notice("Extension override cannot be empty.");
+    new import_obsidian2.Notice(t("errors.extensionEmpty"));
   } else if (type === "duplicate") {
-    new import_obsidian.Notice("Duplicate extension override.");
+    new import_obsidian2.Notice(t("errors.duplicateExtension"));
   } else if (type === "excluded") {
-    new import_obsidian.Notice("Extension override cannot be an excluded extension.");
+    new import_obsidian2.Notice(t("errors.excludedExtension"));
   }
 }
 
@@ -548,7 +608,7 @@ function getExtensionOverrideSetting(extension, settings) {
   }
   return { extSetting: void 0 };
 }
-var OverrideExtensionModal = class extends import_obsidian2.Modal {
+var OverrideExtensionModal = class extends import_obsidian3.Modal {
   constructor(plugin, settings, onSubmit) {
     super(plugin.app);
     this.plugin = plugin;
@@ -571,38 +631,34 @@ var OverrideExtensionModal = class extends import_obsidian2.Modal {
     const { contentEl } = this;
     contentEl.empty();
     contentEl.createEl("h3", {
-      text: `Extension settings for ${this.settings.extension}`
+      text: t("extensionOverride.title")
     });
-    new import_obsidian2.Setting(contentEl).setName("Root path to save attachment").setDesc("Select root path of attachment").addDropdown(
-      (text) => text.addOption(`${SETTINGS_ROOT_OBSFOLDER}`, "Copy Obsidian settings").addOption(`${SETTINGS_ROOT_INFOLDER}`, "In the folder specified below").addOption(`${SETTINGS_ROOT_NEXTTONOTE}`, "Next to note in folder specified below").setValue(this.settings.saveAttE).onChange(async (value) => {
+    new import_obsidian3.Setting(contentEl).setName(t("extensionOverride.rootPath.name")).setDesc(t("extensionOverride.rootPath.desc")).addDropdown(
+      (text) => text.addOption(`${SETTINGS_ROOT_OBSFOLDER}`, t("settings.rootPath.options.obsidian")).addOption(`${SETTINGS_ROOT_INFOLDER}`, t("settings.rootPath.options.inFolder")).addOption(`${SETTINGS_ROOT_NEXTTONOTE}`, t("settings.rootPath.options.nextToNote")).setValue(this.settings.saveAttE).onChange(async (value) => {
         this.settings.saveAttE = value;
         this.displaySw(contentEl);
         this.onOpen();
       })
     );
     if (this.settings.saveAttE !== "obsFolder") {
-      new import_obsidian2.Setting(contentEl).setName("Root folder").setClass("override_root_folder_set").addText(
+      new import_obsidian3.Setting(contentEl).setName(t("extensionOverride.rootFolder.name")).setClass("override_root_folder_set").addText(
         (text) => text.setPlaceholder(DEFAULT_SETTINGS.attachPath.attachmentRoot).setValue(this.settings.attachmentRoot).onChange(async (value) => {
           this.settings.attachmentRoot = value;
         })
       );
     }
-    new import_obsidian2.Setting(contentEl).setName("Attachment path").setDesc(
-      `Path of attachment in root folder, available variables ${SETTINGS_VARIABLES_NOTEPATH}, ${SETTINGS_VARIABLES_NOTENAME} and ${SETTINGS_VARIABLES_NOTEPARENT}`
-    ).addText(
+    new import_obsidian3.Setting(contentEl).setName(t("extensionOverride.attachmentPath.name")).setDesc(t("extensionOverride.attachmentPath.desc")).addText(
       (text) => text.setPlaceholder(DEFAULT_SETTINGS.attachPath.attachmentPath).setValue(this.settings.attachmentPath).onChange(async (value) => {
         this.settings.attachmentPath = value;
       })
     );
-    new import_obsidian2.Setting(contentEl).setName("Attachment format").setDesc(
-      `Define how to name the attachment file, available variables ${SETTINGS_VARIABLES_DATES}, ${SETTINGS_VARIABLES_NOTENAME}, ${SETTINGS_VARIABLES_MD5} and ${SETTINGS_VARIABLES_ORIGINALNAME}.`
-    ).addText(
+    new import_obsidian3.Setting(contentEl).setName(t("extensionOverride.attachmentFormat.name")).setDesc(t("extensionOverride.attachmentFormat.desc")).addText(
       (text) => text.setPlaceholder(DEFAULT_SETTINGS.attachPath.attachFormat).setValue(this.settings.attachFormat).onChange(async (value) => {
         this.settings.attachFormat = value;
       })
     );
-    new import_obsidian2.Setting(contentEl).addButton(
-      (button) => button.setButtonText("Save").onClick(async () => {
+    new import_obsidian3.Setting(contentEl).addButton(
+      (button) => button.setButtonText(t("extensionOverride.buttons.save")).onClick(async () => {
         this.onSubmit(this.settings);
         this.close();
       })
@@ -614,8 +670,395 @@ var OverrideExtensionModal = class extends import_obsidian2.Modal {
   }
 };
 
+// src/i18n/locales/en.ts
+var en = {
+  // 通用
+  common: {
+    save: "Save",
+    cancel: "Cancel",
+    delete: "Delete",
+    edit: "Edit",
+    add: "Add",
+    remove: "Remove",
+    confirm: "Confirm",
+    close: "Close"
+  },
+  // 设置页面
+  settings: {
+    title: "Attachment Management Settings",
+    language: {
+      name: "Language",
+      desc: "Select the interface language"
+    },
+    rootPath: {
+      name: "Root path to save attachment",
+      desc: "Select root path of attachment",
+      options: {
+        obsidian: "Copy Obsidian settings",
+        inFolder: "In the folder specified below",
+        nextToNote: "Next to note in folder specified below"
+      }
+    },
+    rootFolder: {
+      name: "Root folder",
+      desc: "Root folder of new attachment"
+    },
+    attachmentPath: {
+      name: "Attachment path",
+      desc: "Path of attachment in root folder, available variables {{notepath}}, {{notename}}, {{parent}}"
+    },
+    attachmentFormat: {
+      name: "Attachment format",
+      desc: "Define how to name the attachment file, available variables {{dates}}, {{notename}}, {{md5}} and {{originalname}}."
+    },
+    dateFormat: {
+      name: "Date format",
+      desc: "Moment date format to use",
+      linkText: "Moment format options"
+    },
+    autoRename: {
+      name: "Automatically rename attachment",
+      desc: "Automatically rename the attachment folder/filename when you rename the folder/filename where the corresponding md/canvas file be placed."
+    },
+    extensionOverride: {
+      name: "Extension override",
+      desc: "Using the extension override if you want to autorename the attachment with a specific extension (e.g. pdf or zip).",
+      addButton: "Add extension overrides",
+      extension: {
+        name: "Extension",
+        desc: "Extension to override",
+        placeholder: "pdf|docx?"
+      },
+      tooltips: {
+        remove: "Remove extension override",
+        edit: "Edit extension override",
+        save: "Save extension override"
+      },
+      saved: "Saved extension override"
+    },
+    excludeExtension: {
+      name: "Exclude extension pattern",
+      desc: "Regex pattern to exclude certain extensions from being handled.",
+      placeholder: "pdf|docx?|xlsx?|pptx?|zip|rar"
+    },
+    excludedPaths: {
+      name: "Excluded paths",
+      desc: "Provide the full path of the folder names (case sensitive and without leading slash '/') divided by semicolon (;) to be excluded from renaming."
+    },
+    excludeSubpaths: {
+      name: "Exclude subpaths",
+      desc: "Turn on this option if you want to also exclude all subfolders of the folder paths provided above."
+    }
+  },
+  // 覆盖设置模态框
+  override: {
+    title: "Overriding Settings",
+    menuTitle: "Overriding attachment setting",
+    addExtensionOverrides: "Add extension overrides",
+    extension: {
+      name: "Extension",
+      desc: "Extension to override",
+      placeholder: "pdf"
+    },
+    buttons: {
+      reset: "Reset",
+      submit: "Submit"
+    },
+    notifications: {
+      reset: "Reset attachment setting of {path}",
+      overridden: "Overridden attachment setting of {path}"
+    }
+  },
+  // 扩展覆盖模态框
+  extensionOverride: {
+    title: "Extension Override Settings",
+    extension: {
+      name: "Extension",
+      desc: "Extension pattern to override (e.g., pdf, docx, jpg)",
+      placeholder: "pdf|docx?"
+    },
+    rootPath: {
+      name: "Root path to save attachment",
+      desc: "Select root path of attachment for this extension"
+    },
+    rootFolder: {
+      name: "Root folder",
+      desc: "Root folder for this extension"
+    },
+    attachmentPath: {
+      name: "Attachment path",
+      desc: "Path of attachment in root folder for this extension"
+    },
+    attachmentFormat: {
+      name: "Attachment format",
+      desc: "Define how to name the attachment file for this extension"
+    },
+    buttons: {
+      save: "Save"
+    },
+    notice: {
+      extensionEmpty: "Extension cannot be empty",
+      extensionExists: "Extension already exists",
+      saved: "Extension override saved successfully"
+    }
+  },
+  // 确认对话框
+  confirm: {
+    title: "Tips",
+    message: "This operation is irreversible and experimental. Please backup your vault first!",
+    continue: "Continue",
+    deleteOverride: "Are you sure you want to delete this override setting?",
+    deleteExtensionOverride: "Are you sure you want to delete this extension override?"
+  },
+  // 通知消息
+  notices: {
+    settingsSaved: "Settings saved successfully",
+    overrideSaved: "Override setting saved successfully",
+    overrideDeleted: "Override setting deleted successfully",
+    extensionOverrideSaved: "Extension override saved successfully",
+    extensionOverrideDeleted: "Extension override deleted successfully",
+    attachmentRenamed: "Attachment renamed successfully",
+    attachmentMoved: "Attachment moved successfully",
+    arrangeCompleted: "Arrange completed",
+    fileExcluded: "{path} was excluded",
+    resetAttachmentSetting: "Reset attachment setting of {path}",
+    error: {
+      invalidPath: "Invalid path specified",
+      fileNotFound: "File not found",
+      permissionDenied: "Permission denied",
+      unknownError: "An unknown error occurred"
+    }
+  },
+  // 命令
+  commands: {
+    rearrangeActiveFile: "Rearrange attachments for active file",
+    rearrangeAllFiles: "Rearrange attachments for all files",
+    openSettings: "Open Attachment Management settings",
+    overrideAttachmentSetting: "Override attachment setting",
+    rearrangeAllLinks: "Rearrange all linked attachments",
+    rearrangeActiveLinks: "Rearrange linked attachments",
+    resetOverrideSetting: "Reset override setting",
+    clearUnusedStorage: "Clear unused original name storage"
+  },
+  // 错误消息
+  errors: {
+    canvasNotSupported: "Canvas is not supported as an extension override.",
+    markdownNotSupported: "Markdown is not supported as an extension override.",
+    extensionEmpty: "Extension override cannot be empty.",
+    duplicateExtension: "Duplicate extension override.",
+    excludedExtension: "Extension override cannot be an excluded extension."
+  }
+};
+
+// src/i18n/locales/zh-cn.ts
+var zhCn = {
+  // 通用
+  common: {
+    save: "\u4FDD\u5B58",
+    cancel: "\u53D6\u6D88",
+    delete: "\u5220\u9664",
+    edit: "\u7F16\u8F91",
+    add: "\u6DFB\u52A0",
+    remove: "\u79FB\u9664",
+    confirm: "\u786E\u8BA4",
+    close: "\u5173\u95ED"
+  },
+  // 设置页面
+  settings: {
+    title: "\u9644\u4EF6\u7BA1\u7406\u8BBE\u7F6E",
+    language: {
+      name: "\u8BED\u8A00",
+      desc: "\u9009\u62E9\u754C\u9762\u8BED\u8A00"
+    },
+    rootPath: {
+      name: "\u9644\u4EF6\u4FDD\u5B58\u6839\u8DEF\u5F84",
+      desc: "\u9009\u62E9\u9644\u4EF6\u7684\u6839\u8DEF\u5F84",
+      options: {
+        obsidian: "\u590D\u5236 Obsidian \u8BBE\u7F6E",
+        inFolder: "\u5728\u4E0B\u65B9\u6307\u5B9A\u7684\u6587\u4EF6\u5939\u4E2D",
+        nextToNote: "\u5728\u7B14\u8BB0\u65C1\u8FB9\u7684\u6307\u5B9A\u6587\u4EF6\u5939\u4E2D"
+      }
+    },
+    rootFolder: {
+      name: "\u6839\u6587\u4EF6\u5939",
+      desc: "\u65B0\u9644\u4EF6\u7684\u6839\u6587\u4EF6\u5939"
+    },
+    attachmentPath: {
+      name: "\u9644\u4EF6\u8DEF\u5F84",
+      desc: "\u9644\u4EF6\u5728\u6839\u6587\u4EF6\u5939\u4E2D\u7684\u8DEF\u5F84\uFF0C\u53EF\u7528\u53D8\u91CF {{notepath}}\u3001{{notename}}\u3001{{parent}}"
+    },
+    attachmentFormat: {
+      name: "\u9644\u4EF6\u683C\u5F0F",
+      desc: "\u5B9A\u4E49\u5982\u4F55\u547D\u540D\u9644\u4EF6\u6587\u4EF6\uFF0C\u53EF\u7528\u53D8\u91CF {{dates}}\u3001{{notename}}\u3001{{md5}} \u548C {{originalname}}\u3002"
+    },
+    dateFormat: {
+      name: "\u65E5\u671F\u683C\u5F0F",
+      desc: "\u4F7F\u7528\u7684 Moment \u65E5\u671F\u683C\u5F0F",
+      linkText: "Moment \u683C\u5F0F\u9009\u9879"
+    },
+    autoRename: {
+      name: "\u81EA\u52A8\u91CD\u547D\u540D\u9644\u4EF6",
+      desc: "\u5F53\u60A8\u91CD\u547D\u540D\u5BF9\u5E94 md/canvas \u6587\u4EF6\u6240\u5728\u7684\u6587\u4EF6\u5939/\u6587\u4EF6\u540D\u65F6\uFF0C\u81EA\u52A8\u91CD\u547D\u540D\u9644\u4EF6\u6587\u4EF6\u5939/\u6587\u4EF6\u540D\u3002"
+    },
+    extensionOverride: {
+      name: "\u6269\u5C55\u540D\u8986\u76D6",
+      desc: "\u5982\u679C\u60A8\u60F3\u8981\u5BF9\u7279\u5B9A\u6269\u5C55\u540D\u7684\u9644\u4EF6\u8FDB\u884C\u81EA\u52A8\u91CD\u547D\u540D\uFF08\u4F8B\u5982 pdf \u6216 zip\uFF09\uFF0C\u8BF7\u4F7F\u7528\u6269\u5C55\u540D\u8986\u76D6\u3002",
+      addButton: "\u6DFB\u52A0\u6269\u5C55\u540D\u8986\u76D6",
+      extension: {
+        name: "\u6269\u5C55\u540D",
+        desc: "\u8981\u8986\u76D6\u7684\u6269\u5C55\u540D",
+        placeholder: "pdf|docx?"
+      },
+      tooltips: {
+        remove: "\u79FB\u9664\u6269\u5C55\u540D\u8986\u76D6",
+        edit: "\u7F16\u8F91\u6269\u5C55\u540D\u8986\u76D6",
+        save: "\u4FDD\u5B58\u6269\u5C55\u540D\u8986\u76D6"
+      },
+      saved: "\u5DF2\u4FDD\u5B58\u6269\u5C55\u540D\u8986\u76D6"
+    },
+    excludeExtension: {
+      name: "\u6392\u9664\u6269\u5C55\u540D\u6A21\u5F0F",
+      desc: "\u7528\u4E8E\u6392\u9664\u67D0\u4E9B\u6269\u5C55\u540D\u4E0D\u88AB\u5904\u7406\u7684\u6B63\u5219\u8868\u8FBE\u5F0F\u6A21\u5F0F\u3002",
+      placeholder: "pdf|docx?|xlsx?|pptx?|zip|rar"
+    },
+    excludedPaths: {
+      name: "\u6392\u9664\u8DEF\u5F84",
+      desc: '\u63D0\u4F9B\u8981\u4ECE\u91CD\u547D\u540D\u4E2D\u6392\u9664\u7684\u6587\u4EF6\u5939\u540D\u79F0\u7684\u5B8C\u6574\u8DEF\u5F84\uFF08\u533A\u5206\u5927\u5C0F\u5199\u4E14\u4E0D\u5E26\u524D\u5BFC\u659C\u6760 "/"\uFF09\uFF0C\u7528\u5206\u53F7\uFF08;\uFF09\u5206\u9694\u3002'
+    },
+    excludeSubpaths: {
+      name: "\u6392\u9664\u5B50\u8DEF\u5F84",
+      desc: "\u5982\u679C\u60A8\u8FD8\u60F3\u6392\u9664\u4E0A\u9762\u63D0\u4F9B\u7684\u6587\u4EF6\u5939\u8DEF\u5F84\u7684\u6240\u6709\u5B50\u6587\u4EF6\u5939\uFF0C\u8BF7\u6253\u5F00\u6B64\u9009\u9879\u3002"
+    }
+  },
+  // 覆盖设置模态框
+  override: {
+    title: "\u8986\u76D6\u8BBE\u7F6E",
+    menuTitle: "\u8986\u76D6\u9644\u4EF6\u8BBE\u7F6E",
+    addExtensionOverrides: "\u6DFB\u52A0\u6269\u5C55\u540D\u8986\u76D6",
+    extension: {
+      name: "\u6269\u5C55\u540D",
+      desc: "\u8981\u8986\u76D6\u7684\u6269\u5C55\u540D",
+      placeholder: "pdf"
+    },
+    buttons: {
+      reset: "\u91CD\u7F6E",
+      submit: "\u63D0\u4EA4"
+    },
+    notifications: {
+      reset: "\u5DF2\u91CD\u7F6E {path} \u7684\u9644\u4EF6\u8BBE\u7F6E",
+      overridden: "\u5DF2\u8986\u76D6 {path} \u7684\u9644\u4EF6\u8BBE\u7F6E"
+    }
+  },
+  // 扩展覆盖模态框
+  extensionOverride: {
+    title: "\u6269\u5C55\u540D\u8986\u76D6\u8BBE\u7F6E",
+    extension: {
+      name: "\u6269\u5C55\u540D",
+      desc: "\u8981\u8986\u76D6\u7684\u6269\u5C55\u540D\u6A21\u5F0F\uFF08\u4F8B\u5982\uFF1Apdf\u3001docx\u3001jpg\uFF09",
+      placeholder: "pdf|docx?"
+    },
+    rootPath: {
+      name: "\u9644\u4EF6\u4FDD\u5B58\u6839\u8DEF\u5F84",
+      desc: "\u9009\u62E9\u6B64\u6269\u5C55\u540D\u7684\u9644\u4EF6\u6839\u8DEF\u5F84"
+    },
+    rootFolder: {
+      name: "\u6839\u6587\u4EF6\u5939",
+      desc: "\u6B64\u6269\u5C55\u540D\u7684\u6839\u6587\u4EF6\u5939"
+    },
+    attachmentPath: {
+      name: "\u9644\u4EF6\u8DEF\u5F84",
+      desc: "\u6B64\u6269\u5C55\u540D\u5728\u6839\u6587\u4EF6\u5939\u4E2D\u7684\u9644\u4EF6\u8DEF\u5F84"
+    },
+    attachmentFormat: {
+      name: "\u9644\u4EF6\u683C\u5F0F",
+      desc: "\u5B9A\u4E49\u6B64\u6269\u5C55\u540D\u7684\u9644\u4EF6\u6587\u4EF6\u547D\u540D\u65B9\u5F0F"
+    },
+    buttons: {
+      save: "\u4FDD\u5B58"
+    },
+    notice: {
+      extensionEmpty: "\u6269\u5C55\u540D\u4E0D\u80FD\u4E3A\u7A7A",
+      extensionExists: "\u6269\u5C55\u540D\u5DF2\u5B58\u5728",
+      saved: "\u6269\u5C55\u540D\u8986\u76D6\u4FDD\u5B58\u6210\u529F"
+    }
+  },
+  // 确认对话框
+  confirm: {
+    title: "\u63D0\u793A",
+    message: "\u6B64\u64CD\u4F5C\u4E0D\u53EF\u9006\u4E14\u4E3A\u5B9E\u9A8C\u6027\u529F\u80FD\uFF0C\u8BF7\u5148\u5907\u4EFD\u60A8\u7684\u5E93\uFF01",
+    continue: "\u7EE7\u7EED",
+    deleteOverride: "\u60A8\u786E\u5B9A\u8981\u5220\u9664\u6B64\u8986\u76D6\u8BBE\u7F6E\u5417\uFF1F",
+    deleteExtensionOverride: "\u60A8\u786E\u5B9A\u8981\u5220\u9664\u6B64\u6269\u5C55\u540D\u8986\u76D6\u5417\uFF1F"
+  },
+  // 通知消息
+  notices: {
+    settingsSaved: "\u8BBE\u7F6E\u4FDD\u5B58\u6210\u529F",
+    overrideSaved: "\u8986\u76D6\u8BBE\u7F6E\u4FDD\u5B58\u6210\u529F",
+    overrideDeleted: "\u8986\u76D6\u8BBE\u7F6E\u5220\u9664\u6210\u529F",
+    extensionOverrideSaved: "\u6269\u5C55\u540D\u8986\u76D6\u4FDD\u5B58\u6210\u529F",
+    extensionOverrideDeleted: "\u6269\u5C55\u540D\u8986\u76D6\u5220\u9664\u6210\u529F",
+    attachmentRenamed: "\u9644\u4EF6\u91CD\u547D\u540D\u6210\u529F",
+    attachmentMoved: "\u9644\u4EF6\u79FB\u52A8\u6210\u529F",
+    error: {
+      invalidPath: "\u6307\u5B9A\u7684\u8DEF\u5F84\u65E0\u6548",
+      fileNotFound: "\u6587\u4EF6\u672A\u627E\u5230",
+      permissionDenied: "\u6743\u9650\u88AB\u62D2\u7EDD",
+      unknownError: "\u53D1\u751F\u672A\u77E5\u9519\u8BEF"
+    }
+  },
+  // 命令
+  commands: {
+    rearrangeActiveFile: "\u91CD\u65B0\u6574\u7406\u5F53\u524D\u6587\u4EF6\u7684\u9644\u4EF6",
+    rearrangeAllFiles: "\u91CD\u65B0\u6574\u7406\u6240\u6709\u6587\u4EF6\u7684\u9644\u4EF6",
+    openSettings: "\u6253\u5F00\u9644\u4EF6\u7BA1\u7406\u8BBE\u7F6E",
+    overrideAttachmentSetting: "\u8986\u76D6\u9644\u4EF6\u8BBE\u7F6E",
+    rearrangeAllLinks: "\u91CD\u65B0\u6574\u7406\u6240\u6709\u94FE\u63A5\u7684\u9644\u4EF6",
+    rearrangeActiveLinks: "\u91CD\u65B0\u6574\u7406\u94FE\u63A5\u7684\u9644\u4EF6",
+    resetOverrideSetting: "\u91CD\u7F6E\u8986\u76D6\u8BBE\u7F6E",
+    clearUnusedStorage: "\u6E05\u7406\u672A\u4F7F\u7528\u7684\u539F\u59CB\u540D\u79F0\u5B58\u50A8"
+  },
+  // 通知消息
+  notifications: {
+    success: "\u64CD\u4F5C\u6210\u529F\u5B8C\u6210",
+    error: "\u53D1\u751F\u9519\u8BEF",
+    warning: "\u8B66\u544A",
+    arrangeCompleted: "\u6574\u7406\u5B8C\u6210",
+    fileExcluded: "{path} \u5DF2\u88AB\u6392\u9664",
+    resetAttachmentSetting: "\u5DF2\u91CD\u7F6E {path} \u7684\u9644\u4EF6\u8BBE\u7F6E"
+  },
+  // 错误消息
+  errors: {
+    canvasNotSupported: "\u4E0D\u652F\u6301\u5C06 Canvas \u4F5C\u4E3A\u6269\u5C55\u8986\u76D6\u3002",
+    markdownNotSupported: "\u4E0D\u652F\u6301\u5C06 Markdown \u4F5C\u4E3A\u6269\u5C55\u8986\u76D6\u3002",
+    extensionEmpty: "\u6269\u5C55\u8986\u76D6\u4E0D\u80FD\u4E3A\u7A7A\u3002",
+    duplicateExtension: "\u91CD\u590D\u7684\u6269\u5C55\u8986\u76D6\u3002",
+    excludedExtension: "\u6269\u5C55\u8986\u76D6\u4E0D\u80FD\u662F\u88AB\u6392\u9664\u7684\u6269\u5C55\u3002"
+  }
+};
+
+// src/i18n/loader.ts
+function loadAllTranslations() {
+  registerTranslations("en", en);
+  registerTranslations("zh-cn", zhCn);
+}
+function getSupportedLanguages() {
+  return [
+    {
+      code: "en",
+      name: "English",
+      nativeName: "English"
+    },
+    {
+      code: "zh-cn",
+      name: "Chinese (Simplified)",
+      nativeName: "\u7B80\u4F53\u4E2D\u6587"
+    }
+  ];
+}
+
 // src/settings/settings.ts
 var DEFAULT_SETTINGS = {
+  language: "en",
   attachPath: {
     attachmentRoot: "",
     saveAttE: `${SETTINGS_ROOT_OBSFOLDER}`,
@@ -633,7 +1076,7 @@ var DEFAULT_SETTINGS = {
   overridePath: {},
   disableNotification: false
 };
-var SettingTab = class extends import_obsidian3.PluginSettingTab {
+var AttachmentManagementSettingTab = class extends import_obsidian4.PluginSettingTab {
   constructor(app2, plugin) {
     super(app2, plugin);
     this.plugin = plugin;
@@ -661,44 +1104,54 @@ var SettingTab = class extends import_obsidian3.PluginSettingTab {
   display() {
     const { containerEl } = this;
     containerEl.empty();
-    new import_obsidian3.Setting(containerEl).setName("Root path to save attachment").setDesc("Select root path of attachment").addDropdown(
-      (text) => text.addOption(`${SETTINGS_ROOT_OBSFOLDER}`, "Copy Obsidian settings").addOption(`${SETTINGS_ROOT_INFOLDER}`, "In the folder specified below").addOption(`${SETTINGS_ROOT_NEXTTONOTE}`, "Next to note in folder specified below").setValue(this.plugin.settings.attachPath.saveAttE).onChange(async (value) => {
+    containerEl.createEl("h2", { text: t("settings.title") });
+    new import_obsidian4.Setting(containerEl).setName(t("settings.language.name")).setDesc(t("settings.language.desc")).addDropdown((dropdown) => {
+      const languages = getSupportedLanguages();
+      languages.forEach((lang) => {
+        dropdown.addOption(lang.code, lang.nativeName);
+      });
+      dropdown.setValue(getCurrentLanguage());
+      dropdown.onChange(async (value) => {
+        setLanguage(value);
+        this.plugin.settings.language = value;
+        await this.plugin.saveSettings();
+        this.display();
+      });
+    });
+    new import_obsidian4.Setting(containerEl).setName(t("settings.rootPath.name")).setDesc(t("settings.rootPath.desc")).addDropdown(
+      (text) => text.addOption(`${SETTINGS_ROOT_OBSFOLDER}`, t("settings.rootPath.options.obsidian")).addOption(`${SETTINGS_ROOT_INFOLDER}`, t("settings.rootPath.options.inFolder")).addOption(`${SETTINGS_ROOT_NEXTTONOTE}`, t("settings.rootPath.options.nextToNote")).setValue(this.plugin.settings.attachPath.saveAttE).onChange(async (value) => {
         this.plugin.settings.attachPath.saveAttE = value;
         this.displaySw(containerEl);
         await this.plugin.saveSettings();
       })
     );
-    new import_obsidian3.Setting(containerEl).setName("Root folder").setDesc("Root folder of new attachment").setClass("root_folder_set").addText(
+    new import_obsidian4.Setting(containerEl).setName(t("settings.rootFolder.name")).setDesc(t("settings.rootFolder.desc")).setClass("root_folder_set").addText(
       (text) => text.setPlaceholder(DEFAULT_SETTINGS.attachPath.attachmentRoot).setValue(this.plugin.settings.attachPath.attachmentRoot).onChange(async (value) => {
         debugLog("setting - attachment root:" + value);
         this.plugin.settings.attachPath.attachmentRoot = value;
         await this.plugin.saveSettings();
       })
     );
-    new import_obsidian3.Setting(containerEl).setName("Attachment path").setDesc(
-      `Path of attachment in root folder, available variables ${SETTINGS_VARIABLES_NOTEPATH}, ${SETTINGS_VARIABLES_NOTENAME}, ${SETTINGS_VARIABLES_NOTEPARENT}`
-    ).addText(
+    new import_obsidian4.Setting(containerEl).setName(t("settings.attachmentPath.name")).setDesc(t("settings.attachmentPath.desc")).addText(
       (text) => text.setPlaceholder(DEFAULT_SETTINGS.attachPath.attachmentPath).setValue(this.plugin.settings.attachPath.attachmentPath).onChange(async (value) => {
         debugLog("setting - attachment path:" + value);
         this.plugin.settings.attachPath.attachmentPath = value;
         await this.plugin.saveSettings();
       })
     );
-    new import_obsidian3.Setting(containerEl).setName("Attachment format").setDesc(
-      `Define how to name the attachment file, available variables ${SETTINGS_VARIABLES_DATES}, ${SETTINGS_VARIABLES_NOTENAME}, ${SETTINGS_VARIABLES_MD5} and ${SETTINGS_VARIABLES_ORIGINALNAME}.`
-    ).addText(
+    new import_obsidian4.Setting(containerEl).setName(t("settings.attachmentFormat.name")).setDesc(t("settings.attachmentFormat.desc")).addText(
       (text) => text.setPlaceholder(DEFAULT_SETTINGS.attachPath.attachFormat).setValue(this.plugin.settings.attachPath.attachFormat).onChange(async (value) => {
         debugLog("setting - attachment format:" + value);
         this.plugin.settings.attachPath.attachFormat = value;
         await this.plugin.saveSettings();
       })
     );
-    new import_obsidian3.Setting(containerEl).setName("Date format").setDesc(
+    new import_obsidian4.Setting(containerEl).setName(t("settings.dateFormat.name")).setDesc(
       createFragment((frag) => {
-        frag.appendText("Moment date format to use ");
+        frag.appendText(t("settings.dateFormat.desc") + " ");
         frag.createEl("a", {
           href: "https://momentjscom.readthedocs.io/en/latest/moment/04-displaying/01-format",
-          text: "Moment format options"
+          text: t("settings.dateFormat.linkText")
         });
       })
     ).addMomentFormat((component) => {
@@ -708,17 +1161,15 @@ var SettingTab = class extends import_obsidian3.PluginSettingTab {
         await this.plugin.saveSettings();
       });
     });
-    new import_obsidian3.Setting(containerEl).setName("Automatically rename attachment").setDesc(
-      "Automatically rename the attachment folder/filename when you rename the folder/filename where the corresponding md/canvas file be placed."
-    ).addToggle(
+    new import_obsidian4.Setting(containerEl).setName(t("settings.autoRename.name")).setDesc(t("settings.autoRename.desc")).addToggle(
       (toggle) => toggle.setValue(this.plugin.settings.autoRenameAttachment).onChange(async (value) => {
         debugLog("setting - automatically rename attachment folder:" + value);
         this.plugin.settings.autoRenameAttachment = value;
         await this.plugin.saveSettings();
       })
     );
-    new import_obsidian3.Setting(containerEl).setName("Extension override").setDesc("Using the extension override if you want to autorename the attachment with a specific extension (e.g. pdf or zip).").addButton((btn) => {
-      btn.setButtonText("Add extension overrides").onClick(async () => {
+    new import_obsidian4.Setting(containerEl).setName(t("settings.extensionOverride.name")).setDesc(t("settings.extensionOverride.desc")).addButton((btn) => {
+      btn.setButtonText(t("settings.extensionOverride.addButton")).onClick(async () => {
         if (this.plugin.settings.attachPath.extensionOverride === void 0) {
           this.plugin.settings.attachPath.extensionOverride = [];
         }
@@ -735,12 +1186,12 @@ var SettingTab = class extends import_obsidian3.PluginSettingTab {
     });
     if (this.plugin.settings.attachPath.extensionOverride !== void 0) {
       this.plugin.settings.attachPath.extensionOverride.forEach((ext) => {
-        new import_obsidian3.Setting(containerEl).setName("Extension").setDesc("Extension to override").setClass("override_extension_set").addText(
-          (text) => text.setPlaceholder("pdf|docx?").setValue(ext.extension).onChange(async (value) => {
+        new import_obsidian4.Setting(containerEl).setName(t("settings.extensionOverride.extension.name")).setDesc(t("settings.extensionOverride.extension.desc")).setClass("override_extension_set").addText(
+          (text) => text.setPlaceholder(t("settings.extensionOverride.extension.placeholder")).setValue(ext.extension).onChange(async (value) => {
             ext.extension = value;
           })
         ).addButton((btn) => {
-          btn.setIcon("trash").setTooltip("Remove extension override").onClick(async () => {
+          btn.setIcon("trash").setTooltip(t("settings.extensionOverride.tooltips.remove")).onClick(async () => {
             var _a, _b, _c;
             const index = (_b = (_a = this.plugin.settings.attachPath.extensionOverride) == null ? void 0 : _a.indexOf(ext)) != null ? _b : -1;
             (_c = this.plugin.settings.attachPath.extensionOverride) == null ? void 0 : _c.splice(index, 1);
@@ -748,13 +1199,13 @@ var SettingTab = class extends import_obsidian3.PluginSettingTab {
             this.display();
           });
         }).addButton((btn) => {
-          btn.setIcon("pencil").setTooltip("Edit extension override").onClick(async () => {
+          btn.setIcon("pencil").setTooltip(t("settings.extensionOverride.tooltips.edit")).onClick(async () => {
             new OverrideExtensionModal(this.plugin, ext, (result) => {
               ext = result;
             }).open();
           });
         }).addButton((btn) => {
-          btn.setIcon("check").setTooltip("Save extension override").onClick(async () => {
+          btn.setIcon("check").setTooltip(t("settings.extensionOverride.tooltips.save")).onClick(async () => {
             const wrongIndex = validateExtensionEntry(this.plugin.settings.attachPath, this.plugin.settings);
             if (wrongIndex.length > 0) {
               for (const i of wrongIndex) {
@@ -767,20 +1218,18 @@ var SettingTab = class extends import_obsidian3.PluginSettingTab {
             }
             await this.plugin.saveSettings();
             this.display();
-            new import_obsidian3.Notice("Saved extension override");
+            new import_obsidian4.Notice(t("settings.extensionOverride.saveNotice"));
           });
         });
       });
     }
-    new import_obsidian3.Setting(containerEl).setName("Exclude extension pattern").setDesc(`Regex pattern to exclude certain extensions from being handled.`).addText(
-      (text) => text.setPlaceholder("pdf|docx?|xlsx?|pptx?|zip|rar").setValue(this.plugin.settings.excludeExtensionPattern).onChange(async (value) => {
+    new import_obsidian4.Setting(containerEl).setName(t("settings.excludeExtension.name")).setDesc(t("settings.excludeExtension.desc")).addText(
+      (text) => text.setPlaceholder(t("settings.excludeExtension.placeholder")).setValue(this.plugin.settings.excludeExtensionPattern).onChange(async (value) => {
         this.plugin.settings.excludeExtensionPattern = value;
         await this.plugin.saveSettings();
       })
     );
-    new import_obsidian3.Setting(containerEl).setName("Excluded paths").setDesc(
-      `Provide the full path of the folder names (case sensitive and without leading slash '/') divided by semicolon (;) to be excluded from renaming.`
-    ).addTextArea((component) => {
+    new import_obsidian4.Setting(containerEl).setName(t("settings.excludedPaths.name")).setDesc(t("settings.excludedPaths.desc")).addTextArea((component) => {
       component.setValue(this.plugin.settings.excludedPaths).onChange(async (value) => {
         this.plugin.settings.excludedPaths = value;
         const { splittedPaths } = this.splitPath(value);
@@ -789,7 +1238,7 @@ var SettingTab = class extends import_obsidian3.PluginSettingTab {
         await this.plugin.saveSettings();
       });
     });
-    new import_obsidian3.Setting(containerEl).setName("Exclude subpaths").setDesc("Turn on this option if you want to also exclude all subfolders of the folder paths provided above.").addToggle(
+    new import_obsidian4.Setting(containerEl).setName(t("settings.excludeSubpaths.name")).setDesc(t("settings.excludeSubpaths.desc")).addToggle(
       (toggle) => toggle.setValue(this.plugin.settings.excludeSubpaths).onChange(async (value) => {
         debugLog("setting - excluded subpaths:" + value);
         this.plugin.settings.excludeSubpaths = value;
@@ -801,8 +1250,8 @@ var SettingTab = class extends import_obsidian3.PluginSettingTab {
 };
 
 // src/model/override.ts
-var import_obsidian4 = require("obsidian");
-var OverrideModal = class extends import_obsidian4.Modal {
+var import_obsidian5 = require("obsidian");
+var OverrideModal = class extends import_obsidian5.Modal {
   constructor(plugin, file, setting) {
     super(plugin.app);
     this.plugin = plugin;
@@ -825,38 +1274,34 @@ var OverrideModal = class extends import_obsidian4.Modal {
     const { contentEl } = this;
     contentEl.empty();
     contentEl.createEl("h3", {
-      text: "Overriding Settings"
+      text: t("override.title")
     });
-    new import_obsidian4.Setting(contentEl).setName("Root path to save attachment").setDesc("Select root path of attachment").addDropdown(
-      (text) => text.addOption(`${SETTINGS_ROOT_OBSFOLDER}`, "Copy Obsidian settings").addOption(`${SETTINGS_ROOT_INFOLDER}`, "In the folder specified below").addOption(`${SETTINGS_ROOT_NEXTTONOTE}`, "Next to note in folder specified below").setValue(this.setting.saveAttE).onChange(async (value) => {
+    new import_obsidian5.Setting(contentEl).setName(t("settings.rootPath.name")).setDesc(t("settings.rootPath.desc")).addDropdown(
+      (text) => text.addOption(`${SETTINGS_ROOT_OBSFOLDER}`, t("settings.rootPath.options.obsidian")).addOption(`${SETTINGS_ROOT_INFOLDER}`, t("settings.rootPath.options.inFolder")).addOption(`${SETTINGS_ROOT_NEXTTONOTE}`, t("settings.rootPath.options.nextToNote")).setValue(this.setting.saveAttE).onChange(async (value) => {
         this.setting.saveAttE = value;
         this.displaySw(contentEl);
       })
     );
-    new import_obsidian4.Setting(contentEl).setName("Root folder").setClass("override_root_folder_set").addText(
+    new import_obsidian5.Setting(contentEl).setName(t("settings.rootFolder.name")).setClass("override_root_folder_set").addText(
       (text) => text.setPlaceholder(DEFAULT_SETTINGS.attachPath.attachmentRoot).setValue(this.setting.attachmentRoot).onChange(async (value) => {
         debugLog("override - attachment root:" + value);
         this.setting.attachmentRoot = value;
       })
     );
-    new import_obsidian4.Setting(contentEl).setName("Attachment path").setDesc(
-      `Path of attachment in root folder, available variables ${SETTINGS_VARIABLES_NOTEPATH}, ${SETTINGS_VARIABLES_NOTENAME} and ${SETTINGS_VARIABLES_NOTEPARENT}`
-    ).addText(
+    new import_obsidian5.Setting(contentEl).setName(t("settings.attachmentPath.name")).setDesc(t("settings.attachmentPath.desc")).addText(
       (text) => text.setPlaceholder(DEFAULT_SETTINGS.attachPath.attachmentPath).setValue(this.setting.attachmentPath).onChange(async (value) => {
         debugLog("override - attachment path:" + value);
         this.setting.attachmentPath = value;
       })
     );
-    new import_obsidian4.Setting(contentEl).setName("Attachment format").setDesc(
-      `Define how to name the attachment file, available variables ${SETTINGS_VARIABLES_DATES}, ${SETTINGS_VARIABLES_NOTENAME}, ${SETTINGS_VARIABLES_MD5} and ${SETTINGS_VARIABLES_ORIGINALNAME}.`
-    ).addText(
+    new import_obsidian5.Setting(contentEl).setName(t("settings.attachmentFormat.name")).setDesc(t("settings.attachmentFormat.desc")).addText(
       (text) => text.setPlaceholder(DEFAULT_SETTINGS.attachPath.attachFormat).setValue(this.setting.attachFormat).onChange(async (value) => {
         debugLog("override - attachment format:" + value);
         this.setting.attachFormat = value;
       })
     );
-    new import_obsidian4.Setting(contentEl).addButton((btn) => {
-      btn.setButtonText("Add extension overrides").onClick(async () => {
+    new import_obsidian5.Setting(contentEl).addButton((btn) => {
+      btn.setButtonText(t("override.addExtensionOverrides")).onClick(async () => {
         if (this.setting.extensionOverride === void 0) {
           this.setting.extensionOverride = [];
         }
@@ -872,8 +1317,8 @@ var OverrideModal = class extends import_obsidian4.Modal {
     });
     if (this.setting.extensionOverride !== void 0) {
       this.setting.extensionOverride.forEach((ext) => {
-        new import_obsidian4.Setting(contentEl).setName("Extension").setDesc("Extension to override").setClass("override_extension_set").addText(
-          (text) => text.setPlaceholder("pdf").setValue(ext.extension).onChange(async (value) => {
+        new import_obsidian5.Setting(contentEl).setName(t("override.extension.name")).setDesc(t("override.extension.desc")).setClass("override_extension_set").addText(
+          (text) => text.setPlaceholder(t("override.extension.placeholder")).setValue(ext.extension).onChange(async (value) => {
             ext.extension = value;
           })
         ).addButton((btn) => {
@@ -892,26 +1337,26 @@ var OverrideModal = class extends import_obsidian4.Modal {
         });
       });
     }
-    new import_obsidian4.Setting(contentEl).addButton((btn) => {
-      btn.setButtonText("Reset").onClick(async () => {
+    new import_obsidian5.Setting(contentEl).addButton((btn) => {
+      btn.setButtonText(t("override.buttons.reset")).onClick(async () => {
         this.setting = this.plugin.settings.attachPath;
         delete this.plugin.settings.overridePath[this.file.path];
         await this.plugin.saveSettings();
         await this.plugin.loadSettings();
-        new import_obsidian4.Notice(`Reset attachment setting of ${this.file.path}`);
+        new import_obsidian5.Notice(t("override.notifications.reset", { path: this.file.path }));
         this.close();
       });
     }).addButton(
-      (btn) => btn.setButtonText("Submit").setCta().onClick(async () => {
-        if (this.file instanceof import_obsidian4.TFile) {
+      (btn) => btn.setButtonText(t("override.buttons.submit")).setCta().onClick(async () => {
+        if (this.file instanceof import_obsidian5.TFile) {
           this.setting.type = "FILE" /* FILE */;
-        } else if (this.file instanceof import_obsidian4.TFolder) {
+        } else if (this.file instanceof import_obsidian5.TFolder) {
           this.setting.type = "FOLDER" /* FOLDER */;
         }
         this.plugin.settings.overridePath[this.file.path] = this.setting;
         await this.plugin.saveSettings();
         debugLog("override - overriding settings:", this.file.path, this.setting);
-        new import_obsidian4.Notice(`Overridden attachment setting of ${this.file.path}`);
+        new import_obsidian5.Notice(t("override.notifications.overridden", { path: this.file.path }));
         this.close();
       })
     );
@@ -924,10 +1369,10 @@ var OverrideModal = class extends import_obsidian4.Modal {
 };
 
 // src/model/confirm.ts
-var import_obsidian9 = require("obsidian");
+var import_obsidian10 = require("obsidian");
 
 // src/arrange.ts
-var import_obsidian8 = require("obsidian");
+var import_obsidian9 = require("obsidian");
 
 // src/lib/path.ts
 var path = {
@@ -977,7 +1422,7 @@ var path = {
 };
 
 // src/override.ts
-var import_obsidian5 = require("obsidian");
+var import_obsidian6 = require("obsidian");
 function getOverrideSetting(settings, file, oldPath = "") {
   if (Object.keys(settings.overridePath).length === 0) {
     return { settingPath: "", setting: settings.attachPath };
@@ -985,8 +1430,8 @@ function getOverrideSetting(settings, file, oldPath = "") {
   const candidates = {};
   let fileType;
   let filePath;
-  fileType = file instanceof import_obsidian5.TFile;
-  fileType = !(file instanceof import_obsidian5.TFolder);
+  fileType = file instanceof import_obsidian6.TFile;
+  fileType = !(file instanceof import_obsidian6.TFolder);
   if (oldPath === "") {
     filePath = file.path;
   } else {
@@ -1225,10 +1670,10 @@ async function deduplicateNewName(newName, file) {
 }
 
 // src/settings/metadata.ts
-var import_obsidian7 = require("obsidian");
+var import_obsidian8 = require("obsidian");
 
 // src/commons.ts
-var import_obsidian6 = require("obsidian");
+var import_obsidian7 = require("obsidian");
 function getActiveFile(app2) {
   const view = getActiveView(app2);
   if (view == null) {
@@ -1240,7 +1685,7 @@ function getActiveFile(app2) {
   }
 }
 function getActiveView(app2) {
-  return app2.workspace.getActiveViewOfType(import_obsidian6.TextFileView);
+  return app2.workspace.getActiveViewOfType(import_obsidian7.TextFileView);
 }
 function getRootPath(notePath, setting) {
   let root;
@@ -1263,7 +1708,7 @@ function getRootPath(notePath, setting) {
         root = obsmediadir;
       }
   }
-  return root === "/" ? root : (0, import_obsidian6.normalizePath)(root);
+  return root === "/" ? root : (0, import_obsidian7.normalizePath)(root);
 }
 async function checkEmptyFolder(adapter, path2) {
   const exist = await adapter.exists(path2, true);
@@ -1346,7 +1791,7 @@ var Metadata = class {
           root,
           extSetting.attachmentPath.replace(`${SETTINGS_VARIABLES_NOTEPATH}`, this.parentPath).replace(`${SETTINGS_VARIABLES_NOTENAME}`, this.basename).replace(`${SETTINGS_VARIABLES_NOTEPARENT}`, this.parentName).replace(`${SETTINGS_VARIABLES_DATES}`, dateTime)
         );
-        return (0, import_obsidian7.normalizePath)(attachPath);
+        return (0, import_obsidian8.normalizePath)(attachPath);
       }
     }
     root = getRootPath(this.parentPath, setting);
@@ -1355,7 +1800,7 @@ var Metadata = class {
       root,
       setting.attachmentPath.replace(`${SETTINGS_VARIABLES_NOTEPATH}`, this.parentPath).replace(`${SETTINGS_VARIABLES_NOTENAME}`, this.basename).replace(`${SETTINGS_VARIABLES_NOTEPARENT}`, this.parentName).replace(`${SETTINGS_VARIABLES_DATES}`, dateTime)
     );
-    return (0, import_obsidian7.normalizePath)(attachPath);
+    return (0, import_obsidian8.normalizePath)(attachPath);
   }
 };
 function getMetadata(file, attach) {
@@ -1446,7 +1891,7 @@ var ArrangeHandler = class {
     debugLog("rearrangeAttachment - attachments:", Object.keys(attachments).length, Object.entries(attachments));
     for (const obNote of Object.keys(attachments)) {
       const innerFile = this.app.vault.getAbstractFileByPath(obNote);
-      if (!(innerFile instanceof import_obsidian8.TFile) || isAttachment(this.settings, innerFile)) {
+      if (!(innerFile instanceof import_obsidian9.TFile) || isAttachment(this.settings, innerFile)) {
         debugLog(`rearrangeAttachment - ${obNote} not exists or is attachment, skipped`);
         continue;
       }
@@ -1474,7 +1919,7 @@ var ArrangeHandler = class {
         }
         debugLog(`rearrangeAttachment - article: ${obNote} links: ${link}`);
         const linkFile = this.app.vault.getAbstractFileByPath(link);
-        if (linkFile === null || !(linkFile instanceof import_obsidian8.TFile)) {
+        if (linkFile === null || !(linkFile instanceof import_obsidian9.TFile)) {
           debugLog(`${link} not exists, skipped`);
           continue;
         }
@@ -1503,7 +1948,7 @@ var ArrangeHandler = class {
           continue;
         }
         const attachPathFile = this.app.vault.getAbstractFileByPath(attachPath);
-        if (attachPathFile === null || !(attachPathFile instanceof import_obsidian8.TFolder)) {
+        if (attachPathFile === null || !(attachPathFile instanceof import_obsidian9.TFolder)) {
           debugLog(`${attachPath} not exists, skipped`);
           continue;
         }
@@ -1548,7 +1993,7 @@ var ArrangeHandler = class {
       if (file2) {
         if (file2.parent && isExcluded(file2.parent.path, this.settings) || isAttachment(this.settings, file2)) {
           allFiles = [];
-          new import_obsidian8.Notice(`${file2.path} was excluded, skipped`);
+          new import_obsidian9.Notice(`${file2.path} was excluded, skipped`);
         } else {
           debugLog("getAttachmentsInVaultByLinks - active:", file2.path);
           allFiles = [file2];
@@ -1561,7 +2006,7 @@ var ArrangeHandler = class {
     } else if (type == 2 /* FILE */ && file != void 0) {
       if (file.parent && isExcluded(file.parent.path, this.settings) || isAttachment(this.settings, file)) {
         allFiles = [];
-        new import_obsidian8.Notice(`${file.path} was excluded, skipped`);
+        new import_obsidian9.Notice(`${file.path} was excluded, skipped`);
       } else {
         debugLog("getAttachmentsInVaultByLinks - file:", file.path);
         allFiles = [file];
@@ -1700,7 +2145,7 @@ var ArrangeHandler = class {
 };
 
 // src/model/confirm.ts
-var ConfirmModal = class extends import_obsidian9.Modal {
+var ConfirmModal = class extends import_obsidian10.Modal {
   constructor(plugin) {
     super(plugin.app);
     this.plugin = plugin;
@@ -1709,19 +2154,19 @@ var ConfirmModal = class extends import_obsidian9.Modal {
     const { contentEl } = this;
     contentEl.empty();
     contentEl.createEl("h3", {
-      text: "Tips"
+      text: t("confirm.title")
     });
     contentEl.createSpan("", (el) => {
-      el.innerText = "This operation is irreversible and experimental. Please backup your vault first!";
+      el.innerText = t("confirm.message");
     });
-    new import_obsidian9.Setting(contentEl).addButton((btn) => {
-      btn.setButtonText("Cancel").setCta().onClick(() => {
+    new import_obsidian10.Setting(contentEl).addButton((btn) => {
+      btn.setButtonText(t("common.cancel")).setCta().onClick(() => {
         this.close();
       });
     }).addButton(
-      (btn) => btn.setButtonText("Continue").onClick(async () => {
+      (btn) => btn.setButtonText(t("confirm.continue")).onClick(async () => {
         new ArrangeHandler(this.plugin.settings, this.plugin.app, this.plugin).rearrangeAttachment(1 /* LINKS */).finally(() => {
-          new import_obsidian9.Notice("Arrange completed");
+          new import_obsidian10.Notice(t("notifications.arrangeCompleted"));
           this.close();
         });
       })
@@ -1734,7 +2179,7 @@ var ConfirmModal = class extends import_obsidian9.Modal {
 };
 
 // src/create.ts
-var import_obsidian10 = require("obsidian");
+var import_obsidian11 = require("obsidian");
 var CreateHandler = class {
   constructor(plugin, settings) {
     this.plugin = plugin;
@@ -1750,7 +2195,7 @@ var CreateHandler = class {
   processAttach(attach, source) {
     if (source.parent && isExcluded(source.parent.path, this.settings)) {
       debugLog("processAttach - not a file or exclude path:", source.path);
-      new import_obsidian10.Notice(`${source.path} was excluded, skipped`);
+      new import_obsidian11.Notice(`${source.path} was excluded, skipped`);
       return;
     }
     const { setting } = getOverrideSetting(this.settings, source);
@@ -1788,12 +2233,12 @@ var CreateHandler = class {
    * @returns - none
    */
   renameCreateFile(attach, attachPath, attachName, source) {
-    const dst = (0, import_obsidian10.normalizePath)(path.join(attachPath, attachName));
+    const dst = (0, import_obsidian11.normalizePath)(path.join(attachPath, attachName));
     debugLog("renameFile - ", attach.path, " to ", dst);
     const original = attach.basename;
     const name = attach.name;
     this.app.fileManager.renameFile(attach, dst).then(() => {
-      new import_obsidian10.Notice(`Renamed ${name} to ${attachName}.`);
+      new import_obsidian11.Notice(`Renamed ${name} to ${attachName}.`);
     }).finally(() => {
       const { setting } = getOverrideSetting(this.settings, source);
       md5sum(this.app.vault.adapter, attach).then((md5) => {
@@ -1808,13 +2253,17 @@ var CreateHandler = class {
 };
 
 // src/main.ts
-var AttachmentManagementPlugin = class extends import_obsidian11.Plugin {
+var AttachmentManagementPlugin = class extends import_obsidian12.Plugin {
   constructor() {
     super(...arguments);
     this.createdQueue = [];
   }
   async onload() {
     await this.loadSettings();
+    loadAllTranslations();
+    const savedLanguage = this.settings.language || detectLanguage();
+    setLanguage(savedLanguage);
+    initI18n();
     console.log(`Plugin loading: ${this.manifest.name} v.${this.manifest.version}`);
     this.app.workspace.onLayoutReady(() => {
       this.initCommands();
@@ -1824,7 +2273,7 @@ var AttachmentManagementPlugin = class extends import_obsidian11.Plugin {
             return;
           }
           menu.addItem((item) => {
-            item.setTitle("Overriding attachment setting").setIcon("image-plus").onClick(async () => {
+            item.setTitle(t("override.menuTitle")).setIcon("image-plus").onClick(async () => {
               const { setting } = getOverrideSetting(this.settings, file);
               const fileSetting = Object.assign({}, setting);
               this.overrideConfiguration(file, fileSetting);
@@ -1835,7 +2284,7 @@ var AttachmentManagementPlugin = class extends import_obsidian11.Plugin {
       this.registerEvent(
         this.app.vault.on("create", async (file) => {
           debugLog("on create event - file:", file.path);
-          if (!(file instanceof import_obsidian11.TFile)) {
+          if (!(file instanceof import_obsidian12.TFile)) {
             return;
           }
           const curentTime = new Date().getTime();
@@ -1854,7 +2303,7 @@ var AttachmentManagementPlugin = class extends import_obsidian11.Plugin {
       this.registerEvent(
         this.app.vault.on("modify", (file) => {
           debugLog("on modify event - create queue:", this.createdQueue);
-          if (this.createdQueue.length < 1 || !(file instanceof import_obsidian11.TFile)) {
+          if (this.createdQueue.length < 1 || !(file instanceof import_obsidian12.TFile)) {
             return;
           }
           debugLog("on modify event - file:", file.path);
@@ -1894,10 +2343,10 @@ var AttachmentManagementPlugin = class extends import_obsidian11.Plugin {
             debugLog("rename - auto rename not enabled:", this.settings.autoRenameAttachment);
             return;
           }
-          if (file instanceof import_obsidian11.TFile) {
+          if (file instanceof import_obsidian12.TFile) {
             if (file.parent && isExcluded(file.parent.path, this.settings)) {
               debugLog("rename - exclude path:", file.parent.path);
-              new import_obsidian11.Notice(`${file.path} was excluded`);
+              new import_obsidian12.Notice(t("notifications.fileExcluded", { path: file.path }));
               return;
             }
             if (isAttachment(this.settings, file)) {
@@ -1920,7 +2369,7 @@ var AttachmentManagementPlugin = class extends import_obsidian11.Plugin {
                 });
               }
             });
-          } else if (file instanceof import_obsidian11.TFolder) {
+          } else if (file instanceof import_obsidian12.TFolder) {
             return;
           }
         })
@@ -1934,9 +2383,9 @@ var AttachmentManagementPlugin = class extends import_obsidian11.Plugin {
           }
           if (deleteOverrideSetting(this.settings, file)) {
             await this.saveSettings();
-            new import_obsidian11.Notice("Removed override setting of " + file.path);
+            new import_obsidian12.Notice("Removed override setting of " + file.path);
           }
-          if (file instanceof import_obsidian11.TFile) {
+          if (file instanceof import_obsidian12.TFile) {
             const oldMetadata = getMetadata(file.path);
             const { setting } = getOverrideSetting(this.settings, file);
             const oldAttachPath = oldMetadata.getAttachmentPath(setting, this.settings.dateFormat);
@@ -1952,7 +2401,7 @@ var AttachmentManagementPlugin = class extends import_obsidian11.Plugin {
           }
         })
       );
-      this.addSettingTab(new SettingTab(this.app, this));
+      this.addSettingTab(new AttachmentManagementSettingTab(this.app, this));
     });
   }
   async overrideConfiguration(file, setting) {
@@ -1972,17 +2421,17 @@ var AttachmentManagementPlugin = class extends import_obsidian11.Plugin {
   initCommands() {
     this.addCommand({
       id: "attachment-management-rearrange-all-links",
-      name: "Rearrange all linked attachments",
+      name: t("commands.rearrangeAllLinks"),
       callback: async () => {
         new ConfirmModal(this).open();
       }
     });
     this.addCommand({
       id: "attachment-management-rearrange-active-links",
-      name: "Rearrange linked attachments",
+      name: t("commands.rearrangeActiveLinks"),
       callback: async () => {
         new ArrangeHandler(this.settings, this.app, this).rearrangeAttachment(0 /* ACTIVE */).finally(() => {
-          new import_obsidian11.Notice("Arrange completed");
+          new import_obsidian12.Notice(t("notifications.arrangeCompleted"));
         });
       }
     });
@@ -1997,7 +2446,7 @@ var AttachmentManagementPlugin = class extends import_obsidian11.Plugin {
           }
           if (!checking) {
             if (file.parent && isExcluded(file.parent.path, this.settings)) {
-              new import_obsidian11.Notice(`${file.path} was excluded`);
+              new import_obsidian12.Notice(`${file.path} was excluded`);
               return true;
             }
             const { setting } = getOverrideSetting(this.settings, file);
@@ -2011,7 +2460,7 @@ var AttachmentManagementPlugin = class extends import_obsidian11.Plugin {
     });
     this.addCommand({
       id: "attachment-management-reset-override-setting",
-      name: "Reset override setting",
+      name: t("commands.resetOverrideSetting"),
       checkCallback: (checking) => {
         const file = getActiveFile(this.app);
         if (file) {
@@ -2020,12 +2469,12 @@ var AttachmentManagementPlugin = class extends import_obsidian11.Plugin {
           }
           if (!checking) {
             if (file.parent && isExcluded(file.parent.path, this.settings)) {
-              new import_obsidian11.Notice(`${file.path} was excluded`);
+              new import_obsidian12.Notice(`${file.path} was excluded`);
               return true;
             }
             delete this.settings.overridePath[file.path];
             this.saveSettings().finally(() => {
-              new import_obsidian11.Notice(`Reset attachment setting of ${file.path}`);
+              new import_obsidian12.Notice(t("notifications.resetAttachmentSetting", { path: file.path }));
             });
           }
           return true;
@@ -2035,7 +2484,7 @@ var AttachmentManagementPlugin = class extends import_obsidian11.Plugin {
     });
     this.addCommand({
       id: "attachment-management-clear-unused-originalname-storage",
-      name: "Clear unused original name storage",
+      name: t("commands.clearUnusedStorage"),
       callback: async () => {
         const attachments = await new ArrangeHandler(this.settings, this.app, this).getAttachmentsInVault(
           this.settings,
@@ -2046,7 +2495,7 @@ var AttachmentManagementPlugin = class extends import_obsidian11.Plugin {
           for (const attach of attachs) {
             const link = decodeURI(attach);
             const linkFile = this.app.vault.getAbstractFileByPath(link);
-            if (linkFile !== null && linkFile instanceof import_obsidian11.TFile) {
+            if (linkFile !== null && linkFile instanceof import_obsidian12.TFile) {
               md5sum(this.app.vault.adapter, linkFile).then((md5) => {
                 const ret = this.settings.originalNameStorage.find((data) => data.md5 === md5);
                 if (ret) {

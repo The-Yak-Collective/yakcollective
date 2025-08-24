@@ -127,10 +127,9 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "hide-folders:Hide hidden folders again": false,
+      "bases:Create new base": false,
       "graph:Open graph view": false,
-      "command-palette:Open command palette": false,
-      "omnisearch:Omnisearch": false
+      "command-palette:Open command palette": false
     }
   },
   "active": "77dace9bb0a2da5c",
