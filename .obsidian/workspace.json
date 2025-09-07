@@ -113,13 +113,17 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "yakcon 2023.md"
+                "file": "README.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of yakcon 2023"
+              "title": "Outline of README"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -127,12 +131,14 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "omnisearch:Omnisearch": false,
+      "hide-folders:Hide hidden folders again": false,
       "bases:Create new base": false,
       "graph:Open graph view": false,
       "command-palette:Open command palette": false
     }
   },
-  "active": "77dace9bb0a2da5c",
+  "active": "18e46ed678b14109",
   "lastOpenFiles": [
     "index.md",
     "README.md",
