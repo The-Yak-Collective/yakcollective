@@ -73,7 +73,7 @@ fi
 	
 	npm install
 
-  cp ../../overlay/quartz.*.ts ./
+  cp ../../overlay/quartz.config.yaml ./
 	npx quartz plugin install --from-config
 
 	cp -af ../../overlay/* ./
