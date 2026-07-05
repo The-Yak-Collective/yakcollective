@@ -90,12 +90,12 @@ fi
 	cd build/quartz
 	if [[ "$1" == "serve" ]]; then
 		npx quartz build \
-		  --directory ../src \
+		  --directory ../../src \
 		  --output ../../www \
 		  --serve
 	else
 		npx quartz build \
-		  --directory ../src \
+		  --directory ../../src \
 		  --output ../../www
 	fi
 	sed -i'' -e 's#href=\&quot;[\./]\+/#href=\&quot;https://www.yakcollective.org/#g;s#src=\&quot;[\./]\+/#src=\&quot;https://www.yakcollective.org/#g;' ../../www/index.xml
