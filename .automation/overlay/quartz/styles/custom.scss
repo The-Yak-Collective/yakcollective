@@ -1,4 +1,4 @@
-@use "./base.scss";
+@use "./variables.scss" as *;
 
 // put your custom CSS here!
 
@@ -9,26 +9,33 @@
 	background: var(--highlight);
 	color: inherit;
 }
+
 a {
 	font-weight: inherit;
 }
+
 a.internal.tag-link {
 	font-weight: bold;
 }
+
 article a {
 	text-decoration: underline;
 }
+
 article a.internal {
 	background-color: transparent;
 }
+
 article a.internal:hover {
 	text-decoration: underline;
 }
+
 article a.internal.transclude-src {
 	background-color: var(--highlight);
 	font-weight: bold;
 	text-decoration: none;
 }
+
 article h1 a[role=anchor] svg,
 article h2 a[role=anchor] svg,
 article h3 a[role=anchor] svg,
@@ -38,10 +45,12 @@ article h6 a[role=anchor] svg {
 	width: 0.75em;
 	height: 0.75em;
 }
+
 pre {
 	background-color: var(--lightgray);
 	border-color: var(--gray);
 }
+
 hr {
 	background-color: var(--gray);
 }
@@ -52,31 +61,38 @@ hr {
 .page {
 	max-width: calc(1500px - 320px)
 }
+
 .page #quartz-body {
-	grid-template: "grid-header grid-sidebar-right""grid-center grid-sidebar-right""grid-footer grid-sidebar-right"/auto 320px;
+	grid-template: "grid-header grid-sidebar-right" "grid-center grid-sidebar-right" "grid-footer grid-sidebar-right" /auto 320px;
 }
+
 @media (min-width: 800px) and (max-width: 1200px) {
 	.page #quartz-body {
 		//grid-template: "grid-header grid-sidebar-right""grid-center grid-sidebar-right""grid-footer grid-sidebar-right"/auto 320px;
-		grid-template: "grid-header""grid-center""grid-sidebar-right""grid-footer"/auto;
+		grid-template: "grid-header" "grid-center" "grid-sidebar-right" "grid-footer" /auto;
 	}
 }
+
 @media (max-width: 800px) {
 	.page #quartz-body {
-		grid-template:"grid-header""grid-center""grid-sidebar-right""grid-footer"/auto;
+		grid-template: "grid-header" "grid-center" "grid-sidebar-right" "grid-footer" /auto;
 	}
 }
+
 .page #quartz-body .page-header {
 	margin-top: 2rem;
 }
+
 @media (max-width: 800px) {
 	.page #quartz-body .page-header {
 		margin-top: 0;
 	}
 }
+
 .page #quartz-body .sidebar {
 	padding-top: 2rem;
 }
+
 .page #quartz-body .sidebar.left {
 	display: none;
 }
@@ -96,14 +112,17 @@ hr {
 	flex-wrap: wrap;
 	justify-content: flex-end;
 }
+
 .page-header header .breadcrumb-container {
 	margin: 0;
 	font-weight: bold;
 }
+
 .page-header header .breadcrumb-container .breadcumb-element {
 	height: 2rem;
 }
-.breadcrumb-container > .breadcrumb-element:first-of-type::before {
+
+.breadcrumb-container>.breadcrumb-element:first-of-type::before {
 	content: '';
 	display: inline-block;
 	width: 2rem;
@@ -111,10 +130,12 @@ hr {
 	margin-right: 8px;
 	background-size: contain;
 }
-:root[saved-theme=light] .breadcrumb-container > .breadcrumb-element:first-of-type::before {
+
+:root[saved-theme=light] .breadcrumb-container>.breadcrumb-element:first-of-type::before {
 	background-image: url('/static/logo-black.png');
 }
-:root[saved-theme=dark] .breadcrumb-container > .breadcrumb-element:first-of-type::before {
+
+:root[saved-theme=dark] .breadcrumb-container>.breadcrumb-element:first-of-type::before {
 	background-image: url('/static/logo-white.png');
 }
 
@@ -124,18 +145,22 @@ hr {
 .page-header {
 	margin-top: 2rem;
 }
+
 .page-header .content-meta {
 	color: var(--darkgray);
 	font-style: italic;
 }
-.content-meta[show-comma=true] > :not(:last-child) {
+
+.content-meta[show-comma=true]> :not(:last-child) {
 	margin-right: 0;
 }
-.content-meta[show-comma=true] > :not(:last-child):after {
+
+.content-meta[show-comma=true]> :not(:last-child):after {
 	margin-left: 8px;
 	margin-right: 8px;
 	content: '•';
 }
+
 .page-header ul.tags {
 	margin: 1rem 0 1.4rem;
 }
@@ -146,19 +171,24 @@ hr {
 blockquote.transclude h1 {
 	display: none;
 }
-h2 ~ blockquote.transclude h2 { /* h3 */
+
+h2~blockquote.transclude h2 {
+	/* h3 */
 	margin-top: 1.62rem;
 	margin-bottom: 1rem;
 	font-size: 1.12rem;
 }
-h2 ~ blockquote.transclude h3,
-h3 ~ blockquote.transclude h2,
-h3 ~ blockquote.transclude h3,
-h2 ~ blockquote.transclude h2 ~ blockquote.transclude h2 { /* h4, h5, h6 */
+
+h2~blockquote.transclude h3,
+h3~blockquote.transclude h2,
+h3~blockquote.transclude h3,
+h2~blockquote.transclude h2~blockquote.transclude h2 {
+	/* h4, h5, h6 */
 	margin-top: 1.5rem;
 	margin-bottom: 1rem;
 	font-size: 1rem;
 }
+
 iframe {
 	border: 1px solid var(--gray);
 	border-radius: 5px;
@@ -178,8 +208,9 @@ footer a:hover,
 .page-footer .backlinks a:hover {
 	text-decoration: underline;
 }
+
 @media not (min-width: 1200px) {
-	.backlinks > .overflow {
+	.backlinks>.overflow {
 		height: auto;
 	}
 
@@ -197,11 +228,13 @@ footer a:hover,
 .graph h3 {
 	display: none;
 }
+
 .graph .graph-outer {
 	border: 1px solid var(--gray);
 	margin: 0;
 	height: calc(320px - 2rem - 2rem);
 }
+
 @media not (min-width: 1200px) {
 	.graph .graph-outer {
 		height: calc(min(100vw, 100vh, 800px) - 1rem - 1rem);
@@ -262,7 +295,8 @@ form#join button:hover {
 /*
  * Match callout colors to Obsidian Minimal theme + GitHub alerts
  */
-.callout{
+.callout {
+
 	&[data-callout],
 	&[data-callout="info"],
 	&[data-callout="note"],
@@ -355,7 +389,8 @@ form#join button:hover {
 /*
  * Additional Yak Collective callouts
  */
- .callout{
+.callout {
+
 	&[data-callout="project"],
 	&[data-callout="study_group"],
 	&[data-callout="work_group"] {
@@ -440,12 +475,14 @@ body[data-slug="index"] .page-header ul.tags,
 body[data-slug="index"] .page-footer .backlinks {
 	display: none;
 }
+
 body[data-slug="about"] .page-header .content-meta time,
 body[data-slug$="index"] .page-header .content-meta,
 body[data-slug="join"] .page-header .content-meta,
 body[data-slug="welcome"] .page-header .content-meta {
-		display: none;
+	display: none;
 }
+
 body[data-slug="projects/astonishing-stories/index"] .page-header .content-meta {
 	display: block;
 }

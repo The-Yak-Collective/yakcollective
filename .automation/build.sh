@@ -69,10 +69,14 @@ fi
 
 	[[ ! -d quartz ]] && rm -f quartz
 	cp -af ../quartz quartz
-
-	cp -af ../overlay/* quartz/
 	cd quartz
+	
 	npm install
+
+  cp ../../overlay/quartz.*.ts ./
+	npx quartz plugin install --from-config
+
+	cp -af ../../overlay/* ./
 )
 
 # Build the site!

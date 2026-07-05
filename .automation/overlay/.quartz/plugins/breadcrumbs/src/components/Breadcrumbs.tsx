@@ -1,31 +1,27 @@
-import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } from "./types"
-import breadcrumbsStyle from "./styles/breadcrumbs.scss"
-import { FullSlug, SimpleSlug, resolveRelative, simplifySlug } from "../util/path"
-import { classNames } from "../util/lang"
-import { trieFromAllFiles } from "../util/ctx"
+import type {
+  QuartzComponent,
+  QuartzComponentConstructor,
+  QuartzComponentProps,
+} from "@quartz-community/types";
+import { classNames } from "../util/lang";
+import { resolveRelative, simplifySlug } from "../util/path";
+import { FileTrieNode, trieFromAllFiles } from "../util/fileTrie";
+import style from "./styles/breadcrumbs.scss";
 
 type CrumbData = {
-  displayName: string
-  path: string
-}
+  displayName: string;
+  path: string;
+};
 
-interface BreadcrumbOptions {
-  /**
-   * Symbol between crumbs
-   */
-  spacerSymbol: string
-  /**
-   * Name of first crumb
-   */
-  rootName: string
-  /**
-   * Whether to look up frontmatter title for folders (could cause performance problems with big vaults)
-   */
-  resolveFrontmatterTitle: boolean
-  /**
-   * Whether to display the current page in the breadcrumbs.
-   */
-  showCurrentPage: boolean
+export interface BreadcrumbOptions {
+  /** Symbol between crumbs */
+  spacerSymbol: string;
+  /** Name of first crumb */
+  rootName: string;
+  /** Whether to look up frontmatter title for folders */
+  resolveFrontmatterTitle: boolean;
+  /** Whether to display the current page in the breadcrumbs */
+  showCurrentPage: boolean;
 }
 
 const defaultOptions: BreadcrumbOptions = {
@@ -33,26 +29,35 @@ const defaultOptions: BreadcrumbOptions = {
   rootName: "Home",
   resolveFrontmatterTitle: true,
   showCurrentPage: true,
-}
+};
 
-function formatCrumb(displayName: string, baseSlug: FullSlug, currentSlug: SimpleSlug): CrumbData {
+function formatCrumb(displayName: string, baseSlug: string, currentSlug: string): CrumbData {
   return {
-    displayName: displayName.replaceAll("-", " "),
+    displayName,
     path: resolveRelative(baseSlug, currentSlug),
-  }
+  };
 }
 
 export default ((opts?: Partial<BreadcrumbOptions>) => {
-  const options: BreadcrumbOptions = { ...defaultOptions, ...opts }
+  const options: BreadcrumbOptions = { ...defaultOptions, ...opts };
   const Breadcrumbs: QuartzComponent = ({
     fileData,
     allFiles,
     displayClass,
     ctx,
   }: QuartzComponentProps) => {
-    const trie = (ctx.trie ??= trieFromAllFiles(allFiles))
-    const slugParts = fileData.slug!.split("/")
-    const pathNodes = trie.ancestryChain(slugParts)
+    const typedCtx = (ctx ?? {}) as Record<string, unknown> as { trie?: FileTrieNode };
+    typedCtx.trie ??= trieFromAllFiles(
+      allFiles as Array<{
+        slug?: string;
+        filePath?: string;
+        frontmatter?: { title?: string; [key: string]: unknown };
+      }>,
+    );
+    const trie = typedCtx.trie;
+    const slug = fileData.slug as string;
+    const slugParts = slug.split("/");
+    const pathNodes = trie.ancestryChain(slugParts);
 
     if (!pathNodes) {
       return (
@@ -72,21 +77,20 @@ export default ((opts?: Partial<BreadcrumbOptions>) => {
     }
 
     const crumbs: CrumbData[] = pathNodes.map((node, idx) => {
-      const crumb = formatCrumb(node.displayName, fileData.slug!, simplifySlug(node.slug))
+      const crumb = formatCrumb(node.displayName, slug, simplifySlug(node.slug));
       if (idx === 0) {
-        crumb.displayName = options.rootName
+        crumb.displayName = options.rootName;
       }
 
-      // For last node (current page), set empty path
       if (idx === pathNodes.length - 1) {
-        crumb.path = ""
+        crumb.path = "";
       }
 
-      return crumb
-    })
+      return crumb;
+    });
 
     if (!options.showCurrentPage) {
-      crumbs.pop()
+      crumbs.pop();
     }
 
     return (
@@ -98,9 +102,10 @@ export default ((opts?: Partial<BreadcrumbOptions>) => {
           </div>
         ))}
       </nav>
-    )
-  }
-  Breadcrumbs.css = breadcrumbsStyle
+    );
+  };
+  Breadcrumbs.css = style;
 
-  return Breadcrumbs
-}) satisfies QuartzComponentConstructor
+  return Breadcrumbs;
+}) satisfies QuartzComponentConstructor;
+

@@ -1,0 +1,187 @@
+# yaml-language-server: $schema=./quartz/plugins/quartz-plugins.schema.json
+configuration:
+  pageTitle: The Yak Collective
+  pageTitleSuffix: " :: The Yak Collective"
+  enableSPA: false
+  enablePopovers: false
+  analytics: null
+  locale: en-US
+  baseUrl: www.yakcollective.org
+  ignorePatterns:
+    - .git
+    - .github
+    - .gitignore
+    - .obsidian
+    - .trash
+    - .vscode
+    - private
+    - README.md
+  theme:
+    fontOrigin: googleFonts
+    cdnCaching: true
+    typography:
+      header: Playfair Display
+      body:   Noto Serif
+      code:   Noto Sans Mono
+    colors:
+      lightMode:
+        light:         "hsla( 0,   0%, 100%, 100%)" # --bg1
+        lightgray:     "hsla( 0,   0%,  90%, 100%)" # --ui1
+        gray:          "hsla( 0,   0%,  84%, 100%)" # --ui2
+        darkgray:      "hsla( 0,   0%,   6%, 100%)" # --tx1
+        dark:          "hsla( 0,   0%,   4%, 100%)" # --tx1 :: calc(var(--base-l) - 92%)
+        secondary:     "hsla(37,  71%,  47%, 100%)" # --ax1
+        tertiary:      "hsla(37,  71%,  39%, 100%)" # --ax2
+        highlight:     "hsla(37,  50%,  76%,  30%)" # --hl1
+        textHighlight: "hsla(37, 100%,  50%,  50%)" # --hl2 :: use --accent-h, not 60
+      darkMode:
+        light:         "hsla( 0,   0%,  15%, 100%)" # --bg1
+        lightgray:     "hsla( 0,   0%,  21%, 100%)" # --ui1
+        gray:          "hsla( 0,   0%,  27%, 100%)" # --ui2
+        darkgray:      "hsla( 0,   0%,  82%, 100%)" # --tx1
+        dark:          "hsla( 0,   0%,  86%, 100%)" # --tx1 :: calc(var(--base-l) + 71%)
+        secondary:     "hsla(37,  71%,  56%, 100%)" # --ax1 :: calc(var(--accent-l) * 60 / 50)
+        tertiary:      "hsla(37,  71%,  64%, 100%)" # --ax2
+        highlight:     "hsla(37,  50%,  40%,  30%)" # --hl1
+        textHighlight: "hsla(37, 100%,  66%,  30%)" # --hl2 :: use --accent-h, not 33
+plugins:
+  - source: github:quartz-community/created-modified-date
+    enabled: true
+    options:
+      defaultDateType: created
+      priority:
+        - frontmatter
+    order: 10
+  - source: github:quartz-community/syntax-highlighting
+    enabled: true
+    options:
+      theme:
+        light: material-theme-lighter
+        dark: material-theme-darker
+      keepBackground: false
+    order: 20
+  - source: github:quartz-community/obsidian-flavored-markdown
+    enabled: true
+    options:
+      enableInHtmlEmbed: true
+      enableCheckbox: true
+    order: 30
+  - source: github:quartz-community/github-flavored-markdown
+    enabled: true
+    order: 40
+  - source: github:quartz-community/hard-line-breaks
+    enabled: true
+    order: 45
+  - source: github:quartz-community/crawl-links
+    enabled: true
+    options:
+      markdownLinkResolution: shortest
+      prettyLinks: false
+      openLinksInNewTab: true
+      lazyLoad: true
+    order: 60
+  - source: github:quartz-community/description
+    enabled: true
+    order: 70
+  - source: github:quartz-community/latex
+    enabled: true
+    options:
+      renderEngine: mathjax
+    order: 80
+  - source: github:quartz-community/remove-draft
+    enabled: true
+  - source: github:quartz-community/content-page
+    enabled: true
+  - source: github:quartz-community/folder-page
+    enabled: true
+  - source: github:quartz-community/content-index
+    enabled: true
+    options:
+      rssLimit: 1024
+      rssFullHtml: true
+      includeEmptyFiles: false
+  - source: github:quartz-community/og-image
+    enabled: true
+  - source: github:quartz-community/fonts
+    enabled: true
+  - source: github:quartz-community/alias-redirects
+    enabled: true
+  - source: github:quartz-community/favicon
+    enabled: true
+  - source: github:quartz-community/breadcrumbs
+    enabled: true
+    options:
+      spacerSymbol: /
+      rootName: The Yak Collective
+    layout:
+      position: header
+      priority: 5
+  - source: github:quartz-community/spacer
+    enabled: true
+    options: {}
+    order: 25
+    layout:
+      position: header
+      priority: 25
+  - source: github:quartz-community/darkmode
+    enabled: true
+    layout:
+      position: header
+      priority: 30
+  - source: github:quartz-community/search
+    enabled: true
+    layout:
+      position: header
+      priority: 40
+  - source: github:quartz-community/content-meta
+    enabled: true
+    layout:
+      position: beforeBody
+      priority: 20
+  - source: github:quartz-community/backlinks
+    enabled: true
+    layout:
+      position: afterBody
+      priority: 50
+  - source: github:quartz-community/graph
+    enabled: true
+    layout:
+      position: right
+      priority: 10
+  - source: github:quartz-community/table-of-contents
+    enabled: true
+    options:
+      maxDepth: 6
+    order: 50
+    layout:
+      position: right
+      priority: 30
+  - source: github:quartz-community/footer
+    enabled: true
+    options:
+      links:
+        Home:         /
+        Study Groups: /study-groups
+        Work Groups:  /work-groups
+        Projects:     /projects
+        Newsletters:  /newsletters
+        Recordings:   https://www.youtube.com/channel/UC9bngPbXMEZ8ivD1GHJ94aw
+        About:        /about
+        Join Us:      /join
+        RSS Feed:     /index.xml
+layout:
+  byPageType:
+    "404":
+      positions:
+        beforeBody: []
+        left: []
+        right: []
+    content: {}
+    folder:
+      positions:
+        right: []
+    tag:
+      positions:
+        right: []
+    canvas: {}
+    bases: {}
