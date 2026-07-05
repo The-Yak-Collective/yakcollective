@@ -22,4 +22,4 @@ jobs:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE }}
         with:
-          args: deploy --dir .automation/www --prod
+          args: deploy --no-build --dir .automation/www --prod
