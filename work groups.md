@@ -1,7 +1,7 @@
 ---
 title: Work Groups
 ---
-Yak Collective work groups maintain the environment necessary for [study groups](../study%20groups/index.md) and [projects](../projects/index.md) to function. This is everything from building [Discord](https://discord.com/) bots and [this website](https://github.com/The-Yak-Collective/yakcollective) to providing proofing, layout, and artwork.
+Yak Collective work groups maintain the environment necessary for [study groups](../study%20groups.md) and [projects](projects.md) to function. This is everything from building [Discord](https://discord.com/) bots and [this website](https://github.com/The-Yak-Collective/yakcollective) to providing proofing, layout, and artwork.
 
 ## Active Work Groups
 > [!work_group] [Infrastructure](infrastructure.md)

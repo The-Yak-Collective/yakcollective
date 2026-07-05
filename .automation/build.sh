@@ -29,8 +29,12 @@ if [[ "$1" == "clean" ]]; then
 	(
 		cd "$SCRIPT_DIR"
 
-		[[ -e build ]] && rm -rf build
-		[[ -e www ]] && rm -rf www
+		if [[ -e build ]]; then
+			rm -rf build
+		fi
+		if [[ -e www ]]; then
+			rm -rf www
+		fi
 	)
 	exit
 fi
@@ -40,43 +44,37 @@ fi
 (
 	cd "$SCRIPT_DIR"
 
-	mkdir -p build
+	cp -af quartz build
 	cd build
 
-	[[ ! -d src ]] && rm -f src
-	if [[ ! -e src ]]; then
-		mkdir src
-		cd src
+	rm -rf content
+	mkdir content
 
-		tar -cf - -C ../../../ --exclude='.automation' . | tar -xf -
-		rm -rf .git \
-		       .github \
-		       .gitignore \
-		       .obsidian \
-		       .trash \
-		       .vscode \
-		       private \
-		       README.md
-		find . -type f \( -name '.DS_Store' -o -name '.nomedia' \) -delete
-		find . -type f -iname '*.md' -exec gawk -i inplace '{ _ = 0 }; \
-		     match($0, /(.*)!\[([^\]]+)\]\(([^:\)]+)\)(.*)/, u) { \
-		         _ = 1; \
-		         gsub("%20", " ", u[3]); \
-		         printf("%s![[%s|%s]]%s\n", u[1], u[3], u[2], u[4]) \
-		     }; !_ { print $0 }' "{}" \;
-		cd ..
-	fi
+	cd content
+	tar -cf - -C ../../../ --exclude='.automation' . | tar -xf -
+	rm -rf .git \
+	       .github \
+	       .gitignore \
+	       .obsidian \
+	       .trash \
+	       .vscode \
+	       private \
+	       README.md
+	find . -type f \( -name '.DS_Store' -o -name '.nomedia' \) -delete
+	find . -type f -iname '*.md' -exec gawk -i inplace '{ _ = 0 }; \
+	     match($0, /(.*)!\[([^\]]+)\]\(([^:\)]+)\)(.*)/, u) { \
+	         _ = 1; \
+	         gsub("%20", " ", u[3]); \
+	         printf("%s![[%s|%s]]%s\n", u[1], u[3], u[2], u[4]) \
+	     }; !_ { print $0 }' "{}" \;
+	cd ..
 
-	[[ ! -d quartz ]] && rm -f quartz
-	cp -af ../quartz quartz
-	cd quartz
-	
 	npm install
 
-  cp ../../overlay/quartz.config.yaml ./
+	cp ../overlay/quartz.config.yaml ./
 	npx quartz plugin install --from-config
 
-	cp -af ../../overlay/* ./
+	cp -af ../overlay/* ./
 )
 
 # Build the site!
@@ -87,16 +85,14 @@ fi
 	[[ -e www ]] && rm -rf www
 	mkdir -p www
 
-	cd build/quartz
+	cd build
 	if [[ "$1" == "serve" ]]; then
 		npx quartz build \
-		  --directory ../../src \
-		  --output ../../www \
-		  --serve
+		         --output ../www \
+		         --serve
 	else
 		npx quartz build \
-		  --directory ../../src \
-		  --output ../../www
+		         --output ../www
 	fi
-	sed -i'' -e 's#href=\&quot;[\./]\+/#href=\&quot;https://www.yakcollective.org/#g;s#src=\&quot;[\./]\+/#src=\&quot;https://www.yakcollective.org/#g;' ../../www/index.xml
+	sed -i'' -e 's#href=\&quot;[\./]\+/#href=\&quot;https://www.yakcollective.org/#g;s#src=\&quot;[\./]\+/#src=\&quot;https://www.yakcollective.org/#g;' ../www/index.xml
 )

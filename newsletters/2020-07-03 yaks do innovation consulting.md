@@ -18,7 +18,7 @@ For this reason, the dog days of summer have historically been regarded as an ap
 > 
 > — [John Brady, 1813: Clavis calendaria](http://www.emmitsburg.net/nfs/articles/re/2012/clavis.htm); or, A compendious analysis of the calendar, illustrated with ecclesiastical, historical, and classical anecdotes.
 
-Since forming in March of this year, the Yak Collective has been chugging along, [completing two project cycles](../projects/index.md) in a span of four months, as well as completing its first paid project for a client, involving nearly 20 Yak contributors.
+Since forming in March of this year, the Yak Collective has been chugging along, [completing two project cycles](../projects.md) in a span of four months, as well as completing its first paid project for a client, involving nearly 20 Yak contributors.
 
 As the collective matures(and as we go deeper into the hottest season of the year), we recognize the need to focus on the quality of projects over the speed at which they are completed, to ensure that all Yak projects are of a high caliber.
 

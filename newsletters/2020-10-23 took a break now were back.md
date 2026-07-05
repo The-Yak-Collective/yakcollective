@@ -16,12 +16,12 @@ Yak Collective member, [Vinay Débrou](https://x.com/vinaydebrou), is leading th
 Fill out the following form by October 25: <https://yak.knack.com/yaks#yakmap-participation-signup>
 
 ## Story Time
-The following story is by [Astonishing Stories Group](../projects/astonishing%20stories/index.md) which is led by [Sachin Benny](https://sachinbenny.notion.site/I-m-Sachin-Benny-7391ec1aafa94af28599a2b089c4bf35) where instead of predicting the future, articulate potential forks in our universe to expand our imagination of what will become. The upside of an extremely uncertain environment like the Global Pandemic is that we have been free to indulge in pure speculation about the known knowns and unknown unknowns of the future. Authors imagine a world in which the pandemic is the background event for other shifts.
+The following story is by [Astonishing Stories Group](../projects/astonishing%20stories.md) which is led by [Sachin Benny](https://sachinbenny.notion.site/I-m-Sachin-Benny-7391ec1aafa94af28599a2b089c4bf35) where instead of predicting the future, articulate potential forks in our universe to expand our imagination of what will become. The upside of an extremely uncertain environment like the Global Pandemic is that we have been free to indulge in pure speculation about the known knowns and unknown unknowns of the future. Authors imagine a world in which the pandemic is the background event for other shifts.
 
 ### [wholeness in a timeless activity](../projects/astonishing%20stories/wholeness%20in%20a%20timeless%20activity.md)
 Author: Nathan Chen
 
-![](../assets/20b58678396dd832c77bb28354fa48be.jpg)
+![](../assets/20B58678396DD832C77BB28354FA48BE.jpg)
 
 There are some activities the wealthy occasionally lust after. But there is one they will never stop avoiding.
 

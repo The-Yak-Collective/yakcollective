@@ -11,7 +11,7 @@ At a certain time, in a certain space, a person may speak or act and find himsel
 
 Indeed, this algorithmic tribunal stands watch over many, many occurrences and its decrees hold unforeseen consequences. Those people, those consequences, still navigate day-to-day life but haven’t the chance to go back or go forward.
 
-![Justice — asterisques.com](../../assets/a20e7a74a940e302eac2678c32c8019c.webp)
+![Justice — asterisques.com](../../assets/A20E7A74A940E302EAC2678C32C8019C.webp)
 
 This growing body of consequences now finally sees a new option, an outlet for moving forward. A select team, carrying rites handed down by religious sects, futurists, and ancient literature, service a series of practices. They elucidate practicable ways: making amends, settling disputes, and beginning again for a new time and place.
 

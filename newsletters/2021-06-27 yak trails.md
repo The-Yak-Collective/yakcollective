@@ -68,7 +68,7 @@ Current gigs. [Details on the server.](https://discord.com/channels/692111190851
 - [Accidental Designs – 1 — Ribbonfarm Studio](https://studio.ribbonfarm.com/p/accidental-designs-1)
 
 ### links shared
-- [Astonishing Stories: Weird is part of the job](../projects/astonishing%20stories/index.md)
+- [Astonishing Stories: Weird is part of the job](../projects/astonishing%20stories.md)
 - [Roam Research – A note taking tool for networked thought.](https://roamresearch.com/)
 - [Yak Collective Calendar](https://calendar.google.com/calendar/u/0/embed?src=o995m43173bpslmhh49nmrp5i4@group.calendar.google.com)
 - [Critical Business School](https://www.in-process.net/cbs/)
@@ -103,7 +103,7 @@ Current gigs. [Details on the server.](https://discord.com/channels/692111190851
 - [Composer — IBM Quantum](https://quantum-computing.ibm.com/composer/files/new)
 - [Animation Obsessive](https://animationobsessive.substack.com/)
 - [Travis McGee — Wikipedia](https://en.wikipedia.org/wiki/Travis_McGee)
-- [Astonishing Stories](../projects/astonishing%20stories/index.md)
+- [Astonishing Stories](../projects/astonishing%20stories.md)
 - [Adactio: Journal — Notified](https://adactio.com/journal/18235)
 - [Company Starts Shipping Its ＄50,000 Mind-Reading Helmet](https://futurism.com/neoscope/company-shipping-mind-reading-helmet)
 - [michael jantzen unveils five experimental greenhouses from 1972 to 1980](https://www.designboom.com/architecture/michael-jantzen-series-experimental-greenhouses-1972-1980-06-19-2021/)

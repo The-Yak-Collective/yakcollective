@@ -7,7 +7,7 @@ title: Out of the Loop
 
 Vijayan looked down in pain at his [programmable forearm tattoo](https://roamresearch.com/#/app/Astonishing_Stories/page/6jX2RXOls) after finishing his last note. The microbots in his arm etched a new web of nodes, mirroring his notetaking system on a Roam graph. His mind had become a tangled graph since his father’s death, now reflected on his arm as a messy graph of interconnected lines for all to see. He gazed into his coffee and cursed under his breath while he thought about the decision to get the Roam microbots. He was now stuck living with nanotechnology that etched a continuously evolving tattoo on his arm.
 
-![Justice — asterisques.com](../../assets/a546e6e978ee62702f6741e06675b708.webp)
+![Justice — asterisques.com](../../assets/A546E6E978EE62702F6741E06675B708.webp)
 
 It all goes back a few months. After five years of not asking anyone out, he finally asked out the barista at the local hipster cafe. On their first date, he quickly realized that they had nothing in common, but he liked her Roam microbot tattoo — a neat graph of interconnected lines, almost too neat for a natural note-taking system.
 

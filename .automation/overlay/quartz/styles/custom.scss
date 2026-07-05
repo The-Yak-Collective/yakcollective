@@ -24,6 +24,7 @@ article a {
 
 article a.internal {
 	background-color: transparent;
+	text-decoration: none;
 }
 
 article a.internal:hover {
@@ -93,6 +94,10 @@ hr {
 	padding-top: 2rem;
 }
 
+.page>#quartz-body .sidebar {
+	gap: 2rem;
+}
+
 .page #quartz-body .sidebar.left {
 	display: none;
 }
@@ -100,6 +105,25 @@ hr {
 /*
  * Search
  */
+.search>.search-button {
+	background-color: var(--lightgray);
+	color: var(--darkgray);
+	border: none;
+}
+
+.search>.search-button>p {
+	padding: 0 1rem;
+	color: var(--darkgray);
+}
+
+.search>.search-container>.search-space>.search-layout>.results-container .result-card>h3 {
+	color: var(--darkgray);
+}
+
+.search-container .preview-container .popover-hint:first-child {
+	display: none;
+}
+
 .search #search-container #search-space #search-layout .highlight {
 	background-color: var(--textHighlight);
 }
@@ -107,18 +131,12 @@ hr {
 /*
  * Page header
  */
-.page-header header {
-	margin: 1rem 0;
-	flex-wrap: wrap;
-	justify-content: flex-end;
-}
-
-.page-header header .breadcrumb-container {
+.page-header .breadcrumb-container {
 	margin: 0;
 	font-weight: bold;
 }
 
-.page-header header .breadcrumb-container .breadcumb-element {
+.page-header .breadcrumb-container .breadcumb-element {
 	height: 2rem;
 }
 
@@ -237,7 +255,7 @@ footer a:hover,
 
 @media not (min-width: 1200px) {
 	.graph .graph-outer {
-		height: calc(min(100vw, 100vh, 800px) - 1rem - 1rem);
+		height: calc(min(100vw, 100vh, 800px, 24rem) - 1rem - 1rem);
 	}
 }
 
@@ -477,9 +495,13 @@ body[data-slug="index"] .page-footer .backlinks {
 }
 
 body[data-slug="about"] .page-header .content-meta time,
-body[data-slug$="index"] .page-header .content-meta,
 body[data-slug="join"] .page-header .content-meta,
-body[data-slug="welcome"] .page-header .content-meta {
+body[data-slug="newsletters"] .page-header .content-meta,
+body[data-slug="projects"] .page-header .content-meta,
+body[data-slug="study-groups"] .page-header .content-meta,
+body[data-slug="welcome"] .page-header .content-meta,
+body[data-slug="work-groups"] .page-header .content-meta,
+body[data-slug="yakcon-2023"] .page-header .content-meta {
 	display: none;
 }
 

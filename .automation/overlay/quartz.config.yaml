@@ -4,7 +4,7 @@ configuration:
   pageTitleSuffix: " :: The Yak Collective"
   enableSPA: false
   enablePopovers: false
-  analytics: null
+  analytics: {}
   locale: en-US
   baseUrl: www.yakcollective.org
   ignorePatterns:
@@ -52,6 +52,12 @@ plugins:
       priority:
         - frontmatter
     order: 10
+  - source: github:quartz-community/note-properties
+    enabled: true
+    options:
+      includeAll: true
+      hidePropertiesView: true
+    order: 15
   - source: github:quartz-community/syntax-highlighting
     enabled: true
     options:
@@ -92,8 +98,6 @@ plugins:
     enabled: true
   - source: github:quartz-community/content-page
     enabled: true
-  - source: github:quartz-community/folder-page
-    enabled: true
   - source: github:quartz-community/content-index
     enabled: true
     options:
@@ -101,8 +105,6 @@ plugins:
       rssFullHtml: true
       includeEmptyFiles: false
   - source: github:quartz-community/og-image
-    enabled: true
-  - source: github:quartz-community/fonts
     enabled: true
   - source: github:quartz-community/alias-redirects
     enabled: true
@@ -114,30 +116,51 @@ plugins:
       spacerSymbol: /
       rootName: The Yak Collective
     layout:
-      position: header
+      position: beforeBody
       priority: 5
+      group: toolbar
+      groupOptions:
+        order: 5
+        align: start
+        justify: center
   - source: github:quartz-community/spacer
     enabled: true
     options: {}
     order: 25
     layout:
-      position: header
+      position: beforeBody
       priority: 25
+      group: toolbar
+      groupOptions:
+        order: 25
+        grow: true
+        align: start
+        justify: center
   - source: github:quartz-community/darkmode
     enabled: true
     layout:
-      position: header
+      position: beforeBody
       priority: 30
+      group: toolbar
+      groupOptions:
+        order: 30
+        align: start
+        justify: center
   - source: github:quartz-community/search
     enabled: true
     layout:
-      position: header
+      position: beforeBody
       priority: 40
+      group: toolbar
+      groupOptions:
+        order: 40
+        align: start
+        justify: center
   - source: github:quartz-community/content-meta
     enabled: true
     layout:
       position: beforeBody
-      priority: 20
+      priority: 50
   - source: github:quartz-community/backlinks
     enabled: true
     layout:
@@ -156,6 +179,7 @@ plugins:
     layout:
       position: right
       priority: 30
+      display: desktop-only
   - source: github:quartz-community/footer
     enabled: true
     options:
@@ -167,9 +191,14 @@ plugins:
         Newsletters:  /newsletters
         Recordings:   https://www.youtube.com/channel/UC9bngPbXMEZ8ivD1GHJ94aw
         About:        /about
-        Join Us:      /join
+        Join Us!:      /join
         RSS Feed:     /index.xml
 layout:
+  groups:
+    toolbar:
+      priority: 35
+      direction: row
+      gap: 1rem
   byPageType:
     "404":
       positions:
@@ -177,11 +206,3 @@ layout:
         left: []
         right: []
     content: {}
-    folder:
-      positions:
-        right: []
-    tag:
-      positions:
-        right: []
-    canvas: {}
-    bases: {}

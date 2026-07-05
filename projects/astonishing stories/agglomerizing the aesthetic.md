@@ -7,7 +7,7 @@ title: Agglomerizing the Aesthetic
 
 Sometimes I just marvel at the world we live in. People always bitch about the global, remote workforce — *a race to the bottom, downward pressure on wages*, blah, blah, blah — but here I was getting ready to Virtual HouseGuest with my new girlfriend’s parents for dinner tomorrow, and I was about to get some niche expertise on styling my hair on a Sunday night. When you needed something, no matter how minor, someone, somewhere in the world could help you with it. It was amazing!
 
-![Justice — asterisques.com](../../assets/480032c0c8345e954ba4821208cc4afc.webp)
+![Justice — asterisques.com](../../assets/480032C0C8345E954BA4821208CC4AFC.webp)
 
 “Hi, this is JoAnne, your Medium-Length Men’s Hair consultant. First, can I get your hair profile?” I turned my head from side to side so that the camera on my computer could capture all the angles of my head. “Thank you. While that’s processing, what can I help you with today?”
 

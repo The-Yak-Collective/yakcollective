@@ -164,7 +164,7 @@ Current gigs. [Details on the server.](https://discord.com/channels/692111190851
 - [The REALIST Stack — by Venkatesh Rao — Ribbonfarm Studio](https://studio.ribbonfarm.com/p/the-realist-stack)
 
 ### Links shared
-- [Astonishing Stories](../projects/astonishing%20stories/index.md)
+- [Astonishing Stories](../projects/astonishing%20stories.md)
 - [Yak Collective Calendar](https://calendar.google.com/calendar/u/0/embed?src=o995m43173bpslmhh49nmrp5i4@group.calendar.google.com)
 - [He Thought He Could Outfox the Gig Economy. He Was Wrong | WIRED](https://www.wired.com/story/gig-economy-uber-lyft-doordash-jeffrey-fang/)
 - [Clutter | Moving & Storage](https://www.clutter.com/)

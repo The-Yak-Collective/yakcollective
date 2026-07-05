@@ -5,7 +5,7 @@ The Yak Collective is an online space for collaborative tinkering. Here you can 
 
 Current experiments include: **building** open-source rovers, **crafting** experimental web infrastructures, **publishing** speculative fiction, and **studying** emerging decentralization. Learn more about us on the [about page](about.md).
 
-Check out our [study](study%20groups/index.md) and [work](work%20groups/index.md) groups, read through out past [projects](projects/index.md), and then take a moment to [join us](join.md)!
+Check out our [study](study%20groups.md) and [work](work%20groups.md) groups, read through out past [projects](projects.md), and then take a moment to [join us](join.md)!
 
 ## Active Projects and Groups
 > [!study_group] [Composable and Distributed Systems](study%20groups/composable%20and%20distributed%20systems.md)
@@ -24,7 +24,7 @@ Check out our [study](study%20groups/index.md) and [work](work%20groups/index.md
 > [!inactive_project]- [Future Frontiers](projects/future%20frontiers.md)
 > In the wake of Covid19, could an era of democratized access to frontiers be the key to a renewed sense of larger purpose in the universe for humanity? In this continuously evolving project, members of the Yak Collective ponder our future as an exploratory species.
 
-> [!inactive_project]- [Astonishing Stories](projects/astonishing%20stories/index.md)
+> [!inactive_project]- [Astonishing Stories](projects/astonishing%20stories.md)
 > The upside of an extremely uncertain environment is that we have been free to indulge in pure speculation about the known knowns and unknown unknowns of the future. The result is Astonishing Stories, an anthology of short vignettes from the future developed from the networked thoughts of over 30 indie consultants.
 
 > [!inactive_project]- [New Old Home](projects/new%20old%20home.md)
