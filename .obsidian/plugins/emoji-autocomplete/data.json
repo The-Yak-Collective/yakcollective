@@ -3,9 +3,9 @@
   "suggester": true,
   "considerHistory": true,
   "historyLimit": 25,
-  "history": [
-    "de"
-  ],
+  "history": {
+    "de": 1
+  },
   "highlightMatches": true,
   "strictTrigger": true,
   "triggerFromFirst": true,
@@ -1939,7 +1939,8 @@
     "zimbabwe": true,
     "england": true,
     "scotland": true,
-    "wales": true
+    "wales": true,
+    "teeth": true
   },
   "hideUnsupported": true,
   "tagSearch": true,

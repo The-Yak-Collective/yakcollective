@@ -51,21 +51,461 @@ var import_obsidian2 = require("obsidian");
 
 // src/i18n/index.ts
 var import_obsidian = require("obsidian");
+
+// src/i18n/locales/ja.ts
+var ja = {
+  common: {
+    cancel: "\u30AD\u30E3\u30F3\u30BB\u30EB"
+  },
+  settings: {
+    title: "Attachment Management \u8A2D\u5B9A",
+    rootPath: {
+      name: "\u6DFB\u4ED8\u30D5\u30A1\u30A4\u30EB\u306E\u4FDD\u5B58\u5148\u30EB\u30FC\u30C8\u30D1\u30B9",
+      desc: "\u6DFB\u4ED8\u30D5\u30A1\u30A4\u30EB\u306E\u30EB\u30FC\u30C8\u30D1\u30B9\u3092\u9078\u629E",
+      options: {
+        obsidian: "Obsidian \u306E\u8A2D\u5B9A\u3092\u30B3\u30D4\u30FC",
+        inFolder: "\u6307\u5B9A\u3057\u305F\u30D5\u30A9\u30EB\u30C0\u5185",
+        nextToNote: "\u30CE\u30FC\u30C8\u3068\u540C\u3058\u30D5\u30A9\u30EB\u30C0\u5185\u306E\u6307\u5B9A\u3057\u305F\u30B5\u30D6\u30D5\u30A9\u30EB\u30C0"
+      }
+    },
+    rootFolder: {
+      name: "\u30EB\u30FC\u30C8\u30D5\u30A9\u30EB\u30C0",
+      desc: "\u65B0\u3057\u3044\u6DFB\u4ED8\u30D5\u30A1\u30A4\u30EB\u306E\u30EB\u30FC\u30C8\u30D5\u30A9\u30EB\u30C0"
+    },
+    attachmentPath: {
+      name: "\u6DFB\u4ED8\u30D5\u30A1\u30A4\u30EB\u306E\u30D1\u30B9",
+      desc: "\u30EB\u30FC\u30C8\u30D5\u30A9\u30EB\u30C0\u5185\u306E\u6DFB\u4ED8\u30D5\u30A1\u30A4\u30EB\u306E\u30D1\u30B9\u3002\u5229\u7528\u53EF\u80FD\u306A\u5909\u6570\uFF1A${notepath}\u3001${notename}\u3001${parent}"
+    },
+    attachmentFormat: {
+      name: "\u6DFB\u4ED8\u30D5\u30A1\u30A4\u30EB\u306E\u30D5\u30A9\u30FC\u30DE\u30C3\u30C8",
+      desc: "\u6DFB\u4ED8\u30D5\u30A1\u30A4\u30EB\u306E\u540D\u524D\u306E\u4ED8\u3051\u65B9\u3092\u5B9A\u7FA9\u3057\u307E\u3059\u3002\u5229\u7528\u53EF\u80FD\u306A\u5909\u6570\uFF1A${date}\u3001${notename}\u3001${md5}\u3001${originalname}\u3002"
+    },
+    dateFormat: {
+      name: "\u65E5\u4ED8\u30D5\u30A9\u30FC\u30DE\u30C3\u30C8",
+      desc: "\u4F7F\u7528\u3059\u308B Moment.js \u306E\u65E5\u4ED8\u30D5\u30A9\u30FC\u30DE\u30C3\u30C8",
+      linkText: "Moment.js \u306E\u30D5\u30A9\u30FC\u30DE\u30C3\u30C8\u30AA\u30D7\u30B7\u30E7\u30F3"
+    },
+    autoRename: {
+      name: "\u6DFB\u4ED8\u30D5\u30A1\u30A4\u30EB\u3092\u81EA\u52D5\u3067\u30EA\u30CD\u30FC\u30E0",
+      desc: "\u5BFE\u5FDC\u3059\u308B md/canvas \u30D5\u30A1\u30A4\u30EB\u304C\u7F6E\u304B\u308C\u3066\u3044\u308B\u30D5\u30A9\u30EB\u30C0/\u30D5\u30A1\u30A4\u30EB\u306E\u540D\u524D\u3092\u5909\u66F4\u3059\u308B\u3068\u3001\u6DFB\u4ED8\u30D5\u30A1\u30A4\u30EB\u306E\u30D5\u30A9\u30EB\u30C0/\u30D5\u30A1\u30A4\u30EB\u540D\u3082\u81EA\u52D5\u7684\u306B\u5909\u66F4\u3055\u308C\u307E\u3059\u3002"
+    },
+    extensionOverride: {
+      name: "\u62E1\u5F35\u5B50\u3054\u3068\u306E\u4E0A\u66F8\u304D\u8A2D\u5B9A",
+      desc: "\u7279\u5B9A\u306E\u62E1\u5F35\u5B50\uFF08\u4F8B\uFF1Apdf \u3084 zip\uFF09\u3092\u6301\u3064\u6DFB\u4ED8\u30D5\u30A1\u30A4\u30EB\u3092\u81EA\u52D5\u30EA\u30CD\u30FC\u30E0\u3057\u305F\u3044\u5834\u5408\u3001\u62E1\u5F35\u5B50\u3054\u3068\u306E\u4E0A\u66F8\u304D\u8A2D\u5B9A\u3092\u4F7F\u7528\u3057\u307E\u3059\u3002",
+      addButton: "\u62E1\u5F35\u5B50\u3054\u3068\u306E\u4E0A\u66F8\u304D\u8A2D\u5B9A\u3092\u8FFD\u52A0",
+      extension: {
+        name: "\u62E1\u5F35\u5B50",
+        desc: "\u4E0A\u66F8\u304D\u3059\u308B\u62E1\u5F35\u5B50",
+        placeholder: "pdf|docx?"
+      },
+      tooltips: {
+        remove: "\u62E1\u5F35\u5B50\u3054\u3068\u306E\u4E0A\u66F8\u304D\u8A2D\u5B9A\u3092\u524A\u9664",
+        edit: "\u62E1\u5F35\u5B50\u3054\u3068\u306E\u4E0A\u66F8\u304D\u8A2D\u5B9A\u3092\u7DE8\u96C6",
+        save: "\u62E1\u5F35\u5B50\u3054\u3068\u306E\u4E0A\u66F8\u304D\u8A2D\u5B9A\u3092\u4FDD\u5B58"
+      },
+      saveNotice: "\u62E1\u5F35\u5B50\u3054\u3068\u306E\u4E0A\u66F8\u304D\u8A2D\u5B9A\u3092\u4FDD\u5B58\u3057\u307E\u3057\u305F"
+    },
+    excludeExtension: {
+      name: "\u9664\u5916\u3059\u308B\u62E1\u5F35\u5B50\u306E\u30D1\u30BF\u30FC\u30F3",
+      desc: "\u51E6\u7406\u5BFE\u8C61\u304B\u3089\u9664\u5916\u3059\u308B\u62E1\u5F35\u5B50\u3092\u6B63\u898F\u8868\u73FE\u3067\u6307\u5B9A\u3057\u307E\u3059\u3002",
+      placeholder: "pdf|docx?|xlsx?|pptx?|zip|rar"
+    },
+    excludedPaths: {
+      name: "\u9664\u5916\u30D1\u30B9",
+      desc: "\u30EA\u30CD\u30FC\u30E0\u304B\u3089\u9664\u5916\u3059\u308B\u30D5\u30A9\u30EB\u30C0\u306E\u30D5\u30EB\u30D1\u30B9\u3092\u30BB\u30DF\u30B3\u30ED\u30F3\uFF08;\uFF09\u3067\u533A\u5207\u3063\u3066\u6307\u5B9A\u3057\u307E\u3059\uFF08\u5927\u6587\u5B57\u3068\u5C0F\u6587\u5B57\u3092\u533A\u5225\u3057\u3001\u5148\u982D\u306B\u30B9\u30E9\u30C3\u30B7\u30E5\u300C/\u300D\u3092\u4ED8\u3051\u306A\u3044\u3067\u304F\u3060\u3055\u3044\uFF09\u3002"
+    },
+    excludeSubpaths: {
+      name: "\u30B5\u30D6\u30D1\u30B9\u3092\u9664\u5916",
+      desc: "\u3053\u306E\u30AA\u30D7\u30B7\u30E7\u30F3\u3092\u30AA\u30F3\u306B\u3059\u308B\u3068\u3001\u4E0A\u8A18\u3067\u6307\u5B9A\u3057\u305F\u30D5\u30A9\u30EB\u30C0\u30D1\u30B9\u306E\u3059\u3079\u3066\u306E\u30B5\u30D6\u30D5\u30A9\u30EB\u30C0\u3082\u9664\u5916\u3055\u308C\u307E\u3059\u3002"
+    }
+  },
+  override: {
+    title: "\u4E0A\u66F8\u304D\u8A2D\u5B9A",
+    menuTitle: "\u6DFB\u4ED8\u30D5\u30A1\u30A4\u30EB\u8A2D\u5B9A\u3092\u4E0A\u66F8\u304D",
+    addExtensionOverrides: "\u62E1\u5F35\u5B50\u3054\u3068\u306E\u4E0A\u66F8\u304D\u8A2D\u5B9A\u3092\u8FFD\u52A0",
+    extension: {
+      name: "\u62E1\u5F35\u5B50",
+      desc: "\u4E0A\u66F8\u304D\u3059\u308B\u62E1\u5F35\u5B50",
+      placeholder: "pdf"
+    },
+    buttons: {
+      reset: "\u30EA\u30BB\u30C3\u30C8",
+      submit: "\u9001\u4FE1"
+    },
+    notifications: {
+      reset: "{path} \u306E\u6DFB\u4ED8\u30D5\u30A1\u30A4\u30EB\u8A2D\u5B9A\u3092\u30EA\u30BB\u30C3\u30C8\u3057\u307E\u3057\u305F",
+      overridden: "{path} \u306E\u6DFB\u4ED8\u30D5\u30A1\u30A4\u30EB\u8A2D\u5B9A\u3092\u4E0A\u66F8\u304D\u3057\u307E\u3057\u305F"
+    }
+  },
+  extensionOverride: {
+    title: "\u62E1\u5F35\u5B50\u3054\u3068\u306E\u4E0A\u66F8\u304D\u8A2D\u5B9A",
+    rootPath: {
+      name: "\u6DFB\u4ED8\u30D5\u30A1\u30A4\u30EB\u306E\u4FDD\u5B58\u5148\u30EB\u30FC\u30C8\u30D1\u30B9",
+      desc: "\u3053\u306E\u62E1\u5F35\u5B50\u306E\u6DFB\u4ED8\u30D5\u30A1\u30A4\u30EB\u306E\u30EB\u30FC\u30C8\u30D1\u30B9\u3092\u9078\u629E"
+    },
+    rootFolder: {
+      name: "\u30EB\u30FC\u30C8\u30D5\u30A9\u30EB\u30C0",
+      desc: "\u3053\u306E\u62E1\u5F35\u5B50\u306E\u30EB\u30FC\u30C8\u30D5\u30A9\u30EB\u30C0"
+    },
+    attachmentPath: {
+      name: "\u6DFB\u4ED8\u30D5\u30A1\u30A4\u30EB\u306E\u30D1\u30B9",
+      desc: "\u3053\u306E\u62E1\u5F35\u5B50\u306E\u30EB\u30FC\u30C8\u30D5\u30A9\u30EB\u30C0\u5185\u306E\u6DFB\u4ED8\u30D5\u30A1\u30A4\u30EB\u306E\u30D1\u30B9"
+    },
+    attachmentFormat: {
+      name: "\u6DFB\u4ED8\u30D5\u30A1\u30A4\u30EB\u306E\u30D5\u30A9\u30FC\u30DE\u30C3\u30C8",
+      desc: "\u3053\u306E\u62E1\u5F35\u5B50\u306E\u6DFB\u4ED8\u30D5\u30A1\u30A4\u30EB\u306E\u540D\u524D\u306E\u4ED8\u3051\u65B9\u3092\u5B9A\u7FA9\u3057\u307E\u3059"
+    },
+    buttons: {
+      save: "\u4FDD\u5B58"
+    }
+  },
+  confirm: {
+    title: "\u30D2\u30F3\u30C8",
+    message: "\u3053\u306E\u64CD\u4F5C\u306F\u5143\u306B\u623B\u305B\u305A\u3001\u5B9F\u9A13\u7684\u306A\u3082\u306E\u3067\u3059\u3002\u6700\u521D\u306B Vault \u3092\u30D0\u30C3\u30AF\u30A2\u30C3\u30D7\u3057\u3066\u304F\u3060\u3055\u3044\uFF01\u672C\u5F53\u306B\u7D9A\u884C\u3057\u307E\u3059\u304B\uFF1F",
+    continue: "\u7D9A\u884C"
+  },
+  notices: {
+    fileExcluded: "{path} \u306F\u9664\u5916\u3055\u308C\u307E\u3057\u305F",
+    overrideRemoved: "{path} \u306E\u4E0A\u66F8\u304D\u8A2D\u5B9A\u3092\u524A\u9664\u3057\u307E\u3057\u305F",
+    fileRenamed: "{from} \u304B\u3089 {to} \u306B\u30EA\u30CD\u30FC\u30E0\u3057\u307E\u3057\u305F",
+    filesRenamedBatch: "{count} \u4EF6\u306E\u6DFB\u4ED8\u30D5\u30A1\u30A4\u30EB\u3092\u30EA\u30CD\u30FC\u30E0\u3057\u307E\u3057\u305F",
+    arrangeCompleted: "\u6574\u7406\u304C\u5B8C\u4E86\u3057\u307E\u3057\u305F",
+    resetAttachmentSetting: "{path} \u306E\u6DFB\u4ED8\u30D5\u30A1\u30A4\u30EB\u8A2D\u5B9A\u3092\u30EA\u30BB\u30C3\u30C8\u3057\u307E\u3057\u305F",
+    error: {
+      unknownError: "\u4E0D\u660E\u306A\u30A8\u30E9\u30FC\u304C\u767A\u751F\u3057\u307E\u3057\u305F"
+    }
+  },
+  commands: {
+    rearrangeAllLinks: "\u30EA\u30F3\u30AF\u3055\u308C\u3066\u3044\u308B\u3059\u3079\u3066\u306E\u6DFB\u4ED8\u30D5\u30A1\u30A4\u30EB\u3092\u518D\u6574\u7406",
+    rearrangeActiveLinks: "\u30EA\u30F3\u30AF\u3055\u308C\u3066\u3044\u308B\u6DFB\u4ED8\u30D5\u30A1\u30A4\u30EB\u3092\u518D\u6574\u7406",
+    resetOverrideSetting: "\u4E0A\u66F8\u304D\u8A2D\u5B9A\u3092\u30EA\u30BB\u30C3\u30C8",
+    clearUnusedStorage: "\u672A\u4F7F\u7528\u306E\u5143\u306E\u30D5\u30A1\u30A4\u30EB\u540D\u30B9\u30C8\u30EC\u30FC\u30B8\u3092\u30AF\u30EA\u30A2"
+  },
+  errors: {
+    canvasNotSupported: "Canvas \u306F\u62E1\u5F35\u5B50\u3054\u3068\u306E\u4E0A\u66F8\u304D\u8A2D\u5B9A\u3068\u3057\u3066\u30B5\u30DD\u30FC\u30C8\u3055\u308C\u3066\u3044\u307E\u305B\u3093\u3002",
+    markdownNotSupported: "Markdown \u306F\u62E1\u5F35\u5B50\u3054\u3068\u306E\u4E0A\u66F8\u304D\u8A2D\u5B9A\u3068\u3057\u3066\u30B5\u30DD\u30FC\u30C8\u3055\u308C\u3066\u3044\u307E\u305B\u3093\u3002",
+    extensionEmpty: "\u62E1\u5F35\u5B50\u3054\u3068\u306E\u4E0A\u66F8\u304D\u8A2D\u5B9A\u306F\u7A7A\u306B\u3067\u304D\u307E\u305B\u3093\u3002",
+    duplicateExtension: "\u91CD\u8907\u3057\u305F\u62E1\u5F35\u5B50\u3054\u3068\u306E\u4E0A\u66F8\u304D\u8A2D\u5B9A\u3002",
+    excludedExtension: "\u62E1\u5F35\u5B50\u3054\u3068\u306E\u4E0A\u66F8\u304D\u8A2D\u5B9A\u306F\u3001\u9664\u5916\u3055\u308C\u305F\u62E1\u5F35\u5B50\u306B\u3067\u304D\u307E\u305B\u3093\u3002",
+    attachFormatEmpty: "\u6DFB\u4ED8\u30D5\u30A1\u30A4\u30EB\u306E\u30D5\u30A9\u30FC\u30DE\u30C3\u30C8\u3092\u7A7A\u306B\u3067\u304D\u307E\u305B\u3093\u3002",
+    attachFormatIllegalChar: "\u6DFB\u4ED8\u30D5\u30A1\u30A4\u30EB\u306E\u30D5\u30A9\u30FC\u30DE\u30C3\u30C8\u306B\u4E0D\u6B63\u306A\u30D5\u30A1\u30A4\u30EB\u540D\u6587\u5B57\u304C\u542B\u307E\u308C\u3066\u3044\u307E\u3059\uFF1A{char}",
+    attachFormatUnknownVariable: "\u6DFB\u4ED8\u30D5\u30A1\u30A4\u30EB\u306E\u30D5\u30A9\u30FC\u30DE\u30C3\u30C8\u5185\u306E\u672A\u77E5\u306E\u5909\u6570\uFF1A{name}",
+    attachmentPathEmpty: "\u6DFB\u4ED8\u30D5\u30A1\u30A4\u30EB\u306E\u30D1\u30B9\u3092\u7A7A\u306B\u3067\u304D\u307E\u305B\u3093\u3002",
+    attachmentPathIllegalChar: "\u6DFB\u4ED8\u30D5\u30A1\u30A4\u30EB\u306E\u30D1\u30B9\u306B\u4E0D\u6B63\u306A\u30D5\u30A1\u30A4\u30EB\u540D\u6587\u5B57\u304C\u542B\u307E\u308C\u3066\u3044\u307E\u3059\uFF1A{char}",
+    attachmentPathUnknownVariable: "\u6DFB\u4ED8\u30D5\u30A1\u30A4\u30EB\u306E\u30D1\u30B9\u5185\u306E\u672A\u77E5\u306E\u5909\u6570\uFF1A{name}"
+  }
+};
+
+// src/i18n/locales/en.ts
+var en = {
+  common: {
+    cancel: "Cancel"
+  },
+  settings: {
+    title: "Attachment Management Settings",
+    rootPath: {
+      name: "Root path to save attachment",
+      desc: "Select root path of attachment",
+      options: {
+        obsidian: "Copy Obsidian settings",
+        inFolder: "In the folder specified below",
+        nextToNote: "Next to note in folder specified below"
+      }
+    },
+    rootFolder: {
+      name: "Root folder",
+      desc: "Root folder of new attachment"
+    },
+    attachmentPath: {
+      name: "Attachment path",
+      desc: "Path of attachment in root folder, available variables ${notepath}, ${notename}, ${parent}"
+    },
+    attachmentFormat: {
+      name: "Attachment format",
+      desc: "Define how to name the attachment file, available variables ${date}, ${notename}, ${md5} and ${originalname}."
+    },
+    dateFormat: {
+      name: "Date format",
+      desc: "Moment date format to use",
+      linkText: "Moment format options"
+    },
+    autoRename: {
+      name: "Automatically rename attachment",
+      desc: "Automatically rename the attachment folder/filename when you rename the folder/filename where the corresponding md/canvas file be placed."
+    },
+    extensionOverride: {
+      name: "Extension override",
+      desc: "Using the extension override if you want to autorename the attachment with a specific extension (e.g. pdf or zip).",
+      addButton: "Add extension overrides",
+      extension: {
+        name: "Extension",
+        desc: "Extension to override",
+        placeholder: "pdf|docx?"
+      },
+      tooltips: {
+        remove: "Remove extension override",
+        edit: "Edit extension override",
+        save: "Save extension override"
+      },
+      saveNotice: "Saved extension override"
+    },
+    excludeExtension: {
+      name: "Exclude extension pattern",
+      desc: "Regex pattern to exclude certain extensions from being handled.",
+      placeholder: "pdf|docx?|xlsx?|pptx?|zip|rar"
+    },
+    excludedPaths: {
+      name: "Excluded paths",
+      desc: "Provide the full path of the folder names (case sensitive and without leading slash '/') divided by semicolon (;) to be excluded from renaming."
+    },
+    excludeSubpaths: {
+      name: "Exclude subpaths",
+      desc: "Turn on this option if you want to also exclude all subfolders of the folder paths provided above."
+    }
+  },
+  override: {
+    title: "Overriding Settings",
+    menuTitle: "Overriding attachment setting",
+    addExtensionOverrides: "Add extension overrides",
+    extension: {
+      name: "Extension",
+      desc: "Extension to override",
+      placeholder: "pdf"
+    },
+    buttons: {
+      reset: "Reset",
+      submit: "Submit"
+    },
+    notifications: {
+      reset: "Reset attachment setting of {path}",
+      overridden: "Overridden attachment setting of {path}"
+    }
+  },
+  extensionOverride: {
+    title: "Extension Override Settings",
+    rootPath: {
+      name: "Root path to save attachment",
+      desc: "Select root path of attachment for this extension"
+    },
+    rootFolder: {
+      name: "Root folder",
+      desc: "Root folder for this extension"
+    },
+    attachmentPath: {
+      name: "Attachment path",
+      desc: "Path of attachment in root folder for this extension"
+    },
+    attachmentFormat: {
+      name: "Attachment format",
+      desc: "Define how to name the attachment file for this extension"
+    },
+    buttons: {
+      save: "Save"
+    }
+  },
+  confirm: {
+    title: "Tips",
+    message: "This operation is irreversible and experimental. Please backup your vault first! Are you sure you want to continue?",
+    continue: "Yes"
+  },
+  notices: {
+    fileExcluded: "{path} was excluded",
+    overrideRemoved: "Removed override setting of {path}",
+    fileRenamed: "Renamed {from} to {to}",
+    filesRenamedBatch: "Renamed {count} attachments",
+    arrangeCompleted: "Arrange completed",
+    resetAttachmentSetting: "Reset attachment setting of {path}",
+    error: {
+      unknownError: "An unknown error occurred"
+    }
+  },
+  commands: {
+    rearrangeAllLinks: "Rearrange all linked attachments",
+    rearrangeActiveLinks: "Rearrange linked attachments",
+    resetOverrideSetting: "Reset override setting",
+    clearUnusedStorage: "Clear unused original name storage"
+  },
+  errors: {
+    canvasNotSupported: "Canvas is not supported as an extension override.",
+    markdownNotSupported: "Markdown is not supported as an extension override.",
+    extensionEmpty: "Extension override cannot be empty.",
+    duplicateExtension: "Duplicate extension override.",
+    excludedExtension: "Extension override cannot be an excluded extension.",
+    attachFormatEmpty: "Attachment format cannot be empty.",
+    attachFormatIllegalChar: "Attachment format contains illegal filename character: {char}",
+    attachFormatUnknownVariable: "Unknown variable in attachment format: {name}",
+    attachmentPathEmpty: "Attachment path cannot be empty.",
+    attachmentPathIllegalChar: "Attachment path contains illegal filename character: {char}",
+    attachmentPathUnknownVariable: "Unknown variable in attachment path: {name}"
+  }
+};
+
+// src/i18n/locales/zh.ts
+var zhCn = {
+  common: {
+    cancel: "\u53D6\u6D88"
+  },
+  settings: {
+    title: "\u9644\u4EF6\u7BA1\u7406\u8BBE\u7F6E",
+    rootPath: {
+      name: "\u9644\u4EF6\u4FDD\u5B58\u6839\u8DEF\u5F84",
+      desc: "\u9009\u62E9\u9644\u4EF6\u7684\u6839\u8DEF\u5F84",
+      options: {
+        obsidian: "\u590D\u5236 Obsidian \u8BBE\u7F6E",
+        inFolder: "\u5728\u4E0B\u65B9\u6307\u5B9A\u7684\u6587\u4EF6\u5939\u4E2D",
+        nextToNote: "\u5728\u7B14\u8BB0\u65C1\u8FB9\u7684\u6307\u5B9A\u6587\u4EF6\u5939\u4E2D"
+      }
+    },
+    rootFolder: {
+      name: "\u6839\u6587\u4EF6\u5939",
+      desc: "\u65B0\u9644\u4EF6\u7684\u6839\u6587\u4EF6\u5939"
+    },
+    attachmentPath: {
+      name: "\u9644\u4EF6\u8DEF\u5F84",
+      desc: "\u9644\u4EF6\u5728\u6839\u6587\u4EF6\u5939\u4E2D\u7684\u8DEF\u5F84\uFF0C\u53EF\u7528\u53D8\u91CF ${notepath}\u3001${notename}\u3001${parent}"
+    },
+    attachmentFormat: {
+      name: "\u9644\u4EF6\u683C\u5F0F",
+      desc: "\u5B9A\u4E49\u5982\u4F55\u547D\u540D\u9644\u4EF6\u6587\u4EF6\uFF0C\u53EF\u7528\u53D8\u91CF ${date}\u3001${notename}\u3001${md5} \u548C ${originalname}\u3002"
+    },
+    dateFormat: {
+      name: "\u65E5\u671F\u683C\u5F0F",
+      desc: "\u4F7F\u7528\u7684 Moment \u65E5\u671F\u683C\u5F0F",
+      linkText: "Moment \u683C\u5F0F\u9009\u9879"
+    },
+    autoRename: {
+      name: "\u81EA\u52A8\u91CD\u547D\u540D\u9644\u4EF6",
+      desc: "\u5F53\u60A8\u91CD\u547D\u540D\u5BF9\u5E94 md/canvas \u6587\u4EF6\u6240\u5728\u7684\u6587\u4EF6\u5939/\u6587\u4EF6\u540D\u65F6\uFF0C\u81EA\u52A8\u91CD\u547D\u540D\u9644\u4EF6\u6587\u4EF6\u5939/\u6587\u4EF6\u540D\u3002"
+    },
+    extensionOverride: {
+      name: "\u6269\u5C55\u540D\u8986\u76D6",
+      desc: "\u5982\u679C\u60A8\u60F3\u8981\u5BF9\u7279\u5B9A\u6269\u5C55\u540D\u7684\u9644\u4EF6\u8FDB\u884C\u81EA\u52A8\u91CD\u547D\u540D\uFF08\u4F8B\u5982 pdf \u6216 zip),\u8BF7\u4F7F\u7528\u6269\u5C55\u540D\u8986\u76D6\u3002",
+      addButton: "\u6DFB\u52A0\u6269\u5C55\u540D\u8986\u76D6",
+      extension: {
+        name: "\u6269\u5C55\u540D",
+        desc: "\u8981\u8986\u76D6\u7684\u6269\u5C55\u540D",
+        placeholder: "pdf|docx?"
+      },
+      tooltips: {
+        remove: "\u79FB\u9664\u6269\u5C55\u540D\u8986\u76D6",
+        edit: "\u7F16\u8F91\u6269\u5C55\u540D\u8986\u76D6",
+        save: "\u4FDD\u5B58\u6269\u5C55\u540D\u8986\u76D6"
+      },
+      saveNotice: "\u5DF2\u4FDD\u5B58\u6269\u5C55\u540D\u8986\u76D6"
+    },
+    excludeExtension: {
+      name: "\u6392\u9664\u6269\u5C55\u540D\u6A21\u5F0F",
+      desc: "\u7528\u4E8E\u6392\u9664\u67D0\u4E9B\u6269\u5C55\u540D\u4E0D\u88AB\u5904\u7406\u7684\u6B63\u5219\u8868\u8FBE\u5F0F\u6A21\u5F0F\u3002",
+      placeholder: "pdf|docx?|xlsx?|pptx?|zip|rar"
+    },
+    excludedPaths: {
+      name: "\u6392\u9664\u8DEF\u5F84",
+      desc: "\u63D0\u4F9B\u8981\u4ECE\u91CD\u547D\u540D\u4E2D\u6392\u9664\u7684\u6587\u4EF6\u5939\u540D\u79F0\u7684\u5B8C\u6574\u8DEF\u5F84\uFF08\u533A\u5206\u5927\u5C0F\u5199\u4E14\u4E0D\u5E26\u524D\u5BFC\u659C\u6760 '/'\uFF09\uFF0C\u7528\u5206\u53F7\uFF08;\uFF09\u5206\u9694\u3002"
+    },
+    excludeSubpaths: {
+      name: "\u6392\u9664\u5B50\u8DEF\u5F84",
+      desc: "\u5982\u679C\u60A8\u8FD8\u60F3\u6392\u9664\u4E0A\u9762\u63D0\u4F9B\u7684\u6587\u4EF6\u5939\u8DEF\u5F84\u7684\u6240\u6709\u5B50\u6587\u4EF6\u5939\uFF0C\u8BF7\u6253\u5F00\u6B64\u9009\u9879\u3002"
+    }
+  },
+  override: {
+    title: "\u8986\u76D6\u8BBE\u7F6E",
+    menuTitle: "\u8986\u76D6\u9644\u4EF6\u8BBE\u7F6E",
+    addExtensionOverrides: "\u6DFB\u52A0\u6269\u5C55\u540D\u8986\u76D6",
+    extension: {
+      name: "\u6269\u5C55\u540D",
+      desc: "\u8981\u8986\u76D6\u7684\u6269\u5C55\u540D",
+      placeholder: "pdf"
+    },
+    buttons: {
+      reset: "\u91CD\u7F6E",
+      submit: "\u63D0\u4EA4"
+    },
+    notifications: {
+      reset: "\u5DF2\u91CD\u7F6E {path} \u7684\u9644\u4EF6\u8BBE\u7F6E",
+      overridden: "\u5DF2\u8986\u76D6 {path} \u7684\u9644\u4EF6\u8BBE\u7F6E"
+    }
+  },
+  extensionOverride: {
+    title: "\u6269\u5C55\u540D\u8986\u76D6\u8BBE\u7F6E",
+    rootPath: {
+      name: "\u9644\u4EF6\u4FDD\u5B58\u6839\u8DEF\u5F84",
+      desc: "\u9009\u62E9\u6B64\u6269\u5C55\u540D\u7684\u9644\u4EF6\u6839\u8DEF\u5F84"
+    },
+    rootFolder: {
+      name: "\u6839\u6587\u4EF6\u5939",
+      desc: "\u6B64\u6269\u5C55\u540D\u7684\u6839\u6587\u4EF6\u5939"
+    },
+    attachmentPath: {
+      name: "\u9644\u4EF6\u8DEF\u5F84",
+      desc: "\u6B64\u6269\u5C55\u540D\u5728\u6839\u6587\u4EF6\u5939\u4E2D\u7684\u9644\u4EF6\u8DEF\u5F84"
+    },
+    attachmentFormat: {
+      name: "\u9644\u4EF6\u683C\u5F0F",
+      desc: "\u5B9A\u4E49\u6B64\u6269\u5C55\u540D\u7684\u9644\u4EF6\u6587\u4EF6\u547D\u540D\u65B9\u5F0F"
+    },
+    buttons: {
+      save: "\u4FDD\u5B58"
+    }
+  },
+  confirm: {
+    title: "\u63D0\u793A",
+    message: "\u6B64\u64CD\u4F5C\u4E0D\u53EF\u9006\u4E14\u4E3A\u5B9E\u9A8C\u6027\u529F\u80FD\uFF0C\u8BF7\u5148\u5907\u4EFD\u60A8\u7684\u5E93\uFF01\u786E\u5B9A\u8981\u7EE7\u7EED\u5417\uFF1F",
+    continue: "\u7EE7\u7EED"
+  },
+  notices: {
+    fileExcluded: "{path} \u5DF2\u88AB\u6392\u9664",
+    overrideRemoved: "\u5DF2\u79FB\u9664 {path} \u7684\u8986\u76D6\u8BBE\u7F6E",
+    fileRenamed: "\u5DF2\u5C06 {from} \u91CD\u547D\u540D\u4E3A {to}",
+    filesRenamedBatch: "\u5DF2\u91CD\u547D\u540D {count} \u4E2A\u9644\u4EF6",
+    arrangeCompleted: "\u6574\u7406\u5B8C\u6210",
+    resetAttachmentSetting: "\u5DF2\u91CD\u7F6E {path} \u7684\u9644\u4EF6\u8BBE\u7F6E",
+    error: {
+      unknownError: "\u53D1\u751F\u672A\u77E5\u9519\u8BEF"
+    }
+  },
+  commands: {
+    rearrangeAllLinks: "\u91CD\u65B0\u6574\u7406\u6240\u6709\u94FE\u63A5\u7684\u9644\u4EF6",
+    rearrangeActiveLinks: "\u91CD\u65B0\u6574\u7406\u94FE\u63A5\u7684\u9644\u4EF6",
+    resetOverrideSetting: "\u91CD\u7F6E\u8986\u76D6\u8BBE\u7F6E",
+    clearUnusedStorage: "\u6E05\u7406\u672A\u4F7F\u7528\u7684\u539F\u59CB\u6587\u4EF6\u540D\u5B58\u50A8"
+  },
+  errors: {
+    canvasNotSupported: "\u4E0D\u652F\u6301\u5C06 Canvas \u4F5C\u4E3A\u6269\u5C55\u8986\u76D6\u3002",
+    markdownNotSupported: "\u4E0D\u652F\u6301\u5C06 Markdown \u4F5C\u4E3A\u6269\u5C55\u8986\u76D6\u3002",
+    extensionEmpty: "\u6269\u5C55\u8986\u76D6\u4E0D\u80FD\u4E3A\u7A7A\u3002",
+    duplicateExtension: "\u91CD\u590D\u7684\u6269\u5C55\u8986\u76D6\u3002",
+    excludedExtension: "\u6269\u5C55\u8986\u76D6\u4E0D\u80FD\u662F\u88AB\u6392\u9664\u7684\u6269\u5C55\u3002",
+    attachFormatEmpty: "\u9644\u4EF6\u683C\u5F0F\u4E0D\u80FD\u4E3A\u7A7A\u3002",
+    attachFormatIllegalChar: "\u9644\u4EF6\u683C\u5F0F\u5305\u542B\u975E\u6CD5\u6587\u4EF6\u540D\u5B57\u7B26\uFF1A{char}",
+    attachFormatUnknownVariable: "\u9644\u4EF6\u683C\u5F0F\u4E2D\u5B58\u5728\u672A\u77E5\u53D8\u91CF\uFF1A{name}",
+    attachmentPathEmpty: "\u9644\u4EF6\u8DEF\u5F84\u4E0D\u80FD\u4E3A\u7A7A\u3002",
+    attachmentPathIllegalChar: "\u9644\u4EF6\u8DEF\u5F84\u5305\u542B\u975E\u6CD5\u6587\u4EF6\u540D\u5B57\u7B26\uFF1A{char}",
+    attachmentPathUnknownVariable: "\u9644\u4EF6\u8DEF\u5F84\u4E2D\u5B58\u5728\u672A\u77E5\u53D8\u91CF\uFF1A{name}"
+  }
+};
+
+// src/i18n/loader.ts
+function loadAllTranslations() {
+  registerTranslations("en", en);
+  registerTranslations("zh", zhCn);
+  registerTranslations("ja", ja);
+}
+
+// src/i18n/index.ts
 var currentLanguage = "en";
 var translations = {
-  "en": {},
-  "zh-cn": {}
+  en: {},
+  zh: {},
+  ja: {}
 };
 function setLanguage(language) {
   currentLanguage = language;
 }
-function getCurrentLanguage() {
-  return currentLanguage;
-}
 function registerTranslations(language, translationMap) {
   translations[language] = { ...translations[language], ...translationMap };
 }
-function t(key, params) {
+function t(key, ...args) {
+  const params = args[0];
   const keys = key.split(".");
   let value = translations[currentLanguage];
   for (const k of keys) {
@@ -100,17 +540,21 @@ function t(key, params) {
 function detectLanguage() {
   const locale = import_obsidian.moment.locale();
   if (locale.startsWith("zh")) {
-    return "zh-cn";
+    return "zh";
+  }
+  if (locale.startsWith("ja")) {
+    return "ja";
   }
   return "en";
 }
 function initI18n(language) {
+  loadAllTranslations();
   const initialLanguage = language || detectLanguage();
   setLanguage(initialLanguage);
 }
 
-// node_modules/ts-md5/dist/esm/md5.js
-var Md5 = class {
+// node_modules/.pnpm/ts-md5@1.3.1/node_modules/ts-md5/dist/esm/md5.js
+var Md5 = class _Md5 {
   constructor() {
     this._dataLength = 0;
     this._bufferLength = 0;
@@ -127,8 +571,8 @@ var Md5 = class {
     return this.onePassHasher.start().appendAsciiStr(str).end(raw);
   }
   static _hex(x) {
-    const hc = Md5.hexChars;
-    const ho = Md5.hexOut;
+    const hc = _Md5.hexChars;
+    const ho = _Md5.hexOut;
     let n;
     let offset;
     let j;
@@ -289,7 +733,7 @@ var Md5 = class {
   start() {
     this._dataLength = 0;
     this._bufferLength = 0;
-    this._state.set(Md5.stateIdentity);
+    this._state.set(_Md5.stateIdentity);
     return this;
   }
   // Char to code point to to array conversion:
@@ -328,7 +772,7 @@ var Md5 = class {
       }
       if (bufLen >= 64) {
         this._dataLength += 64;
-        Md5._md5cycle(this._state, buf32);
+        _Md5._md5cycle(this._state, buf32);
         bufLen -= 64;
         buf32[0] = buf32[16];
       }
@@ -355,7 +799,7 @@ var Md5 = class {
         break;
       }
       this._dataLength += 64;
-      Md5._md5cycle(this._state, buf32);
+      _Md5._md5cycle(this._state, buf32);
       bufLen = 0;
     }
     this._bufferLength = bufLen;
@@ -380,7 +824,7 @@ var Md5 = class {
         break;
       }
       this._dataLength += 64;
-      Md5._md5cycle(this._state, buf32);
+      _Md5._md5cycle(this._state, buf32);
       bufLen = 0;
     }
     this._bufferLength = bufLen;
@@ -430,10 +874,10 @@ var Md5 = class {
     const dataBitsLen = this._dataLength * 8;
     buf8[bufLen] = 128;
     buf8[bufLen + 1] = buf8[bufLen + 2] = buf8[bufLen + 3] = 0;
-    buf32.set(Md5.buffer32Identity.subarray(i), i);
+    buf32.set(_Md5.buffer32Identity.subarray(i), i);
     if (bufLen > 55) {
-      Md5._md5cycle(this._state, buf32);
-      buf32.set(Md5.buffer32Identity);
+      _Md5._md5cycle(this._state, buf32);
+      buf32.set(_Md5.buffer32Identity);
     }
     if (dataBitsLen <= 4294967295) {
       buf32[14] = dataBitsLen;
@@ -447,8 +891,8 @@ var Md5 = class {
       buf32[14] = lo;
       buf32[15] = hi;
     }
-    Md5._md5cycle(this._state, buf32);
-    return raw ? this._state : Md5._hex(this._state);
+    _Md5._md5cycle(this._state, buf32);
+    return raw ? this._state : _Md5._hex(this._state);
   }
 };
 Md5.stateIdentity = new Int32Array([1732584193, -271733879, -1732584194, 271733878]);
@@ -506,16 +950,15 @@ function stripPaths(src, dst) {
   return { stripedSrc: "", stripedDst: "" };
 }
 function matchExtension(extension, pattern) {
-  if (!pattern || pattern === "")
-    return false;
+  if (!pattern || pattern === "") return false;
   return new RegExp(pattern).test(extension);
 }
-function isAttachment(settings, filePath) {
+function isAttachment(app2, settings, filePath) {
   let file = null;
   if (filePath instanceof import_obsidian2.TAbstractFile) {
     file = filePath;
   } else {
-    file = this.app.vault.getAbstractFileByPath(filePath);
+    file = app2.vault.getAbstractFileByPath(filePath);
   }
   if (file === null || !(file instanceof import_obsidian2.TFile)) {
     return false;
@@ -580,14 +1023,73 @@ function generateErrorExtensionMessage(type) {
     new import_obsidian2.Notice(t("errors.excludedExtension"));
   }
 }
+var ALLOWED_FORMAT_VARS = [
+  SETTINGS_VARIABLES_DATES,
+  SETTINGS_VARIABLES_NOTENAME,
+  SETTINGS_VARIABLES_MD5,
+  SETTINGS_VARIABLES_ORIGINALNAME
+];
+var ILLEGAL_FILENAME_CHARS = /[\\/:*?"<>|]/;
+var VAR_TOKEN_RE = /\$\{[^}]+\}/g;
+function validateAttachFormat(value) {
+  var _a;
+  const trimmed = value.trim();
+  if (trimmed.length === 0) return { type: "empty" };
+  const stripped = trimmed.replace(VAR_TOKEN_RE, "");
+  const bad = stripped.match(ILLEGAL_FILENAME_CHARS);
+  if (bad) return { type: "illegalChar", char: bad[0] };
+  const vars = (_a = trimmed.match(VAR_TOKEN_RE)) != null ? _a : [];
+  for (const v of vars) {
+    if (!ALLOWED_FORMAT_VARS.includes(v)) {
+      return { type: "unknownVariable", name: v };
+    }
+  }
+  return null;
+}
+function attachFormatErrorMessage(err) {
+  switch (err.type) {
+    case "empty":
+      return t("errors.attachFormatEmpty");
+    case "illegalChar":
+      return t("errors.attachFormatIllegalChar", { char: err.char });
+    case "unknownVariable":
+      return t("errors.attachFormatUnknownVariable", { name: err.name });
+  }
+}
+var ALLOWED_PATH_VARS = [SETTINGS_VARIABLES_NOTEPATH, SETTINGS_VARIABLES_NOTENAME, SETTINGS_VARIABLES_NOTEPARENT];
+var ILLEGAL_PATH_CHARS = /[\\:*?"<>|]/;
+function validateAttachmentPath(value) {
+  var _a;
+  const trimmed = value.trim();
+  if (trimmed.length === 0) return { type: "empty" };
+  const stripped = trimmed.replace(VAR_TOKEN_RE, "");
+  const bad = stripped.match(ILLEGAL_PATH_CHARS);
+  if (bad) return { type: "illegalChar", char: bad[0] };
+  const vars = (_a = trimmed.match(VAR_TOKEN_RE)) != null ? _a : [];
+  for (const v of vars) {
+    if (!ALLOWED_PATH_VARS.includes(v)) {
+      return { type: "unknownVariable", name: v };
+    }
+  }
+  return null;
+}
+function attachmentPathErrorMessage(err) {
+  switch (err.type) {
+    case "empty":
+      return t("errors.attachmentPathEmpty");
+    case "illegalChar":
+      return t("errors.attachmentPathIllegalChar", { char: err.char });
+    case "unknownVariable":
+      return t("errors.attachmentPathUnknownVariable", { name: err.name });
+  }
+}
 
 // src/lib/log.ts
 var DEBUG = false;
-if (DEBUG)
-  console.log("DEBUG is enabled");
+if (DEBUG) console.log("DEBUG is enabled");
 function debugLog(...args) {
   if (DEBUG) {
-    console.log(new Date().toISOString().slice(11, 23), ...args);
+    console.log((/* @__PURE__ */ new Date()).toISOString().slice(11, 23), ...args);
   }
 }
 
@@ -641,7 +1143,7 @@ var OverrideExtensionModal = class extends import_obsidian3.Modal {
       })
     );
     if (this.settings.saveAttE !== "obsFolder") {
-      new import_obsidian3.Setting(contentEl).setName(t("extensionOverride.rootFolder.name")).setClass("override_root_folder_set").addText(
+      new import_obsidian3.Setting(contentEl).setName(t("extensionOverride.rootFolder.name")).setDesc(t("extensionOverride.rootFolder.desc")).setClass("override_root_folder_set").addText(
         (text) => text.setPlaceholder(DEFAULT_SETTINGS.attachPath.attachmentRoot).setValue(this.settings.attachmentRoot).onChange(async (value) => {
           this.settings.attachmentRoot = value;
         })
@@ -670,395 +1172,8 @@ var OverrideExtensionModal = class extends import_obsidian3.Modal {
   }
 };
 
-// src/i18n/locales/en.ts
-var en = {
-  // 通用
-  common: {
-    save: "Save",
-    cancel: "Cancel",
-    delete: "Delete",
-    edit: "Edit",
-    add: "Add",
-    remove: "Remove",
-    confirm: "Confirm",
-    close: "Close"
-  },
-  // 设置页面
-  settings: {
-    title: "Attachment Management Settings",
-    language: {
-      name: "Language",
-      desc: "Select the interface language"
-    },
-    rootPath: {
-      name: "Root path to save attachment",
-      desc: "Select root path of attachment",
-      options: {
-        obsidian: "Copy Obsidian settings",
-        inFolder: "In the folder specified below",
-        nextToNote: "Next to note in folder specified below"
-      }
-    },
-    rootFolder: {
-      name: "Root folder",
-      desc: "Root folder of new attachment"
-    },
-    attachmentPath: {
-      name: "Attachment path",
-      desc: "Path of attachment in root folder, available variables {{notepath}}, {{notename}}, {{parent}}"
-    },
-    attachmentFormat: {
-      name: "Attachment format",
-      desc: "Define how to name the attachment file, available variables {{dates}}, {{notename}}, {{md5}} and {{originalname}}."
-    },
-    dateFormat: {
-      name: "Date format",
-      desc: "Moment date format to use",
-      linkText: "Moment format options"
-    },
-    autoRename: {
-      name: "Automatically rename attachment",
-      desc: "Automatically rename the attachment folder/filename when you rename the folder/filename where the corresponding md/canvas file be placed."
-    },
-    extensionOverride: {
-      name: "Extension override",
-      desc: "Using the extension override if you want to autorename the attachment with a specific extension (e.g. pdf or zip).",
-      addButton: "Add extension overrides",
-      extension: {
-        name: "Extension",
-        desc: "Extension to override",
-        placeholder: "pdf|docx?"
-      },
-      tooltips: {
-        remove: "Remove extension override",
-        edit: "Edit extension override",
-        save: "Save extension override"
-      },
-      saved: "Saved extension override"
-    },
-    excludeExtension: {
-      name: "Exclude extension pattern",
-      desc: "Regex pattern to exclude certain extensions from being handled.",
-      placeholder: "pdf|docx?|xlsx?|pptx?|zip|rar"
-    },
-    excludedPaths: {
-      name: "Excluded paths",
-      desc: "Provide the full path of the folder names (case sensitive and without leading slash '/') divided by semicolon (;) to be excluded from renaming."
-    },
-    excludeSubpaths: {
-      name: "Exclude subpaths",
-      desc: "Turn on this option if you want to also exclude all subfolders of the folder paths provided above."
-    }
-  },
-  // 覆盖设置模态框
-  override: {
-    title: "Overriding Settings",
-    menuTitle: "Overriding attachment setting",
-    addExtensionOverrides: "Add extension overrides",
-    extension: {
-      name: "Extension",
-      desc: "Extension to override",
-      placeholder: "pdf"
-    },
-    buttons: {
-      reset: "Reset",
-      submit: "Submit"
-    },
-    notifications: {
-      reset: "Reset attachment setting of {path}",
-      overridden: "Overridden attachment setting of {path}"
-    }
-  },
-  // 扩展覆盖模态框
-  extensionOverride: {
-    title: "Extension Override Settings",
-    extension: {
-      name: "Extension",
-      desc: "Extension pattern to override (e.g., pdf, docx, jpg)",
-      placeholder: "pdf|docx?"
-    },
-    rootPath: {
-      name: "Root path to save attachment",
-      desc: "Select root path of attachment for this extension"
-    },
-    rootFolder: {
-      name: "Root folder",
-      desc: "Root folder for this extension"
-    },
-    attachmentPath: {
-      name: "Attachment path",
-      desc: "Path of attachment in root folder for this extension"
-    },
-    attachmentFormat: {
-      name: "Attachment format",
-      desc: "Define how to name the attachment file for this extension"
-    },
-    buttons: {
-      save: "Save"
-    },
-    notice: {
-      extensionEmpty: "Extension cannot be empty",
-      extensionExists: "Extension already exists",
-      saved: "Extension override saved successfully"
-    }
-  },
-  // 确认对话框
-  confirm: {
-    title: "Tips",
-    message: "This operation is irreversible and experimental. Please backup your vault first!",
-    continue: "Continue",
-    deleteOverride: "Are you sure you want to delete this override setting?",
-    deleteExtensionOverride: "Are you sure you want to delete this extension override?"
-  },
-  // 通知消息
-  notices: {
-    settingsSaved: "Settings saved successfully",
-    overrideSaved: "Override setting saved successfully",
-    overrideDeleted: "Override setting deleted successfully",
-    extensionOverrideSaved: "Extension override saved successfully",
-    extensionOverrideDeleted: "Extension override deleted successfully",
-    attachmentRenamed: "Attachment renamed successfully",
-    attachmentMoved: "Attachment moved successfully",
-    arrangeCompleted: "Arrange completed",
-    fileExcluded: "{path} was excluded",
-    resetAttachmentSetting: "Reset attachment setting of {path}",
-    error: {
-      invalidPath: "Invalid path specified",
-      fileNotFound: "File not found",
-      permissionDenied: "Permission denied",
-      unknownError: "An unknown error occurred"
-    }
-  },
-  // 命令
-  commands: {
-    rearrangeActiveFile: "Rearrange attachments for active file",
-    rearrangeAllFiles: "Rearrange attachments for all files",
-    openSettings: "Open Attachment Management settings",
-    overrideAttachmentSetting: "Override attachment setting",
-    rearrangeAllLinks: "Rearrange all linked attachments",
-    rearrangeActiveLinks: "Rearrange linked attachments",
-    resetOverrideSetting: "Reset override setting",
-    clearUnusedStorage: "Clear unused original name storage"
-  },
-  // 错误消息
-  errors: {
-    canvasNotSupported: "Canvas is not supported as an extension override.",
-    markdownNotSupported: "Markdown is not supported as an extension override.",
-    extensionEmpty: "Extension override cannot be empty.",
-    duplicateExtension: "Duplicate extension override.",
-    excludedExtension: "Extension override cannot be an excluded extension."
-  }
-};
-
-// src/i18n/locales/zh-cn.ts
-var zhCn = {
-  // 通用
-  common: {
-    save: "\u4FDD\u5B58",
-    cancel: "\u53D6\u6D88",
-    delete: "\u5220\u9664",
-    edit: "\u7F16\u8F91",
-    add: "\u6DFB\u52A0",
-    remove: "\u79FB\u9664",
-    confirm: "\u786E\u8BA4",
-    close: "\u5173\u95ED"
-  },
-  // 设置页面
-  settings: {
-    title: "\u9644\u4EF6\u7BA1\u7406\u8BBE\u7F6E",
-    language: {
-      name: "\u8BED\u8A00",
-      desc: "\u9009\u62E9\u754C\u9762\u8BED\u8A00"
-    },
-    rootPath: {
-      name: "\u9644\u4EF6\u4FDD\u5B58\u6839\u8DEF\u5F84",
-      desc: "\u9009\u62E9\u9644\u4EF6\u7684\u6839\u8DEF\u5F84",
-      options: {
-        obsidian: "\u590D\u5236 Obsidian \u8BBE\u7F6E",
-        inFolder: "\u5728\u4E0B\u65B9\u6307\u5B9A\u7684\u6587\u4EF6\u5939\u4E2D",
-        nextToNote: "\u5728\u7B14\u8BB0\u65C1\u8FB9\u7684\u6307\u5B9A\u6587\u4EF6\u5939\u4E2D"
-      }
-    },
-    rootFolder: {
-      name: "\u6839\u6587\u4EF6\u5939",
-      desc: "\u65B0\u9644\u4EF6\u7684\u6839\u6587\u4EF6\u5939"
-    },
-    attachmentPath: {
-      name: "\u9644\u4EF6\u8DEF\u5F84",
-      desc: "\u9644\u4EF6\u5728\u6839\u6587\u4EF6\u5939\u4E2D\u7684\u8DEF\u5F84\uFF0C\u53EF\u7528\u53D8\u91CF {{notepath}}\u3001{{notename}}\u3001{{parent}}"
-    },
-    attachmentFormat: {
-      name: "\u9644\u4EF6\u683C\u5F0F",
-      desc: "\u5B9A\u4E49\u5982\u4F55\u547D\u540D\u9644\u4EF6\u6587\u4EF6\uFF0C\u53EF\u7528\u53D8\u91CF {{dates}}\u3001{{notename}}\u3001{{md5}} \u548C {{originalname}}\u3002"
-    },
-    dateFormat: {
-      name: "\u65E5\u671F\u683C\u5F0F",
-      desc: "\u4F7F\u7528\u7684 Moment \u65E5\u671F\u683C\u5F0F",
-      linkText: "Moment \u683C\u5F0F\u9009\u9879"
-    },
-    autoRename: {
-      name: "\u81EA\u52A8\u91CD\u547D\u540D\u9644\u4EF6",
-      desc: "\u5F53\u60A8\u91CD\u547D\u540D\u5BF9\u5E94 md/canvas \u6587\u4EF6\u6240\u5728\u7684\u6587\u4EF6\u5939/\u6587\u4EF6\u540D\u65F6\uFF0C\u81EA\u52A8\u91CD\u547D\u540D\u9644\u4EF6\u6587\u4EF6\u5939/\u6587\u4EF6\u540D\u3002"
-    },
-    extensionOverride: {
-      name: "\u6269\u5C55\u540D\u8986\u76D6",
-      desc: "\u5982\u679C\u60A8\u60F3\u8981\u5BF9\u7279\u5B9A\u6269\u5C55\u540D\u7684\u9644\u4EF6\u8FDB\u884C\u81EA\u52A8\u91CD\u547D\u540D\uFF08\u4F8B\u5982 pdf \u6216 zip\uFF09\uFF0C\u8BF7\u4F7F\u7528\u6269\u5C55\u540D\u8986\u76D6\u3002",
-      addButton: "\u6DFB\u52A0\u6269\u5C55\u540D\u8986\u76D6",
-      extension: {
-        name: "\u6269\u5C55\u540D",
-        desc: "\u8981\u8986\u76D6\u7684\u6269\u5C55\u540D",
-        placeholder: "pdf|docx?"
-      },
-      tooltips: {
-        remove: "\u79FB\u9664\u6269\u5C55\u540D\u8986\u76D6",
-        edit: "\u7F16\u8F91\u6269\u5C55\u540D\u8986\u76D6",
-        save: "\u4FDD\u5B58\u6269\u5C55\u540D\u8986\u76D6"
-      },
-      saved: "\u5DF2\u4FDD\u5B58\u6269\u5C55\u540D\u8986\u76D6"
-    },
-    excludeExtension: {
-      name: "\u6392\u9664\u6269\u5C55\u540D\u6A21\u5F0F",
-      desc: "\u7528\u4E8E\u6392\u9664\u67D0\u4E9B\u6269\u5C55\u540D\u4E0D\u88AB\u5904\u7406\u7684\u6B63\u5219\u8868\u8FBE\u5F0F\u6A21\u5F0F\u3002",
-      placeholder: "pdf|docx?|xlsx?|pptx?|zip|rar"
-    },
-    excludedPaths: {
-      name: "\u6392\u9664\u8DEF\u5F84",
-      desc: '\u63D0\u4F9B\u8981\u4ECE\u91CD\u547D\u540D\u4E2D\u6392\u9664\u7684\u6587\u4EF6\u5939\u540D\u79F0\u7684\u5B8C\u6574\u8DEF\u5F84\uFF08\u533A\u5206\u5927\u5C0F\u5199\u4E14\u4E0D\u5E26\u524D\u5BFC\u659C\u6760 "/"\uFF09\uFF0C\u7528\u5206\u53F7\uFF08;\uFF09\u5206\u9694\u3002'
-    },
-    excludeSubpaths: {
-      name: "\u6392\u9664\u5B50\u8DEF\u5F84",
-      desc: "\u5982\u679C\u60A8\u8FD8\u60F3\u6392\u9664\u4E0A\u9762\u63D0\u4F9B\u7684\u6587\u4EF6\u5939\u8DEF\u5F84\u7684\u6240\u6709\u5B50\u6587\u4EF6\u5939\uFF0C\u8BF7\u6253\u5F00\u6B64\u9009\u9879\u3002"
-    }
-  },
-  // 覆盖设置模态框
-  override: {
-    title: "\u8986\u76D6\u8BBE\u7F6E",
-    menuTitle: "\u8986\u76D6\u9644\u4EF6\u8BBE\u7F6E",
-    addExtensionOverrides: "\u6DFB\u52A0\u6269\u5C55\u540D\u8986\u76D6",
-    extension: {
-      name: "\u6269\u5C55\u540D",
-      desc: "\u8981\u8986\u76D6\u7684\u6269\u5C55\u540D",
-      placeholder: "pdf"
-    },
-    buttons: {
-      reset: "\u91CD\u7F6E",
-      submit: "\u63D0\u4EA4"
-    },
-    notifications: {
-      reset: "\u5DF2\u91CD\u7F6E {path} \u7684\u9644\u4EF6\u8BBE\u7F6E",
-      overridden: "\u5DF2\u8986\u76D6 {path} \u7684\u9644\u4EF6\u8BBE\u7F6E"
-    }
-  },
-  // 扩展覆盖模态框
-  extensionOverride: {
-    title: "\u6269\u5C55\u540D\u8986\u76D6\u8BBE\u7F6E",
-    extension: {
-      name: "\u6269\u5C55\u540D",
-      desc: "\u8981\u8986\u76D6\u7684\u6269\u5C55\u540D\u6A21\u5F0F\uFF08\u4F8B\u5982\uFF1Apdf\u3001docx\u3001jpg\uFF09",
-      placeholder: "pdf|docx?"
-    },
-    rootPath: {
-      name: "\u9644\u4EF6\u4FDD\u5B58\u6839\u8DEF\u5F84",
-      desc: "\u9009\u62E9\u6B64\u6269\u5C55\u540D\u7684\u9644\u4EF6\u6839\u8DEF\u5F84"
-    },
-    rootFolder: {
-      name: "\u6839\u6587\u4EF6\u5939",
-      desc: "\u6B64\u6269\u5C55\u540D\u7684\u6839\u6587\u4EF6\u5939"
-    },
-    attachmentPath: {
-      name: "\u9644\u4EF6\u8DEF\u5F84",
-      desc: "\u6B64\u6269\u5C55\u540D\u5728\u6839\u6587\u4EF6\u5939\u4E2D\u7684\u9644\u4EF6\u8DEF\u5F84"
-    },
-    attachmentFormat: {
-      name: "\u9644\u4EF6\u683C\u5F0F",
-      desc: "\u5B9A\u4E49\u6B64\u6269\u5C55\u540D\u7684\u9644\u4EF6\u6587\u4EF6\u547D\u540D\u65B9\u5F0F"
-    },
-    buttons: {
-      save: "\u4FDD\u5B58"
-    },
-    notice: {
-      extensionEmpty: "\u6269\u5C55\u540D\u4E0D\u80FD\u4E3A\u7A7A",
-      extensionExists: "\u6269\u5C55\u540D\u5DF2\u5B58\u5728",
-      saved: "\u6269\u5C55\u540D\u8986\u76D6\u4FDD\u5B58\u6210\u529F"
-    }
-  },
-  // 确认对话框
-  confirm: {
-    title: "\u63D0\u793A",
-    message: "\u6B64\u64CD\u4F5C\u4E0D\u53EF\u9006\u4E14\u4E3A\u5B9E\u9A8C\u6027\u529F\u80FD\uFF0C\u8BF7\u5148\u5907\u4EFD\u60A8\u7684\u5E93\uFF01",
-    continue: "\u7EE7\u7EED",
-    deleteOverride: "\u60A8\u786E\u5B9A\u8981\u5220\u9664\u6B64\u8986\u76D6\u8BBE\u7F6E\u5417\uFF1F",
-    deleteExtensionOverride: "\u60A8\u786E\u5B9A\u8981\u5220\u9664\u6B64\u6269\u5C55\u540D\u8986\u76D6\u5417\uFF1F"
-  },
-  // 通知消息
-  notices: {
-    settingsSaved: "\u8BBE\u7F6E\u4FDD\u5B58\u6210\u529F",
-    overrideSaved: "\u8986\u76D6\u8BBE\u7F6E\u4FDD\u5B58\u6210\u529F",
-    overrideDeleted: "\u8986\u76D6\u8BBE\u7F6E\u5220\u9664\u6210\u529F",
-    extensionOverrideSaved: "\u6269\u5C55\u540D\u8986\u76D6\u4FDD\u5B58\u6210\u529F",
-    extensionOverrideDeleted: "\u6269\u5C55\u540D\u8986\u76D6\u5220\u9664\u6210\u529F",
-    attachmentRenamed: "\u9644\u4EF6\u91CD\u547D\u540D\u6210\u529F",
-    attachmentMoved: "\u9644\u4EF6\u79FB\u52A8\u6210\u529F",
-    error: {
-      invalidPath: "\u6307\u5B9A\u7684\u8DEF\u5F84\u65E0\u6548",
-      fileNotFound: "\u6587\u4EF6\u672A\u627E\u5230",
-      permissionDenied: "\u6743\u9650\u88AB\u62D2\u7EDD",
-      unknownError: "\u53D1\u751F\u672A\u77E5\u9519\u8BEF"
-    }
-  },
-  // 命令
-  commands: {
-    rearrangeActiveFile: "\u91CD\u65B0\u6574\u7406\u5F53\u524D\u6587\u4EF6\u7684\u9644\u4EF6",
-    rearrangeAllFiles: "\u91CD\u65B0\u6574\u7406\u6240\u6709\u6587\u4EF6\u7684\u9644\u4EF6",
-    openSettings: "\u6253\u5F00\u9644\u4EF6\u7BA1\u7406\u8BBE\u7F6E",
-    overrideAttachmentSetting: "\u8986\u76D6\u9644\u4EF6\u8BBE\u7F6E",
-    rearrangeAllLinks: "\u91CD\u65B0\u6574\u7406\u6240\u6709\u94FE\u63A5\u7684\u9644\u4EF6",
-    rearrangeActiveLinks: "\u91CD\u65B0\u6574\u7406\u94FE\u63A5\u7684\u9644\u4EF6",
-    resetOverrideSetting: "\u91CD\u7F6E\u8986\u76D6\u8BBE\u7F6E",
-    clearUnusedStorage: "\u6E05\u7406\u672A\u4F7F\u7528\u7684\u539F\u59CB\u540D\u79F0\u5B58\u50A8"
-  },
-  // 通知消息
-  notifications: {
-    success: "\u64CD\u4F5C\u6210\u529F\u5B8C\u6210",
-    error: "\u53D1\u751F\u9519\u8BEF",
-    warning: "\u8B66\u544A",
-    arrangeCompleted: "\u6574\u7406\u5B8C\u6210",
-    fileExcluded: "{path} \u5DF2\u88AB\u6392\u9664",
-    resetAttachmentSetting: "\u5DF2\u91CD\u7F6E {path} \u7684\u9644\u4EF6\u8BBE\u7F6E"
-  },
-  // 错误消息
-  errors: {
-    canvasNotSupported: "\u4E0D\u652F\u6301\u5C06 Canvas \u4F5C\u4E3A\u6269\u5C55\u8986\u76D6\u3002",
-    markdownNotSupported: "\u4E0D\u652F\u6301\u5C06 Markdown \u4F5C\u4E3A\u6269\u5C55\u8986\u76D6\u3002",
-    extensionEmpty: "\u6269\u5C55\u8986\u76D6\u4E0D\u80FD\u4E3A\u7A7A\u3002",
-    duplicateExtension: "\u91CD\u590D\u7684\u6269\u5C55\u8986\u76D6\u3002",
-    excludedExtension: "\u6269\u5C55\u8986\u76D6\u4E0D\u80FD\u662F\u88AB\u6392\u9664\u7684\u6269\u5C55\u3002"
-  }
-};
-
-// src/i18n/loader.ts
-function loadAllTranslations() {
-  registerTranslations("en", en);
-  registerTranslations("zh-cn", zhCn);
-}
-function getSupportedLanguages() {
-  return [
-    {
-      code: "en",
-      name: "English",
-      nativeName: "English"
-    },
-    {
-      code: "zh-cn",
-      name: "Chinese (Simplified)",
-      nativeName: "\u7B80\u4F53\u4E2D\u6587"
-    }
-  ];
-}
-
 // src/settings/settings.ts
 var DEFAULT_SETTINGS = {
-  language: "en",
   attachPath: {
     attachmentRoot: "",
     saveAttE: `${SETTINGS_ROOT_OBSFOLDER}`,
@@ -1105,19 +1220,6 @@ var AttachmentManagementSettingTab = class extends import_obsidian4.PluginSettin
     const { containerEl } = this;
     containerEl.empty();
     containerEl.createEl("h2", { text: t("settings.title") });
-    new import_obsidian4.Setting(containerEl).setName(t("settings.language.name")).setDesc(t("settings.language.desc")).addDropdown((dropdown) => {
-      const languages = getSupportedLanguages();
-      languages.forEach((lang) => {
-        dropdown.addOption(lang.code, lang.nativeName);
-      });
-      dropdown.setValue(getCurrentLanguage());
-      dropdown.onChange(async (value) => {
-        setLanguage(value);
-        this.plugin.settings.language = value;
-        await this.plugin.saveSettings();
-        this.display();
-      });
-    });
     new import_obsidian4.Setting(containerEl).setName(t("settings.rootPath.name")).setDesc(t("settings.rootPath.desc")).addDropdown(
       (text) => text.addOption(`${SETTINGS_ROOT_OBSFOLDER}`, t("settings.rootPath.options.obsidian")).addOption(`${SETTINGS_ROOT_INFOLDER}`, t("settings.rootPath.options.inFolder")).addOption(`${SETTINGS_ROOT_NEXTTONOTE}`, t("settings.rootPath.options.nextToNote")).setValue(this.plugin.settings.attachPath.saveAttE).onChange(async (value) => {
         this.plugin.settings.attachPath.saveAttE = value;
@@ -1132,20 +1234,62 @@ var AttachmentManagementSettingTab = class extends import_obsidian4.PluginSettin
         await this.plugin.saveSettings();
       })
     );
-    new import_obsidian4.Setting(containerEl).setName(t("settings.attachmentPath.name")).setDesc(t("settings.attachmentPath.desc")).addText(
-      (text) => text.setPlaceholder(DEFAULT_SETTINGS.attachPath.attachmentPath).setValue(this.plugin.settings.attachPath.attachmentPath).onChange(async (value) => {
+    new import_obsidian4.Setting(containerEl).setName(t("settings.attachmentPath.name")).setDesc(t("settings.attachmentPath.desc")).addText((text) => {
+      const controlEl = text.inputEl.parentElement;
+      const errEl = controlEl.createDiv({ cls: "setting-item-description" });
+      controlEl.insertBefore(errEl, text.inputEl);
+      errEl.style.color = "var(--color-red)";
+      errEl.style.marginRight = "8px";
+      errEl.style.textAlign = "right";
+      errEl.hide();
+      const applyValidation = (value) => {
+        const err = validateAttachmentPath(value);
+        if (err) {
+          text.inputEl.style.border = "1px solid var(--color-red)";
+          errEl.setText(attachmentPathErrorMessage(err));
+          errEl.show();
+          return false;
+        }
+        text.inputEl.style.border = "";
+        errEl.hide();
+        return true;
+      };
+      text.setPlaceholder(DEFAULT_SETTINGS.attachPath.attachmentPath).setValue(this.plugin.settings.attachPath.attachmentPath).onChange(async (value) => {
         debugLog("setting - attachment path:" + value);
+        if (!applyValidation(value)) return;
         this.plugin.settings.attachPath.attachmentPath = value;
         await this.plugin.saveSettings();
-      })
-    );
-    new import_obsidian4.Setting(containerEl).setName(t("settings.attachmentFormat.name")).setDesc(t("settings.attachmentFormat.desc")).addText(
-      (text) => text.setPlaceholder(DEFAULT_SETTINGS.attachPath.attachFormat).setValue(this.plugin.settings.attachPath.attachFormat).onChange(async (value) => {
+      });
+      applyValidation(this.plugin.settings.attachPath.attachmentPath);
+    });
+    new import_obsidian4.Setting(containerEl).setName(t("settings.attachmentFormat.name")).setDesc(t("settings.attachmentFormat.desc")).addText((text) => {
+      const controlEl = text.inputEl.parentElement;
+      const errEl = controlEl.createDiv({ cls: "setting-item-description" });
+      controlEl.insertBefore(errEl, text.inputEl);
+      errEl.style.color = "var(--color-red)";
+      errEl.style.marginRight = "8px";
+      errEl.style.textAlign = "right";
+      errEl.hide();
+      const applyValidation = (value) => {
+        const err = validateAttachFormat(value);
+        if (err) {
+          text.inputEl.style.border = "1px solid var(--color-red)";
+          errEl.setText(attachFormatErrorMessage(err));
+          errEl.show();
+          return false;
+        }
+        text.inputEl.style.border = "";
+        errEl.hide();
+        return true;
+      };
+      text.setPlaceholder(DEFAULT_SETTINGS.attachPath.attachFormat).setValue(this.plugin.settings.attachPath.attachFormat).onChange(async (value) => {
         debugLog("setting - attachment format:" + value);
+        if (!applyValidation(value)) return;
         this.plugin.settings.attachPath.attachFormat = value;
         await this.plugin.saveSettings();
-      })
-    );
+      });
+      applyValidation(this.plugin.settings.attachPath.attachFormat);
+    });
     new import_obsidian4.Setting(containerEl).setName(t("settings.dateFormat.name")).setDesc(
       createFragment((frag) => {
         frag.appendText(t("settings.dateFormat.desc") + " ");
@@ -1282,7 +1426,7 @@ var OverrideModal = class extends import_obsidian5.Modal {
         this.displaySw(contentEl);
       })
     );
-    new import_obsidian5.Setting(contentEl).setName(t("settings.rootFolder.name")).setClass("override_root_folder_set").addText(
+    new import_obsidian5.Setting(contentEl).setName(t("settings.rootFolder.name")).setDesc(t("settings.rootFolder.desc")).setClass("override_root_folder_set").addText(
       (text) => text.setPlaceholder(DEFAULT_SETTINGS.attachPath.attachmentRoot).setValue(this.setting.attachmentRoot).onChange(async (value) => {
         debugLog("override - attachment root:" + value);
         this.setting.attachmentRoot = value;
@@ -1385,15 +1529,11 @@ var path = {
     const newParts = [];
     for (let i = 0, l = parts.length; i < l; i++) {
       const part = parts[i];
-      if (!part || part === ".")
-        continue;
-      if (part === "..")
-        newParts.pop();
-      else
-        newParts.push(part);
+      if (!part || part === ".") continue;
+      if (part === "..") newParts.pop();
+      else newParts.push(part);
     }
-    if (parts[0] === "")
-      newParts.unshift("");
+    if (parts[0] === "") newParts.unshift("");
     return newParts.join("/");
   },
   // A simple function to get the dirname of a path
@@ -1535,110 +1675,13 @@ function deleteOverrideSetting(settings, file) {
   return false;
 }
 
-// src/lib/linkDetector.ts
-var getAllLinkMatchesInFile = async (mdFile, app2, fileText) => {
-  const linkMatches = [];
-  if (fileText === void 0) {
-    fileText = await app2.vault.read(mdFile);
-  }
-  const wikiRegex = /\[\[.*?\]\]/g;
-  const wikiMatches = fileText.match(wikiRegex);
-  if (wikiMatches) {
-    const fileRegex = /(?<=\[\[).*?(?=(\]|\|))/;
-    for (const wikiMatch of wikiMatches) {
-      if (matchIsWikiTransclusion(wikiMatch)) {
-        const fileName = getTransclusionFileName(wikiMatch);
-        const file = app2.metadataCache.getFirstLinkpathDest(fileName, mdFile.path);
-        if (fileName !== "") {
-          const linkMatch = {
-            type: "wikiTransclusion",
-            match: wikiMatch,
-            linkText: file ? file.path : fileName,
-            sourceFilePath: mdFile.path
-          };
-          linkMatches.push(linkMatch);
-          continue;
-        }
-      }
-      const fileMatch = wikiMatch.match(fileRegex);
-      if (fileMatch) {
-        if (fileMatch[0].startsWith("http"))
-          continue;
-        const file = app2.metadataCache.getFirstLinkpathDest(fileMatch[0], mdFile.path);
-        const linkMatch = {
-          type: "wiki",
-          match: wikiMatch,
-          linkText: file ? file.path : fileMatch[0],
-          sourceFilePath: mdFile.path
-        };
-        linkMatches.push(linkMatch);
-      }
-    }
-  }
-  const markdownRegex = /\[(^$|.*?)\]\((.*?)\)/g;
-  const markdownMatches = fileText.match(markdownRegex);
-  if (markdownMatches) {
-    const fileRegex = /(?<=\().*(?=\))/;
-    for (const markdownMatch of markdownMatches) {
-      if (matchIsMdTransclusion(markdownMatch)) {
-        const fileName = getTransclusionFileName(markdownMatch);
-        const file = app2.metadataCache.getFirstLinkpathDest(fileName, mdFile.path);
-        if (fileName !== "") {
-          const linkMatch = {
-            type: "mdTransclusion",
-            match: markdownMatch,
-            linkText: file ? file.path : fileName,
-            sourceFilePath: mdFile.path
-          };
-          linkMatches.push(linkMatch);
-          continue;
-        }
-      }
-      const fileMatch = markdownMatch.match(fileRegex);
-      if (fileMatch) {
-        if (fileMatch[0].startsWith("http"))
-          continue;
-        const file = app2.metadataCache.getFirstLinkpathDest(fileMatch[0], mdFile.path);
-        const linkMatch = {
-          type: "markdown",
-          match: markdownMatch,
-          linkText: file ? file.path : fileMatch[0],
-          sourceFilePath: mdFile.path
-        };
-        linkMatches.push(linkMatch);
-      }
-    }
-  }
-  return linkMatches;
-};
-var wikiTransclusionRegex = /\[\[(.*?)#.*?\]\]/;
-var wikiTransclusionFileNameRegex = /(?<=\[\[)(.*)(?=#)/;
-var mdTransclusionRegex = /\[.*?]\((.*?)#.*?\)/;
-var mdTransclusionFileNameRegex = /(?<=\]\()(.*)(?=#)/;
-var matchIsWikiTransclusion = (match) => {
-  return wikiTransclusionRegex.test(match);
-};
-var matchIsMdTransclusion = (match) => {
-  return mdTransclusionRegex.test(match);
-};
-var getTransclusionFileName = (match) => {
-  const isWiki = wikiTransclusionRegex.test(match);
-  const isMd = mdTransclusionRegex.test(match);
-  if (isWiki || isMd) {
-    const fileNameMatch = match.match(isWiki ? wikiTransclusionFileNameRegex : mdTransclusionFileNameRegex);
-    if (fileNameMatch)
-      return fileNameMatch[0];
-  }
-  return "";
-};
-
 // src/lib/deduplicate.ts
 function escapeRegExp(s) {
   return s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }
 async function deduplicateNewName(newName, file) {
   const dir = file.path;
-  const listed = await this.app.vault.adapter.list(dir);
+  const listed = await file.vault.adapter.list(dir);
   debugLog("deduplicateNewName - sibling files", listed);
   const newNameExt = path.extname(newName), newNameStem = newName.slice(0, newName.length - newNameExt.length - 1), newNameStemEscaped = escapeRegExp(newNameStem), delimiter = "-", delimiterEscaped = escapeRegExp(delimiter);
   const dupNameRegex = new RegExp(
@@ -1654,8 +1697,7 @@ async function deduplicateNewName(newName, file) {
       continue;
     }
     const m = dupNameRegex.exec(sibling);
-    if (!m || m.groups === void 0)
-      continue;
+    if (!m || m.groups === void 0) continue;
     dupNameNumbers.push(parseInt(m.groups.number));
   }
   if (isNewNameExist) {
@@ -1727,6 +1769,31 @@ async function checkEmptyFolder(adapter, path2) {
   return true;
 }
 
+// src/lib/originalStorage.ts
+function containsOriginalNameVariable(setting, ext) {
+  const { extSetting } = getExtensionOverrideSetting(ext, setting);
+  if (extSetting !== void 0) {
+    return extSetting.attachFormat.includes(SETTINGS_VARIABLES_ORIGINALNAME);
+  }
+  return setting.attachFormat.includes(SETTINGS_VARIABLES_ORIGINALNAME);
+}
+function saveOriginalName(settings, setting, ext, data) {
+  if (settings.originalNameStorage === void 0) {
+    settings.originalNameStorage = [];
+  }
+  if (!containsOriginalNameVariable(setting, ext)) {
+    return;
+  }
+  settings.originalNameStorage.filter((n) => n.md5 === data.md5).forEach((n) => settings.originalNameStorage.remove(n));
+  settings.originalNameStorage.push(data);
+}
+function loadOriginalName(settings, setting, ext, md5) {
+  if (!containsOriginalNameVariable(setting, ext)) {
+    return void 0;
+  }
+  return settings.originalNameStorage.find((data) => data.md5 === md5);
+}
+
 // src/settings/metadata.ts
 var Metadata = class {
   constructor(path2, name, basename, extension, parentPath, parentName, attachmentFile) {
@@ -1747,14 +1814,17 @@ var Metadata = class {
    *
    * @param {AttachmentPathSettings} setting - attachment path settings object
    * @param {string} dateFormat - format string for date and time
-   * @param {string} originalName - name of the original attachment
-   * @param {string} [linkName] - optional name for the attachment link
+   * @param {TFile} originalAttach - the original attachment file
+   * @param {DataAdapter} adapter - vault adapter (used for md5 hashing)
+   * @param {AttachmentManagementPluginSettings} [pluginSettings] - plugin settings; when provided
+   *   enables ${originalname} lookup from the persisted storage so the original
+   *   name survives subsequent renames (e.g. rearrange).
    * @return {string} the formatted attachment file name
    */
-  async getAttachFileName(setting, dateFormat, originalName, adapter, linkName) {
-    const dateTime = window.moment().format(dateFormat);
+  async getAttachFileName(setting, dateFormat, originalAttach, adapter, pluginSettings) {
+    const dateTime = window.moment(originalAttach.stat.ctime).format(dateFormat);
     let md5 = "";
-    let attachFormat = "";
+    let attachFormat = DEFAULT_SETTINGS.attachPath.attachFormat;
     if (this.attachmentFile !== void 0) {
       md5 = await md5sum(adapter, this.attachmentFile);
       const { extSetting } = getExtensionOverrideSetting(this.attachmentFile.extension, setting);
@@ -1764,14 +1834,14 @@ var Metadata = class {
         attachFormat = setting.attachFormat;
       }
     }
-    if (attachFormat.includes(SETTINGS_VARIABLES_ORIGINALNAME)) {
-      if (originalName === "" && linkName != void 0) {
-        return linkName;
-      } else {
-        return attachFormat.replace(`${SETTINGS_VARIABLES_DATES}`, dateTime).replace(`${SETTINGS_VARIABLES_NOTENAME}`, this.basename).replace(`${SETTINGS_VARIABLES_ORIGINALNAME}`, originalName).replace(`${SETTINGS_VARIABLES_MD5}`, md5);
+    let originalName = originalAttach.basename;
+    if (pluginSettings !== void 0 && this.attachmentFile !== void 0) {
+      const stored = loadOriginalName(pluginSettings, setting, this.attachmentFile.extension, md5);
+      if (stored !== void 0) {
+        originalName = stored.n;
       }
     }
-    return attachFormat.replace(`${SETTINGS_VARIABLES_DATES}`, dateTime).replace(`${SETTINGS_VARIABLES_NOTENAME}`, this.basename).replace(`${SETTINGS_VARIABLES_MD5}`, md5);
+    return attachFormat.replace(`${SETTINGS_VARIABLES_DATES}`, dateTime).replace(`${SETTINGS_VARIABLES_NOTENAME}`, this.basename).replace(`${SETTINGS_VARIABLES_MD5}`, md5).replace(`${SETTINGS_VARIABLES_ORIGINALNAME}`, originalName);
   }
   /**
    * Returns the attachment path based on the given AttachmentPathSettings object.
@@ -1779,8 +1849,7 @@ var Metadata = class {
    * @param {AttachmentPathSettings} setting - An object containing the attachment path settings.
    * @return {string} The normalized attachment path.
    */
-  getAttachmentPath(setting, dateFormat) {
-    const dateTime = window.moment().format(dateFormat);
+  getAttachmentPath(setting) {
     let root = "";
     let attachPath = "";
     if (this.attachmentFile !== void 0) {
@@ -1789,7 +1858,7 @@ var Metadata = class {
         root = getRootPath(this.parentPath, extSetting);
         attachPath = path.join(
           root,
-          extSetting.attachmentPath.replace(`${SETTINGS_VARIABLES_NOTEPATH}`, this.parentPath).replace(`${SETTINGS_VARIABLES_NOTENAME}`, this.basename).replace(`${SETTINGS_VARIABLES_NOTEPARENT}`, this.parentName).replace(`${SETTINGS_VARIABLES_DATES}`, dateTime)
+          extSetting.attachmentPath.replace(`${SETTINGS_VARIABLES_NOTEPATH}`, this.parentPath).replace(`${SETTINGS_VARIABLES_NOTENAME}`, this.basename).replace(`${SETTINGS_VARIABLES_NOTEPARENT}`, this.parentName)
         );
         return (0, import_obsidian8.normalizePath)(attachPath);
       }
@@ -1798,7 +1867,7 @@ var Metadata = class {
     debugLog("getAttachmentPath - root", root);
     attachPath = path.join(
       root,
-      setting.attachmentPath.replace(`${SETTINGS_VARIABLES_NOTEPATH}`, this.parentPath).replace(`${SETTINGS_VARIABLES_NOTENAME}`, this.basename).replace(`${SETTINGS_VARIABLES_NOTEPARENT}`, this.parentName).replace(`${SETTINGS_VARIABLES_DATES}`, dateTime)
+      setting.attachmentPath.replace(`${SETTINGS_VARIABLES_NOTEPATH}`, this.parentPath).replace(`${SETTINGS_VARIABLES_NOTENAME}`, this.basename).replace(`${SETTINGS_VARIABLES_NOTEPARENT}`, this.parentName)
     );
     return (0, import_obsidian8.normalizePath)(attachPath);
   }
@@ -1831,47 +1900,11 @@ function isExcluded(path2, settings) {
   return false;
 }
 
-// src/lib/originalStorage.ts
-function containOriginalNameVariable(setting, ext) {
-  const { extSetting } = getExtensionOverrideSetting(ext, setting);
-  if (extSetting !== void 0 && extSetting.attachFormat.contains(SETTINGS_VARIABLES_ORIGINALNAME) || setting.attachFormat.contains(SETTINGS_VARIABLES_ORIGINALNAME)) {
-    return true;
-  }
-  return false;
-}
-function saveOriginalName(settings, setting, ext, data) {
-  if (settings.originalNameStorage === void 0) {
-    settings.originalNameStorage = [];
-  }
-  if (containOriginalNameVariable(setting, ext)) {
-    settings.originalNameStorage.filter((n) => n.md5 == data.md5).forEach((n) => settings.originalNameStorage.remove(n));
-    settings.originalNameStorage.push(data);
-  }
-}
-function loadOriginalName(settings, setting, ext, md5) {
-  if (containOriginalNameVariable(setting, ext)) {
-    const first = settings.originalNameStorage.find((data) => data.md5 === md5);
-    const last = settings.originalNameStorage.reverse().find((data) => data.md5 === md5);
-    if (first === void 0 || last == void 0) {
-      return void 0;
-    }
-    if (first.md5 === last.md5 && first.n === last.n) {
-      return last;
-    } else if (first.md5 === last.md5 && first.n !== last.n) {
-      settings.originalNameStorage.remove(first);
-      return last;
-    }
-  }
-  return void 0;
-}
-
 // src/arrange.ts
-var bannerRegex = /!\[\[(.*?)\]\]/i;
 var ArrangeHandler = class {
-  constructor(settings, app2, plugin) {
-    this.settings = settings;
+  constructor(settings, app2) {
+    this.pluginSettings = settings;
     this.app = app2;
-    this.plugin = plugin;
   }
   /**
    * Rearranges attachments that are linked by markdown or canvas.
@@ -1882,29 +1915,28 @@ var ArrangeHandler = class {
    * @param {string} oldPath - The old path of the file (optional), used for rename event.
    */
   async rearrangeAttachment(type, file, oldPath) {
-    var _a;
-    if (!this.settings.autoRenameAttachment) {
+    if (!this.pluginSettings.autoRenameAttachment) {
       debugLog("rearrangeAttachment - autoRenameAttachment not enable");
       return;
     }
-    const attachments = await this.getAttachmentsInVault(this.settings, type, file, oldPath);
+    const attachments = await this.getAttachmentsInVault(this.pluginSettings, type, file, oldPath);
     debugLog("rearrangeAttachment - attachments:", Object.keys(attachments).length, Object.entries(attachments));
     for (const obNote of Object.keys(attachments)) {
       const innerFile = this.app.vault.getAbstractFileByPath(obNote);
-      if (!(innerFile instanceof import_obsidian9.TFile) || isAttachment(this.settings, innerFile)) {
+      if (!(innerFile instanceof import_obsidian9.TFile) || isAttachment(this.app, this.pluginSettings, innerFile)) {
         debugLog(`rearrangeAttachment - ${obNote} not exists or is attachment, skipped`);
         continue;
       }
-      const { setting } = getOverrideSetting(this.settings, innerFile);
+      const { setting } = getOverrideSetting(this.pluginSettings, innerFile);
       if (attachments[obNote].size == 0) {
         continue;
       }
       const md = getMetadata(obNote);
-      const attachPath = md.getAttachmentPath(setting, this.settings.dateFormat);
+      const attachPath = md.getAttachmentPath(setting);
       if (!await this.app.vault.adapter.exists(attachPath, true)) {
         if (oldPath != void 0 && await this.app.vault.adapter.exists(attachPath, false)) {
           const mdOld = getMetadata(oldPath);
-          const attachPathOld = mdOld.getAttachmentPath(setting, this.settings.dateFormat);
+          const attachPathOld = mdOld.getAttachmentPath(setting);
           this.app.vault.adapter.rename(attachPathOld, attachPath);
         } else {
           await this.app.vault.adapter.mkdir(attachPath);
@@ -1924,35 +1956,22 @@ var ArrangeHandler = class {
           continue;
         }
         const metadata = getMetadata(obNote, linkFile);
-        const md5 = await md5sum(this.app.vault.adapter, linkFile);
-        const originalName = loadOriginalName(this.settings, setting, linkFile.extension, md5);
-        debugLog("rearrangeAttachment - original name:", originalName);
-        let attachName = "";
-        if (containOriginalNameVariable(setting, linkFile.extension)) {
-          attachName = await metadata.getAttachFileName(
-            setting,
-            this.settings.dateFormat,
-            (_a = originalName == null ? void 0 : originalName.n) != null ? _a : "",
-            this.app.vault.adapter,
-            path.basename(link, path.extname(link))
-          );
-        } else {
-          attachName = await metadata.getAttachFileName(
-            setting,
-            this.settings.dateFormat,
-            path.basename(link, path.extname(link)),
-            this.app.vault.adapter
-          );
-        }
+        const attachName = await metadata.getAttachFileName(
+          setting,
+          this.pluginSettings.dateFormat,
+          linkFile,
+          this.app.vault.adapter,
+          this.pluginSettings
+        );
         if (attachPath == path.dirname(link) && attachName === path.basename(link, path.extname(link))) {
           continue;
         }
-        const attachPathFile = this.app.vault.getAbstractFileByPath(attachPath);
-        if (attachPathFile === null || !(attachPathFile instanceof import_obsidian9.TFolder)) {
+        const attachPathFolder = this.app.vault.getAbstractFileByPath(attachPath);
+        if (attachPathFolder === null || !(attachPathFolder instanceof import_obsidian9.TFolder)) {
           debugLog(`${attachPath} not exists, skipped`);
           continue;
         }
-        const { name } = await deduplicateNewName(attachName + "." + path.extname(link), attachPathFile);
+        const { name } = await deduplicateNewName(attachName + "." + path.extname(link), attachPathFolder);
         debugLog("rearrangeAttachment - deduplicated name:", name);
         await this.app.fileManager.renameFile(linkFile, path.join(attachPath, name));
       }
@@ -1991,9 +2010,8 @@ var ArrangeHandler = class {
     } else if (type == 0 /* ACTIVE */) {
       const file2 = getActiveFile(this.app);
       if (file2) {
-        if (file2.parent && isExcluded(file2.parent.path, this.settings) || isAttachment(this.settings, file2)) {
+        if (file2.parent && isExcluded(file2.parent.path, this.pluginSettings) || isAttachment(this.app, this.pluginSettings, file2)) {
           allFiles = [];
-          new import_obsidian9.Notice(`${file2.path} was excluded, skipped`);
         } else {
           debugLog("getAttachmentsInVaultByLinks - active:", file2.path);
           allFiles = [file2];
@@ -2004,9 +2022,8 @@ var ArrangeHandler = class {
         }
       }
     } else if (type == 2 /* FILE */ && file != void 0) {
-      if (file.parent && isExcluded(file.parent.path, this.settings) || isAttachment(this.settings, file)) {
+      if (file.parent && isExcluded(file.parent.path, this.pluginSettings) || isAttachment(this.app, this.pluginSettings, file)) {
         allFiles = [];
-        new import_obsidian9.Notice(`${file.path} was excluded, skipped`);
       } else {
         debugLog("getAttachmentsInVaultByLinks - file:", file.path);
         allFiles = [file];
@@ -2027,76 +2044,13 @@ var ArrangeHandler = class {
         const attachmentsSet = /* @__PURE__ */ new Set();
         if (links) {
           for (const [filePath] of Object.entries(links)) {
-            if (isAttachment(settings, filePath)) {
+            if (isAttachment(this.app, settings, filePath)) {
               this.addToSet(attachmentsSet, filePath);
             }
           }
           this.addToRecord(attachmentsRecord, mdFile, attachmentsSet);
         }
       }
-    }
-    for (let i = 0; i < allFiles.length; i++) {
-      const obsFile = allFiles[i];
-      const attachmentsSet = /* @__PURE__ */ new Set();
-      if (obsFile.parent && isExcluded(obsFile.parent.path, this.settings)) {
-        continue;
-      }
-      if (isMarkdownFile(obsFile.extension)) {
-        const fileCache = this.app.metadataCache.getFileCache(obsFile);
-        if (fileCache === null) {
-          continue;
-        }
-        if (fileCache.frontmatter) {
-          const frontmatter = fileCache.frontmatter;
-          for (const k of Object.keys(frontmatter)) {
-            if (typeof frontmatter[k] === "string") {
-              const formatMatch = frontmatter[k].match(bannerRegex);
-              if (formatMatch && formatMatch[1]) {
-                const fileName = formatMatch[1];
-                const file2 = this.app.metadataCache.getFirstLinkpathDest(fileName, obsFile.path);
-                if (file2 && isAttachment(settings, file2.path)) {
-                  this.addToSet(attachmentsSet, file2.path);
-                }
-              }
-            }
-          }
-        }
-        const linkMatches = await getAllLinkMatchesInFile(obsFile, app);
-        for (const linkMatch of linkMatches) {
-          if (isAttachment(settings, linkMatch.linkText)) {
-            this.addToSet(attachmentsSet, linkMatch.linkText);
-          }
-        }
-      } else if (isCanvasFile(obsFile.extension)) {
-        const fileRead = await this.app.vault.cachedRead(obsFile);
-        if (!fileRead || fileRead.length === 0) {
-          continue;
-        }
-        let canvasData;
-        try {
-          canvasData = JSON.parse(fileRead);
-        } catch (e) {
-          debugLog("getAttachmentsInVaultByLinks - parse canvas data error", e);
-          continue;
-        }
-        if (canvasData.nodes && canvasData.nodes.length > 0) {
-          for (const node of canvasData.nodes) {
-            if (node.type === "file") {
-              if (isAttachment(settings, node.file)) {
-                this.addToSet(attachmentsSet, node.file);
-              }
-            } else if (node.type == "text") {
-              const linkMatches = await getAllLinkMatchesInFile(obsFile, app, node.text);
-              for (const linkMatch of linkMatches) {
-                if (isAttachment(settings, linkMatch.linkText)) {
-                  this.addToSet(attachmentsSet, linkMatch.linkText);
-                }
-              }
-            }
-          }
-        }
-      }
-      this.addToRecord(attachmentsRecord, obsFile.path, attachmentsSet);
     }
     return attachmentsRecord;
   }
@@ -2153,22 +2107,35 @@ var ConfirmModal = class extends import_obsidian10.Modal {
   onOpen() {
     const { contentEl } = this;
     contentEl.empty();
-    contentEl.createEl("h3", {
-      text: t("confirm.title")
+    const header = contentEl.createDiv({ cls: "amg-confirm-header" });
+    header.style.display = "flex";
+    header.style.alignItems = "center";
+    header.style.gap = "8px";
+    header.style.marginBottom = "12px";
+    const iconEl = header.createSpan({ cls: "amg-confirm-icon" });
+    iconEl.style.color = "var(--color-orange)";
+    iconEl.style.display = "inline-flex";
+    (0, import_obsidian10.setIcon)(iconEl, "alert-triangle");
+    header.createEl("h3", {
+      text: t("confirm.title"),
+      cls: "amg-confirm-title"
+    }).style.margin = "0";
+    const message = contentEl.createEl("p", {
+      text: t("confirm.message"),
+      cls: "amg-confirm-message"
     });
-    contentEl.createSpan("", (el) => {
-      el.innerText = t("confirm.message");
-    });
+    message.style.margin = "0 0 16px 0";
+    message.style.lineHeight = "1.5";
     new import_obsidian10.Setting(contentEl).addButton((btn) => {
-      btn.setButtonText(t("common.cancel")).setCta().onClick(() => {
+      btn.setButtonText(t("common.cancel")).onClick(() => {
         this.close();
       });
     }).addButton(
-      (btn) => btn.setButtonText(t("confirm.continue")).onClick(async () => {
-        new ArrangeHandler(this.plugin.settings, this.plugin.app, this.plugin).rearrangeAttachment(1 /* LINKS */).finally(() => {
-          new import_obsidian10.Notice(t("notifications.arrangeCompleted"));
-          this.close();
-        });
+      (btn) => btn.setButtonText(t("confirm.continue")).setWarning().onClick(() => {
+        new ArrangeHandler(this.plugin.settings, this.plugin.app).rearrangeAttachment(1 /* LINKS */).then(() => new import_obsidian10.Notice(t("notices.arrangeCompleted"))).catch((err) => {
+          var _a;
+          return new import_obsidian10.Notice(`${t("notices.error.unknownError")}: ${(_a = err == null ? void 0 : err.message) != null ? _a : err}`);
+        }).finally(() => this.close());
       })
     );
   }
@@ -2180,6 +2147,27 @@ var ConfirmModal = class extends import_obsidian10.Modal {
 
 // src/create.ts
 var import_obsidian11 = require("obsidian");
+var pendingRenameNotices = [];
+var flushRenameNotices = (0, import_obsidian11.debounce)(
+  () => {
+    if (pendingRenameNotices.length === 0) {
+      return;
+    }
+    if (pendingRenameNotices.length === 1) {
+      const { from, to } = pendingRenameNotices[0];
+      new import_obsidian11.Notice(t("notices.fileRenamed", { from, to }));
+    } else {
+      new import_obsidian11.Notice(t("notices.filesRenamedBatch", { count: pendingRenameNotices.length }));
+    }
+    pendingRenameNotices.length = 0;
+  },
+  500,
+  true
+);
+function queueRenameNotice(from, to) {
+  pendingRenameNotices.push({ from, to });
+  flushRenameNotices();
+}
 var CreateHandler = class {
   constructor(plugin, settings) {
     this.plugin = plugin;
@@ -2195,7 +2183,6 @@ var CreateHandler = class {
   processAttach(attach, source) {
     if (source.parent && isExcluded(source.parent.path, this.settings)) {
       debugLog("processAttach - not a file or exclude path:", source.path);
-      new import_obsidian11.Notice(`${source.path} was excluded, skipped`);
       return;
     }
     const { setting } = getOverrideSetting(this.settings, source);
@@ -2207,8 +2194,8 @@ var CreateHandler = class {
     }
     const metadata = getMetadata(source.path, attach);
     debugLog("processAttach - metadata:", metadata);
-    const attachPath = metadata.getAttachmentPath(setting, this.settings.dateFormat);
-    metadata.getAttachFileName(setting, this.settings.dateFormat, attach.basename, this.app.vault.adapter).then((attachName) => {
+    const attachPath = metadata.getAttachmentPath(setting);
+    metadata.getAttachFileName(setting, this.settings.dateFormat, attach, this.app.vault.adapter).then((attachName) => {
       attachName = attachName + "." + attach.extension;
       this.app.vault.adapter.exists(attachPath, true).then(async (exists) => {
         if (!exists) {
@@ -2235,19 +2222,60 @@ var CreateHandler = class {
   renameCreateFile(attach, attachPath, attachName, source) {
     const dst = (0, import_obsidian11.normalizePath)(path.join(attachPath, attachName));
     debugLog("renameFile - ", attach.path, " to ", dst);
-    const original = attach.basename;
     const name = attach.name;
-    this.app.fileManager.renameFile(attach, dst).then(() => {
-      new import_obsidian11.Notice(`Renamed ${name} to ${attachName}.`);
+    const originalBasename = attach.basename;
+    const oldLink = this.app.fileManager.generateMarkdownLink(attach, source.path);
+    this.app.vault.rename(attach, dst).then(() => {
+      if (name !== attachName) {
+        queueRenameNotice(name, attachName);
+      }
+      const newLink = this.app.fileManager.generateMarkdownLink(attach, source.path);
+      debugLog("renameFile - old link:", oldLink, "new link:", newLink);
+      this.updateLinkInSource(source, oldLink, newLink);
     }).finally(() => {
       const { setting } = getOverrideSetting(this.settings, source);
       md5sum(this.app.vault.adapter, attach).then((md5) => {
         saveOriginalName(this.settings, setting, attach.extension, {
-          n: original,
+          n: originalBasename,
           md5
         });
         this.plugin.saveData(this.settings);
       });
+    });
+  }
+  /**
+   * Update the old link to new link in the source file.
+   * For markdown files with an active editor, use editor.replaceRange to avoid file reload and cursor jump.
+   * For other cases (canvas, non-active files), fall back to adapter.process.
+   * @param source - the source file containing the link
+   * @param oldLink - the old link text to replace
+   * @param newLink - the new link text
+   */
+  updateLinkInSource(source, oldLink, newLink) {
+    if (oldLink === newLink) {
+      return;
+    }
+    const mdView = this.app.workspace.getActiveViewOfType(import_obsidian11.MarkdownView);
+    if (mdView && mdView.file && mdView.file.path === source.path && mdView.editor) {
+      const editor = mdView.editor;
+      const content = editor.getValue();
+      const linkIndex = content.indexOf(oldLink);
+      if (linkIndex !== -1) {
+        const before = content.substring(0, linkIndex);
+        const lines = before.split("\n");
+        const fromLine = lines.length - 1;
+        const fromCh = lines[fromLine].length;
+        const oldLinkLines = oldLink.split("\n");
+        const toLine = fromLine + oldLinkLines.length - 1;
+        const toCh = oldLinkLines.length > 1 ? oldLinkLines[oldLinkLines.length - 1].length : fromCh + oldLink.length;
+        editor.replaceRange(newLink, { line: fromLine, ch: fromCh }, { line: toLine, ch: toCh });
+        debugLog("updateLinkInSource - updated via editor API");
+        return;
+      }
+    }
+    debugLog("updateLinkInSource - falling back to adapter.process");
+    this.app.vault.adapter.process(source.path, (data) => {
+      return data.replace(oldLink, newLink);
     });
   }
 };
@@ -2260,16 +2288,13 @@ var AttachmentManagementPlugin = class extends import_obsidian12.Plugin {
   }
   async onload() {
     await this.loadSettings();
-    loadAllTranslations();
-    const savedLanguage = this.settings.language || detectLanguage();
-    setLanguage(savedLanguage);
     initI18n();
     console.log(`Plugin loading: ${this.manifest.name} v.${this.manifest.version}`);
     this.app.workspace.onLayoutReady(() => {
       this.initCommands();
       this.registerEvent(
         this.app.workspace.on("file-menu", async (menu, file) => {
-          if (file.parent && isExcluded(file.parent.path, this.settings) || isAttachment(this.settings, file)) {
+          if (file.parent && isExcluded(file.parent.path, this.settings) || isAttachment(this.app, this.settings, file)) {
             return;
           }
           menu.addItem((item) => {
@@ -2287,7 +2312,7 @@ var AttachmentManagementPlugin = class extends import_obsidian12.Plugin {
           if (!(file instanceof import_obsidian12.TFile)) {
             return;
           }
-          const curentTime = new Date().getTime();
+          const curentTime = (/* @__PURE__ */ new Date()).getTime();
           const timeGapMs = curentTime - file.stat.mtime;
           const timeGapCs = curentTime - file.stat.ctime;
           if (timeGapMs > 1e3 || timeGapCs > 1e3 || isMarkdownFile(file.extension) || isCanvasFile(file.extension)) {
@@ -2307,16 +2332,16 @@ var AttachmentManagementPlugin = class extends import_obsidian12.Plugin {
             return;
           }
           debugLog("on modify event - file:", file.path);
-          this.app.vault.adapter.process(file.path, (pdata) => {
+          this.app.vault.cachedRead(file).then((data) => {
             const f = this.createdQueue.first();
             if (f != void 0) {
               this.app.vault.adapter.exists(f.path, true).then((exist) => {
                 if (exist) {
                   const processor = new CreateHandler(this, this.settings);
                   const link = this.app.fileManager.generateMarkdownLink(f, file.path);
-                  if (file.extension == "md" && pdata.indexOf(link) != -1 || file.extension == "canvas" && pdata.indexOf(f.path) != -1) {
-                    this.createdQueue.remove(f);
+                  if (file.extension == "md" && data.indexOf(link) != -1 || file.extension == "canvas" && data.indexOf(f.path) != -1) {
                     processor.processAttach(f, file);
+                    this.createdQueue.remove(f);
                   }
                 } else {
                   debugLog("on modify event - file does not exist:", f.path);
@@ -2324,7 +2349,6 @@ var AttachmentManagementPlugin = class extends import_obsidian12.Plugin {
                 }
               });
             }
-            return pdata;
           });
         })
       );
@@ -2332,6 +2356,10 @@ var AttachmentManagementPlugin = class extends import_obsidian12.Plugin {
         // when trigger a rename event on folder, for each file/folder in this renamed folder (include itself) will trigger this event
         this.app.vault.on("rename", async (file, oldPath) => {
           debugLog("on rename event - new path and old path:", file.path, oldPath);
+          if (isAttachment(this.app, this.settings, file)) {
+            debugLog("rename - not processing rename on attachment:", file.path);
+            return;
+          }
           const { setting } = getRenameOverrideSetting(this.settings, file, oldPath);
           debugLog("rename - using settings:", setting);
           if (setting.type === "FOLDER" /* FOLDER */ || setting.type === "FILE" /* FILE */) {
@@ -2346,20 +2374,12 @@ var AttachmentManagementPlugin = class extends import_obsidian12.Plugin {
           if (file instanceof import_obsidian12.TFile) {
             if (file.parent && isExcluded(file.parent.path, this.settings)) {
               debugLog("rename - exclude path:", file.parent.path);
-              new import_obsidian12.Notice(t("notifications.fileExcluded", { path: file.path }));
+              new import_obsidian12.Notice(t("notices.fileExcluded", { path: file.path }));
               return;
             }
-            if (isAttachment(this.settings, file)) {
-              debugLog("rename - not processing rename on attachment:", file.path);
-              return;
-            }
-            await new ArrangeHandler(this.settings, this.app, this).rearrangeAttachment(
-              2 /* FILE */,
-              file,
-              oldPath
-            );
+            await new ArrangeHandler(this.settings, this.app).rearrangeAttachment(2 /* FILE */, file, oldPath);
             const oldMetadata = getMetadata(oldPath);
-            const oldAttachPath = oldMetadata.getAttachmentPath(setting, this.settings.dateFormat);
+            const oldAttachPath = oldMetadata.getAttachmentPath(setting);
             this.app.vault.adapter.exists(oldAttachPath, true).then((exists) => {
               if (exists) {
                 checkEmptyFolder(this.app.vault.adapter, oldAttachPath).then((empty) => {
@@ -2377,18 +2397,14 @@ var AttachmentManagementPlugin = class extends import_obsidian12.Plugin {
       this.registerEvent(
         this.app.vault.on("delete", async (file) => {
           debugLog("on delete event - file path:", file.path);
-          if (file.parent && isExcluded(file.parent.path, this.settings) || isAttachment(this.settings, file)) {
+          if (file.parent && isExcluded(file.parent.path, this.settings) || isAttachment(this.app, this.settings, file)) {
             debugLog("delete - exclude path or the file is an attachment:", file.path);
             return;
-          }
-          if (deleteOverrideSetting(this.settings, file)) {
-            await this.saveSettings();
-            new import_obsidian12.Notice("Removed override setting of " + file.path);
           }
           if (file instanceof import_obsidian12.TFile) {
             const oldMetadata = getMetadata(file.path);
             const { setting } = getOverrideSetting(this.settings, file);
-            const oldAttachPath = oldMetadata.getAttachmentPath(setting, this.settings.dateFormat);
+            const oldAttachPath = oldMetadata.getAttachmentPath(setting);
             this.app.vault.adapter.exists(oldAttachPath, true).then((exists) => {
               if (exists) {
                 checkEmptyFolder(this.app.vault.adapter, oldAttachPath).then((empty) => {
@@ -2398,6 +2414,10 @@ var AttachmentManagementPlugin = class extends import_obsidian12.Plugin {
                 });
               }
             });
+          }
+          if (deleteOverrideSetting(this.settings, file)) {
+            await this.saveSettings();
+            new import_obsidian12.Notice(t("notices.overrideRemoved", { path: file.path }));
           }
         })
       );
@@ -2430,8 +2450,8 @@ var AttachmentManagementPlugin = class extends import_obsidian12.Plugin {
       id: "attachment-management-rearrange-active-links",
       name: t("commands.rearrangeActiveLinks"),
       callback: async () => {
-        new ArrangeHandler(this.settings, this.app, this).rearrangeAttachment(0 /* ACTIVE */).finally(() => {
-          new import_obsidian12.Notice(t("notifications.arrangeCompleted"));
+        new ArrangeHandler(this.settings, this.app).rearrangeAttachment(0 /* ACTIVE */).finally(() => {
+          new import_obsidian12.Notice(t("notices.arrangeCompleted"));
         });
       }
     });
@@ -2441,12 +2461,12 @@ var AttachmentManagementPlugin = class extends import_obsidian12.Plugin {
       checkCallback: (checking) => {
         const file = getActiveFile(this.app);
         if (file) {
-          if (isAttachment(this.settings, file)) {
+          if (isAttachment(this.app, this.settings, file)) {
             return true;
           }
           if (!checking) {
             if (file.parent && isExcluded(file.parent.path, this.settings)) {
-              new import_obsidian12.Notice(`${file.path} was excluded`);
+              new import_obsidian12.Notice(t("notices.fileExcluded", { path: file.path }));
               return true;
             }
             const { setting } = getOverrideSetting(this.settings, file);
@@ -2464,17 +2484,17 @@ var AttachmentManagementPlugin = class extends import_obsidian12.Plugin {
       checkCallback: (checking) => {
         const file = getActiveFile(this.app);
         if (file) {
-          if (isAttachment(this.settings, file)) {
+          if (isAttachment(this.app, this.settings, file)) {
             return true;
           }
           if (!checking) {
             if (file.parent && isExcluded(file.parent.path, this.settings)) {
-              new import_obsidian12.Notice(`${file.path} was excluded`);
+              new import_obsidian12.Notice(t("notices.fileExcluded", { path: file.path }));
               return true;
             }
             delete this.settings.overridePath[file.path];
             this.saveSettings().finally(() => {
-              new import_obsidian12.Notice(t("notifications.resetAttachmentSetting", { path: file.path }));
+              new import_obsidian12.Notice(t("notices.resetAttachmentSetting", { path: file.path }));
             });
           }
           return true;
@@ -2486,29 +2506,23 @@ var AttachmentManagementPlugin = class extends import_obsidian12.Plugin {
       id: "attachment-management-clear-unused-originalname-storage",
       name: t("commands.clearUnusedStorage"),
       callback: async () => {
-        const attachments = await new ArrangeHandler(this.settings, this.app, this).getAttachmentsInVault(
+        const attachments = await new ArrangeHandler(this.settings, this.app).getAttachmentsInVault(
           this.settings,
           1 /* LINKS */
         );
-        const storages = [];
+        const validMd5s = /* @__PURE__ */ new Set();
         for (const attachs of Object.values(attachments)) {
           for (const attach of attachs) {
             const link = decodeURI(attach);
             const linkFile = this.app.vault.getAbstractFileByPath(link);
-            if (linkFile !== null && linkFile instanceof import_obsidian12.TFile) {
-              md5sum(this.app.vault.adapter, linkFile).then((md5) => {
-                const ret = this.settings.originalNameStorage.find((data) => data.md5 === md5);
-                if (ret) {
-                  storages.filter((n) => n.md5 == md5).forEach((n) => storages.remove(n));
-                  storages.push(ret);
-                }
-              });
+            if (linkFile instanceof import_obsidian12.TFile) {
+              validMd5s.add(await md5sum(this.app.vault.adapter, linkFile));
             }
           }
         }
-        debugLog("clearUnusedOriginalNameStorage - storage:", storages);
-        this.settings.originalNameStorage = storages;
-        this.saveSettings();
+        this.settings.originalNameStorage = this.settings.originalNameStorage.filter((s) => validMd5s.has(s.md5));
+        debugLog("clearUnusedOriginalNameStorage - storage:", this.settings.originalNameStorage);
+        await this.saveSettings();
       }
     });
   }
