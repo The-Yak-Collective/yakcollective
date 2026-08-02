@@ -471,9 +471,9 @@ export const ObsidianFlavoredMarkdown: QuartzTransformerPlugin<
               }
 
               const text = firstText.value;
-              const restOfTitle = firstChild.children.slice(1);
               const [firstLine, ...remainingLines] = text.split("\n") as [string, ...string[]];
               const remainingText = remainingLines.join("\n");
+              const restOfTitle = remainingLines.length > 0 ? [] : firstChild.children.slice(1);
 
               const match = firstLine.match(calloutRegex);
               if (match && match.input) {
@@ -512,16 +512,18 @@ export const ObsidianFlavoredMarkdown: QuartzTransformerPlugin<
                 };
 
                 const blockquoteContent: (BlockContent | DefinitionContent)[] = [titleHtml];
-                if (remainingText.length > 0) {
-                  blockquoteContent.push({
+                const bodyInlineNodes =
+                  remainingLines.length > 0 ? firstChild.children.slice(1) : [];
+                if (remainingText.length > 0 || bodyInlineNodes.length > 0) {
+                  calloutContent.unshift({
                     type: "paragraph",
                     children: [
-                      {
-                        type: "text",
-                        value: remainingText,
-                      },
+                      ...(remainingText.length > 0
+                        ? [{ type: "text" as const, value: remainingText }]
+                        : []),
+                      ...bodyInlineNodes,
                     ],
-                  });
+                  } as BlockContent);
                 }
 
                 // For the rest of the MD callout elements other than the title, wrap them with
@@ -554,7 +556,7 @@ export const ObsidianFlavoredMarkdown: QuartzTransformerPlugin<
                 node.data = {
                   hProperties: {
                     ...(node.data?.hProperties ?? {}),
-                    className: classNames.join(" "),
+                    className: classNames,
                     "data-callout": calloutType,
                     "data-callout-fold": collapse,
                     "data-callout-metadata": calloutMetaData,

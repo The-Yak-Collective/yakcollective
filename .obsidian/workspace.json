@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "index.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "index"
             }
           }
         ]
@@ -51,7 +51,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -113,13 +115,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md",
+                "file": "index.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of README"
+              "title": "Outline"
             }
           }
         ],
@@ -138,8 +140,11 @@
       "hide-folders:Hide hidden folders again": false
     }
   },
-  "active": "ed28a492f4db7385",
+  "active": "77dace9bb0a2da5c",
   "lastOpenFiles": [
+    "welcome.md",
+    "projects.md",
+    "README.md",
     "www/www/static/resource-style-a5c806d2.css",
     "www/www/static/resource-style-6bd36952.css",
     "www/www/static/resource-after-e13fffa1.js",
@@ -154,7 +159,6 @@
     "www/www/static/contentindex.json",
     "www/www/static",
     "www/www/projects/online-governance-primer",
-    "www/www/projects/new-old-home",
     "www/index-og-image.webp",
     "www/www/newsletters/2020-06-15-announcing-yak-talk-og-image.webp",
     "www/www/join-og-image.webp",
@@ -162,17 +166,14 @@
     "www/www/about-og-image.webp",
     "www/assets/ff364ce6ac019c2a7bf71e78d34c9ca2.webp",
     "index.md",
-    "README.md",
     "study groups/composable and distributed systems.md",
     "study groups/yak robotics garage.md",
     "study groups.md",
     "yakcon 2023.md",
     "join.md",
-    "welcome.md",
     "study groups/fermi gym.md",
     "newsletters.md",
     "anuraj yak-o-rama.md",
-    "projects.md",
     "newsletters/2020-06-26 yak talk.md",
     "projects/new old home.md",
     "newsletters/2020-07-10 yak talk.md",

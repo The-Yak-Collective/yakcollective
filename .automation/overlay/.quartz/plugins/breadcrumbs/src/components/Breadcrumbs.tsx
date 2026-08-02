@@ -108,4 +108,3 @@ export default ((opts?: Partial<BreadcrumbOptions>) => {
 
   return Breadcrumbs;
 }) satisfies QuartzComponentConstructor;
-
